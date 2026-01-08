@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Tokyo Private Tour Guide - Licensed Professional Walking Tours</title>
+    <meta name="description" content="Experience authentic Tokyo with a licensed professional tour guide. Private walking tours of Asakusa, Yanaka, Shibuya, and more. Book your personalized Tokyo adventure today." />
+    <meta name="author" content="Manabu - Tokyo Tour Guide" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Tokyo Private Tour Guide - Licensed Professional Walking Tours" />
+    <meta property="og:description" content="Experience authentic Tokyo with a licensed professional tour guide. Private walking tours of Asakusa, Yanaka, Shibuya, and more." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
@@ -20,6 +18,16 @@
   </head>
 
   <body>
+    <!-- Hidden form for Netlify Forms detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="tourType" />
+      <input type="text" name="date" />
+      <input type="text" name="groupSize" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

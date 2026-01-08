@@ -26,23 +26,43 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Encode form data for Netlify Forms
+      const formElement = e.target as HTMLFormElement;
+      const formDataEncoded = new FormData(formElement);
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your inquiry. I'll respond within 24 hours.",
-    });
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataEncoded as any).toString(),
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      tourType: "",
-      date: "",
-      groupSize: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your inquiry. I'll respond within 24 hours.",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          tourType: "",
+          date: "",
+          groupSize: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -67,7 +87,21 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                {/* Hidden fields for Netlify Forms */}
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -116,6 +150,9 @@ const Contact = () => {
                       <option value="">Select a tour</option>
                       <option value="asakusa">Asakusa Walking Tour</option>
                       <option value="yanaka">Ueno & Yanaka Discovery</option>
+                      <option value="shibuya-harajuku">Shibuya & Harajuku Tour</option>
+                      <option value="tsukiji-ginza">Tsukiji & Ginza Tour</option>
+                      <option value="imperial-palace">Imperial Palace & Marunouchi</option>
                       <option value="custom">Custom Private Tour</option>
                       <option value="other">Other / Not sure</option>
                     </select>
