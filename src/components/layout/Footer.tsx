@@ -19,7 +19,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center gap-4 mt-6">
               <a
-                href="mailto:hello@tokyoguide.com"
+                href="mailto:info@tanuki-tabi-travel.com"
                 className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
               >
                 <Mail className="w-5 h-5" />
@@ -70,8 +70,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <Mail className="w-5 h-5 shrink-0 mt-0.5" />
-                <a href="mailto:hello@tokyoguide.com" className="hover:text-primary-foreground transition-colors">
-                  hello@tokyoguide.com
+                <a href="mailto:info@tanuki-tabi-travel.com" className="hover:text-primary-foreground transition-colors">
+                  info@tanuki-tabi-travel.com
                 </a>
               </li>
             </ul>
