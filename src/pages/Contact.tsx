@@ -130,7 +130,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-                      placeholder="john@example.com"
+                      placeholder="your-email@example.com"
                     />
                   </div>
                 </div>
@@ -236,8 +236,8 @@ const Contact = () => {
                       <Mail className="w-5 h-5 text-accent mt-0.5" />
                       <div>
                         <p className="text-sm font-medium text-foreground">Email</p>
-                        <a href="mailto:hello@tokyoguide.com" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                          hello@tokyoguide.com
+                        <a href="mailto:info@tanuki-tabi-travel.com" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+                          info@tanuki-tabi-travel.com
                         </a>
                       </div>
                     </div>
