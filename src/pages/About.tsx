@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import { Award, Globe, Briefcase, Heart, MapPin, Languages } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import guidePortrait from "@/assets/guide-portrait.jpg";
+import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import heroImage from "@/assets/hero-asakusa.jpg";
 
 const stats = [
-  { label: "Years Guiding", value: "10+" },
-  { label: "Happy Guests", value: "500+" },
-  { label: "TOEIC Score", value: "950" },
+  { label: "Years Guiding", value: "3+" },
+  { label: "Happy Guests", value: "100+" },
+  { label: "Languages", value: "3" },
   { label: "Tour Areas", value: "5+" },
 ];
 
 const credentials = [
   {
     icon: Award,
-    title: "Licensed Tour Guide",
-    description: "Nationally certified professional tour guide with comprehensive training in Japanese history and culture.",
+    title: "Deep Japan Knowledge",
+    description: "Born in Kanazawa, raised in Kyoto, now based in Tokyo. I bring unique insights from Japan's most culturally rich regions.",
   },
   {
     icon: Globe,
@@ -29,8 +29,8 @@ const credentials = [
   },
   {
     icon: Languages,
-    title: "Language Skills",
-    description: "TOEIC 950 certified. Fluent English communication for seamless, enjoyable tour experiences.",
+    title: "Multilingual",
+    description: "Fluent in Japanese, English, and Spanish for seamless communication with guests worldwide.",
   },
 ];
 
@@ -47,15 +47,15 @@ const About = () => {
                 Hello, I'm <span className="text-accent">Manabu</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                I'm a licensed professional tour guide based in Tokyo. For over 
-                a decade, I've had the privilege of sharing the beauty, history, 
-                and hidden gems of this incredible city with visitors from around 
-                the world.
+                I'm a professional tour guide based in Tokyo. Born in Kanazawa,
+                raised in Kyoto, and now living in Tokyo—I bring a unique perspective
+                from Japan's most culturally rich regions to share with visitors
+                from around the world.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                My journey to becoming a guide started with my own curiosity about 
-                the stories behind Tokyo's temples, neighborhoods, and traditions. 
-                Combined with my international business experience and passion for 
+                My journey to becoming a guide started with my own curiosity about
+                the stories behind Tokyo's temples, neighborhoods, and traditions.
+                Combined with my international business experience and passion for
                 cross-cultural exchange, guiding became my calling.
               </p>
 
@@ -92,26 +92,25 @@ const About = () => {
             </h2>
             <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
               <p>
-                Growing up in Japan, I always felt a deep connection to the traditions 
-                and stories passed down through generations. But it wasn't until I 
-                started working internationally that I truly understood how unique 
+                Growing up in Japan, I always felt a deep connection to the traditions
+                and stories passed down through generations. But it wasn't until I
+                started working internationally that I truly understood how unique
                 and fascinating Japanese culture appears to people from other countries.
               </p>
               <p>
-                My years in business gave me the opportunity to travel and work with 
-                people from diverse backgrounds. I noticed how visitors to Japan often 
-                missed the context and meaning behind what they were seeing—the "why" 
+                My years in business gave me the opportunity to travel and work with
+                people from diverse backgrounds. I noticed how visitors to Japan often
+                missed the context and meaning behind what they were seeing—the "why"
                 that makes experiences truly memorable.
               </p>
               <p>
-                That's when I decided to combine my professional skills with my passion 
-                for sharing Japan. I obtained my national tour guide license and dedicated 
-                myself to creating authentic, insightful experiences that go beyond 
-                typical sightseeing.
+                That's when I decided to combine my professional skills with my passion
+                for sharing Japan. I dedicated myself to creating authentic, insightful
+                experiences that go beyond typical sightseeing.
               </p>
               <p className="font-medium text-foreground">
-                Today, nothing brings me more joy than seeing the moment of understanding 
-                in a guest's eyes—when a temple isn't just old stones, but a living 
+                Today, nothing brings me more joy than seeing the moment of understanding
+                in a guest's eyes—when a temple isn't just old stones, but a living
                 connection to centuries of belief and craftsmanship.
               </p>
             </div>
@@ -169,8 +168,8 @@ const About = () => {
                 Areas I Know Best
               </h2>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Each neighborhood in Tokyo has its own character and stories. 
-                Here are the areas where I've developed deep knowledge and local 
+                Each neighborhood in Tokyo has its own character and stories.
+                Here are the areas where I've developed deep knowledge and local
                 connections:
               </p>
 
@@ -197,7 +196,7 @@ const About = () => {
           <Heart className="w-12 h-12 mx-auto mb-6 text-accent" />
           <h2 className="heading-section">Let's Explore Tokyo Together</h2>
           <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
-            I look forward to sharing my favorite places and the stories that 
+            I look forward to sharing my favorite places and the stories that
             make Tokyo such a special city. Let's create memories together.
           </p>
           <Link to="/contact" className="btn-accent mt-8 inline-flex">

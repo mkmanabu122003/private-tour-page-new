@@ -1,8 +1,11 @@
 import { Layout } from "@/components/layout/Layout";
 import { TourCard } from "@/components/tours/TourCard";
 import tourAsakusa from "@/assets/tour-asakusa.jpg";
-import tourYanaka from "@/assets/tour-yanaka.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
+import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
+import tsukijiMarket from "@/assets/tsukiji-market.jpg";
+import imperialPalace from "@/assets/imperial-palace.jpg";
+import hamarikyu from "@/assets/hamarikyu.jpg";
 
 const tours = [
   {
@@ -10,7 +13,7 @@ const tours = [
     title: "Asakusa Walking Tour",
     description: "Discover the heart of old Tokyo. Visit Senso-ji Temple, explore traditional shops along Nakamise Street, and taste authentic local street food.",
     duration: "3 hours",
-    price: "¥12,000",
+    price: "¥30,000",
     difficulty: "Easy",
     image: tourAsakusa,
   },
@@ -19,45 +22,45 @@ const tours = [
     title: "Ueno & Yanaka Discovery",
     description: "Experience the nostalgic charm of old Tokyo neighborhoods. Wander through traditional temples, cemetery paths, and discover hidden local cafes.",
     duration: "4 hours",
-    price: "¥15,000",
+    price: "¥40,000",
     difficulty: "Easy",
-    image: tourYanaka,
+    image: tourUeno,
   },
   {
     id: "shibuya-harajuku",
     title: "Shibuya & Harajuku Tour",
     description: "Explore Tokyo's youth culture hub. From the famous Shibuya Crossing to trendy Harajuku streets, and find peace at the serene Meiji Shrine.",
     duration: "3.5 hours",
-    price: "¥13,000",
+    price: "¥35,000",
     difficulty: "Easy",
-    image: tourUeno,
+    image: shibuyaCrossing,
   },
   {
     id: "tsukiji-ginza",
     title: "Tsukiji & Ginza Tour",
     description: "Experience Tokyo's culinary delights at Tsukiji Outer Market and stroll through the upscale Ginza shopping district with its blend of tradition and luxury.",
     duration: "3 hours",
-    price: "¥14,000",
+    price: "¥30,000",
     difficulty: "Easy",
-    image: tourAsakusa,
+    image: tsukijiMarket,
   },
   {
     id: "imperial-palace",
     title: "Imperial Palace & Marunouchi",
     description: "Discover Tokyo's historical heart and modern business district. Walk through the beautiful East Gardens and see the majestic Imperial Palace grounds.",
     duration: "2.5 hours",
-    price: "¥11,000",
+    price: "¥25,000",
     difficulty: "Easy",
-    image: tourYanaka,
+    image: imperialPalace,
   },
   {
     id: "custom",
     title: "Custom Private Tour",
     description: "Create your perfect Tokyo experience. Share your interests—food, history, photography, anime—and I'll design a personalized itinerary just for you.",
     duration: "Flexible",
-    price: "From ¥18,000",
+    price: "From ¥10,000/hour",
     difficulty: "Customizable",
-    image: tourUeno,
+    image: hamarikyu,
   },
 ];
 
@@ -72,7 +75,7 @@ const Tours = () => {
             <h1 className="heading-display text-foreground">Walking Tours</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Discover Tokyo's rich culture and hidden gems through immersive 
-              walking tours led by a licensed professional guide.
+              walking tours led by a local professional guide.
             </p>
           </div>
         </div>
@@ -98,7 +101,7 @@ const Tours = () => {
                 What's Included
               </h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Professional licensed guide</li>
+                <li>• Professional local guide</li>
                 <li>• Cultural insights & local stories</li>
                 <li>• Photo opportunities</li>
                 <li>• Flexible pace & stops</li>
