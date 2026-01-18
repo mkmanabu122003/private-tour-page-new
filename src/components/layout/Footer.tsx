@@ -14,7 +14,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
-              Experience authentic Tokyo with a licensed professional guide. 
+              Experience authentic Tokyo with a local professional guide. 
               Discover hidden gems, cultural insights, and local stories.
             </p>
             <div className="flex items-center gap-4 mt-6">
@@ -81,7 +81,7 @@ export const Footer = () => {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/50">
             <p>© 2024 Tokyo Guide by Manabu. All rights reserved.</p>
-            <p>Licensed Tour Guide · Tokyo, Japan</p>
+            <p>Private Tour Guide · Tokyo, Japan</p>
           </div>
         </div>
       </div>

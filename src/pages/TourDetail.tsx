@@ -1,9 +1,25 @@
 import { useParams, Link } from "react-router-dom";
-import { Clock, Users, MapPin, Check, ArrowLeft } from "lucide-react";
+import { useState, useCallback, useEffect } from "react";
+import { Clock, Users, MapPin, Check, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
+import useEmblaCarousel from "embla-carousel-react";
 import tourAsakusa from "@/assets/tour-asakusa.jpg";
 import tourYanaka from "@/assets/tour-yanaka.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
+import uenoNight from "@/assets/ueno-night.jpg";
+import asakusaStreet from "@/assets/asakusa-street.jpg";
+import asakusaMask from "@/assets/mask-2397624.jpg";
+import asakusaTemple from "@/assets/asakusa-temple.jpg";
+import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
+import shibuyaStreet from "@/assets/shibuya-street.jpg";
+import meijiShrine from "@/assets/meiji-shrine.jpg";
+import harajukuStreet from "@/assets/harajuku-street.webp";
+import tsukijiMarket from "@/assets/tsukiji-market.jpg";
+import tsukijiFood from "@/assets/tsukiji-food.jpg";
+import imperialPalace from "@/assets/imperial-palace.jpg";
+import imperialBridge from "@/assets/imperial-bridge.jpg";
+import tokyoStation from "@/assets/tokyo-station.jpg";
+import hamarikyu from "@/assets/hamarikyu.jpg";
 
 const tourData = {
   asakusa: {
@@ -11,12 +27,17 @@ const tourData = {
     subtitle: "Discover the heart of old Tokyo",
     description: "Experience the magic of Tokyo's oldest and most traditional district. This immersive walking tour takes you through the iconic Senso-ji Temple, the bustling Nakamise shopping street, and hidden corners that only locals know.",
     duration: "3 hours",
-    price: "¥12,000",
+    price: "¥30,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:00 AM or 2:00 PM",
     meetingPoint: "Asakusa Station, Exit 1",
-    image: tourAsakusa,
+    images: [
+      { src: tourAsakusa, position: "center 80%" },
+      { src: asakusaStreet, position: "center" },
+      { src: asakusaMask, position: "center" },
+      { src: asakusaTemple, position: "center" },
+    ],
     highlights: [
       "Senso-ji Temple - Tokyo's oldest and most famous temple",
       "Kaminarimon Gate - The iconic Thunder Gate",
@@ -33,7 +54,7 @@ const tourData = {
       { time: "13:00", activity: "Tour ends at Asakusa Station" },
     ],
     includes: [
-      "Licensed English-speaking guide",
+      "English & Spanish-speaking guide",
       "Cultural commentary and local stories",
       "Photo assistance at key spots",
       "Temple etiquette guidance",
@@ -52,12 +73,16 @@ const tourData = {
     subtitle: "Step back in time to old Tokyo",
     description: "Escape the modern city and discover Tokyo's most nostalgic neighborhood. Yanaka survived the war and earthquakes, preserving the atmosphere of old Tokyo with its wooden houses, traditional shops, and peaceful temples.",
     duration: "4 hours",
-    price: "¥15,000",
+    price: "¥40,000",
     difficulty: "Easy",
     groupSize: "1-4 people",
     startTime: "9:30 AM or 1:30 PM",
     meetingPoint: "Nippori Station, North Exit",
-    image: tourYanaka,
+    images: [
+      { src: tourUeno, position: "center" },
+      { src: tourYanaka, position: "center" },
+      { src: uenoNight, position: "center" },
+    ],
     highlights: [
       "Yanaka Ginza - Charming retro shopping street",
       "Historic temples and graveyards",
@@ -75,7 +100,7 @@ const tourData = {
       { time: "13:30", activity: "Tour ends at Ueno Station" },
     ],
     includes: [
-      "Licensed English-speaking guide",
+      "English & Spanish-speaking guide",
       "Deep cultural insights and history",
       "Local cafe and food recommendations",
       "Temple and shrine etiquette guidance",
@@ -94,12 +119,17 @@ const tourData = {
     subtitle: "Experience Tokyo's vibrant youth culture",
     description: "Dive into the heart of modern Tokyo where fashion, technology, and tradition coexist. From the world's busiest crossing to peaceful shrine grounds, this tour showcases Tokyo's dynamic energy and cultural contrasts.",
     duration: "3.5 hours",
-    price: "¥13,000",
+    price: "¥35,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:30 AM or 2:30 PM",
     meetingPoint: "Shibuya Station, Hachiko Exit",
-    image: tourUeno,
+    images: [
+      { src: shibuyaCrossing, position: "center" },
+      { src: shibuyaStreet, position: "center" },
+      { src: meijiShrine, position: "center" },
+      { src: harajukuStreet, position: "center" },
+    ],
     highlights: [
       "Shibuya Crossing - The world's busiest pedestrian crossing",
       "Hachiko Statue - Tokyo's most famous meeting spot",
@@ -117,7 +147,7 @@ const tourData = {
       { time: "14:00", activity: "Tour ends at Harajuku/Omotesando Station" },
     ],
     includes: [
-      "Licensed English-speaking guide",
+      "English & Spanish-speaking guide",
       "Youth culture & fashion insights",
       "Shrine etiquette guidance",
       "Photo opportunities at famous spots",
@@ -136,12 +166,15 @@ const tourData = {
     subtitle: "From market delights to upscale elegance",
     description: "Experience two sides of Tokyo in one tour. Start at the bustling Tsukiji Outer Market for fresh seafood and local delicacies, then stroll through sophisticated Ginza with its luxury shops, art galleries, and architectural gems.",
     duration: "3 hours",
-    price: "¥14,000",
+    price: "¥30,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "9:00 AM or 1:00 PM",
     meetingPoint: "Tsukiji Market Station, Exit A1",
-    image: tourAsakusa,
+    images: [
+      { src: tsukijiMarket, position: "center" },
+      { src: tsukijiFood, position: "center" },
+    ],
     highlights: [
       "Tsukiji Outer Market - Fresh seafood and street food",
       "Local food tastings - Seasonal Japanese delicacies",
@@ -159,7 +192,7 @@ const tourData = {
       { time: "12:00", activity: "Tour ends at Ginza Station" },
     ],
     includes: [
-      "Licensed English-speaking guide",
+      "English & Spanish-speaking guide",
       "Market food tastings (¥500-800 worth)",
       "Shopping and dining recommendations",
       "Cultural insights on Japanese cuisine",
@@ -178,12 +211,16 @@ const tourData = {
     subtitle: "Discover Tokyo's historical and modern heart",
     description: "Walk through centuries of history at the Imperial Palace East Gardens, then contrast it with the gleaming skyscrapers of Marunouchi. This tour perfectly balances Tokyo's imperial heritage with its role as a modern business capital.",
     duration: "2.5 hours",
-    price: "¥11,000",
+    price: "¥25,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:00 AM or 2:00 PM",
     meetingPoint: "Tokyo Station, Marunouchi North Exit",
-    image: tourYanaka,
+    images: [
+      { src: imperialPalace, position: "center" },
+      { src: imperialBridge, position: "center" },
+      { src: tokyoStation, position: "center" },
+    ],
     highlights: [
       "Imperial Palace East Gardens - Beautiful Japanese gardens",
       "Historic castle foundations and moats",
@@ -201,7 +238,7 @@ const tourData = {
       { time: "12:30", activity: "Tour ends at Tokyo Station" },
     ],
     includes: [
-      "Licensed English-speaking guide",
+      "English & Spanish-speaking guide",
       "Japanese history and imperial culture insights",
       "Garden and architecture photography tips",
       "Local lunch spot recommendations",
@@ -220,12 +257,14 @@ const tourData = {
     subtitle: "Your perfect Tokyo experience",
     description: "Tell me your interests, and I'll create a personalized itinerary just for you. Whether you're passionate about food, history, anime, photography, or something completely unique—let's design your dream Tokyo day together.",
     duration: "Flexible (3-8 hours)",
-    price: "From ¥18,000",
+    price: "From ¥10,000/hour",
     difficulty: "Customizable",
     groupSize: "1-6 people",
     startTime: "Flexible",
     meetingPoint: "Your choice",
-    image: tourUeno,
+    images: [
+      { src: hamarikyu, position: "center" },
+    ],
     highlights: [
       "Personalized itinerary based on your interests",
       "Flexible timing and pace",
@@ -241,7 +280,7 @@ const tourData = {
       { time: "", activity: "Tour ends at convenient location" },
     ],
     includes: [
-      "Licensed English-speaking guide",
+      "English & Spanish-speaking guide",
       "Custom itinerary planning",
       "Local insider recommendations",
       "Flexible pace and schedule",
@@ -274,27 +313,111 @@ const TourDetail = () => {
     );
   }
 
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px]">
-        <img
-          src={tour.image}
-          alt={tour.title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 container-section pb-8">
+      {/* Hero Carousel with Thumbnails */}
+      <section className="relative h-[50vh] md:h-[60vh] min-h-[400px] md:min-h-[500px]">
+        {/* Main Image */}
+        <div className="overflow-hidden h-full" ref={emblaRef}>
+          <div className="flex h-full">
+            {tour.images.map((image, index) => (
+              <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+                <img
+                  src={image.src}
+                  alt={`${tour.title} - Image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: image.position }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tour Info - Below Image */}
+        <div className="absolute bottom-16 md:bottom-20 left-0 right-0 container-section pointer-events-none">
           <Link
             to="/tours"
-            className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground mb-4 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-white/90 hover:text-white mb-2 md:mb-4 transition-colors pointer-events-auto drop-shadow-md"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Tours
           </Link>
-          <p className="text-label text-accent mb-2">{tour.difficulty} · {tour.duration}</p>
-          <h1 className="heading-display text-foreground">{tour.title}</h1>
-          <p className="text-lg text-muted-foreground mt-2">{tour.subtitle}</p>
+        </div>
+
+        {/* Thumbnail Navigation */}
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-8 flex items-center gap-1 md:gap-2 pointer-events-auto">
+          <button
+            onClick={scrollPrev}
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors"
+          >
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+
+          <div className="flex gap-1 md:gap-2">
+            {tour.images.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`w-12 h-9 md:w-16 md:h-12 rounded-md overflow-hidden border-2 transition-all ${
+                  index === selectedIndex
+                    ? "border-accent opacity-100"
+                    : "border-transparent opacity-60 hover:opacity-100"
+                }`}
+              >
+                <img
+                  src={image.src}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={scrollNext}
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent hover:bg-accent/90 flex items-center justify-center text-white transition-colors"
+          >
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
+        </div>
+      </section>
+
+      {/* Tour Title Section */}
+      <section className="py-8 md:py-12 bg-secondary/30">
+        <div className="container-section">
+          <p className="text-label text-accent mb-1 md:mb-2">{tour.difficulty} · {tour.duration}</p>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground">{tour.title}</h1>
+          <p className="text-sm md:text-lg text-muted-foreground mt-1 md:mt-2">{tour.subtitle}</p>
         </div>
       </section>
 
