@@ -31,10 +31,19 @@ const Contact = () => {
       const formElement = e.target as HTMLFormElement;
       const formDataEncoded = new FormData(formElement);
 
+      // Ensure form-name is included
+      const formDataObj: Record<string, string> = {
+        "form-name": "contact",
+      };
+
+      formDataEncoded.forEach((value, key) => {
+        formDataObj[key] = value.toString();
+      });
+
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataEncoded as any).toString(),
+        body: new URLSearchParams(formDataObj).toString(),
       });
 
       if (response.ok) {
