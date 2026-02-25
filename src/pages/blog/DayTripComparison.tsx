@@ -125,14 +125,14 @@ const DayTripComparison = () => {
               Beyond the Great Buddha, Kamakura offers Hasedera Temple (spectacular ocean views and a famous golden Kannon statue), Tsurugaoka Hachimangu Shrine (the city's most important shrine, with a dramatic approach road), and Hokokuji Temple (a serene bamboo grove where you can enjoy matcha tea). The Komachi-dori shopping street near the station is perfect for lunch and snacking — try the local shirasu (baby sardines) that Kamakura is famous for.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               History lovers, first-time Japan visitors who want a well-rounded experience, families (easy terrain, lots of variety), and food enthusiasts. Kamakura is also the easiest day trip logistically — simple train connections, compact walking area, and well-signed paths.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               What Most People Don't Know
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -158,14 +158,14 @@ const DayTripComparison = () => {
               Hakone Shrine, with its red torii gate standing in the lake, is one of Japan's most photographed spiritual sites. The approach through the ancient cedar forest is atmospheric, and the lakeside torii creates a stunning composition. Beyond the main attractions, Hakone offers the Open-Air Museum (impressive sculpture garden with Picasso pavilion), traditional ryokan inns, and of course, onsen — the natural hot spring baths that are central to Japanese relaxation culture.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nature lovers, photographers (especially those chasing the Fuji shot), couples seeking a romantic experience, and anyone who wants a complete change of scenery from Tokyo's urban energy. If seeing Mt. Fuji is on your bucket list, Hakone is your best bet for a day trip (though weather cooperation is required — Fuji is visible roughly 60-70% of clear days in winter, less in summer).
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Insider Tip: The Fuji Factor
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -194,14 +194,14 @@ const DayTripComparison = () => {
               Beyond the shrine complex, Nikko offers the dramatic Kegon Falls — a 97-meter waterfall that you can view from an observation platform reached by elevator inside the cliff. Lake Chuzenji, at 1,269 meters elevation, offers a completely different climate and atmosphere from Tokyo. In autumn (October to November), the mountainside transforms into a tapestry of red, orange, and gold that rivals any foliage display in the world.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               History buffs who want to understand the Tokugawa era, nature lovers (especially in autumn), UNESCO heritage enthusiasts, and photographers. Nikko is also significantly less crowded than Kamakura or Hakone, which is a major advantage for those who prefer a more peaceful experience.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Why It's Less Crowded Than the Others
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -269,7 +269,7 @@ const DayTripComparison = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="font-serif text-2xl font-medium text-foreground mb-4">
+              <h2 className="text-2xl font-medium text-foreground mb-4">
                 Ready to explore beyond Tokyo?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">

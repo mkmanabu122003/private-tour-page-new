@@ -693,7 +693,7 @@ const TourDetail = () => {
       <section className="py-8 md:py-12 bg-secondary/30">
         <div className="container-section">
           <p className="text-label text-accent mb-1 md:mb-2">{tour.difficulty} · {tour.duration}</p>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground">{seo.h1}</h1>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-foreground">{seo.h1}</h1>
           <p className="text-sm md:text-lg text-muted-foreground mt-1 md:mt-2">{tour.subtitle}</p>
         </div>
       </section>
@@ -908,7 +908,7 @@ const TourDetail = () => {
                     to={`/tours/${tourId}`}
                     className="group bg-card border border-border rounded-lg p-6 hover:border-accent/50 hover:shadow-[var(--shadow-card)] transition-all"
                   >
-                    <h3 className="font-serif text-lg font-medium text-foreground group-hover:text-accent transition-colors">
+                    <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
                       {tourNames[tourId]}
                     </h3>
                     <p className="mt-2 text-sm text-muted-foreground line-clamp-2">

@@ -37,7 +37,7 @@ export const Footer = () => {
 
           {/* Tokyo Tours */}
           <div>
-            <h4 className="font-serif text-lg font-medium mb-4">Tokyo Tours</h4>
+            <h4 className="text-lg font-medium mb-4">Tokyo Tours</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/tours/asakusa" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
@@ -74,7 +74,7 @@ export const Footer = () => {
 
           {/* Day Trips & Blog */}
           <div>
-            <h4 className="font-serif text-lg font-medium mb-4">Day Trips</h4>
+            <h4 className="text-lg font-medium mb-4">Day Trips</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/tours/kamakura-day-trip" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
@@ -93,7 +93,7 @@ export const Footer = () => {
               </li>
             </ul>
 
-            <h4 className="font-serif text-lg font-medium mb-4 mt-8">Blog</h4>
+            <h4 className="text-lg font-medium mb-4 mt-8">Blog</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/blog/tokyo-3-day-itinerary" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
@@ -115,7 +115,7 @@ export const Footer = () => {
 
           {/* Explore & Contact */}
           <div>
-            <h4 className="font-serif text-lg font-medium mb-4">Explore</h4>
+            <h4 className="text-lg font-medium mb-4">Explore</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/tours" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
@@ -144,7 +144,7 @@ export const Footer = () => {
               </li>
             </ul>
 
-            <h4 className="font-serif text-lg font-medium mb-4 mt-8">Contact</h4>
+            <h4 className="text-lg font-medium mb-4 mt-8">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin className="w-5 h-5 shrink-0 mt-0.5" />

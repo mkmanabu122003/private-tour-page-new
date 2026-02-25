@@ -134,18 +134,17 @@
 }
 
 @layer components {
+  /* Font family for headings is centralized in the h1-h6 base rule above.
+     These classes only define size, weight, and spacing. */
   .heading-display {
-    font-family: 'Cormorant Garamond', serif;
     @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight;
   }
 
   .heading-section {
-    font-family: 'Cormorant Garamond', serif;
     @apply text-3xl md:text-4xl font-medium tracking-tight;
   }
 
   .heading-card {
-    font-family: 'Cormorant Garamond', serif;
     @apply text-xl md:text-2xl font-medium;
   }
 
