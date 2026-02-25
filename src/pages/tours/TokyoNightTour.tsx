@@ -2,24 +2,32 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 
-const nightExperiences = [
+const nightExperiences: {
+  title: string;
+  area: string;
+  description: string;
+  image?: string;
+}[] = [
   {
     title: "Golden Gai Bar Hopping",
     area: "Shinjuku",
     description:
       "Over 200 tiny bars crammed into six narrow alleys, each seating just 5-10 people. Every bar has its own personality — jazz bars, punk bars, film bars, bars where the owner only speaks through a puppet. Your guide knows which ones welcome first-timers and which to skip.",
+    image: "/images/tours/night-tour-golden-gai.jpg",
   },
   {
     title: "Omoide Yokocho",
     area: "Memory Lane, Shinjuku",
     description:
       "Yakitori smoke drifts through narrow lanes under the rumble of trains overhead. This postwar alley of tiny food stalls has barely changed since the 1940s. Order grilled chicken skewers and cold beer elbow-to-elbow with salarymen winding down their day.",
+    image: "/images/tours/night-tour-omoide-yokocho.jpg",
   },
   {
     title: "Shibuya Crossing at Night",
     area: "Shibuya",
     description:
       "The world's busiest pedestrian crossing takes on a completely different energy after dark. Neon signs blaze from every building, giant screens pulse with light, and up to 3,000 people cross in a single green light. It's Tokyo at its most electric.",
+    image: "/images/tours/night-tour-shibuya.jpg",
   },
   {
     title: "Yurakucho & Shinbashi",
@@ -51,6 +59,17 @@ const TokyoNightTour = () => {
       />
 
       {/* Hero Section */}
+
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/tours/tokyo-night-tour-hero.jpg"
+          alt="Tokyo night tour - neon-lit streets of Shinjuku"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      </section>
+
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
@@ -121,16 +140,25 @@ const TokyoNightTour = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {nightExperiences.map((experience) => (
-              <div key={experience.title} className="card-elevated p-6">
-                <p className="text-label text-accent mb-2">
-                  {experience.area}
-                </p>
-                <h3 className="heading-card text-foreground mb-3">
-                  {experience.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {experience.description}
-                </p>
+              <div key={experience.title} className="card-elevated overflow-hidden">
+                {experience.image && (
+                  <img
+                    src={experience.image}
+                    alt={experience.title}
+                    className="w-full h-48 object-cover"
+                  />
+                )}
+                <div className="p-6">
+                  <p className="text-label text-accent mb-2">
+                    {experience.area}
+                  </p>
+                  <h3 className="heading-card text-foreground mb-3">
+                    {experience.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {experience.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

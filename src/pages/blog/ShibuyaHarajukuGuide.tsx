@@ -41,6 +41,15 @@ const ShibuyaHarajukuGuide = () => {
         </div>
       </section>
 
+      {/* Hero Image */}
+      <div className="w-full h-[300px] md:h-[400px]">
+        <img
+          src="/images/blog/shibuya-harajuku-guide-hero.jpg"
+          alt="Guide to Shibuya and Harajuku - Tokyo's modern side"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
@@ -66,6 +75,16 @@ const ShibuyaHarajukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">When to cross:</strong> If you want the full sensory overload, come on a Friday or Saturday evening between 7 and 9 PM. That's when foot traffic peaks and up to 3,000 people flood the intersection every signal change. The neon reflections on the pavement after rain make for especially dramatic photos. Weekday mornings, by contrast, are surprisingly calm — you can cross almost leisurely and see the intersection as the local commuters experience it.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/shibuya-crossing-guide.jpg"
+                alt="How to enjoy Shibuya Crossing - best viewing spots"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Shibuya Crossing from above — up to 3,000 people cross each signal change
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               But the scramble is just the start. Too many people treat the crossing as the destination rather than the gateway. Once you've watched it, crossed it, and captured your photos, the real Shibuya begins in the tangled streets that radiate outward from this famous intersection. That's where this guide really comes in.
             </p>
@@ -121,6 +140,16 @@ const ShibuyaHarajukuGuide = () => {
               Takeshita-dori is the famous pedestrian street that runs from Harajuku Station south toward Meiji-dori. It's colorful, loud, and packed with crepe shops, bubble tea stands, costume stores, and kawaii merchandise. Here's my honest assessment: it's very crowded and very touristy, but it's still fun. The key is managing your expectations. This isn't an "authentic local secret" — it's a spectacle, and spectacles have their own value. Visit on a weekday morning if you want to actually move freely, or brave the weekend crowds if you want the full experience. Either way, give yourself about 30 to 45 minutes. That's enough to soak it in without the sensory overload becoming exhausting.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/blog/harajuku-cat-street.jpg"
+                alt="Cat Street Harajuku - the real fashion street"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Cat Street — Harajuku's real fashion street, away from the Takeshita crowds
+              </figcaption>
+            </figure>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Cat Street — The Real Fashion Street
             </h3>
@@ -135,6 +164,16 @@ const ShibuyaHarajukuGuide = () => {
               Omotesando is the tree-lined boulevard that runs from Harajuku toward Aoyama, and it's one of the most architecturally significant streets in the world. Nearly every major luxury brand has commissioned a world-class architect for their flagship store here. Tadao Ando designed the Omotesando Hills complex, with its signature spiraling concrete ramp. Shigeru Ban created the Nicolas G. Hayek Center with its glass-and-steel facade that opens entirely to the street. The Dior building by SANAA shimmers like a translucent curtain. Even if you have no interest in shopping, walking Omotesando as an open-air architecture gallery is a remarkable experience. I always tell visitors to look up — the building facades tell stories that the storefronts at ground level never reveal.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/blog/meiji-shrine-forest.jpg"
+                alt="Forest path at Meiji Shrine - quiet escape near Harajuku"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                The forested approach to Meiji Shrine — a world away from Harajuku's crowds
+              </figcaption>
+            </figure>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Meiji Shrine — A Peaceful Contrast
             </h3>

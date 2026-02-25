@@ -11,11 +11,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import heroImage from "@/assets/sumida.jpg";
-import tourAsakusa from "@/assets/tour-asakusa.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
-import tsukijiMarket from "@/assets/tsukiji-market.jpg";
 import imperialPalace from "@/assets/imperial-palace.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
 
@@ -45,7 +42,7 @@ const tours = [
     duration: "3.5 hours",
     price: "¥35,000",
     difficulty: "Easy",
-    image: shibuyaCrossing,
+    image: "/images/tours/shibuya-crossing-tokyo.jpg",
   },
   {
     id: "tsukiji-ginza",
@@ -54,7 +51,7 @@ const tours = [
     duration: "3 hours",
     price: "¥30,000",
     difficulty: "Easy",
-    image: tsukijiMarket,
+    image: "/images/tours/tsukiji-market-food-tokyo.jpg",
   },
   {
     id: "imperial-palace",
@@ -72,7 +69,7 @@ const tours = [
     duration: "7-8 hours",
     price: "¥50,000",
     difficulty: "Easy-Moderate",
-    image: hamarikyu,
+    image: "/images/tours/kamakura-great-buddha.jpg",
   },
   {
     id: "hakone-day-trip",
@@ -81,7 +78,7 @@ const tours = [
     duration: "8-10 hours",
     price: "¥55,000",
     difficulty: "Easy",
-    image: hamarikyu,
+    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
   },
   {
     id: "nikko-day-trip",

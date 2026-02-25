@@ -41,6 +41,15 @@ const ShinjukuGuide = () => {
         </div>
       </section>
 
+      {/* Hero Image */}
+      <div className="w-full h-[300px] md:h-[400px]">
+        <img
+          src="/images/blog/shinjuku-guide-hero.jpg"
+          alt="Shinjuku guide - navigating Tokyo's neon-lit heart"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
@@ -102,6 +111,17 @@ const ShinjukuGuide = () => {
               point on the south side.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-golden-gai-bars.jpg"
+                alt="Golden Gai - intimate bar district in Shinjuku"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Golden Gai's narrow alleys are home to over 200 tiny bars
+              </figcaption>
+            </figure>
+
             {/* Golden Gai */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Golden Gai: The World's Most Intimate Bar District
@@ -148,6 +168,17 @@ const ShinjukuGuide = () => {
               that goes a long way.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-omoide-yokocho.jpg"
+                alt="Omoide Yokocho Memory Lane - yakitori under the train tracks"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Omoide Yokocho — smoke, yakitori, and cold beer under the tracks
+              </figcaption>
+            </figure>
+
             {/* Omoide Yokocho */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Omoide Yokocho (Memory Lane)
@@ -180,6 +211,17 @@ const ShinjukuGuide = () => {
               popular stalls are packed and you may have to wait. Late at night (after
               10 PM), it thins out again and takes on a different, quieter charm.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-gyoen-garden.jpg"
+                alt="Shinjuku Gyoen National Garden - peaceful escape in Tokyo"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Shinjuku Gyoen — a peaceful escape from the surrounding urban energy
+              </figcaption>
+            </figure>
 
             {/* Shinjuku Gyoen */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

@@ -45,10 +45,16 @@ const features = [
   },
 ];
 
-const foodExperiences = [
+const foodExperiences: {
+  title: string;
+  foods: string;
+  description: string;
+  image?: string;
+}[] = [
   {
     title: "Tsukiji Outer Market Morning Crawl",
     foods: "Sushi, tamagoyaki, seafood skewers, fresh wasabi",
+    image: "/images/tours/food-tour-tsukiji.jpg",
     description:
       "Start your day where Tokyo's chefs start theirs. The Tsukiji Outer Market is still the beating heart of Tokyo's food culture, even after the inner wholesale market moved to Toyosu. We'll navigate the narrow lanes together, tasting freshly grilled scallops from vendors who've been here for decades, watching masters slice maguro with single-stroke precision, and trying tamagoyaki — the sweet, layered egg omelet that's been perfected here over generations. Your guide will explain the market's 90-year history and help you order confidently at stalls where the menu is only in Japanese.",
   },
@@ -61,18 +67,21 @@ const foodExperiences = [
   {
     title: "Ramen Discovery Tour",
     foods: "Tonkotsu, shoyu, miso, tsukemen, gyoza",
+    image: "/images/tours/food-tour-ramen-tokyo.jpg",
     description:
       "Tokyo is arguably the ramen capital of the world, with over 10,000 ramen shops across the city. Each neighborhood has its loyalties, each shop its closely guarded recipe. We'll explore the major styles — rich, creamy tonkotsu from Kyushu, clear and elegant shoyu from Tokyo's own tradition, bold miso ramen born in Hokkaido — and we'll visit shops where the master has spent years perfecting a single bowl. Your guide will teach you proper ramen etiquette (yes, slurping is not just acceptable, it's expected) and help you customize your order with confidence.",
   },
   {
     title: "Izakaya Evening Experience",
     foods: "Yakitori, sake flights, edamame, karaage, small plates",
+    image: "/images/tours/food-tour-izakaya.jpg",
     description:
       "As the lanterns flicker on in Tokyo's yokocho (alleyway bar districts), a different food world comes alive. Izakaya are Japan's answer to the gastropub — informal, convivial, and bursting with flavor. We'll visit izakaya where salarymen unwind after work, tasting perfectly charcoal-grilled yakitori (each cut of chicken has its own name and ideal preparation), sipping through a curated sake flight, and sharing small plates that showcase seasonal ingredients. Your guide handles all ordering and explains the unwritten rules that make izakaya culture uniquely Japanese.",
   },
   {
     title: "Depachika Tour",
     foods: "Wagashi, bento boxes, French pastries, pickles, seasonal sweets",
+    image: "/images/tours/food-tour-depachika.jpg",
     description:
       "The basement floors of Tokyo's department stores — known as depachika — are food wonderlands that most tourists walk right past. These are not ordinary food courts. They're curated collections of Japan's finest food artisans, from wagashi (traditional sweets) makers who've held imperial warrants for centuries to French-trained pastry chefs creating Tokyo-exclusive confections. We'll sample our way through exquisite bento boxes, discover regional specialties from across Japan, and find the perfect edible souvenirs to bring home.",
   },
@@ -146,6 +155,16 @@ const TokyoFoodTour = () => {
       />
 
       {/* Hero Section */}
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/tours/tokyo-food-tour-hero.jpg"
+          alt="Private Tokyo food tour - taste authentic Japanese cuisine"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      </section>
+
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-2xl">
@@ -221,7 +240,14 @@ const TokyoFoodTour = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {foodExperiences.map((experience) => (
-              <div key={experience.title} className="card-elevated">
+              <div key={experience.title} className="card-elevated overflow-hidden">
+                {experience.image && (
+                  <img
+                    src={experience.image}
+                    alt={experience.title}
+                    className="w-full h-48 object-cover"
+                  />
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <UtensilsCrossed className="w-5 h-5 text-accent flex-shrink-0" />
