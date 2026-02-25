@@ -132,16 +132,15 @@ const AsakusaGuide = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Asakusa Shrine
             </h3>
-            {/* TODO: Replace with local image — source: https://unsplash.com/photos/ryqRm-dfZbI or similar Asakusa Shrine photo */}
             <figure className="my-8">
               <img
-                src="https://images.unsplash.com/photo-1583766395091-2eb9994ed094?w=1600&q=80&fit=crop"
+                src="/images/blog/asakusa-hidden-shrine.jpg"
                 alt="Asakusa Shrine - hidden gem next to Senso-ji"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Asakusa Shrine — a serene Shinto shrine hidden in plain sight next to Senso-ji
+                Imado Shrine — a local favorite hidden gem near Senso-ji, famous for its maneki-neko (lucky cats)
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -158,10 +157,9 @@ const AsakusaGuide = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hoppy Street (Hoppy-dori)
             </h3>
-            {/* TODO: Replace with local image — source: https://unsplash.com/photos/InVeNU3UI-A or similar izakaya alley photo */}
             <figure className="my-8">
               <img
-                src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1600&q=80&fit=crop"
+                src="/images/blog/asakusa-hoppy-street.jpg"
                 alt="Hoppy Street Asakusa - local drinking alley at sunset"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
@@ -192,16 +190,15 @@ const AsakusaGuide = () => {
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Best Street Food in Asakusa
             </h2>
-            {/* TODO: Replace with local image — source: https://unsplash.com/s/photos/japan-street-food */}
             <figure className="my-8">
               <img
-                src="https://images.unsplash.com/photo-1554797589-7241bb691973?w=1600&q=80&fit=crop"
+                src="/images/blog/asakusa-street-food.jpg"
                 alt="Street food on Nakamise-dori - melon bread and sweet treats"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Nakamise-dori and the surrounding streets are paradise for street food lovers
+                Matcha sweets at Kaminari Issa — one of Asakusa's beloved treats near Senso-ji
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
