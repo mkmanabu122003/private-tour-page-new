@@ -27,7 +27,7 @@ const tours = [
     duration: "3 hours",
     price: "¥30,000",
     difficulty: "Easy",
-    image: tourAsakusa,
+    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
   },
   {
     id: "yanaka",

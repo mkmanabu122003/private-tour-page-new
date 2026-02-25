@@ -12,6 +12,17 @@ const AsakusaGuide = () => {
         canonicalPath="/blog/asakusa-guide-what-to-see"
       />
 
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/blog/asakusa-guide-hero.jpg"
+          alt="Complete guide to Asakusa - beyond Senso-ji Temple"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
       {/* Article Header */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
@@ -57,6 +68,17 @@ const AsakusaGuide = () => {
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Senso-ji Temple: Tips Most Guides Won't Tell You
             </h2>
+            <figure className="my-8">
+              <img
+                src="/images/blog/asakusa-sensoji-pagoda.jpg"
+                alt="Five-story pagoda at Senso-ji Temple Asakusa"
+                className="w-full rounded-lg shadow-md"
+                loading="lazy"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                The Hozomon gate area at Senso-ji — arrive early to experience it without the crowds
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Let's start with the main attraction, because you are going to visit Senso-ji no matter what — and you should. It is Tokyo's oldest temple, founded in 645 AD according to legend, and the history here is genuinely remarkable. The key is knowing how to visit it properly so you actually enjoy the experience rather than just surviving the crowds.
             </p>
@@ -110,6 +132,18 @@ const AsakusaGuide = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Asakusa Shrine
             </h3>
+            {/* TODO: Replace with local image — source: https://unsplash.com/photos/ryqRm-dfZbI or similar Asakusa Shrine photo */}
+            <figure className="my-8">
+              <img
+                src="https://images.unsplash.com/photo-1583766395091-2eb9994ed094?w=1600&q=80&fit=crop"
+                alt="Asakusa Shrine - hidden gem next to Senso-ji"
+                className="w-full rounded-lg shadow-md"
+                loading="lazy"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Asakusa Shrine — a serene Shinto shrine hidden in plain sight next to Senso-ji
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I mentioned Asakusa Shrine above, but it deserves its own spotlight because roughly 90% of tourists walk right past it without realizing it is there. The shrine sits immediately to the east of Senso-ji's main hall, through a small gate that many people assume leads to a restricted area. It doesn't — walk through and you will find a beautiful Shinto shrine that dates to 1649, built by the third Tokugawa shogun. The architecture is original and designated an Important Cultural Property. It is also the center of the Sanja Matsuri festival in May, one of the largest and most exciting festivals in all of Tokyo. On a typical day, you might be the only visitor here while hundreds of people crowd Senso-ji just meters away.
             </p>
@@ -124,6 +158,18 @@ const AsakusaGuide = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hoppy Street (Hoppy-dori)
             </h3>
+            {/* TODO: Replace with local image — source: https://unsplash.com/photos/InVeNU3UI-A or similar izakaya alley photo */}
+            <figure className="my-8">
+              <img
+                src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1600&q=80&fit=crop"
+                alt="Hoppy Street Asakusa - local drinking alley at sunset"
+                className="w-full rounded-lg shadow-md"
+                loading="lazy"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Hoppy Street comes alive in the late afternoon — a world away from the tourist crowds
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Walk a few minutes west of Senso-ji and you will find Hoppy Street, a lively drinking alley that comes alive in the late afternoon and evening. Named after Hoppy — a low-alcohol, beer-like drink that became popular in post-war Japan when real beer was too expensive — this narrow street is lined with small izakaya (Japanese pubs) that spill their tables and chairs out onto the sidewalk. The atmosphere is relaxed and cheerful, with smoke rising from grills, lanterns swaying in the breeze, and the sound of clinking glasses and laughter. Order a Hoppy set (the drink plus a glass of shochu) and some yakitori or stewed beef tendon. This is where local Asakusa workers come after a long day, and it is a world away from the tourist crowds at the temple. Best visited from around 4 PM onward.
             </p>
@@ -146,6 +192,18 @@ const AsakusaGuide = () => {
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Best Street Food in Asakusa
             </h2>
+            {/* TODO: Replace with local image — source: https://unsplash.com/s/photos/japan-street-food */}
+            <figure className="my-8">
+              <img
+                src="https://images.unsplash.com/photo-1554797589-7241bb691973?w=1600&q=80&fit=crop"
+                alt="Street food on Nakamise-dori - melon bread and sweet treats"
+                className="w-full rounded-lg shadow-md"
+                loading="lazy"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Nakamise-dori and the surrounding streets are paradise for street food lovers
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Asakusa is one of the best neighborhoods in Tokyo for street food, but you need to know where to look. Nakamise-dori, the main shopping street leading to Senso-ji, has over 90 stalls — but not all of them are worth your money. Here is how to navigate the food scene like a local.
             </p>
@@ -237,6 +295,7 @@ const AsakusaGuide = () => {
             "@type": "BlogPosting",
             "headline": "Asakusa Guide — What to See Beyond Senso-ji Temple",
             "description": "A local guide's insider tips for exploring Asakusa beyond Senso-ji Temple.",
+            "image": "https://tanuki-tabi-travel.com/images/blog/asakusa-guide-hero.jpg",
             "author": {
               "@type": "Person",
               "name": "Manabu",

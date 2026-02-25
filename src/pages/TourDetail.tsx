@@ -94,10 +94,10 @@ const tourData = {
     startTime: "10:00 AM or 2:00 PM",
     meetingPoint: "Asakusa Station, Exit 1",
     images: [
-      { src: tourAsakusa, alt: "Senso-ji Temple and Kaminarimon Gate in Asakusa, Tokyo", position: "center 80%" },
-      { src: asakusaStreet, alt: "Traditional shopping street in Asakusa with lanterns", position: "center" },
-      { src: asakusaMask, alt: "Traditional Japanese mask at an Asakusa souvenir shop", position: "center" },
-      { src: asakusaTemple, alt: "Senso-ji Temple five-story pagoda in Asakusa", position: "center" },
+      { src: "/images/tours/asakusa-kaminarimon-morning.jpg", alt: "Kaminarimon Gate Asakusa - private walking tour starting point", position: "center" },
+      { src: "/images/tours/asakusa-nakamise-street.jpg", alt: "Nakamise-dori shopping street leading to Senso-ji Temple", position: "center" },
+      { src: "/images/tours/senso-ji-temple-tokyo.jpg", alt: "Senso-ji Temple main hall - oldest temple in Tokyo", position: "center" },
+      { src: "/images/tours/asakusa-backstreet-local.jpg", alt: "Hidden backstreet in Asakusa away from tourist crowds", position: "center" },
     ],
     highlights: [
       "Senso-ji Temple - Tokyo's oldest and most famous temple",

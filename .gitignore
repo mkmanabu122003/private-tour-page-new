@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Heavy candidate image/video files (not for git)
+public/images/candidates/
