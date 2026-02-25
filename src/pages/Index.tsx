@@ -66,6 +66,33 @@ const tours = [
     image: imperialPalace,
   },
   {
+    id: "kamakura-day-trip",
+    title: "Kamakura Day Trip",
+    description: "Explore Kamakura's Great Buddha, ancient temples, and coastal charm on a private day trip from Tokyo.",
+    duration: "7-8 hours",
+    price: "¥50,000",
+    difficulty: "Easy-Moderate",
+    image: hamarikyu,
+  },
+  {
+    id: "hakone-day-trip",
+    title: "Hakone Day Trip",
+    description: "See Mt. Fuji, cruise Lake Ashi, and experience hot spring culture on a private guided day trip from Tokyo.",
+    duration: "8-10 hours",
+    price: "¥55,000",
+    difficulty: "Easy",
+    image: hamarikyu,
+  },
+  {
+    id: "nikko-day-trip",
+    title: "Nikko Day Trip",
+    description: "Visit UNESCO World Heritage Toshogu Shrine, stunning waterfalls, and mountain scenery on a day trip from Tokyo.",
+    duration: "9-10 hours",
+    price: "¥60,000",
+    difficulty: "Moderate",
+    image: hamarikyu,
+  },
+  {
     id: "custom",
     title: "Custom Private Tour",
     description: "Create your perfect Tokyo experience. Tell me your interests and I'll design a personalized itinerary just for you.",
@@ -85,12 +112,12 @@ const trustSignals = [
   {
     icon: Star,
     title: "516+ Tours Completed",
-    description: "Trusted by hundreds of travelers from around the world on GuruWalk, GetYourGuide, and GoWithGuide.",
+    description: "Trusted by hundreds of travelers from around the world for quality, authenticity, and personalized experiences.",
   },
   {
     icon: Award,
     title: "4.86★ Average Rating",
-    description: "Consistently top-rated across multiple booking platforms for quality and guest satisfaction.",
+    description: "Consistently top-rated for quality, cultural depth, and guest satisfaction.",
   },
   {
     icon: Users,
@@ -347,14 +374,7 @@ const Index = () => {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            <a
-              href="https://www.guruwalk.com/guruwalkers/manabu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              500+ five-star reviews on GuruWalk →
-            </a>
+            500+ five-star reviews from travelers worldwide
           </p>
         </div>
       </section>
