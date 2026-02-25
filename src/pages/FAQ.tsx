@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 
 const faqs = [
@@ -55,6 +56,12 @@ const FAQ = () => {
 
   return (
     <Layout>
+      <SEO
+        title="FAQ | Tokyo Private Tour Questions | Tanuki Tabi Travel"
+        description="Answers to common questions about private Tokyo walking tours: cancellation policy, payment, weather, accessibility, and custom tour options."
+        canonicalPath="/faq"
+      />
+
       {/* Header */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">

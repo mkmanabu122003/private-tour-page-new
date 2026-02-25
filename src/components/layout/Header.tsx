@@ -21,7 +21,7 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
-              Tokyo<span className="text-accent">Guide</span>
+              Tanuki<span className="text-accent">Tabi</span>
             </span>
           </Link>
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -76,12 +77,18 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Book a Tour | Contact Tanuki Tabi Travel | Tokyo Private Tours"
+        description="Ready to explore Tokyo? Contact us to book your private walking tour or ask questions. Fast response guaranteed."
+        canonicalPath="/contact"
+      />
+
       {/* Header */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-2xl">
             <p className="text-label text-accent mb-3">Get in Touch</p>
-            <h1 className="heading-display text-foreground">Book Your Tour</h1>
+            <h1 className="heading-display text-foreground">Contact Us / Book a Tour</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Ready to explore Tokyo? Fill out the form below and I'll get back 
               to you within 24 hours to confirm your booking or answer any questions.
