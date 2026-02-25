@@ -62,7 +62,11 @@ const Tokyo3DayItinerary = () => {
               Morning: Asakusa — Where Old Tokyo Lives
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Start your Tokyo journey where the city itself began — Asakusa. This neighborhood is home to Senso-ji, Tokyo's oldest temple, founded in the 7th century. Walk through the iconic Kaminarimon (Thunder Gate) and down Nakamise-dori, a shopping street that has been serving visitors for centuries.
+              Start your Tokyo journey where the city itself began — Asakusa. This neighborhood is home to Senso-ji, Tokyo's oldest temple, founded in the 7th century. Walk through the iconic Kaminarimon (Thunder Gate) and down Nakamise-dori, a shopping street that has been serving visitors for centuries. For a deeper dive into the area, read our{" "}
+              <Link to="/blog/asakusa-guide-what-to-see" className="text-accent hover:underline">
+                complete Asakusa guide
+              </Link>
+              .
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Local tip:</strong> Arrive before 9 AM to experience Senso-ji without the crowds. The morning light through the incense smoke creates a magical atmosphere that you simply cannot get later in the day. The temple grounds are open 24 hours, but the Nakamise shops open around 10 AM — so you get the best of both worlds if you time it right.
@@ -138,7 +142,11 @@ const Tokyo3DayItinerary = () => {
               Late Morning: Harajuku — Youth Culture Explosion
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              From Meiji Shrine's southern exit, you'll emerge directly onto Harajuku's famous Takeshita Street — one of the most dramatic transitions in Tokyo. In seconds, you go from a 100-year-old shrine forest to a neon-lit street packed with crepe shops, vintage clothing stores, and Japanese pop culture.
+              From Meiji Shrine's southern exit, you'll emerge directly onto Harajuku's famous Takeshita Street — one of the most dramatic transitions in Tokyo. In seconds, you go from a 100-year-old shrine forest to a neon-lit street packed with crepe shops, vintage clothing stores, and Japanese pop culture. See our{" "}
+              <Link to="/blog/shibuya-harajuku-guide" className="text-accent hover:underline">
+                Shibuya & Harajuku guide
+              </Link>{" "}
+              for all the insider tips.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Walk Takeshita Street for the sensory overload, then head to Omotesando — often called "Tokyo's Champs-Élysées" — for world-class architecture by Tadao Ando, Kengo Kuma, and Toyo Ito. The contrast between Harajuku's kawaii culture and Omotesando's sleek sophistication tells you everything about Tokyo's ability to contain multitudes.
@@ -172,7 +180,11 @@ const Tokyo3DayItinerary = () => {
               Evening: Shinjuku Nightlife
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              End day two in Shinjuku, Tokyo's entertainment capital. For drinks, head to Golden Gai — a tiny network of over 200 small bars, each seating about 6-8 people. It's intimate, quirky, and a completely unique experience. Look for bars with English menus or "Foreigner Welcome" signs if you're nervous about the language barrier.
+              End day two in Shinjuku, Tokyo's entertainment capital. For drinks, head to Golden Gai — a tiny network of over 200 small bars, each seating about 6-8 people. It's intimate, quirky, and a completely unique experience. Look for bars with English menus or "Foreigner Welcome" signs if you're nervous about the language barrier. Read our{" "}
+              <Link to="/blog/shinjuku-guide" className="text-accent hover:underline">
+                complete Shinjuku guide
+              </Link>{" "}
+              for more details on Golden Gai etiquette and the best food spots.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For dinner, try Omoide Yokocho ("Memory Lane") — a narrow alley of yakitori (grilled chicken) stalls that has been serving workers since the 1940s. It's smoky, crowded, and absolutely authentic. Vegetarians should note that options are limited here, but nearby Shinjuku has restaurants for every dietary need.
@@ -187,7 +199,11 @@ const Tokyo3DayItinerary = () => {
               Option A: Central Tokyo — Food, Gardens & History
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Morning — Tsukiji Outer Market:</strong> Even though the inner wholesale market moved to Toyosu, Tsukiji Outer Market is still the best food destination in Tokyo. Arrive by 8-9 AM for the freshest offerings: sushi for breakfast (yes, it's a thing), tamagoyaki (Japanese omelet), fresh oysters, and wagyu beef skewers. Take your time and graze — it's the best way to experience the market.
+              <strong className="text-foreground">Morning — Tsukiji Outer Market:</strong> Even though the inner wholesale market moved to Toyosu, Tsukiji Outer Market is still the best food destination in Tokyo. Arrive by 8-9 AM for the freshest offerings: sushi for breakfast (yes, it's a thing), tamagoyaki (Japanese omelet), fresh oysters, and wagyu beef skewers. Take your time and graze — it's the best way to experience the market. Check our{" "}
+              <Link to="/blog/tsukiji-guide-food-lover" className="text-accent hover:underline">
+                Tsukiji food lover's guide
+              </Link>{" "}
+              for what to eat and what to skip.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For a guided food exploration, our{" "}
@@ -265,7 +281,11 @@ const Tokyo3DayItinerary = () => {
               Tokyo is a year-round destination. Spring (March-May) brings cherry blossoms and pleasant weather. Summer (June-August) is hot and humid but offers festivals and fireworks. Autumn (October-November) has stunning foliage and comfortable temperatures. Winter (December-February) is cold but clear, with fewer tourists and beautiful illuminations.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Peak tourist seasons are cherry blossom season (late March to mid-April) and autumn foliage (mid-November to early December). Book accommodations and tours early during these periods. Golden Week (late April to early May) is a Japanese national holiday — domestic travel peaks and some businesses close.
+              Peak tourist seasons are cherry blossom season (late March to mid-April) and autumn foliage (mid-November to early December). Book accommodations and tours early during these periods. Golden Week (late April to early May) is a Japanese national holiday — domestic travel peaks and some businesses close. For a detailed month-by-month breakdown, see our{" "}
+              <Link to="/blog/best-time-to-visit-tokyo" className="text-accent hover:underline">
+                Best Time to Visit Tokyo guide
+              </Link>
+              .
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -279,7 +299,11 @@ const Tokyo3DayItinerary = () => {
               Temple & Shrine Etiquette
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              At shrines: bow slightly before passing through the torii gate, walk on the sides (the center path is for the deity), purify your hands at the water basin, and bow-clap-bow when praying. At temples: remove shoes when entering buildings, don't point at statues, and speak quietly. Your guide will explain all customs in detail, but these basics will help you feel confident.
+              At shrines: bow slightly before passing through the torii gate, walk on the sides (the center path is for the deity), purify your hands at the water basin, and bow-clap-bow when praying. At temples: remove shoes when entering buildings, don't point at statues, and speak quietly. Your guide will explain all customs in detail, but these basics will help you feel confident. For the full step-by-step guide, read our{" "}
+              <Link to="/blog/japan-temple-shrine-etiquette" className="text-accent hover:underline">
+                Temple & Shrine Etiquette guide
+              </Link>
+              .
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               The most important thing is simply to be respectful and observant. Japanese people are incredibly welcoming to tourists who show an interest in their culture, even if you don't get every custom perfectly right.
