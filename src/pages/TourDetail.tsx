@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
-import { Clock, Users, MapPin, Check, ArrowLeft, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Clock, Users, MapPin, Check, X, ArrowLeft, ChevronLeft, ChevronRight, ArrowRight, Calendar, Mountain, Footprints, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import useEmblaCarousel from "embla-carousel-react";
@@ -53,6 +53,21 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     description: "Create your perfect Tokyo day with a licensed private guide. Tell us your interests and we'll design a custom walking tour just for you. Groups of 1-8 welcome.",
     h1: "Custom Private Tour — Your Tokyo, Your Way",
   },
+  "kamakura-day-trip": {
+    title: "Kamakura Day Trip from Tokyo | Private Guided Tour | Tanuki Tabi Travel",
+    description: "Explore Kamakura's Great Buddha, ancient temples, and coastal charm on a private day trip from Tokyo. Licensed guide, custom itinerary, train travel included in planning.",
+    h1: "Kamakura Day Trip from Tokyo — Private Guided Tour",
+  },
+  "hakone-day-trip": {
+    title: "Hakone Day Trip from Tokyo | Hot Springs & Mt. Fuji Views | Tanuki Tabi Travel",
+    description: "Private guided day trip to Hakone from Tokyo. See Mt. Fuji, cruise Lake Ashi, ride the ropeway, and experience hot spring culture with a licensed guide.",
+    h1: "Hakone Day Trip from Tokyo — Mt. Fuji Views & Hot Springs",
+  },
+  "nikko-day-trip": {
+    title: "Nikko Day Trip from Tokyo | Toshogu Shrine & Nature | Tanuki Tabi Travel",
+    description: "Visit Nikko's UNESCO World Heritage Toshogu Shrine, stunning waterfalls, and mountain scenery on a private guided day trip from Tokyo.",
+    h1: "Nikko Day Trip from Tokyo — UNESCO Shrines & Mountain Scenery",
+  },
 };
 
 const tourSchemaData: Record<string, { name: string; area: string; price: string }> = {
@@ -62,6 +77,9 @@ const tourSchemaData: Record<string, { name: string; area: string; price: string
   "tsukiji-ginza": { name: "Tsukiji & Ginza Private Walking Tour", area: "Tsukiji & Ginza", price: "30000" },
   "imperial-palace": { name: "Imperial Palace Private Walking Tour", area: "Imperial Palace & Marunouchi", price: "25000" },
   custom: { name: "Custom Private Tokyo Tour", area: "Tokyo", price: "10000" },
+  "kamakura-day-trip": { name: "Kamakura Day Trip from Tokyo", area: "Kamakura", price: "50000" },
+  "hakone-day-trip": { name: "Hakone Day Trip from Tokyo", area: "Hakone", price: "55000" },
+  "nikko-day-trip": { name: "Nikko Day Trip from Tokyo", area: "Nikko", price: "60000" },
 };
 
 const tourData = {
@@ -337,15 +355,200 @@ const tourData = {
       "Families with unique needs",
     ],
   },
+  "kamakura-day-trip": {
+    title: "Kamakura Day Trip",
+    subtitle: "Ancient temples, Great Buddha & coastal charm",
+    description: "Escape Tokyo for a day and explore Kamakura, Japan's first military capital. This private day trip takes you to the iconic Great Buddha, serene temples with ocean views, and the charming Komachi-dori shopping street — all with a licensed guide who brings 800 years of samurai history to life.",
+    duration: "7-8 hours",
+    price: "¥50,000",
+    difficulty: "Easy to moderate",
+    groupSize: "1-6 people",
+    startTime: "8:30 AM",
+    meetingPoint: "Your hotel in Tokyo",
+    images: [
+      { src: hamarikyu, alt: "Kamakura Great Buddha and surrounding temple grounds", position: "center" },
+    ],
+    highlights: [
+      "Great Buddha at Kotoku-in — 13th century bronze statue, one of Japan's most iconic landmarks",
+      "Hasedera Temple — ocean views, Kannon statue, hydrangeas in June",
+      "Tsurugaoka Hachimangu Shrine — Kamakura's most important shrine",
+      "Komachi-dori shopping street — local snacks, souvenirs, artisan crafts",
+      "Optional: Hokokuji Temple bamboo grove + matcha experience",
+    ],
+    itinerary: [
+      { time: "8:30 AM", activity: "Meet at your hotel in Tokyo" },
+      { time: "9:30 AM", activity: "Arrive Kamakura by train (~1 hour from Tokyo)" },
+      { time: "10:00 AM", activity: "Tsurugaoka Hachimangu Shrine" },
+      { time: "11:00 AM", activity: "Hokokuji Temple bamboo grove (optional matcha)" },
+      { time: "12:00 PM", activity: "Lunch at a local restaurant (guide recommends based on your preferences)" },
+      { time: "1:30 PM", activity: "Great Buddha at Kotoku-in" },
+      { time: "2:30 PM", activity: "Hasedera Temple (ocean views from observation deck)" },
+      { time: "3:30 PM", activity: "Komachi-dori street — street food, shopping" },
+      { time: "4:30 PM", activity: "Return to Tokyo by train" },
+      { time: "5:30 PM", activity: "Arrive back in Tokyo" },
+    ],
+    includes: [
+      "Licensed English-speaking guide for the full day",
+      "Custom itinerary planning based on your interests",
+      "Navigation of trains and local transport",
+      "Restaurant recommendations and booking assistance",
+      "Cultural context and historical explanations at each site",
+    ],
+    notIncluded: [
+      "Train fares (approx. ¥1,500-2,000 round trip per person)",
+      "Lunch and snacks",
+      "Temple admission fees (approx. ¥200-400 per site)",
+    ],
+    practicalInfo: {
+      duration: "7-8 hours (flexible)",
+      bestSeason: "Year-round. June for hydrangeas, November-December for autumn leaves",
+      difficulty: "Easy to moderate walking on mostly flat terrain",
+      goodFor: "Families, couples, history enthusiasts, first-time Japan visitors",
+    },
+    whyGuide: "Kamakura has over 65 temples and shrines — a guide helps you prioritize and understand the rich history of Japan's first military capital. Skip the confusion of train connections and navigate crowds efficiently, especially at popular sites. Your guide provides cultural context that transforms temple visits from sightseeing into meaningful experiences.",
+    suitableFor: [
+      "Families with children",
+      "Couples seeking a romantic day out",
+      "History and culture enthusiasts",
+      "First-time visitors to Japan",
+      "Anyone wanting to escape the city for a day",
+    ],
+  },
+  "hakone-day-trip": {
+    title: "Hakone Day Trip",
+    subtitle: "Mt. Fuji views, hot springs & volcanic valleys",
+    description: "Experience the best of Hakone in a single day — cruise across Lake Ashi with Mt. Fuji as your backdrop, ride the aerial ropeway over steaming volcanic valleys, and discover the iconic lakeside torii gate of Hakone Shrine. Your guide navigates the complex transport system so you can focus on the views.",
+    duration: "8-10 hours",
+    price: "¥55,000",
+    difficulty: "Easy",
+    groupSize: "1-6 people",
+    startTime: "8:00 AM",
+    meetingPoint: "Your hotel in Tokyo",
+    images: [
+      { src: hamarikyu, alt: "Lake Ashi cruise with Mt. Fuji views in Hakone", position: "center" },
+    ],
+    highlights: [
+      "Lake Ashi pirate ship cruise with Mt. Fuji views (weather permitting)",
+      "Hakone Ropeway — aerial views over Owakudani volcanic valley",
+      "Owakudani — volcanic hot springs, famous black eggs",
+      "Hakone Shrine — iconic torii gate on the lake",
+      "Optional: Hakone Open-Air Museum or onsen (hot spring) experience",
+    ],
+    itinerary: [
+      { time: "8:00 AM", activity: "Meet at your hotel in Tokyo" },
+      { time: "9:30 AM", activity: "Arrive Hakone-Yumoto by Romancecar (scenic express train)" },
+      { time: "10:00 AM", activity: "Hakone Ropeway to Owakudani" },
+      { time: "11:00 AM", activity: "Owakudani volcanic valley (try the famous black eggs!)" },
+      { time: "12:00 PM", activity: "Continue ropeway to Togendai" },
+      { time: "12:30 PM", activity: "Lake Ashi cruise (Mt. Fuji views on clear days)" },
+      { time: "1:30 PM", activity: "Hakone Shrine (walk the lakeside torii gate path)" },
+      { time: "2:30 PM", activity: "Lunch at a local restaurant" },
+      { time: "3:30 PM", activity: "Option: Open-Air Museum OR onsen foot bath" },
+      { time: "5:00 PM", activity: "Return to Tokyo by Romancecar" },
+      { time: "6:30 PM", activity: "Arrive back in Tokyo" },
+    ],
+    includes: [
+      "Licensed English-speaking guide for the full day",
+      "Custom itinerary planning",
+      "Hakone transport navigation (ropeway, cruise, buses — it's complex!)",
+      "Restaurant and onsen recommendations",
+      "Cultural and geological explanations",
+    ],
+    notIncluded: [
+      "Hakone Free Pass (approx. ¥6,100 — covers all Hakone transport + round trip from Shinjuku)",
+      "Lunch",
+      "Museum admission / onsen fees",
+      "Romancecar supplement (approx. ¥1,110 each way, optional)",
+    ],
+    practicalInfo: {
+      duration: "8-10 hours",
+      bestSeason: "October-February for Mt. Fuji visibility. Year-round for hot springs",
+      difficulty: "Easy. Mostly transport-based with short walks",
+      goodFor: "Nature lovers, photographers, couples, anyone wanting to escape the city",
+    },
+    whyGuide: "Hakone's transport system (trains, cable cars, ropeways, buses, boats) can be overwhelming for first-time visitors. A guide navigates the famous \"Hakone Loop\" efficiently, saving you time and confusion. More importantly, Mt. Fuji visibility changes by the hour — your guide adjusts the itinerary in real-time to maximize your chances of that iconic view.",
+    suitableFor: [
+      "Nature lovers and photographers",
+      "Couples seeking a scenic getaway",
+      "Hot spring enthusiasts",
+      "First-time visitors wanting to see Mt. Fuji",
+      "Anyone wanting variety (mountains, lakes, volcanoes)",
+    ],
+  },
+  "nikko-day-trip": {
+    title: "Nikko Day Trip",
+    subtitle: "UNESCO shrines, waterfalls & mountain scenery",
+    description: "Journey to Nikko, home to Japan's most ornate shrine complex and breathtaking mountain scenery. Discover the UNESCO World Heritage Toshogu Shrine with its 5,000+ intricate carvings, witness the powerful Kegon Falls, and enjoy the serene beauty of Lake Chuzenji — all with expert historical commentary from your guide.",
+    duration: "9-10 hours",
+    price: "¥60,000",
+    difficulty: "Moderate",
+    groupSize: "1-6 people",
+    startTime: "7:30 AM",
+    meetingPoint: "Tokyo Station",
+    images: [
+      { src: hamarikyu, alt: "Toshogu Shrine ornate carvings in Nikko", position: "center" },
+    ],
+    highlights: [
+      "Toshogu Shrine — UNESCO World Heritage, Japan's most ornate shrine complex",
+      "\"See no evil, speak no evil, hear no evil\" original carvings",
+      "Shinkyo Bridge — sacred vermillion bridge over the Daiya River",
+      "Kegon Falls — one of Japan's most famous waterfalls (97m drop)",
+      "Lake Chuzenji — mountain lake at 1,269m elevation",
+    ],
+    itinerary: [
+      { time: "7:30 AM", activity: "Meet at Tokyo Station" },
+      { time: "9:30 AM", activity: "Arrive Nikko by Shinkansen + local train (~2 hours)" },
+      { time: "10:00 AM", activity: "Shinkyo Bridge (photo stop)" },
+      { time: "10:30 AM", activity: "Toshogu Shrine complex (allow 1.5-2 hours)" },
+      { time: "12:30 PM", activity: "Lunch (try local specialty: yuba — tofu skin dishes)" },
+      { time: "1:30 PM", activity: "Drive/bus to Chuzenji area" },
+      { time: "2:00 PM", activity: "Kegon Falls observation platform" },
+      { time: "2:30 PM", activity: "Lake Chuzenji lakeside walk" },
+      { time: "3:30 PM", activity: "Return to Nikko Station" },
+      { time: "4:00 PM", activity: "Train back to Tokyo" },
+      { time: "6:00 PM", activity: "Arrive Tokyo" },
+    ],
+    includes: [
+      "Licensed English-speaking guide for the full day",
+      "Custom itinerary planning",
+      "Train and bus navigation",
+      "Detailed explanations of Toshogu's intricate carvings and Shinto/Buddhist history",
+      "Local food recommendations",
+    ],
+    notIncluded: [
+      "Train fares (approx. ¥5,000-8,000 round trip depending on train type)",
+      "Toshogu Shrine admission (¥1,600)",
+      "Lunch",
+      "Kegon Falls elevator (¥570, optional)",
+      "Bus fares within Nikko area",
+    ],
+    practicalInfo: {
+      duration: "9-10 hours (Nikko is further from Tokyo)",
+      bestSeason: "October-November for spectacular autumn foliage. May for spring greenery",
+      difficulty: "Moderate. Some uphill walking and stairs at Toshogu",
+      goodFor: "History buffs, nature lovers, UNESCO heritage enthusiasts, photographers",
+    },
+    whyGuide: "Toshogu Shrine has over 5,000 intricate carvings — without a guide, you'll walk past 90% of them without understanding their meaning. The shrine complex is a masterpiece of Tokugawa-era craftsmanship, and a knowledgeable guide transforms the visit from \"pretty buildings\" into a deep dive into Japanese political and spiritual history. The guide also handles the complex transport logistics between Nikko town and the mountain lake area.",
+    suitableFor: [
+      "History buffs and culture enthusiasts",
+      "Nature lovers and photographers",
+      "UNESCO heritage enthusiasts",
+      "Those seeking less-crowded destinations",
+      "Travelers who enjoy deeper cultural experiences",
+    ],
+  },
 };
 
 const relatedTours: Record<string, string[]> = {
-  asakusa: ["yanaka", "tsukiji-ginza", "imperial-palace"],
-  yanaka: ["asakusa", "imperial-palace", "shibuya-harajuku"],
-  "shibuya-harajuku": ["tsukiji-ginza", "asakusa", "custom"],
-  "tsukiji-ginza": ["asakusa", "imperial-palace", "shibuya-harajuku"],
-  "imperial-palace": ["asakusa", "tsukiji-ginza", "yanaka"],
-  custom: ["asakusa", "shibuya-harajuku", "tsukiji-ginza"],
+  asakusa: ["yanaka", "tsukiji-ginza", "kamakura-day-trip"],
+  yanaka: ["asakusa", "imperial-palace", "nikko-day-trip"],
+  "shibuya-harajuku": ["tsukiji-ginza", "asakusa", "hakone-day-trip"],
+  "tsukiji-ginza": ["asakusa", "imperial-palace", "kamakura-day-trip"],
+  "imperial-palace": ["asakusa", "tsukiji-ginza", "nikko-day-trip"],
+  custom: ["asakusa", "shibuya-harajuku", "hakone-day-trip"],
+  "kamakura-day-trip": ["hakone-day-trip", "nikko-day-trip", "custom"],
+  "hakone-day-trip": ["kamakura-day-trip", "nikko-day-trip", "custom"],
+  "nikko-day-trip": ["kamakura-day-trip", "hakone-day-trip", "custom"],
 };
 
 const tourNames: Record<string, string> = {
@@ -355,6 +558,9 @@ const tourNames: Record<string, string> = {
   "tsukiji-ginza": "Tsukiji & Ginza Tour",
   "imperial-palace": "Imperial Palace Tour",
   custom: "Custom Private Tour",
+  "kamakura-day-trip": "Kamakura Day Trip",
+  "hakone-day-trip": "Hakone Day Trip",
+  "nikko-day-trip": "Nikko Day Trip",
 };
 
 const TourDetail = () => {
@@ -547,6 +753,66 @@ const TourDetail = () => {
                 </ul>
               </div>
 
+              {/* Not Included (day trips only) */}
+              {"notIncluded" in tour && (tour as any).notIncluded && (
+                <div>
+                  <h2 className="heading-card text-foreground mb-4">Not Included</h2>
+                  <ul className="space-y-3">
+                    {((tour as any).notIncluded as string[]).map((item: string, index: number) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <X className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Why Go With a Private Guide (day trips only) */}
+              {"whyGuide" in tour && (tour as any).whyGuide && (
+                <div className="bg-secondary/50 rounded-lg p-6">
+                  <h2 className="heading-card text-foreground mb-4">Why Go With a Private Guide?</h2>
+                  <p className="text-muted-foreground leading-relaxed">{(tour as any).whyGuide}</p>
+                </div>
+              )}
+
+              {/* Practical Information (day trips only) */}
+              {"practicalInfo" in tour && (tour as any).practicalInfo && (
+                <div>
+                  <h2 className="heading-card text-foreground mb-4">Practical Information</h2>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg">
+                      <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-foreground text-sm">Duration</p>
+                        <p className="text-muted-foreground text-sm">{(tour as any).practicalInfo.duration}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg">
+                      <Calendar className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-foreground text-sm">Best Season</p>
+                        <p className="text-muted-foreground text-sm">{(tour as any).practicalInfo.bestSeason}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg">
+                      <Footprints className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-foreground text-sm">Difficulty</p>
+                        <p className="text-muted-foreground text-sm">{(tour as any).practicalInfo.difficulty}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-4 bg-card border border-border rounded-lg">
+                      <Users className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-foreground text-sm">Good For</p>
+                        <p className="text-muted-foreground text-sm">{(tour as any).practicalInfo.goodFor}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Suitable For */}
               <div>
                 <h2 className="heading-card text-foreground mb-4">This Tour is Perfect For</h2>
@@ -606,6 +872,26 @@ const TourDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Day Trip CTA */}
+      {"whyGuide" in tour && (
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container-section text-center">
+            <h2 className="heading-section">Ready to explore {tour.title.replace(" Day Trip", "")}?</h2>
+            <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
+              Let's create an unforgettable day trip experience. Contact us to book your private guided tour or customize the itinerary.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="btn-accent">
+                Book This Tour
+              </Link>
+              <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+                Customize This Trip
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* You Might Also Like */}
       {related.length > 0 && (

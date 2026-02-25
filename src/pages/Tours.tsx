@@ -8,7 +8,7 @@ import tsukijiMarket from "@/assets/tsukiji-market.jpg";
 import imperialPalace from "@/assets/imperial-palace.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
 
-const tours = [
+const tokyoTours = [
   {
     id: "asakusa",
     title: "Asakusa Walking Tour",
@@ -65,12 +65,42 @@ const tours = [
   },
 ];
 
+const dayTrips = [
+  {
+    id: "kamakura-day-trip",
+    title: "Kamakura Day Trip",
+    description: "Explore Kamakura's Great Buddha, ancient temples, and coastal charm on a private day trip from Tokyo with a licensed guide.",
+    duration: "7-8 hours",
+    price: "¥50,000",
+    difficulty: "Easy-Moderate",
+    image: hamarikyu,
+  },
+  {
+    id: "hakone-day-trip",
+    title: "Hakone Day Trip",
+    description: "See Mt. Fuji, cruise Lake Ashi, ride the ropeway over volcanic valleys, and experience hot spring culture on a private guided day trip.",
+    duration: "8-10 hours",
+    price: "¥55,000",
+    difficulty: "Easy",
+    image: hamarikyu,
+  },
+  {
+    id: "nikko-day-trip",
+    title: "Nikko Day Trip",
+    description: "Visit Nikko's UNESCO World Heritage Toshogu Shrine, stunning waterfalls, and mountain scenery on a private guided day trip from Tokyo.",
+    duration: "9-10 hours",
+    price: "¥60,000",
+    difficulty: "Moderate",
+    image: hamarikyu,
+  },
+];
+
 const Tours = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Walking Tours | Private Guided Tours | Tanuki Tabi Travel"
-        description="Browse private walking tours of Tokyo led by a government-licensed guide. Asakusa, Yanaka, Shibuya, Ginza, Imperial Palace and custom tours available."
+        title="Tokyo Tours & Day Trips | Private Guided Tours | Tanuki Tabi Travel"
+        description="Browse private walking tours of Tokyo and day trips to Kamakura, Hakone, and Nikko. Led by a government-licensed guide. Custom tours available."
         canonicalPath="/tours"
       />
 
@@ -79,20 +109,38 @@ const Tours = () => {
         <div className="container-section">
           <div className="max-w-2xl">
             <p className="text-label text-accent mb-3">Explore Tokyo</p>
-            <h1 className="heading-display text-foreground">Private Walking Tours of Tokyo</h1>
+            <h1 className="heading-display text-foreground">Private Tours & Day Trips</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Discover Tokyo's rich culture and hidden gems through immersive 
-              walking tours led by a local professional guide.
+              Discover Tokyo's rich culture through immersive walking tours, or explore beyond the city with private day trips to Kamakura, Hakone, and Nikko.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Tour Grid */}
+      {/* Tokyo Walking Tours */}
       <section className="py-16">
         <div className="container-section">
+          <h2 className="heading-section text-foreground mb-8">Tokyo Walking Tours</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tours.map((tour) => (
+            {tokyoTours.map((tour) => (
+              <TourCard key={tour.id} {...tour} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Day Trips from Tokyo */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="mb-8">
+            <p className="text-label text-accent mb-3">Day Trips</p>
+            <h2 className="heading-section text-foreground">Day Trips from Tokyo</h2>
+            <p className="mt-4 text-body max-w-2xl">
+              Explore beyond Tokyo with a private guide. Each day trip includes full-day guide service, transport navigation, and cultural commentary.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {dayTrips.map((tour) => (
               <TourCard key={tour.id} {...tour} />
             ))}
           </div>

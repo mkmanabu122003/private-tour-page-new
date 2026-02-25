@@ -58,24 +58,6 @@ const whyChooseGuide = [
   },
 ];
 
-const platforms = [
-  {
-    name: "GuruWalk",
-    url: "https://www.guruwalk.com/",
-    description: "Free walking tour platform",
-  },
-  {
-    name: "GetYourGuide",
-    url: "https://www.getyourguide.com/",
-    description: "Global tours and activities",
-  },
-  {
-    name: "GoWithGuide",
-    url: "https://www.gowithguide.com/",
-    description: "Licensed private guide booking",
-  },
-];
-
 const allReviews = [
   {
     text: "We did 3 tours in Tokyo and Manabu's was by far the most informative and engaging. He was very clear in his delivery and offered interesting cultural insights as sidebars to each venue we visited. Highly recommended!",
@@ -266,41 +248,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Where I've Been Featured / My Platforms */}
-      <section className="py-20">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Featured On</p>
-            <h2 className="heading-section text-foreground">
-              Where You Can Find Me
-            </h2>
-            <p className="mt-4 text-body">
-              I'm active on multiple booking platforms. You can read reviews and
-              book tours on any of these:
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {platforms.map((platform) => (
-              <a
-                key={platform.name}
-                href={platform.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block p-6 bg-card border border-border rounded-lg text-center hover:border-accent/50 hover:shadow-[var(--shadow-card)] transition-all"
-              >
-                <h3 className="font-serif text-xl font-medium text-foreground mb-2">
-                  {platform.name}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {platform.description}
-                </p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Tour Areas */}
       <section className="py-20 bg-secondary/30">
         <div className="container-section">
@@ -333,6 +280,9 @@ const About = () => {
                   { area: "Tsukiji & Ginza", link: "/tours/tsukiji-ginza" },
                   { area: "Shibuya & Harajuku", link: "/tours/shibuya-harajuku" },
                   { area: "Imperial Palace & Marunouchi", link: "/tours/imperial-palace" },
+                  { area: "Kamakura (Day Trip)", link: "/tours/kamakura-day-trip" },
+                  { area: "Hakone (Day Trip)", link: "/tours/hakone-day-trip" },
+                  { area: "Nikko (Day Trip)", link: "/tours/nikko-day-trip" },
                 ].map((item) => (
                   <Link
                     key={item.area}
@@ -390,14 +340,7 @@ const About = () => {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            <a
-              href="https://www.guruwalk.com/guruwalkers/manabu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              500+ five-star reviews on GuruWalk →
-            </a>
+            500+ five-star reviews from travelers worldwide
           </p>
         </div>
       </section>

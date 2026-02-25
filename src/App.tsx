@@ -9,6 +9,10 @@ import TourDetail from "./pages/TourDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import BlogIndex from "./pages/blog/BlogIndex";
+import Tokyo3DayItinerary from "./pages/blog/Tokyo3DayItinerary";
+import IsItWorthHiringGuide from "./pages/blog/IsItWorthHiringGuide";
+import DayTripComparison from "./pages/blog/DayTripComparison";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +30,10 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/tokyo-3-day-itinerary" element={<Tokyo3DayItinerary />} />
+          <Route path="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" element={<IsItWorthHiringGuide />} />
+          <Route path="/blog/kamakura-vs-hakone-vs-nikko-day-trip" element={<DayTripComparison />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
