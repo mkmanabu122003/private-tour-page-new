@@ -1,7 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
-import { Clock, Users, MapPin, Check, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { Clock, Users, MapPin, Check, ArrowLeft, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import useEmblaCarousel from "embla-carousel-react";
 import tourAsakusa from "@/assets/tour-asakusa.jpg";
 import tourYanaka from "@/assets/tour-yanaka.jpg";
@@ -21,6 +22,48 @@ import imperialBridge from "@/assets/imperial-bridge.jpg";
 import tokyoStation from "@/assets/tokyo-station.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
 
+const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
+  asakusa: {
+    title: "Asakusa Walking Tour | Private Tokyo Tour Guide | Tanuki Tabi Travel",
+    description: "Discover Asakusa's historic temples, Senso-ji shrine, and traditional streets with a licensed private guide. Personalized walking tour tailored to your interests.",
+    h1: "Asakusa Private Walking Tour",
+  },
+  yanaka: {
+    title: "Yanaka Walking Tour | Tokyo's Hidden Old Town | Tanuki Tabi Travel",
+    description: "Explore Yanaka, Tokyo's best-kept secret neighborhood. Walk through Edo-era streets, local temples, and Yanaka Ginza with a licensed private guide.",
+    h1: "Yanaka Private Walking Tour",
+  },
+  "shibuya-harajuku": {
+    title: "Shibuya & Harajuku Tour | Pop Culture & Fashion | Tanuki Tabi Travel",
+    description: "Experience Shibuya Crossing, Takeshita Street, and Harajuku's unique culture with a private licensed guide. See Tokyo's modern side up close.",
+    h1: "Shibuya & Harajuku Private Walking Tour",
+  },
+  "tsukiji-ginza": {
+    title: "Tsukiji & Ginza Tour | Food & Luxury Shopping | Tanuki Tabi Travel",
+    description: "Tour Tsukiji's famous food market and Ginza's luxury shopping district with a licensed private guide. Sample street food and explore historic shops.",
+    h1: "Tsukiji & Ginza Private Walking Tour",
+  },
+  "imperial-palace": {
+    title: "Imperial Palace Tour | Tokyo History Walk | Tanuki Tabi Travel",
+    description: "Explore the Imperial Palace gardens, Edo Castle ruins, and surrounding historic districts with a government-licensed private tour guide.",
+    h1: "Imperial Palace Private Walking Tour",
+  },
+  custom: {
+    title: "Custom Tokyo Tour | Design Your Own Itinerary | Tanuki Tabi Travel",
+    description: "Create your perfect Tokyo day with a licensed private guide. Tell us your interests and we'll design a custom walking tour just for you. Groups of 1-8 welcome.",
+    h1: "Custom Private Tour — Your Tokyo, Your Way",
+  },
+};
+
+const tourSchemaData: Record<string, { name: string; area: string; price: string }> = {
+  asakusa: { name: "Asakusa Private Walking Tour", area: "Asakusa", price: "30000" },
+  yanaka: { name: "Yanaka Private Walking Tour", area: "Yanaka", price: "40000" },
+  "shibuya-harajuku": { name: "Shibuya & Harajuku Private Walking Tour", area: "Shibuya & Harajuku", price: "35000" },
+  "tsukiji-ginza": { name: "Tsukiji & Ginza Private Walking Tour", area: "Tsukiji & Ginza", price: "30000" },
+  "imperial-palace": { name: "Imperial Palace Private Walking Tour", area: "Imperial Palace & Marunouchi", price: "25000" },
+  custom: { name: "Custom Private Tokyo Tour", area: "Tokyo", price: "10000" },
+};
+
 const tourData = {
   asakusa: {
     title: "Asakusa Walking Tour",
@@ -33,10 +76,10 @@ const tourData = {
     startTime: "10:00 AM or 2:00 PM",
     meetingPoint: "Asakusa Station, Exit 1",
     images: [
-      { src: tourAsakusa, position: "center 80%" },
-      { src: asakusaStreet, position: "center" },
-      { src: asakusaMask, position: "center" },
-      { src: asakusaTemple, position: "center" },
+      { src: tourAsakusa, alt: "Senso-ji Temple and Kaminarimon Gate in Asakusa, Tokyo", position: "center 80%" },
+      { src: asakusaStreet, alt: "Traditional shopping street in Asakusa with lanterns", position: "center" },
+      { src: asakusaMask, alt: "Traditional Japanese mask at an Asakusa souvenir shop", position: "center" },
+      { src: asakusaTemple, alt: "Senso-ji Temple five-story pagoda in Asakusa", position: "center" },
     ],
     highlights: [
       "Senso-ji Temple - Tokyo's oldest and most famous temple",
@@ -79,9 +122,9 @@ const tourData = {
     startTime: "9:30 AM or 1:30 PM",
     meetingPoint: "Nippori Station, North Exit",
     images: [
-      { src: tourUeno, position: "center" },
-      { src: tourYanaka, position: "center" },
-      { src: uenoNight, position: "center" },
+      { src: tourUeno, alt: "Traditional Yanaka neighborhood street in Tokyo", position: "center" },
+      { src: tourYanaka, alt: "Yanaka Ginza retro shopping street with local shops", position: "center" },
+      { src: uenoNight, alt: "Ueno Park temple illuminated at evening", position: "center" },
     ],
     highlights: [
       "Yanaka Ginza - Charming retro shopping street",
@@ -125,10 +168,10 @@ const tourData = {
     startTime: "10:30 AM or 2:30 PM",
     meetingPoint: "Shibuya Station, Hachiko Exit",
     images: [
-      { src: shibuyaCrossing, position: "center" },
-      { src: shibuyaStreet, position: "center" },
-      { src: meijiShrine, position: "center" },
-      { src: harajukuStreet, position: "center" },
+      { src: shibuyaCrossing, alt: "Shibuya Crossing at dusk with hundreds of pedestrians", position: "center" },
+      { src: shibuyaStreet, alt: "Vibrant Shibuya shopping street with neon signs", position: "center" },
+      { src: meijiShrine, alt: "Meiji Shrine torii gate surrounded by ancient forest", position: "center" },
+      { src: harajukuStreet, alt: "Colorful Harajuku Takeshita Street with youth fashion", position: "center" },
     ],
     highlights: [
       "Shibuya Crossing - The world's busiest pedestrian crossing",
@@ -172,8 +215,8 @@ const tourData = {
     startTime: "9:00 AM or 1:00 PM",
     meetingPoint: "Tsukiji Market Station, Exit A1",
     images: [
-      { src: tsukijiMarket, position: "center" },
-      { src: tsukijiFood, position: "center" },
+      { src: tsukijiMarket, alt: "Tsukiji Outer Market fresh seafood and food stalls", position: "center" },
+      { src: tsukijiFood, alt: "Fresh Japanese street food at Tsukiji Market", position: "center" },
     ],
     highlights: [
       "Tsukiji Outer Market - Fresh seafood and street food",
@@ -185,7 +228,7 @@ const tourData = {
     itinerary: [
       { time: "9:00", activity: "Meet at Tsukiji Market Station" },
       { time: "9:15", activity: "Tsukiji Outer Market exploration & tastings" },
-      { time: "10:15", activity: "Walk through築地 Honganji Temple" },
+      { time: "10:15", activity: "Walk through Tsukiji Honganji Temple" },
       { time: "10:45", activity: "Ginza main street architecture tour" },
       { time: "11:15", activity: "Traditional shops & department stores" },
       { time: "11:45", activity: "Hidden backstreets & local gems" },
@@ -217,9 +260,9 @@ const tourData = {
     startTime: "10:00 AM or 2:00 PM",
     meetingPoint: "Tokyo Station, Marunouchi North Exit",
     images: [
-      { src: imperialPalace, position: "center" },
-      { src: imperialBridge, position: "center" },
-      { src: tokyoStation, position: "center" },
+      { src: imperialPalace, alt: "Imperial Palace East Gardens with traditional Japanese landscaping", position: "center" },
+      { src: imperialBridge, alt: "Nijubashi Bridge at the Imperial Palace, iconic Tokyo landmark", position: "center" },
+      { src: tokyoStation, alt: "Historic red brick Tokyo Station building in Marunouchi", position: "center" },
     ],
     highlights: [
       "Imperial Palace East Gardens - Beautiful Japanese gardens",
@@ -263,7 +306,7 @@ const tourData = {
     startTime: "Flexible",
     meetingPoint: "Your choice",
     images: [
-      { src: hamarikyu, position: "center" },
+      { src: hamarikyu, alt: "Hamarikyu Gardens tea house overlooking Tokyo skyline", position: "center" },
     ],
     highlights: [
       "Personalized itinerary based on your interests",
@@ -296,9 +339,29 @@ const tourData = {
   },
 };
 
+const relatedTours: Record<string, string[]> = {
+  asakusa: ["yanaka", "tsukiji-ginza", "imperial-palace"],
+  yanaka: ["asakusa", "imperial-palace", "shibuya-harajuku"],
+  "shibuya-harajuku": ["tsukiji-ginza", "asakusa", "custom"],
+  "tsukiji-ginza": ["asakusa", "imperial-palace", "shibuya-harajuku"],
+  "imperial-palace": ["asakusa", "tsukiji-ginza", "yanaka"],
+  custom: ["asakusa", "shibuya-harajuku", "tsukiji-ginza"],
+};
+
+const tourNames: Record<string, string> = {
+  asakusa: "Asakusa Walking Tour",
+  yanaka: "Yanaka Walking Tour",
+  "shibuya-harajuku": "Shibuya & Harajuku Tour",
+  "tsukiji-ginza": "Tsukiji & Ginza Tour",
+  "imperial-palace": "Imperial Palace Tour",
+  custom: "Custom Private Tour",
+};
+
 const TourDetail = () => {
   const { id } = useParams<{ id: string }>();
   const tour = tourData[id as keyof typeof tourData];
+  const seo = tourSEO[id as keyof typeof tourSEO];
+  const schema = tourSchemaData[id as keyof typeof tourSchemaData];
 
   if (!tour) {
     return (
@@ -343,8 +406,16 @@ const TourDetail = () => {
     };
   }, [emblaApi, onSelect]);
 
+  const related = relatedTours[id as string] || [];
+
   return (
     <Layout>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        canonicalPath={`/tours/${id}`}
+      />
+
       {/* Hero Carousel with Thumbnails */}
       <section className="relative h-[50vh] md:h-[60vh] min-h-[400px] md:min-h-[500px]">
         {/* Main Image */}
@@ -354,7 +425,7 @@ const TourDetail = () => {
               <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
                 <img
                   src={image.src}
-                  alt={`${tour.title} - Image ${index + 1}`}
+                  alt={image.alt}
                   className="w-full h-full object-cover"
                   style={{ objectPosition: image.position }}
                 />
@@ -416,7 +487,7 @@ const TourDetail = () => {
       <section className="py-8 md:py-12 bg-secondary/30">
         <div className="container-section">
           <p className="text-label text-accent mb-1 md:mb-2">{tour.difficulty} · {tour.duration}</p>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground">{tour.title}</h1>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground">{seo.h1}</h1>
           <p className="text-sm md:text-lg text-muted-foreground mt-1 md:mt-2">{tour.subtitle}</p>
         </div>
       </section>
@@ -535,6 +606,75 @@ const TourDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* You Might Also Like */}
+      {related.length > 0 && (
+        <section className="py-16 bg-secondary/30 border-t border-border">
+          <div className="container-section">
+            <h2 className="heading-section text-foreground mb-8 text-center">You Might Also Like</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {related.map((tourId) => {
+                const relatedTour = tourData[tourId as keyof typeof tourData];
+                if (!relatedTour) return null;
+                return (
+                  <Link
+                    key={tourId}
+                    to={`/tours/${tourId}`}
+                    className="group bg-card border border-border rounded-lg p-6 hover:border-accent/50 hover:shadow-[var(--shadow-card)] transition-all"
+                  >
+                    <h3 className="font-serif text-lg font-medium text-foreground group-hover:text-accent transition-colors">
+                      {tourNames[tourId]}
+                    </h3>
+                    <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                      {relatedTour.description}
+                    </p>
+                    <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
+                      <span>View Tour</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* JSON-LD Structured Data */}
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TouristTrip",
+              "name": schema.name,
+              "description": seo.description,
+              "touristType": "Cultural",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Tanuki Tabi Travel",
+                "url": "https://tanuki-tabi-travel.com",
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": schema.price,
+                "priceCurrency": "JPY",
+                "availability": "https://schema.org/InStock",
+              },
+              "itinerary": {
+                "@type": "Place",
+                "name": `${schema.area}, Tokyo`,
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Tokyo",
+                  "addressCountry": "JP",
+                },
+              },
+            }),
+          }}
+        />
+      )}
     </Layout>
   );
 };

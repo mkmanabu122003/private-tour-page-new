@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Globe, Heart } from "lucide-react";
+import { ArrowRight, Award, Users, Shield, Star } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
 import {
   Carousel,
@@ -75,38 +76,62 @@ const tours = [
   },
 ];
 
-const features = [
+const trustSignals = [
+  {
+    icon: Shield,
+    title: "Government-Licensed Guide",
+    description: "National Government Licensed Guide Interpreter (全国通訳案内士) — the highest guiding credential in Japan.",
+  },
+  {
+    icon: Star,
+    title: "516+ Tours Completed",
+    description: "Trusted by hundreds of travelers from around the world on GuruWalk, GetYourGuide, and GoWithGuide.",
+  },
   {
     icon: Award,
-    title: "Deep Japan Knowledge",
-    description: "Born in Kanazawa, raised in Kyoto, now living in Tokyo. I bring insights from across Japan's rich regions.",
+    title: "4.86★ Average Rating",
+    description: "Consistently top-rated across multiple booking platforms for quality and guest satisfaction.",
   },
   {
     icon: Users,
-    title: "Private Tours",
-    description: "Intimate private tours for a personalized experience tailored to your interests.",
+    title: "Private & Personalized",
+    description: "Every tour is exclusively yours. No strangers, no rigid schedules — just your group and your guide.",
+  },
+];
+
+const testimonials = [
+  {
+    text: "We did 3 tours in Tokyo and Manabu's was by far the most informative and engaging. He was very clear in his delivery and offered interesting cultural insights as sidebars to each venue we visited. Highly recommended!",
+    author: "Couple visiting Tokyo",
+    rating: 5,
   },
   {
-    icon: Globe,
-    title: "Multilingual",
-    description: "Fluent in English and Spanish, ensuring seamless communication for guests worldwide.",
+    text: "Manabu's tour was one of the best I've been on — he is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
+    author: "Solo traveler",
+    rating: 5,
   },
   {
-    icon: Heart,
-    title: "Local Insights",
-    description: "Discover hidden gems, local stories, and cultural context beyond the guidebooks.",
+    text: "This was an excellent tour. Manabu was entertaining, charismatic and knowledgeable. All places visited were awesome and he provided very interesting tips. A great start to our Japan trip.",
+    author: "First-time visitors to Japan",
+    rating: 5,
   },
 ];
 
 const Index = () => {
   return (
     <Layout>
+      <SEO
+        title="Tokyo Private Tour Guide | Licensed Walking Tours | Tanuki Tabi Travel"
+        description="Explore Tokyo with a government-licensed private tour guide. 516+ tours completed with 4.86★ rating. Custom walking tours of Asakusa, Shibuya, Ginza & more. Book your personal Tokyo experience."
+        canonicalPath="/"
+      />
+
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Tokyo Tour Guide with guests at temple"
+            alt="Scenic view of Tokyo's Sumida River with traditional and modern skyline"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
@@ -114,14 +139,14 @@ const Index = () => {
 
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
-            <p className="text-label text-white/80 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Private Tokyo Tour Guide
-            </p>
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Explore Tokyo with a{" "}
-              <span className="text-accent">Local Professional</span>
+              Private Walking Tours of Tokyo with a{" "}
+              <span className="text-accent">Licensed Local Guide</span>
             </h1>
-            <p className="mt-6 text-lg text-white/80 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              516+ tours completed. 4.86★ average rating. Government-licensed guide.
+            </p>
+            <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Discover the authentic side of Tokyo through immersive walking tours.
               From ancient temples to hidden alleyways, experience the stories that
               make this city unforgettable.
@@ -129,13 +154,34 @@ const Index = () => {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <Link to="/tours" className="btn-accent">
-                View Tours
+                Browse Tours
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              <Link to="/contact" className="btn-outline">
-                Book Now
+              <Link to="/tours/custom" className="btn-outline">
+                Book a Custom Tour
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="py-16 md:py-20 bg-card border-b border-border">
+        <div className="container-section">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {trustSignals.map((signal) => (
+              <div key={signal.title} className="text-center group">
+                <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
+                  <signal.icon className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="font-serif text-lg font-medium text-foreground">
+                  {signal.title}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {signal.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -180,48 +226,136 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Me */}
+      {/* About Section (short) */}
       <section className="py-20 md:py-28">
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-label text-accent mb-3">Why Choose Me</p>
+              <p className="text-label text-accent mb-3">Your Guide</p>
               <h2 className="heading-section text-foreground">
-                Your Trusted Guide to Authentic Tokyo
+                Meet Manabu — Your Licensed Tokyo Guide
               </h2>
               <p className="mt-4 text-body">
-                With years of experience guiding visitors from around the world,
-                I bring together local knowledge, cultural insights, and genuine
-                passion for sharing Tokyo's stories.
+                I'm Manabu, a National Government Licensed Guide Interpreter
+                (全国通訳案内士) with over 516 tours completed and a 4.86-star
+                average rating. Born in Kanazawa, raised in Kyoto, and now based
+                in Tokyo — I bring insights from across Japan's rich cultural
+                regions.
               </p>
-
-              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {features.map((feature) => (
-                  <div key={feature.title} className="group">
-                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                      <feature.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="font-serif text-lg font-medium text-foreground">
-                      {feature.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <p className="mt-4 text-body">
+                My approach is simple: in the first 30 minutes, I learn what
+                excites you, then I adapt the tour in real time. It's not a
+                lecture — it's a conversation.
+              </p>
+              <Link to="/about" className="btn-outline mt-8 inline-flex">
+                Learn more about your guide
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </div>
 
             <div className="relative">
               <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
                 <img
                   src={guidePortrait}
-                  alt="Manabu - Tokyo Tour Guide"
+                  alt="Manabu, government-licensed Tokyo tour guide, ready to lead a private walking tour"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 md:py-28 bg-secondary/30">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-3">Simple Booking</p>
+            <h2 className="heading-section text-foreground">How It Works</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
+                1
+              </div>
+              <h3 className="font-serif text-xl font-medium text-foreground mb-3">
+                Choose a Tour
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Browse our curated tours or request a custom itinerary tailored to your interests.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
+                2
+              </div>
+              <h3 className="font-serif text-xl font-medium text-foreground mb-3">
+                Share Your Interests
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Tell us what excites you — food, history, photography, pop culture — and we'll personalize your experience.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
+                3
+              </div>
+              <h3 className="font-serif text-xl font-medium text-foreground mb-3">
+                Explore Tokyo
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Meet your guide and discover Tokyo at your own pace. No crowds, no rush — just an authentic experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-3">Guest Reviews</p>
+            <h2 className="heading-section text-foreground">What Travelers Say</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <blockquote
+                key={testimonial.author}
+                className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
+              >
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-gold text-gold"
+                    />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  "{testimonial.text}"
+                </p>
+                <footer className="pt-4 border-t border-border">
+                  <cite className="not-italic font-medium text-foreground text-sm">
+                    — {testimonial.author}
+                  </cite>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            <a
+              href="https://www.guruwalk.com/guruwalkers/manabu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              500+ five-star reviews on GuruWalk →
+            </a>
+          </p>
         </div>
       </section>
 
@@ -243,6 +377,47 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Tanuki Tabi Travel",
+            "description": "Private walking tours of Tokyo with a government-licensed guide",
+            "url": "https://tanuki-tabi-travel.com",
+            "email": "info@tanuki-tabi-travel.com",
+            "areaServed": {
+              "@type": "City",
+              "name": "Tokyo",
+              "addressCountry": "JP",
+            },
+            "founder": {
+              "@type": "Person",
+              "name": "Manabu",
+              "jobTitle": "Government-Licensed Tour Guide",
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.86",
+              "reviewCount": "516",
+              "bestRating": "5",
+            },
+            "review": testimonials.map((t) => ({
+              "@type": "Review",
+              "reviewBody": t.text,
+              "author": { "@type": "Person", "name": t.author },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5",
+              },
+            })),
+          }),
+        }}
+      />
     </Layout>
   );
 };

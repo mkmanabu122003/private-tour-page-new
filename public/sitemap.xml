@@ -8,12 +8,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tanuki-tabi-travel.com/tours</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://tanuki-tabi-travel.com/about</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -23,13 +17,19 @@
     <loc>https://tanuki-tabi-travel.com/contact</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tanuki-tabi-travel.com/faq</loc>
+    <loc>https://tanuki-tabi-travel.com/privacy-policy</loc>
     <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/tour-policies</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <!-- Tour Detail Pages -->
@@ -67,6 +67,6 @@
     <loc>https://tanuki-tabi-travel.com/tours/custom</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>

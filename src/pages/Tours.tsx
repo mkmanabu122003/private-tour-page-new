@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
 import tourAsakusa from "@/assets/tour-asakusa.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
@@ -67,12 +68,18 @@ const tours = [
 const Tours = () => {
   return (
     <Layout>
+      <SEO
+        title="Tokyo Walking Tours | Private Guided Tours | Tanuki Tabi Travel"
+        description="Browse private walking tours of Tokyo led by a government-licensed guide. Asakusa, Yanaka, Shibuya, Ginza, Imperial Palace and custom tours available."
+        canonicalPath="/tours"
+      />
+
       {/* Header */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-2xl">
             <p className="text-label text-accent mb-3">Explore Tokyo</p>
-            <h1 className="heading-display text-foreground">Walking Tours</h1>
+            <h1 className="heading-display text-foreground">Private Walking Tours of Tokyo</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Discover Tokyo's rich culture and hidden gems through immersive 
               walking tours led by a local professional guide.
