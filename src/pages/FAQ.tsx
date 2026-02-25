@@ -161,7 +161,7 @@ const FAQ = () => {
                           onClick={() => toggleFAQ(key)}
                           className="w-full flex items-center justify-between p-6 text-left hover:bg-secondary/50 transition-colors"
                         >
-                          <span className="font-serif text-lg font-medium text-foreground pr-4">
+                          <span className="text-lg font-medium text-foreground pr-4">
                             {faq.question}
                           </span>
                           <ChevronDown

@@ -68,7 +68,7 @@ const BlogIndex = () => {
               >
                 <div className="p-6">
                   <p className="text-label text-accent mb-2">{post.category}</p>
-                  <h2 className="font-serif text-xl font-medium text-foreground group-hover:text-accent transition-colors mb-3">
+                  <h2 className="text-xl font-medium text-foreground group-hover:text-accent transition-colors mb-3">
                     {post.title}
                   </h2>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">

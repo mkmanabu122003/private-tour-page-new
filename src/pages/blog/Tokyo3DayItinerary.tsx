@@ -58,7 +58,7 @@ const Tokyo3DayItinerary = () => {
               Day 1: East Tokyo — History & Tradition
             </h2>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Morning: Asakusa — Where Old Tokyo Lives
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -78,7 +78,7 @@ const Tokyo3DayItinerary = () => {
               covers everything from temple rituals to the best street food stalls.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Late Morning: Walk to Tokyo Skytree via Sumida Park
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -88,14 +88,14 @@ const Tokyo3DayItinerary = () => {
               You don't need to go up the Skytree (long queues and expensive), but the views from the base and the surrounding Solamachi shopping complex are worth the 15-minute walk. The complex also has some excellent food options if you're getting hungry.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Lunch: Local Flavors Near Asakusa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For lunch, I recommend trying one of Asakusa's traditional soba (buckwheat noodle) restaurants or a tempura spot. Asakusa has been famous for tempura since the Edo period, and there are still family-run restaurants here that have been perfecting their craft for over a century. If you're adventurous, try monjayaki — Tokyo's version of the Osaka okonomiyaki pancake, messier but delicious.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Afternoon: Yanaka — Tokyo's Nostalgic Old Town
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -112,7 +112,7 @@ const Tokyo3DayItinerary = () => {
               uncovers stories and spots you won't find in any guidebook.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Evening: Ueno Area — Ameyoko Market
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -124,7 +124,7 @@ const Tokyo3DayItinerary = () => {
               Day 2: West Tokyo — Modern Culture & Energy
             </h2>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Morning: Meiji Shrine — Peace in the City
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -134,7 +134,7 @@ const Tokyo3DayItinerary = () => {
               Watch for wedding ceremonies if you visit on weekends — you might catch a traditional Shinto wedding procession. The shrine also has a beautiful iris garden (best in June) and a sake barrel display that tells the story of Japan's relationship with wine and spirits.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Late Morning: Harajuku — Youth Culture Explosion
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,14 +151,14 @@ const Tokyo3DayItinerary = () => {
               covers this area in depth — from hidden vintage shops to the stories behind Omotesando's architectural masterpieces.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Lunch: Shibuya Area
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Head to Shibuya for lunch. Skip the chain restaurants and look for local spots in the back streets. I recommend trying a proper ramen shop (the wait is worth it) or a Japanese curry restaurant — Shibuya has some of the best in the city. If you want something quick and quintessentially Japanese, try a gyudon (beef bowl) at a counter restaurant — fast, filling, and delicious.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Afternoon: Shibuya Crossing & Beyond
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -168,7 +168,7 @@ const Tokyo3DayItinerary = () => {
               If you have energy left, walk through the quieter neighborhoods behind the main streets. Tomigaya and Kamiyamacho are local favorites with excellent cafes, independent bookshops, and small restaurants that most tourists never discover.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Evening: Shinjuku Nightlife
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -183,7 +183,7 @@ const Tokyo3DayItinerary = () => {
               Day 3: Choose Your Adventure
             </h2>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Option A: Central Tokyo — Food, Gardens & History
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -210,7 +210,7 @@ const Tokyo3DayItinerary = () => {
               <strong className="text-foreground">Evening — Ginza:</strong> End your Tokyo stay in Ginza, the upscale shopping district. Even if you're not shopping, the department store food halls (depachika) in the basement floors are worth visiting — they're culinary wonderlands of beautifully packaged Japanese sweets, bento boxes, and gourmet treats. Perfect for picking up edible souvenirs.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Option B: Day Trip from Tokyo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -248,7 +248,7 @@ const Tokyo3DayItinerary = () => {
               Practical Tips for Your Tokyo Visit
             </h2>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Getting Around
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -258,7 +258,7 @@ const Tokyo3DayItinerary = () => {
               Don't be intimidated by the train system — it's actually very intuitive once you understand that different companies operate different lines. Signs are in English, stations are announced in English, and trains are almost always on time. During rush hour (7:30-9 AM), avoid the busiest lines if possible, or travel in the opposite direction of commuter flow.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               When to Visit
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -268,14 +268,14 @@ const Tokyo3DayItinerary = () => {
               Peak tourist seasons are cherry blossom season (late March to mid-April) and autumn foliage (mid-November to early December). Book accommodations and tours early during these periods. Golden Week (late April to early May) is a Japanese national holiday — domestic travel peaks and some businesses close.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Money Matters
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japan is still more cash-dependent than many countries, especially at small restaurants, temples, and markets. Carry at least ¥10,000-20,000 in cash. 7-Eleven and Post Office ATMs accept international cards reliably. Credit cards are increasingly accepted at larger establishments, but don't rely on them exclusively. Your IC card (Suica/Pasmo) is the most convenient payment method for small purchases.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Temple & Shrine Etiquette
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -287,7 +287,7 @@ const Tokyo3DayItinerary = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="font-serif text-2xl font-medium text-foreground mb-4">
+              <h2 className="text-2xl font-medium text-foreground mb-4">
                 Want a local guide to bring this itinerary to life?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">

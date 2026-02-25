@@ -64,7 +64,7 @@ const IsItWorthHiringGuide = () => {
               When a Guide Is Worth It
             </h2>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               First-Time Visitors Who Want Depth, Not Just Selfies
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -81,7 +81,7 @@ const IsItWorthHiringGuide = () => {
               First-time visitors consistently tell me that the cultural context changes everything. It's the difference between "I saw a temple" and "I understood why this temple has been the spiritual heart of this neighborhood for 1,400 years."
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Travelers with Limited Time
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -91,7 +91,7 @@ const IsItWorthHiringGuide = () => {
               More importantly, a guide knows the rhythm of the city. I know which attractions to hit first to avoid crowds, when certain shops and markets are at their best, and which "must-sees" can be experienced quickly versus which ones deserve an hour of your time. This kind of real-time optimization can easily save you 2-3 hours over the course of a day.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Families with Children
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -101,7 +101,7 @@ const IsItWorthHiringGuide = () => {
               Our routes are mostly flat and pram-friendly. We regularly welcome families with children of all ages, and I've developed storytelling techniques that keep kids fascinated while still giving adults the cultural depth they're looking for.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Special Interest Travelers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -111,7 +111,7 @@ const IsItWorthHiringGuide = () => {
               This level of personalization is impossible with a group tour or an audioguide. It comes from reading the guest's reactions and having deep enough knowledge to pivot the conversation in real-time.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Day Trip Explorers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -141,21 +141,21 @@ const IsItWorthHiringGuide = () => {
               I believe in being transparent — a guide isn't right for everyone, and overselling would do a disservice to both you and me.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Repeat Visitors Who Know the Basics
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If you've been to Tokyo before and already have a feel for the train system, cultural norms, and general geography, you may not need a guide for the main attractions. That said, even repeat visitors often book a guide for specific interests — a deep-dive into a neighborhood they haven't explored, or a day trip they're unfamiliar with. But for revisiting your favorite spots? You've got this.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Independent Explorers Who Love Getting Lost
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Some of the best travel experiences come from wandering without a plan — discovering a tiny ramen shop in a back alley, stumbling into a local festival, or getting lost in a neighborhood you've never heard of. If this is your travel style, a structured guided tour might feel constraining. Tokyo is incredibly safe for wandering, even at night, and the serendipity of unplanned discovery is genuinely one of the joys of visiting Japan.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Budget-Conscious Backpackers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -167,7 +167,7 @@ const IsItWorthHiringGuide = () => {
               What a Licensed Guide Provides That Google Can't
             </h2>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Reading the Room
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -177,7 +177,7 @@ const IsItWorthHiringGuide = () => {
               This real-time adaptation is something no app, audioguide, or pre-planned itinerary can offer. It's the human element that transforms a tour from "information delivery" to "shared experience."
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               The "Why" Behind What You See
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -187,7 +187,7 @@ const IsItWorthHiringGuide = () => {
               You can Google individual facts, but a guide weaves them into a narrative that builds throughout the day. By the end of a tour, you don't just know more facts about Japan — you understand the underlying logic of how Japanese culture works, which enriches the rest of your trip even after the tour ends.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hidden Spots and Local Connections
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -197,7 +197,7 @@ const IsItWorthHiringGuide = () => {
               I also have relationships with local shopkeepers, restaurant owners, and temple priests. These connections sometimes open doors that would otherwise be closed — a quick chat in Japanese can get you into a workshop demonstration, a tasting, or a story you'd never hear otherwise.
             </p>
 
-            <h3 className="font-serif text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               What the National License Means
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -249,7 +249,7 @@ const IsItWorthHiringGuide = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="font-serif text-2xl font-medium text-foreground mb-4">
+              <h2 className="text-2xl font-medium text-foreground mb-4">
                 Still not sure? Let's talk.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
