@@ -2,6 +2,45 @@
   command = "npm run build"
   publish = "dist"
 
+# 301 redirects: old /routes/ URLs → new /tours/ URLs
+[[redirects]]
+  from = "/routes/ginza-the-luxury-shopping-district"
+  to = "/tours/tsukiji-ginza"
+  status = 301
+
+[[redirects]]
+  from = "/routes/asakusa-senso-ji-temple"
+  to = "/tours/asakusa"
+  status = 301
+
+[[redirects]]
+  from = "/routes/yanaka-old-town"
+  to = "/tours/yanaka"
+  status = 301
+
+[[redirects]]
+  from = "/routes/shibuya-harajuku"
+  to = "/tours/shibuya-harajuku"
+  status = 301
+
+[[redirects]]
+  from = "/routes/imperial-palace"
+  to = "/tours/imperial-palace"
+  status = 301
+
+# Catch-all: any other old /routes/ URL → /tours listing page
+[[redirects]]
+  from = "/routes/*"
+  to = "/tours"
+  status = 301
+
+# /booking → /contact redirect (no booking page exists)
+[[redirects]]
+  from = "/booking"
+  to = "/contact"
+  status = 301
+
+# SPA catch-all (must be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
