@@ -65,6 +65,27 @@ const tokyoTours = [
   },
 ];
 
+const experienceTours = [
+  {
+    id: "tokyo-food-tour",
+    title: "Tokyo Food Tour",
+    description: "Taste Tokyo's best food with a local licensed guide. From Tsukiji street food to hidden ramen shops, customize your private food tour experience.",
+    duration: "3-7 hours",
+    price: "Contact for quote",
+    difficulty: "Easy",
+    image: tsukijiMarket,
+  },
+  {
+    id: "tokyo-night-tour",
+    title: "Tokyo Night Tour",
+    description: "Experience Tokyo after dark with a local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots safely with a licensed private guide.",
+    duration: "3-4 hours",
+    price: "Contact for quote",
+    difficulty: "Easy",
+    image: shibuyaCrossing,
+  },
+];
+
 const dayTrips = [
   {
     id: "kamakura-day-trip",
@@ -129,8 +150,26 @@ const Tours = () => {
         </div>
       </section>
 
-      {/* Day Trips from Tokyo */}
+      {/* Experience Tours */}
       <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="mb-8">
+            <p className="text-label text-accent mb-3">Experience Tours</p>
+            <h2 className="heading-section text-foreground">Experience Tours</h2>
+            <p className="mt-4 text-body max-w-2xl">
+              Dive deep into Tokyo's food scene or explore the city after dark with a private guide who knows the best local spots.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {experienceTours.map((tour) => (
+              <TourCard key={tour.id} {...tour} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Day Trips from Tokyo */}
+      <section className="py-16">
         <div className="container-section">
           <div className="mb-8">
             <p className="text-label text-accent mb-3">Day Trips</p>

@@ -10,6 +10,11 @@ const tokyoTours = [
   { name: "Imperial Palace", href: "/tours/imperial-palace" },
 ];
 
+const experienceTours = [
+  { name: "Tokyo Food Tour", href: "/tours/tokyo-food-tour" },
+  { name: "Tokyo Night Tour", href: "/tours/tokyo-night-tour" },
+];
+
 const dayTrips = [
   { name: "Kamakura Day Trip", href: "/tours/kamakura-day-trip" },
   { name: "Hakone Day Trip", href: "/tours/hakone-day-trip" },
@@ -90,6 +95,19 @@ export const Header = () => {
                     Tokyo Walking Tours
                   </p>
                   {tokyoTours.map((tour) => (
+                    <Link
+                      key={tour.href}
+                      to={tour.href}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+                    >
+                      {tour.name}
+                    </Link>
+                  ))}
+                  <div className="border-t border-border my-1" />
+                  <p className="px-4 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                    Experience Tours
+                  </p>
+                  {experienceTours.map((tour) => (
                     <Link
                       key={tour.href}
                       to={tour.href}
@@ -221,6 +239,19 @@ export const Header = () => {
                     Tokyo
                   </p>
                   {tokyoTours.map((tour) => (
+                    <Link
+                      key={tour.href}
+                      to={tour.href}
+                      className="block py-1.5 text-sm text-muted-foreground"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {tour.name}
+                    </Link>
+                  ))}
+                  <p className="py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                    Experience Tours
+                  </p>
+                  {experienceTours.map((tour) => (
                     <Link
                       key={tour.href}
                       to={tour.href}

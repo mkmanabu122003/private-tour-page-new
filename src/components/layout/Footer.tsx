@@ -65,6 +65,16 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/tours/tokyo-food-tour" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Tokyo Food Tour
+                </Link>
+              </li>
+              <li>
+                <Link to="/tours/tokyo-night-tour" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Tokyo Night Tour
+                </Link>
+              </li>
+              <li>
                 <Link to="/tours/custom" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Custom Tour
                 </Link>
@@ -98,6 +108,36 @@ export const Footer = () => {
               <li>
                 <Link to="/blog/tokyo-3-day-itinerary" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Tokyo 3-Day Itinerary
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/asakusa-guide-what-to-see" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Asakusa Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/shibuya-harajuku-guide" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Shibuya & Harajuku Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/shinjuku-guide" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Shinjuku Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/tsukiji-guide-food-lover" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Tsukiji Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/best-time-to-visit-tokyo" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Best Time to Visit
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/japan-temple-shrine-etiquette" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Temple & Shrine Etiquette
                 </Link>
               </li>
               <li>

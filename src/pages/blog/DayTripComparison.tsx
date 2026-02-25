@@ -263,8 +263,15 @@ const DayTripComparison = () => {
                 <strong className="text-foreground">If you have 2+ days for day trips:</strong> Do Kamakura + Hakone (most popular combination) or Kamakura + Nikko (for history lovers). Each destination offers something the others don't, so you won't feel like you're repeating the experience.
               </li>
             </ul>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               The most important thing is to choose based on what excites you, not what's "most popular." If you're genuinely passionate about history, Nikko will blow your mind even though it's the least-visited of the three. If you dream of seeing Mt. Fuji, Hakone is your best shot. And if you want the most balanced, easy-going experience, Kamakura delivers every time.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Timing also matters — each destination has an optimal season. For a complete breakdown of when to plan your trip, check out our{" "}
+              <Link to="/blog/best-time-to-visit-tokyo" className="text-accent hover:underline">
+                Best Time to Visit Tokyo guide
+              </Link>
+              .
             </p>
 
             {/* CTA */}
