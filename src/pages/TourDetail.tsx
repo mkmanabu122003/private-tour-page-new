@@ -4,19 +4,9 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ChevronLeft, ChevronRight, A
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import useEmblaCarousel from "embla-carousel-react";
-import tourAsakusa from "@/assets/tour-asakusa.jpg";
 import tourYanaka from "@/assets/tour-yanaka.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
 import uenoNight from "@/assets/ueno-night.jpg";
-import asakusaStreet from "@/assets/asakusa-street.jpg";
-import asakusaMask from "@/assets/mask-2397624.jpg";
-import asakusaTemple from "@/assets/asakusa-temple.jpg";
-import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
-import shibuyaStreet from "@/assets/shibuya-street.jpg";
-import meijiShrine from "@/assets/meiji-shrine.jpg";
-import harajukuStreet from "@/assets/harajuku-street.webp";
-import tsukijiMarket from "@/assets/tsukiji-market.jpg";
-import tsukijiFood from "@/assets/tsukiji-food.jpg";
 import imperialPalace from "@/assets/imperial-palace.jpg";
 import imperialBridge from "@/assets/imperial-bridge.jpg";
 import tokyoStation from "@/assets/tokyo-station.jpg";
@@ -186,10 +176,9 @@ const tourData = {
     startTime: "10:30 AM or 2:30 PM",
     meetingPoint: "Shibuya Station, Hachiko Exit",
     images: [
-      { src: shibuyaCrossing, alt: "Shibuya Crossing at dusk with hundreds of pedestrians", position: "center" },
-      { src: shibuyaStreet, alt: "Vibrant Shibuya shopping street with neon signs", position: "center" },
-      { src: meijiShrine, alt: "Meiji Shrine torii gate surrounded by ancient forest", position: "center" },
-      { src: harajukuStreet, alt: "Colorful Harajuku Takeshita Street with youth fashion", position: "center" },
+      { src: "/images/tours/shibuya-scramble-crossing.jpg", alt: "Shibuya Scramble Crossing - Tokyo's most famous intersection", position: "center" },
+      { src: "/images/tours/harajuku-takeshita-street.jpg", alt: "Takeshita Street Harajuku - center of Tokyo youth culture", position: "center" },
+      { src: "/images/tours/meiji-shrine-torii-gate.jpg", alt: "Meiji Shrine entrance - peaceful contrast to busy Harajuku", position: "center" },
     ],
     highlights: [
       "Shibuya Crossing - The world's busiest pedestrian crossing",
@@ -233,8 +222,9 @@ const tourData = {
     startTime: "9:00 AM or 1:00 PM",
     meetingPoint: "Tsukiji Market Station, Exit A1",
     images: [
-      { src: tsukijiMarket, alt: "Tsukiji Outer Market fresh seafood and food stalls", position: "center" },
-      { src: tsukijiFood, alt: "Fresh Japanese street food at Tsukiji Market", position: "center" },
+      { src: "/images/tours/tsukiji-outer-market.jpg", alt: "Tsukiji Outer Market - Tokyo private food tour", position: "center" },
+      { src: "/images/tours/tsukiji-street-food.jpg", alt: "Fresh seafood skewers at Tsukiji Market Tokyo", position: "center" },
+      { src: "/images/tours/ginza-shopping-district.jpg", alt: "Ginza luxury shopping district - combine with Tsukiji tour", position: "center" },
     ],
     highlights: [
       "Tsukiji Outer Market - Fresh seafood and street food",
@@ -366,7 +356,9 @@ const tourData = {
     startTime: "8:30 AM",
     meetingPoint: "Your hotel in Tokyo",
     images: [
-      { src: hamarikyu, alt: "Kamakura Great Buddha and surrounding temple grounds", position: "center" },
+      { src: "/images/tours/kamakura-great-buddha.jpg", alt: "Great Buddha of Kamakura - day trip from Tokyo with guide", position: "center" },
+      { src: "/images/tours/kamakura-coast-enoden.jpg", alt: "Kamakura coastal view - seaside day trip from Tokyo", position: "center" },
+      { src: "/images/tours/kamakura-hasedera-temple.jpg", alt: "Hasedera Temple gardens in Kamakura", position: "center" },
     ],
     highlights: [
       "Great Buddha at Kotoku-in — 13th century bronze statue, one of Japan's most iconic landmarks",
@@ -425,7 +417,9 @@ const tourData = {
     startTime: "8:00 AM",
     meetingPoint: "Your hotel in Tokyo",
     images: [
-      { src: hamarikyu, alt: "Lake Ashi cruise with Mt. Fuji views in Hakone", position: "center" },
+      { src: "/images/tours/hakone-lake-ashi-fuji.jpg", alt: "Lake Ashi with Mt Fuji view - Hakone day trip from Tokyo", position: "center" },
+      { src: "/images/tours/hakone-ropeway-owakudani.jpg", alt: "Hakone Ropeway over Owakudani volcanic valley", position: "center" },
+      { src: "/images/tours/hakone-pirate-ship-ashi.jpg", alt: "Pirate ship cruise on Lake Ashi Hakone", position: "center" },
     ],
     highlights: [
       "Lake Ashi pirate ship cruise with Mt. Fuji views (weather permitting)",

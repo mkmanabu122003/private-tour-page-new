@@ -41,6 +41,15 @@ const DayTripComparison = () => {
         </div>
       </section>
 
+      {/* Hero Image */}
+      <div className="w-full h-[300px] md:h-[400px]">
+        <img
+          src="/images/blog/day-trip-comparison-hero.jpg"
+          alt="Kamakura vs Hakone vs Nikko - best day trips from Tokyo"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
@@ -118,6 +127,16 @@ const DayTripComparison = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kamakura was Japan's political capital from 1185 to 1333, when the Kamakura shogunate ruled the country. Today, it's a small, walkable coastal city with over 65 temples and shrines packed into a remarkably compact area. The combination of ancient history, natural beauty, and excellent food makes it the most well-rounded day trip option.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/kamakura-buddha-comparison.jpg"
+                alt="Great Buddha in Kamakura - popular day trip from Tokyo"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                The Great Buddha of Kamakura — one of Japan's most iconic landmarks
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The star attraction is the Great Buddha (Daibutsu) at Kotoku-in — a 13-meter bronze statue from the 13th century that originally sat inside a massive wooden hall. Typhoons and tsunamis destroyed the hall centuries ago, and the Buddha has sat serenely in the open air ever since. There's something deeply moving about seeing this ancient figure sitting peacefully against the sky, weathering the same storms for 800 years.
             </p>
@@ -151,6 +170,16 @@ const DayTripComparison = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Hakone is where Tokyo residents go to escape the city, and it's been a popular retreat for centuries. Located in the mountains southwest of Tokyo, it offers a unique combination of natural beauty, volcanic geology, and traditional hot spring culture. The famous "Hakone Loop" — a circuit of trains, cable cars, ropeways, cruise ships, and buses — is both a transportation system and an attraction in itself.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/hakone-fuji-comparison.jpg"
+                alt="Mt Fuji from Hakone - scenic day trip from Tokyo"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Mt. Fuji from Lake Ashi — Hakone's most sought-after view
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The highlight for most visitors is the view of Mt. Fuji across Lake Ashi. When conditions are right (clear winter mornings are best), the snow-capped peak reflected in the lake is one of Japan's most iconic images. The Hakone Ropeway carries you high over Owakudani, an active volcanic valley where you can see sulfurous steam rising from the ground and try the famous black eggs — regular eggs boiled in the volcanic hot springs that turn the shell black. Legend says each one adds seven years to your life.
             </p>

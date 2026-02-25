@@ -41,6 +41,15 @@ const TsukijiGuide = () => {
         </div>
       </section>
 
+      {/* Hero Image */}
+      <div className="w-full h-[300px] md:h-[400px]">
+        <img
+          src="/images/blog/tsukiji-food-guide-hero.jpg"
+          alt="Tsukiji Market guide for food lovers"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
@@ -87,6 +96,16 @@ const TsukijiGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tsukiji has both stand-up sushi counters and proper sit-down sushi restaurants, and both can be excellent. The stand-up spots (tachigui-zushi) tend to be faster and cheaper — you'll pay around 2,000 to 3,000 yen for a solid set of 8 to 10 pieces. The experience is quintessentially Japanese: elbow to elbow with salarymen on their lunch break, watching the itamae (sushi chef) shape each piece by hand inches from your face. The fish is absurdly fresh because many of these restaurants source directly from the market's wholesalers every morning.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-fresh-sushi.jpg"
+                alt="Fresh sushi at Tsukiji Market Tokyo"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Fresh sushi at Tsukiji — the fish arrives from wholesalers every morning
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sit-down restaurants offer a more relaxed experience with higher-end selections. Expect to pay 3,000 to 6,000 yen for an omakase (chef's choice) set. Some of these restaurants, like Sushi Dai and Daiwa Sushi, became famous worldwide and can have queues of two hours or more. Honestly, the quality difference between the famous spots and the lesser-known counters is marginal — you're paying for the name, not the fish. I'll share which specific stalls I recommend on our walking tour.
             </p>
@@ -97,6 +116,16 @@ const TsukijiGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tsukiji's tamagoyaki is legendary, and for good reason. These thick, slightly sweet Japanese omelettes are grilled in special rectangular pans right in front of you, layer by layer, resulting in a pillowy, caramelized block of egg that's nothing like what you'd find in a Western kitchen. The two most famous shops — Yamachou and Shouro — have been perfecting their recipes for decades. Yamachou tends toward a sweeter, dessert-like style, while Shouro offers a more savory, dashi-forward version. Try both if you can. A stick of tamagoyaki costs around 100 to 200 yen, making it one of the best bargains in the entire market.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-tamagoyaki.jpg"
+                alt="Tamagoyaki Japanese egg omelette at Tsukiji Market"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Tamagoyaki on a stick — Tsukiji's most iconic street food
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Grilled Seafood Skewers
@@ -146,6 +175,17 @@ const TsukijiGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Many stalls begin closing by 1:00 to 2:00 PM, and by 3:00 PM the market is largely shut down. If you arrive after noon, you'll find reduced selection and some of the best items already sold out. Plan your visit as a morning activity, arrive hungry, and give yourself at least 90 minutes to two hours for a thorough walkthrough.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/ginza-shopping-street.jpg"
+                alt="Ginza luxury district - combine with Tsukiji for perfect day"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Ginza — just a short walk from Tsukiji, a completely different world
+              </figcaption>
+            </figure>
 
             {/* Combine with Ginza */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
