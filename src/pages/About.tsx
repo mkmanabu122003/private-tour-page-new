@@ -374,6 +374,12 @@ const About = () => {
             "@type": "LocalBusiness",
             "name": "Tanuki Tabi Travel",
             "url": "https://tanuki-tabi-travel.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.86",
+              "reviewCount": "516",
+              "bestRating": "5",
+            },
             "review": allReviews.map((r) => ({
               "@type": "Review",
               "reviewBody": r.text,
