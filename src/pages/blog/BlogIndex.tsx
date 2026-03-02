@@ -111,8 +111,8 @@ const BlogIndex = () => {
   return (
     <Layout>
       <SEO
-        title="Blog | Tokyo Travel Tips & Guide Stories | Tanuki Tabi Travel"
-        description="Travel tips, itineraries, and insider recommendations from a licensed Tokyo tour guide. Plan your perfect Tokyo trip with local knowledge."
+        title="Tokyo Travel Blog | Tips & Guides | Tanuki Tabi Travel"
+        description="Travel tips, cultural insights, and guides for visiting Tokyo. Written by a local licensed tour guide."
         canonicalPath="/blog"
       />
 

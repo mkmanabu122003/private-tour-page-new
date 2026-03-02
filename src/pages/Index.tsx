@@ -145,8 +145,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Private Tour Guide | Licensed Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with a government-licensed private tour guide. 516+ tours completed with 4.86★ rating. Custom walking tours of Asakusa, Shibuya, Ginza & more. Book your personal Tokyo experience."
+        title="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel"
+        description="Explore Tokyo with a licensed private tour guide. Custom walking tours of Asakusa, Ginza, Akihabara and more. Personalized itineraries for your interests."
         canonicalPath="/"
       />
 
@@ -401,11 +401,12 @@ const Index = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
             "description": "Private walking tours of Tokyo with a government-licensed guide",
             "url": "https://tanuki-tabi-travel.com",
             "email": "info@tanuki-tabi-travel.com",
+            "priceRange": "¥25,000 - ¥60,000",
             "areaServed": {
               "@type": "City",
               "name": "Tokyo",
