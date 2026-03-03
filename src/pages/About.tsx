@@ -97,8 +97,8 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="About Your Guide Manabu | Licensed Tokyo Tour Guide | Tanuki Tabi Travel"
-        description="Meet Manabu, a government-licensed tour guide (全国通訳案内士) with 516+ tours and 4.86★ rating. Discover why travelers trust Tanuki Tabi Travel."
+        title="About Us | Meet Your Tokyo Tour Guide | Tanuki Tabi Travel"
+        description="Meet Manabu, founder of Tanuki Tabi Travel. A Kyoto University graduate and licensed guide offering personalized Tokyo walking tours since 2023."
         canonicalPath="/about"
       />
 
@@ -390,6 +390,26 @@ const About = () => {
                 "bestRating": "5",
               },
             })),
+          }),
+        }}
+      />
+
+      {/* JSON-LD Person Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Manabu",
+            "jobTitle": "Government-Licensed Tour Guide",
+            "worksFor": {
+              "@type": "LocalBusiness",
+              "name": "Tanuki Tabi Travel",
+              "url": "https://tanuki-tabi-travel.com",
+            },
+            "knowsLanguage": ["Japanese", "English", "Spanish"],
+            "knowsAbout": ["Tokyo", "Japanese Culture", "Japanese History", "Walking Tours"],
           }),
         }}
       />

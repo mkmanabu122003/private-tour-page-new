@@ -78,8 +78,8 @@ const Contact = () => {
   return (
     <Layout>
       <SEO
-        title="Book a Tour | Contact Tanuki Tabi Travel | Tokyo Private Tours"
-        description="Ready to explore Tokyo? Contact us to book your private walking tour or ask questions. Fast response guaranteed."
+        title="Book a Private Tokyo Tour | Tanuki Tabi Travel"
+        description="Book your private Tokyo walking tour. Fill out our simple form and receive a custom itinerary within 24 hours."
         canonicalPath="/contact"
       />
 
