@@ -8,7 +8,7 @@ const Tokyo3DayItinerary = () => {
     <Layout>
       <SEO
         title="Tokyo 3-Day Itinerary | A Local Guide's Recommendations | Tanuki Tabi Travel"
-        description="Plan the perfect 3 days in Tokyo with insider tips from a licensed local guide. Covers Asakusa, Shibuya, Tsukiji, day trips, and hidden gems most tourists miss."
+        description="A Tokyo 3-day itinerary curated by a licensed local guide. Where to go, what to eat, and how to experience the city like an insider — from Asakusa to Shibuya."
         canonicalPath="/blog/tokyo-3-day-itinerary"
       />
 

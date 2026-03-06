@@ -8,7 +8,7 @@ const BestTimeToVisit = () => {
     <Layout>
       <SEO
         title="Best Time to Visit Tokyo: Month-by-Month Guide | Tanuki Tabi Travel"
-        description="When should you visit Tokyo? A local guide breaks down weather, events, crowds, and costs for every month to help you plan the perfect trip."
+        description="When is the best time to visit Tokyo? A licensed local guide breaks down each season — cherry blossoms, summer festivals, autumn leaves, and winter crowds."
         canonicalPath="/blog/best-time-to-visit-tokyo"
       />
 

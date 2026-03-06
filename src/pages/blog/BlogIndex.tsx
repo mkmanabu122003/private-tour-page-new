@@ -112,7 +112,7 @@ const BlogIndex = () => {
     <Layout>
       <SEO
         title="Tokyo Travel Blog | Tips & Guides | Tanuki Tabi Travel"
-        description="Travel tips, cultural insights, and guides for visiting Tokyo. Written by a local licensed tour guide."
+        description="Travel tips, neighborhood guides, and Tokyo itineraries written by a licensed local guide. Plan your Tokyo trip with insider knowledge you won't find in guidebooks."
         canonicalPath="/blog"
       />
 
