@@ -37,7 +37,13 @@ const routes = [
   "/es",
   "/es/tours/asakusa",
   "/es/tours/yanaka",
+  "/es/tours/shibuya-harajuku",
+  "/es/tours/tsukiji-ginza",
+  "/es/tours/imperial-palace",
   "/es/tours/kamakura-day-trip",
+  "/es/tours/hakone-day-trip",
+  "/es/tours/nikko-day-trip",
+  "/es/tours/custom",
   "/es/contact",
   "/es/about",
 ];

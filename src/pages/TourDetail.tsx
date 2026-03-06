@@ -615,7 +615,7 @@ const TourDetail = () => {
         description={seo.description}
         canonicalPath={`/tours/${id}`}
         hreflang={
-          ["asakusa", "yanaka", "kamakura-day-trip"].includes(id || "")
+          ["asakusa", "yanaka", "shibuya-harajuku", "tsukiji-ginza", "imperial-palace", "kamakura-day-trip", "hakone-day-trip", "nikko-day-trip", "custom"].includes(id || "")
             ? [
                 { lang: "en", path: `/tours/${id}` },
                 { lang: "es", path: `/es/tours/${id}` },

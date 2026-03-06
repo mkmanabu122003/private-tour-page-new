@@ -33,6 +33,16 @@
       <textarea name="message"></textarea>
     </form>
 
+    <!-- Hidden form for Netlify Forms detection (Spanish) -->
+    <form name="contact-es" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="tourType" />
+      <input type="text" name="date" />
+      <input type="text" name="groupSize" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

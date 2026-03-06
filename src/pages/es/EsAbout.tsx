@@ -260,12 +260,12 @@ const EsAbout = () => {
                 {[
                   { area: "Asakusa y Sumida", link: "/es/tours/asakusa" },
                   { area: "Ueno y Yanaka", link: "/es/tours/yanaka" },
-                  { area: "Tsukiji y Ginza", link: "/es/" },
-                  { area: "Shibuya y Harajuku", link: "/es/" },
-                  { area: "Palacio Imperial y Marunouchi", link: "/es/" },
+                  { area: "Tsukiji y Ginza", link: "/es/tours/tsukiji-ginza" },
+                  { area: "Shibuya y Harajuku", link: "/es/tours/shibuya-harajuku" },
+                  { area: "Palacio Imperial y Marunouchi", link: "/es/tours/imperial-palace" },
                   { area: "Kamakura (Excursión)", link: "/es/tours/kamakura-day-trip" },
-                  { area: "Hakone (Excursión)", link: "/es/" },
-                  { area: "Nikko (Excursión)", link: "/es/" },
+                  { area: "Hakone (Excursión)", link: "/es/tours/hakone-day-trip" },
+                  { area: "Nikko (Excursión)", link: "/es/tours/nikko-day-trip" },
                 ].map((item) => (
                   <Link
                     key={item.area}
