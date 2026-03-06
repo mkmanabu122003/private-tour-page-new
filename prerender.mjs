@@ -33,6 +33,13 @@ const routes = [
   "/blog/tsukiji-guide-food-lover",
   "/blog/best-time-to-visit-tokyo",
   "/blog/japan-temple-shrine-etiquette",
+  // Spanish pages
+  "/es",
+  "/es/tours/asakusa",
+  "/es/tours/yanaka",
+  "/es/tours/kamakura-day-trip",
+  "/es/contact",
+  "/es/about",
 ];
 
 async function prerender() {

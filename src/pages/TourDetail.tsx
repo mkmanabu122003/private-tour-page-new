@@ -614,6 +614,15 @@ const TourDetail = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={`/tours/${id}`}
+        hreflang={
+          ["asakusa", "yanaka", "kamakura-day-trip"].includes(id || "")
+            ? [
+                { lang: "en", path: `/tours/${id}` },
+                { lang: "es", path: `/es/tours/${id}` },
+                { lang: "x-default", path: `/tours/${id}` },
+              ]
+            : undefined
+        }
       />
 
       {/* Hero Carousel with Thumbnails */}

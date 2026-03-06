@@ -22,6 +22,12 @@ import TsukijiGuide from "./pages/blog/TsukijiGuide";
 import BestTimeToVisit from "./pages/blog/BestTimeToVisit";
 import TempleEtiquette from "./pages/blog/TempleEtiquette";
 import NotFound from "./pages/NotFound";
+import EsIndex from "./pages/es/EsIndex";
+import EsAsakusa from "./pages/es/tours/EsAsakusa";
+import EsYanaka from "./pages/es/tours/EsYanaka";
+import EsKamakura from "./pages/es/tours/EsKamakura";
+import EsContact from "./pages/es/EsContact";
+import EsAbout from "./pages/es/EsAbout";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +55,13 @@ const AppRoutes = () => (
         <Route path="/blog/tsukiji-guide-food-lover" element={<TsukijiGuide />} />
         <Route path="/blog/best-time-to-visit-tokyo" element={<BestTimeToVisit />} />
         <Route path="/blog/japan-temple-shrine-etiquette" element={<TempleEtiquette />} />
+        {/* Spanish Pages */}
+        <Route path="/es" element={<EsIndex />} />
+        <Route path="/es/tours/asakusa" element={<EsAsakusa />} />
+        <Route path="/es/tours/yanaka" element={<EsYanaka />} />
+        <Route path="/es/tours/kamakura-day-trip" element={<EsKamakura />} />
+        <Route path="/es/contact" element={<EsContact />} />
+        <Route path="/es/about" element={<EsAbout />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

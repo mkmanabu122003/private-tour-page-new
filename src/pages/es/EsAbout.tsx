@@ -1,3 +1,4 @@
+// TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
 import { Link } from "react-router-dom";
 import { Award, Globe, Briefcase, Heart, MapPin, Languages, Shield, Users, BookOpen, Utensils, Star } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
@@ -6,55 +7,55 @@ import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import heroImage from "@/assets/hero-asakusa.jpg";
 
 const stats = [
-  { label: "Tours Completed", value: "516+" },
-  { label: "Average Rating", value: "4.86★" },
-  { label: "Languages", value: "3" },
-  { label: "Tour Areas", value: "5+" },
+  { label: "Tours Completados", value: "516+" },
+  { label: "Valoración Media", value: "4.86★" },
+  { label: "Idiomas", value: "3" },
+  { label: "Zonas de Tour", value: "5+" },
 ];
 
 const credentials = [
   {
     icon: Shield,
-    title: "Government-Licensed Guide",
-    description: "National Government Licensed Guide Interpreter (全国通訳案内士) — the highest professional guiding certification in Japan, requiring extensive knowledge of history, culture, geography, and fluency in English.",
+    title: "Guía con Licencia del Gobierno",
+    description: "Intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士) — la certificación profesional más alta para guías en Japón, que requiere amplio conocimiento de historia, cultura, geografía y dominio del idioma.",
   },
   {
     icon: Globe,
-    title: "International Experience",
-    description: "Extensive overseas work experience bringing global perspective and cross-cultural communication skills to every tour.",
+    title: "Experiencia Internacional",
+    description: "Amplia experiencia laboral en el extranjero que aporta perspectiva global y habilidades de comunicación intercultural a cada tour.",
   },
   {
     icon: Briefcase,
-    title: "Business Background",
-    description: "Professional business experience ensures smooth, well-organized tours with excellent communication and attention to detail.",
+    title: "Formación Empresarial",
+    description: "Experiencia profesional en el mundo empresarial que garantiza tours bien organizados con excelente comunicación y atención al detalle.",
   },
   {
     icon: Languages,
-    title: "Multilingual",
-    description: "Fluent in Japanese, English, and Spanish for seamless communication with guests worldwide.",
+    title: "Multilingüe",
+    description: "Dominio de japonés, inglés y español para una comunicación fluida con viajeros de todo el mundo.",
   },
 ];
 
 const whyChooseGuide = [
   {
     icon: Users,
-    title: "Your Pace, Your Way",
-    description: "Private tours mean no waiting for strangers. Walk at your speed, linger where you're curious, and skip what doesn't interest you.",
+    title: "A Tu Ritmo",
+    description: "Los tours privados significan no esperar a desconocidos. Camina a tu velocidad, detente donde te dé curiosidad y sáltate lo que no te interese.",
   },
   {
     icon: Shield,
-    title: "Certified Quality",
-    description: "A nationally licensed guide has passed rigorous government exams covering Japanese history, geography, culture, and language proficiency.",
+    title: "Calidad Certificada",
+    description: "Un guía con licencia nacional ha aprobado rigurosos exámenes del gobierno que cubren historia, geografía, cultura y competencia lingüística japonesa.",
   },
   {
     icon: BookOpen,
-    title: "Beyond the Guidebook",
-    description: "Discover hidden temples, local-only shops, and neighborhood stories that you won't find in any travel app or blog.",
+    title: "Más Allá de la Guía de Viaje",
+    description: "Descubre templos escondidos, tiendas solo para locales e historias de barrio que no encontrarás en ninguna app de viajes o blog.",
   },
   {
     icon: Utensils,
-    title: "Full Travel Support",
-    description: "From restaurant reservations and train navigation to cultural etiquette tips — your guide handles the details so you can enjoy the journey.",
+    title: "Asistencia Completa",
+    description: "Desde reservas en restaurantes y navegación del tren hasta consejos de etiqueta cultural — tu guía se encarga de los detalles para que tú disfrutes del viaje.",
   },
 ];
 
@@ -93,13 +94,13 @@ const allReviews = [
   },
 ];
 
-const About = () => {
+const EsAbout = () => {
   return (
     <Layout>
       <SEO
-        title="About Us | Meet Your Tokyo Tour Guide | Tanuki Tabi Travel"
-        description="Meet Manabu — government-licensed Tokyo guide (全国通訳案内士), 500+ tours, 4.86★ rating. Born in Kanazawa, raised in Kyoto, now guiding visitors through Tokyo."
-        canonicalPath="/about"
+        title="Conoce a Manabu — Tu Guía Privado en Tokio | Tanuki Tabi Travel"
+        description="Manabu es un guía japonés nativo con licencia oficial del gobierno (全国通訳案内士), 516+ tours y valoración de 4.86★. Nacido en Kanazawa, criado en Kioto, ahora en Tokio."
+        canonicalPath="/es/about"
         hreflang={[
           { lang: "en", path: "/about" },
           { lang: "es", path: "/es/about" },
@@ -112,24 +113,15 @@ const About = () => {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-label text-accent mb-3">About Your Guide</p>
+              <p className="text-label text-accent mb-3">Tu Guía</p>
               <h1 className="heading-display text-foreground">
-                Meet Your Guide: <span className="text-accent">Manabu</span>
+                Conoce a tu guía: <span className="text-accent">Manabu</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                I'm Manabu, a National Government Licensed Guide Interpreter
-                (全国通訳案内士) based in Tokyo. This is a national certification
-                issued by the Japanese government, requiring extensive knowledge
-                of Japanese history, culture, geography, and fluency in English.
-                Only certified guides are legally recognized as professional
-                tour guides in Japan.
+                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士) con base en Tokio. Esta es una certificación nacional emitida por el gobierno japonés, que requiere amplios conocimientos de historia, cultura, geografía y dominio del inglés y español. Solo los guías certificados están legalmente reconocidos como guías turísticos profesionales en Japón.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Born in Kanazawa, raised in Kyoto, and now living in Tokyo — I
-                bring a unique perspective from Japan's most culturally rich
-                regions. With over 516 tours completed and a 4.86-star average
-                rating, I'm passionate about sharing Japan's stories with
-                travelers from around the world.
+                Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — aporto una perspectiva única de las regiones culturalmente más ricas de Japón. Con más de 516 tours completados y una valoración media de 4.86 estrellas, mi pasión es compartir las historias de Japón con viajeros de todo el mundo.
               </p>
 
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -146,7 +138,7 @@ const About = () => {
               <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
                 <img
                   src={guidePortrait}
-                  alt="Manabu, government-licensed Tokyo private tour guide"
+                  alt="Manabu, guía privado con licencia oficial en Tokio"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -159,34 +151,22 @@ const About = () => {
       <section className="py-20">
         <div className="container-section">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-label text-accent mb-3">My Approach</p>
+            <p className="text-label text-accent mb-3">Mi Enfoque</p>
             <h2 className="heading-section text-foreground">
-              How I Guide
+              Cómo Guío
             </h2>
             <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
               <p>
-                My guiding philosophy is built on one principle: <strong className="text-foreground">every traveler
-                is different</strong>. In the first 30 minutes of every tour, I pay close
-                attention to what excites you — whether it's architecture, street
-                food, historical trivia, or photography — and I adapt the route
-                in real time.
+                Mi filosofía como guía se basa en un principio: <strong className="text-foreground">cada viajero es diferente</strong>. En los primeros 30 minutos de cada tour, presto mucha atención a lo que te emociona — ya sea la arquitectura, la comida callejera, las curiosidades históricas o la fotografía — y adapto la ruta en tiempo real.
               </p>
               <p>
-                I don't deliver scripted monologues. My tours are conversations.
-                I'll share stories and cultural context, but I also want to hear
-                your questions, your observations, and what surprises you about
-                Japan. That back-and-forth is what makes the experience memorable.
+                No doy monólogos con guión. Mis tours son conversaciones. Comparto historias y contexto cultural, pero también quiero escuchar tus preguntas, tus observaciones y lo que te sorprende de Japón. Ese intercambio es lo que hace la experiencia memorable.
               </p>
               <p>
-                My years in business gave me the opportunity to travel and work with
-                people from diverse backgrounds. I noticed how visitors to Japan often
-                missed the context and meaning behind what they were seeing — the "why"
-                that makes experiences truly meaningful.
+                Mis años en el mundo empresarial me dieron la oportunidad de viajar y trabajar con personas de diversos orígenes. Me di cuenta de que los visitantes a Japón a menudo perdían el contexto y el significado detrás de lo que veían — el "por qué" que hace las experiencias verdaderamente significativas.
               </p>
               <p className="font-medium text-foreground">
-                Today, nothing brings me more joy than seeing the moment of understanding
-                in a guest's eyes — when a temple isn't just old stones, but a living
-                connection to centuries of belief and craftsmanship.
+                Hoy, nada me da más alegría que ver el momento de comprensión en los ojos de un visitante — cuando un templo deja de ser solo piedras viejas y se convierte en una conexión viva con siglos de creencia y artesanía.
               </p>
             </div>
           </div>
@@ -197,9 +177,9 @@ const About = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Advantages</p>
+            <p className="text-label text-accent mb-3">Ventajas</p>
             <h2 className="heading-section text-foreground">
-              Why Choose a Licensed Private Guide?
+              ¿Por qué elegir un guía privado con licencia?
             </h2>
           </div>
 
@@ -227,9 +207,9 @@ const About = () => {
       <section className="py-20 bg-card border-y border-border">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Credentials</p>
+            <p className="text-label text-accent mb-3">Credenciales</p>
             <h2 className="heading-section text-foreground">
-              Professional Background
+              Formación Profesional
             </h2>
           </div>
 
@@ -261,33 +241,31 @@ const About = () => {
               <div className="aspect-video rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
                 <img
                   src={heroImage}
-                  alt="Historic Asakusa district in Tokyo with Senso-ji temple and traditional architecture"
+                  alt="Distrito histórico de Asakusa en Tokio con el Templo Senso-ji y arquitectura tradicional"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
 
             <div className="order-1 lg:order-2">
-              <p className="text-label text-accent mb-3">Expertise</p>
+              <p className="text-label text-accent mb-3">Experiencia</p>
               <h2 className="heading-section text-foreground">
-                Areas I Know Best
+                Zonas que Mejor Conozco
               </h2>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Each neighborhood in Tokyo has its own character and stories.
-                Here are the areas where I've developed deep knowledge and local
-                connections:
+                Cada barrio de Tokio tiene su propio carácter e historias. Estas son las zonas donde he desarrollado un conocimiento profundo y conexiones locales:
               </p>
 
               <div className="mt-8 space-y-4">
                 {[
-                  { area: "Asakusa & Sumida", link: "/tours/asakusa" },
-                  { area: "Ueno & Yanaka", link: "/tours/yanaka" },
-                  { area: "Tsukiji & Ginza", link: "/tours/tsukiji-ginza" },
-                  { area: "Shibuya & Harajuku", link: "/tours/shibuya-harajuku" },
-                  { area: "Imperial Palace & Marunouchi", link: "/tours/imperial-palace" },
-                  { area: "Kamakura (Day Trip)", link: "/tours/kamakura-day-trip" },
-                  { area: "Hakone (Day Trip)", link: "/tours/hakone-day-trip" },
-                  { area: "Nikko (Day Trip)", link: "/tours/nikko-day-trip" },
+                  { area: "Asakusa y Sumida", link: "/es/tours/asakusa" },
+                  { area: "Ueno y Yanaka", link: "/es/tours/yanaka" },
+                  { area: "Tsukiji y Ginza", link: "/es/" },
+                  { area: "Shibuya y Harajuku", link: "/es/" },
+                  { area: "Palacio Imperial y Marunouchi", link: "/es/" },
+                  { area: "Kamakura (Excursión)", link: "/es/tours/kamakura-day-trip" },
+                  { area: "Hakone (Excursión)", link: "/es/" },
+                  { area: "Nikko (Excursión)", link: "/es/" },
                 ].map((item) => (
                   <Link
                     key={item.area}
@@ -302,8 +280,8 @@ const About = () => {
                 ))}
               </div>
 
-              <Link to="/tours" className="btn-accent mt-8 inline-flex">
-                Explore Tours
+              <Link to="/es/" className="btn-accent mt-8 inline-flex">
+                Explorar Tours
               </Link>
             </div>
           </div>
@@ -314,8 +292,8 @@ const About = () => {
       <section className="py-20">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Guest Reviews</p>
-            <h2 className="heading-section text-foreground">What Travelers Say</h2>
+            <p className="text-label text-accent mb-3">Opiniones</p>
+            <h2 className="heading-section text-foreground">Lo Que Dicen los Viajeros</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -345,7 +323,7 @@ const About = () => {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            500+ five-star reviews from travelers worldwide
+            Más de 500 reseñas de cinco estrellas de viajeros de todo el mundo
           </p>
         </div>
       </section>
@@ -354,60 +332,20 @@ const About = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <Heart className="w-12 h-12 mx-auto mb-6 text-accent" />
-          <h2 className="heading-section">Let's Explore Tokyo Together</h2>
+          <h2 className="heading-section">Exploremos Tokio Juntos</h2>
           <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
-            I look forward to sharing my favorite places and the stories that
-            make Tokyo such a special city. Let's create memories together.
+            Tengo muchas ganas de compartir mis lugares favoritos y las historias que hacen de Tokio una ciudad tan especial. Creemos recuerdos juntos.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tours" className="btn-accent">
-              Browse Tours
+            <Link to="/es/" className="btn-accent">
+              Ver Tours
             </Link>
-            <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
-              Book a Custom Tour
+            <Link to="/es/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+              Reservar un Tour
             </Link>
           </div>
         </div>
       </section>
-
-      {/* JSON-LD LocalBusiness + TouristInformationCenter Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": ["LocalBusiness", "TouristInformationCenter"],
-            "name": "Tanuki Tabi Travel",
-            "url": "https://tanuki-tabi-travel.com",
-            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 516+ tours and a 4.86★ rating.",
-            "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
-            "email": "info@tanuki-tabi-travel.com",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Tokyo",
-              "addressCountry": "JP",
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.86",
-              "reviewCount": "516",
-            },
-            "priceRange": "¥¥¥",
-            "knowsLanguage": "en",
-            "hasCredential": "National Government Licensed Guide Interpreter (全国通訳案内士)",
-            "review": allReviews.map((r) => ({
-              "@type": "Review",
-              "reviewBody": r.text,
-              "author": { "@type": "Person", "name": r.author },
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5",
-              },
-            })),
-          }),
-        }}
-      />
 
       {/* JSON-LD Person Schema */}
       <script
@@ -432,4 +370,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default EsAbout;
