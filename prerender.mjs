@@ -48,6 +48,17 @@ const routes = [
   "/es/contact",
   "/es/about",
   "/es/faq",
+  // Spanish blog
+  "/es/blog",
+  "/es/blog/itinerario-tokio-3-dias",
+  "/es/blog/guia-asakusa",
+  "/es/blog/guia-shibuya-harajuku",
+  "/es/blog/guia-shinjuku",
+  "/es/blog/guia-tsukiji",
+  "/es/blog/mejor-epoca-visitar-tokio",
+  "/es/blog/etiqueta-templos-santuarios",
+  "/es/blog/vale-la-pena-contratar-guia",
+  "/es/blog/comparativa-excursiones",
 ];
 
 async function prerender() {
