@@ -114,6 +114,11 @@ const BlogIndex = () => {
         title="Tokyo Travel Blog | Tips & Guides | Tanuki Tabi Travel"
         description="Travel tips, neighborhood guides, and Tokyo itineraries written by a licensed local guide. Plan your Tokyo trip with insider knowledge you won't find in guidebooks."
         canonicalPath="/blog"
+        hreflang={[
+          { lang: "en", path: "/blog" },
+          { lang: "es", path: "/es/blog" },
+          { lang: "x-default", path: "/blog" },
+        ]}
       />
 
       {/* Header */}

@@ -36,6 +36,16 @@ import EsImperialPalace from "./pages/es/tours/EsImperialPalace";
 import EsHakone from "./pages/es/tours/EsHakone";
 import EsNikko from "./pages/es/tours/EsNikko";
 import EsCustom from "./pages/es/tours/EsCustom";
+import EsBlogIndex from "./pages/es/blog/EsBlogIndex";
+import EsItinerarioTokio3Dias from "./pages/es/blog/EsItinerarioTokio3Dias";
+import EsGuiaAsakusa from "./pages/es/blog/EsGuiaAsakusa";
+import EsGuiaShibuyaHarajuku from "./pages/es/blog/EsGuiaShibuyaHarajuku";
+import EsGuiaShinjuku from "./pages/es/blog/EsGuiaShinjuku";
+import EsGuiaTsukiji from "./pages/es/blog/EsGuiaTsukiji";
+import EsMejorEpocaVisitarTokio from "./pages/es/blog/EsMejorEpocaVisitarTokio";
+import EsEtiquetaTemplos from "./pages/es/blog/EsEtiquetaTemplos";
+import EsValeLaPenaGuia from "./pages/es/blog/EsValeLaPenaGuia";
+import EsComparativaExcursiones from "./pages/es/blog/EsComparativaExcursiones";
 
 const queryClient = new QueryClient();
 
@@ -78,6 +88,17 @@ const AppRoutes = () => (
         <Route path="/es/contact" element={<EsContact />} />
         <Route path="/es/about" element={<EsAbout />} />
         <Route path="/es/faq" element={<EsFaq />} />
+        {/* Spanish Blog */}
+        <Route path="/es/blog" element={<EsBlogIndex />} />
+        <Route path="/es/blog/itinerario-tokio-3-dias" element={<EsItinerarioTokio3Dias />} />
+        <Route path="/es/blog/guia-asakusa" element={<EsGuiaAsakusa />} />
+        <Route path="/es/blog/guia-shibuya-harajuku" element={<EsGuiaShibuyaHarajuku />} />
+        <Route path="/es/blog/guia-shinjuku" element={<EsGuiaShinjuku />} />
+        <Route path="/es/blog/guia-tsukiji" element={<EsGuiaTsukiji />} />
+        <Route path="/es/blog/mejor-epoca-visitar-tokio" element={<EsMejorEpocaVisitarTokio />} />
+        <Route path="/es/blog/etiqueta-templos-santuarios" element={<EsEtiquetaTemplos />} />
+        <Route path="/es/blog/vale-la-pena-contratar-guia" element={<EsValeLaPenaGuia />} />
+        <Route path="/es/blog/comparativa-excursiones" element={<EsComparativaExcursiones />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
