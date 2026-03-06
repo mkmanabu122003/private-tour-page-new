@@ -28,6 +28,8 @@ import EsYanaka from "./pages/es/tours/EsYanaka";
 import EsKamakura from "./pages/es/tours/EsKamakura";
 import EsContact from "./pages/es/EsContact";
 import EsAbout from "./pages/es/EsAbout";
+import EsTours from "./pages/es/EsTours";
+import EsFaq from "./pages/es/EsFaq";
 import EsShibuyaHarajuku from "./pages/es/tours/EsShibuyaHarajuku";
 import EsTsukijiGinza from "./pages/es/tours/EsTsukijiGinza";
 import EsImperialPalace from "./pages/es/tours/EsImperialPalace";
@@ -63,6 +65,7 @@ const AppRoutes = () => (
         <Route path="/blog/japan-temple-shrine-etiquette" element={<TempleEtiquette />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
+        <Route path="/es/tours" element={<EsTours />} />
         <Route path="/es/tours/asakusa" element={<EsAsakusa />} />
         <Route path="/es/tours/yanaka" element={<EsYanaka />} />
         <Route path="/es/tours/kamakura-day-trip" element={<EsKamakura />} />
@@ -74,6 +77,7 @@ const AppRoutes = () => (
         <Route path="/es/tours/custom" element={<EsCustom />} />
         <Route path="/es/contact" element={<EsContact />} />
         <Route path="/es/about" element={<EsAbout />} />
+        <Route path="/es/faq" element={<EsFaq />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

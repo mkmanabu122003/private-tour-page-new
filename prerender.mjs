@@ -35,6 +35,7 @@ const routes = [
   "/blog/japan-temple-shrine-etiquette",
   // Spanish pages
   "/es",
+  "/es/tours",
   "/es/tours/asakusa",
   "/es/tours/yanaka",
   "/es/tours/shibuya-harajuku",
@@ -46,6 +47,7 @@ const routes = [
   "/es/tours/custom",
   "/es/contact",
   "/es/about",
+  "/es/faq",
 ];
 
 async function prerender() {

@@ -120,6 +120,11 @@ const FAQ = () => {
         title="FAQ | Tokyo Private Tour Guide Questions | Tanuki Tabi Travel"
         description="Answers to common questions about Tokyo private tours with Tanuki Tabi Travel — booking, pricing, cancellations, and what to expect on your guided walk."
         canonicalPath="/faq"
+        hreflang={[
+          { lang: "en", path: "/faq" },
+          { lang: "es", path: "/es/faq" },
+          { lang: "x-default", path: "/faq" },
+        ]}
       />
 
       {/* Header */}
