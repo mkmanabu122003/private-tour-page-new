@@ -8,7 +8,7 @@ const IsItWorthHiringGuide = () => {
     <Layout>
       <SEO
         title="Is It Worth Hiring a Private Tour Guide in Tokyo? | Tanuki Tabi Travel"
-        description="Wondering if a private tour guide in Tokyo is worth the cost? A licensed guide explains when it makes sense, what you get, and who benefits most."
+        description="Is hiring a tour guide in Tokyo worth it? A licensed guide explains what you gain, what you save, and why private tours change how travelers experience the city."
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
       />
 

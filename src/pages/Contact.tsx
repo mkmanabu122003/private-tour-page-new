@@ -79,7 +79,7 @@ const Contact = () => {
     <Layout>
       <SEO
         title="Book a Private Tokyo Tour | Tanuki Tabi Travel"
-        description="Book your private Tokyo walking tour. Fill out our simple form and receive a custom itinerary within 24 hours."
+        description="Ready to book a private Tokyo tour? Contact Manabu to discuss your itinerary, dates, and interests. Government-licensed guide · 516+ tours · 4.86★ rating."
         canonicalPath="/contact"
       />
 

@@ -146,7 +146,7 @@ const Index = () => {
     <Layout>
       <SEO
         title="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with a licensed private tour guide. Custom walking tours of Asakusa, Ginza, Akihabara and more. Personalized itineraries for your interests."
+        description="Explore Tokyo with Manabu, a government-licensed guide with 516+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond — tailored to you."
         canonicalPath="/"
       />
 
@@ -403,26 +403,23 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
-            "description": "Private walking tours of Tokyo with a government-licensed guide",
             "url": "https://tanuki-tabi-travel.com",
+            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 516+ tours and a 4.86★ rating.",
+            "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
             "email": "info@tanuki-tabi-travel.com",
-            "priceRange": "¥25,000 - ¥60,000",
-            "areaServed": {
-              "@type": "City",
-              "name": "Tokyo",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tokyo",
               "addressCountry": "JP",
-            },
-            "founder": {
-              "@type": "Person",
-              "name": "Manabu",
-              "jobTitle": "Government-Licensed Tour Guide",
             },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.86",
               "reviewCount": "516",
-              "bestRating": "5",
             },
+            "priceRange": "¥¥¥",
+            "knowsLanguage": "en",
+            "hasCredential": "National Government Licensed Guide Interpreter (全国通訳案内士)",
             "review": testimonials.map((t) => ({
               "@type": "Review",
               "reviewBody": t.text,

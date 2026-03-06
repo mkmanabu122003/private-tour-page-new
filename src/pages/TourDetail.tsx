@@ -15,47 +15,47 @@ import hamarikyu from "@/assets/hamarikyu.jpg";
 const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
   asakusa: {
     title: "Asakusa Walking Tour | Private Tokyo Tour Guide | Tanuki Tabi Travel",
-    description: "Discover Asakusa's historic temples, Senso-ji shrine, and traditional streets with a licensed private guide. Personalized walking tour tailored to your interests.",
+    description: "Discover old Tokyo on a private Asakusa walking tour. Visit Senso-ji Temple, Nakamise Street, and hidden alleyways with a licensed government guide. From ¥30,000.",
     h1: "Asakusa Private Walking Tour",
   },
   yanaka: {
     title: "Yanaka Walking Tour | Tokyo's Hidden Old Town | Tanuki Tabi Travel",
-    description: "Explore Yanaka, Tokyo's best-kept secret neighborhood. Walk through Edo-era streets, local temples, and Yanaka Ginza with a licensed private guide.",
+    description: "Explore Yanaka and Ueno on a private guided walk through Tokyo's most nostalgic neighborhood. Local temples, vintage shops, and authentic local life. From ¥40,000.",
     h1: "Yanaka Private Walking Tour",
   },
   "shibuya-harajuku": {
     title: "Shibuya & Harajuku Tour | Pop Culture & Fashion | Tanuki Tabi Travel",
-    description: "Experience Shibuya Crossing, Takeshita Street, and Harajuku's unique culture with a private licensed guide. See Tokyo's modern side up close.",
+    description: "Walk the famous Shibuya Crossing and explore Harajuku on a private guided tour. Meiji Shrine, Takeshita Street, and youth culture explained in depth. From ¥35,000.",
     h1: "Shibuya & Harajuku Private Walking Tour",
   },
   "tsukiji-ginza": {
     title: "Tsukiji & Ginza Tour | Food & Luxury Shopping | Tanuki Tabi Travel",
-    description: "Tour Tsukiji's famous food market and Ginza's luxury shopping district with a licensed private guide. Sample street food and explore historic shops.",
+    description: "Taste Tokyo at Tsukiji Outer Market and stroll upscale Ginza on a private guided tour. Street food, history, and local culture — all in one morning. From ¥30,000.",
     h1: "Tsukiji & Ginza Private Walking Tour",
   },
   "imperial-palace": {
     title: "Imperial Palace Tour | Tokyo History Walk | Tanuki Tabi Travel",
-    description: "Explore the Imperial Palace gardens, Edo Castle ruins, and surrounding historic districts with a government-licensed private tour guide.",
+    description: "Walk the Imperial Palace East Gardens and Marunouchi on a private guided tour. Tokyo's historical and modern heart explained by a certified guide. From ¥25,000.",
     h1: "Imperial Palace Private Walking Tour",
   },
   custom: {
     title: "Custom Tokyo Tour | Design Your Own Itinerary | Tanuki Tabi Travel",
-    description: "Create your perfect Tokyo day with a licensed private guide. Tell us your interests and we'll design a custom walking tour just for you. Groups of 1-8 welcome.",
+    description: "Design your perfect Tokyo tour. Tell your interests and get a fully personalized private itinerary from Manabu, a government-licensed guide with 500+ tours.",
     h1: "Custom Private Tour — Your Tokyo, Your Way",
   },
   "kamakura-day-trip": {
     title: "Kamakura Day Trip from Tokyo | Private Guided Tour | Tanuki Tabi Travel",
-    description: "Explore Kamakura's Great Buddha, ancient temples, and coastal charm on a private day trip from Tokyo. Licensed guide, custom itinerary, train travel included in planning.",
+    description: "Take a private day trip to Kamakura with a licensed Tokyo guide. The Great Buddha, ancient temples, and coastal scenery — all in one full day. From ¥50,000.",
     h1: "Kamakura Day Trip from Tokyo — Private Guided Tour",
   },
   "hakone-day-trip": {
     title: "Hakone Day Trip from Tokyo | Hot Springs & Mt. Fuji Views | Tanuki Tabi Travel",
-    description: "Private guided day trip to Hakone from Tokyo. See Mt. Fuji, cruise Lake Ashi, ride the ropeway, and experience hot spring culture with a licensed guide.",
+    description: "See Mt. Fuji, cruise Lake Ashi, and experience onsen culture on a private Hakone day trip from Tokyo led by a certified guide. From ¥55,000.",
     h1: "Hakone Day Trip from Tokyo — Mt. Fuji Views & Hot Springs",
   },
   "nikko-day-trip": {
     title: "Nikko Day Trip from Tokyo | Toshogu Shrine & Nature | Tanuki Tabi Travel",
-    description: "Visit Nikko's UNESCO World Heritage Toshogu Shrine, stunning waterfalls, and mountain scenery on a private guided day trip from Tokyo.",
+    description: "Visit UNESCO World Heritage Toshogu Shrine and Nikko's mountain scenery on a private day trip from Tokyo. Government-licensed guide included. From ¥60,000.",
     h1: "Nikko Day Trip from Tokyo — UNESCO Shrines & Mountain Scenery",
   },
 };
@@ -930,26 +930,26 @@ const TourDetail = () => {
               "@type": "TouristTrip",
               "name": schema.name,
               "description": seo.description,
-              "touristType": "Cultural",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Tanuki Tabi Travel",
-                "url": "https://tanuki-tabi-travel.com",
-              },
+              "url": `https://tanuki-tabi-travel.com/tours/${id}`,
+              "touristType": "Cultural Tourism",
+              "itinerary": tour ? {
+                "@type": "ItemList",
+                "itemListElement": tour.highlights.map((h: string, i: number) => ({
+                  "@type": "ListItem",
+                  "position": i + 1,
+                  "name": h,
+                })),
+              } : undefined,
               "offers": {
                 "@type": "Offer",
                 "price": schema.price,
                 "priceCurrency": "JPY",
                 "availability": "https://schema.org/InStock",
               },
-              "itinerary": {
-                "@type": "Place",
-                "name": `${schema.area}, Tokyo`,
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Tokyo",
-                  "addressCountry": "JP",
-                },
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Tanuki Tabi Travel",
+                "url": "https://tanuki-tabi-travel.com",
               },
             }),
           }}

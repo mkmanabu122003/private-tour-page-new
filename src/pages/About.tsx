@@ -98,7 +98,7 @@ const About = () => {
     <Layout>
       <SEO
         title="About Us | Meet Your Tokyo Tour Guide | Tanuki Tabi Travel"
-        description="Meet Manabu, founder of Tanuki Tabi Travel. A Kyoto University graduate and licensed guide offering personalized Tokyo walking tours since 2023."
+        description="Meet Manabu — government-licensed Tokyo guide (全国通訳案内士), 500+ tours, 4.86★ rating. Born in Kanazawa, raised in Kyoto, now guiding visitors through Tokyo."
         canonicalPath="/about"
       />
 
@@ -365,21 +365,31 @@ const About = () => {
         </div>
       </section>
 
-      {/* JSON-LD Review Schema */}
+      {/* JSON-LD LocalBusiness + TouristInformationCenter Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
             "url": "https://tanuki-tabi-travel.com",
+            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 516+ tours and a 4.86★ rating.",
+            "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
+            "email": "info@tanuki-tabi-travel.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tokyo",
+              "addressCountry": "JP",
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.86",
               "reviewCount": "516",
-              "bestRating": "5",
             },
+            "priceRange": "¥¥¥",
+            "knowsLanguage": "en",
+            "hasCredential": "National Government Licensed Guide Interpreter (全国通訳案内士)",
             "review": allReviews.map((r) => ({
               "@type": "Review",
               "reviewBody": r.text,
