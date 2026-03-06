@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 
 const tokyoTours = [
   { name: "Asakusa", href: "/tours/asakusa" },
@@ -185,10 +185,21 @@ export const Header = () => {
             </Link>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button & Language Switcher */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/contact" className="btn-accent text-sm">
-              Book Now
+            {location.pathname.startsWith("/es") ? (
+              <Link to="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Globe className="w-4 h-4" />
+                EN
+              </Link>
+            ) : (
+              <Link to="/es" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Globe className="w-4 h-4" />
+                ES
+              </Link>
+            )}
+            <Link to={location.pathname.startsWith("/es") ? "/es/contact" : "/contact"} className="btn-accent text-sm">
+              {location.pathname.startsWith("/es") ? "Reservar" : "Book Now"}
             </Link>
           </div>
 
@@ -324,12 +335,32 @@ export const Header = () => {
                 Contact
               </Link>
 
+              {location.pathname.startsWith("/es") ? (
+                <Link
+                  to="/"
+                  className="flex items-center gap-1.5 text-base font-medium py-2 text-muted-foreground"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Globe className="w-4 h-4" />
+                  English
+                </Link>
+              ) : (
+                <Link
+                  to="/es"
+                  className="flex items-center gap-1.5 text-base font-medium py-2 text-muted-foreground"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Globe className="w-4 h-4" />
+                  Español
+                </Link>
+              )}
+
               <Link
-                to="/contact"
+                to={location.pathname.startsWith("/es") ? "/es/contact" : "/contact"}
                 className="btn-accent text-center mt-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book Now
+                {location.pathname.startsWith("/es") ? "Reservar" : "Book Now"}
               </Link>
             </div>
           </div>
