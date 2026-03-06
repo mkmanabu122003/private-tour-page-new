@@ -11,8 +11,8 @@ const EsImperialPalace = () => {
   return (
     <Layout>
       <SEO
-        title="Tour del Palacio Imperial y Marunouchi en Español | Guía Japonés Nativo | Tokio"
-        description="Descubre el Palacio Imperial y Marunouchi con Manabu, guía japonés nativo. Jardines del Este, puente Nijubashi y estación de Tokio. Tour privado de 2.5 horas. Desde ¥25,000."
+        title="Tour por el Palacio Imperial de Tokio en Español | Guía Privado"
+        description="Visita los Jardines del Este del Palacio Imperial y Marunouchi con un guía japonés nativo en español. Historia y modernidad de Tokio en 2.5 horas. Desde ¥25,000."
         canonicalPath="/es/tours/imperial-palace"
         hreflang={[
           { lang: "en", path: "/tours/imperial-palace" },

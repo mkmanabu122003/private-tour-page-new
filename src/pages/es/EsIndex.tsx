@@ -181,7 +181,7 @@ const EsIndex = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/es/tours/asakusa" className="btn-accent">
+              <Link to="/es/tours" className="btn-accent">
                 Ver Tours
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>

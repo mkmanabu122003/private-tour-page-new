@@ -9,7 +9,7 @@ const EsShibuyaHarajuku = () => {
     <Layout>
       <SEO
         title="Tour por Shibuya y Harajuku en Español | Guía Japonés Nativo | Tokio"
-        description="Explora Shibuya y Harajuku con Manabu, guía japonés nativo con licencia oficial. Cruce de Shibuya, Takeshita, Santuario Meiji. Tour privado de 3.5 horas. Desde ¥35,000."
+        description="Recorre el famoso cruce de Shibuya y las calles de Harajuku con un guía japonés nativo en español. Santuario Meiji incluido. Tour privado 3.5 horas desde ¥35,000."
         canonicalPath="/es/tours/shibuya-harajuku"
         hreflang={[
           { lang: "en", path: "/tours/shibuya-harajuku" },

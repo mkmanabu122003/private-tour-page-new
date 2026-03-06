@@ -8,8 +8,8 @@ const EsTsukijiGinza = () => {
   return (
     <Layout>
       <SEO
-        title="Tour por Tsukiji y Ginza en Español | Guía Japonés Nativo | Tokio"
-        description="Descubre Tsukiji y Ginza con Manabu, guía japonés nativo. Mercado de Tsukiji, degustaciones y el elegante distrito de Ginza. Tour privado de 3 horas. Desde ¥30,000."
+        title="Tour por Tsukiji y Ginza en Español | Gastronomía y Lujo en Tokio"
+        description="Descubre el mercado exterior de Tsukiji y el elegante barrio de Ginza con un guía japonés nativo en español. Gastronomía local e historia en 3 horas. Desde ¥30,000."
         canonicalPath="/es/tours/tsukiji-ginza"
         hreflang={[
           { lang: "en", path: "/tours/tsukiji-ginza" },
