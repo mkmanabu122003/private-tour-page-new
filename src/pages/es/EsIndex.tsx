@@ -192,7 +192,7 @@ const EsIndex = () => {
                 Ver los Tours Disponibles
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              <Link to="/es/tours/custom" className="btn-outline">
+              <Link to="/es/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/70 text-white font-medium rounded-md transition-all duration-200 hover:bg-white/10 hover:border-white">
                 Cuéntame Qué Buscas →
               </Link>
             </div>
