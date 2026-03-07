@@ -13,9 +13,7 @@ export const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2">
               <Link to="/es" className="inline-block">
-                <span className="font-serif text-2xl font-semibold">
-                  Tanuki<span className="text-accent">Tabi</span>
-                </span>
+                <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-12 w-auto brightness-0 invert" />
               </Link>
               <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
                 Tours privados a pie por Tokio y excursiones de día con guía con licencia oficial del gobierno.
@@ -123,9 +121,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
-              <span className="font-serif text-2xl font-semibold">
-                Tanuki<span className="text-accent">Tabi</span>
-              </span>
+              <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
               Private walking tours of Tokyo and day trips with a government-licensed guide.
