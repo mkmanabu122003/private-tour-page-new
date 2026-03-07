@@ -12,6 +12,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import heroImage from "@/assets/sumida.jpg";
+
+// Hero image: group-photo.jpg from public/images/tour-photos/
+const heroGroupPhoto = "/images/tour-photos/group-photo.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.jpg";
@@ -88,6 +91,7 @@ const tours = [
     duration: "9-10 horas",
     price: "¥60,000",
     difficulty: "Moderado",
+    // TODO: replace with Nikko image (e.g. toshogu shrine, kegon falls)
     image: hamarikyu,
   },
   {
@@ -97,7 +101,8 @@ const tours = [
     duration: "Flexible",
     price: "Desde ¥10,000/hora",
     difficulty: "Personalizable",
-    image: hamarikyu,
+    // TODO: replace with custom tour image (e.g. a map, planning scene, or collage)
+    image: "/images/tour-photos/group-photo.jpg",
   },
 ];
 
@@ -160,8 +165,8 @@ const EsIndex = () => {
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
-            alt="Vista panorámica del río Sumida en Tokio con el horizonte tradicional y moderno"
+            src={heroGroupPhoto}
+            alt="Foto grupal con invitados durante un tour privado a pie por Tokio"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
@@ -170,23 +175,25 @@ const EsIndex = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Tour Privado por Tokio con un{" "}
-              <span className="text-accent">Guía Japonés Nativo en Español</span>
+              Tokyo con Manabu —{" "}
+              <span className="text-accent">Tu Guía Local Certificado</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               Más de 500 tours completados. Valoración media de 4.86★. Guía con licencia oficial del gobierno japonés.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
-              Descubre el Tokio auténtico de la mano de Manabu, un guía japonés nativo que habla español. Desde templos milenarios hasta callejones escondidos, vive la ciudad con historias que no encontrarás en ninguna guía de viaje.
+              Cada tour comienza con una pregunta simple: ¿Qué es lo que más te
+              emociona de Tokio? A partir de ahí, el recorrido es tuyo. No sigo un
+              guión — sigo tu curiosidad.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <Link to="/es/tours" className="btn-accent">
-                Ver Tours
+                Ver los Tours Disponibles
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link to="/es/tours/custom" className="btn-outline">
-                Tour Personalizado
+                Cuéntame Qué Buscas →
               </Link>
             </div>
           </div>
@@ -210,6 +217,32 @@ const EsIndex = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sin Guión Section */}
+      <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="heading-section text-foreground">
+              Sin Guión. Sin Prisas. Tu Tokio a Tu Manera.
+            </h2>
+            <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
+              <p>
+                La mayoría de los guías siguen una ruta fija. Yo no.
+              </p>
+              <p>
+                En los primeros 30 minutos, te pregunto qué te importa — la comida,
+                la historia, los rincones escondidos, las oportunidades para fotos.
+                Luego me adapto sobre la marcha. Si quieres quedarte más tiempo en un
+                templo, nos quedamos. Si prefieres adelantarte al almuerzo, lo hacemos.
+              </p>
+              <p>
+                Por eso, viajeros de más de 30 países han dicho que este fue el mejor
+                tour del viaje — no solo de Tokio, sino de todo su recorrido.
+              </p>
+            </div>
           </div>
         </div>
       </section>
