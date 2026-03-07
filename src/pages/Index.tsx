@@ -349,9 +349,9 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: "/images/tour-photos/group-photo.jpg", alt: "Group photo with guests during a private Tokyo walking tour", caption: "Private tour in Tokyo" },
-              { src: "/images/tour-photos/photo1.jpg", alt: "Exploring Tokyo's cultural landmarks on a guided tour", caption: "Exploring old Tokyo together" },
-              { src: "/images/tour-photos/photo2.jpg", alt: "Discovering hidden gems of Tokyo with a local guide", caption: "Discovering Tokyo" },
+              { src: "/images/tour-photos/group-photo.jpg", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
+              { src: "/images/tour-photos/photo1.jpg", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
+              { src: "/images/tour-photos/photo2.jpg", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
             ].map((photo) => (
               <div key={photo.src} className="flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg">
