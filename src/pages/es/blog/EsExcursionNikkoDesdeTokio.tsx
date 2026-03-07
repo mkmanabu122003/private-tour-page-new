@@ -16,7 +16,18 @@ const EsExcursionNikkoDesdeTokio = () => {
         ]}
       />
 
-      {/* Article Header */}
+      {/* Imagen Principal */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/blog/nikko-toshogu-hero.jpg"
+          alt="Entrada al santuario Toshogu a través del torii de piedra en Nikko"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
+      {/* Encabezado del Artículo */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">

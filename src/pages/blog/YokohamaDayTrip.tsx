@@ -12,6 +12,17 @@ const YokohamaDayTrip = () => {
         canonicalPath="/blog/yokohama-day-trip-from-tokyo"
       />
 
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/blog/yokohama-minatomirai-hero.jpg"
+          alt="Yokohama Minato Mirai skyline at dusk with Landmark Tower and Cosmo World ferris wheel"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
