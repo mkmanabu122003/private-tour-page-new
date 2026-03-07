@@ -385,9 +385,9 @@ const EsIndex = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: "/images/tour-photos/tour-photo-1.jpg", alt: "Tour privado en Asakusa con visitantes en la Puerta Kaminarimon", caption: "Tour privado en Asakusa" },
-              { src: "/images/tour-photos/tour-photo-2.jpg", alt: "Explorando las calles antiguas de Tokio junto a un guía local", caption: "Explorando el viejo Tokio juntos" },
-              { src: "/images/tour-photos/tour-photo-3.jpg", alt: "Una mañana en el Templo Senso-ji en Asakusa", caption: "Una mañana en Senso-ji" },
+              { src: "/images/tour-photos/group-photo.jpg", alt: "Foto grupal con invitados durante un tour privado a pie por Tokio", caption: "Tour privado en Tokio" },
+              { src: "/images/tour-photos/photo1.jpg", alt: "Explorando los monumentos culturales de Tokio en un tour guiado", caption: "Explorando el viejo Tokio juntos" },
+              { src: "/images/tour-photos/photo2.jpg", alt: "Descubriendo los tesoros ocultos de Tokio con un guía local", caption: "Descubriendo Tokio" },
             ].map((photo) => (
               <div key={photo.src} className="flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg">
