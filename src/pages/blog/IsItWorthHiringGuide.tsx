@@ -7,8 +7,8 @@ const IsItWorthHiringGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Is It Worth Hiring a Private Tour Guide in Tokyo? | Tanuki Tabi Travel"
-        description="Is hiring a tour guide in Tokyo worth it? An honest answer from Manabu, a licensed guide with 500+ tours. Real costs, real benefits, and when you genuinely don't need one."
+        title="Is It Worth Hiring a Tour Guide in Tokyo? Honest Take"
+        description="A licensed Tokyo guide answers honestly: do you need a guide, or can you do Tokyo solo? Including when it's worth it and when it isn't."
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
       />
 
@@ -25,7 +25,7 @@ const IsItWorthHiringGuide = () => {
             </Link>
             <p className="text-label text-accent mb-3">Travel Tips</p>
             <h1 className="heading-display text-foreground">
-              Is It Worth Hiring a Private Tour Guide in Tokyo?
+              Is It Worth Hiring a Private Guide in Tokyo? My Honest Take (I'm a Guide)
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -207,7 +207,11 @@ const IsItWorthHiringGuide = () => {
               The National Government Licensed Guide Interpreter (全国通訳案内士) is Japan's only nationally recognized professional guide certification. It requires passing extensive exams covering Japanese history, geography, culture, politics, and English proficiency. Only about 20% of test-takers pass.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This means your guide has verified deep knowledge — not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer.
+              This means your guide has verified deep knowledge — not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer. I've written a detailed explanation of{" "}
+                <Link to="/blog/licensed-tour-guide-japan" className="text-accent hover:underline">
+                  what the licensed tour guide system in Japan actually means
+                </Link>
+                {" "}if you want to understand the certification process and why it matters.
             </p>
 
             {/* How Much Does It Cost */}
@@ -424,8 +428,8 @@ const IsItWorthHiringGuide = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Is It Worth Hiring a Private Tour Guide in Tokyo?",
-            "description": "Is hiring a tour guide in Tokyo worth it? An honest answer from Manabu, a licensed guide with 500+ tours. Real costs, real benefits, and when you genuinely don't need one.",
+            "headline": "Is It Worth Hiring a Private Guide in Tokyo? My Honest Take",
+            "description": "A licensed Tokyo guide answers honestly: do you need a guide, or can you do Tokyo solo? Including when it's worth it and when it isn't.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
