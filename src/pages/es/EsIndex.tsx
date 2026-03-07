@@ -178,7 +178,7 @@ const EsIndex = () => {
               Tokyo con Manabu —{" "}
               <span className="text-accent">Tu Guía Local Certificado</span>
             </h1>
-            <p className="mt-6 text-lg text-accent leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               Más de 500 tours completados. Valoración media de 4.86★. Guía con licencia oficial del gobierno japonés.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
@@ -188,12 +188,12 @@ const EsIndex = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/es/tours" className="btn-accent">
+              <Link to="/es/tours" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
                 Ver los Tours Disponibles
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              <Link to="/es/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/70 text-white font-medium rounded-md transition-all duration-200 hover:bg-white/10 hover:border-white">
-                Cuéntame Qué Buscas →
+              <Link to="/es/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
+                Tour Personalizado →
               </Link>
             </div>
           </div>

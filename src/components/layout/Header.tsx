@@ -63,9 +63,9 @@ export const Header = () => {
     return (
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <nav className="container-section">
-          <div className="flex items-center justify-between h-20 md:h-28">
-            <Link to="/es" className="flex items-center">
-              <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-12 md:h-[80px] w-auto" />
+          <div className="flex items-center justify-between h-16 md:h-20">
+            <Link to="/es" className="font-serif text-lg md:text-xl font-semibold tracking-[0.15em] text-foreground uppercase">
+              Tanuki Tabi Travel
             </Link>
 
             {/* Desktop Navigation */}
@@ -191,7 +191,7 @@ export const Header = () => {
                 <Globe className="w-4 h-4" />
                 EN
               </Link>
-              <Link to="/es/contact" className="btn-accent text-sm">
+              <Link to="/es/contact" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]">
                 Reservar Ahora
               </Link>
             </div>
@@ -342,10 +342,10 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <nav className="container-section">
-        <div className="flex items-center justify-between h-20 md:h-28">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-12 md:h-[80px] w-auto" />
+          <Link to="/" className="font-serif text-lg md:text-xl font-semibold tracking-[0.15em] text-foreground uppercase">
+            Tanuki Tabi Travel
           </Link>
 
           {/* Desktop Navigation */}
@@ -484,7 +484,7 @@ export const Header = () => {
               <Globe className="w-4 h-4" />
               ES
             </Link>
-            <Link to="/contact" className="btn-accent text-sm">
+            <Link to="/contact" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]">
               Book Now
             </Link>
           </div>
