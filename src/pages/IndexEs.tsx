@@ -16,101 +16,86 @@ import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
 
-const tourPhotos = [
-  {
-    src: "/images/tour-photos/group-photo.jpg",
-    alt: "Group photo with guests during a private Tokyo walking tour",
-  },
-  {
-    src: "/images/tour-photos/photo1.jpg",
-    alt: "Exploring Tokyo's cultural landmarks on a guided tour",
-  },
-  {
-    src: "/images/tour-photos/photo2.jpg",
-    alt: "Discovering hidden gems of Tokyo with a local guide",
-  },
-];
-
 const tours = [
   {
     id: "asakusa",
-    title: "Asakusa Walking Tour",
-    description: "Discover the heart of old Tokyo. Visit Senso-ji Temple, explore traditional shops, and taste local street food.",
-    duration: "3 hours",
+    title: "Tour a Pie por Asakusa",
+    description: "Descubre el corazón del viejo Tokio. Visita el Templo Senso-ji, explora tiendas tradicionales y prueba la comida callejera local.",
+    duration: "3 horas",
     price: "¥30,000",
-    difficulty: "Easy",
+    difficulty: "Fácil",
     image: "/images/tours/asakusa-kaminarimon-gate.jpg",
   },
   {
     id: "yanaka",
-    title: "Ueno & Yanaka Discovery",
-    description: "Experience the nostalgic charm of old Tokyo neighborhoods, traditional temples, and hidden local spots.",
-    duration: "4 hours",
+    title: "Descubrimiento de Ueno y Yanaka",
+    description: "Experimenta el encanto nostálgico de los barrios antiguos de Tokio, templos tradicionales y rincones locales escondidos.",
+    duration: "4 horas",
     price: "¥40,000",
-    difficulty: "Easy",
+    difficulty: "Fácil",
     image: tourUeno,
   },
   {
     id: "shibuya-harajuku",
-    title: "Shibuya & Harajuku Tour",
-    description: "Explore Tokyo's youth culture hub. From the famous Shibuya Crossing to trendy Harajuku streets and Meiji Shrine.",
-    duration: "3.5 hours",
+    title: "Tour por Shibuya y Harajuku",
+    description: "Explora el centro de la cultura juvenil de Tokio. Desde el famoso Cruce de Shibuya hasta las calles de moda de Harajuku y el Santuario Meiji.",
+    duration: "3.5 horas",
     price: "¥35,000",
-    difficulty: "Easy",
+    difficulty: "Fácil",
     image: "/images/tours/shibuya-crossing-tokyo.jpg",
   },
   {
     id: "tsukiji-ginza",
-    title: "Tsukiji & Ginza Tour",
-    description: "Experience Tokyo's culinary delights at Tsukiji Outer Market and stroll through the upscale Ginza shopping district.",
-    duration: "3 hours",
+    title: "Tour por Tsukiji y Ginza",
+    description: "Experimenta las delicias culinarias de Tokio en el Mercado Exterior de Tsukiji y pasea por el elegante distrito comercial de Ginza.",
+    duration: "3 horas",
     price: "¥30,000",
-    difficulty: "Easy",
+    difficulty: "Fácil",
     image: "/images/tours/tsukiji-market-food-tokyo.jpg",
   },
   {
     id: "imperial-palace",
-    title: "Imperial Palace & Marunouchi",
-    description: "Discover Tokyo's historical heart and modern business district. Walk through the East Gardens and see the Imperial Palace.",
-    duration: "2.5 hours",
+    title: "Palacio Imperial y Marunouchi",
+    description: "Descubre el corazón histórico de Tokio y su moderno distrito empresarial. Pasea por los Jardines del Este y contempla el Palacio Imperial.",
+    duration: "2.5 horas",
     price: "¥25,000",
-    difficulty: "Easy",
+    difficulty: "Fácil",
     image: imperialPalace,
   },
   {
     id: "kamakura-day-trip",
-    title: "Kamakura Day Trip",
-    description: "Explore Kamakura's Great Buddha, ancient temples, and coastal charm on a private day trip from Tokyo.",
-    duration: "7-8 hours",
+    title: "Excursión a Kamakura",
+    description: "Explora el Gran Buda de Kamakura, templos antiguos y su encanto costero en una excursión privada desde Tokio.",
+    duration: "7-8 horas",
     price: "¥50,000",
-    difficulty: "Easy-Moderate",
+    difficulty: "Fácil-Moderado",
     image: "/images/tours/kamakura-great-buddha.jpg",
   },
   {
     id: "hakone-day-trip",
-    title: "Hakone Day Trip",
-    description: "See Mt. Fuji, cruise Lake Ashi, and experience hot spring culture on a private guided day trip from Tokyo.",
-    duration: "8-10 hours",
+    title: "Excursión a Hakone",
+    description: "Contempla el Monte Fuji, navega por el Lago Ashi y experimenta la cultura de aguas termales en una excursión privada guiada desde Tokio.",
+    duration: "8-10 horas",
     price: "¥55,000",
-    difficulty: "Easy",
+    difficulty: "Fácil",
     image: "/images/tours/hakone-lake-ashi-fuji.jpg",
   },
   {
     id: "nikko-day-trip",
-    title: "Nikko Day Trip",
-    description: "Visit UNESCO World Heritage Toshogu Shrine, stunning waterfalls, and mountain scenery on a day trip from Tokyo.",
-    duration: "9-10 hours",
+    title: "Excursión a Nikko",
+    description: "Visita el Santuario Toshogu, Patrimonio de la Humanidad, impresionantes cascadas y paisajes de montaña en una excursión desde Tokio.",
+    duration: "9-10 horas",
     price: "¥60,000",
-    difficulty: "Moderate",
+    difficulty: "Moderado",
     image: hamarikyu,
   },
   {
     id: "custom",
-    title: "Custom Private Tour",
-    description: "Create your perfect Tokyo experience. Tell me your interests and I'll design a personalized itinerary just for you.",
+    title: "Tour Privado Personalizado",
+    description: "Crea tu experiencia perfecta en Tokio. Cuéntame tus intereses y diseñaré un itinerario personalizado solo para ti.",
     duration: "Flexible",
-    price: "From ¥10,000/hour",
-    difficulty: "Customizable",
+    price: "Desde ¥10,000/hora",
+    difficulty: "Personalizable",
     image: hamarikyu,
   },
 ];
@@ -118,51 +103,66 @@ const tours = [
 const trustSignals = [
   {
     icon: Shield,
-    title: "Government-Licensed Guide",
-    description: "National Government Licensed Guide Interpreter (全国通訳案内士) — the highest guiding credential in Japan.",
+    title: "Guía con Licencia Oficial",
+    description: "Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) — la credencial de guía más alta de Japón.",
   },
   {
     icon: Star,
-    title: "516+ Tours Completed",
-    description: "Trusted by hundreds of travelers from around the world for quality, authenticity, and personalized experiences.",
+    title: "Más de 516 Tours Realizados",
+    description: "Confiado por cientos de viajeros de todo el mundo por su calidad, autenticidad y experiencias personalizadas.",
   },
   {
     icon: Award,
-    title: "4.86★ Average Rating",
-    description: "Consistently top-rated for quality, cultural depth, and guest satisfaction.",
+    title: "Calificación Promedio de 4.86★",
+    description: "Constantemente entre los mejores por calidad, profundidad cultural y satisfacción del cliente.",
   },
   {
     icon: Users,
-    title: "Private & Personalized",
-    description: "Every tour is exclusively yours. No strangers, no rigid schedules — just your group and your guide.",
+    title: "Privado y Personalizado",
+    description: "Cada tour es exclusivamente tuyo. Sin desconocidos, sin horarios rígidos — solo tu grupo y tu guía.",
   },
 ];
 
 const testimonials = [
   {
-    text: "We did 3 tours in Tokyo and Manabu's was by far the most informative and engaging. He was very clear in his delivery and offered interesting cultural insights as sidebars to each venue we visited. Highly recommended!",
-    author: "Couple visiting Tokyo",
+    text: "Hicimos 3 tours en Tokio y el de Manabu fue con diferencia el más informativo y entretenido. Fue muy claro en su explicación y ofreció interesantes perspectivas culturales en cada lugar que visitamos. ¡Muy recomendado!",
+    author: "Pareja visitando Tokio",
     rating: 5,
   },
   {
-    text: "Manabu's tour was one of the best I've been on — he is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
-    author: "Solo traveler",
+    text: "El tour de Manabu fue uno de los mejores en los que he estado — es profesional, amable, muy conocedor y un gran narrador. Su ruta está bien planificada y ofrece experiencias divertidas. Se nota que es un guía turístico de tiempo completo por el esfuerzo que pone.",
+    author: "Viajero individual",
     rating: 5,
   },
   {
-    text: "This was an excellent tour. Manabu was entertaining, charismatic and knowledgeable. All places visited were awesome and he provided very interesting tips. A great start to our Japan trip.",
-    author: "First-time visitors to Japan",
+    text: "Este fue un excelente tour. Manabu fue entretenido, carismático y conocedor. Todos los lugares visitados fueron increíbles y proporcionó consejos muy interesantes. Un gran comienzo para nuestro viaje a Japón.",
+    author: "Visitantes primerizos en Japón",
     rating: 5,
   },
 ];
 
-const Index = () => {
+const tourPhotos = [
+  {
+    src: "/images/tour-photos/group-photo.jpg",
+    alt: "Foto grupal con invitados durante un tour privado a pie por Tokio",
+  },
+  {
+    src: "/images/tour-photos/photo1.jpg",
+    alt: "Explorando los monumentos culturales de Tokio en un tour guiado",
+  },
+  {
+    src: "/images/tour-photos/photo2.jpg",
+    alt: "Descubriendo los tesoros ocultos de Tokio con un guía local",
+  },
+];
+
+const IndexEs = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Private Tour Guide | Licensed Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with a government-licensed private tour guide. 516+ tours completed with 4.86★ rating. Custom walking tours of Asakusa, Shibuya, Ginza & more. Book your personal Tokyo experience."
-        canonicalPath="/"
+        title="Guía Turístico Privado en Tokio | Tours a Pie con Licencia | Tanuki Tabi Travel"
+        description="Explora Tokio con un guía turístico privado con licencia gubernamental. Más de 516 tours completados con calificación de 4.86★. Tours a pie personalizados por Asakusa, Shibuya, Ginza y más."
+        canonicalPath="/es"
       />
 
       {/* Hero Section */}
@@ -170,7 +170,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Scenic view of Tokyo's Sumida River with traditional and modern skyline"
+            alt="Vista panorámica del río Sumida de Tokio con el horizonte tradicional y moderno"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
@@ -179,25 +179,25 @@ const Index = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Private Walking Tours of Tokyo with a{" "}
-              <span className="text-accent">Licensed Local Guide</span>
+              Tours Privados a Pie por Tokio con un{" "}
+              <span className="text-accent">Guía Local con Licencia</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              516+ tours completed. 4.86★ average rating. Government-licensed guide.
+              Más de 516 tours completados. Calificación promedio de 4.86★. Guía con licencia gubernamental.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
-              Discover the authentic side of Tokyo through immersive walking tours.
-              From ancient temples to hidden alleyways, experience the stories that
-              make this city unforgettable.
+              Descubre el lado auténtico de Tokio a través de tours a pie inmersivos.
+              Desde templos antiguos hasta callejones escondidos, vive las historias que
+              hacen esta ciudad inolvidable.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <Link to="/tours" className="btn-accent">
-                Browse Tours
+                Ver Tours
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link to="/tours/custom" className="btn-outline">
-                Book a Custom Tour
+                Reservar un Tour Personalizado
               </Link>
             </div>
           </div>
@@ -229,10 +229,10 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Explore Tokyo</p>
-            <h2 className="heading-section text-foreground">Featured Tours</h2>
+            <p className="text-label text-accent mb-3">Explora Tokio</p>
+            <h2 className="heading-section text-foreground">Tours Destacados</h2>
             <p className="mt-4 text-body">
-              Choose from carefully curated walking tours or create your own custom experience.
+              Elige entre tours a pie cuidadosamente seleccionados o crea tu propia experiencia personalizada.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <Link to="/tours" className="btn-outline">
-              View All Tours
+              Ver Todos los Tours
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
@@ -270,24 +270,24 @@ const Index = () => {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-label text-accent mb-3">Your Guide</p>
+              <p className="text-label text-accent mb-3">Tu Guía</p>
               <h2 className="heading-section text-foreground">
-                Meet Manabu — Your Licensed Tokyo Guide
+                Conoce a Manabu — Tu Guía con Licencia en Tokio
               </h2>
               <p className="mt-4 text-body">
-                I'm Manabu, a National Government Licensed Guide Interpreter
-                (全国通訳案内士) with over 516 tours completed and a 4.86-star
-                average rating. Born in Kanazawa, raised in Kyoto, and now based
-                in Tokyo — I bring insights from across Japan's rich cultural
-                regions.
+                Soy Manabu, Guía Intérprete con Licencia del Gobierno Nacional
+                (全国通訳案内士) con más de 516 tours completados y una calificación
+                promedio de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y
+                ahora radicado en Tokio — aporto conocimientos de las diversas
+                regiones culturales de Japón.
               </p>
               <p className="mt-4 text-body">
-                My approach is simple: in the first 30 minutes, I learn what
-                excites you, then I adapt the tour in real time. It's not a
-                lecture — it's a conversation.
+                Mi enfoque es simple: en los primeros 30 minutos, aprendo qué te
+                entusiasma, y luego adapto el tour en tiempo real. No es una
+                conferencia — es una conversación.
               </p>
               <Link to="/about" className="btn-outline mt-8 inline-flex">
-                Learn more about your guide
+                Conoce más sobre tu guía
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -296,7 +296,7 @@ const Index = () => {
               <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
                 <img
                   src={guidePortrait}
-                  alt="Manabu, government-licensed Tokyo tour guide, ready to lead a private walking tour"
+                  alt="Manabu, guía turístico de Tokio con licencia gubernamental, listo para liderar un tour privado a pie"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -309,8 +309,8 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Simple Booking</p>
-            <h2 className="heading-section text-foreground">How It Works</h2>
+            <p className="text-label text-accent mb-3">Reserva Fácil</p>
+            <h2 className="heading-section text-foreground">Cómo Funciona</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
@@ -319,10 +319,10 @@ const Index = () => {
                 1
               </div>
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Choose a Tour
+                Elige un Tour
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Browse our curated tours or request a custom itinerary tailored to your interests.
+                Explora nuestros tours seleccionados o solicita un itinerario personalizado adaptado a tus intereses.
               </p>
             </div>
             <div className="text-center">
@@ -330,10 +330,10 @@ const Index = () => {
                 2
               </div>
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Share Your Interests
+                Comparte tus Intereses
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Tell us what excites you — food, history, photography, pop culture — and we'll personalize your experience.
+                Cuéntanos qué te entusiasma — comida, historia, fotografía, cultura pop — y personalizaremos tu experiencia.
               </p>
             </div>
             <div className="text-center">
@@ -341,10 +341,10 @@ const Index = () => {
                 3
               </div>
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Explore Tokyo
+                Explora Tokio
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Meet your guide and discover Tokyo at your own pace. No crowds, no rush — just an authentic experience.
+                Conoce a tu guía y descubre Tokio a tu propio ritmo. Sin multitudes, sin prisas — solo una experiencia auténtica.
               </p>
             </div>
           </div>
@@ -355,8 +355,8 @@ const Index = () => {
       <section className="py-20 md:py-28">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Guest Reviews</p>
-            <h2 className="heading-section text-foreground">What Travelers Say</h2>
+            <p className="text-label text-accent mb-3">Reseñas de Huéspedes</p>
+            <h2 className="heading-section text-foreground">Lo que Dicen los Viajeros</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -386,7 +386,7 @@ const Index = () => {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
-            500+ five-star reviews from travelers worldwide
+            Más de 500 reseñas de cinco estrellas de viajeros de todo el mundo
           </p>
         </div>
       </section>
@@ -397,11 +397,11 @@ const Index = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-label text-accent mb-3">
               <Camera className="w-4 h-4 inline-block mr-1 -mt-0.5" />
-              Gallery
+              Galería
             </p>
-            <h2 className="heading-section text-foreground">Tours in Photos</h2>
+            <h2 className="heading-section text-foreground">Tours en Fotos</h2>
             <p className="mt-4 text-body">
-              A glimpse into what your Tokyo experience could look like.
+              Un vistazo a lo que podría ser tu experiencia en Tokio.
             </p>
           </div>
 
@@ -426,17 +426,17 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container-section text-center">
-          <h2 className="heading-section">Ready to Explore Tokyo?</h2>
+          <h2 className="heading-section">¿Listo para Explorar Tokio?</h2>
           <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
-            Let's create an unforgettable experience together. Book your private
-            tour or reach out to discuss a custom itinerary.
+            Creemos una experiencia inolvidable juntos. Reserva tu tour privado
+            o contáctame para diseñar un itinerario personalizado.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="btn-accent">
-              Book Your Tour
+              Reserva tu Tour
             </Link>
             <Link to="/about" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
-              Learn More About Me
+              Conoce Más Sobre Mí
             </Link>
           </div>
         </div>
@@ -450,8 +450,8 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Tanuki Tabi Travel",
-            "description": "Private walking tours of Tokyo with a government-licensed guide",
-            "url": "https://tanuki-tabi-travel.com",
+            "description": "Tours privados a pie por Tokio con un guía con licencia gubernamental",
+            "url": "https://tanuki-tabi-travel.com/es",
             "email": "info@tanuki-tabi-travel.com",
             "areaServed": {
               "@type": "City",
@@ -461,7 +461,7 @@ const Index = () => {
             "founder": {
               "@type": "Person",
               "name": "Manabu",
-              "jobTitle": "Government-Licensed Tour Guide",
+              "jobTitle": "Guía Turístico con Licencia Gubernamental",
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -486,4 +486,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default IndexEs;
