@@ -78,9 +78,14 @@ const Contact = () => {
   return (
     <Layout>
       <SEO
-        title="Book a Tour | Contact Tanuki Tabi Travel | Tokyo Private Tours"
-        description="Ready to explore Tokyo? Contact us to book your private walking tour or ask questions. Fast response guaranteed."
+        title="Book a Private Tokyo Tour | Tanuki Tabi Travel"
+        description="Ready to book a private Tokyo tour? Contact Manabu to discuss your itinerary, dates, and interests. Government-licensed guide · 500+ tours · 4.86★ rating."
         canonicalPath="/contact"
+        hreflang={[
+          { lang: "en", path: "/contact" },
+          { lang: "es", path: "/es/contact" },
+          { lang: "x-default", path: "/contact" },
+        ]}
       />
 
       {/* Header */}

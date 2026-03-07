@@ -121,8 +121,13 @@ const Tours = () => {
     <Layout>
       <SEO
         title="Tokyo Tours & Day Trips | Private Guided Tours | Tanuki Tabi Travel"
-        description="Browse private walking tours of Tokyo and day trips to Kamakura, Hakone, and Nikko. Led by a government-licensed guide. Custom tours available."
+        description="Browse private Tokyo walking tours led by a certified guide. Asakusa, Shibuya, Harajuku, Yanaka, Kamakura day trips and more — all fully personalized."
         canonicalPath="/tours"
+        hreflang={[
+          { lang: "en", path: "/tours" },
+          { lang: "es", path: "/es/tours" },
+          { lang: "x-default", path: "/tours" },
+        ]}
       />
 
       {/* Header */}

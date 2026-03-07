@@ -6,7 +6,7 @@ import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import heroImage from "@/assets/hero-asakusa.jpg";
 
 const stats = [
-  { label: "Tours Completed", value: "516+" },
+  { label: "Tours Completed", value: "500+" },
   { label: "Average Rating", value: "4.86★" },
   { label: "Languages", value: "3" },
   { label: "Tour Areas", value: "5+" },
@@ -97,9 +97,14 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="About Your Guide Manabu | Licensed Tokyo Tour Guide | Tanuki Tabi Travel"
-        description="Meet Manabu, a government-licensed tour guide (全国通訳案内士) with 516+ tours and 4.86★ rating. Discover why travelers trust Tanuki Tabi Travel."
+        title="About Us | Meet Your Tokyo Tour Guide | Tanuki Tabi Travel"
+        description="Meet Manabu — government-licensed Tokyo guide (全国通訳案内士), 500+ tours, 4.86★ rating. Born in Kanazawa, raised in Kyoto, now guiding visitors through Tokyo."
         canonicalPath="/about"
+        hreflang={[
+          { lang: "en", path: "/about" },
+          { lang: "es", path: "/es/about" },
+          { lang: "x-default", path: "/about" },
+        ]}
       />
 
       {/* Hero Section */}
@@ -122,7 +127,7 @@ const About = () => {
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Born in Kanazawa, raised in Kyoto, and now living in Tokyo — I
                 bring a unique perspective from Japan's most culturally rich
-                regions. With over 516 tours completed and a 4.86-star average
+                regions. With over 500 tours completed and a 4.86-star average
                 rating, I'm passionate about sharing Japan's stories with
                 travelers from around the world.
               </p>
@@ -365,15 +370,31 @@ const About = () => {
         </div>
       </section>
 
-      {/* JSON-LD Review Schema */}
+      {/* JSON-LD LocalBusiness + TouristInformationCenter Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
             "url": "https://tanuki-tabi-travel.com",
+            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 500+ tours and a 4.86★ rating.",
+            "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
+            "email": "info@tanuki-tabi-travel.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tokyo",
+              "addressCountry": "JP",
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.86",
+              "reviewCount": "500",
+            },
+            "priceRange": "¥¥¥",
+            "knowsLanguage": "en",
+            "hasCredential": "National Government Licensed Guide Interpreter (全国通訳案内士)",
             "review": allReviews.map((r) => ({
               "@type": "Review",
               "reviewBody": r.text,
@@ -384,6 +405,26 @@ const About = () => {
                 "bestRating": "5",
               },
             })),
+          }),
+        }}
+      />
+
+      {/* JSON-LD Person Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Manabu",
+            "jobTitle": "Government-Licensed Tour Guide",
+            "worksFor": {
+              "@type": "LocalBusiness",
+              "name": "Tanuki Tabi Travel",
+              "url": "https://tanuki-tabi-travel.com",
+            },
+            "knowsLanguage": ["Japanese", "English", "Spanish"],
+            "knowsAbout": ["Tokyo", "Japanese Culture", "Japanese History", "Walking Tours"],
           }),
         }}
       />

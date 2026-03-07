@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Shield, Star, Camera } from "lucide-react";
+import { ArrowRight, Award, Users, Shield, Star } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
@@ -15,21 +15,6 @@ import tourUeno from "@/assets/tour-ueno.jpg";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
-
-const tourPhotos = [
-  {
-    src: "/images/tour-photos/group-photo.jpg",
-    alt: "Group photo with guests during a private Tokyo walking tour",
-  },
-  {
-    src: "/images/tour-photos/photo1.jpg",
-    alt: "Exploring Tokyo's cultural landmarks on a guided tour",
-  },
-  {
-    src: "/images/tour-photos/photo2.jpg",
-    alt: "Discovering hidden gems of Tokyo with a local guide",
-  },
-];
 
 const tours = [
   {
@@ -123,7 +108,7 @@ const trustSignals = [
   },
   {
     icon: Star,
-    title: "516+ Tours Completed",
+    title: "500+ Tours Completed",
     description: "Trusted by hundreds of travelers from around the world for quality, authenticity, and personalized experiences.",
   },
   {
@@ -160,9 +145,14 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Private Tour Guide | Licensed Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with a government-licensed private tour guide. 516+ tours completed with 4.86★ rating. Custom walking tours of Asakusa, Shibuya, Ginza & more. Book your personal Tokyo experience."
+        title="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel"
+        description="Explore Tokyo with Manabu, a government-licensed guide with 500+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond — tailored to you."
         canonicalPath="/"
+        hreflang={[
+          { lang: "en", path: "/" },
+          { lang: "es", path: "/es/" },
+          { lang: "x-default", path: "/" },
+        ]}
       />
 
       {/* Hero Section */}
@@ -183,7 +173,7 @@ const Index = () => {
               <span className="text-accent">Licensed Local Guide</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              516+ tours completed. 4.86★ average rating. Government-licensed guide.
+              500+ tours completed. 4.86★ average rating. Government-licensed guide.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Discover the authentic side of Tokyo through immersive walking tours.
@@ -276,7 +266,7 @@ const Index = () => {
               </h2>
               <p className="mt-4 text-body">
                 I'm Manabu, a National Government Licensed Guide Interpreter
-                (全国通訳案内士) with over 516 tours completed and a 4.86-star
+                (全国通訳案内士) with over 500 tours completed and a 4.86-star
                 average rating. Born in Kanazawa, raised in Kyoto, and now based
                 in Tokyo — I bring insights from across Japan's rich cultural
                 regions.
@@ -351,6 +341,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Tour Photos */}
+      <section aria-label="Tour photos" className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="heading-section text-foreground">Tours in Photos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: "/images/tour-photos/group-photo.jpg", alt: "Group photo with guests during a private Tokyo walking tour", caption: "Private tour in Tokyo" },
+              { src: "/images/tour-photos/photo1.jpg", alt: "Exploring Tokyo's cultural landmarks on a guided tour", caption: "Exploring old Tokyo together" },
+              { src: "/images/tour-photos/photo2.jpg", alt: "Discovering hidden gems of Tokyo with a local guide", caption: "Discovering Tokyo" },
+            ].map((photo) => (
+              <div key={photo.src} className="flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={450}
+                  />
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 md:py-28">
         <div className="container-section">
@@ -391,38 +411,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Tours in Photos */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">
-              <Camera className="w-4 h-4 inline-block mr-1 -mt-0.5" />
-              Gallery
-            </p>
-            <h2 className="heading-section text-foreground">Tours in Photos</h2>
-            <p className="mt-4 text-body">
-              A glimpse into what your Tokyo experience could look like.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {tourPhotos.map((photo) => (
-              <div
-                key={photo.src}
-                className="aspect-[4/3] rounded-lg overflow-hidden shadow-[var(--shadow-card)] group"
-              >
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container-section text-center">
@@ -448,27 +436,25 @@ const Index = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
-            "description": "Private walking tours of Tokyo with a government-licensed guide",
             "url": "https://tanuki-tabi-travel.com",
+            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 500+ tours and a 4.86★ rating.",
+            "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
             "email": "info@tanuki-tabi-travel.com",
-            "areaServed": {
-              "@type": "City",
-              "name": "Tokyo",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tokyo",
               "addressCountry": "JP",
-            },
-            "founder": {
-              "@type": "Person",
-              "name": "Manabu",
-              "jobTitle": "Government-Licensed Tour Guide",
             },
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.86",
-              "reviewCount": "516",
-              "bestRating": "5",
+              "reviewCount": "500",
             },
+            "priceRange": "¥¥¥",
+            "knowsLanguage": "en",
+            "hasCredential": "National Government Licensed Guide Interpreter (全国通訳案内士)",
             "review": testimonials.map((t) => ({
               "@type": "Review",
               "reviewBody": t.text,

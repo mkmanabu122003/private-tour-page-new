@@ -118,8 +118,13 @@ const FAQ = () => {
     <Layout>
       <SEO
         title="FAQ | Tokyo Private Tour Guide Questions | Tanuki Tabi Travel"
-        description="Common questions about booking a private tour in Tokyo. Learn about pricing, what's included, meeting points, group sizes, and how to customize your experience."
+        description="Answers to common questions about Tokyo private tours with Tanuki Tabi Travel — booking, pricing, cancellations, and what to expect on your guided walk."
         canonicalPath="/faq"
+        hreflang={[
+          { lang: "en", path: "/faq" },
+          { lang: "es", path: "/es/faq" },
+          { lang: "x-default", path: "/faq" },
+        ]}
       />
 
       {/* Header */}

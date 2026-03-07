@@ -8,7 +8,7 @@ const TempleEtiquette = () => {
     <Layout>
       <SEO
         title="Temple & Shrine Etiquette in Japan: Do's and Don'ts | Tanuki Tabi Travel"
-        description="Visiting temples and shrines in Japan? Learn the essential etiquette — how to pray, purify, bow, and behave respectfully from a licensed Japanese guide."
+        description="Japan temple and shrine etiquette explained by a licensed Tokyo guide with 500+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond. Written by an expert local guide."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
       />
 
@@ -37,6 +37,9 @@ const TempleEtiquette = () => {
                 February 25, 2026
               </span>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground italic">
+              Written by Manabu — National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours of Tokyo's temples and shrines.
+            </p>
           </div>
         </div>
       </section>
@@ -292,21 +295,167 @@ const TempleEtiquette = () => {
               </li>
             </ul>
 
+            {/* Common Mistakes */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              The Most Common Mistakes Tourists Make
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              After guiding over 500 tours to Tokyo's temples and shrines, I've seen the same mistakes come up again and again. None of these are serious offenses — Japanese people are understanding of foreign visitors — but avoiding them will make your experience smoother and more respectful.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Not bowing before passing through the torii gate.</strong> Many visitors walk straight through without pausing. A brief, shallow bow at the torii is the simplest way to show respect — think of it as saying "excuse me" before entering someone's home.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Getting the temizuya hand-washing order wrong.</strong> The most common error is pouring water directly into the mouth from the ladle, or washing both hands at the same time. Follow the right-left-mouth-handle sequence described above, and you'll stand out as someone who took the time to learn.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Taking excessive photos at the main hall.</strong> While outdoor photography is almost always fine, many visitors spend so much time photographing that they miss the actual experience. I always tell my guests: take one or two photos, then put the camera away and be present. The memory of participating in the ritual will last longer than any photo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Misunderstanding offering amounts.</strong> Some travel blogs suggest offering ¥537 or other specific combinations for luck, but this is largely an internet myth. In practice, a single ¥5 coin (go-en = good connection) is the most meaningful offering. Don't overthink it — sincerity matters far more than the amount.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Avoiding the incense smoke at Senso-ji.</strong> I often see visitors step away from the jokoro (incense burner) because they don't understand what it's for. The smoke is believed to have healing properties — waft it toward yourself, directing it to any part of your body that needs attention. It's one of the most participatory rituals available to visitors, and skipping it means missing a beautiful moment.
+              </li>
+            </ul>
+
+            {/* Detailed Differences */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Differences Between Buddhist Temples and Shinto Shrines
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              While I covered the basics earlier, many visitors on my tours ask for more detail about how to tell temples and shrines apart, and why the prayer methods differ. Here's a more comprehensive comparison that I share with my guests.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Visual Identification
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Torii gates</strong> are exclusive to shrines. If you see one, you're at a Shinto shrine. Temples have sanmon gates instead — these are larger, more architectural structures, often with statues of fierce guardian figures (Nio) on either side.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Incense burners (jokoro)</strong> are found at temples, not shrines. The large communal incense burner where visitors waft smoke toward themselves is a distinctly Buddhist tradition.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Shimenawa (sacred rope)</strong> and shide (zigzag paper streamers) indicate a shrine. These mark sacred boundaries in Shinto tradition and are never found at Buddhist temples.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Pagodas and Buddha statues</strong> indicate a temple. While some shrines have tower-like structures, the classic multi-tiered pagoda is a Buddhist architectural element.
+              </li>
+            </ul>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Prayer Methods Compared
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              This is the most important practical difference for visitors:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">At a shrine:</strong> Ni-hai, ni-hakushu, ichi-hai — two bows, two claps, one bow. The clapping is unique to Shinto and is believed to call the attention of the kami (deity) and express joy.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">At a temple:</strong> Gassho — press your palms together silently and bow your head. No clapping. The Buddhist tradition emphasizes inner stillness and quiet reflection.
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              As a guide, the question I get most often is: "What happens if I accidentally clap at a temple?" The honest answer is: nothing bad. No one will be offended, and no spiritual consequence will follow. But knowing the difference shows genuine respect and allows you to engage more authentically with each tradition. It's the kind of detail that transforms you from a passive observer into an active participant.
+            </p>
+
+            {/* Senso-ji 30 Million */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Senso-ji Temple: What the 30 Million Annual Visitors Figure Really Means
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              You'll often see Senso-ji described as receiving "30 million visitors annually," making it one of the most visited religious sites in the world. But is this figure accurate? As someone who visits Senso-ji multiple times a week with tour guests, I can offer some context.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The 30 million figure comes from surveys conducted by the Tokyo Metropolitan Government's Bureau of Industrial and Labor Affairs (now the Bureau of Tourism and Local Economy), which tracks visitor numbers at major tourist destinations across the city. This number includes both foreign tourists and domestic Japanese visitors, as well as repeat visitors throughout the year. It's an estimate rather than an exact count — Senso-ji doesn't have turnstiles — but it's based on systematic survey methodology and is widely cited in official Tokyo tourism statistics.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              What does this mean in practice? On a busy weekend afternoon, the Nakamise-dori approach can feel genuinely packed, with shoulder-to-shoulder crowds stretching from Kaminarimon all the way to the main hall. However, the experience varies dramatically depending on when you visit.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Best Times to Visit Senso-ji (Manabu's Advice)
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Early morning (6:00–7:30 AM):</strong> The temple grounds are open 24 hours, and the main hall opens at 6:00 AM (6:30 AM from October to March). At this hour, you'll share the space with only a handful of early risers and local worshippers. The morning light on the pagoda is spectacular, and you can experience the rituals in near-silence. This is my top recommendation.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Weekday mornings (before 10 AM):</strong> Still manageable crowds. You can walk Nakamise-dori comfortably and take photos without crowds in the background.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Evening (after 5 PM):</strong> The Nakamise shops close around 5–6 PM, but the temple grounds remain open. The illuminated Kaminarimon and five-story pagoda at night are magical, and the crowds thin significantly after the shops close.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Avoid:</strong> Weekend afternoons (especially Saturday 11 AM – 3 PM), national holidays, and the first three days of January (hatsumode — the traditional New Year's shrine visit, which draws millions).
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              On my{" "}
+              <Link to="/tours/asakusa" className="text-accent hover:underline">
+                private Asakusa walking tour
+              </Link>
+              , I always time our visit to avoid the worst crowds, and I know the quieter corners of the temple complex that most visitors walk right past. Experiencing Senso-ji with expert guidance makes all the difference between feeling overwhelmed by crowds and truly appreciating what makes this 1,400-year-old temple so special.
+            </p>
+
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                Want to experience temples and shrines with a guide who explains every ritual?
+                Want to visit Tokyo's temples and shrines with an expert guide?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Knowing the etiquette is one thing — having someone beside you to explain the history, symbolism, and hidden details brings these sacred sites to life. On our tours, I walk you through every step of the rituals, share stories that guidebooks miss, and answer all your questions in real time. Whether it's your first shrine visit or your tenth, there's always something new to discover.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">
-                  Browse Walking Tours
+                  Browse Private Tokyo Tours
                 </Link>
                 <Link to="/contact" className="btn-outline">
                   Contact Us
                 </Link>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="mt-16">
+              <h2 className="heading-section text-foreground mb-8">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    Can I visit temples and shrines for free?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most temples and shrines in Tokyo are free to enter. Major sites like Senso-ji, Meiji Shrine, and Asakusa Shrine have no entrance fee. Some temples charge a small admission (typically ¥300–500) for special inner gardens, treasure halls, or seasonal exhibitions. Shinjuku Gyoen, while not a temple, charges ¥500. In general, the core worship areas are always free — you can participate in prayer rituals, buy omikuji fortune slips, and experience the atmosphere without any entrance cost.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    What should I wear to a temple or shrine in Japan?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    There is no strict dress code at most Tokyo temples and shrines. You won't be refused entry for wearing casual clothing, shorts, or sandals. That said, covering your shoulders and knees is considered respectful, especially if you plan to enter inner halls or attend a ceremony. Comfortable walking shoes are essential — many temple grounds involve gravel paths and stairs. Wear clean socks without holes, as you may need to remove your shoes at some temples. Hats should be removed when entering indoor worship areas.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    Is it disrespectful to take photos at temples?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Photography rules vary by location. Outdoor areas, gardens, and building exteriors are almost always fine to photograph. Many temples prohibit photography inside main halls and near sacred statues — look for camera icons with a red line through them. Even where allowed, use discretion: no flash, no selfie sticks near sacred objects, and silence your shutter sound. When in doubt, ask a staff member. The key principle is to be present and respectful rather than treating the visit purely as a photo opportunity.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    What is the correct way to pray at a Japanese shrine?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The standard practice at Shinto shrines is called ni-hai, ni-hakushu, ichi-hai: two deep bows, two claps, then one final deep bow. Before praying, toss a coin (a ¥5 coin is traditional) into the offering box and ring the bell if one is present. At Buddhist temples, the ritual is different — press your palms together silently (gassho) and bow your head without clapping. The most important thing is to approach with sincerity. Japanese people genuinely appreciate foreign visitors making the effort to participate respectfully.
+                  </p>
+                </div>
               </div>
             </div>
           </article>
@@ -321,12 +470,15 @@ const TempleEtiquette = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Temple & Shrine Etiquette in Japan — A Complete Guide",
-            "description": "Visiting temples and shrines in Japan? Learn the essential etiquette — how to pray, purify, bow, and behave respectfully from a licensed Japanese guide.",
+            "description": "Japan temple and shrine etiquette explained by a licensed Tokyo guide with 500+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
+              "jobTitle": "National Government Licensed Guide Interpreter",
+              "url": "https://tanuki-tabi-travel.com/about",
             },
             "datePublished": "2026-02-25",
+            "dateModified": "2026-03-07",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
@@ -336,6 +488,51 @@ const TempleEtiquette = () => {
               "@type": "WebPage",
               "@id": "https://tanuki-tabi-travel.com/blog/japan-temple-shrine-etiquette",
             },
+          }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can I visit temples and shrines for free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most temples and shrines in Tokyo are free to enter. Major sites like Senso-ji, Meiji Shrine, and Asakusa Shrine have no entrance fee. Some temples charge a small admission (typically ¥300–500) for special inner gardens, treasure halls, or seasonal exhibitions. In general, the core worship areas are always free.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "What should I wear to a temple or shrine in Japan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "There is no strict dress code at most Tokyo temples and shrines. You won't be refused entry for wearing casual clothing. Covering your shoulders and knees is considered respectful, especially if you plan to enter inner halls. Comfortable walking shoes are essential, and wear clean socks as you may need to remove your shoes at some temples.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Is it disrespectful to take photos at temples?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Photography rules vary by location. Outdoor areas are almost always fine. Many temples prohibit photography inside main halls and near sacred statues. Even where allowed, use discretion: no flash, no selfie sticks near sacred objects, and silence your shutter sound. When in doubt, ask a staff member.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "What is the correct way to pray at a Japanese shrine?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The standard practice at Shinto shrines is ni-hai, ni-hakushu, ichi-hai: two deep bows, two claps, then one final deep bow. Toss a coin into the offering box and ring the bell before praying. At Buddhist temples, press your palms together silently (gassho) and bow without clapping.",
+                },
+              },
+            ],
           }),
         }}
       />

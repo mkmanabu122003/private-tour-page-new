@@ -15,4 +15,24 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    // Bundle these CJS packages into the SSR output so Node ESM can import them
+    noExternal: [
+      "react-helmet-async",
+      "embla-carousel-react",
+      "embla-carousel",
+      "lucide-react",
+      "sonner",
+      "next-themes",
+      "class-variance-authority",
+      "clsx",
+      "tailwind-merge",
+      "cmdk",
+      "react-day-picker",
+      "input-otp",
+      "react-resizable-panels",
+      "recharts",
+      "vaul",
+    ],
+  },
 }));
