@@ -19,7 +19,7 @@ export const Footer = () => {
               </Link>
               <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
                 Tours privados a pie por Tokio y excursiones de día con guía con licencia oficial del gobierno.
-                Más de 516 tours completados. Valoración media de 4.86★.
+                Más de 500 tours completados. Valoración media de 4.86★.
               </p>
               <div className="flex items-center gap-4 mt-6">
                 <a
@@ -129,7 +129,7 @@ export const Footer = () => {
             </Link>
             <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
               Private walking tours of Tokyo and day trips with a government-licensed guide.
-              516+ tours completed. 4.86★ average rating.
+              500+ tours completed. 4.86★ average rating.
             </p>
             <div className="flex items-center gap-4 mt-6">
               <a

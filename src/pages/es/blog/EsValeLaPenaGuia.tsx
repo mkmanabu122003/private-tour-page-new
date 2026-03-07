@@ -9,7 +9,7 @@ const EsValeLaPenaGuia = () => {
     <Layout>
       <SEO
         title="¿Vale la Pena Contratar un Guía Turístico en Tokio?"
-        description="¿Merece la pena contratar un guía en Tokio? Respuesta honesta de Manabu, guía con licencia y más de 516 tours. Costes reales, beneficios reales y cuándo genuinamente no necesitas uno."
+        description="¿Merece la pena contratar un guía en Tokio? Respuesta honesta de Manabu, guía con licencia y más de 500 tours. Costes reales, beneficios reales y cuándo genuinamente no necesitas uno."
         canonicalPath="/es/blog/vale-la-pena-contratar-guia"
         hreflang={[
           { lang: "en", path: "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" },
@@ -44,7 +44,7 @@ const EsValeLaPenaGuia = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 516 tours privados completados en Tokio. Esta es una respuesta honesta de alguien que se dedica a esto profesionalmente.
+              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours privados completados en Tokio. Esta es una respuesta honesta de alguien que se dedica a esto profesionalmente.
             </p>
           </div>
         </div>
@@ -431,7 +431,7 @@ const EsValeLaPenaGuia = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "¿Vale la Pena Contratar un Guía Turístico Privado en Tokio?",
-            "description": "¿Merece la pena contratar un guía en Tokio? Respuesta honesta de Manabu, guía con licencia y más de 516 tours. Costes reales, beneficios reales y cuándo genuinamente no necesitas uno.",
+            "description": "¿Merece la pena contratar un guía en Tokio? Respuesta honesta de Manabu, guía con licencia y más de 500 tours. Costes reales, beneficios reales y cuándo genuinamente no necesitas uno.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

@@ -108,7 +108,7 @@ const trustSignals = [
   },
   {
     icon: Star,
-    title: "516+ Tours Completed",
+    title: "500+ Tours Completed",
     description: "Trusted by hundreds of travelers from around the world for quality, authenticity, and personalized experiences.",
   },
   {
@@ -146,7 +146,7 @@ const Index = () => {
     <Layout>
       <SEO
         title="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with Manabu, a government-licensed guide with 516+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond — tailored to you."
+        description="Explore Tokyo with Manabu, a government-licensed guide with 500+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond — tailored to you."
         canonicalPath="/"
         hreflang={[
           { lang: "en", path: "/" },
@@ -173,7 +173,7 @@ const Index = () => {
               <span className="text-accent">Licensed Local Guide</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              516+ tours completed. 4.86★ average rating. Government-licensed guide.
+              500+ tours completed. 4.86★ average rating. Government-licensed guide.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Discover the authentic side of Tokyo through immersive walking tours.
@@ -266,7 +266,7 @@ const Index = () => {
               </h2>
               <p className="mt-4 text-body">
                 I'm Manabu, a National Government Licensed Guide Interpreter
-                (全国通訳案内士) with over 516 tours completed and a 4.86-star
+                (全国通訳案内士) with over 500 tours completed and a 4.86-star
                 average rating. Born in Kanazawa, raised in Kyoto, and now based
                 in Tokyo — I bring insights from across Japan's rich cultural
                 regions.
@@ -409,7 +409,7 @@ const Index = () => {
             "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
             "url": "https://tanuki-tabi-travel.com",
-            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 516+ tours and a 4.86★ rating.",
+            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 500+ tours and a 4.86★ rating.",
             "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
             "email": "info@tanuki-tabi-travel.com",
             "address": {
@@ -420,7 +420,7 @@ const Index = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.86",
-              "reviewCount": "516",
+              "reviewCount": "500",
             },
             "priceRange": "¥¥¥",
             "knowsLanguage": "en",

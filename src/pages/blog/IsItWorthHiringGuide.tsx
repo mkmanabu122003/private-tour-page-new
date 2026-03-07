@@ -8,7 +8,7 @@ const IsItWorthHiringGuide = () => {
     <Layout>
       <SEO
         title="Is It Worth Hiring a Private Tour Guide in Tokyo? | Tanuki Tabi Travel"
-        description="Is hiring a tour guide in Tokyo worth it? An honest answer from Manabu, a licensed guide with 516+ tours. Real costs, real benefits, and when you genuinely don't need one."
+        description="Is hiring a tour guide in Tokyo worth it? An honest answer from Manabu, a licensed guide with 500+ tours. Real costs, real benefits, and when you genuinely don't need one."
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
       />
 
@@ -38,7 +38,7 @@ const IsItWorthHiringGuide = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed 516+ private tours in Tokyo. This is an honest answer from someone who does this for a living.
+              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed 500+ private tours in Tokyo. This is an honest answer from someone who does this for a living.
             </p>
           </div>
         </div>
@@ -425,7 +425,7 @@ const IsItWorthHiringGuide = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Is It Worth Hiring a Private Tour Guide in Tokyo?",
-            "description": "Is hiring a tour guide in Tokyo worth it? An honest answer from Manabu, a licensed guide with 516+ tours. Real costs, real benefits, and when you genuinely don't need one.",
+            "description": "Is hiring a tour guide in Tokyo worth it? An honest answer from Manabu, a licensed guide with 500+ tours. Real costs, real benefits, and when you genuinely don't need one.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

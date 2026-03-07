@@ -8,7 +8,7 @@ const TempleEtiquette = () => {
     <Layout>
       <SEO
         title="Temple & Shrine Etiquette in Japan: Do's and Don'ts | Tanuki Tabi Travel"
-        description="Japan temple and shrine etiquette explained by a licensed Tokyo guide with 516+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond. Written by an expert local guide."
+        description="Japan temple and shrine etiquette explained by a licensed Tokyo guide with 500+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond. Written by an expert local guide."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
       />
 
@@ -38,7 +38,7 @@ const TempleEtiquette = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — National Government Licensed Guide Interpreter (全国通訳案内士) with 516+ tours of Tokyo's temples and shrines.
+              Written by Manabu — National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours of Tokyo's temples and shrines.
             </p>
           </div>
         </div>
@@ -300,7 +300,7 @@ const TempleEtiquette = () => {
               The Most Common Mistakes Tourists Make
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              After guiding over 516 tours to Tokyo's temples and shrines, I've seen the same mistakes come up again and again. None of these are serious offenses — Japanese people are understanding of foreign visitors — but avoiding them will make your experience smoother and more respectful.
+              After guiding over 500 tours to Tokyo's temples and shrines, I've seen the same mistakes come up again and again. None of these are serious offenses — Japanese people are understanding of foreign visitors — but avoiding them will make your experience smoother and more respectful.
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
@@ -470,7 +470,7 @@ const TempleEtiquette = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Temple & Shrine Etiquette in Japan — A Complete Guide",
-            "description": "Japan temple and shrine etiquette explained by a licensed Tokyo guide with 516+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond.",
+            "description": "Japan temple and shrine etiquette explained by a licensed Tokyo guide with 500+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

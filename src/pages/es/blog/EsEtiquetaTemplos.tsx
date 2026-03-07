@@ -9,7 +9,7 @@ const EsEtiquetaTemplos = () => {
     <Layout>
       <SEO
         title="Etiqueta en Templos y Santuarios de Japón | Guía Local"
-        description="Etiqueta en templos y santuarios de Japón explicada por un guía de Tokio con licencia y más de 516 tours. Errores comunes, consejos prácticos y guía experta para visitar Senso-ji y más."
+        description="Etiqueta en templos y santuarios de Japón explicada por un guía de Tokio con licencia y más de 500 tours. Errores comunes, consejos prácticos y guía experta para visitar Senso-ji y más."
         canonicalPath="/es/blog/etiqueta-templos-santuarios"
         hreflang={[
           { lang: "en", path: "/blog/japan-temple-shrine-etiquette" },
@@ -44,7 +44,7 @@ const EsEtiquetaTemplos = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 516 tours por los templos y santuarios de Tokio.
+              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours por los templos y santuarios de Tokio.
             </p>
           </div>
         </div>
@@ -306,7 +306,7 @@ const EsEtiquetaTemplos = () => {
               Los Errores Más Comunes que Cometen los Turistas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Después de guiar más de 516 tours por los templos y santuarios de Tokio, he visto los mismos errores repetirse una y otra vez. Ninguno es una falta grave — los japoneses son comprensivos con los visitantes extranjeros — pero evitarlos hará que tu experiencia sea más fluida y respetuosa.
+              Después de guiar más de 500 tours por los templos y santuarios de Tokio, he visto los mismos errores repetirse una y otra vez. Ninguno es una falta grave — los japoneses son comprensivos con los visitantes extranjeros — pero evitarlos hará que tu experiencia sea más fluida y respetuosa.
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
@@ -476,7 +476,7 @@ const EsEtiquetaTemplos = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Etiqueta en Templos y Santuarios de Japón — Guía Completa",
-            "description": "Etiqueta en templos y santuarios de Japón explicada por un guía de Tokio con licencia y más de 516 tours. Errores comunes, consejos prácticos y guía experta para visitar Senso-ji y más.",
+            "description": "Etiqueta en templos y santuarios de Japón explicada por un guía de Tokio con licencia y más de 500 tours. Errores comunes, consejos prácticos y guía experta para visitar Senso-ji y más.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

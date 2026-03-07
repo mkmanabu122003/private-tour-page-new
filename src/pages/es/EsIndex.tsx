@@ -109,7 +109,7 @@ const trustSignals = [
   },
   {
     icon: Star,
-    title: "516+ Tours Completados",
+    title: "500+ Tours Completados",
     description: "Cientos de viajeros de todo el mundo han confiado en Manabu por su calidad, autenticidad y atención personalizada.",
   },
   {
@@ -147,7 +147,7 @@ const EsIndex = () => {
     <Layout>
       <SEO
         title="Tour Privado en Tokio con Guía Japonés Nativo en Español | Tanuki Tabi Travel"
-        description="Tour privado por Tokio con Manabu, guía japonés nativo con licencia oficial del gobierno (全国通訳案内士). Más de 516 tours completados y valoración de 4.86★. Itinerario 100% personalizado."
+        description="Tour privado por Tokio con Manabu, guía japonés nativo con licencia oficial del gobierno (全国通訳案内士). Más de 500 tours completados y valoración de 4.86★. Itinerario 100% personalizado."
         canonicalPath="/es/"
         hreflang={[
           { lang: "en", path: "/" },
@@ -174,7 +174,7 @@ const EsIndex = () => {
               <span className="text-accent">Guía Japonés Nativo en Español</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Más de 516 tours completados. Valoración media de 4.86★. Guía con licencia oficial del gobierno japonés.
+              Más de 500 tours completados. Valoración media de 4.86★. Guía con licencia oficial del gobierno japonés.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Descubre el Tokio auténtico de la mano de Manabu, un guía japonés nativo que habla español. Desde templos milenarios hasta callejones escondidos, vive la ciudad con historias que no encontrarás en ninguna guía de viaje.
@@ -307,7 +307,7 @@ const EsIndex = () => {
                 Conoce a Manabu — Tu Guía Oficial en Tokio
               </h2>
               <p className="mt-4 text-body">
-                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 516 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — conozco Japón desde dentro y en profundidad.
+                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 500 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — conozco Japón desde dentro y en profundidad.
               </p>
               <p className="mt-4 text-body">
                 Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y adapto el tour en tiempo real. No es una clase magistral — es una conversación.
@@ -444,7 +444,7 @@ const EsIndex = () => {
             "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
             "url": "https://tanuki-tabi-travel.com/es/",
-            "description": "Tours privados por Tokio con Manabu, guía japonés nativo con licencia del gobierno y más de 516 tours completados.",
+            "description": "Tours privados por Tokio con Manabu, guía japonés nativo con licencia del gobierno y más de 500 tours completados.",
             "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
             "email": "info@tanuki-tabi-travel.com",
             "address": {
@@ -455,7 +455,7 @@ const EsIndex = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.86",
-              "reviewCount": "516",
+              "reviewCount": "500",
             },
             "priceRange": "¥¥¥",
             "knowsLanguage": ["en", "es"],

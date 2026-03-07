@@ -6,7 +6,7 @@ import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import heroImage from "@/assets/hero-asakusa.jpg";
 
 const stats = [
-  { label: "Tours Completed", value: "516+" },
+  { label: "Tours Completed", value: "500+" },
   { label: "Average Rating", value: "4.86★" },
   { label: "Languages", value: "3" },
   { label: "Tour Areas", value: "5+" },
@@ -127,7 +127,7 @@ const About = () => {
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Born in Kanazawa, raised in Kyoto, and now living in Tokyo — I
                 bring a unique perspective from Japan's most culturally rich
-                regions. With over 516 tours completed and a 4.86-star average
+                regions. With over 500 tours completed and a 4.86-star average
                 rating, I'm passionate about sharing Japan's stories with
                 travelers from around the world.
               </p>
@@ -379,7 +379,7 @@ const About = () => {
             "@type": ["LocalBusiness", "TouristInformationCenter"],
             "name": "Tanuki Tabi Travel",
             "url": "https://tanuki-tabi-travel.com",
-            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 516+ tours and a 4.86★ rating.",
+            "description": "Private walking tours of Tokyo led by Manabu, a government-licensed guide interpreter with 500+ tours and a 4.86★ rating.",
             "image": "https://tanuki-tabi-travel.com/assets/About_page_Manabu_team_photo-kZpmorG3.webp",
             "email": "info@tanuki-tabi-travel.com",
             "address": {
@@ -390,7 +390,7 @@ const About = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.86",
-              "reviewCount": "516",
+              "reviewCount": "500",
             },
             "priceRange": "¥¥¥",
             "knowsLanguage": "en",

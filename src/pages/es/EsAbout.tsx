@@ -7,7 +7,7 @@ import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import heroImage from "@/assets/hero-asakusa.jpg";
 
 const stats = [
-  { label: "Tours Completados", value: "516+" },
+  { label: "Tours Completados", value: "500+" },
   { label: "Valoración Media", value: "4.86★" },
   { label: "Idiomas", value: "3" },
   { label: "Zonas de Tour", value: "5+" },
@@ -99,7 +99,7 @@ const EsAbout = () => {
     <Layout>
       <SEO
         title="Conoce a Manabu — Tu Guía Privado en Tokio | Tanuki Tabi Travel"
-        description="Manabu es un guía japonés nativo con licencia oficial del gobierno (全国通訳案内士), 516+ tours y valoración de 4.86★. Nacido en Kanazawa, criado en Kioto, ahora en Tokio."
+        description="Manabu es un guía japonés nativo con licencia oficial del gobierno (全国通訳案内士), 500+ tours y valoración de 4.86★. Nacido en Kanazawa, criado en Kioto, ahora en Tokio."
         canonicalPath="/es/about"
         hreflang={[
           { lang: "en", path: "/about" },
@@ -121,7 +121,7 @@ const EsAbout = () => {
                 Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士) con base en Tokio. Esta es una certificación nacional emitida por el gobierno japonés, que requiere amplios conocimientos de historia, cultura, geografía y dominio del inglés y español. Solo los guías certificados están legalmente reconocidos como guías turísticos profesionales en Japón.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — aporto una perspectiva única de las regiones culturalmente más ricas de Japón. Con más de 516 tours completados y una valoración media de 4.86 estrellas, mi pasión es compartir las historias de Japón con viajeros de todo el mundo.
+                Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — aporto una perspectiva única de las regiones culturalmente más ricas de Japón. Con más de 500 tours completados y una valoración media de 4.86 estrellas, mi pasión es compartir las historias de Japón con viajeros de todo el mundo.
               </p>
 
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
