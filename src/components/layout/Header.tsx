@@ -64,8 +64,9 @@ export const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <nav className="container-section">
           <div className="flex items-center justify-between h-20 md:h-28">
-            <Link to="/es" className="flex items-center">
-              <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-12 md:h-[80px] w-auto" />
+            <Link to="/es" className="flex flex-col items-center gap-0.5 py-1">
+              <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-10 md:h-14 w-auto" />
+              <span className="font-serif text-[9px] md:text-[11px] font-semibold tracking-[0.2em] text-foreground uppercase">Tanuki Tabi Travel</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -344,8 +345,9 @@ export const Header = () => {
       <nav className="container-section">
         <div className="flex items-center justify-between h-20 md:h-28">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-12 md:h-[80px] w-auto" />
+          <Link to="/" className="flex flex-col items-center gap-0.5 py-1">
+            <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-10 md:h-14 w-auto" />
+            <span className="font-serif text-[9px] md:text-[11px] font-semibold tracking-[0.2em] text-foreground uppercase">Tanuki Tabi Travel</span>
           </Link>
 
           {/* Desktop Navigation */}
