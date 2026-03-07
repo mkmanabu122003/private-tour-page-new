@@ -11,6 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import heroImage from "@/assets/sumida.jpg";
+
+// Hero image: group-photo.jpg from public/images/tour-photos/
+const heroGroupPhoto = "/images/tour-photos/group-photo.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.jpg";
@@ -87,6 +90,7 @@ const tours = [
     duration: "9-10 hours",
     price: "¥60,000",
     difficulty: "Moderate",
+    // TODO: replace with Nikko image (e.g. toshogu shrine, kegon falls)
     image: hamarikyu,
   },
   {
@@ -96,7 +100,8 @@ const tours = [
     duration: "Flexible",
     price: "From ¥10,000/hour",
     difficulty: "Customizable",
-    image: hamarikyu,
+    // TODO: replace with custom tour image (e.g. a map, planning scene, or collage)
+    image: "/images/tour-photos/group-photo.jpg",
   },
 ];
 
@@ -159,8 +164,8 @@ const Index = () => {
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
-            alt="Scenic view of Tokyo's Sumida River with traditional and modern skyline"
+            src={heroGroupPhoto}
+            alt="Group photo with guests during a private Tokyo walking tour"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
@@ -169,25 +174,25 @@ const Index = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Private Walking Tours of Tokyo with a{" "}
-              <span className="text-accent">Licensed Local Guide</span>
+              Tokyo Walks with Manabu —{" "}
+              <span className="text-accent">Your Licensed Local Guide</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               500+ tours completed. 4.86★ average rating. Government-licensed guide.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
-              Discover the authentic side of Tokyo through immersive walking tours.
-              From ancient temples to hidden alleyways, experience the stories that
-              make this city unforgettable.
+              Every tour starts with a simple question: What excites you most about
+              Tokyo? From there, the route is yours. I don't follow a script — I
+              follow your curiosity.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <Link to="/tours" className="btn-accent">
-                Browse Tours
+                See Available Tours
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link to="/tours/custom" className="btn-outline">
-                Book a Custom Tour
+                Tell Me What You're Looking For →
               </Link>
             </div>
           </div>
@@ -211,6 +216,32 @@ const Index = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* No Script Section */}
+      <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="heading-section text-foreground">
+              No Script. No Rush. Just Your Kind of Tokyo.
+            </h2>
+            <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
+              <p>
+                Most tour guides follow a fixed route. I don't.
+              </p>
+              <p>
+                In the first 30 minutes, I ask what matters to you — the food, the
+                history, the hidden spots, the photo opportunities. Then I adapt as we
+                go. If you want to linger at a temple, we linger. If you want to skip
+                ahead to lunch, we skip.
+              </p>
+              <p>
+                That's why guests from over 30 countries have called this the best
+                tour of the trip — not just of Tokyo, but of their entire journey.
+              </p>
+            </div>
           </div>
         </div>
       </section>
