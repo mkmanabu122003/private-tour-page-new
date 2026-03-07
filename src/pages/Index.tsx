@@ -341,6 +341,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Tour Photos */}
+      <section aria-label="Tour photos" className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="heading-section text-foreground">Tours in Photos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: "/images/tour-photos/tour-photo-1.jpg", alt: "Private tour in Asakusa with guests at Kaminarimon Gate", caption: "Private tour in Asakusa" },
+              { src: "/images/tour-photos/tour-photo-2.jpg", alt: "Exploring old Tokyo backstreets together with a local guide", caption: "Exploring old Tokyo together" },
+              { src: "/images/tour-photos/tour-photo-3.jpg", alt: "A morning visit at Senso-ji Temple in Asakusa", caption: "A morning at Senso-ji" },
+            ].map((photo) => (
+              <div key={photo.src} className="flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={450}
+                  />
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 md:py-28">
         <div className="container-section">
