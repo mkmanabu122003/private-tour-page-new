@@ -16,6 +16,17 @@ const EsAsakusaTokioGuia = () => {
         ]}
       />
 
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/blog/asakusa-guide-hero.jpg"
+          alt="Guía completa de Asakusa — más allá de Senso-ji"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
       {/* Article Header */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">

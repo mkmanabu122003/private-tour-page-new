@@ -12,6 +12,17 @@ const TokyoItinerary5Days = () => {
         canonicalPath="/blog/tokyo-itinerary-5-days"
       />
 
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/tours/shibuya-scramble-crossing.jpg"
+          alt="Shibuya Scramble Crossing — iconic Tokyo landmark for your 5-day itinerary"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
