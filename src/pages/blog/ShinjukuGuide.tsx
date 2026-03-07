@@ -8,7 +8,7 @@ const ShinjukuGuide = () => {
     <Layout>
       <SEO
         title="Shinjuku Guide: Nightlife, Food & Hidden Spots | Tanuki Tabi Travel"
-        description="Navigate Shinjuku like a local. A guide to Golden Gai, Omoide Yokocho, Kabukicho, Shinjuku Gyoen, and the best food spots in Tokyo's busiest district."
+        description="The complete Shinjuku travel guide written by a licensed Tokyo guide. Hidden spots, best times to visit, how to survive the station, and insider tips you won't find in any guidebook."
         canonicalPath="/blog/shinjuku-guide"
       />
 
@@ -37,6 +37,9 @@ const ShinjukuGuide = () => {
                 February 25, 2026
               </span>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground italic">
+              Written by Manabu — a Tokyo-based National Government Licensed Guide Interpreter who has walked Shinjuku's streets with hundreds of international visitors.
+            </p>
           </div>
         </div>
       </section>
@@ -418,25 +421,190 @@ const ShinjukuGuide = () => {
               </li>
             </ul>
 
+            {/* Shinjuku by Time of Day */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Shinjuku by Time of Day: A Local's Schedule
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              One of the most common questions I get from tour guests is: "When should I visit Shinjuku?" The answer depends entirely on what you want to experience. Here's how I'd plan a full day if I were visiting for the first time.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Morning (7:00–9:00 AM): Shinjuku Gyoen Morning Walk
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Start your day with the calm before the storm. Shinjuku Gyoen opens at 9 AM (but the surrounding area is quiet and pleasant for an early walk). Arrive right when the gates open to enjoy the gardens in near-solitude — the contrast with the chaos you'll experience later makes this especially rewarding. The morning light through the Japanese garden is perfect for photography, and you'll have the wide lawns almost to yourself.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Midday (12:00–2:00 PM): Depachika Lunch Strategy
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Head to the basement floor of Isetan or Takashimaya department stores for the depachika experience. The trick is timing: arrive just before the lunch rush (around 11:30 AM) or slightly after (1:30 PM) for the best selection without crowds. Assemble a bento box and side dishes for a fraction of restaurant prices. If the weather is good, take your depachika haul back to Shinjuku Gyoen for a picnic — this is exactly what many Tokyo office workers do, and it's one of the most pleasant lunch experiences in the city.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Late Afternoon (5:00–7:00 PM): Omoide Yokocho at Golden Hour
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              This is the magic window for Omoide Yokocho. The yakitori stalls are firing up, the after-work crowd is just starting to trickle in, and the setting sun casts that perfect warm light through the smoke and steam. Grab a stool at one of the open-front stalls, order a beer and a few skewers, and watch the transition from day to night. The atmosphere at this hour is unmatched — bustling but not yet overwhelming, authentic and full of character.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Evening (7:00 PM onwards): Kabukicho and Golden Gai
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              As darkness falls, Shinjuku transforms. The neon signs come alive, and the energy shifts from daytime commerce to nighttime entertainment. Start with a walk through Kabukicho to take in the sensory spectacle — the giant Godzilla head, the towering screens, the buzzing crowds. Then head to Golden Gai around 8–9 PM when the bars are open but not yet packed. End the evening with late-night ramen at one of the side-street shops east of the station. The perfect Shinjuku day ends with a steaming bowl of noodles around 11 PM.
+            </p>
+
+            {/* Hidden Spots */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Shinjuku's Hidden Spots That Most Tourists Miss
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              After years of guiding tours through Shinjuku, I've collected a set of spots that never appear in the standard guidebooks but consistently surprise and delight my guests. Here are my favorites.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Hanazono Shrine at night.</strong> Tucked right behind Kabukicho's neon chaos, Hanazono Shrine is a pocket of serenity that most tourists walk right past. The shrine is illuminated at night with soft red lanterns, creating a surreal contrast with the entertainment district just meters away. Visit after 8 PM for the full effect — you'll go from sensory overload to peaceful contemplation in about 30 seconds. The shrine is also the site of a popular flea market on Sundays.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">The Tokyo Metropolitan Government Building South Observatory at sunset.</strong> Most visitors know about the free observation decks, but few realize the south tower closes at 5:30 PM while the north tower stays open until 11 PM. The strategic play is to visit the south tower around 4:30 PM for the west-facing sunset views (Mt. Fuji on clear days), then walk over to the north tower after dark for the night cityscape. Two observation decks, two completely different experiences, zero cost.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">The underground passage from Shinjuku-sanchome Station.</strong> Rather than navigating the chaos of Shinjuku Station, savvy locals use the Marunouchi Line's Shinjuku-sanchome Station, which has a direct underground connection to Isetan department store and emerges in a much calmer part of east Shinjuku. This single tip can save you 15 minutes of confused wandering through the main station.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">The rooftop garden at Takashimaya Times Square.</strong> On the upper floors of Takashimaya, there's a small rooftop terrace that offers a completely different perspective of Shinjuku's skyline. Almost no tourists know about it. Take the elevator to the top floor, find the exit to the terrace, and enjoy a quiet moment above the chaos. Best visited in the late afternoon.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Nishi-Shinjuku's camera district.</strong> The streets immediately west of Shinjuku Station (before you reach the skyscraper area) are home to several second-hand camera shops — Kitamura Camera, Map Camera, and others. Even if you're not buying, browsing these shops is a uniquely Japanese experience, with pristine vintage cameras and lenses displayed like jewelry. Photographers on my tours always thank me for this detour.
+              </li>
+            </ul>
+
+            {/* Shinjuku vs Shibuya */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Shinjuku vs. Shibuya: Which Should You Visit?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              This is one of the most frequent questions I hear from visitors planning their Tokyo itinerary. Both districts are iconic, but they offer very different experiences. Here's my honest comparison.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">For food and nightlife:</strong> Shinjuku wins. Golden Gai, Omoide Yokocho, and the sheer density of restaurants and bars make Shinjuku the superior evening destination. Shibuya has good dining options, but Shinjuku's variety and atmosphere are unmatched.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">For shopping:</strong> Shibuya edges ahead, especially for fashion. Shibuya 109, the Miyashita Park complex, and nearby Harajuku's Takeshita Street offer a younger, trend-forward shopping experience.{" "}
+                <Link to="/tours/shibuya-harajuku" className="text-accent hover:underline">
+                  Our Shibuya & Harajuku tour
+                </Link>{" "}
+                covers the best of this area. Shinjuku's department stores (Isetan, Takashimaya) are better for upscale and luxury shopping.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">For Instagram-worthy moments:</strong> Shibuya has the famous Scramble Crossing, which is worth seeing at least once. Shinjuku's neon-lit alleys (Golden Gai, Kabukicho entrance) offer equally dramatic photos but with a grittier, more atmospheric quality.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">For green space:</strong> Shinjuku wins easily with Shinjuku Gyoen. Shibuya has Yoyogi Park and Meiji Shrine's forest nearby, but Shinjuku Gyoen is the superior garden experience.
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">My recommendation if you're visiting both:</strong> Visit Shibuya and Harajuku during the day (they connect naturally), then head to Shinjuku in the late afternoon and spend the evening there. The two areas are only one stop apart on the JR Yamanote Line, making this combination easy and efficient.
+            </p>
+
+            {/* Station Survival Guide */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Getting Around Shinjuku: The Station Survival Guide
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Shinjuku Station is officially the world's busiest railway station, handling over 3.5 million passengers daily. It's served by JR East, Odakyu, Keio, Tokyo Metro, and Toei Subway, with over 200 exits connecting to an underground maze of shopping corridors. Even Tokyo locals sometimes get lost here. Here's how to navigate it like a pro.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              The Four Key Exits
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">East Exit (東口 / Higashi-guchi):</strong> Use this for Kabukicho, Golden Gai, Hanazono Shrine, and east Shinjuku's restaurant scene. This is the exit you'll use most for nightlife and dining.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">West Exit (西口 / Nishi-guchi):</strong> Use this for the Tokyo Metropolitan Government Building (free observation decks), the skyscraper district, Omoide Yokocho, and hotel clusters. The west side is calmer and more corporate.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">South Exit (南口 / Minami-guchi):</strong> Use this for Takashimaya Times Square, the Southern Terrace walkway, and access to Shinjuku Gyoen (about a 10-minute walk). The south exit area is a good meeting point because it has clear landmarks and open space.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">New South Exit (新南口 / Shin-minami-guchi):</strong> Use this for the Shinjuku Expressway Bus Terminal (Busta Shinjuku), which handles highway buses to destinations across Japan. Also useful for accessing the Shinjuku Gyoen area from a slightly different angle.
+              </li>
+            </ul>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Survival Tips for the Station
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Follow the colored signs.</strong> Each railway company uses a different color (JR is green, Odakyu is blue, Keio is pink/red, Metro is various colors by line). Follow the color you need and ignore everything else.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Use Google Maps indoor navigation.</strong> Google Maps has detailed indoor maps of Shinjuku Station. Enter your destination and it will guide you to the correct exit. This alone can save you 20 minutes of wandering.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Avoid rush hour.</strong> Between 7:30–9:00 AM and 5:30–7:30 PM, the station becomes a tidal wave of commuters. If possible, time your transit to avoid these windows. The station is much calmer (and more navigable) outside peak hours.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">When lost, go up.</strong> If you're disoriented underground, find any staircase going up and exit to street level. Once above ground, you can reorient using the skyscrapers (west) or the neon signs (east) as landmarks, and re-enter the station through the correct entrance.
+              </li>
+            </ul>
+
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                Experience Shinjuku With a Local Who Knows Which Doors to Open
+                Want to explore Shinjuku with an expert guide who knows every hidden corner?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Shinjuku is best experienced with a local guide who can navigate the
-                hidden alleys, introduce you to welcoming bar owners in Golden Gai, and
-                steer you away from tourist traps. Whether you want a curated evening
-                through the neon-lit backstreets or a full-day exploration of the
-                district, we'll design something perfect for you.
+                Shinjuku is best experienced with a local guide who can navigate the hidden alleys, introduce you to welcoming bar owners in Golden Gai, and steer you away from tourist traps. Whether you want a curated evening through the neon-lit backstreets or a full-day exploration of the district, we'll design something perfect for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours/custom" className="btn-accent">
-                  Design a Custom Evening Tour
+                  View Custom Tour Options
                 </Link>
                 <Link to="/contact" className="btn-outline">
                   Contact Us
                 </Link>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="mt-16">
+              <h2 className="heading-section text-foreground mb-8">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    Is Shinjuku safe at night?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes, Shinjuku is generally very safe at night, including the Kabukicho entertainment district. Japan has one of the lowest crime rates in the world, and violent crime against tourists is extremely rare. The main things to watch for are touts trying to lure you into overpriced bars — simply decline and keep walking. Stick to well-lit streets, don't accept drinks from strangers, and use common sense. I regularly guide evening tours through Shinjuku and have never had a safety incident.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    How long should I spend in Shinjuku?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    For a thorough visit, plan half a day to a full day. If you're short on time, an evening visit (5 PM onwards) captures Shinjuku at its most atmospheric — start with Omoide Yokocho at sunset, explore Kabukicho and Golden Gai after dark, and end with late-night ramen. If you can spend a full day, add morning time at Shinjuku Gyoen and an afternoon exploring the department stores and food halls.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    What is Shinjuku best known for?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Shinjuku is best known for its vibrant nightlife (Golden Gai and Kabukicho), the world's busiest train station, stunning city views from the free Tokyo Metropolitan Government Building observation decks, Shinjuku Gyoen National Garden, and its incredible density of restaurants and bars. It's essentially Tokyo at maximum intensity — neon lights, towering buildings, and endless entertainment options packed into one district.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    Is Kabukicho safe for tourists?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Kabukicho is safe for tourists and has been significantly cleaned up in recent years with increased police presence and family-friendly developments. The main risk is being approached by touts who try to lure you into bars or clubs with promises of cheap drinks — these often lead to inflated bills. The simple rule is: if someone approaches you on the street, decline politely and move on. Stick to establishments with clearly posted prices and good reviews, and you'll have a great time.
+                  </p>
+                </div>
               </div>
             </div>
           </article>
@@ -451,13 +619,15 @@ const ShinjukuGuide = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Shinjuku Guide — Tokyo's Neon-Lit Heart",
-            "description":
-              "Navigate Shinjuku like a local. A guide to Golden Gai, Omoide Yokocho, Kabukicho, Shinjuku Gyoen, and the best food spots in Tokyo's busiest district.",
+            "description": "The complete Shinjuku travel guide written by a licensed Tokyo guide. Hidden spots, best times to visit, how to survive the station, and insider tips you won't find in any guidebook.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
+              "jobTitle": "National Government Licensed Guide Interpreter",
+              "url": "https://tanuki-tabi-travel.com/about",
             },
             "datePublished": "2026-02-25",
+            "dateModified": "2026-03-07",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
@@ -467,6 +637,51 @@ const ShinjukuGuide = () => {
               "@type": "WebPage",
               "@id": "https://tanuki-tabi-travel.com/blog/shinjuku-guide",
             },
+          }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Shinjuku safe at night?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Shinjuku is generally very safe at night, including Kabukicho. Japan has one of the lowest crime rates in the world. The main things to watch for are touts trying to lure you into overpriced bars — simply decline and keep walking. Use common sense and stick to well-lit streets.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "How long should I spend in Shinjuku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plan half a day to a full day for a thorough visit. If short on time, an evening visit (5 PM onwards) captures Shinjuku at its most atmospheric. For a full day, add morning time at Shinjuku Gyoen and afternoon exploration of department stores and food halls.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "What is Shinjuku best known for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shinjuku is best known for its vibrant nightlife (Golden Gai and Kabukicho), the world's busiest train station, free observation decks at the Tokyo Metropolitan Government Building, Shinjuku Gyoen National Garden, and its incredible density of restaurants and bars.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Is Kabukicho safe for tourists?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kabukicho is safe for tourists and has been significantly cleaned up in recent years. The main risk is touts who approach you on the street to lure you into bars. Simply decline and keep walking. Stick to establishments with clearly posted prices and good reviews.",
+                },
+              },
+            ],
           }),
         }}
       />

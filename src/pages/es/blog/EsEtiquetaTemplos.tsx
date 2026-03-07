@@ -9,7 +9,7 @@ const EsEtiquetaTemplos = () => {
     <Layout>
       <SEO
         title="Etiqueta en Templos y Santuarios de Japón | Guía Local"
-        description="¿Vas a visitar templos y santuarios en Japón? Aprende la etiqueta esencial — cómo rezar, purificarte, hacer reverencia y comportarte con respeto. Guía de un guía japonés con licencia."
+        description="Etiqueta en templos y santuarios de Japón explicada por un guía de Tokio con licencia y más de 500 tours. Errores comunes, consejos prácticos y guía experta para visitar Senso-ji y más."
         canonicalPath="/es/blog/etiqueta-templos-santuarios"
         hreflang={[
           { lang: "en", path: "/blog/japan-temple-shrine-etiquette" },
@@ -43,6 +43,9 @@ const EsEtiquetaTemplos = () => {
                 25 de febrero de 2026
               </span>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground italic">
+              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours por los templos y santuarios de Tokio.
+            </p>
           </div>
         </div>
       </section>
@@ -298,21 +301,167 @@ const EsEtiquetaTemplos = () => {
               </li>
             </ul>
 
+            {/* Common Mistakes */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Los Errores Más Comunes que Cometen los Turistas
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Después de guiar más de 500 tours por los templos y santuarios de Tokio, he visto los mismos errores repetirse una y otra vez. Ninguno es una falta grave — los japoneses son comprensivos con los visitantes extranjeros — pero evitarlos hará que tu experiencia sea más fluida y respetuosa.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">No hacer reverencia antes de cruzar la puerta torii.</strong> Muchos visitantes pasan directamente sin detenerse. Una breve reverencia al llegar al torii es la forma más sencilla de mostrar respeto — piensa en ello como decir "con permiso" antes de entrar en la casa de alguien.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Equivocarse en el orden del lavado de manos en el temizuya.</strong> El error más frecuente es verter agua directamente del cucharón a la boca, o lavarse ambas manos al mismo tiempo. Sigue la secuencia derecha-izquierda-boca-mango descrita anteriormente, y destacarás como alguien que se tomó el tiempo de aprender.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Tomar demasiadas fotos en el salón principal.</strong> Aunque la fotografía en exteriores casi siempre está permitida, muchos visitantes pasan tanto tiempo fotografiando que se pierden la experiencia real. Siempre les digo a mis invitados: toma una o dos fotos, luego guarda la cámara y vive el momento. El recuerdo de participar en el ritual durará mucho más que cualquier foto.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Malentender las cantidades de ofrendas.</strong> Algunos blogs de viajes sugieren ofrecer ¥537 u otras combinaciones específicas para la suerte, pero esto es en gran medida un mito de internet. En la práctica, una simple moneda de ¥5 (go-en = buena conexión) es la ofrenda más significativa. No le des demasiadas vueltas — la sinceridad importa mucho más que la cantidad.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Evitar el humo del incienso en Senso-ji.</strong> A menudo veo visitantes alejarse del jokoro (quemador de incienso) porque no entienden para qué sirve. Se cree que el humo tiene propiedades curativas — abanícatelo hacia ti, dirigiéndolo a cualquier parte del cuerpo que necesite atención. Es uno de los rituales más participativos al alcance de los visitantes, y saltárselo significa perderse un momento verdaderamente especial.
+              </li>
+            </ul>
+
+            {/* Detailed Differences */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Diferencias entre Templos Budistas y Santuarios Sintoístas
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Aunque ya cubrí lo básico anteriormente, muchos visitantes en mis tours me piden más detalles sobre cómo distinguir templos de santuarios, y por qué los métodos de oración son diferentes. Aquí tienes una comparación más completa, la misma que comparto con mis invitados durante los recorridos.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Identificación Visual
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Las puertas torii</strong> son exclusivas de los santuarios. Si ves una, estás en un santuario sintoísta. Los templos tienen puertas sanmon — estructuras más grandes y arquitectónicas, a menudo con estatuas de feroces guardianes (Nio) a cada lado.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Los quemadores de incienso (jokoro)</strong> se encuentran en los templos, no en los santuarios. El gran quemador comunal donde los visitantes se abanizan el humo hacia sí mismos es una tradición exclusivamente budista.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">El shimenawa (cuerda sagrada)</strong> y los shide (tiras de papel en zigzag) indican un santuario. Marcan los límites sagrados en la tradición sintoísta y nunca se encuentran en templos budistas.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Las pagodas y estatuas de Buda</strong> indican un templo. Aunque algunos santuarios tienen estructuras en forma de torre, la clásica pagoda de varios pisos es un elemento arquitectónico budista.
+              </li>
+            </ul>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Métodos de Oración Comparados
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Esta es la diferencia práctica más importante para los visitantes:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">En un santuario:</strong> Ni-hai, ni-hakushu, ichi-hai — dos reverencias, dos aplausos, una reverencia. El aplauso es exclusivo del sintoísmo y se cree que llama la atención del kami (deidad) y expresa alegría.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">En un templo:</strong> Gassho — junta las palmas de las manos en silencio e inclina la cabeza. Sin aplausos. La tradición budista enfatiza la quietud interior y la reflexión silenciosa.
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Como guía, la pregunta que más me hacen es: "¿Qué pasa si aplaudo por error en un templo?" La respuesta honesta es: no pasa nada malo. Nadie se ofenderá ni habrá ninguna consecuencia espiritual. Pero conocer la diferencia demuestra un respeto genuino y te permite conectar de forma más auténtica con cada tradición. Es el tipo de detalle que te transforma de un observador pasivo en un participante activo.
+            </p>
+
+            {/* Senso-ji 30 Million */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Templo Senso-ji: Lo que Realmente Significa la Cifra de 30 Millones de Visitantes Anuales
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Es habitual ver que Senso-ji se describe como un templo que recibe "30 millones de visitantes al año," lo que lo convierte en uno de los sitios religiosos más visitados del mundo. Pero, ¿es precisa esta cifra? Como alguien que visita Senso-ji varias veces por semana con grupos de tour, puedo ofrecer algo de contexto.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              La cifra de 30 millones proviene de encuestas realizadas por la Oficina de Asuntos Industriales y Laborales del Gobierno Metropolitano de Tokio (ahora Oficina de Turismo y Economía Local), que registra el número de visitantes en los principales destinos turísticos de la ciudad. Este número incluye tanto turistas extranjeros como visitantes japoneses nacionales, además de los visitantes recurrentes a lo largo del año. Se trata de una estimación, no de un recuento exacto — Senso-ji no tiene torniquetes — pero se basa en una metodología de encuestas sistemática y es ampliamente citada en las estadísticas oficiales de turismo de Tokio.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              ¿Qué significa esto en la práctica? En una tarde ajetreada de fin de semana, la calle de acceso Nakamise-dori puede sentirse realmente abarrotada, con multitudes hombro con hombro desde Kaminarimon hasta el salón principal. Sin embargo, la experiencia varía drásticamente según la hora y el día en que visites.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Mejores Horarios para Visitar Senso-ji (Consejos de Manabu)
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Temprano por la mañana (6:00–7:30 AM):</strong> Los terrenos del templo están abiertos las 24 horas, y el salón principal abre a las 6:00 AM (6:30 AM de octubre a marzo). A esta hora, compartirás el espacio con apenas un puñado de madrugadores y fieles locales. La luz de la mañana sobre la pagoda es espectacular, y podrás experimentar los rituales en un silencio casi absoluto. Esta es mi recomendación número uno.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Mañanas entre semana (antes de las 10 AM):</strong> Las multitudes aún son manejables. Puedes recorrer Nakamise-dori con comodidad y tomar fotos sin aglomeraciones de fondo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Por la noche (después de las 5 PM):</strong> Las tiendas de Nakamise cierran entre las 5 y las 6 PM, pero los terrenos del templo permanecen abiertos. La Kaminarimon y la pagoda de cinco pisos iluminadas por la noche son verdaderamente mágicas, y las multitudes disminuyen significativamente después del cierre de las tiendas.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Evita:</strong> Las tardes de fin de semana (especialmente sábados de 11 AM a 3 PM), los días festivos nacionales, y los tres primeros días de enero (hatsumode — la tradicional visita de Año Nuevo al santuario, que atrae a millones de personas).
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              En mi{" "}
+              <Link to="/es/tours/asakusa" className="text-accent hover:underline">
+                tour privado a pie por Asakusa
+              </Link>
+              , siempre programo nuestra visita para evitar las peores aglomeraciones, y conozco los rincones más tranquilos del complejo que la mayoría de los visitantes pasan por alto. Experimentar Senso-ji con la guía de un experto marca la diferencia entre sentirte abrumado por las multitudes y apreciar verdaderamente lo que hace especial a este templo de 1,400 años de antigüedad.
+            </p>
+
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                ¿Quieres visitar templos y santuarios con un guía que te explique cada ritual?
+                ¿Quieres visitar los templos y santuarios de Tokio con un guía experto?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Conocer la etiqueta es una cosa — tener a alguien a tu lado que te explique la historia, el simbolismo y los detalles ocultos da vida a estos lugares sagrados. En nuestros tours, te guío paso a paso por cada ritual, comparto historias que las guías de viaje no incluyen y respondo todas tus preguntas en tiempo real. Ya sea tu primera visita a un santuario o la décima, siempre hay algo nuevo por descubrir.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours" className="btn-accent">
-                  Ver Tours a Pie
+                  Ver Tours Privados en Tokio
                 </Link>
                 <Link to="/es/contact" className="btn-outline">
                   Contactar
                 </Link>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="mt-16">
+              <h2 className="heading-section text-foreground mb-8">
+                Preguntas Frecuentes
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Se pueden visitar templos y santuarios gratis?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    La mayoría de los templos y santuarios de Tokio son de entrada gratuita. Lugares emblemáticos como Senso-ji, el Santuario Meiji y el Santuario de Asakusa no cobran entrada. Algunos templos cobran una pequeña tarifa de admisión (normalmente ¥300–500) para jardines interiores especiales, salas del tesoro o exposiciones de temporada. En general, las áreas principales de culto siempre son gratuitas — puedes participar en los rituales de oración, comprar omikuji y disfrutar del ambiente sin coste alguno.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Qué debo vestir para visitar un templo o santuario en Japón?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No existe un código de vestimenta estricto en la mayoría de los templos y santuarios de Tokio. No te negarán la entrada por llevar ropa casual, pantalones cortos o sandalias. Dicho esto, cubrir los hombros y las rodillas se considera respetuoso, especialmente si planeas entrar en los salones interiores o asistir a una ceremonia. El calzado cómodo para caminar es imprescindible, ya que muchos recintos tienen caminos de grava y escaleras. Lleva calcetines limpios y sin agujeros, ya que es posible que tengas que quitarte los zapatos en algunos templos. Los sombreros deben quitarse al entrar en las áreas de culto interiores.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Es irrespetuoso tomar fotos en los templos?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Las normas de fotografía varían según el lugar. Las áreas exteriores, los jardines y las fachadas de los edificios casi siempre se pueden fotografiar. Muchos templos prohíben la fotografía dentro de los salones principales y cerca de las estatuas sagradas — busca el icono de una cámara con una línea roja. Incluso donde esté permitida, actúa con discreción: sin flash, sin palos de selfie cerca de objetos sagrados, y silencia el sonido del obturador. En caso de duda, pregunta a un miembro del personal. Lo más importante es estar presente y ser respetuoso, en lugar de tratar la visita exclusivamente como una oportunidad fotográfica.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Cuál es la forma correcta de rezar en un santuario japonés?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    La práctica estándar en los santuarios sintoístas se llama ni-hai, ni-hakushu, ichi-hai: dos reverencias profundas, dos aplausos, y una reverencia final. Antes de rezar, lanza una moneda (la de ¥5 es la tradicional) en la caja de ofrendas y toca la campana si la hay. En los templos budistas, el ritual es diferente — junta las palmas en silencio (gassho) e inclina la cabeza sin aplaudir. Lo más importante es acercarse con sinceridad. Los japoneses aprecian genuinamente que los visitantes extranjeros hagan el esfuerzo de participar con respeto.
+                  </p>
+                </div>
               </div>
             </div>
           </article>
@@ -327,12 +476,15 @@ const EsEtiquetaTemplos = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Etiqueta en Templos y Santuarios de Japón — Guía Completa",
-            "description": "¿Vas a visitar templos y santuarios en Japón? Aprende la etiqueta esencial — cómo rezar, purificarte, hacer reverencia y comportarte con respeto. Guía de un guía japonés con licencia.",
+            "description": "Etiqueta en templos y santuarios de Japón explicada por un guía de Tokio con licencia y más de 500 tours. Errores comunes, consejos prácticos y guía experta para visitar Senso-ji y más.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
+              "jobTitle": "National Government Licensed Guide Interpreter",
+              "url": "https://tanuki-tabi-travel.com/about",
             },
             "datePublished": "2026-02-25",
+            "dateModified": "2026-03-07",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
@@ -342,6 +494,51 @@ const EsEtiquetaTemplos = () => {
               "@type": "WebPage",
               "@id": "https://tanuki-tabi-travel.com/es/blog/etiqueta-templos-santuarios",
             },
+          }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Se pueden visitar templos y santuarios gratis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La mayoría de los templos y santuarios de Tokio son de entrada gratuita. Lugares emblemáticos como Senso-ji, el Santuario Meiji y el Santuario de Asakusa no cobran entrada. Algunos templos cobran una pequeña tarifa de admisión (normalmente ¥300–500) para jardines interiores especiales, salas del tesoro o exposiciones de temporada. En general, las áreas principales de culto siempre son gratuitas.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué debo vestir para visitar un templo o santuario en Japón?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No existe un código de vestimenta estricto en la mayoría de los templos y santuarios de Tokio. No te negarán la entrada por llevar ropa casual. Cubrir los hombros y las rodillas se considera respetuoso, especialmente si planeas entrar en los salones interiores. El calzado cómodo es imprescindible, y lleva calcetines limpios ya que es posible que tengas que quitarte los zapatos en algunos templos.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Es irrespetuoso tomar fotos en los templos?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Las normas de fotografía varían según el lugar. Las áreas exteriores casi siempre se pueden fotografiar. Muchos templos prohíben la fotografía dentro de los salones principales y cerca de las estatuas sagradas. Incluso donde esté permitida, actúa con discreción: sin flash, sin palos de selfie cerca de objetos sagrados, y silencia el sonido del obturador. En caso de duda, pregunta a un miembro del personal.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuál es la forma correcta de rezar en un santuario japonés?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La práctica estándar en los santuarios sintoístas es ni-hai, ni-hakushu, ichi-hai: dos reverencias profundas, dos aplausos, y una reverencia final. Lanza una moneda en la caja de ofrendas y toca la campana antes de rezar. En los templos budistas, junta las palmas en silencio (gassho) e inclina la cabeza sin aplaudir.",
+                },
+              },
+            ],
           }),
         }}
       />

@@ -9,7 +9,7 @@ const EsGuiaShinjuku = () => {
     <Layout>
       <SEO
         title="Guía de Shinjuku — El Corazón de Tokio | Guía Local"
-        description="Guía de Shinjuku escrita por un guía japonés nativo. Golden Gai, Omoide Yokocho, Kabukicho y los mejores lugares donde comer y beber como un local."
+        description="La guía completa de Shinjuku escrita por un guía de Tokio con licencia. Lugares ocultos, mejores horarios, cómo sobrevivir a la estación y consejos que no encontrarás en ninguna guía."
         canonicalPath="/es/blog/guia-shinjuku"
         hreflang={[
           { lang: "en", path: "/blog/shinjuku-guide" },
@@ -43,6 +43,9 @@ const EsGuiaShinjuku = () => {
                 25 de febrero de 2026
               </span>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground italic">
+              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional residente en Tokio, que ha recorrido las calles de Shinjuku con cientos de visitantes internacionales.
+            </p>
           </div>
         </div>
       </section>
@@ -245,21 +248,190 @@ const EsGuiaShinjuku = () => {
               </li>
             </ul>
 
+            {/* Shinjuku según la Hora del Día */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Shinjuku según la Hora del Día: La Agenda de un Local
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Una de las preguntas que más me hacen los viajeros en mis tours es: "¿Cuándo debería visitar Shinjuku?" La respuesta depende completamente de lo que quieras experimentar. Así planificaría yo un día completo si fuera mi primera vez.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Mañana (7:00–9:00): Paseo Matutino por Shinjuku Gyoen
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Empieza el día con la calma que precede a la tormenta. Shinjuku Gyoen abre a las 9 AM (pero los alrededores son tranquilos y agradables para un paseo temprano). Llega justo cuando abran las puertas para disfrutar de los jardines en casi total soledad — el contraste con el caos que experimentarás más tarde hace que este momento sea especialmente gratificante. La luz de la mañana a través del jardín japonés es perfecta para la fotografía, y tendrás las amplias praderas prácticamente para ti solo.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Mediodía (12:00–14:00): Estrategia de Almuerzo en Depachika
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Dirígete al sótano de los grandes almacenes Isetan o Takashimaya para vivir la experiencia depachika. El truco está en el horario: llega justo antes de la avalancha del almuerzo (sobre las 11:30) o un poco después (13:30) para encontrar la mejor selección sin aglomeraciones. Arma una caja de bento con acompañamientos por una fracción de lo que costaría en un restaurante. Si hace buen tiempo, lleva tu botín del depachika de vuelta a Shinjuku Gyoen para un pícnic — es exactamente lo que hacen muchos oficinistas tokiotas, y es una de las experiencias de almuerzo más placenteras de la ciudad.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Tarde (17:00–19:00): Omoide Yokocho a la Hora Dorada
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Esta es la ventana mágica para Omoide Yokocho. Los puestos de yakitori empiezan a encender las brasas, los oficinistas comienzan a llegar tras la jornada laboral, y el sol poniente baña todo con esa luz cálida perfecta que se filtra entre el humo y el vapor. Siéntate en un taburete en uno de los puestos abiertos, pide una cerveza y unas brochetas, y contempla la transición del día a la noche. La atmósfera a esta hora no tiene igual — animada pero aún no agobiante, auténtica y llena de carácter.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Noche (19:00 en adelante): Kabukicho y Golden Gai
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Cuando cae la oscuridad, Shinjuku se transforma. Los carteles de neón cobran vida y la energía cambia del comercio diurno al entretenimiento nocturno. Empieza con un paseo por Kabukicho para absorber el espectáculo sensorial — la cabeza gigante de Godzilla, las pantallas monumentales, el bullicio de la gente. Después dirígete a Golden Gai sobre las 8-9 PM, cuando los bares están abiertos pero todavía no abarrotados. Cierra la velada con un ramen nocturno en alguno de los locales de las calles laterales al este de la estación. El día perfecto en Shinjuku termina con un humeante bol de fideos hacia las 11 PM.
+            </p>
+
+            {/* Lugares Ocultos */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Lugares Ocultos de Shinjuku que la Mayoría de los Turistas se Pierden
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Después de años guiando tours por Shinjuku, he recopilado un conjunto de rincones que nunca aparecen en las guías convencionales pero que siempre sorprenden y encantan a mis invitados. Estos son mis favoritos.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">El Santuario Hanazono de noche.</strong> Escondido justo detrás del caos neón de Kabukicho, el Santuario Hanazono es un remanso de serenidad por el que la mayoría de los turistas pasan de largo. El santuario se ilumina por la noche con suaves faroles rojos, creando un contraste surrealista con el distrito de entretenimiento a escasos metros. Visítalo después de las 8 PM para experimentar el efecto completo — pasarás de la sobrecarga sensorial a la contemplación tranquila en unos 30 segundos. El santuario también alberga un popular mercadillo los domingos.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">El mirador sur del Edificio del Gobierno Metropolitano al atardecer.</strong> La mayoría de los visitantes conocen los miradores gratuitos, pero pocos saben que la torre sur cierra a las 5:30 PM mientras la torre norte permanece abierta hasta las 11 PM. La jugada estratégica es visitar la torre sur sobre las 4:30 PM para las vistas del atardecer hacia el oeste (Monte Fuji en días despejados), y luego caminar hasta la torre norte después del anochecer para el paisaje urbano nocturno. Dos miradores, dos experiencias completamente diferentes, cero coste.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">El pasaje subterráneo desde la estación Shinjuku-sanchome.</strong> En lugar de navegar el caos de la estación de Shinjuku, los locales expertos usan la estación Shinjuku-sanchome de la línea Marunouchi, que tiene una conexión subterránea directa con los grandes almacenes Isetan y sale a una zona mucho más tranquila del este de Shinjuku. Este simple consejo puede ahorrarte 15 minutos de deambular confundido por la estación principal.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">La terraza del Takashimaya Times Square.</strong> En las plantas superiores de Takashimaya hay una pequeña terraza en la azotea que ofrece una perspectiva completamente diferente del horizonte de Shinjuku. Casi ningún turista la conoce. Toma el ascensor hasta la última planta, busca la salida a la terraza y disfruta de un momento de calma por encima del caos. Lo mejor es visitarla al final de la tarde.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">El distrito de cámaras de Nishi-Shinjuku.</strong> Las calles inmediatamente al oeste de la estación de Shinjuku (antes de llegar a la zona de rascacielos) albergan varias tiendas de cámaras de segunda mano — Kitamura Camera, Map Camera y otras. Aunque no vayas a comprar, curiosear por estas tiendas es una experiencia genuinamente japonesa, con cámaras y objetivos vintage impecables expuestos como joyas. Los fotógrafos en mis tours siempre me agradecen este desvío.
+              </li>
+            </ul>
+
+            {/* Shinjuku vs. Shibuya */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Shinjuku vs. Shibuya: ¿Cuál Deberías Visitar?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Esta es una de las preguntas más frecuentes que recibo de los viajeros que planifican su itinerario por Tokio. Ambos barrios son icónicos, pero ofrecen experiencias muy diferentes. Aquí va mi comparación honesta.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Para gastronomía y vida nocturna:</strong> Gana Shinjuku. Golden Gai, Omoide Yokocho y la densidad absoluta de restaurantes y bares hacen de Shinjuku el destino nocturno superior. Shibuya tiene buenas opciones para cenar, pero la variedad y la atmósfera de Shinjuku no tienen rival.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Para compras:</strong> Shibuya lleva ventaja, sobre todo en moda. Shibuya 109, el complejo Miyashita Park y la cercana calle Takeshita de Harajuku ofrecen una experiencia de compras más joven y a la vanguardia de las tendencias.{" "}
+                <Link to="/es/tours/shibuya-harajuku" className="text-accent hover:underline">
+                  Nuestro tour por Shibuya y Harajuku
+                </Link>{" "}
+                cubre lo mejor de esta zona. Los grandes almacenes de Shinjuku (Isetan, Takashimaya) son mejores para compras de gama alta y lujo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Para fotos de Instagram:</strong> Shibuya tiene el famoso Cruce de Scramble, que merece verse al menos una vez. Los callejones iluminados de neón de Shinjuku (Golden Gai, la entrada de Kabukicho) ofrecen fotos igual de espectaculares pero con un carácter más crudo y atmosférico.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Para espacios verdes:</strong> Shinjuku gana con facilidad gracias a Shinjuku Gyoen. Shibuya tiene el Parque Yoyogi y el bosque del Santuario Meiji cerca, pero Shinjuku Gyoen ofrece una experiencia de jardín superior.
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Mi recomendación si vas a visitar ambos:</strong> Visita Shibuya y Harajuku durante el día (conectan de forma natural), y luego dirígete a Shinjuku a última hora de la tarde para pasar allí la velada. Las dos zonas están separadas por una sola parada en la línea JR Yamanote, lo que hace esta combinación fácil y eficiente.
+            </p>
+
+            {/* Guía de Supervivencia de la Estación */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Moverse por Shinjuku: Guía de Supervivencia de la Estación
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              La estación de Shinjuku es oficialmente la estación de tren más transitada del mundo, con más de 3,5 millones de pasajeros diarios. Está servida por JR East, Odakyu, Keio, Tokyo Metro y Toei Subway, con más de 200 salidas conectadas a un laberinto subterráneo de pasillos comerciales. Incluso los tokiotas se pierden aquí a veces. Así es como puedes navegarla como un profesional.
+            </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Las Cuatro Salidas Clave
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Salida Este (東口 / Higashi-guchi):</strong> Úsala para Kabukicho, Golden Gai, el Santuario Hanazono y la zona de restaurantes del este de Shinjuku. Es la salida que más usarás para la vida nocturna y la gastronomía.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Salida Oeste (西口 / Nishi-guchi):</strong> Úsala para el Edificio del Gobierno Metropolitano de Tokio (miradores gratuitos), el distrito de rascacielos, Omoide Yokocho y los hoteles de la zona. El lado oeste es más tranquilo y corporativo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Salida Sur (南口 / Minami-guchi):</strong> Úsala para Takashimaya Times Square, el paseo Southern Terrace y el acceso a Shinjuku Gyoen (a unos 10 minutos a pie). La zona de la salida sur es un buen punto de encuentro porque tiene referencias claras y espacio abierto.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Nueva Salida Sur (新南口 / Shin-minami-guchi):</strong> Úsala para la Terminal de Autobuses de Shinjuku (Busta Shinjuku), que gestiona autobuses de larga distancia a destinos por todo Japón. También es útil para acceder a la zona de Shinjuku Gyoen desde un ángulo ligeramente diferente.
+              </li>
+            </ul>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Consejos de Supervivencia para la Estación
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Sigue los carteles de colores.</strong> Cada compañía ferroviaria usa un color diferente (JR es verde, Odakyu es azul, Keio es rosa/rojo, Metro usa varios colores según la línea). Sigue el color que necesites e ignora todo lo demás.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Usa la navegación interior de Google Maps.</strong> Google Maps tiene mapas interiores detallados de la estación de Shinjuku. Introduce tu destino y te guiará hasta la salida correcta. Esto solo puede ahorrarte 20 minutos de deambular perdido.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Evita la hora punta.</strong> Entre las 7:30–9:00 AM y las 5:30–7:30 PM, la estación se convierte en una marea humana de viajeros. Si es posible, programa tus trayectos fuera de estas franjas. La estación es mucho más tranquila (y navegable) fuera de las horas pico.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Si te pierdes, sube.</strong> Si estás desorientado bajo tierra, busca cualquier escalera que suba y sal a nivel de calle. Una vez en la superficie, puedes reorientarte usando los rascacielos (oeste) o los carteles de neón (este) como referencia, y volver a entrar a la estación por la entrada correcta.
+              </li>
+            </ul>
+
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                Descubre Shinjuku con un Local que Sabe Qué Puertas Abrir
+                ¿Quieres explorar Shinjuku con un guía experto que conoce cada rincón oculto?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Shinjuku se experimenta mejor con un guía local que pueda navegar los callejones ocultos, presentarte a los acogedores dueños de bares en Golden Gai y alejarte de las trampas para turistas. Ya sea que quieras una velada curada por las callejuelas iluminadas de neón o una exploración de día completo del distrito, diseñaremos algo perfecto para ti.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours/custom" className="btn-accent">
-                  Diseña un Tour Nocturno Personalizado
+                  Ver Opciones de Tour Personalizado
                 </Link>
                 <Link to="/es/contact" className="btn-outline">
                   Contáctanos
                 </Link>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="mt-16">
+              <h2 className="heading-section text-foreground mb-8">
+                Preguntas Frecuentes
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Es seguro Shinjuku por la noche?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Sí, Shinjuku es en general muy seguro por la noche, incluyendo el distrito de entretenimiento de Kabukicho. Japón tiene una de las tasas de criminalidad más bajas del mundo, y los delitos violentos contra turistas son extremadamente raros. Lo principal a lo que hay que prestar atención son los captadores que intentan atraerte a bares con precios inflados — simplemente rechaza y sigue caminando. Quédate en calles bien iluminadas, no aceptes bebidas de desconocidos y usa el sentido común. Guío regularmente tours nocturnos por Shinjuku y nunca he tenido un incidente de seguridad.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Cuánto tiempo debería pasar en Shinjuku?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Para una visita completa, planifica entre medio día y un día entero. Si vas corto de tiempo, una visita nocturna (a partir de las 5 PM) captura Shinjuku en su momento más atmosférico — empieza con Omoide Yokocho al atardecer, explora Kabukicho y Golden Gai tras el anochecer, y termina con un ramen nocturno. Si puedes dedicar un día completo, añade tiempo por la mañana en Shinjuku Gyoen y una tarde explorando los grandes almacenes y los mercados gastronómicos.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Por qué es más conocido Shinjuku?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Shinjuku es más conocido por su vibrante vida nocturna (Golden Gai y Kabukicho), la estación de tren más transitada del mundo, las impresionantes vistas gratuitas desde los miradores del Edificio del Gobierno Metropolitano de Tokio, el Jardín Nacional Shinjuku Gyoen y su increíble densidad de restaurantes y bares. Es esencialmente Tokio a máxima intensidad — luces de neón, edificios imponentes y opciones de entretenimiento interminables concentrados en un solo barrio.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">
+                    ¿Es seguro Kabukicho para los turistas?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Kabukicho es seguro para los turistas y se ha limpiado considerablemente en los últimos años con mayor presencia policial y desarrollos aptos para familias. El principal riesgo es ser abordado por captadores que intentan atraerte a bares o clubes con promesas de bebidas baratas — que suelen acabar en cuentas infladas. La regla simple es: si alguien te aborda en la calle, rechaza educadamente y sigue adelante. Quédate con establecimientos que tengan precios claramente publicados y buenas reseñas, y pasarás un rato estupendo.
+                  </p>
+                </div>
               </div>
             </div>
           </article>
@@ -275,12 +447,15 @@ const EsGuiaShinjuku = () => {
             "@type": "BlogPosting",
             "headline": "Guía de Shinjuku — El Corazón Iluminado de Neón de Tokio",
             "description":
-              "Guía de Shinjuku escrita por un guía japonés nativo. Golden Gai, Omoide Yokocho, Kabukicho y los mejores lugares donde comer y beber como un local.",
+              "La guía completa de Shinjuku escrita por un guía de Tokio con licencia. Lugares ocultos, mejores horarios, cómo sobrevivir a la estación y consejos que no encontrarás en ninguna guía.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
+              "jobTitle": "National Government Licensed Guide Interpreter",
+              "url": "https://tanuki-tabi-travel.com/about",
             },
             "datePublished": "2026-02-25",
+            "dateModified": "2026-03-07",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
@@ -290,6 +465,51 @@ const EsGuiaShinjuku = () => {
               "@type": "WebPage",
               "@id": "https://tanuki-tabi-travel.com/es/blog/guia-shinjuku",
             },
+          }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Es seguro Shinjuku por la noche?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí, Shinjuku es en general muy seguro por la noche, incluyendo Kabukicho. Japón tiene una de las tasas de criminalidad más bajas del mundo. Lo principal a lo que hay que prestar atención son los captadores que intentan atraerte a bares con precios inflados — simplemente rechaza y sigue caminando. Usa el sentido común y quédate en calles bien iluminadas.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuánto tiempo debería pasar en Shinjuku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Planifica entre medio día y un día entero para una visita completa. Si vas corto de tiempo, una visita nocturna (a partir de las 5 PM) captura Shinjuku en su momento más atmosférico. Para un día completo, añade tiempo por la mañana en Shinjuku Gyoen y una tarde explorando los grandes almacenes y los mercados gastronómicos.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Por qué es más conocido Shinjuku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shinjuku es más conocido por su vibrante vida nocturna (Golden Gai y Kabukicho), la estación de tren más transitada del mundo, los miradores gratuitos del Edificio del Gobierno Metropolitano de Tokio, el Jardín Nacional Shinjuku Gyoen y su increíble densidad de restaurantes y bares.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Es seguro Kabukicho para los turistas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kabukicho es seguro para los turistas y se ha limpiado considerablemente en los últimos años. El principal riesgo son los captadores que te abordan en la calle para atraerte a bares. Simplemente rechaza y sigue caminando. Quédate con establecimientos que tengan precios claramente publicados y buenas reseñas.",
+                },
+              },
+            ],
           }),
         }}
       />
