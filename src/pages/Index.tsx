@@ -168,7 +168,7 @@ const Index = () => {
             alt="Group photo with guests during a private Tokyo walking tour"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="relative container-section py-20">
@@ -177,7 +177,7 @@ const Index = () => {
               Tokyo Walks with Manabu —{" "}
               <span className="text-accent">Your Licensed Local Guide</span>
             </h1>
-            <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p className="mt-6 text-lg text-accent leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               500+ tours completed. 4.86★ average rating. Government-licensed guide.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>

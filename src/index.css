@@ -29,8 +29,8 @@
     --muted: 60 10% 93%;
     --muted-foreground: 0 0% 42%;
 
-    /* Gold accent — warm gold for CTAs, accents, hover states */
-    --accent: 48 88% 38%;
+    /* Gold accent — warm gold for CTAs, accents, hover states (#C9A84C) */
+    --accent: 44 54% 54%;
     --accent-foreground: 0 0% 5%;
 
     /* Subtle sage green for highlights */
@@ -38,7 +38,7 @@
     --highlight-foreground: 60 20% 97%;
 
     /* Gold accent for premium feel (same as accent) */
-    --gold: 48 88% 38%;
+    --gold: 44 54% 54%;
     --gold-foreground: 0 0% 5%;
 
     --destructive: 0 84% 60%;
@@ -46,14 +46,14 @@
 
     --border: 60 10% 88%;
     --input: 60 10% 88%;
-    --ring: 48 88% 38%;
+    --ring: 44 54% 54%;
 
     --radius: 0.5rem;
 
     /* Custom gradients */
     --gradient-hero: linear-gradient(180deg, hsl(60 20% 97% / 0) 0%, hsl(60 20% 97% / 0.8) 50%, hsl(60 20% 97%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(60 15% 95%) 0%, hsl(60 10% 92%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(48 88% 38%) 0%, hsl(43 85% 42%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(44 54% 54%) 0%, hsl(44 60% 48%) 100%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 10% / 0.08);
@@ -65,10 +65,10 @@
     --sidebar-foreground: 0 0% 10%;
     --sidebar-primary: 0 0% 5%;
     --sidebar-primary-foreground: 60 20% 97%;
-    --sidebar-accent: 48 88% 38%;
+    --sidebar-accent: 44 54% 54%;
     --sidebar-accent-foreground: 0 0% 5%;
     --sidebar-border: 60 10% 88%;
-    --sidebar-ring: 48 88% 38%;
+    --sidebar-ring: 44 54% 54%;
   }
 
   .dark {
@@ -90,13 +90,13 @@
     --muted: 0 0% 14%;
     --muted-foreground: 0 0% 55%;
 
-    --accent: 48 80% 42%;
+    --accent: 44 54% 50%;
     --accent-foreground: 0 0% 5%;
 
     --highlight: 150 25% 40%;
     --highlight-foreground: 60 10% 92%;
 
-    --gold: 48 80% 42%;
+    --gold: 44 54% 50%;
     --gold-foreground: 0 0% 5%;
 
     --destructive: 0 70% 45%;
@@ -104,16 +104,16 @@
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 48 80% 42%;
+    --ring: 44 54% 50%;
 
     --sidebar-background: 0 0% 9%;
     --sidebar-foreground: 60 10% 92%;
     --sidebar-primary: 60 10% 92%;
     --sidebar-primary-foreground: 0 0% 7%;
-    --sidebar-accent: 48 80% 42%;
+    --sidebar-accent: 44 54% 50%;
     --sidebar-accent-foreground: 0 0% 5%;
     --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 48 80% 42%;
+    --sidebar-ring: 44 54% 50%;
   }
 }
 
