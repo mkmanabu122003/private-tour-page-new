@@ -208,7 +208,7 @@ const Index = () => {
                 <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <signal.icon className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="text-lg font-medium text-foreground">
+                <h3 className="text-lg font-semibold text-foreground">
                   {signal.title}
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
@@ -339,7 +339,7 @@ const Index = () => {
               <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
                 1
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 Choose a Tour
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -350,7 +350,7 @@ const Index = () => {
               <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
                 2
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 Share Your Interests
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -361,7 +361,7 @@ const Index = () => {
               <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
                 3
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 Explore Tokyo
               </h3>
               <p className="text-muted-foreground leading-relaxed">
