@@ -46,6 +46,25 @@ import EsMejorEpocaVisitarTokio from "./pages/es/blog/EsMejorEpocaVisitarTokio";
 import EsEtiquetaTemplos from "./pages/es/blog/EsEtiquetaTemplos";
 import EsValeLaPenaGuia from "./pages/es/blog/EsValeLaPenaGuia";
 import EsComparativaExcursiones from "./pages/es/blog/EsComparativaExcursiones";
+import EsMonteFujiDesdeTokio from "./pages/es/blog/EsMonteFujiDesdeTokio";
+import EsPropinasenJapon from "./pages/es/blog/EsPropinasenJapon";
+import EsQueSecomeEnJapon from "./pages/es/blog/EsQueSecomeEnJapon";
+import EsMercadoTsukijiTokio from "./pages/es/blog/EsMercadoTsukijiTokio";
+import EsComidaCallejeraTokio from "./pages/es/blog/EsComidaCallejeraTokio";
+import EsQueComerEnJapon from "./pages/es/blog/EsQueComerEnJapon";
+import EsJapanRailPass from "./pages/es/blog/EsJapanRailPass";
+import EsTemplosFamososJapon from "./pages/es/blog/EsTemplosFamososJapon";
+import EsItinerarioTokio5Dias from "./pages/es/blog/EsItinerarioTokio5Dias";
+import EsMonteFujiSeVeDesdeTokio from "./pages/es/blog/EsMonteFujiSeVeDesdeTokio";
+import EsExcursionNikkoDesdeTokio from "./pages/es/blog/EsExcursionNikkoDesdeTokio";
+import EsKamakuraDesdeTokio from "./pages/es/blog/EsKamakuraDesdeTokio";
+import EsYanakaTokio from "./pages/es/blog/EsYanakaTokio";
+import EsGuiaLicenciaOficialJapon from "./pages/es/blog/EsGuiaLicenciaOficialJapon";
+import EsAsakusaTokioGuia from "./pages/es/blog/EsAsakusaTokioGuia";
+import EsTsukiji2026 from "./pages/es/blog/EsTsukiji2026";
+import EsShitamachiTokio from "./pages/es/blog/EsShitamachiTokio";
+import EsCuantoCuestaGuiaPrivadoTokio from "./pages/es/blog/EsCuantoCuestaGuiaPrivadoTokio";
+import EsValeLaPenaGuiaPrivadoTokio from "./pages/es/blog/EsValeLaPenaGuiaPrivadoTokio";
 
 const queryClient = new QueryClient();
 
@@ -99,6 +118,25 @@ const AppRoutes = () => (
         <Route path="/es/blog/etiqueta-templos-santuarios" element={<EsEtiquetaTemplos />} />
         <Route path="/es/blog/vale-la-pena-contratar-guia" element={<EsValeLaPenaGuia />} />
         <Route path="/es/blog/comparativa-excursiones" element={<EsComparativaExcursiones />} />
+        <Route path="/es/blog/monte-fuji-desde-tokio" element={<EsMonteFujiDesdeTokio />} />
+        <Route path="/es/blog/propinas-en-japon" element={<EsPropinasenJapon />} />
+        <Route path="/es/blog/que-se-come-en-japon" element={<EsQueSecomeEnJapon />} />
+        <Route path="/es/blog/mercado-tsukiji-tokio" element={<EsMercadoTsukijiTokio />} />
+        <Route path="/es/blog/comida-callejera-tokio" element={<EsComidaCallejeraTokio />} />
+        <Route path="/es/blog/que-comer-en-japon" element={<EsQueComerEnJapon />} />
+        <Route path="/es/blog/japan-rail-pass-vale-la-pena" element={<EsJapanRailPass />} />
+        <Route path="/es/blog/templos-famosos-japon" element={<EsTemplosFamososJapon />} />
+        <Route path="/es/blog/itinerario-tokio-5-dias" element={<EsItinerarioTokio5Dias />} />
+        <Route path="/es/blog/monte-fuji-se-ve-desde-tokio" element={<EsMonteFujiSeVeDesdeTokio />} />
+        <Route path="/es/blog/excursion-nikko-desde-tokio" element={<EsExcursionNikkoDesdeTokio />} />
+        <Route path="/es/blog/kamakura-desde-tokio" element={<EsKamakuraDesdeTokio />} />
+        <Route path="/es/blog/yanaka-tokio-itinerario" element={<EsYanakaTokio />} />
+        <Route path="/es/blog/guia-licencia-oficial-japon" element={<EsGuiaLicenciaOficialJapon />} />
+        <Route path="/es/blog/asakusa-tokio-guia" element={<EsAsakusaTokioGuia />} />
+        <Route path="/es/blog/tsukiji-2026" element={<EsTsukiji2026 />} />
+        <Route path="/es/blog/shitamachi-tokio" element={<EsShitamachiTokio />} />
+        <Route path="/es/blog/cuanto-cuesta-guia-privado-tokio" element={<EsCuantoCuestaGuiaPrivadoTokio />} />
+        <Route path="/es/blog/vale-la-pena-guia-privado-tokio" element={<EsValeLaPenaGuiaPrivadoTokio />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -25,6 +25,15 @@ const blogPosts: BlogPost[] = [
     category: "Guías de Barrios de Tokio",
   },
   {
+    slug: "asakusa-tokio-guia",
+    title: "Asakusa: Qué Ver, Qué Evitar y Cómo Ir Antes Que los Turistas",
+    description:
+      "Asakusa recibe millones de turistas al año, pero a las 7am es otro mundo. Un guía local te enseña cómo vivir el barrio como un habitante.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+  },
+  {
     slug: "guia-shibuya-harajuku",
     title: "Shibuya y Harajuku — Guía Local del Tokio Moderno",
     description:
@@ -51,6 +60,33 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
   },
+  {
+    slug: "mercado-tsukiji-tokio",
+    title: "Mercado de Tsukiji en Tokio: Qué Queda y Qué Vale la Pena Ver en 2026",
+    description:
+      "El mercado interior de Tsukiji cerró en 2018. ¿Qué hay ahora? Un guía oficial explica qué sigue abierto, qué comer y por qué aún vale la visita.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+  },
+  {
+    slug: "yanaka-tokio-itinerario",
+    title: "Yanaka, el Tokio Auténtico: Ruta de 3 Horas con un Guía Japonés",
+    description:
+      "Yanaka es el barrio que sobrevivió a los bombardeos de la guerra. Un guía oficial te lleva por sus calles, templos y la vida que desapareció del resto de Tokio.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+  },
+  {
+    slug: "shitamachi-tokio",
+    title: "El Tokio de Antes: Guía del Shitamachi para Viajeros Curiosos",
+    description:
+      "Shitamachi significa \"ciudad baja\". Es el Tokio que sobrevivió, el que los japoneses ya casi olvidaron. Un guía te lo explica y te lleva por él.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+  },
   // Guías de Excursiones
   {
     slug: "comparativa-excursiones",
@@ -58,6 +94,42 @@ const blogPosts: BlogPost[] = [
     description:
       "¿No puedes decidir entre Kamakura, Hakone o Nikko? Un guía local compara tiempo de viaje, puntos destacados y para quién es mejor cada excursión.",
     date: "25 de febrero de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+  },
+  {
+    slug: "excursion-nikko-desde-tokio",
+    title: "Excursión a Nikko desde Tokio: Guía Completa 2026",
+    description:
+      "Cómo ir a Nikko desde Tokio, cuánto tarda, qué ver y si vale la pena ir con guía o solo. Todo lo que necesitas saber antes de salir.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+  },
+  {
+    slug: "kamakura-desde-tokio",
+    title: "Kamakura desde Tokio: Lo Que Nadie Te Cuenta Antes de Ir",
+    description:
+      "Kamakura en un día desde Tokio: el Gran Buda, los templos, la comida y los errores que cometen casi todos los turistas. Guía 2026.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+  },
+  {
+    slug: "monte-fuji-desde-tokio",
+    title: "Monte Fuji desde Tokio: Guía Completa 2026 para Verlo o Subir",
+    description:
+      "¿Cómo ir al Monte Fuji desde Tokio? Un guía con licencia oficial explica las mejores opciones para verlo o subirlo, temporadas, precios y errores que evitar.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+  },
+  {
+    slug: "monte-fuji-se-ve-desde-tokio",
+    title: "¿Se Ve el Monte Fuji desde Tokio? Cuándo, Desde Dónde y Cómo",
+    description:
+      "Sí, se puede ver el Monte Fuji desde Tokio. Un guía local te dice los mejores puntos, las horas y la época del año para verlo con claridad.",
+    date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
   },
@@ -72,11 +144,29 @@ const blogPosts: BlogPost[] = [
     category: "Planifica tu Viaje",
   },
   {
+    slug: "itinerario-tokio-5-dias",
+    title: "Itinerario Tokio 5 Días: La Ruta Que Yo Haría Como Guía",
+    description:
+      "El itinerario de Tokio para 5 días que recomiendo a mis clientes: barrios, comida, transporte y los errores que evitar en cada día.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Planifica tu Viaje",
+  },
+  {
     slug: "mejor-epoca-visitar-tokio",
     title: "Mejor Época para Visitar Tokio — Guía Mes a Mes",
     description:
       "¿Cuándo visitar Tokio? Un guía local analiza el clima, eventos, multitudes y costes de cada mes para planificar el viaje perfecto.",
     date: "25 de febrero de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Planifica tu Viaje",
+  },
+  {
+    slug: "japan-rail-pass-vale-la-pena",
+    title: "Japan Rail Pass 2026: ¿Vale la Pena? La Respuesta Honesta de un Guía",
+    description:
+      "¿Comprar el JR Pass o no? Un guía oficial japonés hace los cálculos reales según tu itinerario y te dice cuándo conviene y cuándo no.",
+    date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
   },
@@ -89,6 +179,62 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
   },
+  // Cultura Japonesa
+  {
+    slug: "propinas-en-japon",
+    title: "Propinas en Japón: Por Qué NO Debes Dejar Propina",
+    description:
+      "En Japón no se deja propina. Pero ¿por qué? Un guía oficial japonés explica la cultura detrás de esta costumbre y qué hacer en hoteles, restaurantes y taxis.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Cultura Japonesa",
+  },
+  {
+    slug: "templos-famosos-japon",
+    title: "Los Templos Más Famosos de Japón: Guía para Entenderlos de Verdad",
+    description:
+      "Senso-ji, Fushimi Inari, Kinkaku-ji... Un guía oficial explica qué ver, cómo comportarse y qué significa cada elemento en los templos japoneses.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Cultura Japonesa",
+  },
+  // Gastronomía Japonesa
+  {
+    slug: "que-se-come-en-japon",
+    title: "¿Qué Se Come en Japón? La Guía de Comida Japonesa Que Nadie Más Te Da",
+    description:
+      "Más allá del sushi y el ramen: un guía local japonés te explica qué comer realmente en Japón, dónde encontrarlo y qué evitar como turista.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+  },
+  {
+    slug: "que-comer-en-japon",
+    title: "Qué Comer en Japón: 15 Platos Que No Puedes Perderte",
+    description:
+      "Lista definitiva de comida japonesa imprescindible. Un guía oficial con 500+ tours te dice qué pedir, dónde y en qué orden probarlos.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+  },
+  {
+    slug: "comida-callejera-tokio",
+    title: "Comida Callejera en Tokio: Lo Que Come un Guía Local",
+    description:
+      "Takoyaki, yakitori, taiyaki... Un guía oficial de Tokio te lleva por los mejores puestos de comida callejera en Asakusa, Yanaka y más.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+  },
+  {
+    slug: "tsukiji-2026",
+    title: "Tsukiji en 2026: Mi Ruta Gastronómica Como Guía Local",
+    description:
+      "Un guía oficial de Tokio comparte su ruta personal por el mercado de Tsukiji en 2026: qué puestos visitar, qué probar primero y cómo comer como un japonés.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+  },
   // Guías Útiles
   {
     slug: "vale-la-pena-contratar-guia",
@@ -99,12 +245,41 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
   },
+  {
+    slug: "vale-la-pena-guia-privado-tokio",
+    title: "¿Vale la Pena un Guía Privado en Tokio? Mi Respuesta Sin Rodeos",
+    description:
+      "¿Necesitas un guía privado en Tokio o puedes ir solo? Un guía oficial con 500+ tours te da su respuesta honesta, con ejemplos reales de sus clientes.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+  },
+  {
+    slug: "cuanto-cuesta-guia-privado-tokio",
+    title: "¿Cuánto Cuesta Contratar un Guía Privado en Tokio? Precios Reales 2026",
+    description:
+      "Precios reales de guías privados en Tokio: desde guías sin licencia hasta intérpretes oficiales. Qué incluye, qué no, y cómo elegir bien.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+  },
+  {
+    slug: "guia-licencia-oficial-japon",
+    title: "Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa",
+    description:
+      "En Japón existe un examen nacional para guías turísticos. Qué diferencia a un guía con licencia de uno sin ella, y por qué debería importarte.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+  },
 ];
 
 const categories = [
   "Guías de Barrios de Tokio",
   "Guías de Excursiones",
   "Planifica tu Viaje",
+  "Cultura Japonesa",
+  "Gastronomía Japonesa",
   "Guías Útiles",
 ];
 
