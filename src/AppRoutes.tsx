@@ -21,6 +21,23 @@ import ShinjukuGuide from "./pages/blog/ShinjukuGuide";
 import TsukijiGuide from "./pages/blog/TsukijiGuide";
 import BestTimeToVisit from "./pages/blog/BestTimeToVisit";
 import TempleEtiquette from "./pages/blog/TempleEtiquette";
+import AsakusaGuideNew from "./pages/blog/AsakusaGuideNew";
+import JapanRailPass from "./pages/blog/JapanRailPass";
+import KamakuraDayTrip from "./pages/blog/KamakuraDayTrip";
+import KawagoeDayTrip from "./pages/blog/KawagoeDayTrip";
+import LicensedTourGuideJapan from "./pages/blog/LicensedTourGuideJapan";
+import NikkoDayTrip from "./pages/blog/NikkoDayTrip";
+import OldTokyoShitamachi from "./pages/blog/OldTokyoShitamachi";
+import RamenGuideTokyo from "./pages/blog/RamenGuideTokyo";
+import SensojiMostVisited from "./pages/blog/SensojiMostVisited";
+import SushiGuideTokyo from "./pages/blog/SushiGuideTokyo";
+import TippingInJapan from "./pages/blog/TippingInJapan";
+import TokyoHiddenGems from "./pages/blog/TokyoHiddenGems";
+import TokyoItinerary5Days from "./pages/blog/TokyoItinerary5Days";
+import TokyoOnABudget from "./pages/blog/TokyoOnABudget";
+import TsukijiMarketGuide from "./pages/blog/TsukijiMarketGuide";
+import YanakaWalkingRoute from "./pages/blog/YanakaWalkingRoute";
+import YokohamaDayTrip from "./pages/blog/YokohamaDayTrip";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
 import EsAsakusa from "./pages/es/tours/EsAsakusa";
@@ -92,6 +109,23 @@ const AppRoutes = () => (
         <Route path="/blog/tsukiji-guide-food-lover" element={<TsukijiGuide />} />
         <Route path="/blog/best-time-to-visit-tokyo" element={<BestTimeToVisit />} />
         <Route path="/blog/japan-temple-shrine-etiquette" element={<TempleEtiquette />} />
+        <Route path="/blog/asakusa-guide" element={<AsakusaGuideNew />} />
+        <Route path="/blog/japan-rail-pass-worth-it" element={<JapanRailPass />} />
+        <Route path="/blog/kamakura-day-trip-from-tokyo" element={<KamakuraDayTrip />} />
+        <Route path="/blog/kawagoe-day-trip-from-tokyo" element={<KawagoeDayTrip />} />
+        <Route path="/blog/licensed-tour-guide-japan" element={<LicensedTourGuideJapan />} />
+        <Route path="/blog/nikko-day-trip-from-tokyo" element={<NikkoDayTrip />} />
+        <Route path="/blog/old-tokyo-shitamachi" element={<OldTokyoShitamachi />} />
+        <Route path="/blog/ramen-guide-tokyo" element={<RamenGuideTokyo />} />
+        <Route path="/blog/senso-ji-most-visited-temple" element={<SensojiMostVisited />} />
+        <Route path="/blog/sushi-guide-tokyo" element={<SushiGuideTokyo />} />
+        <Route path="/blog/tipping-in-japan" element={<TippingInJapan />} />
+        <Route path="/blog/tokyo-hidden-gems" element={<TokyoHiddenGems />} />
+        <Route path="/blog/tokyo-itinerary-5-days" element={<TokyoItinerary5Days />} />
+        <Route path="/blog/tokyo-on-a-budget" element={<TokyoOnABudget />} />
+        <Route path="/blog/tsukiji-market-guide" element={<TsukijiMarketGuide />} />
+        <Route path="/blog/yanaka-tokyo-walking-route" element={<YanakaWalkingRoute />} />
+        <Route path="/blog/yokohama-day-trip-from-tokyo" element={<YokohamaDayTrip />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
         <Route path="/es/tours" element={<EsTours />} />

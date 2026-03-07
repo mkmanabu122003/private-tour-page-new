@@ -7,8 +7,8 @@ const ShinjukuGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Shinjuku Guide: Nightlife, Food & Hidden Spots | Tanuki Tabi Travel"
-        description="The complete Shinjuku travel guide written by a licensed Tokyo guide. Hidden spots, best times to visit, how to survive the station, and insider tips you won't find in any guidebook."
+        title="Shinjuku Guide: What a Licensed Guide Shows Clients"
+        description="Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time — and what to skip."
         canonicalPath="/blog/shinjuku-guide"
       />
 
@@ -25,7 +25,7 @@ const ShinjukuGuide = () => {
             </Link>
             <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
             <h1 className="heading-display text-foreground">
-              Shinjuku Guide — Tokyo's Neon-Lit Heart
+              Shinjuku Guide: What a Licensed Guide Actually Shows Clients
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -507,6 +507,31 @@ const ShinjukuGuide = () => {
               <strong className="text-foreground">My recommendation if you're visiting both:</strong> Visit Shibuya and Harajuku during the day (they connect naturally), then head to Shinjuku in the late afternoon and spend the evening there. The two areas are only one stop apart on the JR Yamanote Line, making this combination easy and efficient.
             </p>
 
+            {/* What I Show Clients */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              What I Actually Show Clients in This Shinjuku Guide
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              When I bring private tour clients to Shinjuku, I don't just show them the neon signs and say "here's the famous crossing." I show them why Shinjuku looks the way it does — and how it connects to the rest of Tokyo's story.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Shinjuku is pure Yamanote — the "high city" side of Tokyo's ancient class divide. While the{" "}
+              <Link to="/blog/tokyo-hidden-gems" className="text-accent hover:underline">
+                neighborhoods I cover in my Tokyo hidden gems guide
+              </Link>
+              {" "}represent old Shitamachi merchant culture, Shinjuku represents what happened when those merchant traditions met 20th-century capitalism. The department stores, the entertainment district, the sheer commercial intensity — this is the energy of Edo-period merchants channeled through modern Japanese ambition.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Understanding this context changes how you see Shinjuku. Golden Gai isn't just "a cool bar alley" — it's the last surviving fragment of the black market economy that sprang up after WWII, when this area was bombed flat and rebuilt by entrepreneurs with nothing to lose. Omoide Yokocho isn't just "a food alley" — it's a memory of post-war street vendors who fed a starving city and never left. When I explain this history to my clients, Shinjuku stops being overwhelming and starts being fascinating.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you're building a{" "}
+              <Link to="/blog/tokyo-itinerary-5-days" className="text-accent hover:underline">
+                5-day Tokyo itinerary
+              </Link>
+              , I recommend saving Shinjuku for the evening of Day 3 or later — after you've already seen old Tokyo in Asakusa and Yanaka. The contrast makes Shinjuku's modern energy far more striking.
+            </p>
+
             {/* Station Survival Guide */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Getting Around Shinjuku: The Station Survival Guide
@@ -618,8 +643,8 @@ const ShinjukuGuide = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Shinjuku Guide — Tokyo's Neon-Lit Heart",
-            "description": "The complete Shinjuku travel guide written by a licensed Tokyo guide. Hidden spots, best times to visit, how to survive the station, and insider tips you won't find in any guidebook.",
+            "headline": "Shinjuku Guide: What a Licensed Guide Actually Shows Clients",
+            "description": "Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time — and what to skip.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
