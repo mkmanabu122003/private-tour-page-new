@@ -18,6 +18,9 @@ import tourUeno from "@/assets/tour-ueno.jpg";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
+import asakusaTemple from "@/assets/asakusa-temple.jpg";
+import tsukijiMarket from "@/assets/tsukiji-market.jpg";
+import shibuyaStreet from "@/assets/shibuya-street.jpg";
 
 const tours = [
   {
@@ -241,6 +244,29 @@ const Index = () => {
                 That's why guests from over 30 countries have called this the best
                 tour of the trip — not just of Tokyo, but of their entire journey.
               </p>
+            </div>
+            <div className="mt-10 grid grid-cols-3 gap-3 md:gap-4">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <img
+                  src={asakusaTemple}
+                  alt="Senso-ji Temple with Tokyo Skytree"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <img
+                  src={tsukijiMarket}
+                  alt="Tsukiji fish market"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <img
+                  src={shibuyaStreet}
+                  alt="Shibuya streets at night"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
