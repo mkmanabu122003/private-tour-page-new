@@ -12,6 +12,17 @@ const TokyoOnABudget = () => {
         canonicalPath="/blog/tokyo-on-a-budget"
       />
 
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/tours/asakusa-nakamise-street.jpg"
+          alt="Nakamise shopping street in Asakusa — Tokyo on a budget"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
