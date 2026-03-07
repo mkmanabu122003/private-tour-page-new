@@ -1,6 +1,6 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Shield, Star } from "lucide-react";
+import { ArrowRight, Award, Users, Shield, Star, MapPin, Heart, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
@@ -206,9 +206,7 @@ const EsIndex = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {trustSignals.map((signal) => (
               <div key={signal.title} className="text-center group">
-                <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <signal.icon className="w-7 h-7 text-accent" />
-                </div>
+                <signal.icon className="w-7 h-7 text-accent mx-auto mb-4" strokeWidth={1.2} />
                 <h3 className="text-lg font-medium text-foreground">
                   {signal.title}
                 </h3>
@@ -268,7 +266,8 @@ const EsIndex = () => {
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Explora Tokio</p>
+            <p className="text-label text-accent mb-4">Explora Tokio</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
             <h2 className="heading-section text-foreground">Tours Disponibles en Español</h2>
             <p className="mt-4 text-body">
               Elige entre tours cuidadosamente diseñados o crea tu propia experiencia personalizada.
@@ -335,7 +334,8 @@ const EsIndex = () => {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-label text-accent mb-3">Tu Guía</p>
+              <p className="text-label text-accent mb-4">Tu Guía</p>
+              <div className="w-10 h-px bg-accent mb-6" />
               <h2 className="heading-section text-foreground">
                 Conoce a Manabu — Tu Guía Oficial en Tokio
               </h2>
@@ -367,43 +367,38 @@ const EsIndex = () => {
       {/* How to Book */}
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Reserva Fácil</p>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-label text-accent mb-4">Reserva Fácil</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
             <h2 className="heading-section text-foreground">Cómo Reservar</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
-                1
-              </div>
+              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Elige tu tour
+                Elige tu experiencia
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Explora nuestros tours o solicita un itinerario personalizado.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Explora nuestros tours o cuéntame tu día ideal en Tokio.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
-                2
-              </div>
+              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Cuéntame tus intereses
+                Comparte lo que te apasiona
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Gastronomía, historia, fotografía, cultura pop — lo adaptamos todo.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Historia, gastronomía, callejones ocultos — creo la ruta a tu medida.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
-                3
-              </div>
+              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Explora Tokio
+                Recorremos Tokio juntos
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Nos encontramos y descubrimos Tokio a tu ritmo. Sin aglomeraciones, sin prisas.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Sin guiones. Sin multitudes. Solo tú, tu guía y la ciudad.
               </p>
             </div>
           </div>
@@ -444,7 +439,8 @@ const EsIndex = () => {
       <section className="py-20 md:py-28">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Opiniones</p>
+            <p className="text-label text-accent mb-4">Opiniones</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
             <h2 className="heading-section text-foreground">Lo Que Dicen los Viajeros</h2>
           </div>
 

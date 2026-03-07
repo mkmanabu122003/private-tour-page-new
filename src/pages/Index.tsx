@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Shield, Star } from "lucide-react";
+import { ArrowRight, Award, Users, Shield, Star, MapPin, Heart, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
@@ -208,9 +208,7 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {trustSignals.map((signal) => (
               <div key={signal.title} className="text-center group">
-                <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <signal.icon className="w-7 h-7 text-accent" />
-                </div>
+                <signal.icon className="w-7 h-7 text-accent mx-auto mb-4" strokeWidth={1.2} />
                 <h3 className="text-lg font-semibold text-foreground">
                   {signal.title}
                 </h3>
@@ -276,7 +274,8 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Explore Tokyo</p>
+            <p className="text-label text-accent mb-4">Explore Tokyo</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
             <h2 className="heading-section text-foreground">Featured Tours</h2>
             <p className="mt-4 text-body">
               Choose from carefully curated walking tours or create your own custom experience.
@@ -317,7 +316,8 @@ const Index = () => {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-label text-accent mb-3">Your Guide</p>
+              <p className="text-label text-accent mb-4">Your Guide</p>
+              <div className="w-10 h-px bg-accent mb-6" />
               <h2 className="heading-section text-foreground">
                 Meet Manabu — Your Licensed Tokyo Guide
               </h2>
@@ -355,43 +355,38 @@ const Index = () => {
       {/* How It Works */}
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Simple Booking</p>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-label text-accent mb-4">Simple Booking</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
             <h2 className="heading-section text-foreground">How It Works</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
-                1
-              </div>
+              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Choose a Tour
+                Choose Your Experience
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Browse our curated tours or request a custom itinerary tailored to your interests.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Browse curated tours or tell me your dream day in Tokyo.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
-                2
-              </div>
+              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Share Your Interests
+                Share What Excites You
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Tell us what excites you — food, history, photography, pop culture — and we'll personalize your experience.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                History, food, hidden alleys — I'll build the route around you.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mx-auto mb-6 text-2xl font-serif font-semibold">
-                3
-              </div>
+              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Explore Tokyo
+                Walk Tokyo Together
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Meet your guide and discover Tokyo at your own pace. No crowds, no rush — just an authentic experience.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                No scripts. No crowds. Just you, your guide, and the city.
               </p>
             </div>
           </div>
@@ -432,7 +427,8 @@ const Index = () => {
       <section className="py-20 md:py-28">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-3">Guest Reviews</p>
+            <p className="text-label text-accent mb-4">Guest Reviews</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
             <h2 className="heading-section text-foreground">What Travelers Say</h2>
           </div>
 
