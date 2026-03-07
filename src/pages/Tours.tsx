@@ -196,7 +196,7 @@ const Tours = () => {
         <div className="container-section">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 What's Included
               </h3>
               <ul className="space-y-2 text-muted-foreground">
@@ -207,7 +207,7 @@ const Tours = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 Tour Details
               </h3>
               <ul className="space-y-2 text-muted-foreground">
@@ -218,7 +218,7 @@ const Tours = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 Booking Info
               </h3>
               <ul className="space-y-2 text-muted-foreground">

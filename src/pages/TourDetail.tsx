@@ -911,7 +911,7 @@ const TourDetail = () => {
                     to={`/tours/${tourId}`}
                     className="group bg-card border border-border rounded-lg p-6 hover:border-accent/50 hover:shadow-[var(--shadow-card)] transition-all"
                   >
-                    <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
                       {tourNames[tourId]}
                     </h3>
                     <p className="mt-2 text-sm text-muted-foreground line-clamp-2">

@@ -249,7 +249,7 @@ const Contact = () => {
             <div className="lg:col-span-1">
               <div className="bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">
                     Contact Information
                   </h3>
                   <div className="space-y-4">
@@ -273,7 +273,7 @@ const Contact = () => {
                 </div>
 
                 <div className="pt-6 border-t border-border">
-                  <h3 className="text-lg font-medium text-foreground mb-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">
                     Quick Info
                   </h3>
                   <ul className="space-y-3">
