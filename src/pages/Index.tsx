@@ -177,7 +177,7 @@ const Index = () => {
               Tokyo Walks with Manabu —{" "}
               <span className="text-accent">Your Licensed Local Guide</span>
             </h1>
-            <p className="mt-6 text-lg text-accent leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               500+ tours completed. 4.86★ average rating. Government-licensed guide.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
@@ -187,12 +187,12 @@ const Index = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/tours" className="btn-accent">
+              <Link to="/tours" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
                 See Available Tours
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/70 text-white font-medium rounded-md transition-all duration-200 hover:bg-white/10 hover:border-white">
-                Tell Me What You're Looking For →
+              <Link to="/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
+                Custom Tour →
               </Link>
             </div>
           </div>

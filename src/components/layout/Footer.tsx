@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className="lg:col-span-2">
               <Link to="/es" className="inline-flex flex-col items-center gap-1">
                 <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-14 w-auto brightness-0 invert" />
-                <span className="font-serif text-[11px] font-semibold tracking-[0.2em] text-primary-foreground uppercase">Tanuki Tabi Travel</span>
+                <span className="font-serif text-base font-semibold tracking-[0.15em] text-primary-foreground uppercase">Tanuki Tabi Travel</span>
               </Link>
               <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
                 Tours privados a pie por Tokio y excursiones de día con guía con licencia oficial del gobierno.
@@ -123,7 +123,7 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex flex-col items-center gap-1">
               <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-14 w-auto brightness-0 invert" />
-              <span className="font-serif text-[11px] font-semibold tracking-[0.2em] text-primary-foreground uppercase">Tanuki Tabi Travel</span>
+              <span className="font-serif text-base font-semibold tracking-[0.15em] text-primary-foreground uppercase">Tanuki Tabi Travel</span>
             </Link>
             <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
               Private walking tours of Tokyo and day trips with a government-licensed guide.
