@@ -17,7 +17,7 @@ const credentials = [
   {
     icon: Shield,
     title: "Guía con Licencia del Gobierno",
-    description: "Intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士) — la certificación profesional más alta para guías en Japón, que requiere amplio conocimiento de historia, cultura, geografía y dominio del idioma.",
+    description: "Intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), la certificación profesional más alta para guías en Japón, que requiere amplio conocimiento de historia, cultura, geografía y dominio del idioma.",
   },
   {
     icon: Globe,
@@ -55,7 +55,7 @@ const whyChooseGuide = [
   {
     icon: Utensils,
     title: "Asistencia Completa",
-    description: "Desde reservas en restaurantes y navegación del tren hasta consejos de etiqueta cultural — tu guía se encarga de los detalles para que tú disfrutes del viaje.",
+    description: "Desde reservas en restaurantes y navegación del tren hasta consejos de etiqueta cultural, tu guía se encarga de los detalles para que tú disfrutes del viaje.",
   },
 ];
 
@@ -65,7 +65,7 @@ const allReviews = [
     author: "Couple visiting Tokyo",
   },
   {
-    text: "Manabu's tour was one of the best I've been on — he is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
+    text: "Manabu's tour was one of the best I've been on. He is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
     author: "Solo traveler",
   },
   {
@@ -98,7 +98,7 @@ const EsAbout = () => {
   return (
     <Layout>
       <SEO
-        title="Conoce a Manabu — Tu Guía Privado en Tokio | Tanuki Tabi Travel"
+        title="Conoce a Manabu, Tu Guía Privado en Tokio | Tanuki Tabi Travel"
         description="Manabu es un guía japonés nativo con licencia oficial del gobierno (全国通訳案内士), 500+ tours y valoración de 4.86★. Nacido en Kanazawa, criado en Kioto, ahora en Tokio."
         canonicalPath="/es/about"
         hreflang={[
@@ -121,7 +121,7 @@ const EsAbout = () => {
                 Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士) con base en Tokio. Esta es una certificación nacional emitida por el gobierno japonés, que requiere amplios conocimientos de historia, cultura, geografía y dominio del inglés y español. Solo los guías certificados están legalmente reconocidos como guías turísticos profesionales en Japón.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — aporto una perspectiva única de las regiones culturalmente más ricas de Japón. Con más de 500 tours completados y una valoración media de 4.86 estrellas, mi pasión es compartir las historias de Japón con viajeros de todo el mundo.
+                Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio, aporto una perspectiva única de las regiones culturalmente más ricas de Japón. Con más de 500 tours completados y una valoración media de 4.86 estrellas, mi pasión es compartir las historias de Japón con viajeros de todo el mundo.
               </p>
 
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -157,16 +157,16 @@ const EsAbout = () => {
             </h2>
             <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
               <p>
-                Mi filosofía como guía se basa en un principio: <strong className="text-foreground">cada viajero es diferente</strong>. En los primeros 30 minutos de cada tour, presto mucha atención a lo que te emociona — ya sea la arquitectura, la comida callejera, las curiosidades históricas o la fotografía — y adapto la ruta en tiempo real.
+                Mi filosofía como guía se basa en un principio: <strong className="text-foreground">cada viajero es diferente</strong>. En los primeros 30 minutos de cada tour, presto mucha atención a lo que te emociona, ya sea la arquitectura, la comida callejera, las curiosidades históricas o la fotografía, y adapto la ruta en tiempo real.
               </p>
               <p>
                 No doy monólogos con guión. Mis tours son conversaciones. Comparto historias y contexto cultural, pero también quiero escuchar tus preguntas, tus observaciones y lo que te sorprende de Japón. Ese intercambio es lo que hace la experiencia memorable.
               </p>
               <p>
-                Mis años en el mundo empresarial me dieron la oportunidad de viajar y trabajar con personas de diversos orígenes. Me di cuenta de que los visitantes a Japón a menudo perdían el contexto y el significado detrás de lo que veían — el "por qué" que hace las experiencias verdaderamente significativas.
+                Mis años en el mundo empresarial me dieron la oportunidad de viajar y trabajar con personas de diversos orígenes. Me di cuenta de que los visitantes a Japón a menudo perdían el contexto y el significado detrás de lo que veían, el "por qué" que hace las experiencias verdaderamente significativas.
               </p>
               <p className="font-medium text-foreground">
-                Hoy, nada me da más alegría que ver el momento de comprensión en los ojos de un visitante — cuando un templo deja de ser solo piedras viejas y se convierte en una conexión viva con siglos de creencia y artesanía.
+                Hoy, nada me da más alegría que ver el momento de comprensión en los ojos de un visitante, cuando un templo deja de ser solo piedras viejas y se convierte en una conexión viva con siglos de creencia y artesanía.
               </p>
             </div>
           </div>
@@ -315,7 +315,7 @@ const EsAbout = () => {
                 </p>
                 <footer>
                   <cite className="not-italic font-medium text-foreground text-sm">
-                    — {review.author}
+                    - {review.author}
                   </cite>
                 </footer>
               </blockquote>

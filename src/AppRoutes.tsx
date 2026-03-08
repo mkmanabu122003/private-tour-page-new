@@ -37,7 +37,9 @@ import TokyoItinerary5Days from "./pages/blog/TokyoItinerary5Days";
 import TokyoOnABudget from "./pages/blog/TokyoOnABudget";
 import TsukijiMarketGuide from "./pages/blog/TsukijiMarketGuide";
 import YanakaWalkingRoute from "./pages/blog/YanakaWalkingRoute";
+import YanakaWalkingTourGuide from "./pages/blog/YanakaWalkingTourGuide";
 import YokohamaDayTrip from "./pages/blog/YokohamaDayTrip";
+import VegetarianFoodTourTokyo from "./pages/blog/VegetarianFoodTourTokyo";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
 import EsAsakusa from "./pages/es/tours/EsAsakusa";
@@ -125,7 +127,9 @@ const AppRoutes = () => (
         <Route path="/blog/tokyo-on-a-budget" element={<TokyoOnABudget />} />
         <Route path="/blog/tsukiji-market-guide" element={<TsukijiMarketGuide />} />
         <Route path="/blog/yanaka-tokyo-walking-route" element={<YanakaWalkingRoute />} />
+        <Route path="/blog/yanaka-walking-tour-guide" element={<YanakaWalkingTourGuide />} />
         <Route path="/blog/yokohama-day-trip-from-tokyo" element={<YokohamaDayTrip />} />
+        <Route path="/blog/vegetarian-food-tour-tokyo" element={<VegetarianFoodTourTokyo />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
         <Route path="/es/tours" element={<EsTours />} />

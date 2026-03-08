@@ -29,7 +29,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "¿Con cuánta antelación debo reservar?",
-        answer: "Recomendamos reservar al menos 1-2 semanas antes, especialmente durante las temporadas altas (marzo-mayo para los cerezos en flor, octubre-noviembre para el otoño). Las reservas de último momento a veces son posibles — ¡solo pregunta!",
+        answer: "Recomendamos reservar al menos 1-2 semanas antes, especialmente durante las temporadas altas (marzo-mayo para los cerezos en flor, octubre-noviembre para el otoño). Las reservas de último momento a veces son posibles. ¡Solo pregunta!",
       },
       {
         question: "¿Cuál es la política de cancelación?",
@@ -37,7 +37,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "¿Puedo reservar para una sola persona?",
-        answer: "¡Sí! Los viajeros individuales son muy bienvenidos. El precio puede variar respecto a las tarifas de grupo — contáctanos para un presupuesto.",
+        answer: "¡Sí! Los viajeros individuales son muy bienvenidos. El precio puede variar respecto a las tarifas de grupo, así que contáctanos para un presupuesto.",
       },
     ],
   },
@@ -50,11 +50,11 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "¿Son privados sus tours?",
-        answer: "Sí, todos nuestros tours son 100% privados. Solo estás tú y tu grupo con tu guía — sin desconocidos, sin horarios fijos. Tú marcas el ritmo.",
+        answer: "Sí, todos nuestros tours son 100% privados. Solo estás tú y tu grupo con tu guía: sin desconocidos, sin horarios fijos. Tú marcas el ritmo.",
       },
       {
         question: "¿Qué pasa si llueve?",
-        answer: "Los tours se realizan con lluvia o sol — Tokio tiene muchas zonas cubiertas, paradas interiores y pasajes subterráneos. Tu guía adaptará la ruta según el clima. Solo cancelamos por alertas meteorológicas graves (tifones, etc.), en cuyo caso recibirás un reembolso completo o podrás reprogramar.",
+        answer: "Los tours se realizan con lluvia o sol. Tokio tiene muchas zonas cubiertas, paradas interiores y pasajes subterráneos. Tu guía adaptará la ruta según el clima. Solo cancelamos por alertas meteorológicas graves (tifones, etc.), en cuyo caso recibirás un reembolso completo o podrás reprogramar.",
       },
       {
         question: "¿Pueden acomodar restricciones alimentarias?",
@@ -66,7 +66,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "¿Pueden acomodar usuarios de silla de ruedas?",
-        answer: "Hacemos todo lo posible para que los tours sean accesibles. Por favor, avísanos con antelación y planificaremos una ruta que evite escaleras y use entradas accesibles. Algunos sitios históricos tienen accesibilidad limitada — tu guía planificará en consecuencia.",
+        answer: "Hacemos todo lo posible para que los tours sean accesibles. Por favor, avísanos con antelación y planificaremos una ruta que evite escaleras y use entradas accesibles. Algunos sitios históricos tienen accesibilidad limitada, pero tu guía planificará en consecuencia.",
       },
     ],
   },
@@ -83,7 +83,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "¿Puedo combinar una excursión con un tour por Tokio?",
-        answer: "¡Sí! Muchos huéspedes reservan un tour a pie por Tokio un día y una excursión otro. Ofrecemos paquetes de varios días — contáctanos para más detalles.",
+        answer: "¡Sí! Muchos huéspedes reservan un tour a pie por Tokio un día y una excursión otro. Ofrecemos paquetes de varios días. Contáctanos para más detalles.",
       },
     ],
   },
@@ -119,7 +119,7 @@ const EsFaq = () => {
     <Layout>
       <SEO
         title="Preguntas Frecuentes sobre Tours en Tokio en Español | Tanuki Tabi Travel"
-        description="Respuestas a las preguntas más frecuentes sobre los tours privados en Tokio con Tanuki Tabi Travel — reservas, precios, cancelaciones y qué esperar del tour."
+        description="Respuestas a las preguntas más frecuentes sobre los tours privados en Tokio con Tanuki Tabi Travel: reservas, precios, cancelaciones y qué esperar del tour."
         canonicalPath="/es/faq"
         hreflang={[
           { lang: "en", path: "/faq" },

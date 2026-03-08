@@ -125,7 +125,7 @@ const trustSignals = [
   {
     icon: Users,
     title: "Tour 100% Privado",
-    description: "El tour es exclusivamente para ti. Sin extraños, sin horarios rígidos — solo tu grupo y tu guía.",
+    description: "El tour es exclusivamente para ti. Sin extraños, sin horarios rígidos. Solo tu grupo y tu guía.",
   },
 ];
 
@@ -136,7 +136,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Manabu's tour was one of the best I've been on — he is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
+    text: "Manabu's tour was one of the best I've been on. He is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
     author: "Solo traveler",
     rating: 5,
   },
@@ -175,7 +175,7 @@ const EsIndex = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Tokyo con Manabu —{" "}
+              Tokyo con Manabu:{" "}
               <span className="text-accent">Tu Guía Local Certificado</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
@@ -184,7 +184,7 @@ const EsIndex = () => {
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Cada tour comienza con una pregunta simple: ¿Qué es lo que más te
               emociona de Tokio? A partir de ahí, el recorrido es tuyo. No sigo un
-              guión — sigo tu curiosidad.
+              guión, sigo tu curiosidad.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
@@ -231,14 +231,14 @@ const EsIndex = () => {
                 La mayoría de los guías siguen una ruta fija. Yo no.
               </p>
               <p>
-                En los primeros 30 minutos, te pregunto qué te importa — la comida,
+                En los primeros 30 minutos, te pregunto qué te importa: la comida,
                 la historia, los rincones escondidos, las oportunidades para fotos.
                 Luego me adapto sobre la marcha. Si quieres quedarte más tiempo en un
                 templo, nos quedamos. Si prefieres adelantarte al almuerzo, lo hacemos.
               </p>
               <p>
                 Por eso, viajeros de más de 30 países han dicho que este fue el mejor
-                tour del viaje — no solo de Tokio, sino de todo su recorrido.
+                tour del viaje, no solo de Tokio, sino de todo su recorrido.
               </p>
             </div>
           </div>
@@ -255,7 +255,7 @@ const EsIndex = () => {
                 La mayoría de los guías en español en Tokio son hispanohablantes que aprendieron japonés. Manabu es al revés: japonés nativo que habla español.
               </p>
               <p>
-                Eso marca la diferencia. Conoce Tokio desde dentro — su historia, sus costumbres, los lugares donde come la gente local — y te lo cuenta directamente en español, sin filtros de traducción ni malentendidos culturales.
+                Eso marca la diferencia. Conoce Tokio desde dentro, su historia, sus costumbres, los lugares donde come la gente local, y te lo cuenta directamente en español, sin filtros de traducción ni malentendidos culturales.
               </p>
             </div>
           </div>
@@ -337,13 +337,13 @@ const EsIndex = () => {
               <p className="text-label text-accent mb-4">Tu Guía</p>
               <div className="w-10 h-px bg-accent mb-6" />
               <h2 className="heading-section text-foreground">
-                Conoce a Manabu — Tu Guía Oficial en Tokio
+                Conoce a Manabu, Tu Guía Oficial en Tokio
               </h2>
               <p className="mt-4 text-body">
-                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 500 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio — conozco Japón desde dentro y en profundidad.
+                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 500 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio. Conozco Japón desde dentro y en profundidad.
               </p>
               <p className="mt-4 text-body">
-                Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y adapto el tour en tiempo real. No es una clase magistral — es una conversación.
+                Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y adapto el tour en tiempo real. No es una clase magistral, es una conversación.
               </p>
               <Link to="/es/about" className="btn-outline mt-8 inline-flex">
                 Más Información
@@ -389,7 +389,7 @@ const EsIndex = () => {
                 Comparte lo que te apasiona
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Historia, gastronomía, callejones ocultos — creo la ruta a tu medida.
+                Historia, gastronomía, callejones ocultos... creo la ruta a tu medida.
               </p>
             </div>
             <div className="text-center">
@@ -463,7 +463,7 @@ const EsIndex = () => {
                 </p>
                 <footer className="pt-4 border-t border-border">
                   <cite className="not-italic font-medium text-foreground text-sm">
-                    — {testimonial.author}
+                    - {testimonial.author}
                   </cite>
                 </footer>
               </blockquote>
