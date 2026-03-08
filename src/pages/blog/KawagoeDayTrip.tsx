@@ -15,7 +15,7 @@ const KawagoeDayTrip = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-kaminarimon-gate.jpg"
+          src="/images/blog/kawagoe-kurazukuri-hero.jpg"
           alt="Traditional Japanese architecture — reminiscent of Kawagoe's Little Edo streets"
           className="w-full h-full object-cover"
           loading="eager"

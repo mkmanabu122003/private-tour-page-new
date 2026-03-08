@@ -15,7 +15,7 @@ const YokohamaDayTrip = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/night-tour-shibuya.jpg"
+          src="/images/blog/yokohama-minatomirai-hero.jpg"
           alt="Tokyo city lights — Yokohama offers a similar urban experience just 30 minutes away"
           className="w-full h-full object-cover"
           loading="eager"

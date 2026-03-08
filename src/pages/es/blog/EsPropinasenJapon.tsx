@@ -19,7 +19,7 @@ const EsPropinasenJapon = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/food-tour-tsukiji.jpg"
+          src="/images/blog/tipping-japan-hero.jpg"
           alt="Puesto de comida japonesa — las propinas en Japón"
           className="w-full h-full object-cover"
           loading="eager"
