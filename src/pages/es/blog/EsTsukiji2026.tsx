@@ -80,24 +80,24 @@ const EsTsukiji2026 = () => {
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              7:30 — Llegada y primer café
+              7:30 | Llegada y primer café
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Llego por la salida A1 de la estación Tsukiji. El aire ya huele a carbón y salsa de soja. Antes de meterme en los callejones, me paro en una cafetería pequeña en la esquina de Harumi-dori que casi nadie conoce. No es bonita, no tiene Instagram, pero el café de filtro cuesta 250 yenes y está caliente y fuerte. Me lo tomo de pie, mirando cómo los comerciantes abren sus persianas. Este momento de calma antes del ruido es parte de la experiencia. No lo cambiaría por nada.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              8:00 — La primera parada: tamagoyaki recién hecho
+              8:00 | La primera parada: tamagoyaki recién hecho
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Mi primera comida siempre es tamagoyaki. Siempre. Hay algo especial en comer una tortilla japonesa recién salida de la plancha, todavía humeante, con esa capa exterior ligeramente caramelizada y un interior esponjoso que se deshace en la boca. Voy a Yamachou o a Shouro, dependiendo de mi humor: Yamachou si quiero algo dulce, Shouro si me apetece la versión con dashi. Cuesta 150 yenes. Ciento cincuenta yenes. Por uno de los bocados más satisfactorios de Tokio. Me como el palito entero caminando hacia los callejones del interior, y la mañana empieza oficialmente.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              8:30 — El callejón del marisco a la parrilla
+              8:30 | El callejón del marisco a la parrilla
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Aquí es donde Tsukiji pasa de mercado a fiesta gastronómica. El callejón central, el que está justo detrás de la calle principal, es un espectáculo para los sentidos a esta hora: el humo de las parrillas de carbón se mezcla con el vapor del arroz, los vendedores gritan sus ofertas y el olor a marisco fresco a la brasa te envuelve por completo. Yo me quedo parado frente a mi puesto favorito de vieiras — el de la esquina con el toldo azul — y espero a que las vieiras de Hokkaido caigan sobre la plancha. El sonido del chisporroteo. La mantequilla derritiéndose sobre la concha. El primer mordisco, con los dedos ligeramente quemados porque no puedo esperar. Esto es Tsukiji para mí.
+              Aquí es donde Tsukiji pasa de mercado a fiesta gastronómica. El callejón central, el que está justo detrás de la calle principal, es un espectáculo para los sentidos a esta hora: el humo de las parrillas de carbón se mezcla con el vapor del arroz, los vendedores gritan sus ofertas y el olor a marisco fresco a la brasa te envuelve por completo. Yo me quedo parado frente a mi puesto favorito de vieiras, el de la esquina con el toldo azul, y espero a que las vieiras de Hokkaido caigan sobre la plancha. El sonido del chisporroteo. La mantequilla derritiéndose sobre la concha. El primer mordisco, con los dedos ligeramente quemados porque no puedo esperar. Esto es Tsukiji para mí.
             </p>
 
             {/* Los 7 bocados imprescindibles */}
@@ -112,7 +112,7 @@ const EsTsukiji2026 = () => {
               1. Vieira de Hokkaido a la plancha
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La estrella indiscutible. Una vieira gigante de Hokkaido, abierta sobre la parrilla de carbón, con un chorrito de salsa de soja y una nuez de mantequilla que burbujea y se dora en la concha. La carne es dulce, firme y tiene ese punto de ahumado que solo consigues con el carbón binchotan. Entre 500 y 800 yenes según el tamaño. No te comas una — cómete dos. La primera la devoras, la segunda la saboreas.
+              La estrella indiscutible. Una vieira gigante de Hokkaido, abierta sobre la parrilla de carbón, con un chorrito de salsa de soja y una nuez de mantequilla que burbujea y se dora en la concha. La carne es dulce, firme y tiene ese punto de ahumado que solo consigues con el carbón binchotan. Entre 500 y 800 yenes según el tamaño. No te comas una, cómete dos. La primera la devoras, la segunda la saboreas.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -126,7 +126,7 @@ const EsTsukiji2026 = () => {
               3. Sushi de pie en barra
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Olvídate de las colas de dos horas en los restaurantes famosos. Mi forma favorita de comer sushi en Tsukiji es en las barras de pie — tachigui-zushi, como decimos en japonés. Te pones codo con codo con oficinistas y compradores del mercado, ves al itamae formar cada pieza a centímetros de tu cara, y comes sushi de una frescura absurda por 2.000 a 3.000 yenes el set de ocho a diez piezas. Sin reserva, sin espera, sin ceremonias. Solo pescado increíble y arroz perfectamente sazonado.
+              Olvídate de las colas de dos horas en los restaurantes famosos. Mi forma favorita de comer sushi en Tsukiji es en las barras de pie, tachigui-zushi, como decimos en japonés. Te pones codo con codo con oficinistas y compradores del mercado, ves al itamae formar cada pieza a centímetros de tu cara, y comes sushi de una frescura absurda por 2.000 a 3.000 yenes el set de ocho a diez piezas. Sin reserva, sin espera, sin ceremonias. Solo pescado increíble y arroz perfectamente sazonado.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -147,7 +147,7 @@ const EsTsukiji2026 = () => {
               6. Dashimaki tamago (la versión salada)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si el tamagoyaki dulce de Yamachou es el postre, el dashimaki tamago es el plato principal. Esta versión salada está hecha con abundante caldo dashi, lo que le da una textura más jugosa y temblorosa — casi como un flan de huevo. Shouro lo hace especialmente bien. Es el bocado que pido cuando quiero algo reconfortante, algo que me recuerde a la cocina casera japonesa. Mismo precio, misma magia, sabor completamente diferente. Prueba los dos y decide tu favorito.
+              Si el tamagoyaki dulce de Yamachou es el postre, el dashimaki tamago es el plato principal. Esta versión salada está hecha con abundante caldo dashi, lo que le da una textura más jugosa y temblorosa, casi como un flan de huevo. Shouro lo hace especialmente bien. Es el bocado que pido cuando quiero algo reconfortante, algo que me recuerde a la cocina casera japonesa. Mismo precio, misma magia, sabor completamente diferente. Prueba los dos y decide tu favorito.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -162,21 +162,21 @@ const EsTsukiji2026 = () => {
               Lo nuevo en Tsukiji este año
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El mercado Tsukiji Tokio no es un museo — es un organismo vivo que cambia constantemente. Cada vez que voy, noto algo nuevo: un puesto que no existía hace tres meses, un producto que antes no se ofrecía, un cambio sutil en la atmósfera. Esto es lo que he visto cambiar en los últimos meses.
+              El mercado Tsukiji Tokio no es un museo, es un organismo vivo que cambia constantemente. Cada vez que voy, noto algo nuevo: un puesto que no existía hace tres meses, un producto que antes no se ofrecía, un cambio sutil en la atmósfera. Esto es lo que he visto cambiar en los últimos meses.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Puestos que han abierto en 2025-2026
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Han aparecido al menos tres puestos nuevos que merecen atención. Uno se especializa en onigiri artesanales con rellenos de marisco del mercado — imagina un onigiri relleno de salmón ahumado con queso crema, o de atún con wasabi fresco rallado al momento. Otro es un puesto de gyutan (lengua de ternera) a la parrilla que ha traído la especialidad de Sendai al corazón de Tsukiji. Y el tercero es una pequeña barra de ramen de mariscos que usa un caldo hecho con cabezas de langostino y bonito — intenso, complejo y completamente adictivo. Los tres son puestos pequeños, sin pretensiones, con colas cortas y precios honestos.
+              Han aparecido al menos tres puestos nuevos que merecen atención. Uno se especializa en onigiri artesanales con rellenos de marisco del mercado: imagina un onigiri relleno de salmón ahumado con queso crema, o de atún con wasabi fresco rallado al momento. Otro es un puesto de gyutan (lengua de ternera) a la parrilla que ha traído la especialidad de Sendai al corazón de Tsukiji. Y el tercero es una pequeña barra de ramen de mariscos que usa un caldo hecho con cabezas de langostino y bonito, intenso, complejo y completamente adictivo. Los tres son puestos pequeños, sin pretensiones, con colas cortas y precios honestos.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Lo que ha cambiado desde la pandemia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El Tsukiji de 2026 es diferente al de 2019, y en muchos sentidos es mejor. La pandemia obligó a muchos puestos a reinventarse: algunos empezaron a ofrecer comida para llevar que antes solo servían sentado, otros incorporaron menús en inglés por primera vez, y casi todos actualizaron sus sistemas de pago. El mercado también es ligeramente menos caótico que antes — algunos de los callejones se han reorganizado para facilitar el flujo de personas, y hay más señalización. Pero la esencia no ha cambiado: sigue siendo un lugar donde puedes comer increíblemente bien, rodeado de comerciantes que llevan generaciones perfeccionando lo que hacen.
+              El Tsukiji de 2026 es diferente al de 2019, y en muchos sentidos es mejor. La pandemia obligó a muchos puestos a reinventarse: algunos empezaron a ofrecer comida para llevar que antes solo servían sentado, otros incorporaron menús en inglés por primera vez, y casi todos actualizaron sus sistemas de pago. El mercado también es ligeramente menos caótico que antes. Algunos de los callejones se han reorganizado para facilitar el flujo de personas, y hay más señalización. Pero la esencia no ha cambiado: sigue siendo un lugar donde puedes comer increíblemente bien, rodeado de comerciantes que llevan generaciones perfeccionando lo que hacen.
             </p>
 
             {/* Presupuesto real */}
@@ -198,14 +198,14 @@ const EsTsukiji2026 = () => {
               Ruta gourmet (5,000-8,000 yenes)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Cuando quiero darme un capricho — y seamos sinceros, Tsukiji es el lugar perfecto para eso — la cosa cambia. Set de sushi en barra (2.500 yenes), vieira gigante de Hokkaido (800 yenes), cajita de uni fresco (1.200 yenes), brocheta de wagyu A5 (1.500 yenes), dashimaki tamago (150 yenes) y helado de matcha (450 yenes). Total: alrededor de 6.600 yenes, unos 42 euros. Por ese precio, has comido sushi de primera, marisco a la brasa, la mejor ternera del mundo y un postre artesanal. En cualquier restaurante de Tokio, esa experiencia costaría el triple.
+              Cuando quiero darme un capricho (y seamos sinceros, Tsukiji es el lugar perfecto para eso), la cosa cambia. Set de sushi en barra (2.500 yenes), vieira gigante de Hokkaido (800 yenes), cajita de uni fresco (1.200 yenes), brocheta de wagyu A5 (1.500 yenes), dashimaki tamago (150 yenes) y helado de matcha (450 yenes). Total: alrededor de 6.600 yenes, unos 42 euros. Por ese precio, has comido sushi de primera, marisco a la brasa, la mejor ternera del mundo y un postre artesanal. En cualquier restaurante de Tokio, esa experiencia costaría el triple.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Efectivo vs. tarjeta en 2026
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Buenas noticias: la situación del pago en Tsukiji ha mejorado mucho. En 2026, estimo que el 60-70% de los puestos aceptan algún tipo de pago electrónico — ya sea tarjeta de crédito, Suica/Pasmo o PayPay. Pero mi consejo sigue siendo el mismo: <strong className="text-foreground">lleva al menos 3.000-5.000 yenes en efectivo</strong>. Algunos de los mejores puestos, especialmente los más antiguos y tradicionales, siguen siendo solo efectivo. Y no hay nada más frustrante que encontrar la vieira perfecta y no poder pagarla. Los cajeros automáticos más cercanos están en el 7-Eleven de Harumi-dori, a dos minutos del mercado.
+              Buenas noticias: la situación del pago en Tsukiji ha mejorado mucho. En 2026, estimo que el 60-70% de los puestos aceptan algún tipo de pago electrónico, ya sea tarjeta de crédito, Suica/Pasmo o PayPay. Pero mi consejo sigue siendo el mismo: <strong className="text-foreground">lleva al menos 3.000-5.000 yenes en efectivo</strong>. Algunos de los mejores puestos, especialmente los más antiguos y tradicionales, siguen siendo solo efectivo. Y no hay nada más frustrante que encontrar la vieira perfecta y no poder pagarla. Los cajeros automáticos más cercanos están en el 7-Eleven de Harumi-dori, a dos minutos del mercado.
             </p>
 
             {/* Preguntas frecuentes */}
@@ -231,14 +231,14 @@ const EsTsukiji2026 = () => {
               ¿Hay opciones sin pescado?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Más de las que imaginas. Tamagoyaki (huevo), wagyu en brocheta (ternera), onigiri artesanales (arroz con diversos rellenos), dorayaki (tortitas dulces con judías rojas), helado de matcha y café de especialidad. También hay puestos de encurtidos japoneses, frutas frescas de temporada y tofu artesanal. No es un mercado exclusivamente de pescado — es un mercado de comida japonesa en su sentido más amplio.
+              Más de las que imaginas. Tamagoyaki (huevo), wagyu en brocheta (ternera), onigiri artesanales (arroz con diversos rellenos), dorayaki (tortitas dulces con judías rojas), helado de matcha y café de especialidad. También hay puestos de encurtidos japoneses, frutas frescas de temporada y tofu artesanal. No es un mercado exclusivamente de pescado, es un mercado de comida japonesa en su sentido más amplio.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               ¿Merece la pena un tour gastronómico?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Voy a ser honesto aunque me beneficie decir que sí: depende de ti. Si hablas algo de japonés, te sientes cómodo navegando espacios caóticos y no te importa probar cosas sin saber exactamente qué son, puedes disfrutar Tsukiji perfectamente por tu cuenta con esta guía. Pero si es tu primera vez en Japón, si quieres entender la historia detrás de cada bocado, o si simplemente prefieres que alguien te lleve directamente a los mejores puestos sin perder tiempo — entonces un{" "}
+              Voy a ser honesto aunque me beneficie decir que sí: depende de ti. Si hablas algo de japonés, te sientes cómodo navegando espacios caóticos y no te importa probar cosas sin saber exactamente qué son, puedes disfrutar Tsukiji perfectamente por tu cuenta con esta guía. Pero si es tu primera vez en Japón, si quieres entender la historia detrás de cada bocado, o si simplemente prefieres que alguien te lleve directamente a los mejores puestos sin perder tiempo, entonces un{" "}
               <Link to="/es/tours/tsukiji-ginza" className="text-accent hover:underline">
                 tour gastronómico por Tsukiji
               </Link>
@@ -249,7 +249,7 @@ const EsTsukiji2026 = () => {
               ¿Tsukiji o Toyosu para comer?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji, sin duda. Toyosu es un mercado mayorista moderno con una plataforma de observación — interesante si quieres ver la subasta de atún, pero la experiencia gastronómica no se compara. Tsukiji tiene diez veces más variedad, cien veces más ambiente y precios más accesibles. Si tienes tiempo para ambos, haz Toyosu al amanecer para la subasta y Tsukiji para desayunar. Pero si solo puedes elegir uno, elige Tsukiji.
+              Tsukiji, sin duda. Toyosu es un mercado mayorista moderno con una plataforma de observación, interesante si quieres ver la subasta de atún, pero la experiencia gastronómica no se compara. Tsukiji tiene diez veces más variedad, cien veces más ambiente y precios más accesibles. Si tienes tiempo para ambos, haz Toyosu al amanecer para la subasta y Tsukiji para desayunar. Pero si solo puedes elegir uno, elige Tsukiji.
             </p>
 
             {/* Enlace interno adicional */}
@@ -267,7 +267,7 @@ const EsTsukiji2026 = () => {
                 ¿Quieres vivir esta ruta gastronómica conmigo?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                En nuestro Tour a Pie por Tsukiji y Ginza, te llevo por exactamente esta ruta — los mismos puestos, los mismos bocados, las mismas historias que he compartido contigo aquí, pero en persona. Comeremos juntos, te presentaré a los vendedores que conozco por nombre, y terminaremos con un paseo tranquilo por Ginza. Sin trampas para turistas, sin bocados desperdiciados — solo la auténtica experiencia del mercado Tsukiji Tokio.
+                En nuestro Tour a Pie por Tsukiji y Ginza, te llevo por exactamente esta ruta: los mismos puestos, los mismos bocados, las mismas historias que he compartido contigo aquí, pero en persona. Comeremos juntos, te presentaré a los vendedores que conozco por nombre, y terminaremos con un paseo tranquilo por Ginza. Sin trampas para turistas, sin bocados desperdiciados, solo la auténtica experiencia del mercado Tsukiji Tokio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours/tsukiji-ginza" className="btn-accent">

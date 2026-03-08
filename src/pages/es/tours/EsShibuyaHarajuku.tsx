@@ -64,11 +64,11 @@ const EsShibuyaHarajuku = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Cruce de Shibuya — el cruce peatonal más transitado del mundo",
-                    "Estatua de Hachiko — el punto de encuentro más famoso de Tokio",
-                    "Calle Takeshita en Harajuku — paraíso de la moda adolescente",
-                    "Santuario Meiji — oasis de paz en la ciudad",
-                    "Omotesando — los Campos Elíseos de Tokio",
+                    "Cruce de Shibuya: el cruce peatonal más transitado del mundo",
+                    "Estatua de Hachiko: el punto de encuentro más famoso de Tokio",
+                    "Calle Takeshita en Harajuku: paraíso de la moda adolescente",
+                    "Santuario Meiji: oasis de paz en la ciudad",
+                    "Omotesando: los Campos Elíseos de Tokio",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 shrink-0" />

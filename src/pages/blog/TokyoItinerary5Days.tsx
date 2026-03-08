@@ -8,7 +8,7 @@ const TokyoItinerary5Days = () => {
     <Layout>
       <SEO
         title="Tokyo 5 Day Itinerary: A Licensed Guide's Plan"
-        description="Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients — with honest notes on what to skip."
+        description="Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients, with honest notes on what to skip."
         canonicalPath="/blog/tokyo-itinerary-5-days"
       />
 
@@ -16,7 +16,7 @@ const TokyoItinerary5Days = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/shibuya-scramble-crossing.jpg"
-          alt="Shibuya Scramble Crossing — iconic Tokyo landmark for your 5-day itinerary"
+          alt="Shibuya Scramble Crossing, iconic Tokyo landmark for your 5-day itinerary"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -38,7 +38,7 @@ const TokyoItinerary5Days = () => {
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours. This is the itinerary I give my private clients.
+              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours. This is the itinerary I give my private clients.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ const TokyoItinerary5Days = () => {
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              After planning over 500 private tours in Tokyo, I've noticed the same mistake in nearly every 5-day Tokyo itinerary I see online: they try to cover everything. Shibuya on Monday, Asakusa on Tuesday, Harajuku on Wednesday — like checking boxes on a list. The result is exhausting, shallow, and leaves visitors feeling like they "saw Tokyo" without ever understanding it.
+              After planning over 500 private tours in Tokyo, I've noticed the same mistake in nearly every 5-day Tokyo itinerary I see online: they try to cover everything. Shibuya on Monday, Asakusa on Tuesday, Harajuku on Wednesday, like checking boxes on a list. The result is exhausting, shallow, and leaves visitors feeling like they "saw Tokyo" without ever understanding it.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's the Tokyo itinerary for 5 days that I actually give my clients. It's designed around a principle I've learned from guiding: depth beats breadth. You'll see fewer neighborhoods but understand them. You'll eat fewer restaurants but remember each one. And you'll leave Tokyo feeling like you know the city, not just its photo spots.
@@ -65,13 +65,13 @@ const TokyoItinerary5Days = () => {
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Day 1 — Arrive and Orient (Asakusa, Ueno)
+              Day 1: Arrive and Orient (Asakusa, Ueno)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Morning:</strong> If you arrive early enough, head straight to Asakusa. Senso-ji temple is most magical before 9 AM — the Nakamise shopping street is quiet, the incense smoke curls through empty courtyards, and you can actually appreciate the architecture without being in a crowd. I start every Tokyo itinerary here because Asakusa is old Tokyo (Shitamachi), and understanding this layer first makes everything else you'll see this week make more sense.
+              <strong className="text-foreground">Morning:</strong> If you arrive early enough, head straight to Asakusa. Senso-ji temple is most magical before 9 AM. The Nakamise shopping street is quiet, the incense smoke curls through empty courtyards, and you can actually appreciate the architecture without being in a crowd. I start every Tokyo itinerary here because Asakusa is old Tokyo (Shitamachi), and understanding this layer first makes everything else you'll see this week make more sense.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Afternoon:</strong> Walk north to Ueno (20 minutes on foot or one subway stop). Ueno Park houses several world-class museums — the Tokyo National Museum is Japan's finest collection of art and artifacts. If you're jet-lagged, the park itself is a pleasant place to sit, people-watch, and adjust to the rhythm of the city.
+              <strong className="text-foreground">Afternoon:</strong> Walk north to Ueno (20 minutes on foot or one subway stop). Ueno Park houses several world-class museums. The Tokyo National Museum is Japan's finest collection of art and artifacts. If you're jet-lagged, the park itself is a pleasant place to sit, people-watch, and adjust to the rhythm of the city.
             </p>
             <div className="bg-secondary/30 rounded-lg p-4 mb-4">
               <p className="text-sm text-foreground font-medium mb-1">Guide's tip:</p>
@@ -82,38 +82,38 @@ const TokyoItinerary5Days = () => {
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Day 2 — Old Tokyo and the Neighborhoods Tourists Miss
+              Day 2: Old Tokyo and the Neighborhoods Tourists Miss
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Morning:</strong> Yanaka. Start at Nippori Station and walk south through this neighborhood that survived the 1923 earthquake and WWII bombing. Yanaka Cemetery (where Japan's last shogun is buried), small Buddhist temples with no tourists, Yanaka Ginza shopping street with its famous sunset view. This is the Tokyo that looks like it did 100 years ago.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Afternoon:</strong> Nezu Shrine (walking distance from Yanaka), then continue to Kagurazaka — Tokyo's old geisha district that became a French quarter. Explore the yokocho (narrow alleys) lined with traditional restaurants and stone paths. End the day with dinner in Kagurazaka — the mix of French and Japanese restaurants here is unlike anywhere else in Tokyo.
+              <strong className="text-foreground">Afternoon:</strong> Nezu Shrine (walking distance from Yanaka), then continue to Kagurazaka, Tokyo's old geisha district that became a French quarter. Explore the yokocho (narrow alleys) lined with traditional restaurants and stone paths. End the day with dinner in Kagurazaka. The mix of French and Japanese restaurants here is unlike anywhere else in Tokyo.
             </p>
             <div className="bg-secondary/30 rounded-lg p-4 mb-4">
               <p className="text-sm text-foreground font-medium mb-1">Guide's tip:</p>
-              <p className="text-sm text-muted-foreground">Day 2 is about context. You're building an understanding of what old Tokyo looked like before the modernization you'll see on Days 3–5. Without this foundation, Shibuya and Shinjuku are just neon — with it, they become the contrast that makes Tokyo fascinating.</p>
+              <p className="text-sm text-muted-foreground">Day 2 is about context. You're building an understanding of what old Tokyo looked like before the modernization you'll see on Days 3–5. Without this foundation, Shibuya and Shinjuku are just neon. With it, they become the contrast that makes Tokyo fascinating.</p>
             </div>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Day 3 — Modern Tokyo and What It Means
+              Day 3: Modern Tokyo and What It Means
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Morning:</strong> Tsukiji outer market for breakfast — arrive by 8 AM for the freshest food and thinnest crowds. Eat sushi for breakfast (it's a Tokyo tradition, not a tourist gimmick). Then walk to the Imperial Palace East Gardens (free, beautiful, and nearly empty on weekday mornings).
+              <strong className="text-foreground">Morning:</strong> Tsukiji outer market for breakfast. Arrive by 8 AM for the freshest food and thinnest crowds. Eat sushi for breakfast (it's a Tokyo tradition, not a tourist gimmick). Then walk to the Imperial Palace East Gardens (free, beautiful, and nearly empty on weekday mornings).
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Afternoon:</strong> Shibuya and Harajuku. See the famous crossing (it's worth seeing once), walk through Takeshita Street in Harajuku, then escape to Meiji Shrine — the forested sanctuary that sits in the middle of Tokyo's most commercial district. The contrast between Harajuku's retail chaos and Meiji's silent forest path is one of the most powerful moments in any Tokyo itinerary.
+              <strong className="text-foreground">Afternoon:</strong> Shibuya and Harajuku. See the famous crossing (it's worth seeing once), walk through Takeshita Street in Harajuku, then escape to Meiji Shrine, the forested sanctuary that sits in the middle of Tokyo's most commercial district. The contrast between Harajuku's retail chaos and Meiji's silent forest path is one of the most powerful moments in any Tokyo itinerary.
             </p>
             <div className="bg-secondary/30 rounded-lg p-4 mb-4">
               <p className="text-sm text-foreground font-medium mb-1">Guide's tip:</p>
-              <p className="text-sm text-muted-foreground">After Day 2 in old Tokyo, Day 3 in modern Tokyo creates the contrast that makes this city unique. When you walk from Meiji Shrine's ancient forest into Harajuku's neon streets, you'll feel the two Tokyos collide — and that's the moment most of my clients say the city "clicks."</p>
+              <p className="text-sm text-muted-foreground">After Day 2 in old Tokyo, Day 3 in modern Tokyo creates the contrast that makes this city unique. When you walk from Meiji Shrine's ancient forest into Harajuku's neon streets, you'll feel the two Tokyos collide, and that's the moment most of my clients say the city "clicks."</p>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">What to skip:</strong> Shibuya Sky observation deck — overpriced for a view you can get from many hotel lobbies. The Metropolitan Government Building in Shinjuku is free and equally good.
+              <strong className="text-foreground">What to skip:</strong> Shibuya Sky observation deck, overpriced for a view you can get from many hotel lobbies. The Metropolitan Government Building in Shinjuku is free and equally good.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Day 4 — Day Trip (Kamakura or Nikko)
+              Day 4: Day Trip (Kamakura or Nikko)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A day trip breaks the rhythm of city exploration and gives you a completely different perspective on Japan. My top picks:
@@ -135,13 +135,13 @@ const TokyoItinerary5Days = () => {
             </div>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Day 5 — Slow Morning, Last Wanders, Departure
+              Day 5: Slow Morning, Last Wanders, Departure
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Morning:</strong> No alarm. Wake up naturally, have a slow breakfast, and revisit any neighborhood from earlier in the week that called to you. In my experience guiding 500+ groups, the most memorable moments of a Tokyo itinerary happen when people return to a place they've already seen — now with context, curiosity, and fewer questions about logistics.
+              <strong className="text-foreground">Morning:</strong> No alarm. Wake up naturally, have a slow breakfast, and revisit any neighborhood from earlier in the week that called to you. In my experience guiding 500+ groups, the most memorable moments of a Tokyo itinerary happen when people return to a place they've already seen, now with context, curiosity, and fewer questions about logistics.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If you want a new experience: Shinjuku in the morning. The Metropolitan Government Building observatory opens at 9:30 AM (free), offering panoramic views that put your entire week in geographic context. On clear days, Mt. Fuji is visible. Then wander through Shinjuku Gyoen — one of Tokyo's most beautiful gardens — at your own pace.
+              If you want a new experience: Shinjuku in the morning. The Metropolitan Government Building observatory opens at 9:30 AM (free), offering panoramic views that put your entire week in geographic context. On clear days, Mt. Fuji is visible. Then wander through Shinjuku Gyoen, one of Tokyo's most beautiful gardens, at your own pace.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Afternoon:</strong> Pack, shop for last-minute souvenirs in the basement food halls (depachika) of any major department store, and head to the airport. If you're flying from Narita, budget 90 minutes for the train. From Haneda, 40 minutes.
@@ -157,7 +157,7 @@ const TokyoItinerary5Days = () => {
                 Want this itinerary brought to life by a local guide?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I offer private guided days for any part of this Tokyo itinerary — from the Asakusa morning to the Kamakura day trip. You can book individual days or let me customize the entire 5 days around your interests.
+                I offer private guided days for any part of this Tokyo itinerary, from the Asakusa morning to the Kamakura day trip. You can book individual days or let me customize the entire 5 days around your interests.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">View All Tours</Link>

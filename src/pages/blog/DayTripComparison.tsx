@@ -25,7 +25,7 @@ const DayTripComparison = () => {
             </Link>
             <p className="text-label text-accent mb-3">Day Trips</p>
             <h1 className="heading-display text-foreground">
-              Kamakura vs Hakone vs Nikko — Which Day Trip Should You Choose?
+              Kamakura vs Hakone vs Nikko: Which Day Trip Should You Choose?
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -56,13 +56,13 @@ const DayTripComparison = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              "Which day trip should I do?" — I get this question on almost every tour. It's one of the most common dilemmas facing Tokyo visitors, and the answer is genuinely different for every traveler.
+              "Which day trip should I do?" I get this question on almost every tour. It's one of the most common dilemmas facing Tokyo visitors, and the answer is genuinely different for every traveler.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Kamakura, Hakone, and Nikko are the three most popular day trip destinations from Tokyo, and each offers a completely different experience. Having guided hundreds of travelers to all three, I can tell you that there's no single "best" choice — it depends on what you're looking for, how much time you have, and what kind of experience excites you.
+              Kamakura, Hakone, and Nikko are the three most popular day trip destinations from Tokyo, and each offers a completely different experience. Having guided hundreds of travelers to all three, I can tell you that there's no single "best" choice. It depends on what you're looking for, how much time you have, and what kind of experience excites you.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Here's an honest, detailed comparison to help you decide. And if you still can't choose after reading this — that's what custom itineraries are for.
+              Here's an honest, detailed comparison to help you decide. And if you still can't choose after reading this, that's what custom itineraries are for.
             </p>
 
             {/* Quick Comparison Table */}
@@ -134,28 +134,28 @@ const DayTripComparison = () => {
                 className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                The Great Buddha of Kamakura — one of Japan's most iconic landmarks
+                The Great Buddha of Kamakura, one of Japan's most iconic landmarks
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The star attraction is the Great Buddha (Daibutsu) at Kotoku-in — a 13-meter bronze statue from the 13th century that originally sat inside a massive wooden hall. Typhoons and tsunamis destroyed the hall centuries ago, and the Buddha has sat serenely in the open air ever since. There's something deeply moving about seeing this ancient figure sitting peacefully against the sky, weathering the same storms for 800 years.
+              The star attraction is the Great Buddha (Daibutsu) at Kotoku-in, a 13-meter bronze statue from the 13th century that originally sat inside a massive wooden hall. Typhoons and tsunamis destroyed the hall centuries ago, and the Buddha has sat serenely in the open air ever since. There's something deeply moving about seeing this ancient figure sitting peacefully against the sky, weathering the same storms for 800 years.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Beyond the Great Buddha, Kamakura offers Hasedera Temple (spectacular ocean views and a famous golden Kannon statue), Tsurugaoka Hachimangu Shrine (the city's most important shrine, with a dramatic approach road), and Hokokuji Temple (a serene bamboo grove where you can enjoy matcha tea). The Komachi-dori shopping street near the station is perfect for lunch and snacking — try the local shirasu (baby sardines) that Kamakura is famous for.
+              Beyond the Great Buddha, Kamakura offers Hasedera Temple (spectacular ocean views and a famous golden Kannon statue), Tsurugaoka Hachimangu Shrine (the city's most important shrine, with a dramatic approach road), and Hokokuji Temple (a serene bamboo grove where you can enjoy matcha tea). The Komachi-dori shopping street near the station is perfect for lunch and snacking. Try the local shirasu (baby sardines) that Kamakura is famous for.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              History lovers, first-time Japan visitors who want a well-rounded experience, families (easy terrain, lots of variety), and food enthusiasts. Kamakura is also the easiest day trip logistically — simple train connections, compact walking area, and well-signed paths.
+              History lovers, first-time Japan visitors who want a well-rounded experience, families (easy terrain, lots of variety), and food enthusiasts. Kamakura is also the easiest day trip logistically: simple train connections, compact walking area, and well-signed paths.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               What Most People Don't Know
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Most tourists follow the same route (Station → Hachimangu → Great Buddha → Station), but Kamakura's real magic is in the smaller temples tucked into the surrounding hills. Zuisen-ji Temple has a stunning rock garden that receives a fraction of the visitors. The hiking trails between temples offer ocean views and forest walks. And in June, Kamakura transforms into a hydrangea paradise — Meigetsu-in Temple's blue hydrangea garden is one of the most photographed spots in Japan.
+              Most tourists follow the same route (Station → Hachimangu → Great Buddha → Station), but Kamakura's real magic is in the smaller temples tucked into the surrounding hills. Zuisen-ji Temple has a stunning rock garden that receives a fraction of the visitors. The hiking trails between temples offer ocean views and forest walks. And in June, Kamakura transforms into a hydrangea paradise. Meigetsu-in Temple's blue hydrangea garden is one of the most photographed spots in Japan.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <Link to="/tours/kamakura-day-trip" className="text-accent hover:underline font-medium">
@@ -168,7 +168,7 @@ const DayTripComparison = () => {
               Hakone: Hot Springs & the Iconic Fuji View
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Hakone is where Tokyo residents go to escape the city, and it's been a popular retreat for centuries. Located in the mountains southwest of Tokyo, it offers a unique combination of natural beauty, volcanic geology, and traditional hot spring culture. The famous "Hakone Loop" — a circuit of trains, cable cars, ropeways, cruise ships, and buses — is both a transportation system and an attraction in itself.
+              Hakone is where Tokyo residents go to escape the city, and it's been a popular retreat for centuries. Located in the mountains southwest of Tokyo, it offers a unique combination of natural beauty, volcanic geology, and traditional hot spring culture. The famous "Hakone Loop," a circuit of trains, cable cars, ropeways, cruise ships, and buses, is both a transportation system and an attraction in itself.
             </p>
             <figure className="my-8">
               <img
@@ -177,28 +177,28 @@ const DayTripComparison = () => {
                 className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                Mt. Fuji from Lake Ashi — Hakone's most sought-after view
+                Mt. Fuji from Lake Ashi, Hakone's most sought-after view
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The highlight for most visitors is the view of Mt. Fuji across Lake Ashi. When conditions are right (clear winter mornings are best), the snow-capped peak reflected in the lake is one of Japan's most iconic images. The Hakone Ropeway carries you high over Owakudani, an active volcanic valley where you can see sulfurous steam rising from the ground and try the famous black eggs — regular eggs boiled in the volcanic hot springs that turn the shell black. Legend says each one adds seven years to your life.
+              The highlight for most visitors is the view of Mt. Fuji across Lake Ashi. When conditions are right (clear winter mornings are best), the snow-capped peak reflected in the lake is one of Japan's most iconic images. The Hakone Ropeway carries you high over Owakudani, an active volcanic valley where you can see sulfurous steam rising from the ground and try the famous black eggs, regular eggs boiled in the volcanic hot springs that turn the shell black. Legend says each one adds seven years to your life.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Hakone Shrine, with its red torii gate standing in the lake, is one of Japan's most photographed spiritual sites. The approach through the ancient cedar forest is atmospheric, and the lakeside torii creates a stunning composition. Beyond the main attractions, Hakone offers the Open-Air Museum (impressive sculpture garden with Picasso pavilion), traditional ryokan inns, and of course, onsen — the natural hot spring baths that are central to Japanese relaxation culture.
+              Hakone Shrine, with its red torii gate standing in the lake, is one of Japan's most photographed spiritual sites. The approach through the ancient cedar forest is atmospheric, and the lakeside torii creates a stunning composition. Beyond the main attractions, Hakone offers the Open-Air Museum (impressive sculpture garden with Picasso pavilion), traditional ryokan inns, and of course, onsen, the natural hot spring baths that are central to Japanese relaxation culture.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Nature lovers, photographers (especially those chasing the Fuji shot), couples seeking a romantic experience, and anyone who wants a complete change of scenery from Tokyo's urban energy. If seeing Mt. Fuji is on your bucket list, Hakone is your best bet for a day trip (though weather cooperation is required — Fuji is visible roughly 60-70% of clear days in winter, less in summer).
+              Nature lovers, photographers (especially those chasing the Fuji shot), couples seeking a romantic experience, and anyone who wants a complete change of scenery from Tokyo's urban energy. If seeing Mt. Fuji is on your bucket list, Hakone is your best bet for a day trip (though weather cooperation is required. Fuji is visible roughly 60-70% of clear days in winter, less in summer).
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Insider Tip: The Fuji Factor
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Here's what most travel guides won't tell you: Mt. Fuji visibility is highly unpredictable and changes throughout the day. Morning is generally better than afternoon, and winter months (October to February) offer significantly better odds than summer. Cloud cover can roll in within minutes. This is exactly why a guide is valuable in Hakone — I check weather conditions in real-time and rearrange the itinerary to maximize your chances. If Fuji is visible in the morning, we do the lake cruise first instead of saving it for later.
+              Here's what most travel guides won't tell you: Mt. Fuji visibility is highly unpredictable and changes throughout the day. Morning is generally better than afternoon, and winter months (October to February) offer significantly better odds than summer. Cloud cover can roll in within minutes. This is exactly why a guide is valuable in Hakone. I check weather conditions in real-time and rearrange the itinerary to maximize your chances. If Fuji is visible in the morning, we do the lake cruise first instead of saving it for later.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The transport system is also genuinely complex. The Hakone Free Pass is the most economical option, but figuring out the right combination of transportation, timing, and routing on your own takes significant planning. A guide eliminates this cognitive load entirely.
@@ -214,13 +214,13 @@ const DayTripComparison = () => {
               Nikko: The Hidden UNESCO Masterpiece
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If Kamakura is Japan's accessible ancient capital and Hakone is its scenic playground, Nikko is the hidden masterpiece that rewards those willing to make the longer journey. Located about two hours north of Tokyo in the mountains of Tochigi Prefecture, Nikko is home to the most ornate shrine complex in Japan — and some of the country's most spectacular natural scenery.
+              If Kamakura is Japan's accessible ancient capital and Hakone is its scenic playground, Nikko is the hidden masterpiece that rewards those willing to make the longer journey. Located about two hours north of Tokyo in the mountains of Tochigi Prefecture, Nikko is home to the most ornate shrine complex in Japan, and some of the country's most spectacular natural scenery.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Toshogu Shrine is the mausoleum of Tokugawa Ieyasu, the founder of the Tokugawa shogunate that ruled Japan for over 250 years. Unlike the austere simplicity of most Japanese shrines, Toshogu is deliberately, almost overwhelmingly ornate. Over 5,000 intricate carvings cover every surface — mythological creatures, natural scenes, philosophical allegories, and historical narratives. The "see no evil, speak no evil, hear no evil" monkeys that you see on souvenirs worldwide? The original carving is here, and it's part of a larger series depicting the stages of human life.
+              Toshogu Shrine is the mausoleum of Tokugawa Ieyasu, the founder of the Tokugawa shogunate that ruled Japan for over 250 years. Unlike the austere simplicity of most Japanese shrines, Toshogu is deliberately, almost overwhelmingly ornate. Over 5,000 intricate carvings cover every surface: mythological creatures, natural scenes, philosophical allegories, and historical narratives. The "see no evil, speak no evil, hear no evil" monkeys that you see on souvenirs worldwide? The original carving is here, and it's part of a larger series depicting the stages of human life.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Beyond the shrine complex, Nikko offers the dramatic Kegon Falls — a 97-meter waterfall that you can view from an observation platform reached by elevator inside the cliff. Lake Chuzenji, at 1,269 meters elevation, offers a completely different climate and atmosphere from Tokyo. In autumn (October to November), the mountainside transforms into a tapestry of red, orange, and gold that rivals any foliage display in the world.
+              Beyond the shrine complex, Nikko offers the dramatic Kegon Falls, a 97-meter waterfall that you can view from an observation platform reached by elevator inside the cliff. Lake Chuzenji, at 1,269 meters elevation, offers a completely different climate and atmosphere from Tokyo. In autumn (October to November), the mountainside transforms into a tapestry of red, orange, and gold that rivals any foliage display in the world.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -234,7 +234,7 @@ const DayTripComparison = () => {
               Why It's Less Crowded Than the Others
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The longer travel time (about 2 hours each way) means fewer tourists make the trip, especially on day visits. This works in your favor — you'll have more space at the shrine, shorter queues for the falls elevator, and a more contemplative experience overall. The trade-off is a longer day — you'll need to leave Tokyo earlier and return later. But for travelers who value depth over convenience, Nikko delivers an experience that the closer destinations simply can't match.
+              The longer travel time (about 2 hours each way) means fewer tourists make the trip, especially on day visits. This works in your favor: you'll have more space at the shrine, shorter queues for the falls elevator, and a more contemplative experience overall. The trade-off is a longer day. You'll need to leave Tokyo earlier and return later. But for travelers who value depth over convenience, Nikko delivers an experience that the closer destinations simply can't match.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A guide is particularly valuable at Nikko because Toshogu's carvings are a visual encyclopedia that requires explanation to appreciate. Without context, you'll see "pretty decorations." With a guide, you'll understand the political messages, Buddhist symbolism, and Confucian philosophy embedded in every panel. It's the difference between looking at the Sistine Chapel and understanding what Michelangelo was trying to say.
@@ -254,13 +254,13 @@ const DayTripComparison = () => {
             </p>
             <ul className="space-y-3 mb-4">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Kamakura + Hakone</strong> — The most popular combo. Both are south/southwest of Tokyo, and you could even stay overnight in Hakone at a ryokan for the ultimate hot spring experience.
+                <strong className="text-foreground">Kamakura + Hakone</strong>. The most popular combo. Both are south/southwest of Tokyo, and you could even stay overnight in Hakone at a ryokan for the ultimate hot spring experience.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Kamakura + Nikko</strong> — Great for history enthusiasts. Kamakura (Kamakura shogunate) and Nikko (Tokugawa shogunate) together tell the story of 700 years of Japanese military government.
+                <strong className="text-foreground">Kamakura + Nikko</strong>. Great for history enthusiasts. Kamakura (Kamakura shogunate) and Nikko (Tokugawa shogunate) together tell the story of 700 years of Japanese military government.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Hakone + Nikko</strong> — For nature lovers who want maximum scenery variety. Mountains, lakes, volcanoes, waterfalls — everything Japan's geography has to offer.
+                <strong className="text-foreground">Hakone + Nikko</strong>. For nature lovers who want maximum scenery variety. Mountains, lakes, volcanoes, waterfalls, everything Japan's geography has to offer.
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -280,7 +280,7 @@ const DayTripComparison = () => {
             </p>
             <ul className="space-y-3 mb-4">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">If you only have 1 day:</strong> Go to Kamakura. It's the easiest, most well-rounded experience with the shortest travel time. You'll see ancient temples, a world-famous Buddha statue, ocean views, and excellent food — all in a comfortable 7-8 hour day.
+                <strong className="text-foreground">If you only have 1 day:</strong> Go to Kamakura. It's the easiest, most well-rounded experience with the shortest travel time. You'll see ancient temples, a world-famous Buddha statue, ocean views, and excellent food, all in a comfortable 7-8 hour day.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">If you want nature + relaxation:</strong> Choose Hakone. The combination of Mt. Fuji views, volcanic valley, lake cruise, and potential onsen experience creates a day that feels like a complete escape from Tokyo.
@@ -296,7 +296,7 @@ const DayTripComparison = () => {
               The most important thing is to choose based on what excites you, not what's "most popular." If you're genuinely passionate about history, Nikko will blow your mind even though it's the least-visited of the three. If you dream of seeing Mt. Fuji, Hakone is your best shot. And if you want the most balanced, easy-going experience, Kamakura delivers every time.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Timing also matters — each destination has an optimal season. For a complete breakdown of when to plan your trip, check out our{" "}
+              Timing also matters, and each destination has an optimal season. For a complete breakdown of when to plan your trip, check out our{" "}
               <Link to="/blog/best-time-to-visit-tokyo" className="text-accent hover:underline">
                 Best Time to Visit Tokyo guide
               </Link>
@@ -331,7 +331,7 @@ const DayTripComparison = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Kamakura vs Hakone vs Nikko — Which Day Trip Should You Choose?",
+            "headline": "Kamakura vs Hakone vs Nikko: Which Day Trip Should You Choose?",
             "description": "Can't decide between Kamakura, Hakone, or Nikko? A local guide compares travel time, highlights, and who each trip is best for.",
             "author": {
               "@type": "Person",

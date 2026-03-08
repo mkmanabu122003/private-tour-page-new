@@ -8,7 +8,7 @@ const LicensedTourGuideJapan = () => {
     <Layout>
       <SEO
         title="What Is a Licensed Tour Guide in Japan? | Tanuki Tabi"
-        description="Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one — and why it matters for your trip."
+        description="Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one, and why it matters for your trip."
         canonicalPath="/blog/licensed-tour-guide-japan"
       />
 
@@ -49,7 +49,7 @@ const LicensedTourGuideJapan = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo and beyond.
+              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo and beyond.
             </p>
           </div>
         </div>
@@ -61,10 +61,10 @@ const LicensedTourGuideJapan = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Last month, a couple from Austin asked me something no one had asked in 500+ tours: "What makes you different from the guy on the corner offering free walking tours?" I appreciated the directness. And the answer took me back to 2012 — the year I spent six months studying Japanese history, geography, and cultural policy to pass an exam that only about 15% of applicants clear.
+              Last month, a couple from Austin asked me something no one had asked in 500+ tours: "What makes you different from the guy on the corner offering free walking tours?" I appreciated the directness. And the answer took me back to 2012, the year I spent six months studying Japanese history, geography, and cultural policy to pass an exam that only about 15% of applicants clear.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Japan is one of the few countries in the world that has a national licensing system for tour guides. It's called the National Government Licensed Guide Interpreter exam — 全国通訳案内士 in Japanese — and it's the only nationally recognized professional certification for guides in this country. If you're planning a trip and considering hiring a guide, understanding what this license means (and what it doesn't) can save you from a disappointing experience.
+              Japan is one of the few countries in the world that has a national licensing system for tour guides. It's called the National Government Licensed Guide Interpreter exam (全国通訳案内士 in Japanese), and it's the only nationally recognized professional certification for guides in this country. If you're planning a trip and considering hiring a guide, understanding what this license means (and what it doesn't) can save you from a disappointing experience.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               As a licensed tour guide in Japan myself, I want to walk you through what this system is, how it works, and why it should matter to you as a traveler.
@@ -81,7 +81,7 @@ const LicensedTourGuideJapan = () => {
               Think of it as roughly equivalent to passing the bar exam for the tourism industry. The written exam alone takes a full day. If you pass the written portion, you advance to an oral interview conducted entirely in your target foreign language, where examiners test your ability to explain complex cultural concepts clearly, accurately, and engagingly. The pass rate historically hovers between 10% and 20%, depending on the year and the language. For English, it's been as low as 8% in some years.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              As of 2025, there are roughly 26,000 people who hold this license across all languages in Japan. For English, the number is about 12,000 — but many of those are registered but not actively guiding. The number of full-time, actively working licensed tour guides in Japan who offer English-language private tours is surprisingly small.
+              As of 2025, there are roughly 26,000 people who hold this license across all languages in Japan. For English, the number is about 12,000, but many of those are registered but not actively guiding. The number of full-time, actively working licensed tour guides in Japan who offer English-language private tours is surprisingly small.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Why do so few guides take this exam? Because it's hard, it's time-consuming to prepare for, and since 2018, it's no longer legally required. More on that below.
@@ -92,23 +92,23 @@ const LicensedTourGuideJapan = () => {
               What a Licensed Guide Can Do That Others Can't
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Until 2018, Japanese law required anyone offering paid guiding services to hold this license. The law was amended that year, and now unlicensed individuals can legally offer tours. But the license didn't become meaningless — it became a quality signal in a suddenly crowded market.
+              Until 2018, Japanese law required anyone offering paid guiding services to hold this license. The law was amended that year, and now unlicensed individuals can legally offer tours. But the license didn't become meaningless. It became a quality signal in a suddenly crowded market.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Here's what a licensed tour guide in Japan brings to the table that an unlicensed guide typically doesn't:
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Verified depth of knowledge.</strong> The exam covers everything from the Nara period (710 AD) to modern trade policy. In my tours, I regularly draw on this knowledge when guests ask unexpected questions — why a particular shrine has a specific symbol, what Edo-period merchants ate for breakfast, or why Tokyo's train system is organized the way it is. A licensed guide has studied these topics formally, not just picked them up from blog posts.
+                <strong className="text-foreground">Verified depth of knowledge.</strong> The exam covers everything from the Nara period (710 AD) to modern trade policy. In my tours, I regularly draw on this knowledge when guests ask unexpected questions: why a particular shrine has a specific symbol, what Edo-period merchants ate for breakfast, or why Tokyo's train system is organized the way it is. A licensed guide has studied these topics formally, not just picked them up from blog posts.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Proven language ability.</strong> The license requires demonstrated fluency in a foreign language, tested through both written and oral examination. This means you won't run into communication gaps at critical moments — like when you need to explain a food allergy to a chef, or when a guest asks a nuanced question about Japanese religion.
+                <strong className="text-foreground">Proven language ability.</strong> The license requires demonstrated fluency in a foreign language, tested through both written and oral examination. This means you won't run into communication gaps at critical moments, like when you need to explain a food allergy to a chef, or when a guest asks a nuanced question about Japanese religion.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Professional accountability.</strong> Licensed guides are registered with the Japan Tourism Agency. We carry registration numbers. If something goes wrong, there's an institutional framework for accountability. With unlicensed guides — many of whom operate through peer-to-peer platforms — the accountability structure is informal at best.
+                <strong className="text-foreground">Professional accountability.</strong> Licensed guides are registered with the Japan Tourism Agency. We carry registration numbers. If something goes wrong, there's an institutional framework for accountability. With unlicensed guides, many of whom operate through peer-to-peer platforms, the accountability structure is informal at best.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Cultural translation, not just language translation.</strong> The exam trains guides to explain Japanese culture in ways that make sense to foreign visitors. It's not enough to know what a torii gate is — you need to be able to explain it. I often describe a torii gate as something like the holy water font at a church entrance: it marks where the sacred space begins, and passing through it is a transition from the everyday world to the spiritual one. This kind of cultural bridge-building is what the license specifically tests for.
+                <strong className="text-foreground">Cultural translation, not just language translation.</strong> The exam trains guides to explain Japanese culture in ways that make sense to foreign visitors. It's not enough to know what a torii gate is. You need to be able to explain it. I often describe a torii gate as something like the holy water font at a church entrance: it marks where the sacred space begins, and passing through it is a transition from the everyday world to the spiritual one. This kind of cultural bridge-building is what the license specifically tests for.
               </li>
             </ul>
 
@@ -123,7 +123,7 @@ const LicensedTourGuideJapan = () => {
               Every licensed tour guide in Japan is issued a registration card by their prefectural government. This card includes the guide's name, registration number, languages, and the issuing prefecture. A legitimate licensed guide will have no problem showing you this card or providing their registration number before you book.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If a guide avoids the question, gives a vague answer ("I've been doing this for years"), or claims the license "doesn't exist anymore," take that as a red flag. The license absolutely still exists. What changed in 2018 is that it's no longer a legal requirement — but the certification itself continues to be administered every year.
+              If a guide avoids the question, gives a vague answer ("I've been doing this for years"), or claims the license "doesn't exist anymore," take that as a red flag. The license absolutely still exists. What changed in 2018 is that it's no longer a legal requirement, but the certification itself continues to be administered every year.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               You can also check on many licensed guides through the Japan Guide Association (JGA) or the Japan Federation of Certified Guides (JFCG), which maintain directories of their members.
@@ -147,13 +147,13 @@ const LicensedTourGuideJapan = () => {
               If you're in Tokyo for two days and all you want is someone to walk you from Senso-ji to Tsukiji while pointing at things, the license probably won't make a noticeable difference. A friendly local with decent English can handle that.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              But if you want to <em>understand</em> what you're seeing — if you want someone who can explain why Japanese temples face specific directions, why certain neighborhoods in Tokyo feel completely different from others, or how the Edo-period class system still shapes modern Japanese society — then the depth of knowledge that comes with the license makes a real difference. In my experience guiding 500+ groups, the guests who get the most out of a licensed tour guide in Japan are those who arrive curious, not just those who arrive with a camera.
+              But if you want to <em>understand</em> what you're seeing, if you want someone who can explain why Japanese temples face specific directions, why certain neighborhoods in Tokyo feel completely different from others, or how the Edo-period class system still shapes modern Japanese society, then the depth of knowledge that comes with the license makes a real difference. In my experience guiding 500+ groups, the guests who get the most out of a licensed tour guide in Japan are those who arrive curious, not just those who arrive with a camera.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The license also matters when things go sideways. When it rains on your Kamakura day trip, a licensed guide has the knowledge base to pivot the entire itinerary and still deliver a rich cultural experience. When your child asks why the dragon on the temple ceiling looks angry, a licensed guide can give a real answer, not a guess. When you have a food allergy and need to communicate it clearly in Japanese, a licensed guide handles that conversation with precision.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              So does it matter? For a surface-level tour, honestly no. For an experience that stays with you long after you fly home, yes — it matters a lot.
+              So does it matter? For a surface-level tour, honestly no. For an experience that stays with you long after you fly home, yes, it matters a lot.
             </p>
 
             {/* H2: Questions to ask before booking */}
@@ -168,16 +168,16 @@ const LicensedTourGuideJapan = () => {
                 <strong className="text-foreground">"Do you hold the National Government Licensed Guide Interpreter certification?"</strong> A simple yes or no. If they say yes, ask for the registration number. If they say no, ask about their background and experience.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">"How do you handle unexpected changes?"</strong> Weather, sudden closures, a guest who isn't feeling well — these happen regularly. A good guide should have specific examples of how they've adapted in the past, not just vague reassurances.
+                <strong className="text-foreground">"How do you handle unexpected changes?"</strong> Weather, sudden closures, a guest who isn't feeling well. These happen regularly. A good guide should have specific examples of how they've adapted in the past, not just vague reassurances.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">"Can you customize the tour to my interests?"</strong> If the answer is "we follow a set route," that's a sign of a rigid, script-based operation. A good guide — licensed or not — should be able to adjust.
+                <strong className="text-foreground">"Can you customize the tour to my interests?"</strong> If the answer is "we follow a set route," that's a sign of a rigid, script-based operation. A good guide, licensed or not, should be able to adjust.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">"What's included in the price?"</strong> Clarify whether entrance fees, transportation, and meals are included or extra. Transparent pricing is a sign of professionalism.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">"Can I see reviews from recent clients?"</strong> Look for reviews that mention specific details — a particular story the guide told, how they handled a problem, whether they adapted to the group. Generic five-star reviews without substance tell you very little.
+                <strong className="text-foreground">"Can I see reviews from recent clients?"</strong> Look for reviews that mention specific details: a particular story the guide told, how they handled a problem, whether they adapted to the group. Generic five-star reviews without substance tell you very little.
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -194,7 +194,7 @@ const LicensedTourGuideJapan = () => {
                 Looking for a licensed guide for your Tokyo trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm Manabu, a National Government Licensed Guide Interpreter with over 500 tours completed and a 4.86-star rating. I offer private tours centered in Asakusa and beyond — in English and Spanish. Browse my tours to find one that fits your trip.
+                I'm Manabu, a National Government Licensed Guide Interpreter with over 500 tours completed and a 4.86-star rating. I offer private tours centered in Asakusa and beyond, in English and Spanish. Browse my tours to find one that fits your trip.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">
@@ -217,7 +217,7 @@ const LicensedTourGuideJapan = () => {
                     How many licensed tour guides are there in Japan?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    As of 2025, approximately 26,000 people hold the National Government Licensed Guide Interpreter certification across all languages. For English, the number is around 12,000 — though many are registered but not actively guiding full-time. The number of full-time licensed tour guides in Japan offering English private tours is significantly smaller.
+                    As of 2025, approximately 26,000 people hold the National Government Licensed Guide Interpreter certification across all languages. For English, the number is around 12,000, though many are registered but not actively guiding full-time. The number of full-time licensed tour guides in Japan offering English private tours is significantly smaller.
                   </p>
                 </div>
                 <div>
@@ -225,7 +225,7 @@ const LicensedTourGuideJapan = () => {
                     Is it required by law to use a licensed guide in Japan?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    No. Until 2018, only licensed guides could legally offer paid tour services. The law was revised to allow unlicensed guides to operate. However, the license remains the only nationally recognized quality standard for guides in Japan. Think of it like choosing between a licensed electrician and someone who learned from YouTube — both can do the work, but the credentials tell you something about the baseline quality.
+                    No. Until 2018, only licensed guides could legally offer paid tour services. The law was revised to allow unlicensed guides to operate. However, the license remains the only nationally recognized quality standard for guides in Japan. Think of it like choosing between a licensed electrician and someone who learned from YouTube. Both can do the work, but the credentials tell you something about the baseline quality.
                   </p>
                 </div>
                 <div>
@@ -258,7 +258,7 @@ const LicensedTourGuideJapan = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: "What Is a Licensed Tour Guide in Japan? (And Why It Matters)",
-            description: "Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one — and why it matters for your trip.",
+            description: "Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one, and why it matters for your trip.",
             author: {
               "@type": "Person",
               name: "Manabu",

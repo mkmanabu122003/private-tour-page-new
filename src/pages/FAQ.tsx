@@ -28,7 +28,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "How far in advance should I book?",
-        answer: "We recommend booking at least 1-2 weeks in advance, especially during peak seasons (March-May for cherry blossoms, October-November for autumn). Last-minute bookings are sometimes possible — just ask!",
+        answer: "We recommend booking at least 1-2 weeks in advance, especially during peak seasons (March-May for cherry blossoms, October-November for autumn). Last-minute bookings are sometimes possible, just ask!",
       },
       {
         question: "What is your cancellation policy?",
@@ -36,7 +36,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "Can I book for just 1 person?",
-        answer: "Yes! Solo travelers are very welcome. Pricing may differ from group rates — contact us for a quote.",
+        answer: "Yes! Solo travelers are very welcome. Pricing may differ from group rates, so contact us for a quote.",
       },
     ],
   },
@@ -49,11 +49,11 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "Are your tours private?",
-        answer: "Yes, all our tours are 100% private. It's just you and your group with your guide — no strangers, no fixed schedule. You set the pace.",
+        answer: "Yes, all our tours are 100% private. It's just you and your group with your guide. No strangers, no fixed schedule. You set the pace.",
       },
       {
         question: "What happens if it rains?",
-        answer: "Tours run rain or shine — Tokyo has many covered areas, indoor stops, and underground passages. Your guide will adapt the route for weather. We only cancel for severe weather warnings (typhoons etc.), in which case you'll receive a full refund or reschedule.",
+        answer: "Tours run rain or shine. Tokyo has many covered areas, indoor stops, and underground passages. Your guide will adapt the route for weather. We only cancel for severe weather warnings (typhoons etc.), in which case you'll receive a full refund or reschedule.",
       },
       {
         question: "Can you accommodate dietary restrictions?",
@@ -65,7 +65,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "Can you accommodate wheelchair users?",
-        answer: "We do our best to make tours accessible. Please let us know in advance and we'll plan a route that avoids stairs and uses accessible entrances. Some historic sites have limited accessibility — your guide will plan accordingly.",
+        answer: "We do our best to make tours accessible. Please let us know in advance and we'll plan a route that avoids stairs and uses accessible entrances. Some historic sites have limited accessibility, and your guide will plan accordingly.",
       },
     ],
   },
@@ -82,7 +82,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "Can I combine a day trip with a Tokyo tour?",
-        answer: "Yes! Many guests book a Tokyo walking tour for one day and a day trip for another. We offer multi-day packages — contact us for details.",
+        answer: "Yes! Many guests book a Tokyo walking tour for one day and a day trip for another. We offer multi-day packages, so contact us for details.",
       },
     ],
   },
@@ -118,7 +118,7 @@ const FAQ = () => {
     <Layout>
       <SEO
         title="FAQ | Tokyo Private Tour Guide Questions | Tanuki Tabi Travel"
-        description="Answers to common questions about Tokyo private tours with Tanuki Tabi Travel — booking, pricing, cancellations, and what to expect on your guided walk."
+        description="Answers to common questions about Tokyo private tours with Tanuki Tabi Travel: booking, pricing, cancellations, and what to expect on your guided walk."
         canonicalPath="/faq"
         hreflang={[
           { lang: "en", path: "/faq" },

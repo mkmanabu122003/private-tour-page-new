@@ -36,7 +36,7 @@ const EsKamakura = () => {
               Excursión Privada a Kamakura con Guía en Español
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Escapa de Tokio por un día y explora Kamakura, la primera capital militar de Japón. Esta excursión privada te lleva al icónico Gran Buda, templos serenos con vistas al océano y la encantadora calle comercial Komachi-dori — todo con un guía con licencia que da vida a 800 años de historia samurái.
+              Escapa de Tokio por un día y explora Kamakura, la primera capital militar de Japón. Esta excursión privada te lleva al icónico Gran Buda, templos serenos con vistas al océano y la encantadora calle comercial Komachi-dori, todo con un guía con licencia que da vida a 800 años de historia samurái.
             </p>
           </div>
         </div>
@@ -70,10 +70,10 @@ const EsKamakura = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Gran Buda en Kotoku-in — estatua de bronce del siglo XIII, uno de los monumentos más icónicos de Japón",
-                    "Templo Hasedera — vistas al océano, estatua de Kannon, hortensias en junio",
-                    "Santuario Tsurugaoka Hachimangu — el santuario más importante de Kamakura",
-                    "Calle comercial Komachi-dori — aperitivos locales, recuerdos, artesanía",
+                    "Gran Buda en Kotoku-in, estatua de bronce del siglo XIII, uno de los monumentos más icónicos de Japón",
+                    "Templo Hasedera: vistas al océano, estatua de Kannon, hortensias en junio",
+                    "Santuario Tsurugaoka Hachimangu: el santuario más importante de Kamakura",
+                    "Calle comercial Komachi-dori: aperitivos locales, recuerdos, artesanía",
                     "Opcional: bosque de bambú del Templo Hokokuji + experiencia de matcha",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -96,7 +96,7 @@ const EsKamakura = () => {
                     { time: "12:00", activity: "Almuerzo en un restaurante local (el guía recomienda según tus preferencias)" },
                     { time: "13:30", activity: "Gran Buda en Kotoku-in" },
                     { time: "14:30", activity: "Templo Hasedera (vistas al océano desde la plataforma de observación)" },
-                    { time: "15:30", activity: "Calle Komachi-dori — comida callejera, compras" },
+                    { time: "15:30", activity: "Calle Komachi-dori: comida callejera, compras" },
                     { time: "16:30", activity: "Regreso a Tokio en tren" },
                     { time: "17:30", activity: "Llegada a Tokio" },
                   ].map((item, i) => (
@@ -185,7 +185,7 @@ const EsKamakura = () => {
                 <div className="flex gap-4 items-start bg-card border border-border rounded-lg p-6">
                   <Info className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <p className="text-muted-foreground leading-relaxed">
-                    Kamakura tiene más de 65 templos y santuarios — un guía te ayuda a priorizar y entender la rica historia de la primera capital militar de Japón. Evita la confusión de las conexiones de tren y navega las multitudes de manera eficiente, especialmente en los lugares más populares. Tu guía proporciona contexto cultural que transforma las visitas a templos de simple turismo en experiencias significativas.
+                    Kamakura tiene más de 65 templos y santuarios. Un guía te ayuda a priorizar y entender la rica historia de la primera capital militar de Japón. Evita la confusión de las conexiones de tren y navega las multitudes de manera eficiente, especialmente en los lugares más populares. Tu guía proporciona contexto cultural que transforma las visitas a templos de simple turismo en experiencias significativas.
                   </p>
                 </div>
               </div>

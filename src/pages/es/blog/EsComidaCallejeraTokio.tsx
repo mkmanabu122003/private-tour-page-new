@@ -20,7 +20,7 @@ const EsComidaCallejeraTokio = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/tsukiji-street-food.jpg"
-          alt="Comida callejera en Tokio — puestos de street food"
+          alt="Comida callejera en Tokio, puestos de street food"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -127,7 +127,7 @@ const EsComidaCallejeraTokio = () => {
               Qué pedir en Asakusa (mi lista personal)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Después de cientos de visitas a Asakusa, esta es mi ruta de comida callejera favorita: empiezo con un <strong className="text-foreground">age-manju</strong> (bollo frito relleno de pasta dulce) en Asakusa Kokonoe, que lleva más de 70 años con la misma receta — cuestan solo 200 yenes y están crujientes por fuera y suaves por dentro. Luego camino hacia el lateral del templo para un <strong className="text-foreground">melon pan</strong> (pan dulce con costra crujiente) relleno de helado, una combinación que no tiene sentido hasta que la pruebas. Después, bajo a Hoppy-dori para un par de <strong className="text-foreground">yakitori</strong> (negima, el de pollo con puerro, es mi favorito) y termino con un <strong className="text-foreground">taiyaki</strong> relleno de crema pastelera. El taiyaki, que viene en forma de pez, es como un churro relleno: masa dulce por fuera, crema caliente por dentro. Presupuesto total de esta ruta: unos 1.200-1.500 yenes.
+              Después de cientos de visitas a Asakusa, esta es mi ruta de comida callejera favorita: empiezo con un <strong className="text-foreground">age-manju</strong> (bollo frito relleno de pasta dulce) en Asakusa Kokonoe, que lleva más de 70 años con la misma receta; cuestan solo 200 yenes y están crujientes por fuera y suaves por dentro. Luego camino hacia el lateral del templo para un <strong className="text-foreground">melon pan</strong> (pan dulce con costra crujiente) relleno de helado, una combinación que no tiene sentido hasta que la pruebas. Después, bajo a Hoppy-dori para un par de <strong className="text-foreground">yakitori</strong> (negima, el de pollo con puerro, es mi favorito) y termino con un <strong className="text-foreground">taiyaki</strong> relleno de crema pastelera. El taiyaki, que viene en forma de pez, es como un churro relleno: masa dulce por fuera, crema caliente por dentro. Presupuesto total de esta ruta: unos 1.200-1.500 yenes.
             </p>
 
             {/* Yanaka Ginza */}
@@ -142,7 +142,7 @@ const EsComidaCallejeraTokio = () => {
               Cómo llegar a Yanaka
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Yanaka Ginza está a 5 minutos caminando desde la salida norte de la estación JR Nippori. Si usas el Japan Rail Pass, no te costará nada extra, ya que Nippori está en la línea Yamanote. Desde la estación, sigue las señales hacia "Yanaka Ginza" — hay indicaciones en inglés. El paseo desde la estación ya es bonito: calles residenciales tranquilas con pequeños templos escondidos entre las casas.
+              Yanaka Ginza está a 5 minutos caminando desde la salida norte de la estación JR Nippori. Si usas el Japan Rail Pass, no te costará nada extra, ya que Nippori está en la línea Yamanote. Desde la estación, sigue las señales hacia "Yanaka Ginza", hay indicaciones en inglés. El paseo desde la estación ya es bonito: calles residenciales tranquilas con pequeños templos escondidos entre las casas.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -171,42 +171,42 @@ const EsComidaCallejeraTokio = () => {
               Los 8 clásicos de la comida callejera japonesa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">1. Takoyaki</strong> (250-600 yenes) — Bolitas de masa rellenas de pulpo, cubiertas de salsa, mayonesa y katsuobushi (virutas de bonito que "bailan" con el calor). Como las croquetas en España, es un snack que todo el mundo come, desde niños hasta abuelos. Originarios de Osaka, pero los encuentras por todo Tokio.
+              <strong className="text-foreground">1. Takoyaki</strong> (250-600 yenes). Bolitas de masa rellenas de pulpo, cubiertas de salsa, mayonesa y katsuobushi (virutas de bonito que "bailan" con el calor). Como las croquetas en España, es un snack que todo el mundo come, desde niños hasta abuelos. Originarios de Osaka, pero los encuentras por todo Tokio.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">2. Yakitori</strong> (100-200 yenes por brocheta) — Brochetas de pollo a la parrilla con carbón. Como pinchos morunos pero de pollo, con diferentes partes del ave y dos sazones principales: tare (salsa dulce) o shio (sal). El negima (pollo con puerro) y el tsukune (albóndiga de pollo) son los más populares.
+              <strong className="text-foreground">2. Yakitori</strong> (100-200 yenes por brocheta). Brochetas de pollo a la parrilla con carbón. Como pinchos morunos pero de pollo, con diferentes partes del ave y dos sazones principales: tare (salsa dulce) o shio (sal). El negima (pollo con puerro) y el tsukune (albóndiga de pollo) son los más populares.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">3. Taiyaki</strong> (200-350 yenes) — Pastel con forma de pez relleno de anko (pasta de judías rojas), crema pastelera o, en versiones modernas, chocolate o boniato. Como un churro relleno: masa crujiente por fuera, relleno caliente por dentro. Busca los que hacen uno a uno en moldes de hierro, no los industriales.
+              <strong className="text-foreground">3. Taiyaki</strong> (200-350 yenes). Pastel con forma de pez relleno de anko (pasta de judías rojas), crema pastelera o, en versiones modernas, chocolate o boniato. Como un churro relleno: masa crujiente por fuera, relleno caliente por dentro. Busca los que hacen uno a uno en moldes de hierro, no los industriales.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">4. Ningyo-yaki</strong> (300-500 yenes por bolsa) — Pastelitos pequeños en forma de figuras (faroles, palomas, pagodas) rellenos de anko. Son el souvenir comestible por excelencia de Asakusa y se comen templados recién hechos.
+              <strong className="text-foreground">4. Ningyo-yaki</strong> (300-500 yenes por bolsa). Pastelitos pequeños en forma de figuras (faroles, palomas, pagodas) rellenos de anko. Son el souvenir comestible por excelencia de Asakusa y se comen templados recién hechos.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">5. Menchi-katsu</strong> (200-350 yenes) — Croqueta de carne picada empanada y frita. Jugosa, crujiente, satisfactoria. Si te gustan las croquetas, esto es la versión japonesa mejorada.
+              <strong className="text-foreground">5. Menchi-katsu</strong> (200-350 yenes). Croqueta de carne picada empanada y frita. Jugosa, crujiente, satisfactoria. Si te gustan las croquetas, esto es la versión japonesa mejorada.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">6. Korokke</strong> (150-250 yenes) — La croqueta japonesa clásica, normalmente de patata con carne o de curry. Más suave que el menchi-katsu, es el snack reconfortante perfecto para un día frío.
+              <strong className="text-foreground">6. Korokke</strong> (150-250 yenes). La croqueta japonesa clásica, normalmente de patata con carne o de curry. Más suave que el menchi-katsu, es el snack reconfortante perfecto para un día frío.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">7. Ikayaki</strong> (400-600 yenes) — Calamar entero a la parrilla, pincelado con salsa de soja. Lo encuentras sobre todo en festivales y mercados costeros. El olor a calamar asado es inconfundible y te atraerá desde varios metros de distancia.
+              <strong className="text-foreground">7. Ikayaki</strong> (400-600 yenes). Calamar entero a la parrilla, pincelado con salsa de soja. Lo encuentras sobre todo en festivales y mercados costeros. El olor a calamar asado es inconfundible y te atraerá desde varios metros de distancia.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">8. Dango</strong> (150-300 yenes) — Tres bolitas de mochi (arroz glutinoso) en un palito, normalmente con salsa mitarashi (dulce de soja) o cubiertas de pasta de judías. Es el snack más antiguo de Japón, y probarlo frente a un templo es una experiencia que conecta con siglos de tradición.
+              <strong className="text-foreground">8. Dango</strong> (150-300 yenes). Tres bolitas de mochi (arroz glutinoso) en un palito, normalmente con salsa mitarashi (dulce de soja) o cubiertas de pasta de judías. Es el snack más antiguo de Japón, y probarlo frente a un templo es una experiencia que conecta con siglos de tradición.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Cómo pedir: señalar, sonreír y decir "kore kudasai"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No necesitas hablar japonés para disfrutar de la comida callejera en Tokio. La mayoría de los puestos tienen la comida a la vista, así que basta con señalar lo que quieres y decir <strong className="text-foreground">"kore kudasai"</strong> (esto, por favor). Si quieres especificar cantidad, muestra los dedos: uno, dos, tres. Para pagar, la mayoría de puestos tienen una bandejita donde dejas el dinero — no pases los billetes directamente a la mano del vendedor. Un "arigatou gozaimasu" (muchas gracias) al recoger tu comida siempre es apreciado. Y si ves un puesto con cola de japoneses, ponte en esa cola: ellos saben dónde está lo bueno.
+              No necesitas hablar japonés para disfrutar de la comida callejera en Tokio. La mayoría de los puestos tienen la comida a la vista, así que basta con señalar lo que quieres y decir <strong className="text-foreground">"kore kudasai"</strong> (esto, por favor). Si quieres especificar cantidad, muestra los dedos: uno, dos, tres. Para pagar, la mayoría de puestos tienen una bandejita donde dejas el dinero; no pases los billetes directamente a la mano del vendedor. Un "arigatou gozaimasu" (muchas gracias) al recoger tu comida siempre es apreciado. Y si ves un puesto con cola de japoneses, ponte en esa cola: ellos saben dónde está lo bueno.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Etiqueta callejera: dónde comer lo que compras
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Como ya mencioné, comer caminando no es la norma en Japón. Lo correcto es comerte tu snack en la zona del puesto donde lo compraste — muchos tienen un pequeño mostrador o espacio designado para ello. En las shotengai como Yanaka Ginza, hay bancos estratégicamente colocados. En Asakusa, Nakamise-dori es una excepción donde sí se come mientras paseas. Lo que nunca debes hacer es llevar comida al transporte público: comer en el tren o metro es un gran error cultural. Y por supuesto, lleva tu basura contigo hasta encontrar una papelera — en Japón hay pocas papeleras públicas, pero los konbini (tiendas de conveniencia) siempre tienen una en la puerta.
+              Como ya mencioné, comer caminando no es la norma en Japón. Lo correcto es comerte tu snack en la zona del puesto donde lo compraste; muchos tienen un pequeño mostrador o espacio designado para ello. En las shotengai como Yanaka Ginza, hay bancos estratégicamente colocados. En Asakusa, Nakamise-dori es una excepción donde sí se come mientras paseas. Lo que nunca debes hacer es llevar comida al transporte público: comer en el tren o metro es un gran error cultural. Y por supuesto, lleva tu basura contigo hasta encontrar una papelera; en Japón hay pocas papeleras públicas, pero los konbini (tiendas de conveniencia) siempre tienen una en la puerta.
             </p>
 
             {/* Cuánto cuesta */}
@@ -221,7 +221,7 @@ const EsComidaCallejeraTokio = () => {
               Presupuesto realista para un día de comida callejera
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Un día completo picoteando por Tokio — digamos almuerzo y merienda en Asakusa o Yanaka — te costará entre <strong className="text-foreground">1.500 y 3.000 yenes</strong> (aproximadamente 10-20 euros). Eso incluye 4-6 snacks diferentes y alguna bebida. Para que te hagas una idea: 6 takoyaki por 500 yenes, 2 yakitori por 300 yenes, un menchi-katsu por 250 yenes, un taiyaki por 250 yenes y una bebida por 150 yenes son 1.450 yenes — y estarás satisfecho. Si quieres darte un capricho con brochetas de wagyu o marisco a la parrilla, sube el presupuesto a 3.000-4.000 yenes, pero sinceramente no hace falta gastar más que eso.
+              Un día completo picoteando por Tokio (digamos almuerzo y merienda en Asakusa o Yanaka) te costará entre <strong className="text-foreground">1.500 y 3.000 yenes</strong> (aproximadamente 10-20 euros). Eso incluye 4-6 snacks diferentes y alguna bebida. Para que te hagas una idea: 6 takoyaki por 500 yenes, 2 yakitori por 300 yenes, un menchi-katsu por 250 yenes, un taiyaki por 250 yenes y una bebida por 150 yenes son 1.450 yenes, y estarás satisfecho. Si quieres darte un capricho con brochetas de wagyu o marisco a la parrilla, sube el presupuesto a 3.000-4.000 yenes, pero sinceramente no hace falta gastar más que eso.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">

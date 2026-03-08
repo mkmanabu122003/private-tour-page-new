@@ -20,7 +20,7 @@ const EsItinerarioTokio5Dias = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/shibuya-scramble-crossing.jpg"
-          alt="Cruce de Shibuya — itinerario de 5 días por Tokio"
+          alt="Cruce de Shibuya, itinerario de 5 días por Tokio"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -62,7 +62,7 @@ const EsItinerarioTokio5Dias = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Si me pidieras diseñar el itinerario de Tokio para 5 días perfecto — el que yo mismo seguiría si tuviera solo cinco días y quisiera llevarlo todo: templos, comida callejera, barrios secretos y una excursión fuera de la ciudad — este es exactamente lo que te entregaría. No es un listado genérico copiado de una guía de viaje. Es la ruta que he pulido durante años llevando a viajeros reales por las calles de Tokio.
+              Si me pidieras diseñar el itinerario de Tokio para 5 días perfecto, el que yo mismo seguiría si tuviera solo cinco días y quisiera llevarlo todo: templos, comida callejera, barrios secretos y una excursión fuera de la ciudad, este es exactamente lo que te entregaría. No es un listado genérico copiado de una guía de viaje. Es la ruta que he pulido durante años llevando a viajeros reales por las calles de Tokio.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Como guía con licencia, he acompañado a cientos de personas en sus primeros días en Japón. He visto qué funciona, qué agota y qué deja a la gente con esa sonrisa de "esto es lo mejor que he hecho en mi vida". Este itinerario Tokio 5 días recoge todo ese aprendizaje. Cada día tiene un ritmo pensado: una mañana activa, un almuerzo en un lugar concreto y una tarde que puedes ajustar según tu energía.
@@ -95,7 +95,7 @@ const EsItinerarioTokio5Dias = () => {
 
             {/* Día 1 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Día 1 — Asakusa, Ueno y el Tokio tradicional
+              Día 1: Asakusa, Ueno y el Tokio tradicional
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <em>La mañana huele a incienso y los callejones tienen ese silencio que solo existe antes de que lleguen las multitudes.</em>
@@ -128,13 +128,13 @@ const EsItinerarioTokio5Dias = () => {
             <div className="bg-accent/10 rounded-lg p-6 my-8">
               <p className="text-foreground font-medium mb-2">Tip del guía</p>
               <p className="text-muted-foreground leading-relaxed">
-                No cambies dinero en el aeropuerto. Las tasas son terribles. En lugar de eso, usa los cajeros automáticos de los 7-Eleven o los de la cadena Lawson — aceptan tarjetas extranjeras y el tipo de cambio es mucho mejor. Encontrarás un 7-Eleven literalmente en cada esquina de Tokio.
+                No cambies dinero en el aeropuerto. Las tasas son terribles. En lugar de eso, usa los cajeros automáticos de los 7-Eleven o los de la cadena Lawson, que aceptan tarjetas extranjeras y el tipo de cambio es mucho mejor. Encontrarás un 7-Eleven literalmente en cada esquina de Tokio.
               </p>
             </div>
 
             {/* Día 2 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Día 2 — Shibuya, Harajuku y Shinjuku
+              Día 2: Shibuya, Harajuku y Shinjuku
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <em>Hoy toca el Tokio que sale en las películas: neones, cruces peatonales imposibles y callejones donde caben exactamente dos personas.</em>
@@ -151,7 +151,7 @@ const EsItinerarioTokio5Dias = () => {
               Mediodía: Shibuya Crossing y almuerzo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Camina desde Harajuku hasta Shibuya (15 minutos a pie por Cat Street, una calle llena de tiendas independientes). El cruce de Shibuya es exactamente tan impresionante como parece en las fotos — en hora punta, hasta 3.000 personas cruzan a la vez desde todas las direcciones. Para verlo desde arriba, sube al Shibuya Sky o, más barato, al Starbucks del edificio TSUTAYA frente al cruce. Para almorzar, <strong className="text-foreground">Fuunji</strong> (en Shinjuku, pero lo menciono aquí como opción si avanzas rápido) hace uno de los mejores tsukemen (ramen de remojo) de Tokio. En Shibuya mismo, prueba <strong className="text-foreground">Ichiran Ramen</strong> para la experiencia de cabinas individuales.
+              Camina desde Harajuku hasta Shibuya (15 minutos a pie por Cat Street, una calle llena de tiendas independientes). El cruce de Shibuya es exactamente tan impresionante como parece en las fotos: en hora punta, hasta 3.000 personas cruzan a la vez desde todas las direcciones. Para verlo desde arriba, sube al Shibuya Sky o, más barato, al Starbucks del edificio TSUTAYA frente al cruce. Para almorzar, <strong className="text-foreground">Fuunji</strong> (en Shinjuku, pero lo menciono aquí como opción si avanzas rápido) hace uno de los mejores tsukemen (ramen de remojo) de Tokio. En Shibuya mismo, prueba <strong className="text-foreground">Ichiran Ramen</strong> para la experiencia de cabinas individuales.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -164,13 +164,13 @@ const EsItinerarioTokio5Dias = () => {
             <div className="bg-secondary/50 rounded-lg p-6 my-8">
               <p className="text-foreground font-medium mb-2">Tip del guía</p>
               <p className="text-muted-foreground leading-relaxed">
-                En Golden Gai, muchos bares cobran un "charge" de entrada (500 a 1.500 yenes) además de las bebidas. Es completamente normal y no es una estafa — cubre el espacio y los aperitivos que te ponen. Pregunta siempre antes de sentarte para evitar sorpresas.
+                En Golden Gai, muchos bares cobran un "charge" de entrada (500 a 1.500 yenes) además de las bebidas. Es completamente normal y no es una estafa: cubre el espacio y los aperitivos que te ponen. Pregunta siempre antes de sentarte para evitar sorpresas.
               </p>
             </div>
 
             {/* Día 3 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Día 3 — Tsukiji, Ginza y el Tokio elegante
+              Día 3: Tsukiji, Ginza y el Tokio elegante
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <em>Hoy desayunas sushi a las nueve de la mañana y nadie te mira raro. Bienvenido al tercer día de tu itinerario Tokio 5 días.</em>
@@ -187,7 +187,7 @@ const EsItinerarioTokio5Dias = () => {
               Mediodía: paseo a Ginza
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Desde Tsukiji, camina 10 minutos hasta Ginza. El contraste es brutal: pasas de callejones estrechos llenos de humo a avenidas amplias flanqueadas por tiendas de Chanel y Cartier. No hace falta que compres nada — Ginza se disfruta como paseo arquitectónico. No te pierdas el edificio <strong className="text-foreground">Ginza Six</strong> y su terraza en la azotea (gratuita), ni el teatro <strong className="text-foreground">Kabuki-za</strong>, donde puedes comprar entradas para un solo acto por menos de 2.000 yenes.
+              Desde Tsukiji, camina 10 minutos hasta Ginza. El contraste es brutal: pasas de callejones estrechos llenos de humo a avenidas amplias flanqueadas por tiendas de Chanel y Cartier. No hace falta que compres nada; Ginza se disfruta como paseo arquitectónico. No te pierdas el edificio <strong className="text-foreground">Ginza Six</strong> y su terraza en la azotea (gratuita), ni el teatro <strong className="text-foreground">Kabuki-za</strong>, donde puedes comprar entradas para un solo acto por menos de 2.000 yenes.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -199,7 +199,7 @@ const EsItinerarioTokio5Dias = () => {
 
             {/* Día 4 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Día 4 — Excursión de un día (Kamakura o Hakone)
+              Día 4: Excursión de un día (Kamakura o Hakone)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <em>Hoy sales de Tokio. El tren atraviesa los suburbios y de repente aparece el verde. Los hombros se relajan.</em>
@@ -232,13 +232,13 @@ const EsItinerarioTokio5Dias = () => {
             <div className="bg-accent/10 rounded-lg p-6 my-8">
               <p className="text-foreground font-medium mb-2">Tip del guía</p>
               <p className="text-muted-foreground leading-relaxed">
-                Consulta la previsión del tiempo la noche anterior. Si hay cielos despejados, ve a Hakone — las probabilidades de ver el Fuji son altas entre noviembre y marzo. Si está nublado, Kamakura te dará una experiencia más satisfactoria porque sus templos y calles no dependen del clima.
+                Consulta la previsión del tiempo la noche anterior. Si hay cielos despejados, ve a Hakone: las probabilidades de ver el Fuji son altas entre noviembre y marzo. Si está nublado, Kamakura te dará una experiencia más satisfactoria porque sus templos y calles no dependen del clima.
               </p>
             </div>
 
             {/* Día 5 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Día 5 — Yanaka, Nezu y el Tokio que nadie ve
+              Día 5: Yanaka, Nezu y el Tokio que nadie ve
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <em>El último día. Nada de prisas. Hoy caminas por un Tokio que parece haberse quedado en los años 60, donde los gatos duermen en los muros y las tiendas no tienen prisa por abrir.</em>
@@ -262,7 +262,7 @@ const EsItinerarioTokio5Dias = () => {
               Tarde: compras de último minuto y despedida
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si necesitas comprar souvenirs, toma el metro hasta la estación de Tokio y visita <strong className="text-foreground">Tokyo Character Street</strong> (bajo la estación) o la planta de alimentación de los grandes almacenes <strong className="text-foreground">Daimaru</strong>, donde encontrarás dulces japoneses perfectamente empaquetados para regalar. Si prefieres algo más auténtico, vuelve a Yanaka — las tiendas de artesanía del barrio venden cerámica, tenugui (toallas japonesas estampadas) y papelería hecha a mano que superan con creces cualquier souvenir de aeropuerto.
+              Si necesitas comprar souvenirs, toma el metro hasta la estación de Tokio y visita <strong className="text-foreground">Tokyo Character Street</strong> (bajo la estación) o la planta de alimentación de los grandes almacenes <strong className="text-foreground">Daimaru</strong>, donde encontrarás dulces japoneses perfectamente empaquetados para regalar. Si prefieres algo más auténtico, vuelve a Yanaka: las tiendas de artesanía del barrio venden cerámica, tenugui (toallas japonesas estampadas) y papelería hecha a mano que superan con creces cualquier souvenir de aeropuerto.
             </p>
 
             <div className="bg-secondary/50 rounded-lg p-6 my-8">
@@ -281,7 +281,7 @@ const EsItinerarioTokio5Dias = () => {
               ¿5 días son suficientes para Tokio?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Sí, cinco días te permiten cubrir los barrios principales, hacer una excursión fuera de la ciudad y tener tiempo para perderte y descubrir cosas por tu cuenta. ¿Podrías pasar más tiempo? Por supuesto — Tokio tiene contenido para semanas. Pero con un buen itinerario Tokio 5 días como este, te llevas una experiencia completa y satisfactoria sin sentir que te has dejado lo esencial.
+              Sí, cinco días te permiten cubrir los barrios principales, hacer una excursión fuera de la ciudad y tener tiempo para perderte y descubrir cosas por tu cuenta. ¿Podrías pasar más tiempo? Por supuesto, Tokio tiene contenido para semanas. Pero con un buen itinerario Tokio 5 días como este, te llevas una experiencia completa y satisfactoria sin sentir que te has dejado lo esencial.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -295,21 +295,21 @@ const EsItinerarioTokio5Dias = () => {
               ¿Necesito JR Pass para 5 días en Tokio?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No. El JR Pass solo merece la pena si vas a hacer viajes largos en shinkansen (tren bala) entre ciudades — por ejemplo, Tokio-Kioto-Osaka. Para moverte dentro de Tokio y hacer excursiones a Kamakura o Hakone, la tarjeta Suica y billetes individuales son más baratos. El JR Pass de 7 días cuesta más de 50.000 yenes; tu gasto en transporte con este itinerario Tokio 5 días será una fracción de eso.
+              No. El JR Pass solo merece la pena si vas a hacer viajes largos en shinkansen (tren bala) entre ciudades, por ejemplo, Tokio-Kioto-Osaka. Para moverte dentro de Tokio y hacer excursiones a Kamakura o Hakone, la tarjeta Suica y billetes individuales son más baratos. El JR Pass de 7 días cuesta más de 50.000 yenes; tu gasto en transporte con este itinerario Tokio 5 días será una fracción de eso.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               ¿Puedo modificar el orden de los días?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Absolutamente. Los días 1 a 3 y el día 5 son intercambiables. La única recomendación fija es poner la excursión (día 4) hacia la mitad del viaje, porque funciona como un descanso del ritmo urbano. También te sugiero dejar Yanaka y Nezu para el último día — es el cierre perfecto, tranquilo y con sabor a despedida.
+              Absolutamente. Los días 1 a 3 y el día 5 son intercambiables. La única recomendación fija es poner la excursión (día 4) hacia la mitad del viaje, porque funciona como un descanso del ritmo urbano. También te sugiero dejar Yanaka y Nezu para el último día: es el cierre perfecto, tranquilo y con sabor a despedida.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               ¿Vale la pena un guía para todo el itinerario?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No necesitas un guía para los cinco días. Tokio es una ciudad segura, con señalización en inglés y un transporte público impecable. Pero un guía local marca la diferencia en uno o dos días clave — por ejemplo, el día 1 en Asakusa (para entender el contexto histórico y gastronómico) o el día 3 en Tsukiji (para que comas en los puestos correctos y no en las trampas para turistas). Es exactamente lo que ofrecemos en nuestros{" "}
+              No necesitas un guía para los cinco días. Tokio es una ciudad segura, con señalización en inglés y un transporte público impecable. Pero un guía local marca la diferencia en uno o dos días clave, por ejemplo, el día 1 en Asakusa (para entender el contexto histórico y gastronómico) o el día 3 en Tsukiji (para que comas en los puestos correctos y no en las trampas para turistas). Es exactamente lo que ofrecemos en nuestros{" "}
               <Link to="/es/tours/" className="text-accent hover:underline">
                 tours privados por Tokio
               </Link>.
@@ -321,7 +321,7 @@ const EsItinerarioTokio5Dias = () => {
                 ¿Quieres que te ayude a personalizar tu itinerario de Tokio para 5 días?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Cada viajero es distinto. Si este itinerario Tokio 5 días te sirve como base pero quieres ajustarlo a tus intereses — más gastronomía, más templos, más barrios ocultos — puedo diseñar una ruta a medida y acompañarte en los días que elijas. Sin prisas, sin grupos, solo tú y un guía que conoce cada callejón de esta ciudad.
+                Cada viajero es distinto. Si este itinerario Tokio 5 días te sirve como base pero quieres ajustarlo a tus intereses (más gastronomía, más templos, más barrios ocultos), puedo diseñar una ruta a medida y acompañarte en los días que elijas. Sin prisas, sin grupos, solo tú y un guía que conoce cada callejón de esta ciudad.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours/" className="btn-accent">

@@ -35,7 +35,7 @@ const EsNikko = () => {
               Excursión Privada a Nikko con Guía en Español
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Viaja a Nikko, hogar del complejo de santuarios más ornamentado de Japón y un paisaje montañoso impresionante. Descubre el Santuario Toshogu, Patrimonio de la Humanidad, con sus más de 5.000 tallas intrincadas, contempla las poderosas Cascadas Kegon y disfruta de la serena belleza del Lago Chuzenji — todo con comentarios históricos expertos de tu guía.
+              Viaja a Nikko, hogar del complejo de santuarios más ornamentado de Japón y un paisaje montañoso impresionante. Descubre el Santuario Toshogu, Patrimonio de la Humanidad, con sus más de 5.000 tallas intrincadas, contempla las poderosas Cascadas Kegon y disfruta de la serena belleza del Lago Chuzenji, todo con comentarios históricos expertos de tu guía.
             </p>
           </div>
         </div>
@@ -57,11 +57,11 @@ const EsNikko = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Santuario Toshogu — Patrimonio de la Humanidad UNESCO, el complejo de santuarios más ornamentado de Japón",
+                    "Santuario Toshogu, Patrimonio de la Humanidad UNESCO, el complejo de santuarios más ornamentado de Japón",
                     "Tallas originales de \"no ver el mal, no hablar el mal, no oír el mal\"",
-                    "Puente Shinkyo — puente sagrado bermellón sobre el río Daiya",
-                    "Cascadas Kegon — una de las cascadas más famosas de Japón (caída de 97m)",
-                    "Lago Chuzenji — lago de montaña a 1.269m de altitud",
+                    "Puente Shinkyo: puente sagrado bermellón sobre el río Daiya",
+                    "Cascadas Kegon: una de las cascadas más famosas de Japón (caída de 97m)",
+                    "Lago Chuzenji: lago de montaña a 1.269m de altitud",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 shrink-0" />
@@ -79,7 +79,7 @@ const EsNikko = () => {
                     { time: "9:30", activity: "Llegada a Nikko en Shinkansen + tren local (~2 horas)" },
                     { time: "10:00", activity: "Puente Shinkyo (parada fotográfica)" },
                     { time: "10:30", activity: "Complejo del Santuario Toshogu (1,5-2 horas)" },
-                    { time: "12:30", activity: "Almuerzo (prueba la especialidad local: yuba — platos de piel de tofu)" },
+                    { time: "12:30", activity: "Almuerzo (prueba la especialidad local: yuba, platos de piel de tofu)" },
                     { time: "13:30", activity: "Viaje en autobús a la zona de Chuzenji" },
                     { time: "14:00", activity: "Plataforma de observación de las Cascadas Kegon" },
                     { time: "14:30", activity: "Paseo por la orilla del Lago Chuzenji" },
@@ -170,7 +170,7 @@ const EsNikko = () => {
                 <div className="flex gap-4 items-start bg-card border border-border rounded-lg p-6">
                   <Info className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <p className="text-muted-foreground leading-relaxed">
-                    El Santuario Toshogu tiene más de 5.000 tallas intrincadas — sin un guía, pasarás de largo el 90% de ellas sin entender su significado. El complejo del santuario es una obra maestra de la artesanía de la era Tokugawa, y un guía conocedor transforma la visita de "edificios bonitos" en una inmersión profunda en la historia política y espiritual de Japón. El guía también gestiona la compleja logística de transporte entre la ciudad de Nikko y la zona del lago de montaña.
+                    El Santuario Toshogu tiene más de 5.000 tallas intrincadas. Sin un guía, pasarás de largo el 90% de ellas sin entender su significado. El complejo del santuario es una obra maestra de la artesanía de la era Tokugawa, y un guía conocedor transforma la visita de "edificios bonitos" en una inmersión profunda en la historia política y espiritual de Japón. El guía también gestiona la compleja logística de transporte entre la ciudad de Nikko y la zona del lago de montaña.
                   </p>
                 </div>
               </div>

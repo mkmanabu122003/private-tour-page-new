@@ -62,13 +62,13 @@ const EsMercadoTsukijiTokio = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              "¿El mercado de Tsukiji en Tokio está cerrado?" Es la pregunta que más me hacen mis clientes cuando planifican su viaje. La respuesta corta: no, no está cerrado. La respuesta larga requiere un poco de contexto, algo de historia y bastante pasión por un lugar que llevo años recorriendo como guía profesional. Piénsalo como si te dijeran que La Boquería en Barcelona cerró porque movieron la parte mayorista a otro edificio — el alma del mercado sigue ahí, en sus callejones, sus puestos y su gente.
+              "¿El mercado de Tsukiji en Tokio está cerrado?" Es la pregunta que más me hacen mis clientes cuando planifican su viaje. La respuesta corta: no, no está cerrado. La respuesta larga requiere un poco de contexto, algo de historia y bastante pasión por un lugar que llevo años recorriendo como guía profesional. Piénsalo como si te dijeran que La Boquería en Barcelona cerró porque movieron la parte mayorista a otro edificio. El alma del mercado sigue ahí, en sus callejones, sus puestos y su gente.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Lo que cerró en 2018 fue el mercado mayorista interior, donde se celebraban las famosas subastas de atún. Esa operación se trasladó al moderno Mercado de Toyosu, en una isla artificial en la Bahía de Tokio. Pero el mercado exterior de Tsukiji — con sus aproximadamente 400 tiendas, restaurantes y puestos de comida callejera — sigue funcionando exactamente donde siempre estuvo. Y en 2026, después de algunas renovaciones y la llegada de nuevos negocios, está mejor que nunca.
+              Lo que cerró en 2018 fue el mercado mayorista interior, donde se celebraban las famosas subastas de atún. Esa operación se trasladó al moderno Mercado de Toyosu, en una isla artificial en la Bahía de Tokio. Pero el mercado exterior de Tsukiji, con sus aproximadamente 400 tiendas, restaurantes y puestos de comida callejera, sigue funcionando exactamente donde siempre estuvo. Y en 2026, después de algunas renovaciones y la llegada de nuevos negocios, está mejor que nunca.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              En este artículo voy a contarte toda la historia del mercado de Tsukiji en Tokio: qué pasó, qué sobrevivió, qué puedes ver y comer hoy, y por qué sigo llevando a mis grupos allí cada semana. Si estás planeando tu visita a Tokio en 2026, esta guía te dará la información real que necesitas — no la versión simplificada de "Tsukiji cerró, ve a Toyosu".
+              En este artículo voy a contarte toda la historia del mercado de Tsukiji en Tokio: qué pasó, qué sobrevivió, qué puedes ver y comer hoy, y por qué sigo llevando a mis grupos allí cada semana. Si estás planeando tu visita a Tokio en 2026, esta guía te dará la información real que necesitas, no la versión simplificada de "Tsukiji cerró, ve a Toyosu".
             </p>
 
             {/* Qué pasó con el mercado de Tsukiji */}
@@ -83,7 +83,7 @@ const EsMercadoTsukijiTokio = () => {
               El mercado de Tsukiji en Tokio nació en 1935, después de que el Gran Terremoto de Kanto de 1923 destruyera el antiguo mercado de Nihonbashi que había servido a la ciudad durante siglos. El gobierno metropolitano eligió un terreno junto al río Sumida, en el barrio de Tsukiji (cuyo nombre significa literalmente "tierra construida", porque era terreno ganado al mar), y levantó allí el mayor mercado de pescado y marisco del mundo.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Durante décadas, Tsukiji fue un lugar estrictamente profesional. Los compradores mayoristas llegaban a las 3 de la madrugada, las subastas de atún comenzaban antes del amanecer, y para las 9 de la mañana la mayor parte del negocio ya se había cerrado. Los turistas no tenían acceso. Pero a partir de los años 90, la fama del mercado empezó a crecer internacionalmente. Guías de viaje, documentales y el boca a boca convirtieron las subastas de atún en un espectáculo turístico, y el mercado exterior — esa red de callejones con puestos de sushi, marisco a la parrilla y cuchillos artesanales — se convirtió en uno de los destinos gastronómicos más fotografiados del planeta. Algo parecido a lo que ocurrió con el Mercado de San Miguel en Madrid, que pasó de ser un mercado de barrio a convertirse en referencia gastronómica internacional.
+              Durante décadas, Tsukiji fue un lugar estrictamente profesional. Los compradores mayoristas llegaban a las 3 de la madrugada, las subastas de atún comenzaban antes del amanecer, y para las 9 de la mañana la mayor parte del negocio ya se había cerrado. Los turistas no tenían acceso. Pero a partir de los años 90, la fama del mercado empezó a crecer internacionalmente. Guías de viaje, documentales y el boca a boca convirtieron las subastas de atún en un espectáculo turístico, y el mercado exterior, esa red de callejones con puestos de sushi, marisco a la parrilla y cuchillos artesanales, se convirtió en uno de los destinos gastronómicos más fotografiados del planeta. Algo parecido a lo que ocurrió con el Mercado de San Miguel en Madrid, que pasó de ser un mercado de barrio a convertirse en referencia gastronómica internacional.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -93,7 +93,7 @@ const EsMercadoTsukijiTokio = () => {
               El edificio del mercado mayorista interior tenía más de 80 años y se estaba quedando obsoleto. Los problemas de higiene, la falta de refrigeración moderna y la estructura de hormigón deteriorada hacían inviable una renovación. Después de años de debates políticos, polémicas por la contaminación del suelo en Toyosu y varios retrasos, el mercado mayorista interior cerró definitivamente el 6 de octubre de 2018 y reabrió en Toyosu el 11 de octubre del mismo año.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Fue un evento enormemente mediático. Los titulares de prensa de todo el mundo anunciaron "el mercado de Tsukiji cierra sus puertas", y esa frase se quedó grabada en la mente de millones de viajeros. El problema es que era técnicamente incorrecta: lo que cerró fue el mercado mayorista interior. El mercado exterior — la parte que la mayoría de turistas realmente visitaban — nunca cerró.
+              Fue un evento enormemente mediático. Los titulares de prensa de todo el mundo anunciaron "el mercado de Tsukiji cierra sus puertas", y esa frase se quedó grabada en la mente de millones de viajeros. El problema es que era técnicamente incorrecta: lo que cerró fue el mercado mayorista interior. El mercado exterior, la parte que la mayoría de turistas realmente visitaban, nunca cerró.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -112,7 +112,7 @@ const EsMercadoTsukijiTokio = () => {
               Las 400 tiendas que siguen abiertas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El mercado exterior de Tsukiji concentra aproximadamente 400 establecimientos en una superficie compacta que puedes recorrer en una hora si vas rápido, aunque yo recomiendo al menos dos. Hay de todo: pescaderías donde cortan el atún delante de ti, puestos de sushi donde comes de pie junto a trabajadores locales, tiendas de cuchillos artesanales donde un maestro cuchillero te graba tu nombre en la hoja, puestos de tamagoyaki que llevan tres generaciones con la misma receta, tiendas de algas, de encurtidos japoneses, de salsa de soja artesanal y de cerámica para la mesa. No es un centro comercial disfrazado de mercado — es un mercado real donde los profesionales de la restauración de Tokio siguen comprando cada mañana.
+              El mercado exterior de Tsukiji concentra aproximadamente 400 establecimientos en una superficie compacta que puedes recorrer en una hora si vas rápido, aunque yo recomiendo al menos dos. Hay de todo: pescaderías donde cortan el atún delante de ti, puestos de sushi donde comes de pie junto a trabajadores locales, tiendas de cuchillos artesanales donde un maestro cuchillero te graba tu nombre en la hoja, puestos de tamagoyaki que llevan tres generaciones con la misma receta, tiendas de algas, de encurtidos japoneses, de salsa de soja artesanal y de cerámica para la mesa. No es un centro comercial disfrazado de mercado: es un mercado real donde los profesionales de la restauración de Tokio siguen comprando cada mañana.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -141,7 +141,7 @@ const EsMercadoTsukijiTokio = () => {
               Sushi fresco: dónde sí y dónde no
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji tiene docenas de locales de sushi, y no todos merecen tu tiempo ni tu dinero. Mi regla de oro: evita cualquier restaurante con captadores en la puerta intentando atraerte en varios idiomas. Los mejores locales de sushi de Tsukiji no necesitan hacer eso — tienen cola porque son buenos. Los restaurantes de sushi de pie (tachigui-zushi) ofrecen una relación calidad-precio extraordinaria: por 2.000-3.000 yenes comes 8-10 piezas de sushi preparadas al momento con pescado que llegó esa misma mañana. Para una experiencia más relajada, los locales con asiento ofrecen menús omakase desde 3.500 yenes. Mi consejo: no persigas los nombres famosos con colas de dos horas. Camina un poco más adentro y descubrirás barras excelentes con esperas de 15 minutos.
+              Tsukiji tiene docenas de locales de sushi, y no todos merecen tu tiempo ni tu dinero. Mi regla de oro: evita cualquier restaurante con captadores en la puerta intentando atraerte en varios idiomas. Los mejores locales de sushi de Tsukiji no necesitan hacer eso: tienen cola porque son buenos. Los restaurantes de sushi de pie (tachigui-zushi) ofrecen una relación calidad-precio extraordinaria: por 2.000-3.000 yenes comes 8-10 piezas de sushi preparadas al momento con pescado que llegó esa misma mañana. Para una experiencia más relajada, los locales con asiento ofrecen menús omakase desde 3.500 yenes. Mi consejo: no persigas los nombres famosos con colas de dos horas. Camina un poco más adentro y descubrirás barras excelentes con esperas de 15 minutos.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -155,7 +155,7 @@ const EsMercadoTsukijiTokio = () => {
               Marisco a la parrilla y wagyu en brocheta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Los callejones del mercado están salpicados de puestos donde asan marisco al momento: vieiras gigantes de Hokkaido con mantequilla y soja, patas de cangrejo real, gambas, calamar y lo que la temporada traiga. Las vieiras (hotate) son mi recomendación número uno: a 500-800 yenes por pieza, son enormes y el sabor es incomparable al de cualquier vieira que hayas probado fuera de Japón. Para los carnívoros, varios puestos venden brochetas de wagyu A4 y A5 asadas sobre carbón por 800-1.500 yenes. El marmolado de la carne se derrite literalmente en la boca. Es un capricho, pero estás en Tsukiji — aquí los caprichos están justificados.
+              Los callejones del mercado están salpicados de puestos donde asan marisco al momento: vieiras gigantes de Hokkaido con mantequilla y soja, patas de cangrejo real, gambas, calamar y lo que la temporada traiga. Las vieiras (hotate) son mi recomendación número uno: a 500-800 yenes por pieza, son enormes y el sabor es incomparable al de cualquier vieira que hayas probado fuera de Japón. Para los carnívoros, varios puestos venden brochetas de wagyu A4 y A5 asadas sobre carbón por 800-1.500 yenes. El marmolado de la carne se derrite literalmente en la boca. Es un capricho, pero estás en Tsukiji, y aquí los caprichos están justificados.
             </p>
 
             {/* Cómo ir y cuándo llegar */}
@@ -167,7 +167,7 @@ const EsMercadoTsukijiTokio = () => {
               Transporte desde cualquier punto de Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Llegar al mercado de Tsukiji en Tokio es sencillo. La estación más cercana es <strong className="text-foreground">Tsukiji</strong> en la línea Hibiya del metro de Tokio (salida 1 o 2, a dos minutos a pie del mercado). También puedes usar la estación <strong className="text-foreground">Tsukijishijo</strong> en la línea Oedo (salida A1). Si vienes desde Shinjuku, el trayecto toma unos 25 minutos; desde Shibuya, unos 20 minutos; desde la estación de Tokio, apenas 10 minutos. Cualquier tarjeta IC (Suica o Pasmo) funciona. No necesitas taxi ni autobús — el metro es la opción más rápida y cómoda.
+              Llegar al mercado de Tsukiji en Tokio es sencillo. La estación más cercana es <strong className="text-foreground">Tsukiji</strong> en la línea Hibiya del metro de Tokio (salida 1 o 2, a dos minutos a pie del mercado). También puedes usar la estación <strong className="text-foreground">Tsukijishijo</strong> en la línea Oedo (salida A1). Si vienes desde Shinjuku, el trayecto toma unos 25 minutos; desde Shibuya, unos 20 minutos; desde la estación de Tokio, apenas 10 minutos. Cualquier tarjeta IC (Suica o Pasmo) funciona. No necesitas taxi ni autobús: el metro es la opción más rápida y cómoda.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -181,7 +181,7 @@ const EsMercadoTsukijiTokio = () => {
               Días de cierre: la trampa del domingo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Este es el error más frecuente que veo entre los turistas: planificar su visita a Tsukiji en domingo. <strong className="text-foreground">La mayoría de los puestos del mercado exterior cierran los domingos</strong> y algunos también los miércoles. No hay un calendario unificado porque cada tienda establece su propio horario, pero como regla general: de martes a sábado encontrarás el mercado funcionando a pleno rendimiento. El lunes es variable (algunos puestos cierran), y el domingo es decepcionante. Si tu único día libre es el domingo, no vengas a Tsukiji — planifica otra actividad y guarda el mercado para otro día.
+              Este es el error más frecuente que veo entre los turistas: planificar su visita a Tsukiji en domingo. <strong className="text-foreground">La mayoría de los puestos del mercado exterior cierran los domingos</strong> y algunos también los miércoles. No hay un calendario unificado porque cada tienda establece su propio horario, pero como regla general: de martes a sábado encontrarás el mercado funcionando a pleno rendimiento. El lunes es variable (algunos puestos cierran), y el domingo es decepcionante. Si tu único día libre es el domingo, no vengas a Tsukiji. Planifica otra actividad y guarda el mercado para otro día.
             </p>
 
             {/* Tsukiji vs. Toyosu */}
@@ -196,7 +196,7 @@ const EsMercadoTsukijiTokio = () => {
               Lo que ofrece Toyosu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Toyosu es el mercado mayorista moderno. Su gran atractivo es la subasta de atún rojo, donde ejemplares que pueden costar millones de yenes se venden en cuestión de minutos. Los visitantes observan desde una plataforma elevada detrás de cristal. Es un espectáculo fascinante, pero requiere reserva previa online y hay que estar allí antes de las 6:00 de la mañana. Toyosu también tiene corredores de observación donde puedes ver a los profesionales trabajar, y una zona de restaurantes con locales de sushi de buena calidad. El edificio es limpio, moderno y organizado — pero carece del alma que solo los años y la acumulación de historias pueden dar a un lugar.
+              Toyosu es el mercado mayorista moderno. Su gran atractivo es la subasta de atún rojo, donde ejemplares que pueden costar millones de yenes se venden en cuestión de minutos. Los visitantes observan desde una plataforma elevada detrás de cristal. Es un espectáculo fascinante, pero requiere reserva previa online y hay que estar allí antes de las 6:00 de la mañana. Toyosu también tiene corredores de observación donde puedes ver a los profesionales trabajar, y una zona de restaurantes con locales de sushi de buena calidad. El edificio es limpio, moderno y organizado, pero carece del alma que solo los años y la acumulación de historias pueden dar a un lugar.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -224,7 +224,7 @@ const EsMercadoTsukijiTokio = () => {
                   ¿El mercado de Tsukiji está cerrado?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  No. Lo que cerró en 2018 fue el mercado mayorista interior, que se trasladó a Toyosu. El mercado exterior de Tsukiji — con sus aproximadamente 400 tiendas, restaurantes y puestos de comida — sigue abierto y funcionando con normalidad. Es la parte que la mayoría de turistas visitaban originalmente.
+                  No. Lo que cerró en 2018 fue el mercado mayorista interior, que se trasladó a Toyosu. El mercado exterior de Tsukiji, con sus aproximadamente 400 tiendas, restaurantes y puestos de comida, sigue abierto y funcionando con normalidad. Es la parte que la mayoría de turistas visitaban originalmente.
                 </p>
               </div>
 
@@ -315,7 +315,7 @@ const EsMercadoTsukijiTokio = () => {
                 "name": "¿El mercado de Tsukiji está cerrado?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Lo que cerró en 2018 fue el mercado mayorista interior, que se trasladó a Toyosu. El mercado exterior de Tsukiji — con sus aproximadamente 400 tiendas, restaurantes y puestos de comida — sigue abierto y funcionando con normalidad.",
+                  "text": "No. Lo que cerró en 2018 fue el mercado mayorista interior, que se trasladó a Toyosu. El mercado exterior de Tsukiji, con sus aproximadamente 400 tiendas, restaurantes y puestos de comida, sigue abierto y funcionando con normalidad.",
                 },
               },
               {

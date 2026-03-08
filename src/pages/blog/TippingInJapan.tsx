@@ -8,7 +8,7 @@ const TippingInJapan = () => {
     <Layout>
       <SEO
         title="Tipping in Japan: What You Need to Know | Tanuki Tabi"
-        description="Tipping isn't customary in Japan — most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation."
+        description="Tipping isn't customary in Japan. Most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation."
         canonicalPath="/blog/tipping-in-japan"
       />
 
@@ -16,7 +16,7 @@ const TippingInJapan = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/asakusa-kaminarimon-gate.jpg"
-          alt="Kaminarimon Gate in Asakusa — understanding tipping culture in Japan"
+          alt="Kaminarimon Gate in Asakusa, understanding tipping culture in Japan"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -49,7 +49,7 @@ const TippingInJapan = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo.
+              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo.
             </p>
           </div>
         </div>
@@ -61,16 +61,16 @@ const TippingInJapan = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              It was a warm October afternoon in Asakusa. I had just finished a four-hour tour with a couple from Chicago — we'd walked through Senso-ji, explored the backstreets, eaten fresh senbei from a 200-year-old shop, and I'd explained the Edo-period merchant class system while standing on the exact spot where the old fish market used to be. They were beaming. As we said goodbye near Kaminarimon Gate, the husband reached into his wallet and pulled out a ¥5,000 note.
+              It was a warm October afternoon in Asakusa. I had just finished a four-hour tour with a couple from Chicago. We'd walked through Senso-ji, explored the backstreets, eaten fresh senbei from a 200-year-old shop, and I'd explained the Edo-period merchant class system while standing on the exact spot where the old fish market used to be. They were beaming. As we said goodbye near Kaminarimon Gate, the husband reached into his wallet and pulled out a ¥5,000 note.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               "For you," he said, pressing it toward me. "You deserve it."
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I smiled and gently declined. He looked confused — almost hurt. His wife looked at him, then at me: "Did we do something wrong?"
+              I smiled and gently declined. He looked confused, almost hurt. His wife looked at him, then at me: "Did we do something wrong?"
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              They hadn't done anything wrong. But they had just bumped into one of the most counterintuitive cultural differences between Japan and the West: tipping simply isn't part of Japanese culture. Most Japanese people aren't used to receiving tips, so when it happens, they often feel bewildered — not offended, just genuinely unsure how to respond. Let me explain why.
+              They hadn't done anything wrong. But they had just bumped into one of the most counterintuitive cultural differences between Japan and the West: tipping simply isn't part of Japanese culture. Most Japanese people aren't used to receiving tips, so when it happens, they often feel bewildered, not offended, just genuinely unsure how to respond. Let me explain why.
             </p>
 
             {/* H2: The moment a guest tried to tip me */}
@@ -78,10 +78,10 @@ const TippingInJapan = () => {
               The Moment a Guest Tried to Tip Me (And What I Did)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This scene plays out on my tours more often than you'd think — maybe once every ten tours. An American or European guest, accustomed to a culture where tipping is expected and even constitutes a large part of service workers' income, reaches for their wallet at the end of a great experience.
+              This scene plays out on my tours more often than you'd think, maybe once every ten tours. An American or European guest, accustomed to a culture where tipping is expected and even constitutes a large part of service workers' income, reaches for their wallet at the end of a great experience.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              What I usually do is explain briefly that tipping in Japan isn't part of the culture, and suggest that the best "tip" they can give me is an honest review. No one has ever been offended by this. Most are curious. And that curiosity usually leads to a fascinating conversation about Japanese service culture — one I'm going to have with you right now.
+              What I usually do is explain briefly that tipping in Japan isn't part of the culture, and suggest that the best "tip" they can give me is an honest review. No one has ever been offended by this. Most are curious. And that curiosity usually leads to a fascinating conversation about Japanese service culture, one I'm going to have with you right now.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The key thing to understand is that the unfamiliarity with tipping in Japan runs deeper than individual choice. It's structural. It's philosophical. And once you understand it, a lot of other things about Japan start making sense too.
@@ -92,13 +92,13 @@ const TippingInJapan = () => {
               Why Tipping Bewilders Most Japanese People
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              In the United States, tipping signals satisfaction. In much of Europe, it rounds up a bill. But in Japan, tipping is simply unfamiliar — most people in service roles have never experienced it. When someone tries to tip, the typical reaction isn't anger or offense, but genuine confusion. They don't know what to do with the extra money or why it's being offered.
+              In the United States, tipping signals satisfaction. In much of Europe, it rounds up a bill. But in Japan, tipping is simply unfamiliar. Most people in service roles have never experienced it. When someone tries to tip, the typical reaction isn't anger or offense, but genuine confusion. They don't know what to do with the extra money or why it's being offered.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Japanese service culture is built on a concept called <em>omotenashi</em> — a word that's often translated as "hospitality" but really means something closer to "wholehearted care without expectation of reward." The idea is that excellent service isn't something you do for tips. It's something you do because it's your professional duty, your craft, and your personal standard. The sushi chef who spends twenty years mastering rice isn't doing it for an extra ¥500 on the table. He's doing it because that's what mastery looks like. So when a customer leaves extra money, the reaction is usually bewilderment — "Did they forget their change? Did I charge the wrong amount?"
+              Japanese service culture is built on a concept called <em>omotenashi</em>, a word that's often translated as "hospitality" but really means something closer to "wholehearted care without expectation of reward." The idea is that excellent service isn't something you do for tips. It's something you do because it's your professional duty, your craft, and your personal standard. The sushi chef who spends twenty years mastering rice isn't doing it for an extra ¥500 on the table. He's doing it because that's what mastery looks like. So when a customer leaves extra money, the reaction is usually bewilderment: "Did they forget their change? Did I charge the wrong amount?"
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Think of it this way: imagine you finish a project at work, and a colleague hands you a $20 bill and says "nice work." You'd probably find it awkward — not because you're angry, but because it's just not how things work in your environment. That's roughly how tipping feels to many Japanese service workers — it's unexpected and confusing, not something they know how to respond to.
+              Think of it this way: imagine you finish a project at work, and a colleague hands you a $20 bill and says "nice work." You'd probably find it awkward, not because you're angry, but because it's just not how things work in your environment. That's roughly how tipping feels to many Japanese service workers. It's unexpected and confusing, not something they know how to respond to.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               There's also a practical dimension. Japanese workers are paid a fair wage for their service. Unlike the American system, where tips can constitute 50–70% of a server's income, Japanese service workers receive their full compensation through their employer. Since tipping has never been part of the system, receiving one can feel like an unexpected situation that nobody trained them to handle.
@@ -115,7 +115,7 @@ const TippingInJapan = () => {
               Restaurants
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tipping at restaurants in Japan isn't expected — not at high-end sushi counters, not at izakaya (Japan's answer to a Spanish tapas bar), not at ramen shops. If you leave money on the table, the server will likely chase you down the street to return it, assuming you forgot it. I've seen this happen with my clients at least a dozen times, and the resulting sidewalk exchange — the flustered tourist, the earnest server running with a ¥1,000 note — is a perfect example of the confusion that tipping creates here.
+              Tipping at restaurants in Japan isn't expected, not at high-end sushi counters, not at izakaya (Japan's answer to a Spanish tapas bar), not at ramen shops. If you leave money on the table, the server will likely chase you down the street to return it, assuming you forgot it. I've seen this happen with my clients at least a dozen times, and the resulting sidewalk exchange (the flustered tourist, the earnest server running with a ¥1,000 note) is a perfect example of the confusion that tipping creates here.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hotels
@@ -127,13 +127,13 @@ const TippingInJapan = () => {
               Ryokan (Traditional Inns)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This is the one partial exception. At some traditional ryokan, there is a custom called <em>kokorozuke</em> — a small gift of money placed in a decorative envelope and given to the nakai-san (the attendant who serves your meals and prepares your room). This is not a tip in the Western sense. It's closer to a gift between equals, and the envelope is critical — handing over bare cash would cause confusion. If you stay at a high-end ryokan, your concierge or hotel can advise you on whether kokorozuke is appropriate and how much to give (typically ¥1,000–¥3,000).
+              This is the one partial exception. At some traditional ryokan, there is a custom called <em>kokorozuke</em>, a small gift of money placed in a decorative envelope and given to the nakai-san (the attendant who serves your meals and prepares your room). This is not a tip in the Western sense. It's closer to a gift between equals, and the envelope is critical. Handing over bare cash would cause confusion. If you stay at a high-end ryokan, your concierge or hotel can advise you on whether kokorozuke is appropriate and how much to give (typically ¥1,000–¥3,000).
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Taxis
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tipping taxi drivers isn't expected either. The meter fare is the fare. If you try to round up, the driver will give you exact change and may look at you with genuine puzzlement. Japanese taxi drivers take pride in their precision — the white gloves, the automatic doors, the immaculate vehicles — and since tipping isn't part of their experience, they simply won't know what to do with the extra money.
+              Tipping taxi drivers isn't expected either. The meter fare is the fare. If you try to round up, the driver will give you exact change and may look at you with genuine puzzlement. Japanese taxi drivers take pride in their precision (the white gloves, the automatic doors, the immaculate vehicles), and since tipping isn't part of their experience, they simply won't know what to do with the extra money.
             </p>
 
             {/* H2: How to show appreciation */}
@@ -145,10 +145,10 @@ const TippingInJapan = () => {
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Say "arigatou gozaimasu" with a slight bow.</strong> This is the gold standard. A sincere thank-you with a slight head bow communicates genuine appreciation in Japan. The depth of the bow isn't critical — even a small nod of the head shows respect. What matters is that you mean it.
+                <strong className="text-foreground">Say "arigatou gozaimasu" with a slight bow.</strong> This is the gold standard. A sincere thank-you with a slight head bow communicates genuine appreciation in Japan. The depth of the bow isn't critical; even a small nod of the head shows respect. What matters is that you mean it.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Bring a small gift from your home country.</strong> This is the most "Japanese" way to show appreciation. In my tours, the guests who leave the biggest impression are the ones who bring a small box of chocolates, a packet of local coffee, or a souvenir from their hometown. It doesn't need to be expensive — ¥1,000–¥2,000 is plenty. What matters is the thought behind it. In Japanese culture, gift-giving is about the relationship, not the value.
+                <strong className="text-foreground">Bring a small gift from your home country.</strong> This is the most "Japanese" way to show appreciation. In my tours, the guests who leave the biggest impression are the ones who bring a small box of chocolates, a packet of local coffee, or a souvenir from their hometown. It doesn't need to be expensive; ¥1,000–¥2,000 is plenty. What matters is the thought behind it. In Japanese culture, gift-giving is about the relationship, not the value.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Write a review.</strong> For service providers like tour guides, restaurant owners, and ryokan hosts, an online review is genuinely more valuable than a cash tip. It brings future business and validates their professional reputation.
@@ -163,20 +163,20 @@ const TippingInJapan = () => {
               What About Tour Guides? (The Honest Answer)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I should address this directly since I'm a guide myself. Unlike restaurants or taxis, tour guides work in a cross-cultural space where tipping customs often come up naturally. The honest answer? Tips are absolutely welcome and gratefully received. If you had a great experience on your tour and want to show your appreciation with a tip, please don't hesitate — I'm happy to accept it, and so are most guides who work with international visitors.
+              I should address this directly since I'm a guide myself. Unlike restaurants or taxis, tour guides work in a cross-cultural space where tipping customs often come up naturally. The honest answer? Tips are absolutely welcome and gratefully received. If you had a great experience on your tour and want to show your appreciation with a tip, please don't hesitate. I'm happy to accept it, and so are most guides who work with international visitors.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              That said, tips are never expected or required. My tour prices are set to reflect the full value of the experience — they're not artificially low with an expectation that tips will make up the difference. So please never feel pressured. Whether you tip or not won't change the quality of your tour one bit.
+              That said, tips are never expected or required. My tour prices are set to reflect the full value of the experience. They're not artificially low with an expectation that tips will make up the difference. So please never feel pressured. Whether you tip or not won't change the quality of your tour one bit.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              And if you're looking for other ways to show appreciation? Leave a detailed review. Mention a specific moment from the tour that stuck with you. Recommend me to a friend who's planning a Japan trip. Or bring me a small souvenir from your hometown — I have a growing collection of hot sauces, chocolates, and local snacks from guests around the world, and every one of them reminds me of a specific tour and a specific conversation.
+              And if you're looking for other ways to show appreciation? Leave a detailed review. Mention a specific moment from the tour that stuck with you. Recommend me to a friend who's planning a Japan trip. Or bring me a small souvenir from your hometown. I have a growing collection of hot sauces, chocolates, and local snacks from guests around the world, and every one of them reminds me of a specific tour and a specific conversation.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If you want to learn more about{" "}
               <Link to="/blog/japan-temple-shrine-etiquette" className="text-accent hover:underline">
                 Japanese etiquette at temples and shrines
               </Link>
-              , I've written a separate guide on that — it covers the other cultural customs that trip up visitors most often.
+              , I've written a separate guide on that. It covers the other cultural customs that trip up visitors most often.
             </p>
 
             {/* CTA */}
@@ -185,7 +185,7 @@ const TippingInJapan = () => {
                 Want a guide who'll explain these cultural nuances in person?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                On my private tours, I help guests navigate not just Tokyo's streets but its cultural landscape — from tipping to temple etiquette to ordering at a ramen counter. Browse my tours and find one that fits your trip.
+                On my private tours, I help guests navigate not just Tokyo's streets but its cultural landscape, from tipping to temple etiquette to ordering at a ramen counter. Browse my tours and find one that fits your trip.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">
@@ -208,7 +208,7 @@ const TippingInJapan = () => {
                     What happens if I accidentally tip someone in Japan?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Nothing bad at all. If you leave money on a restaurant table, the server will almost certainly run after you to return it, thinking you forgot your change. If you hand someone cash directly, they may look puzzled but won't be upset. Japanese people understand that tipping is a foreign custom, and most will gently decline simply because they're not used to it. It's not a social catastrophe — just a moment of mutual confusion that's easy to avoid.
+                    Nothing bad at all. If you leave money on a restaurant table, the server will almost certainly run after you to return it, thinking you forgot your change. If you hand someone cash directly, they may look puzzled but won't be upset. Japanese people understand that tipping is a foreign custom, and most will gently decline simply because they're not used to it. It's not a social catastrophe, just a moment of mutual confusion that's easy to avoid.
                   </p>
                 </div>
                 <div>
@@ -216,7 +216,7 @@ const TippingInJapan = () => {
                     Is tipping in Japan changing because of tourism?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Slowly, in very specific contexts. Some international hotels and tour operators have started accepting tips from foreign guests. But the broader culture hasn't shifted — at restaurants, taxis, shops, and ryokan, the no-tipping norm remains firmly in place. I don't expect this to change meaningfully in our lifetimes. Omotenashi is too deeply woven into Japanese identity.
+                    Slowly, in very specific contexts. Some international hotels and tour operators have started accepting tips from foreign guests. But the broader culture hasn't shifted. At restaurants, taxis, shops, and ryokan, the no-tipping norm remains firmly in place. I don't expect this to change meaningfully in our lifetimes. Omotenashi is too deeply woven into Japanese identity.
                   </p>
                 </div>
                 <div>
@@ -224,7 +224,7 @@ const TippingInJapan = () => {
                     Are there any situations where tipping in Japan is acceptable?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    The closest equivalent is kokorozuke at traditional ryokan — a small gift of money in a decorative envelope given to your personal attendant. This is specific to high-end traditional inns and follows strict etiquette (the envelope matters as much as the amount). Outside of this, tipping in Japan is not expected or encouraged in any service context.
+                    The closest equivalent is kokorozuke at traditional ryokan, a small gift of money in a decorative envelope given to your personal attendant. This is specific to high-end traditional inns and follows strict etiquette (the envelope matters as much as the amount). Outside of this, tipping in Japan is not expected or encouraged in any service context.
                   </p>
                 </div>
                 <div>
@@ -232,7 +232,7 @@ const TippingInJapan = () => {
                     How much should I budget for service charges in Japan?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Some upscale restaurants add a 10% service charge (サービス料) to the bill — this is clearly marked and replaces any tip. Budget hotels and restaurants include service in the price with no additional charge expected. For most travelers, budgeting zero for tips is accurate. This makes Japan's pricing refreshingly transparent compared to countries where you need to mentally add 15–20% to every listed price.
+                    Some upscale restaurants add a 10% service charge (サービス料) to the bill. This is clearly marked and replaces any tip. Budget hotels and restaurants include service in the price with no additional charge expected. For most travelers, budgeting zero for tips is accurate. This makes Japan's pricing refreshingly transparent compared to countries where you need to mentally add 15–20% to every listed price.
                   </p>
                 </div>
               </div>
@@ -249,7 +249,7 @@ const TippingInJapan = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: "Tipping in Japan: What You Need to Know (From a Local Guide)",
-            description: "Tipping isn't customary in Japan — most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation.",
+            description: "Tipping isn't customary in Japan. Most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation.",
             author: {
               "@type": "Person",
               name: "Manabu",
@@ -292,7 +292,7 @@ const TippingInJapan = () => {
                 name: "Is tipping in Japan changing because of tourism?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Slowly, in very specific contexts like international hotels. But the broader culture hasn't shifted — the no-tipping norm remains firmly in place at restaurants, taxis, and shops.",
+                  text: "Slowly, in very specific contexts like international hotels. But the broader culture hasn't shifted. The no-tipping norm remains firmly in place at restaurants, taxis, and shops.",
                 },
               },
               {
@@ -300,7 +300,7 @@ const TippingInJapan = () => {
                 name: "Are there any situations where tipping in Japan is acceptable?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "The closest equivalent is kokorozuke at traditional ryokan — a small gift of money in a decorative envelope given to your personal attendant. Outside of this, tipping is not expected.",
+                  text: "The closest equivalent is kokorozuke at traditional ryokan, a small gift of money in a decorative envelope given to your personal attendant. Outside of this, tipping is not expected.",
                 },
               },
               {
@@ -308,7 +308,7 @@ const TippingInJapan = () => {
                 name: "How much should I budget for service charges in Japan?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Some upscale restaurants add a 10% service charge. Most places include service in the price. Budget zero for tips — Japan's pricing is refreshingly transparent.",
+                  text: "Some upscale restaurants add a 10% service charge. Most places include service in the price. Budget zero for tips. Japan's pricing is refreshingly transparent.",
                 },
               },
             ],

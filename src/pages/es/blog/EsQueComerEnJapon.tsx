@@ -20,7 +20,7 @@ const EsQueComerEnJapon = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/food-tour-izakaya.jpg"
-          alt="Izakaya japonés — qué comer en Japón"
+          alt="Izakaya japonés: qué comer en Japón"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -105,7 +105,7 @@ const EsQueComerEnJapon = () => {
               2. Onigiri de Konbini
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Las tiendas de conveniencia japonesas (konbini) son un mundo aparte. Un onigiri de 7-Eleven, Lawson o FamilyMart cuesta entre 120 y 200 yenes y es una bola de arroz prensada envuelta en alga nori crujiente, rellena de salmón, atún con mayonesa, umeboshi (ciruela encurtida) u otros ingredientes. El ingenioso envoltorio mantiene el alga separada del arroz hasta que la abres, así siempre está crujiente. Para un desayuno rápido, dos onigiri y un café en lata caliente del konbini son la combinación perfecta. Busca los de la gama "premium" — cuestan 50 yenes más y la diferencia es notable.
+              Las tiendas de conveniencia japonesas (konbini) son un mundo aparte. Un onigiri de 7-Eleven, Lawson o FamilyMart cuesta entre 120 y 200 yenes y es una bola de arroz prensada envuelta en alga nori crujiente, rellena de salmón, atún con mayonesa, umeboshi (ciruela encurtida) u otros ingredientes. El ingenioso envoltorio mantiene el alga separada del arroz hasta que la abres, así siempre está crujiente. Para un desayuno rápido, dos onigiri y un café en lata caliente del konbini son la combinación perfecta. Busca los de la gama "premium": cuestan 50 yenes más y la diferencia es notable.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -134,14 +134,14 @@ const EsQueComerEnJapon = () => {
               5. Tonkatsu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Chuleta de cerdo empanada y frita hasta que el exterior está dorado y crujiente como el cristal, mientras el interior permanece jugoso y tierno. Se sirve sobre una rejilla (para que no pierda el crujiente), acompañada de arroz, sopa de miso, col rallada con un aliño ligeramente ácido y la famosa salsa tonkatsu — dulce, densa y con un toque de fruta. El set de almuerzo (teishoku) en un buen restaurante de tonkatsu es una de las mejores comidas que puedes hacer en Japón por 1.000-1.500 yenes. Busca cadenas especializadas como Maisen o Wako, o pregunta a cualquier local por su tonkatsu-ya favorito.
+              Chuleta de cerdo empanada y frita hasta que el exterior está dorado y crujiente como el cristal, mientras el interior permanece jugoso y tierno. Se sirve sobre una rejilla (para que no pierda el crujiente), acompañada de arroz, sopa de miso, col rallada con un aliño ligeramente ácido y la famosa salsa tonkatsu, dulce, densa y con un toque de fruta. El set de almuerzo (teishoku) en un buen restaurante de tonkatsu es una de las mejores comidas que puedes hacer en Japón por 1.000-1.500 yenes. Busca cadenas especializadas como Maisen o Wako, o pregunta a cualquier local por su tonkatsu-ya favorito.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               6. Soba
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Fideos finos de trigo sarraceno, servidos fríos con una salsa de inmersión (zaru soba) o calientes en un caldo aromático. La soba fría es perfecta para el verano japonés: sumerges los fideos en la tsuyu (salsa a base de dashi, soja y mirin), los sorbes con fuerza — sí, en Japón sorber los fideos es de buena educación y ayuda a enfriarlos — y repites. Un plato de soba hecha a mano cuesta entre 700 y 1.000 yenes. Para la experiencia completa, busca un restaurante donde hagan la soba delante de ti (teuchi soba).
+              Fideos finos de trigo sarraceno, servidos fríos con una salsa de inmersión (zaru soba) o calientes en un caldo aromático. La soba fría es perfecta para el verano japonés: sumerges los fideos en la tsuyu (salsa a base de dashi, soja y mirin), los sorbes con fuerza (sí, en Japón sorber los fideos es de buena educación y ayuda a enfriarlos) y repites. Un plato de soba hecha a mano cuesta entre 700 y 1.000 yenes. Para la experiencia completa, busca un restaurante donde hagan la soba delante de ti (teuchi soba).
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -184,7 +184,7 @@ const EsQueComerEnJapon = () => {
               11. Shabu-shabu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Una olla con caldo hirviendo en el centro de la mesa y láminas finísimas de ternera o cerdo que sumerges durante unos segundos — "shabu shabu" es literalmente la onomatopeya del sonido que hace la carne al pasar por el caldo. La carne sale tierna e increíblemente suave, y la mojas en salsa de sésamo (goma-dare) o salsa ponzu (cítrica). Es una cena tranquila, casi meditativa, perfecta para cuando quieres algo ligero pero especial. Con wagyu, es una experiencia sublime. Precio: 2.500-5.000 yenes por persona en un restaurante de nivel medio.
+              Una olla con caldo hirviendo en el centro de la mesa y láminas finísimas de ternera o cerdo que sumerges durante unos segundos. "Shabu shabu" es literalmente la onomatopeya del sonido que hace la carne al pasar por el caldo. La carne sale tierna e increíblemente suave, y la mojas en salsa de sésamo (goma-dare) o salsa ponzu (cítrica). Es una cena tranquila, casi meditativa, perfecta para cuando quieres algo ligero pero especial. Con wagyu, es una experiencia sublime. Precio: 2.500-5.000 yenes por persona en un restaurante de nivel medio.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -203,7 +203,7 @@ const EsQueComerEnJapon = () => {
               Para Picar Entre Comidas (Platos 13-15)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La comida callejera japonesa es un capítulo aparte. No es tan omnipresente como en el sudeste asiático, pero cuando la encuentras — en mercados, festivales, zonas turísticas y ciertos barrios — es absolutamente extraordinaria. Estos tres son los imprescindibles que siempre recomiendo cuando me preguntan qué comer en Japón entre horas.
+              La comida callejera japonesa es un capítulo aparte. No es tan omnipresente como en el sudeste asiático, pero cuando la encuentras, en mercados, festivales, zonas turísticas y ciertos barrios, es absolutamente extraordinaria. Estos tres son los imprescindibles que siempre recomiendo cuando me preguntan qué comer en Japón entre horas.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">

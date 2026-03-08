@@ -12,7 +12,7 @@ const nightExperiences: {
     title: "Golden Gai Bar Hopping",
     area: "Shinjuku",
     description:
-      "Over 200 tiny bars crammed into six narrow alleys, each seating just 5-10 people. Every bar has its own personality — jazz bars, punk bars, film bars, bars where the owner only speaks through a puppet. Your guide knows which ones welcome first-timers and which to skip.",
+      "Over 200 tiny bars crammed into six narrow alleys, each seating just 5-10 people. Every bar has its own personality: jazz bars, punk bars, film bars, bars where the owner only speaks through a puppet. Your guide knows which ones welcome first-timers and which to skip.",
     image: "/images/tours/night-tour-golden-gai.jpg",
   },
   {
@@ -33,7 +33,7 @@ const nightExperiences: {
     title: "Yurakucho & Shinbashi",
     area: "Central Tokyo",
     description:
-      "Tucked under the elevated train tracks, these open-air izakaya alleys are where office workers come to drink, eat, and decompress. This is authentic, unfiltered Tokyo nightlife — no tourists, no English menus, just real local culture. Your guide makes it accessible.",
+      "Tucked under the elevated train tracks, these open-air izakaya alleys are where office workers come to drink, eat, and decompress. This is authentic, unfiltered Tokyo nightlife: no tourists, no English menus, just real local culture. Your guide makes it accessible.",
   },
   {
     title: "Roppongi",
@@ -84,7 +84,7 @@ const TokyoNightTour = () => {
               When the sun sets, a different city emerges. Neon signs ignite
               narrow alleyways, izakaya lanterns flicker to life, and millions of
               Tokyoites pour into the streets for the night. This is the Tokyo
-              most visitors miss — and it's the Tokyo you'll remember forever.
+              most visitors miss, and it's the Tokyo you'll remember forever.
             </p>
             <div className="mt-8">
               <Link to="/contact" className="btn-accent">
@@ -104,8 +104,8 @@ const TokyoNightTour = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo is a completely different city after sunset. The neon lights,
-              the izakaya alleys, the energy of Shibuya Crossing at night —
-              these are experiences you simply cannot get during the day. The
+              the izakaya alleys, the energy of Shibuya Crossing at night.
+              These are experiences you simply cannot get during the day. The
               daytime crowds thin out, the atmosphere shifts, and the city
               reveals a warmer, more intimate side that most tourists never see.
             </p>
@@ -113,7 +113,7 @@ const TokyoNightTour = () => {
               But nighttime Tokyo can also be intimidating. Most bars are tiny,
               unmarked, and have no English signage. Some establishments are
               welcoming to visitors; others are not. Knowing the difference is
-              everything — and that's exactly what a local guide provides.
+              everything, and that's exactly what a local guide provides.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Whether you're a cocktail enthusiast, a street food lover, or
@@ -134,7 +134,7 @@ const TokyoNightTour = () => {
             </h2>
             <p className="mt-4 text-body max-w-2xl">
               Every night tour is customized to your interests. Here are some of
-              the experiences we can include — we'll pick the perfect combination
+              the experiences we can include. We'll pick the perfect combination
               for you.
             </p>
           </div>
@@ -185,7 +185,7 @@ const TokyoNightTour = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   Typically 3-4 hours, starting around 6 PM and wrapping up by
                   10 PM. We can adjust the start time based on your schedule and
-                  the season — summer sunsets are later, so we might start at 7
+                  the season. Summer sunsets are later, so we might start at 7
                   PM. The pace is yours to set; we're not rushing through a
                   checklist.
                 </p>
@@ -199,7 +199,7 @@ const TokyoNightTour = () => {
                   Navigating Tokyo nightlife solo means deciphering handwritten
                   Japanese menus, figuring out unspoken bar etiquette, and hoping
                   you've chosen a place that welcomes visitors. Your guide
-                  handles all of this — ordering in Japanese, explaining dishes
+                  handles all of this: ordering in Japanese, explaining dishes
                   and drinks, managing cover charges, and reading the room so you
                   can simply enjoy the experience. Many of the best spots have no
                   English signage at all, and your guide's relationships with bar
@@ -229,7 +229,7 @@ const TokyoNightTour = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   While Tokyo's bar scene is a highlight, non-drinking guests
                   enjoy this tour equally. Japan has a wonderful culture of
-                  non-alcoholic beverages — from artisan teas and Japanese sodas
+                  non-alcoholic beverages, from artisan teas and Japanese sodas
                   to elaborate mocktails. Many of our best nightlife spots are
                   actually about the food, the atmosphere, and the people
                   watching. The neon-lit streets, temple illuminations, and
@@ -255,8 +255,8 @@ const TokyoNightTour = () => {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Smart casual is perfect. You'll be walking between venues, so
-                comfortable shoes are essential. No need for anything formal —
-                clean jeans and a nice top work well. Some upscale bars may have
+                comfortable shoes are essential. No need for anything formal.
+                Clean jeans and a nice top work well. Some upscale bars may have
                 a slightly dressier atmosphere, which we'll factor into your
                 route.
               </p>
@@ -315,7 +315,7 @@ const TokyoNightTour = () => {
             <p className="text-lg opacity-90 leading-relaxed mb-8">
               Tell us your style and we'll plan your perfect night. Whether
               you're drawn to hidden jazz bars, sizzling yakitori alleys, or the
-              electric glow of Shibuya at midnight — we'll craft an evening
+              electric glow of Shibuya at midnight, we'll craft an evening
               you'll never forget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -357,7 +357,7 @@ const TokyoNightTour = () => {
                   </Link>
                   <span className="text-muted-foreground">
                     {" "}
-                    — Design your own Tokyo experience around any interest
+                    - Design your own Tokyo experience around any interest
                   </span>
                 </li>
                 <li>
@@ -369,7 +369,7 @@ const TokyoNightTour = () => {
                   </Link>
                   <span className="text-muted-foreground">
                     {" "}
-                    — Explore Tokyo's youth culture hub during the day
+                    - Explore Tokyo's youth culture hub during the day
                   </span>
                 </li>
               </ul>
@@ -388,7 +388,7 @@ const TokyoNightTour = () => {
                   </Link>
                   <span className="text-muted-foreground">
                     {" "}
-                    — Everything you need to know about Tokyo's busiest district
+                    - Everything you need to know about Tokyo's busiest district
                   </span>
                 </li>
                 <li>
@@ -400,7 +400,7 @@ const TokyoNightTour = () => {
                   </Link>
                   <span className="text-muted-foreground">
                     {" "}
-                    — A local's guide to Shibuya Crossing, Takeshita Street, and
+                    - A local's guide to Shibuya Crossing, Takeshita Street, and
                     beyond
                   </span>
                 </li>

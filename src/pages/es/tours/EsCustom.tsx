@@ -35,7 +35,7 @@ const EsCustom = () => {
               Tour Privado Personalizado con Guía en Español
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Cuéntame tus intereses y crearé un itinerario personalizado solo para ti. Ya sea que te apasione la gastronomía, la historia, el anime, la fotografía o algo completamente único — diseñemos juntos tu día perfecto en Tokio.
+              Cuéntame tus intereses y crearé un itinerario personalizado solo para ti. Ya sea que te apasione la gastronomía, la historia, el anime, la fotografía o algo completamente único, diseñemos juntos tu día perfecto en Tokio.
             </p>
           </div>
         </div>
