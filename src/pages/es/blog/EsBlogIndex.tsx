@@ -11,6 +11,7 @@ interface BlogPost {
   date: string;
   author: string;
   category: string;
+  image: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -23,6 +24,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/blog/asakusa-guide-hero.jpg",
   },
   {
     slug: "asakusa-tokio-guia",
@@ -32,6 +34,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/blog/asakusa-guide-hero.jpg",
   },
   {
     slug: "guia-shibuya-harajuku",
@@ -41,6 +44,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/blog/shibuya-harajuku-guide-hero.jpg",
   },
   {
     slug: "guia-shinjuku",
@@ -50,6 +54,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/blog/shinjuku-guide-hero.jpg",
   },
   {
     slug: "guia-tsukiji",
@@ -59,6 +64,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/blog/tsukiji-food-guide-hero.jpg",
   },
   {
     slug: "mercado-tsukiji-tokio",
@@ -68,6 +74,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/blog/tsukiji-food-guide-hero.jpg",
   },
   {
     slug: "yanaka-tokio-itinerario",
@@ -77,6 +84,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/tours/asakusa-kaminarimon-morning.jpg",
   },
   {
     slug: "shitamachi-tokio",
@@ -86,6 +94,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
+    image: "/images/tours/asakusa-backstreet-local.jpg",
   },
   // Guías de Excursiones
   {
@@ -96,6 +105,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
+    image: "/images/blog/day-trip-comparison-hero.jpg",
   },
   {
     slug: "excursion-nikko-desde-tokio",
@@ -105,6 +115,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
   {
     slug: "kamakura-desde-tokio",
@@ -114,6 +125,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
+    image: "/images/tours/kamakura-great-buddha.jpg",
   },
   {
     slug: "monte-fuji-desde-tokio",
@@ -123,6 +135,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
+    image: "/images/tours/hakone-ropeway-owakudani.jpg",
   },
   {
     slug: "monte-fuji-se-ve-desde-tokio",
@@ -132,6 +145,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
+    image: "/images/tours/hakone-pirate-ship-ashi.jpg",
   },
   // Planifica tu Viaje
   {
@@ -142,6 +156,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
+    image: "/images/tours/shibuya-crossing-tokyo.jpg",
   },
   {
     slug: "itinerario-tokio-5-dias",
@@ -151,6 +166,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
+    image: "/images/tours/shibuya-scramble-crossing.jpg",
   },
   {
     slug: "mejor-epoca-visitar-tokio",
@@ -160,6 +176,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
+    image: "/images/blog/meiji-shrine-forest.jpg",
   },
   {
     slug: "japan-rail-pass-vale-la-pena",
@@ -169,6 +186,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
+    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
   },
   {
     slug: "etiqueta-templos-santuarios",
@@ -178,16 +196,18 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
+    image: "/images/tours/senso-ji-temple-tokyo.jpg",
   },
   // Cultura Japonesa
   {
     slug: "propinas-en-japon",
-    title: "Propinas en Japón: Por Qué NO Debes Dejar Propina",
+    title: "Propinas en Japón: Lo Que Necesitas Saber",
     description:
-      "En Japón no se deja propina. Pero ¿por qué? Un guía oficial japonés explica la cultura detrás de esta costumbre y qué hacer en hoteles, restaurantes y taxis.",
+      "En Japón no es costumbre dejar propina — la mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento.",
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Cultura Japonesa",
+    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
   },
   {
     slug: "templos-famosos-japon",
@@ -197,6 +217,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Cultura Japonesa",
+    image: "/images/blog/asakusa-sensoji-pagoda.jpg",
   },
   // Gastronomía Japonesa
   {
@@ -207,6 +228,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
+    image: "/images/tours/tokyo-food-tour-hero.jpg",
   },
   {
     slug: "que-comer-en-japon",
@@ -216,6 +238,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
+    image: "/images/tours/food-tour-izakaya.jpg",
   },
   {
     slug: "comida-callejera-tokio",
@@ -225,6 +248,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
+    image: "/images/tours/tsukiji-street-food.jpg",
   },
   {
     slug: "tsukiji-2026",
@@ -234,6 +258,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-tamagoyaki.jpg",
   },
   // Guías Útiles
   {
@@ -244,6 +269,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
+    image: "/images/tour-photos/tour-photo-2.jpg",
   },
   {
     slug: "vale-la-pena-guia-privado-tokio",
@@ -253,6 +279,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
+    image: "/images/tour-photos/photo1.jpg",
   },
   {
     slug: "cuanto-cuesta-guia-privado-tokio",
@@ -262,6 +289,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
+    image: "/images/tour-photos/group-photo.jpg",
   },
   {
     slug: "guia-licencia-oficial-japon",
@@ -271,6 +299,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
+    image: "/images/tour-photos/tour-photo-1.jpg",
   },
 ];
 
@@ -331,6 +360,14 @@ const EsBlogIndex = () => {
                       to={`/es/blog/${post.slug}`}
                       className="group bg-card border border-border rounded-lg overflow-hidden hover:shadow-[var(--shadow-medium)] hover:-translate-y-1 transition-all duration-300"
                     >
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
                       <div className="p-6">
                         <p className="text-label text-accent mb-2">
                           {post.category}

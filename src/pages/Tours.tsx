@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
 import tourAsakusa from "@/assets/tour-asakusa.jpg";
 import tourUeno from "@/assets/tour-ueno.jpg";
+import tourYanaka from "@/assets/tour-yanaka.jpg";
 import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
 import tsukijiMarket from "@/assets/tsukiji-market.jpg";
 import imperialPalace from "@/assets/imperial-palace.jpg";
@@ -25,7 +26,7 @@ const tokyoTours = [
     duration: "4 hours",
     price: "¥40,000",
     difficulty: "Easy",
-    image: tourUeno,
+    image: tourYanaka,
   },
   {
     id: "shibuya-harajuku",
@@ -94,7 +95,7 @@ const dayTrips = [
     duration: "7-8 hours",
     price: "¥50,000",
     difficulty: "Easy-Moderate",
-    image: hamarikyu,
+    image: "/images/tours/kamakura-great-buddha.jpg",
   },
   {
     id: "hakone-day-trip",
@@ -103,7 +104,7 @@ const dayTrips = [
     duration: "8-10 hours",
     price: "¥55,000",
     difficulty: "Easy",
-    image: hamarikyu,
+    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
   },
   {
     id: "nikko-day-trip",
@@ -112,7 +113,7 @@ const dayTrips = [
     duration: "9-10 hours",
     price: "¥60,000",
     difficulty: "Moderate",
-    image: hamarikyu,
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
 ];
 

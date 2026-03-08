@@ -8,8 +8,8 @@ const EsPropinasenJapon = () => {
   return (
     <Layout>
       <SEO
-        title="Propinas en Japón: por qué NO debes dejar propina (lo explica un guía local)"
-        description="En Japón no se deja propina. Pero ¿por qué? Un guía oficial japonés explica la cultura detrás de esta costumbre y qué hacer en hoteles, restaurantes y taxis."
+        title="Propinas en Japón: lo que necesitas saber (lo explica un guía local)"
+        description="En Japón no es costumbre dejar propina — la mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento."
         canonicalPath="/es/blog/propinas-en-japon"
         hreflang={[
           { lang: "es", path: "/es/blog/propinas-en-japon" },
@@ -19,8 +19,8 @@ const EsPropinasenJapon = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/food-tour-tsukiji.jpg"
-          alt="Puesto de comida japonesa — las propinas en Japón"
+          src="/images/tours/asakusa-kaminarimon-gate.jpg"
+          alt="Puerta Kaminarimon en Asakusa — entendiendo la cultura de las propinas en Japón"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -40,7 +40,7 @@ const EsPropinasenJapon = () => {
             </Link>
             <p className="text-label text-accent mb-3">Cultura Japonesa</p>
             <h1 className="heading-display text-foreground">
-              Propinas en Japón: Por Qué NO Debes Dejar Propina
+              Propinas en Japón: Lo Que Necesitas Saber
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -109,16 +109,16 @@ const EsPropinasenJapon = () => {
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              Dar propina puede ser ofensivo — ¿de verdad?
+              Dar propina causa confusión — ¿de verdad?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Esta es la parte que más sorprende a mis invitados hispanohablantes. Sí, en ciertos contextos, dejar <strong className="text-foreground">propinas en Japón</strong> puede interpretarse como algo negativo. No es que te vayan a gritar o a echarte del restaurante, pero el mensaje que puede transmitir es: "Tu salario no es suficiente, así que te doy un extra". Y eso, para muchos japoneses, resulta condescendiente.
+              Esta es la parte que más sorprende a mis invitados hispanohablantes. Dejar <strong className="text-foreground">propinas en Japón</strong> no es que sea ofensivo ni grosero — es que los japoneses simplemente no están acostumbrados a recibirlas. Nunca ha sido parte de su cultura ni de su sistema laboral. Cuando alguien intenta dejar una propina, la reacción más común no es enfado, sino genuina confusión: "¿Se olvidó el cambio? ¿Me cobré de menos?".
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              También puede generar confusión genuina. He visto a camareros correr detrás de turistas por la calle para devolverles el dinero que dejaron en la mesa, pensando que se lo habían olvidado. Es una escena que ocurre más de lo que crees, y siempre me hace sonreír porque refleja perfectamente el choque cultural.
+              He visto a camareros correr detrás de turistas por la calle para devolverles el dinero que dejaron en la mesa, pensando que se lo habían olvidado. Es una escena que ocurre más de lo que crees, y siempre me hace sonreír porque refleja perfectamente el choque cultural.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Imagina la situación al revés: como si fueras a un restaurante en Madrid y al pagar le dijeras al camarero "toma, pobrecito, sé que no te pagan bien". Obviamente no es tu intención cuando dejas propina, pero el matiz cultural puede hacer que se perciba así.
+              Imagina que un compañero de trabajo te da un billete después de una reunión que fue bien. No te enfadarías, pero te quedarías desconcertado — simplemente no es así como funcionan las cosas en tu entorno. Eso es exactamente lo que sienten muchos japoneses al recibir una propina: desconcierto, no ofensa.
             </p>
 
             {/* ¿Y en hoteles de lujo? ¿Y en ryokan? */}
@@ -244,7 +244,7 @@ const EsPropinasenJapon = () => {
                   ¿Qué pasa si dejo propina?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  En la mayoría de los casos, el personal intentará devolvértela. Pueden correr detrás de ti pensando que olvidaste tu cambio. En hoteles internacionales probablemente la acepten sin problema, pero en restaurantes locales, izakayas o taxis, lo más probable es que genere confusión o incomodidad. No te preocupes: nadie se enfadará contigo, pero es mejor evitarlo.
+                  En la mayoría de los casos, el personal intentará devolvértela. Pueden correr detrás de ti pensando que olvidaste tu cambio. En hoteles internacionales probablemente la acepten sin problema, pero en restaurantes locales, izakayas o taxis, lo más probable es que genere confusión — simplemente no están acostumbrados. No te preocupes: nadie se enfadará contigo, pero es mejor tenerlo en cuenta.
                 </p>
               </div>
 
@@ -253,7 +253,7 @@ const EsPropinasenJapon = () => {
                   ¿Y en un tour privado?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Los guías turísticos japoneses, incluido yo, seguimos la misma norma cultural. No esperamos propinas y no las necesitamos para ofrecer el mejor servicio posible. Dicho esto, si insistes mucho (como Roberto aquella vez), algunos guías la aceptaremos con gratitud para no hacerte sentir mal. Pero lo que realmente valoramos es una reseña sincera, una recomendación a tus amigos, o esa carta escrita a mano que mencioné antes.
+                  A diferencia de restaurantes o taxis, los guías turísticos trabajamos en un espacio intercultural donde el tema de las propinas surge naturalmente. La respuesta honesta: las propinas son absolutamente bienvenidas y las recibimos con gratitud. Si tuviste una gran experiencia en el tour y quieres mostrar tu agradecimiento con una propina, no dudes en hacerlo — estaré encantado de aceptarla. Dicho esto, nunca son esperadas ni obligatorias. Y lo que también valoramos enormemente es una reseña sincera, una recomendación a tus amigos, o esa carta escrita a mano que mencioné antes.
                 </p>
               </div>
 
@@ -304,8 +304,8 @@ const EsPropinasenJapon = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Propinas en Japón: Por Qué NO Debes Dejar Propina",
-            "description": "En Japón no se deja propina. Pero ¿por qué? Un guía oficial japonés explica la cultura detrás de esta costumbre y qué hacer en hoteles, restaurantes y taxis.",
+            "headline": "Propinas en Japón: Lo Que Necesitas Saber",
+            "description": "En Japón no es costumbre dejar propina — la mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
