@@ -7,8 +7,8 @@ const ShinjukuGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Shinjuku Guide: What a Licensed Guide Shows Clients"
-        description="Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time, and what to skip."
+        title="Shinjuku Guide: Best Things to Do | Local Expert Tips"
+        description="Plan your Shinjuku visit with insider tips from a licensed Tokyo guide. Explore Golden Gai, Omoide Yokocho, Gyoen Garden, and more hidden spots most tourists miss."
         canonicalPath="/blog/shinjuku-guide"
       />
 
@@ -509,7 +509,7 @@ const ShinjukuGuide = () => {
 
             {/* What I Show Clients */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              What I Actually Show Clients in This Shinjuku Guide
+              Why Hire a Guide in Shinjuku: What I Actually Show Clients
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               When I bring private tour clients to Shinjuku, I don't just show them the neon signs and say "here's the famous crossing." I show them why Shinjuku looks the way it does, and how it connects to the rest of Tokyo's story.
