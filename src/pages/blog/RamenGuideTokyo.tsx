@@ -15,7 +15,7 @@ const RamenGuideTokyo = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/food-tour-izakaya.jpg"
+          src="/images/blog/ramen-guide-hero.jpg"
           alt="Japanese food culture — exploring Tokyo's best ramen spots"
           className="w-full h-full object-cover"
           loading="eager"
