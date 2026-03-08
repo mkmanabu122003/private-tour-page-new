@@ -7,8 +7,8 @@ const Tokyo3DayItinerary = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo 3-Day Itinerary | A Local Guide's Recommendations | Tanuki Tabi Travel"
-        description="A Tokyo 3-day itinerary curated by a licensed local guide. Where to go, what to eat, and how to experience the city like an insider, from Asakusa to Shibuya."
+        title="Tokyo 3-Day Itinerary 2026 | First-Timer's Complete Guide"
+        description="Spend three days in Tokyo with this local guide's itinerary. What to do in Tokyo for 3 days, from Asakusa temples and Tsukiji food to Shibuya nightlife and day trips."
         canonicalPath="/blog/tokyo-3-day-itinerary"
       />
 
@@ -63,6 +63,9 @@ const Tokyo3DayItinerary = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               I've organized the three days geographically to minimize transit time and maximize exploration. Each day covers a different side of Tokyo: traditional east, modern west, and then your choice of central Tokyo or a day trip. Here's what I recommend based on years of walking these streets with travelers from around the world.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              <strong className="text-foreground">Quick overview:</strong> Day 1 takes you through east Tokyo's historic neighborhoods, from the ancient lanes of Asakusa to the nostalgic charm of Yanaka and the market energy of Ameyoko. Day 2 shifts west to Meiji Shrine's forest, Harajuku's youth culture, Shibuya Crossing's organized chaos, and Shinjuku's legendary nightlife. Day 3 is your choice: dive into central Tokyo's food markets and imperial gardens, or escape the city for a day trip to Kamakura, Hakone, or Nikko. Each day works as a standalone route, so you can rearrange them to suit your schedule.
+            </p>
 
             {/* Day 1 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -92,6 +95,18 @@ const Tokyo3DayItinerary = () => {
               </Link>{" "}
               covers everything from temple rituals to the best street food stalls.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/asakusa-sensoji-pagoda.jpg"
+                alt="Senso-ji Temple pagoda in Asakusa, a highlight of any Tokyo 3-day itinerary"
+                className="w-full rounded-lg"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Senso-ji's five-story pagoda. Arrive before 9 AM for the most peaceful experience
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Late Morning: Walk to Tokyo Skytree via Sumida Park
@@ -133,6 +148,25 @@ const Tokyo3DayItinerary = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               End your first day at Ameyoko, the lively market street near Ueno Station. Originally a post-war black market, it's now a bustling strip of food stalls, seafood vendors, and discount shops. Great for street food: try the fresh seafood bowls, grilled meats on sticks, or chocolate-covered strawberries. The energy here is infectious and it's a perfect way to end your first day.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you're feeling adventurous, follow the side alleys that branch off the main market street. You'll find tiny izakaya (Japanese pubs) where office workers unwind after a long day, cheap and cheerful standing-bar spots, and some of the best value yakitori in the city. The area around the train tracks is especially atmospheric once the sun goes down and the lanterns come on. For visitors who love exploring food culture firsthand, our{" "}
+              <Link to="/tours/tokyo-food-tour" className="text-accent hover:underline">
+                Tokyo Food Tour
+              </Link>{" "}
+              covers markets and backstreet eateries that visitors rarely find on their own.
+            </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/asakusa-street-food.jpg"
+                alt="Street food stalls near Asakusa and Ueno, part of Tokyo's vibrant food scene"
+                className="w-full rounded-lg"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Street food stalls in east Tokyo. Graze your way through grilled skewers, fresh seafood, and seasonal snacks
+              </figcaption>
+            </figure>
 
             {/* Day 2 */}
             <h2 className="heading-section text-foreground mt-16 mb-6">
@@ -170,6 +204,18 @@ const Tokyo3DayItinerary = () => {
               covers this area in depth, from hidden vintage shops to the stories behind Omotesando's architectural masterpieces.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/tours/harajuku-takeshita-street.jpg"
+                alt="Harajuku Takeshita Street, colorful and crowded with youth culture shops"
+                className="w-full rounded-lg"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Takeshita Street in Harajuku. The shift from Meiji Shrine's calm forest to this sensory overload takes about 30 seconds
+              </figcaption>
+            </figure>
+
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Lunch: Shibuya Area
             </h3>
@@ -184,7 +230,7 @@ const Tokyo3DayItinerary = () => {
               No Tokyo visit is complete without experiencing Shibuya Crossing, the world's busiest pedestrian intersection, where up to 3,000 people cross at once. Cross it yourself, then head to the Shibuya Sky observation deck or the Starbucks above the crossing for the best overhead views. Visit the Hachiko statue (the famous loyal dog) and explore Center-gai for a taste of Tokyo's vibrant street culture.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If you have energy left, walk through the quieter neighborhoods behind the main streets. Tomigaya and Kamiyamacho are local favorites with excellent cafes, independent bookshops, and small restaurants that most tourists never discover.
+              If you have energy left, walk through the quieter neighborhoods behind the main streets. Tomigaya and Kamiyamacho are local favorites with excellent cafes, independent bookshops, and small restaurants that most tourists never discover. Tomigaya in particular has become one of Tokyo's most interesting food neighborhoods, with tiny ramen shops, natural wine bars, and pastry cafes that draw locals from across the city. It's a 10-minute walk from the Shibuya scramble, but it feels like a completely different world.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -198,8 +244,20 @@ const Tokyo3DayItinerary = () => {
               for more details on Golden Gai etiquette and the best food spots.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              For dinner, try Omoide Yokocho ("Memory Lane"), a narrow alley of yakitori (grilled chicken) stalls that has been serving workers since the 1940s. It's smoky, crowded, and absolutely authentic. Vegetarians should note that options are limited here, but nearby Shinjuku has restaurants for every dietary need.
+              For dinner, try Omoide Yokocho ("Memory Lane"), a narrow alley of yakitori (grilled chicken) stalls that has been serving workers since the 1940s. It's smoky, crowded, and absolutely authentic. Grab a seat at a counter, order a few skewers and a beer, and watch the grill masters work their magic inches from your plate. The most popular stalls are the ones doing simple things perfectly: chicken thigh with salt, tsukune (chicken meatball) with egg yolk, and negima (chicken and leek). Vegetarians should note that options are limited here, but nearby Shinjuku has restaurants for every dietary need.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-omoide-yokocho.jpg"
+                alt="Omoide Yokocho in Shinjuku, narrow alley lined with yakitori stalls and lanterns"
+                className="w-full rounded-lg"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Omoide Yokocho at night. This narrow alley of yakitori stalls has been a Shinjuku landmark since the 1940s
+              </figcaption>
+            </figure>
 
             {/* Day 3 */}
             <h2 className="heading-section text-foreground mt-16 mb-6">
@@ -223,8 +281,21 @@ const Tokyo3DayItinerary = () => {
               </Link>{" "}
               will help you navigate the best stalls and explain what you're eating.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-fresh-sushi.jpg"
+                alt="Fresh sushi breakfast at Tsukiji Outer Market in Tokyo"
+                className="w-full rounded-lg"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Sushi for breakfast at Tsukiji. The freshest fish you'll find anywhere in Tokyo
+              </figcaption>
+            </figure>
+
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Afternoon: Imperial Palace East Gardens.</strong> A peaceful contrast to the morning's market energy. These free-entry gardens were once the innermost circle of Edo Castle, the seat of Tokugawa shogunate power for over 250 years. The stone walls, moats, and garden design tell the story of samurai-era Japan. Walk through to the Marunouchi business district to see Tokyo's modern skyline framed by ancient castle walls.
+              <strong className="text-foreground">Afternoon: Imperial Palace East Gardens.</strong> A peaceful contrast to the morning's market energy. These free-entry gardens were once the innermost circle of Edo Castle, the seat of Tokugawa shogunate power for over 250 years. The stone walls, moats, and garden design tell the story of samurai-era Japan. The Ninomaru Garden is particularly beautiful, with a traditional Japanese landscape garden that changes dramatically with the seasons. In spring, you'll find plum and cherry blossoms. In summer, irises and hydrangeas. Autumn brings fiery maples, and winter reveals the elegant bare structure of the pruned pine trees. Walk through to the Marunouchi business district to see Tokyo's modern skyline framed by ancient castle walls.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Explore the area in depth with our{" "}
@@ -260,7 +331,7 @@ const Tokyo3DayItinerary = () => {
                 <Link to="/tours/nikko-day-trip" className="text-accent hover:underline font-medium">
                   Nikko
                 </Link>{" "}
-                UNESCO World Heritage Toshogu Shrine, dramatic waterfalls, and mountain lake scenery. Further from Tokyo (2 hours) but less crowded and deeply rewarding for history enthusiasts. October-November is spectacular for autumn foliage.
+                UNESCO World Heritage Toshogu Shrine, dramatic waterfalls, and mountain lake scenery. Further from Tokyo (2 hours) but less crowded and deeply rewarding for history enthusiasts. The ornate carvings at Toshogu are unlike anything else in Japan, and the surrounding cedar forest adds a sense of grandeur you won't find in the city. October-November is spectacular for autumn foliage, and the Irohazaka winding road to Lake Chuzenji is one of the country's most scenic drives.
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -307,6 +378,16 @@ const Tokyo3DayItinerary = () => {
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Food & Dining
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Tokyo has more Michelin-starred restaurants than any other city in the world, but some of the best meals you'll have cost under ¥1,000. Convenience stores (konbini) in Japan are genuinely good: onigiri, egg sandwiches, and fresh bento boxes make excellent budget meals. For sit-down dining, lunch sets (called "ranchi") are the best value, often half the price of the same restaurant's dinner menu with nearly identical food.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A few practical notes: most restaurants display plastic food models or photo menus outside, so you can see what you're ordering before you sit down. Many smaller restaurants use ticket vending machines at the entrance. Just insert coins or bills, press the button for what you want, and hand the ticket to the chef. It's faster and simpler than it sounds. Tipping is not practiced in Japan, at restaurants or anywhere else. The price on the menu is the price you pay, and excellent service is simply the standard.
+            </p>
+
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Temple & Shrine Etiquette
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -348,8 +429,8 @@ const Tokyo3DayItinerary = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "The Perfect 3-Day Tokyo Itinerary: From a Local Guide",
-            "description": "Plan the perfect 3 days in Tokyo with insider tips from a licensed local guide.",
+            "headline": "Tokyo 3-Day Itinerary 2026: First-Timer's Complete Guide",
+            "description": "Spend three days in Tokyo with a local guide's itinerary. What to do in Tokyo for 3 days, from Asakusa temples and Tsukiji food to Shibuya nightlife and day trips.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

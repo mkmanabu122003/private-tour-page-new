@@ -119,6 +119,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/asakusa-backstreet-local.jpg",
   },
   {
+    slug: "yanaka-walking-tour-guide",
+    title: "Yanaka Walking Tour: Tokyo's Best-Kept Secret Neighborhood",
+    description:
+      "Yanaka is old Tokyo at its finest — temples, shotengai, and no crowds. A local guide shares the best walking route through this hidden gem.",
+    date: "March 8, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Tokyo Area Guides",
+    image: "/images/tours/asakusa-backstreet-local.jpg",
+  },
+  {
     slug: "yanaka-tokyo-walking-route",
     title: "Yanaka Tokyo: A Guide's 3-Hour Walking Route",
     description:
