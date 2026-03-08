@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -27,7 +27,7 @@
 
     /* Muted tones */
     --muted: 60 10% 93%;
-    --muted-foreground: 0 0% 42%;
+    --muted-foreground: 0 0% 33%;
 
     /* Gold accent — warm gold for CTAs, accents, hover states (#C9A84C) */
     --accent: 44 54% 54%;
@@ -129,7 +129,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
-    @apply font-medium tracking-tight;
+    @apply font-semibold tracking-tight;
   }
 }
 
@@ -137,15 +137,15 @@
   /* Font family for headings is centralized in the h1-h6 base rule above.
      These classes only define size, weight, and spacing. */
   .heading-display {
-    @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
   }
 
   .heading-section {
-    @apply text-3xl md:text-4xl font-medium tracking-tight;
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
   }
 
   .heading-card {
-    @apply text-xl md:text-2xl font-medium;
+    @apply text-xl md:text-2xl font-semibold;
   }
 
   .text-body {

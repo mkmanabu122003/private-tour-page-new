@@ -3,7 +3,7 @@ import { Award, Globe, Briefcase, Heart, MapPin, Languages, Shield, Users, BookO
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import heroImage from "@/assets/hero-asakusa.jpg";
+import heroImage from "@/assets/asakusa-temple.jpg";
 
 const stats = [
   { label: "Tours Completed", value: "500+" },
@@ -210,7 +210,7 @@ const About = () => {
                   <item.icon className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground">
+                  <h3 className="text-lg font-semibold text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-muted-foreground leading-relaxed">
@@ -240,7 +240,7 @@ const About = () => {
                   <item.icon className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground">
+                  <h3 className="text-lg font-semibold text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-muted-foreground leading-relaxed">

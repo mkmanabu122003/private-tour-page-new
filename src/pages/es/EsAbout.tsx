@@ -4,7 +4,7 @@ import { Award, Globe, Briefcase, Heart, MapPin, Languages, Shield, Users, BookO
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import heroImage from "@/assets/hero-asakusa.jpg";
+import heroImage from "@/assets/asakusa-temple.jpg";
 
 const stats = [
   { label: "Tours Completados", value: "500+" },

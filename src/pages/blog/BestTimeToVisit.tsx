@@ -12,6 +12,17 @@ const BestTimeToVisit = () => {
         canonicalPath="/blog/best-time-to-visit-tokyo"
       />
 
+      {/* Hero Image */}
+      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+        <img
+          src="/images/tours/meiji-shrine-torii-gate.jpg"
+          alt="Meiji Shrine torii gate in Tokyo — beautiful in every season"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      </section>
+
       {/* Article Header */}
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
