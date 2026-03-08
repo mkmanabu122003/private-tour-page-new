@@ -16,7 +16,7 @@ const YokohamaDayTrip = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/blog/yokohama-minatomirai-hero.jpg"
-          alt="Tokyo city lights — Yokohama offers a similar urban experience just 30 minutes away"
+          alt="Yokohama Minato Mirai skyline at dusk with Landmark Tower and Cosmo World ferris wheel"
           className="w-full h-full object-cover"
           loading="eager"
         />

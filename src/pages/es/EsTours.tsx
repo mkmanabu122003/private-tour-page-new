@@ -4,6 +4,7 @@ import { Clock, Users, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import tourUeno from "@/assets/tour-ueno.jpg";
+import tourYanaka from "@/assets/tour-yanaka.jpg";
 import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
 import tsukijiMarket from "@/assets/tsukiji-market.jpg";
 import imperialPalace from "@/assets/imperial-palace.jpg";
@@ -79,7 +80,7 @@ const tokyoTours = [
     duration: "4 horas",
     price: "¥40,000",
     difficulty: "Fácil",
-    image: tourUeno,
+    image: tourYanaka,
   },
   {
     id: "shibuya-harajuku",
@@ -145,7 +146,7 @@ const dayTrips = [
     duration: "9-10 horas",
     price: "¥60,000",
     difficulty: "Moderado",
-    image: hamarikyu,
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
 ];
 

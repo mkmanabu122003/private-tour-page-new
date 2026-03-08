@@ -10,6 +10,7 @@ interface BlogPost {
   date: string;
   author: string;
   category: string;
+  image: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -22,6 +23,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/asakusa-guide-hero.jpg",
   },
   {
     slug: "shibuya-harajuku-guide",
@@ -31,6 +33,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/shibuya-harajuku-guide-hero.jpg",
   },
   {
     slug: "shinjuku-guide",
@@ -40,6 +43,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/shinjuku-guide-hero.jpg",
   },
   {
     slug: "tsukiji-guide-food-lover",
@@ -49,6 +53,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/tsukiji-food-guide-hero.jpg",
   },
   // Day Trip Guides
   {
@@ -59,6 +64,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
+    image: "/images/blog/day-trip-comparison-hero.jpg",
   },
   // Planning Your Trip
   {
@@ -69,6 +75,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/shibuya-crossing-tokyo.jpg",
   },
   {
     slug: "best-time-to-visit-tokyo",
@@ -78,6 +85,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/meiji-shrine-torii-gate.jpg",
   },
   {
     slug: "japan-temple-shrine-etiquette",
@@ -87,6 +95,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/senso-ji-temple-tokyo.jpg",
   },
   // Tokyo Area Guides (new)
   {
@@ -97,6 +106,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/asakusa-guide-hero.jpg",
   },
   {
     slug: "old-tokyo-shitamachi",
@@ -106,6 +116,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/tours/asakusa-backstreet-local.jpg",
   },
   {
     slug: "yanaka-tokyo-walking-route",
@@ -115,6 +126,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/tours/asakusa-kaminarimon-morning.jpg",
   },
   {
     slug: "tokyo-hidden-gems",
@@ -124,6 +136,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/asakusa-hidden-shrine.jpg",
   },
   {
     slug: "senso-ji-most-visited-temple",
@@ -133,6 +146,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/asakusa-sensoji-pagoda.jpg",
   },
   {
     slug: "tsukiji-market-guide",
@@ -142,6 +156,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
+    image: "/images/blog/tsukiji-food-guide-hero.jpg",
   },
   // Day Trip Guides (new)
   {
@@ -152,6 +167,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
+    image: "/images/tours/kamakura-great-buddha.jpg",
   },
   {
     slug: "nikko-day-trip-from-tokyo",
@@ -161,6 +177,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
   {
     slug: "yokohama-day-trip-from-tokyo",
@@ -170,6 +187,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
+    image: "/images/blog/yokohama-minatomirai-hero.jpg",
   },
   {
     slug: "kawagoe-day-trip-from-tokyo",
@@ -179,6 +197,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
+    image: "/images/blog/kawagoe-kurazukuri-hero.jpg",
   },
   // Planning Your Trip (new)
   {
@@ -189,6 +208,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/shibuya-scramble-crossing.jpg",
   },
   {
     slug: "tokyo-on-a-budget",
@@ -198,6 +218,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/asakusa-nakamise-street.jpg",
   },
   {
     slug: "japan-rail-pass-worth-it",
@@ -207,15 +228,17 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
   },
   {
     slug: "tipping-in-japan",
-    title: "Tipping in Japan: Why You Shouldn't",
+    title: "Tipping in Japan: What You Need to Know",
     description:
-      "In Japan, tipping is considered rude — not generous. A licensed Japanese guide explains the cultural reason behind this, and what to do instead.",
+      "Tipping isn't customary in Japan — most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
+    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
   },
   // Food Guides
   {
@@ -226,6 +249,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
+    image: "/images/blog/ramen-guide-hero.jpg",
   },
   {
     slug: "sushi-guide-tokyo",
@@ -235,6 +259,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
+    image: "/images/blog/tsukiji-fresh-sushi.jpg",
   },
   // Helpful Guides
   {
@@ -245,6 +270,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
+    image: "/images/tour-photos/group-photo.jpg",
   },
   {
     slug: "licensed-tour-guide-japan",
@@ -254,6 +280,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
+    image: "/images/tour-photos/tour-photo-1.jpg",
   },
 ];
 
@@ -313,6 +340,14 @@ const BlogIndex = () => {
                       to={`/blog/${post.slug}`}
                       className="group bg-card border border-border rounded-lg overflow-hidden hover:shadow-[var(--shadow-medium)] hover:-translate-y-1 transition-all duration-300"
                     >
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
                       <div className="p-6">
                         <p className="text-label text-accent mb-2">
                           {post.category}

@@ -16,7 +16,7 @@ const RamenGuideTokyo = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/blog/ramen-guide-hero.jpg"
-          alt="Japanese food culture — exploring Tokyo's best ramen spots"
+          alt="A bowl of rich Tokyo ramen with sesame, greens, and toppings"
           className="w-full h-full object-cover"
           loading="eager"
         />

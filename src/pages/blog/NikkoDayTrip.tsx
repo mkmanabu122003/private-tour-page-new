@@ -16,7 +16,7 @@ const NikkoDayTrip = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/blog/nikko-toshogu-hero.jpg"
-          alt="Traditional Japanese shrine gate — similar to the ornate shrines of Nikko"
+          alt="Toshogu Shrine entrance through the stone torii gate in Nikko"
           className="w-full h-full object-cover"
           loading="eager"
         />
