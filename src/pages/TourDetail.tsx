@@ -30,7 +30,7 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
   },
   "tsukiji-ginza": {
     title: "Tsukiji & Ginza Tour | Food & Luxury Shopping | Tanuki Tabi Travel",
-    description: "Taste Tokyo at Tsukiji Outer Market and stroll upscale Ginza on a private guided tour. Street food, history, and local culture — all in one morning. From ¥30,000.",
+    description: "Taste Tokyo at Tsukiji Outer Market and stroll upscale Ginza on a private guided tour. Street food, history, and local culture, all in one morning. From ¥30,000.",
     h1: "Tsukiji & Ginza Private Walking Tour",
   },
   "imperial-palace": {
@@ -41,22 +41,22 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
   custom: {
     title: "Custom Tokyo Tour | Design Your Own Itinerary | Tanuki Tabi Travel",
     description: "Design your perfect Tokyo tour. Tell your interests and get a fully personalized private itinerary from Manabu, a government-licensed guide with 500+ tours.",
-    h1: "Custom Private Tour — Your Tokyo, Your Way",
+    h1: "Custom Private Tour: Your Tokyo, Your Way",
   },
   "kamakura-day-trip": {
     title: "Kamakura Day Trip from Tokyo | Private Guided Tour | Tanuki Tabi Travel",
-    description: "Take a private day trip to Kamakura with a licensed Tokyo guide. The Great Buddha, ancient temples, and coastal scenery — all in one full day. From ¥50,000.",
-    h1: "Kamakura Day Trip from Tokyo — Private Guided Tour",
+    description: "Take a private day trip to Kamakura with a licensed Tokyo guide. The Great Buddha, ancient temples, and coastal scenery, all in one full day. From ¥50,000.",
+    h1: "Kamakura Day Trip from Tokyo: Private Guided Tour",
   },
   "hakone-day-trip": {
     title: "Hakone Day Trip from Tokyo | Hot Springs & Mt. Fuji Views | Tanuki Tabi Travel",
     description: "See Mt. Fuji, cruise Lake Ashi, and experience onsen culture on a private Hakone day trip from Tokyo led by a certified guide. From ¥55,000.",
-    h1: "Hakone Day Trip from Tokyo — Mt. Fuji Views & Hot Springs",
+    h1: "Hakone Day Trip from Tokyo: Mt. Fuji Views & Hot Springs",
   },
   "nikko-day-trip": {
     title: "Nikko Day Trip from Tokyo | Toshogu Shrine & Nature | Tanuki Tabi Travel",
     description: "Visit UNESCO World Heritage Toshogu Shrine and Nikko's mountain scenery on a private day trip from Tokyo. Government-licensed guide included. From ¥60,000.",
-    h1: "Nikko Day Trip from Tokyo — UNESCO Shrines & Mountain Scenery",
+    h1: "Nikko Day Trip from Tokyo: UNESCO Shrines & Mountain Scenery",
   },
 };
 
@@ -306,7 +306,7 @@ const tourData = {
   custom: {
     title: "Custom Private Tour",
     subtitle: "Your perfect Tokyo experience",
-    description: "Tell me your interests, and I'll create a personalized itinerary just for you. Whether you're passionate about food, history, anime, photography, or something completely unique—let's design your dream Tokyo day together.",
+    description: "Tell me your interests, and I'll create a personalized itinerary just for you. Whether you're passionate about food, history, anime, photography, or something completely unique, let's design your dream Tokyo day together.",
     duration: "Flexible (3-8 hours)",
     price: "From ¥10,000/hour",
     difficulty: "Customizable",
@@ -348,7 +348,7 @@ const tourData = {
   "kamakura-day-trip": {
     title: "Kamakura Day Trip",
     subtitle: "Ancient temples, Great Buddha & coastal charm",
-    description: "Escape Tokyo for a day and explore Kamakura, Japan's first military capital. This private day trip takes you to the iconic Great Buddha, serene temples with ocean views, and the charming Komachi-dori shopping street — all with a licensed guide who brings 800 years of samurai history to life.",
+    description: "Escape Tokyo for a day and explore Kamakura, Japan's first military capital. This private day trip takes you to the iconic Great Buddha, serene temples with ocean views, and the charming Komachi-dori shopping street, all with a licensed guide who brings 800 years of samurai history to life.",
     duration: "7-8 hours",
     price: "¥50,000",
     difficulty: "Easy to moderate",
@@ -361,10 +361,10 @@ const tourData = {
       { src: "/images/tours/kamakura-hasedera-temple.jpg", alt: "Hasedera Temple gardens in Kamakura", position: "center" },
     ],
     highlights: [
-      "Great Buddha at Kotoku-in — 13th century bronze statue, one of Japan's most iconic landmarks",
-      "Hasedera Temple — ocean views, Kannon statue, hydrangeas in June",
-      "Tsurugaoka Hachimangu Shrine — Kamakura's most important shrine",
-      "Komachi-dori shopping street — local snacks, souvenirs, artisan crafts",
+      "Great Buddha at Kotoku-in: 13th century bronze statue, one of Japan's most iconic landmarks",
+      "Hasedera Temple: ocean views, Kannon statue, hydrangeas in June",
+      "Tsurugaoka Hachimangu Shrine: Kamakura's most important shrine",
+      "Komachi-dori shopping street: local snacks, souvenirs, artisan crafts",
       "Optional: Hokokuji Temple bamboo grove + matcha experience",
     ],
     itinerary: [
@@ -375,7 +375,7 @@ const tourData = {
       { time: "12:00 PM", activity: "Lunch at a local restaurant (guide recommends based on your preferences)" },
       { time: "1:30 PM", activity: "Great Buddha at Kotoku-in" },
       { time: "2:30 PM", activity: "Hasedera Temple (ocean views from observation deck)" },
-      { time: "3:30 PM", activity: "Komachi-dori street — street food, shopping" },
+      { time: "3:30 PM", activity: "Komachi-dori street: street food, shopping" },
       { time: "4:30 PM", activity: "Return to Tokyo by train" },
       { time: "5:30 PM", activity: "Arrive back in Tokyo" },
     ],
@@ -397,7 +397,7 @@ const tourData = {
       difficulty: "Easy to moderate walking on mostly flat terrain",
       goodFor: "Families, couples, history enthusiasts, first-time Japan visitors",
     },
-    whyGuide: "Kamakura has over 65 temples and shrines — a guide helps you prioritize and understand the rich history of Japan's first military capital. Skip the confusion of train connections and navigate crowds efficiently, especially at popular sites. Your guide provides cultural context that transforms temple visits from sightseeing into meaningful experiences.",
+    whyGuide: "Kamakura has over 65 temples and shrines. A guide helps you prioritize and understand the rich history of Japan's first military capital. Skip the confusion of train connections and navigate crowds efficiently, especially at popular sites. Your guide provides cultural context that transforms temple visits from sightseeing into meaningful experiences.",
     suitableFor: [
       "Families with children",
       "Couples seeking a romantic day out",
@@ -409,7 +409,7 @@ const tourData = {
   "hakone-day-trip": {
     title: "Hakone Day Trip",
     subtitle: "Mt. Fuji views, hot springs & volcanic valleys",
-    description: "Experience the best of Hakone in a single day — cruise across Lake Ashi with Mt. Fuji as your backdrop, ride the aerial ropeway over steaming volcanic valleys, and discover the iconic lakeside torii gate of Hakone Shrine. Your guide navigates the complex transport system so you can focus on the views.",
+    description: "Experience the best of Hakone in a single day. Cruise across Lake Ashi with Mt. Fuji as your backdrop, ride the aerial ropeway over steaming volcanic valleys, and discover the iconic lakeside torii gate of Hakone Shrine. Your guide navigates the complex transport system so you can focus on the views.",
     duration: "8-10 hours",
     price: "¥55,000",
     difficulty: "Easy",
@@ -423,9 +423,9 @@ const tourData = {
     ],
     highlights: [
       "Lake Ashi pirate ship cruise with Mt. Fuji views (weather permitting)",
-      "Hakone Ropeway — aerial views over Owakudani volcanic valley",
-      "Owakudani — volcanic hot springs, famous black eggs",
-      "Hakone Shrine — iconic torii gate on the lake",
+      "Hakone Ropeway: aerial views over Owakudani volcanic valley",
+      "Owakudani: volcanic hot springs, famous black eggs",
+      "Hakone Shrine: iconic torii gate on the lake",
       "Optional: Hakone Open-Air Museum or onsen (hot spring) experience",
     ],
     itinerary: [
@@ -444,12 +444,12 @@ const tourData = {
     includes: [
       "Licensed English-speaking guide for the full day",
       "Custom itinerary planning",
-      "Hakone transport navigation (ropeway, cruise, buses — it's complex!)",
+      "Hakone transport navigation (ropeway, cruise, buses; it's complex!)",
       "Restaurant and onsen recommendations",
       "Cultural and geological explanations",
     ],
     notIncluded: [
-      "Hakone Free Pass (approx. ¥6,100 — covers all Hakone transport + round trip from Shinjuku)",
+      "Hakone Free Pass (approx. ¥6,100; covers all Hakone transport + round trip from Shinjuku)",
       "Lunch",
       "Museum admission / onsen fees",
       "Romancecar supplement (approx. ¥1,110 each way, optional)",
@@ -460,7 +460,7 @@ const tourData = {
       difficulty: "Easy. Mostly transport-based with short walks",
       goodFor: "Nature lovers, photographers, couples, anyone wanting to escape the city",
     },
-    whyGuide: "Hakone's transport system (trains, cable cars, ropeways, buses, boats) can be overwhelming for first-time visitors. A guide navigates the famous \"Hakone Loop\" efficiently, saving you time and confusion. More importantly, Mt. Fuji visibility changes by the hour — your guide adjusts the itinerary in real-time to maximize your chances of that iconic view.",
+    whyGuide: "Hakone's transport system (trains, cable cars, ropeways, buses, boats) can be overwhelming for first-time visitors. A guide navigates the famous \"Hakone Loop\" efficiently, saving you time and confusion. More importantly, Mt. Fuji visibility changes by the hour, so your guide adjusts the itinerary in real-time to maximize your chances of that iconic view.",
     suitableFor: [
       "Nature lovers and photographers",
       "Couples seeking a scenic getaway",
@@ -472,7 +472,7 @@ const tourData = {
   "nikko-day-trip": {
     title: "Nikko Day Trip",
     subtitle: "UNESCO shrines, waterfalls & mountain scenery",
-    description: "Journey to Nikko, home to Japan's most ornate shrine complex and breathtaking mountain scenery. Discover the UNESCO World Heritage Toshogu Shrine with its 5,000+ intricate carvings, witness the powerful Kegon Falls, and enjoy the serene beauty of Lake Chuzenji — all with expert historical commentary from your guide.",
+    description: "Journey to Nikko, home to Japan's most ornate shrine complex and breathtaking mountain scenery. Discover the UNESCO World Heritage Toshogu Shrine with its 5,000+ intricate carvings, witness the powerful Kegon Falls, and enjoy the serene beauty of Lake Chuzenji, all with expert historical commentary from your guide.",
     duration: "9-10 hours",
     price: "¥60,000",
     difficulty: "Moderate",
@@ -483,18 +483,18 @@ const tourData = {
       { src: hamarikyu, alt: "Toshogu Shrine ornate carvings in Nikko", position: "center" },
     ],
     highlights: [
-      "Toshogu Shrine — UNESCO World Heritage, Japan's most ornate shrine complex",
+      "Toshogu Shrine: UNESCO World Heritage, Japan's most ornate shrine complex",
       "\"See no evil, speak no evil, hear no evil\" original carvings",
-      "Shinkyo Bridge — sacred vermillion bridge over the Daiya River",
-      "Kegon Falls — one of Japan's most famous waterfalls (97m drop)",
-      "Lake Chuzenji — mountain lake at 1,269m elevation",
+      "Shinkyo Bridge: sacred vermillion bridge over the Daiya River",
+      "Kegon Falls: one of Japan's most famous waterfalls (97m drop)",
+      "Lake Chuzenji: mountain lake at 1,269m elevation",
     ],
     itinerary: [
       { time: "7:30 AM", activity: "Meet at Tokyo Station" },
       { time: "9:30 AM", activity: "Arrive Nikko by Shinkansen + local train (~2 hours)" },
       { time: "10:00 AM", activity: "Shinkyo Bridge (photo stop)" },
       { time: "10:30 AM", activity: "Toshogu Shrine complex (allow 1.5-2 hours)" },
-      { time: "12:30 PM", activity: "Lunch (try local specialty: yuba — tofu skin dishes)" },
+      { time: "12:30 PM", activity: "Lunch (try local specialty: yuba, tofu skin dishes)" },
       { time: "1:30 PM", activity: "Drive/bus to Chuzenji area" },
       { time: "2:00 PM", activity: "Kegon Falls observation platform" },
       { time: "2:30 PM", activity: "Lake Chuzenji lakeside walk" },
@@ -522,7 +522,7 @@ const tourData = {
       difficulty: "Moderate. Some uphill walking and stairs at Toshogu",
       goodFor: "History buffs, nature lovers, UNESCO heritage enthusiasts, photographers",
     },
-    whyGuide: "Toshogu Shrine has over 5,000 intricate carvings — without a guide, you'll walk past 90% of them without understanding their meaning. The shrine complex is a masterpiece of Tokugawa-era craftsmanship, and a knowledgeable guide transforms the visit from \"pretty buildings\" into a deep dive into Japanese political and spiritual history. The guide also handles the complex transport logistics between Nikko town and the mountain lake area.",
+    whyGuide: "Toshogu Shrine has over 5,000 intricate carvings. Without a guide, you'll walk past 90% of them without understanding their meaning. The shrine complex is a masterpiece of Tokugawa-era craftsmanship, and a knowledgeable guide transforms the visit from \"pretty buildings\" into a deep dive into Japanese political and spiritual history. The guide also handles the complex transport logistics between Nikko town and the mountain lake area.",
     suitableFor: [
       "History buffs and culture enthusiasts",
       "Nature lovers and photographers",

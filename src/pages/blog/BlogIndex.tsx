@@ -17,7 +17,7 @@ const blogPosts: BlogPost[] = [
   // Tokyo Area Guides
   {
     slug: "asakusa-guide-what-to-see",
-    title: "Asakusa Guide — What to See Beyond Senso-ji Temple",
+    title: "Asakusa Guide: What to See Beyond Senso-ji Temple",
     description:
       "A local guide's insider tips for exploring Asakusa. Go beyond Senso-ji Temple to discover hidden shrines, street food spots, and the best times to visit.",
     date: "February 25, 2026",
@@ -27,7 +27,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "shibuya-harajuku-guide",
-    title: "Shibuya & Harajuku — A Local Guide to Tokyo's Modern Side",
+    title: "Shibuya & Harajuku: A Local Guide to Tokyo's Modern Side",
     description:
       "Explore Shibuya and Harajuku like a local. Insider tips on Shibuya Crossing, Takeshita Street, hidden cafes, and the best photo spots from a licensed guide.",
     date: "February 25, 2026",
@@ -37,7 +37,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "shinjuku-guide",
-    title: "Shinjuku Guide — Tokyo's Neon-Lit Heart",
+    title: "Shinjuku Guide: Tokyo's Neon-Lit Heart",
     description:
       "Navigate Shinjuku like a local. A guide to Golden Gai, Omoide Yokocho, Kabukicho, Shinjuku Gyoen, and the best food spots in Tokyo's busiest district.",
     date: "February 25, 2026",
@@ -47,7 +47,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "tsukiji-guide-food-lover",
-    title: "Tsukiji Market Guide — A Food Lover's Walkthrough",
+    title: "Tsukiji Market Guide: A Food Lover's Walkthrough",
     description:
       "A local guide to Tsukiji Outer Market. What to eat, what to skip, best times to visit, and how to combine with Ginza for a perfect Tokyo food day.",
     date: "February 25, 2026",
@@ -58,7 +58,7 @@ const blogPosts: BlogPost[] = [
   // Day Trip Guides
   {
     slug: "kamakura-vs-hakone-vs-nikko-day-trip",
-    title: "Kamakura vs Hakone vs Nikko — Which Day Trip Should You Choose?",
+    title: "Kamakura vs Hakone vs Nikko: Which Day Trip Should You Choose?",
     description:
       "Can't decide between Kamakura, Hakone, or Nikko? A local guide compares travel time, highlights, and who each trip is best for to help you choose.",
     date: "February 25, 2026",
@@ -69,7 +69,7 @@ const blogPosts: BlogPost[] = [
   // Planning Your Trip
   {
     slug: "tokyo-3-day-itinerary",
-    title: "The Perfect 3-Day Tokyo Itinerary — From a Local Guide",
+    title: "The Perfect 3-Day Tokyo Itinerary: From a Local Guide",
     description:
       "Plan the perfect 3 days in Tokyo with insider tips from a licensed local guide. Covers Asakusa, Shibuya, Tsukiji, day trips, and hidden gems most tourists miss.",
     date: "February 25, 2026",
@@ -79,7 +79,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-time-to-visit-tokyo",
-    title: "Best Time to Visit Tokyo — A Month-by-Month Guide",
+    title: "Best Time to Visit Tokyo: A Month-by-Month Guide",
     description:
       "When should you visit Tokyo? A local guide breaks down weather, events, crowds, and costs for every month to help you plan the perfect trip.",
     date: "February 25, 2026",
@@ -89,9 +89,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "japan-temple-shrine-etiquette",
-    title: "Temple & Shrine Etiquette in Japan — A Complete Guide",
+    title: "Temple & Shrine Etiquette in Japan: A Complete Guide",
     description:
-      "Visiting temples and shrines in Japan? Learn the essential etiquette — how to pray, purify, bow, and behave respectfully from a licensed Japanese guide.",
+      "Visiting temples and shrines in Japan? Learn the essential etiquette: how to pray, purify, bow, and behave respectfully from a licensed Japanese guide.",
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
@@ -102,7 +102,7 @@ const blogPosts: BlogPost[] = [
     slug: "asakusa-guide",
     title: "Asakusa Guide: What to See and Skip",
     description:
-      "Asakusa is Tokyo's most visited neighborhood — and most people see it wrong. A licensed guide who works there daily tells you what actually matters.",
+      "Asakusa is Tokyo's most visited neighborhood, and most people see it wrong. A licensed guide who works there daily tells you what actually matters.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
@@ -112,7 +112,7 @@ const blogPosts: BlogPost[] = [
     slug: "old-tokyo-shitamachi",
     title: "Old Tokyo Still Exists: A Guide's Map to Shitamachi",
     description:
-      "Shitamachi — Tokyo's 'low city' — survived bombs, earthquakes, and redevelopment. A licensed guide shows you what remains and why it still matters.",
+      "Shitamachi, Tokyo's 'low city', survived bombs, earthquakes, and redevelopment. A licensed guide shows you what remains and why it still matters.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
@@ -132,7 +132,7 @@ const blogPosts: BlogPost[] = [
     slug: "tokyo-hidden-gems",
     title: "Tokyo Hidden Gems: A Licensed Guide's Map",
     description:
-      "After 500+ tours, these are the Tokyo spots I return to again and again — not because they're secret, but because most guides don't know why they matter.",
+      "After 500+ tours, these are the Tokyo spots I return to again and again, not because they're secret, but because most guides don't know why they matter.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
@@ -142,7 +142,7 @@ const blogPosts: BlogPost[] = [
     slug: "senso-ji-most-visited-temple",
     title: "Is Senso-ji the World's Most Visited Temple?",
     description:
-      "You'll hear Senso-ji gets 30 million visitors a year. A licensed guide who works there daily examines the claim — and what it means for your visit.",
+      "You'll hear Senso-ji gets 30 million visitors a year. A licensed guide who works there daily examines the claim, and what it means for your visit.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
@@ -163,7 +163,7 @@ const blogPosts: BlogPost[] = [
     slug: "kamakura-day-trip-from-tokyo",
     title: "Kamakura Day Trip from Tokyo: Guide's Plan",
     description:
-      "Kamakura is an easy day trip from Tokyo — but most visitors miss what makes it special. A licensed guide explains what to see and whether to hire a guide.",
+      "Kamakura is an easy day trip from Tokyo, but most visitors miss what makes it special. A licensed guide explains what to see and whether to hire a guide.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
@@ -183,7 +183,7 @@ const blogPosts: BlogPost[] = [
     slug: "yokohama-day-trip-from-tokyo",
     title: "Yokohama Day Trip from Tokyo: Worth It?",
     description:
-      "Yokohama is 30 minutes from Tokyo. But is it worth a full day? A licensed guide gives an honest answer — and what to combine it with.",
+      "Yokohama is 30 minutes from Tokyo. But is it worth a full day? A licensed guide gives an honest answer, and what to combine it with.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
@@ -204,7 +204,7 @@ const blogPosts: BlogPost[] = [
     slug: "tokyo-itinerary-5-days",
     title: "Tokyo 5 Day Itinerary: A Licensed Guide's Plan",
     description:
-      "Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients — with honest notes on what to skip.",
+      "Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients, with honest notes on what to skip.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
@@ -214,7 +214,7 @@ const blogPosts: BlogPost[] = [
     slug: "tokyo-on-a-budget",
     title: "Tokyo on a Budget: What a Local Guide Spends",
     description:
-      "Tokyo is more affordable than its reputation. A licensed guide breaks down real daily costs — transport, food, entry fees — and where to save.",
+      "Tokyo is more affordable than its reputation. A licensed guide breaks down real daily costs (transport, food, entry fees) and where to save.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
@@ -234,7 +234,7 @@ const blogPosts: BlogPost[] = [
     slug: "tipping-in-japan",
     title: "Tipping in Japan: What You Need to Know",
     description:
-      "Tipping isn't customary in Japan — most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation.",
+      "Tipping isn't customary in Japan. Most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
@@ -276,7 +276,7 @@ const blogPosts: BlogPost[] = [
     slug: "licensed-tour-guide-japan",
     title: "What Is a Licensed Tour Guide in Japan?",
     description:
-      "Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one — and why it matters for your trip.",
+      "Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one, and why it matters for your trip.",
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",

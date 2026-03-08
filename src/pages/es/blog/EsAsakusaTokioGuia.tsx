@@ -20,7 +20,7 @@ const EsAsakusaTokioGuia = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/blog/asakusa-guide-hero.jpg"
-          alt="Guía completa de Asakusa — más allá de Senso-ji"
+          alt="Guía completa de Asakusa, más allá de Senso-ji"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -62,10 +62,10 @@ const EsAsakusaTokioGuia = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Piensa en Asakusa como el casco antiguo de tu ciudad — el lugar donde todo empezó. En mi caso no es una metáfora: crecí a veinte minutos de aquí, y este barrio forma parte de mi historia personal tanto como del mapa de Tokio. Llevo años empezando mis mañanas aquí antes de que llegue el primer autobús turístico, y puedo asegurarte una cosa: el Asakusa de las siete de la mañana y el de las doce del mediodía son dos lugares completamente distintos.
+              Piensa en Asakusa como el casco antiguo de tu ciudad, el lugar donde todo empezó. En mi caso no es una metáfora: crecí a veinte minutos de aquí, y este barrio forma parte de mi historia personal tanto como del mapa de Tokio. Llevo años empezando mis mañanas aquí antes de que llegue el primer autobús turístico, y puedo asegurarte una cosa: el Asakusa de las siete de la mañana y el de las doce del mediodía son dos lugares completamente distintos.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si buscas una asakusa tokio guia que vaya más allá del típico "visita el Senso-ji y compra recuerdos", estás en el sitio correcto. Este artículo no es una lista genérica de atracciones. Es lo que yo haría si tuviera una sola mañana en este barrio — lo que le diría a un amigo que viene a Tokio por primera vez y quiere conocer Asakusa de verdad, sin prisas, sin multitudes y sin caer en las trampas que esperan a los turistas despistados.
+              Si buscas una asakusa tokio guia que vaya más allá del típico "visita el Senso-ji y compra recuerdos", estás en el sitio correcto. Este artículo no es una lista genérica de atracciones. Es lo que yo haría si tuviera una sola mañana en este barrio: lo que le diría a un amigo que viene a Tokio por primera vez y quiere conocer Asakusa de verdad, sin prisas, sin multitudes y sin caer en las trampas que esperan a los turistas despistados.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Treinta millones de personas pasan por el Senso-ji cada año. La mayoría llega entre las 10 y las 4 de la tarde, sigue el mismo recorrido y se va convencida de que ya ha visto Asakusa. Se equivocan. Lo mejor de este barrio ocurre cuando casi nadie mira.
@@ -93,14 +93,14 @@ const EsAsakusaTokioGuia = () => {
               Los Monjes y la Ceremonia Matutina
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              A primera hora, los monjes del Senso-ji realizan sus rezos matutinos dentro del salón principal. Si llegas sobre las 6:30 AM, puedes escuchar los sutras a través de las puertas abiertas. No es un espectáculo para turistas — es una práctica religiosa real que lleva ocurriendo aquí de forma ininterrumpida durante siglos. El sonido de los cantos mezclado con el olor del incienso del gran incensario (jokoro) es una de las experiencias más genuinas que puedes vivir en Tokio. No necesitas permiso para estar ahí, pero sí necesitas respeto: no hables, no uses el flash y mantén una distancia prudente. Si te interesa la espiritualidad japonesa, esta ceremonia vale más que cualquier museo.
+              A primera hora, los monjes del Senso-ji realizan sus rezos matutinos dentro del salón principal. Si llegas sobre las 6:30 AM, puedes escuchar los sutras a través de las puertas abiertas. No es un espectáculo para turistas; es una práctica religiosa real que lleva ocurriendo aquí de forma ininterrumpida durante siglos. El sonido de los cantos mezclado con el olor del incienso del gran incensario (jokoro) es una de las experiencias más genuinas que puedes vivir en Tokio. No necesitas permiso para estar ahí, pero sí necesitas respeto: no hables, no uses el flash y mantén una distancia prudente. Si te interesa la espiritualidad japonesa, esta ceremonia vale más que cualquier museo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               El Ritual que Yo Sigo Cada Mañana de Tour
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Llego a Asakusa sobre las 6:45. Camino por Kaminarimon sin detenerme, paso por Nakamise vacía y entro al recinto del templo por la puerta principal. Me detengo en el incensario, dejo que el humo me envuelva (la tradición dice que cura las dolencias del cuerpo — yo simplemente creo que marca el inicio del día), y luego rodeo el salón principal por la izquierda hasta llegar al pequeño jardín que hay detrás. Allí me siento unos minutos. A esa hora solo estoy yo, algún vecino que pasea al perro y los monjes. Cuando mis invitados del tour llegan a las 7:30 o las 8, ya tengo la energía del sitio dentro. Y se nota: empezar el recorrido por Asakusa en calma cambia toda la experiencia.
+              Llego a Asakusa sobre las 6:45. Camino por Kaminarimon sin detenerme, paso por Nakamise vacía y entro al recinto del templo por la puerta principal. Me detengo en el incensario, dejo que el humo me envuelva (la tradición dice que cura las dolencias del cuerpo; yo simplemente creo que marca el inicio del día), y luego rodeo el salón principal por la izquierda hasta llegar al pequeño jardín que hay detrás. Allí me siento unos minutos. A esa hora solo estoy yo, algún vecino que pasea al perro y los monjes. Cuando mis invitados del tour llegan a las 7:30 o las 8, ya tengo la energía del sitio dentro. Y se nota: empezar el recorrido por Asakusa en calma cambia toda la experiencia.
             </p>
 
             {/* Qué ver en Asakusa */}
@@ -115,21 +115,21 @@ const EsAsakusaTokioGuia = () => {
               Kaminarimon y Nakamise: la Foto y Luego Qué
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No te digo que te saltes Kaminarimon — es icónica por una razón, y el farol rojo de 700 kilos que cuelga de ella es genuinamente impresionante. Hazle la foto. Pero no te quedes ahí. La mayoría de visitantes gastan treinta minutos recorriendo los 250 metros de Nakamise-dori, compran un recuerdo y creen que ya han terminado. Si haces eso, te estás perdiendo el 80% del barrio. Mi consejo: cruza Kaminarimon, echa un vistazo rápido a Nakamise y después gira a la izquierda o la derecha por cualquier callejón lateral. Es ahí donde empieza el Asakusa real.
+              No te digo que te saltes Kaminarimon, es icónica por una razón, y el farol rojo de 700 kilos que cuelga de ella es genuinamente impresionante. Hazle la foto. Pero no te quedes ahí. La mayoría de visitantes gastan treinta minutos recorriendo los 250 metros de Nakamise-dori, compran un recuerdo y creen que ya han terminado. Si haces eso, te estás perdiendo el 80% del barrio. Mi consejo: cruza Kaminarimon, echa un vistazo rápido a Nakamise y después gira a la izquierda o la derecha por cualquier callejón lateral. Es ahí donde empieza el Asakusa real.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Los Santuarios Escondidos que el 99% No Visita
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              A cinco minutos al norte del Senso-ji hay un pequeño santuario llamado Imado-jinja. Está dedicado a los gatos de la suerte (maneki-neko) y a las parejas que buscan amor. Las figuritas de cerámica y los ema (tablillas de deseos) son encantadores, pero lo mejor es la tranquilidad absoluta del lugar. A diez minutos a pie en la dirección opuesta, hacia el oeste, encuentras el santuario de Chingo-do, escondido en un callejón y dedicado a los tanuki — las criaturas mitológicas japonesas con forma de mapache. Hay estatuas de tanuki por todas partes, y el ambiente es completamente diferente al del Senso-ji. Estos rincones no aparecen en la mayoría de guías turísticas, y esa es precisamente la razón por la que merecen tu tiempo.
+              A cinco minutos al norte del Senso-ji hay un pequeño santuario llamado Imado-jinja. Está dedicado a los gatos de la suerte (maneki-neko) y a las parejas que buscan amor. Las figuritas de cerámica y los ema (tablillas de deseos) son encantadores, pero lo mejor es la tranquilidad absoluta del lugar. A diez minutos a pie en la dirección opuesta, hacia el oeste, encuentras el santuario de Chingo-do, escondido en un callejón y dedicado a los tanuki, las criaturas mitológicas japonesas con forma de mapache. Hay estatuas de tanuki por todas partes, y el ambiente es completamente diferente al del Senso-ji. Estos rincones no aparecen en la mayoría de guías turísticas, y esa es precisamente la razón por la que merecen tu tiempo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hoppy-dori: la Calle de los Izakaya al Aire Libre
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Hoppy-dori es un callejón a pocos minutos al oeste del Senso-ji donde los izakaya sacan mesas a la calle y los trabajadores del barrio vienen a beber shochu con Hoppy, una bebida de posguerra que sigue siendo seña de identidad de Asakusa. A partir de las 3 o 4 de la tarde, el callejón cobra vida con el humo de las parrillas de yakitori, las conversaciones a voz en cuello y el tintineo de los vasos. Es el antídoto perfecto a la solemnidad del templo. Si vienes por la mañana temprano para el Senso-ji, reserva la tarde para volver aquí y vivir la otra cara de Asakusa — la cara festiva, ruidosa y genuinamente local. Una cerveza, unas brochetas de pollo y una conversación con el dueño del puesto de al lado. Eso es Asakusa sin filtro.
+              Hoppy-dori es un callejón a pocos minutos al oeste del Senso-ji donde los izakaya sacan mesas a la calle y los trabajadores del barrio vienen a beber shochu con Hoppy, una bebida de posguerra que sigue siendo seña de identidad de Asakusa. A partir de las 3 o 4 de la tarde, el callejón cobra vida con el humo de las parrillas de yakitori, las conversaciones a voz en cuello y el tintineo de los vasos. Es el antídoto perfecto a la solemnidad del templo. Si vienes por la mañana temprano para el Senso-ji, reserva la tarde para volver aquí y vivir la otra cara de Asakusa: la cara festiva, ruidosa y genuinamente local. Una cerveza, unas brochetas de pollo y una conversación con el dueño del puesto de al lado. Eso es Asakusa sin filtro.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -151,14 +151,14 @@ const EsAsakusaTokioGuia = () => {
               Las Trampas Turísticas de Nakamise
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No todo en Nakamise-dori es malo, pero hay que saber distinguir. Evita los puestos que venden katanas de plástico, abanicos baratos con "kanji" inventado y camisetas con mensajes en japonés incorrecto. Estos productos están diseñados para venderse rápido a turistas que no volverán. Si quieres recuerdos auténticos, busca las tiendas que llevan generaciones en el mismo sitio — las reconocerás porque no tienen carteles llamativos en cinco idiomas ni descuentos por compra múltiple. También evita los helados de sabores extravagantes (wasabi, carbón activado, etc.) que se venden a precios inflados. Son llamativos para Instagram, pero ni saben bien ni tienen nada que ver con la gastronomía japonesa real.
+              No todo en Nakamise-dori es malo, pero hay que saber distinguir. Evita los puestos que venden katanas de plástico, abanicos baratos con "kanji" inventado y camisetas con mensajes en japonés incorrecto. Estos productos están diseñados para venderse rápido a turistas que no volverán. Si quieres recuerdos auténticos, busca las tiendas que llevan generaciones en el mismo sitio; las reconocerás porque no tienen carteles llamativos en cinco idiomas ni descuentos por compra múltiple. También evita los helados de sabores extravagantes (wasabi, carbón activado, etc.) que se venden a precios inflados. Son llamativos para Instagram, pero ni saben bien ni tienen nada que ver con la gastronomía japonesa real.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Los Rickshaws (No Son lo que Parecen)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Verás rickshaws estacionados frente a Kaminarimon con jóvenes entusiastas ofreciéndote un paseo. Son legales, no son una estafa exactamente, pero tampoco son la experiencia cultural que prometen. Los recorridos son cortos (normalmente 15-30 minutos), siguen una ruta preestablecida por las calles principales y cuestan entre 5.000 y 15.000 yenes dependiendo de la duración. El narrador suele ser un estudiante con un guion memorizado. Por ese dinero, puedes contratar un tour a pie con un guía con licencia que te muestre diez veces más durante tres horas. No te juzgo si subes a uno por diversión — pero no confundas el paseo con una experiencia local auténtica.
+              Verás rickshaws estacionados frente a Kaminarimon con jóvenes entusiastas ofreciéndote un paseo. Son legales, no son una estafa exactamente, pero tampoco son la experiencia cultural que prometen. Los recorridos son cortos (normalmente 15-30 minutos), siguen una ruta preestablecida por las calles principales y cuestan entre 5.000 y 15.000 yenes dependiendo de la duración. El narrador suele ser un estudiante con un guion memorizado. Por ese dinero, puedes contratar un tour a pie con un guía con licencia que te muestre diez veces más durante tres horas. No te juzgo si subes a uno por diversión, pero no confundas el paseo con una experiencia local auténtica.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -173,7 +173,7 @@ const EsAsakusaTokioGuia = () => {
               Dónde Comer en Asakusa Como un Local
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Asakusa tiene una escena gastronómica profunda que va mucho más allá de la comida callejera de Nakamise. Esta asakusa tokio guia no estaría completa sin contarte dónde como yo cuando estoy en el barrio — que es prácticamente cada semana.
+              Asakusa tiene una escena gastronómica profunda que va mucho más allá de la comida callejera de Nakamise. Esta asakusa tokio guia no estaría completa sin contarte dónde como yo cuando estoy en el barrio, que es prácticamente cada semana.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -187,7 +187,7 @@ const EsAsakusaTokioGuia = () => {
               Almuerzo: Tempura y Soba Artesanales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Asakusa es cuna de la tempura desde el período Edo, y algunos de los restaurantes familiares que la sirven llevan más de un siglo perfeccionando la fritura. Busca los locales pequeños con barra y pocas mesas donde el chef fríe delante de ti — la tempura de langostino (ebi) y de verduras de temporada recién sacada del aceite tiene una textura crujiente y ligera que la tempura industrial no puede replicar. Para soba, los mejores sitios están escondidos en callejones detrás del templo. Los fideos hechos a mano cada mañana tienen un color grisáceo natural y una textura firme que los distingue inmediatamente de los industriales. Pide la soba fría (zaru soba) para apreciar la calidad del fideo sin distracciones. Si te interesa la{" "}
+              Asakusa es cuna de la tempura desde el período Edo, y algunos de los restaurantes familiares que la sirven llevan más de un siglo perfeccionando la fritura. Busca los locales pequeños con barra y pocas mesas donde el chef fríe delante de ti; la tempura de langostino (ebi) y de verduras de temporada recién sacada del aceite tiene una textura crujiente y ligera que la tempura industrial no puede replicar. Para soba, los mejores sitios están escondidos en callejones detrás del templo. Los fideos hechos a mano cada mañana tienen un color grisáceo natural y una textura firme que los distingue inmediatamente de los industriales. Pide la soba fría (zaru soba) para apreciar la calidad del fideo sin distracciones. Si te interesa la{" "}
               <Link to="/es/blog/comida-callejera-tokio" className="text-accent hover:underline">
                 comida callejera de Tokio
               </Link>
@@ -198,7 +198,7 @@ const EsAsakusaTokioGuia = () => {
               Merienda: los Dulces de Nakamise que Sí Merecen la Pena
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No todo en Nakamise es trampa turística. Los ningyo-yaki — pequeños bizcochos con forma de faroles y palomas del templo, rellenos de anko (pasta de judías rojas) — se hacen artesanalmente aquí desde hace más de un siglo y están deliciosos recién hechos. Los kibi-dango, bolitas de mijo cubiertas de kinako (harina de soja tostada), son otro clásico genuino del barrio que cuesta menos de 400 yenes. Estos dulces son parte real de la tradición de Asakusa, no inventos para turistas. Si solo vas a comer una cosa en Nakamise, que sean los ningyo-yaki calientes.
+              No todo en Nakamise es trampa turística. Los ningyo-yaki, pequeños bizcochos con forma de faroles y palomas del templo, rellenos de anko (pasta de judías rojas), se hacen artesanalmente aquí desde hace más de un siglo y están deliciosos recién hechos. Los kibi-dango, bolitas de mijo cubiertas de kinako (harina de soja tostada), son otro clásico genuino del barrio que cuesta menos de 400 yenes. Estos dulces son parte real de la tradición de Asakusa, no inventos para turistas. Si solo vas a comer una cosa en Nakamise, que sean los ningyo-yaki calientes.
             </p>
 
             {/* Cómo llegar */}
@@ -210,14 +210,14 @@ const EsAsakusaTokioGuia = () => {
               Desde Cualquier Punto de Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Asakusa es accesible desde prácticamente cualquier punto de Tokio en menos de 30 minutos. La estación principal es Asakusa, servida por la línea Ginza del metro (línea naranja), la línea Asakusa de Toei (línea rosa) y el Tsukuba Express. Desde Shinjuku, toma la línea Marunouchi hasta Akasaka-mitsuke y cambia a la Ginza — unos 30 minutos en total. Desde Shibuya, toma la Ginza hasta Asakusa directamente — unos 30 minutos. Desde Tokyo Station, usa la Ginza — unos 15 minutos. Si vienes desde Ueno, son solo dos paradas en la Ginza. La salida 1 de la estación te deja a cien metros de Kaminarimon. Si quieres llegar a las 7 AM, calcula tu ruta con antelación: el metro empieza a funcionar sobre las 5 AM, así que incluso madrugar mucho es perfectamente viable.
+              Asakusa es accesible desde prácticamente cualquier punto de Tokio en menos de 30 minutos. La estación principal es Asakusa, servida por la línea Ginza del metro (línea naranja), la línea Asakusa de Toei (línea rosa) y el Tsukuba Express. Desde Shinjuku, toma la línea Marunouchi hasta Akasaka-mitsuke y cambia a la Ginza, unos 30 minutos en total. Desde Shibuya, toma la Ginza hasta Asakusa directamente, unos 30 minutos. Desde Tokyo Station, usa la Ginza, unos 15 minutos. Si vienes desde Ueno, son solo dos paradas en la Ginza. La salida 1 de la estación te deja a cien metros de Kaminarimon. Si quieres llegar a las 7 AM, calcula tu ruta con antelación: el metro empieza a funcionar sobre las 5 AM, así que incluso madrugar mucho es perfectamente viable.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Mi Itinerario Recomendado de 3-4 Horas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si tuviera que diseñar la mañana perfecta en Asakusa, esta sería mi asakusa tokio guia esencial. Llega a las 7 AM. Camina por Kaminarimon y Nakamise vacías, sin prisa. Entra al recinto del Senso-ji, pasa por el incensario, observa el salón principal. Rodea el templo por la izquierda hasta el Santuario de Asakusa — disfruta del silencio. Sal por la puerta este y baja al río Sumida para el paseo matutino. Sobre las 8:30, busca un kissaten para desayunar. A las 9:30, vuelve a Nakamise (que ya estará abriendo) y recorre las calles laterales buscando los santuarios escondidos. A las 10:30, almuerza tempura o soba en uno de los restaurantes artesanales. A las 11, sal de Asakusa antes de que llegue la avalancha turística. Has vivido el barrio completo en menos de cuatro horas y has evitado el 90% de las multitudes.
+              Si tuviera que diseñar la mañana perfecta en Asakusa, esta sería mi asakusa tokio guia esencial. Llega a las 7 AM. Camina por Kaminarimon y Nakamise vacías, sin prisa. Entra al recinto del Senso-ji, pasa por el incensario, observa el salón principal. Rodea el templo por la izquierda hasta el Santuario de Asakusa y disfruta del silencio. Sal por la puerta este y baja al río Sumida para el paseo matutino. Sobre las 8:30, busca un kissaten para desayunar. A las 9:30, vuelve a Nakamise (que ya estará abriendo) y recorre las calles laterales buscando los santuarios escondidos. A las 10:30, almuerza tempura o soba en uno de los restaurantes artesanales. A las 11, sal de Asakusa antes de que llegue la avalancha turística. Has vivido el barrio completo en menos de cuatro horas y has evitado el 90% de las multitudes.
             </p>
 
             {/* FAQ */}
@@ -282,7 +282,7 @@ const EsAsakusaTokioGuia = () => {
                 ¿Quieres vivir el Asakusa de las 7 de la mañana con un guía local?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                En nuestro tour a pie por Asakusa, empezamos temprano — antes que los turistas, antes que las multitudes, antes que el ruido. Te enseño los santuarios escondidos, los mejores puestos de comida y los rincones del barrio que solo conocen los que viven aquí. Sin prisas, sin trampas turísticas — solo el Asakusa auténtico, el que yo conozco desde que tengo memoria.
+                En nuestro tour a pie por Asakusa, empezamos temprano, antes que los turistas, antes que las multitudes, antes que el ruido. Te enseño los santuarios escondidos, los mejores puestos de comida y los rincones del barrio que solo conocen los que viven aquí. Sin prisas, sin trampas turísticas. Solo el Asakusa auténtico, el que yo conozco desde que tengo memoria.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours/asakusa" className="btn-accent">

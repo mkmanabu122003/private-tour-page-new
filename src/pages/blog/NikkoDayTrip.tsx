@@ -38,7 +38,7 @@ const NikkoDayTrip = () => {
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided over a hundred Nikko day trips from Tokyo.
+              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided over a hundred Nikko day trips from Tokyo.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ const NikkoDayTrip = () => {
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Nikko is one of those rare places in Japan where nature and human ambition collide at full volume. Two hours north of Tokyo, tucked into the mountains of Tochigi Prefecture, sits one of the most lavishly decorated shrine complexes on earth — and most of the cedar forest around it has been standing since the 1600s. A Nikko day trip from Tokyo is entirely doable, deeply rewarding, and consistently one of the top experiences my clients rave about after their Japan trip ends.
+              Nikko is one of those rare places in Japan where nature and human ambition collide at full volume. Two hours north of Tokyo, tucked into the mountains of Tochigi Prefecture, sits one of the most lavishly decorated shrine complexes on earth, and most of the cedar forest around it has been standing since the 1600s. A Nikko day trip from Tokyo is entirely doable, deeply rewarding, and consistently one of the top experiences my clients rave about after their Japan trip ends.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               But Nikko requires a bit more planning than hopping on a train to Kamakura. The distances are longer, the layout is spread out, and the historical layers run deep. Here's everything I tell my clients before we go.
@@ -58,13 +58,13 @@ const NikkoDayTrip = () => {
               Why Nikko Exists (The Short Version)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              In 1616, Tokugawa Ieyasu — the shogun who unified Japan after more than a century of civil war — died at the age of 73. He had already chosen his burial site: a sacred mountain area in Nikko that had been a center of mountain worship for over 800 years. His grandson, Tokugawa Iemitsu, then spent two years and an estimated 1.5 million workers transforming the site into the Tosho-gu shrine complex we see today.
+              In 1616, Tokugawa Ieyasu, the shogun who unified Japan after more than a century of civil war, died at the age of 73. He had already chosen his burial site: a sacred mountain area in Nikko that had been a center of mountain worship for over 800 years. His grandson, Tokugawa Iemitsu, then spent two years and an estimated 1.5 million workers transforming the site into the Tosho-gu shrine complex we see today.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The result was deliberately, almost aggressively impressive. While most Japanese shrines and temples follow a principle of restrained beauty — think bare wood, clean lines, quiet spaces — Tosho-gu went the opposite direction. Every surface is covered in gold leaf, lacquer, and intricate carvings. There are over 5,000 individual carvings on the buildings, many painted in vivid colors that have been restored to their original intensity.
+              The result was deliberately, almost aggressively impressive. While most Japanese shrines and temples follow a principle of restrained beauty (think bare wood, clean lines, quiet spaces), Tosho-gu went the opposite direction. Every surface is covered in gold leaf, lacquer, and intricate carvings. There are over 5,000 individual carvings on the buildings, many painted in vivid colors that have been restored to their original intensity.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I often compare Tosho-gu to Versailles for my clients. Both were built not primarily for worship or living, but as statements of absolute power. Louis XIV wanted visiting nobles to feel small when they walked through Versailles. Tokugawa Iemitsu wanted feudal lords (daimyo) — who were forced to make pilgrimages to Nikko — to understand exactly who was in charge. The shrine's extravagance was the message: the Tokugawa dynasty controls enough wealth, labor, and artisan talent to build this, and you don't.
+              I often compare Tosho-gu to Versailles for my clients. Both were built not primarily for worship or living, but as statements of absolute power. Louis XIV wanted visiting nobles to feel small when they walked through Versailles. Tokugawa Iemitsu wanted feudal lords (daimyo), who were forced to make pilgrimages to Nikko, to understand exactly who was in charge. The shrine's extravagance was the message: the Tokugawa dynasty controls enough wealth, labor, and artisan talent to build this, and you don't.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Understanding this context transforms a Nikko day trip from Tokyo from "looking at a fancy shrine" into witnessing one of history's great political power plays frozen in wood and gold.
@@ -81,33 +81,33 @@ const NikkoDayTrip = () => {
                 <strong className="text-foreground">Tobu Railway from Asakusa Station (recommended):</strong> The Tobu Nikko Line runs direct limited express trains (called "Spacia" or "Revaty") from Asakusa to Tobu-Nikko Station. The ride takes about 1 hour 50 minutes and costs around ¥2,800 one way. This is the fastest and cheapest option for most travelers. The train is comfortable and the route passes through increasingly rural scenery as you leave Tokyo behind. If you're planning a Nikko day trip from Tokyo on a budget, this is your best bet.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">JR Shinkansen + local line:</strong> Take the Tohoku Shinkansen from Tokyo or Ueno Station to Utsunomiya (about 50 minutes), then transfer to the JR Nikko Line for another 45 minutes. Total time is roughly the same as Tobu, but the cost is significantly higher — around ¥5,500 one way. The advantage? It's fully covered by the Japan Rail Pass. If you have a JR Pass, this route costs you nothing extra. If you don't, take the Tobu line instead.
+                <strong className="text-foreground">JR Shinkansen + local line:</strong> Take the Tohoku Shinkansen from Tokyo or Ueno Station to Utsunomiya (about 50 minutes), then transfer to the JR Nikko Line for another 45 minutes. Total time is roughly the same as Tobu, but the cost is significantly higher, around ¥5,500 one way. The advantage? It's fully covered by the Japan Rail Pass. If you have a JR Pass, this route costs you nothing extra. If you don't, take the Tobu line instead.
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Either way, I recommend leaving Tokyo by 8:00 AM. Nikko's shrines open at 9:00 AM, and the earlier you arrive, the fewer crowds you'll deal with — especially at Tosho-gu, which gets packed by late morning.
+              Either way, I recommend leaving Tokyo by 8:00 AM. Nikko's shrines open at 9:00 AM, and the earlier you arrive, the fewer crowds you'll deal with, especially at Tosho-gu, which gets packed by late morning.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              What to See — Tosho-gu, the Waterfall, the Cedar Avenue
+              What to See: Tosho-gu, the Waterfall, the Cedar Avenue
             </h2>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tosho-gu Shrine</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This is the main event, and it deserves at least 90 minutes. The complex is a UNESCO World Heritage Site containing dozens of buildings, each one covered in elaborate carvings that tell stories from Chinese classics, Buddhist teachings, and Shinto mythology. The famous "see no evil, speak no evil, hear no evil" monkeys are here — carved above the sacred horse stable. The Yomeimon Gate alone has over 500 carvings and is considered one of Japan's finest architectural achievements.
+              This is the main event, and it deserves at least 90 minutes. The complex is a UNESCO World Heritage Site containing dozens of buildings, each one covered in elaborate carvings that tell stories from Chinese classics, Buddhist teachings, and Shinto mythology. The famous "see no evil, speak no evil, hear no evil" monkeys are here, carved above the sacred horse stable. The Yomeimon Gate alone has over 500 carvings and is considered one of Japan's finest architectural achievements.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The climb to Ieyasu's actual tomb is easy to miss but shouldn't be. A stone stairway behind the main hall leads up through the forest to a surprisingly simple bronze pagoda that holds his remains. After all the gold and color below, the quiet simplicity of his grave is striking — and intentional. Even in death, the Tokugawa understood contrast as a design tool.
+              The climb to Ieyasu's actual tomb is easy to miss but shouldn't be. A stone stairway behind the main hall leads up through the forest to a surprisingly simple bronze pagoda that holds his remains. After all the gold and color below, the quiet simplicity of his grave is striking, and intentional. Even in death, the Tokugawa understood contrast as a design tool.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Kegon Falls</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              About 30 minutes by bus from central Nikko, Kegon Falls drops 97 meters from Lake Chuzenji in a single dramatic plunge. It's one of Japan's three most famous waterfalls, and in autumn, the surrounding cliffs turn brilliant shades of orange and red. There's an elevator (¥570) that takes you down to an observation platform at the base of the falls — absolutely worth the cost. In winter, the falls partially freeze into spectacular ice columns.
+              About 30 minutes by bus from central Nikko, Kegon Falls drops 97 meters from Lake Chuzenji in a single dramatic plunge. It's one of Japan's three most famous waterfalls, and in autumn, the surrounding cliffs turn brilliant shades of orange and red. There's an elevator (¥570) that takes you down to an observation platform at the base of the falls, and it's absolutely worth the cost. In winter, the falls partially freeze into spectacular ice columns.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">The Cedar Avenue (Nikko Suginamiki)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              In 1625, a feudal lord named Matsudaira Masatsuna planted cedar trees along the approach roads to Nikko as an offering to Tosho-gu. Four hundred years later, approximately 12,000 of those trees are still standing along 37 kilometers of road — making it the longest tree-lined avenue in the world (verified by Guinness). Some of these cedars are over 30 meters tall and several meters in diameter. Driving or walking through them feels like entering a living cathedral. You'll pass through portions of the avenue on the bus to Kegon Falls, but if time allows, walking a section on foot is one of my favorite parts of any Nikko day trip from Tokyo.
+              In 1625, a feudal lord named Matsudaira Masatsuna planted cedar trees along the approach roads to Nikko as an offering to Tosho-gu. Four hundred years later, approximately 12,000 of those trees are still standing along 37 kilometers of road, making it the longest tree-lined avenue in the world (verified by Guinness). Some of these cedars are over 30 meters tall and several meters in diameter. Driving or walking through them feels like entering a living cathedral. You'll pass through portions of the avenue on the bus to Kegon Falls, but if time allows, walking a section on foot is one of my favorite parts of any Nikko day trip from Tokyo.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -136,14 +136,14 @@ const NikkoDayTrip = () => {
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Nikko</strong> is the most visually dramatic — the shrine architecture is unlike anything else in Japan, and the mountain scenery adds a dimension you won't get near Tokyo. It's also the farthest (2 hours each way) and requires more planning. Best for travelers who want to see something truly unique and don't mind a longer travel day.
+                <strong className="text-foreground">Nikko</strong> is the most visually dramatic. The shrine architecture is unlike anything else in Japan, and the mountain scenery adds a dimension you won't get near Tokyo. It's also the farthest (2 hours each way) and requires more planning. Best for travelers who want to see something truly unique and don't mind a longer travel day.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Kamakura</strong> is the most versatile — temples, hiking, a giant Buddha, beach views, and good food, all within an hour of Tokyo. It's the easiest to do independently. Best for active travelers and first-time visitors to Japan. See my full{" "}
+                <strong className="text-foreground">Kamakura</strong> is the most versatile: temples, hiking, a giant Buddha, beach views, and good food, all within an hour of Tokyo. It's the easiest to do independently. Best for active travelers and first-time visitors to Japan. See my full{" "}
                 <Link to="/blog/kamakura-day-trip-from-tokyo" className="text-accent hover:underline">Kamakura day trip guide</Link>.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Kawagoe</strong> is the most intimate — a small Edo-period merchant town with a preserved warehouse district, candy shops, and a bell tower that's been ringing since the 1600s. Only 30 minutes from Ikebukuro. Best for travelers who've already seen temples and want a quieter, more local experience. Read my{" "}
+                <strong className="text-foreground">Kawagoe</strong> is the most intimate: a small Edo-period merchant town with a preserved warehouse district, candy shops, and a bell tower that's been ringing since the 1600s. Only 30 minutes from Ikebukuro. Best for travelers who've already seen temples and want a quieter, more local experience. Read my{" "}
                 <Link to="/blog/kawagoe-day-trip-from-tokyo" className="text-accent hover:underline">Kawagoe day trip guide</Link>{" "}for details.
               </li>
             </ul>
@@ -184,7 +184,7 @@ const NikkoDayTrip = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">What's the best season to visit Nikko?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Autumn (mid-October to early November) is peak season — the fall foliage around Lake Chuzenji and Kegon Falls is spectacular. Spring and early summer are also excellent with fewer crowds. Winter is beautiful but cold, and some roads to the lake may be affected by snow. Summer can be warm but is still cooler than Tokyo thanks to the mountain elevation.
+                    Autumn (mid-October to early November) is peak season. The fall foliage around Lake Chuzenji and Kegon Falls is spectacular. Spring and early summer are also excellent with fewer crowds. Winter is beautiful but cold, and some roads to the lake may be affected by snow. Summer can be warm but is still cooler than Tokyo thanks to the mountain elevation.
                   </p>
                 </div>
                 <div>
@@ -196,7 +196,7 @@ const NikkoDayTrip = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">What should I eat in Nikko?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Nikko is famous for yuba (tofu skin), which is served in various forms — in soup, as sashimi, wrapped around rice, or fried. It sounds simple but the local preparation is genuinely delicious. You'll find yuba restaurants throughout the town center, especially along the main road between the station and the shrines. Try it in a set meal (teishoku) for the full experience.
+                    Nikko is famous for yuba (tofu skin), which is served in various forms: in soup, as sashimi, wrapped around rice, or fried. It sounds simple but the local preparation is genuinely delicious. You'll find yuba restaurants throughout the town center, especially along the main road between the station and the shrines. Try it in a set meal (teishoku) for the full experience.
                   </p>
                 </div>
               </div>

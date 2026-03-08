@@ -20,7 +20,7 @@ const EsJapanRailPass = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/hakone-lake-ashi-fuji.jpg"
-          alt="Lago Ashi y Monte Fuji — excursión con Japan Rail Pass"
+          alt="Lago Ashi y Monte Fuji: excursión con Japan Rail Pass"
           className="w-full h-full object-cover"
           loading="eager"
         />

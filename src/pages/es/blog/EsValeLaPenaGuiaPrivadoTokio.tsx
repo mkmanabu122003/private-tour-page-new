@@ -69,7 +69,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Llevo más de 500 tours guiados en Tokio. He visto a viajeros que lloraron de emoción en un callejón de Yanaka, a familias que cambiaron todo su itinerario después de la primera hora conmigo, y también a personas que habrían estado perfectamente bien sin mí. Voy a ser completamente honesto contigo, porque esa es la única forma de que tomes la mejor decisión para tu viaje.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Este artículo no va de dinero — si quieres saber cuánto cuesta, tengo{" "}
+              Este artículo no va de dinero. Si quieres saber cuánto cuesta, tengo{" "}
               <Link to="/es/blog/cuanto-cuesta-guia-privado-tokio" className="text-accent hover:underline">
                 un artículo dedicado a los precios
               </Link>
@@ -89,7 +89,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </h3>
             <ul className="space-y-3 mb-6">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Es tu primer viaje a Japón</strong> y quieres entender lo que ves, no solo fotografiarlo. Tokio tiene capas invisibles — religiosas, históricas, sociales — que transforman completamente la experiencia cuando alguien te las descifra.
+                <strong className="text-foreground">Es tu primer viaje a Japón</strong> y quieres entender lo que ves, no solo fotografiarlo. Tokio tiene capas invisibles (religiosas, históricas, sociales) que transforman completamente la experiencia cuando alguien te las descifra.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Tienes poco tiempo</strong> y no quieres perder ni una mañana averiguando qué línea de metro tomar. Un guía convierte tres horas en lo que te llevaría un día entero planificando solo.
@@ -98,7 +98,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                 <strong className="text-foreground">Viajas en familia o con niños</strong> y necesitas a alguien que adapte el ritmo, sepa dónde están los baños y mantenga a los pequeños fascinados con historias de samuráis.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Te interesa algo específico</strong> — gastronomía, arquitectura, historia del período Edo, fotografía — y quieres ir más allá de lo que cuentan las guías de viaje.
+                <strong className="text-foreground">Te interesa algo específico</strong> (gastronomía, arquitectura, historia del período Edo, fotografía) y quieres ir más allá de lo que cuentan las guías de viaje.
               </li>
             </ul>
 
@@ -129,10 +129,10 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Contexto Cultural en Tiempo Real
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Puedes leer sobre el Templo Senso-ji antes de ir. Pero cuando estás frente a la puerta Kaminarimon y tu guía te explica por qué las dos estatuas guardianas tienen expresiones diferentes — una con la boca abierta y otra cerrada, representando el principio y el fin de todas las cosas — el templo cobra vida de una forma que ningún artículo puede replicar.
+              Puedes leer sobre el Templo Senso-ji antes de ir. Pero cuando estás frente a la puerta Kaminarimon y tu guía te explica por qué las dos estatuas guardianas tienen expresiones diferentes, una con la boca abierta y otra cerrada, representando el principio y el fin de todas las cosas, el templo cobra vida de una forma que ningún artículo puede replicar.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Este contexto no es algo que se pueda googlear en el momento. Es conocimiento que se construye a lo largo de años estudiando historia, cultura y religión japonesas. Y lo mejor: se adapta a tus preguntas. Cuando un cliente me pregunta algo inesperado — "¿por qué hay un gato con la pata levantada en ese escaparate?" — puedo conectar la respuesta con la historia del barrio, la cultura comercial del período Edo y la superstición que hay detrás. Todo en el momento, mientras caminamos.
+              Este contexto no es algo que se pueda googlear en el momento. Es conocimiento que se construye a lo largo de años estudiando historia, cultura y religión japonesas. Y lo mejor: se adapta a tus preguntas. Cuando un cliente me pregunta algo inesperado, "¿por qué hay un gato con la pata levantada en ese escaparate?", puedo conectar la respuesta con la historia del barrio, la cultura comercial del período Edo y la superstición que hay detrás. Todo en el momento, mientras caminamos.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -142,7 +142,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Después de años caminando por los mismos barrios, tengo relaciones con artesanos, dueños de izakayas y sacerdotes de templos que no aparecen en TripAdvisor. Una conversación en japonés abre puertas que un turista con Google Translate simplemente no puede abrir: una demostración de caligrafía improvisada, una degustación en una tienda de wagashi que normalmente no atiende a visitantes, o la historia real detrás de un callejón que parece insignificante pero fue escenario de un acontecimiento histórico.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No se trata de "lugares secretos" — detesto ese término porque suena a marketing barato. Se trata de capas de experiencia que solo se desbloquean cuando alguien local te acompaña y puede mediar entre tú y la cultura.
+              No se trata de "lugares secretos", detesto ese término porque suena a marketing barato. Se trata de capas de experiencia que solo se desbloquean cuando alguien local te acompaña y puede mediar entre tú y la cultura.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -162,7 +162,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               ¿Alergia alimentaria grave en un país donde el dashi de pescado está en todas partes? Yo hablo con la cocina. ¿Tu hijo necesita un baño urgentemente en un barrio sin baños públicos visibles? Sé exactamente dónde hay uno. ¿El templo que querías visitar está cerrado por mantenimiento? Conozco otro a cinco minutos que te va a gustar igual o más.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Estos pequeños momentos de resolución instantánea son invisibles cuando todo va bien. Pero cuando algo sale mal — y en un viaje siempre pasa algo — tener a alguien que habla el idioma y conoce la ciudad es la diferencia entre un contratiempo y una crisis.
+              Estos pequeños momentos de resolución instantánea son invisibles cuando todo va bien. Pero cuando algo sale mal, y en un viaje siempre pasa algo, tener a alguien que habla el idioma y conoce la ciudad es la diferencia entre un contratiempo y una crisis.
             </p>
 
             {/* Historias reales de mis clientes */}
@@ -178,7 +178,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Carlos y Elena vinieron con sus dos hijos adolescentes. Habían planificado su viaje con un itinerario milimetrado: Shibuya, Harajuku, Akihabara, Shinjuku — todos los "imprescindibles" que aparecen en cualquier blog. Me reservaron solo para el primer día, como orientación.
+                Carlos y Elena vinieron con sus dos hijos adolescentes. Habían planificado su viaje con un itinerario milimetrado: Shibuya, Harajuku, Akihabara, Shinjuku, todos los "imprescindibles" que aparecen en cualquier blog. Me reservaron solo para el primer día, como orientación.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Durante nuestro recorrido por Asakusa y Yanaka, algo cambió. Los hijos, que esperaban un viaje de tiendas de anime y cruces peatonales famosos, quedaron fascinados con las historias de los samuráis, los rituales del incienso y las calles del antiguo shitamachi. Elena me dijo al terminar: "Habíamos planificado Tokio como si fuera un parque temático, y tú nos has enseñado que es una ciudad viva."
@@ -234,7 +234,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                 <strong className="text-foreground">Moverse en transporte público.</strong> El metro de Tokio es uno de los mejores del mundo. Google Maps te da las rutas exactas, los horarios son puntuales al segundo y la señalización está en inglés.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Visitar los barrios más turísticos.</strong> Shibuya, Shinjuku, Harajuku — están diseñados para ser accesibles. Puedes pasear, comprar y comer sin hablar una palabra de japonés.
+                <strong className="text-foreground">Visitar los barrios más turísticos.</strong> Shibuya, Shinjuku, Harajuku: están diseñados para ser accesibles. Puedes pasear, comprar y comer sin hablar una palabra de japonés.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Disfrutar de la comida.</strong> Los restaurantes con fotos en el menú y las máquinas expendedoras de tickets hacen que pedir sea intuitivo. La comida en Tokio es extraordinaria incluso cuando eliges al azar.
@@ -249,10 +249,10 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                 <strong className="text-foreground">Templos y santuarios.</strong> Sin contexto, un templo es un edificio bonito. Con contexto, es una ventana a 1.400 años de historia. La diferencia es abismal.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Barrios tradicionales.</strong> Yanaka, Kagurazaka, Shimokitazawa — estos barrios revelan sus secretos solo si alguien te los descifra. Puedes caminar por ellos y pensar "qué bonito" o puedes entender por qué cada casa, cada tienda, cada callejón existe exactamente donde está.
+                <strong className="text-foreground">Barrios tradicionales.</strong> Yanaka, Kagurazaka, Shimokitazawa: estos barrios revelan sus secretos solo si alguien te los descifra. Puedes caminar por ellos y pensar "qué bonito" o puedes entender por qué cada casa, cada tienda, cada callejón existe exactamente donde está.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Excursiones de un día.</strong> Kamakura, Hakone, Nikko — la logística de transporte es compleja, los destinos tienen menos inglés y el contexto histórico es fundamental para la experiencia.
+                <strong className="text-foreground">Excursiones de un día.</strong> Kamakura, Hakone, Nikko: la logística de transporte es compleja, los destinos tienen menos inglés y el contexto histórico es fundamental para la experiencia.
               </li>
             </ul>
 
@@ -263,7 +263,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Estos son los momentos que me cuentan los viajeros que exploraron solos antes de reservar conmigo: "Estuve una hora en un santuario y no entendí nada de lo que pasaba." "Pasé por un festival callejero y no supe qué celebraban." "Quise probar algo en un restaurante pero no pude comunicarme y acabé pidiendo lo de siempre." "Me perdí en Shinjuku durante 40 minutos buscando una salida del metro."
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Ninguno de estos momentos arruinó su viaje — Tokio es demasiado increíble para eso. Pero todos me dijeron lo mismo: "Ojalá hubiera tenido guía ese día."
+              Ninguno de estos momentos arruinó su viaje. Tokio es demasiado increíble para eso. Pero todos me dijeron lo mismo: "Ojalá hubiera tenido guía ese día."
             </p>
 
             {/* Cómo decidir si necesitas un guía */}
@@ -302,7 +302,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Si no estás seguro, este es mi consejo: contrata un guía solo para el primer día. Usa ese día para orientarte, entender cómo funciona la ciudad, aprender las normas culturales básicas y hacer todas las preguntas que tengas. Después, explora el resto por tu cuenta con ese conocimiento de base.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El 80% de las personas que aplican esta regla acaban reservando más días. No porque yo sea un vendedor brillante, sino porque una vez que experimentas Tokio con contexto, es difícil volver a verlo sin él. Pero si decides que un día es suficiente, perfecto — habrás aprovechado ese día al máximo y tendrás herramientas para disfrutar el resto por tu cuenta.
+              El 80% de las personas que aplican esta regla acaban reservando más días. No porque yo sea un vendedor brillante, sino porque una vez que experimentas Tokio con contexto, es difícil volver a verlo sin él. Pero si decides que un día es suficiente, perfecto, habrás aprovechado ese día al máximo y tendrás herramientas para disfrutar el resto por tu cuenta.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Al final, la pregunta no es si vale la pena un guía privado en Tokio en abstracto. La pregunta es qué tipo de experiencia quieres tener. Si quieres ver Tokio, puedes hacerlo solo. Si quieres entender Tokio, un guía cambia todo.
@@ -327,7 +327,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                     ¿Qué pasa si no me gusta el tour?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    En más de 500 tours, esto no ha pasado — pero entiendo la preocupación. Mi trabajo es leer tus reacciones y adaptar el recorrido en tiempo real. Si algo no te interesa, cambiamos de rumbo. Si necesitas un descanso, paramos. El tour es tuyo, no mío. Y si en algún momento sientes que no estás disfrutando, me lo dices directamente y buscamos una solución en el acto.
+                    En más de 500 tours, esto no ha pasado, pero entiendo la preocupación. Mi trabajo es leer tus reacciones y adaptar el recorrido en tiempo real. Si algo no te interesa, cambiamos de rumbo. Si necesitas un descanso, paramos. El tour es tuyo, no mío. Y si en algún momento sientes que no estás disfrutando, me lo dices directamente y buscamos una solución en el acto.
                   </p>
                 </div>
                 <div>
@@ -335,7 +335,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                     ¿Los guías privados hablan español?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Depende del guía. Yo ofrezco tours en inglés y español. Al ser guía con licencia nacional, mi nivel de idioma está verificado por examen gubernamental. Si el idioma es importante para ti — y para muchos viajeros lo es, porque las explicaciones culturales son más profundas en tu lengua materna — asegúrate de confirmarlo antes de reservar.
+                    Depende del guía. Yo ofrezco tours en inglés y español. Al ser guía con licencia nacional, mi nivel de idioma está verificado por examen gubernamental. Si el idioma es importante para ti, y para muchos viajeros lo es, porque las explicaciones culturales son más profundas en tu lengua materna, asegúrate de confirmarlo antes de reservar.
                   </p>
                 </div>
                 <div>
@@ -371,7 +371,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                 ¿Te ha ayudado a decidir? Echa un vistazo a mis tours.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Si después de leer esto sientes que un guía privado podría enriquecer tu viaje, me encantaría acompañarte. Y si todavía tienes dudas, escríbeme — te daré una recomendación honesta, incluso si esa recomendación es "ve por tu cuenta." Prefiero perder una reserva que tener un cliente insatisfecho.
+                Si después de leer esto sientes que un guía privado podría enriquecer tu viaje, me encantaría acompañarte. Y si todavía tienes dudas, escríbeme, te daré una recomendación honesta, incluso si esa recomendación es "ve por tu cuenta." Prefiero perder una reserva que tener un cliente insatisfecho.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours/" className="btn-accent">

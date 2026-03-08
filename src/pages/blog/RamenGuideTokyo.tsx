@@ -38,7 +38,7 @@ const RamenGuideTokyo = () => {
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a guide who has eaten ramen at least twice a week for the past 15 years and brings clients to his favorite shops on tour.
+              Written by Manabu, a guide who has eaten ramen at least twice a week for the past 15 years and brings clients to his favorite shops on tour.
             </p>
           </div>
         </div>
@@ -48,10 +48,10 @@ const RamenGuideTokyo = () => {
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Last year, a client from New York — a serious food person, ran a restaurant, knew his stuff — asked me to take him to the "best ramen in Tokyo." I paused. "The best ramen in Tokyo depends on what kind of ramen you mean," I said. "That's like asking for the best pizza in New York without specifying thin-crust, Sicilian, or Neapolitan."
+              Last year, a client from New York (a serious food person, ran a restaurant, knew his stuff) asked me to take him to the "best ramen in Tokyo." I paused. "The best ramen in Tokyo depends on what kind of ramen you mean," I said. "That's like asking for the best pizza in New York without specifying thin-crust, Sicilian, or Neapolitan."
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Tokyo has over 10,000 ramen shops. No single list can cover them all, and the "best ramen" articles you find online are usually sponsored, outdated, or reflect one writer's preference. This ramen guide for Tokyo is different: it's organized by style, informed by 15+ years of eating ramen in this city, and focused on helping you understand what you're ordering — not just where to stand in line.
+              Tokyo has over 10,000 ramen shops. No single list can cover them all, and the "best ramen" articles you find online are usually sponsored, outdated, or reflect one writer's preference. This ramen guide for Tokyo is different: it's organized by style, informed by 15+ years of eating ramen in this city, and focused on helping you understand what you're ordering, not just where to stand in line.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -61,7 +61,7 @@ const RamenGuideTokyo = () => {
               The problem with most ramen guides for Tokyo is that they treat ramen as one thing. It's not. Ramen is a category containing dozens of distinct styles, each with its own history, regional origin, and cult following. Telling someone to eat at a tonkotsu shop when they prefer light, clear broths is like sending a wine lover who drinks Pinot Grigio to a bold Cabernet tasting.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The second problem: famous shops aren't always the best. Some of Tokyo's most hyped ramen joints live on their reputation from 2015. The shop with a 90-minute line in Shinjuku might serve great ramen, but the shop three blocks away with no line might serve better ramen — they just don't have a viral Instagram presence. In my tours, I take clients to both kinds, and the "discovery" shops are almost always the bigger hit.
+              The second problem: famous shops aren't always the best. Some of Tokyo's most hyped ramen joints live on their reputation from 2015. The shop with a 90-minute line in Shinjuku might serve great ramen, but the shop three blocks away with no line might serve better ramen. They just don't have a viral Instagram presence. In my tours, I take clients to both kinds, and the "discovery" shops are almost always the bigger hit.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -69,10 +69,10 @@ const RamenGuideTokyo = () => {
             </h2>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Shoyu Ramen (Soy Sauce-Based)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This is Tokyo's original ramen style — a clear or slightly brown broth made with chicken or seafood stock and seasoned with soy sauce. The flavor is clean, savory, and lets the quality of the noodles shine through. Think of it as ramen in its most refined form — no heavy flavors to hide behind. The noodles are typically thin and wavy.
+              This is Tokyo's original ramen style: a clear or slightly brown broth made with chicken or seafood stock and seasoned with soy sauce. The flavor is clean, savory, and lets the quality of the noodles shine through. Think of it as ramen in its most refined form, with no heavy flavors to hide behind. The noodles are typically thin and wavy.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Best neighborhoods:</strong> The eastern side of Tokyo — Asakusa, Ueno, and the old Shitamachi areas — is where shoyu ramen has its deepest roots. Many shops here have been serving essentially the same recipe for 40–60 years.
+              <strong className="text-foreground">Best neighborhoods:</strong> The eastern side of Tokyo (Asakusa, Ueno, and the old Shitamachi areas) is where shoyu ramen has its deepest roots. Many shops here have been serving essentially the same recipe for 40–60 years.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tonkotsu Ramen (Pork Bone Broth)</h3>
@@ -85,15 +85,15 @@ const RamenGuideTokyo = () => {
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Miso Ramen</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Originated in Sapporo (Hokkaido) and brought south to Tokyo. The broth is hearty, complex, and slightly sweet, with miso paste adding depth and umami. Often served with corn, butter, and bean sprouts — toppings that reflect its northern origins. The noodles are thick and curly to hold the heavy broth.
+              Originated in Sapporo (Hokkaido) and brought south to Tokyo. The broth is hearty, complex, and slightly sweet, with miso paste adding depth and umami. Often served with corn, butter, and bean sprouts, toppings that reflect its northern origins. The noodles are thick and curly to hold the heavy broth.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Best neighborhoods:</strong> Miso ramen shops are scattered across Tokyo without a clear geographic center. Some of the best are in residential neighborhoods far from tourist areas — the kind of places you'd only find with a local guide or serious research.
+              <strong className="text-foreground">Best neighborhoods:</strong> Miso ramen shops are scattered across Tokyo without a clear geographic center. Some of the best are in residential neighborhoods far from tourist areas, the kind of places you'd only find with a local guide or serious research.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tsukemen (Dipping Ramen)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tokyo's own invention. The noodles and broth are served separately — you dip the cold or room-temperature noodles into a concentrated, intensely flavored broth. The broth is thicker and more potent than regular ramen because it's designed as a dipping sauce, not a soup. Invented in the 1960s in Ikebukuro.
+              Tokyo's own invention. The noodles and broth are served separately. You dip the cold or room-temperature noodles into a concentrated, intensely flavored broth. The broth is thicker and more potent than regular ramen because it's designed as a dipping sauce, not a soup. Invented in the 1960s in Ikebukuro.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Best neighborhoods:</strong> Ikebukuro (where it was born), plus Shinjuku and Shibuya. Tsukemen is particularly good in summer when a hot bowl of soup ramen feels overwhelming.
@@ -103,11 +103,11 @@ const RamenGuideTokyo = () => {
               My Personal Top Picks by Neighborhood
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm deliberately not naming specific shops here — ramen shops in Tokyo open and close constantly, chefs move between locations, and a recommendation from March can be outdated by September. Instead, I'll tell you what to look for in each area. On my tours, I take clients to my current favorites and update the list monthly.
+              I'm deliberately not naming specific shops here. Ramen shops in Tokyo open and close constantly, chefs move between locations, and a recommendation from March can be outdated by September. Instead, I'll tell you what to look for in each area. On my tours, I take clients to my current favorites and update the list monthly.
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Asakusa/Ueno area:</strong> Classic shoyu ramen. Look for shops with old-fashioned facades and counter seating only. If there are photos of the owner with celebrities on the wall, it's usually a good sign — it means the shop has been around long enough to accumulate fame.
+                <strong className="text-foreground">Asakusa/Ueno area:</strong> Classic shoyu ramen. Look for shops with old-fashioned facades and counter seating only. If there are photos of the owner with celebrities on the wall, it's usually a good sign. It means the shop has been around long enough to accumulate fame.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Shinjuku:</strong> Everything. Shinjuku is ramen diversity in concentrated form. The area around the station's south exit has a dozen shops within a 5-minute walk covering every style. In my ramen guide for Tokyo clients, Shinjuku is where I send people who want to compare styles back-to-back.
@@ -127,7 +127,7 @@ const RamenGuideTokyo = () => {
               Most ramen shops in Tokyo use a ticket vending machine (shokkenki) near the entrance. You buy your meal from the machine before sitting down. Here's how it works:
             </p>
             <ol className="space-y-3 mb-8 list-decimal list-inside">
-              <li className="text-muted-foreground leading-relaxed">Insert money into the machine (coins or bills — many now accept IC cards too).</li>
+              <li className="text-muted-foreground leading-relaxed">Insert money into the machine (coins or bills, and many now accept IC cards too).</li>
               <li className="text-muted-foreground leading-relaxed">Press the button for your ramen. The top-left button is usually the house special (the one most people order). Photos or plastic food models often help identify options.</li>
               <li className="text-muted-foreground leading-relaxed">Take your ticket(s) and hand them to the staff when seated.</li>
               <li className="text-muted-foreground leading-relaxed">Wait. Eat. Leave. No tipping, no small talk required.</li>
@@ -136,7 +136,7 @@ const RamenGuideTokyo = () => {
               <strong className="text-foreground">Customization:</strong> Many shops will ask about noodle firmness (katame = firm, futsu = normal, yawarakame = soft), broth richness (kotteri = rich, assari = light), and toppings. If you don't speak Japanese, pointing at the words on the order sheet or saying "futsu" (normal) for everything works perfectly.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Slurping is expected.</strong> In Japan, slurping your noodles is not rude — it's how ramen is eaten. The slurp aerates the noodles and broth, cooling them and enhancing the flavor. Think of it like swirling wine — functional, not just theatrical.
+              <strong className="text-foreground">Slurping is expected.</strong> In Japan, slurping your noodles is not rude. It's how ramen is eaten. The slurp aerates the noodles and broth, cooling them and enhancing the flavor. Think of it like swirling wine: functional, not just theatrical.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -147,10 +147,10 @@ const RamenGuideTokyo = () => {
                 <strong className="text-foreground">Gyoza (pan-fried dumplings):</strong> The classic ramen side dish. Almost every ramen shop offers them, and they're almost always good. Order a plate of 5–6 and share.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Kaedama (extra noodles):</strong> At tonkotsu shops, you can order a refill of noodles (usually ¥100–200) to add to your remaining broth. This is standard practice and not considered greedy — the portions are designed for it.
+                <strong className="text-foreground">Kaedama (extra noodles):</strong> At tonkotsu shops, you can order a refill of noodles (usually ¥100–200) to add to your remaining broth. This is standard practice and not considered greedy. The portions are designed for it.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Rice (gohan):</strong> Some shops offer a small bowl of rice, either plain or with toppings. Dump it into your remaining broth at the end for an improvised risotto — this is called "shime" and it's how many Japanese ramen lovers finish their meal.
+                <strong className="text-foreground">Rice (gohan):</strong> Some shops offer a small bowl of rice, either plain or with toppings. Dump it into your remaining broth at the end for an improvised risotto. This is called "shime" and it's how many Japanese ramen lovers finish their meal.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Ajitama (seasoned soft-boiled egg):</strong> If it's not included in your base order, add one. The eggs are marinated in soy sauce and mirin, giving them a custard-like yolk and savory exterior. It's the single best ¥100 upgrade in Japanese food.
@@ -171,7 +171,7 @@ const RamenGuideTokyo = () => {
                 Want a guide who knows where to eat?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                On my tours, food is never an afterthought — it's part of the cultural experience. I take clients to ramen shops, sushi counters, and street food stalls that I've personally vetted over 15+ years of eating in Tokyo. Browse my tours.
+                On my tours, food is never an afterthought. It's part of the cultural experience. I take clients to ramen shops, sushi counters, and street food stalls that I've personally vetted over 15+ years of eating in Tokyo. Browse my tours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">View All Tours</Link>
@@ -186,7 +186,7 @@ const RamenGuideTokyo = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">What's the difference between shoyu and tonkotsu ramen?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Shoyu (soy sauce) ramen has a clear or light brown broth made from chicken or seafood stock. It's clean and savory. Tonkotsu (pork bone) ramen has a thick, creamy, opaque white broth from boiling pork bones for 12+ hours. It's rich and heavy. They're completely different experiences — shoyu is the elegant whiskey, tonkotsu is the craft beer.
+                    Shoyu (soy sauce) ramen has a clear or light brown broth made from chicken or seafood stock. It's clean and savory. Tonkotsu (pork bone) ramen has a thick, creamy, opaque white broth from boiling pork bones for 12+ hours. It's rich and heavy. They're completely different experiences. Shoyu is the elegant whiskey, tonkotsu is the craft beer.
                   </p>
                 </div>
                 <div>
@@ -199,13 +199,13 @@ const RamenGuideTokyo = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Are there vegetarian ramen options in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Yes, though they're less common than meat-based options. Several shops specialize in vegetable-broth ramen (yasai ramen), and the number is growing. Some shops offer soy milk-based broths that are surprisingly rich. Look for shops that advertise "vegan" or "shojin" (Buddhist vegetarian) options — they exist in most major neighborhoods.
+                    Yes, though they're less common than meat-based options. Several shops specialize in vegetable-broth ramen (yasai ramen), and the number is growing. Some shops offer soy milk-based broths that are surprisingly rich. Look for shops that advertise "vegan" or "shojin" (Buddhist vegetarian) options. They exist in most major neighborhoods.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">How much does a bowl of ramen cost in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    A standard bowl ranges from ¥800 to ¥1,200. Premium shops and specialty bowls can reach ¥1,500–2,000. Toppings (egg, extra chashu, nori) are ¥100–300 each. A full ramen meal with toppings and gyoza typically costs ¥1,200–1,800 per person — one of the best food values in Tokyo.
+                    A standard bowl ranges from ¥800 to ¥1,200. Premium shops and specialty bowls can reach ¥1,500–2,000. Toppings (egg, extra chashu, nori) are ¥100–300 each. A full ramen meal with toppings and gyoza typically costs ¥1,200–1,800 per person, one of the best food values in Tokyo.
                   </p>
                 </div>
               </div>

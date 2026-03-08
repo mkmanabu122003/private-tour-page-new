@@ -49,7 +49,7 @@ const IsItWorthHiringGuide = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed 500+ private tours in Tokyo. This is an honest answer from someone who does this for a living.
+              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed 500+ private tours in Tokyo. This is an honest answer from someone who does this for a living.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ const IsItWorthHiringGuide = () => {
               So why would you hire a private tour guide?
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Having guided over 500 tours in Tokyo, I've seen the moments where a guide makes a real difference — and the moments where travelers are perfectly fine on their own. This isn't a sales pitch. It's an honest breakdown from someone who has seen both sides, so you can make the right decision for your trip.
+              Having guided over 500 tours in Tokyo, I've seen the moments where a guide makes a real difference, and the moments where travelers are perfectly fine on their own. This isn't a sales pitch. It's an honest breakdown from someone who has seen both sides, so you can make the right decision for your trip.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               I believe that the best travel decisions come from honest information, not pressure. If you read this article and decide you don't need a guide, that's a perfectly valid choice. Tokyo will still be amazing.
@@ -82,14 +82,14 @@ const IsItWorthHiringGuide = () => {
               First-Time Visitors Who Want Depth, Not Just Selfies
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tokyo can be overwhelming on your first visit. Not because it's difficult to navigate — it isn't — but because there's so much happening beneath the surface that you can't see. A temple isn't just a building; it's a living piece of history with rituals, symbolism, and community roles that aren't written on the information boards.
+              Tokyo can be overwhelming on your first visit. Not because it's difficult to navigate (it isn't), but because there's so much happening beneath the surface that you can't see. A temple isn't just a building; it's a living piece of history with rituals, symbolism, and community roles that aren't written on the information boards.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               On my{" "}
               <Link to="/tours/asakusa" className="text-accent hover:underline">
                 Asakusa tour
               </Link>
-              , for example, I don't just point out Senso-ji Temple — I explain why the gate guardians look fierce, what the incense ritual means, and why the fortune papers tied to the racks might actually be "bad luck" fortunes that visitors are leaving behind. These layers of meaning transform sightseeing into understanding.
+              , for example, I don't just point out Senso-ji Temple. I explain why the gate guardians look fierce, what the incense ritual means, and why the fortune papers tied to the racks might actually be "bad luck" fortunes that visitors are leaving behind. These layers of meaning transform sightseeing into understanding.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               First-time visitors consistently tell me that the cultural context changes everything. It's the difference between "I saw a temple" and "I understood why this temple has been the spiritual heart of this neighborhood for 1,400 years."
@@ -109,7 +109,7 @@ const IsItWorthHiringGuide = () => {
               Families with Children
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Traveling with kids in Tokyo is wonderful but requires pace management. Children get tired, hungry, and bored at different times than adults. A guide adjusts the route in real-time — we know where the nearest restrooms are, which temples have spaces for kids to run, and how to keep younger travelers engaged with stories and interactive elements.
+              Traveling with kids in Tokyo is wonderful but requires pace management. Children get tired, hungry, and bored at different times than adults. A guide adjusts the route in real-time. We know where the nearest restrooms are, which temples have spaces for kids to run, and how to keep younger travelers engaged with stories and interactive elements.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Our routes are mostly flat and pram-friendly. We regularly welcome families with children of all ages, and I've developed storytelling techniques that keep kids fascinated while still giving adults the cultural depth they're looking for.
@@ -141,7 +141,7 @@ const IsItWorthHiringGuide = () => {
               <Link to="/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>{" "}
-              involve complex transport systems, multiple connections, and destinations that are much less English-friendly than central Tokyo. Hakone alone involves trains, cable cars, ropeways, boats, and buses — all operated by different companies with different passes and schedules.
+              involve complex transport systems, multiple connections, and destinations that are much less English-friendly than central Tokyo. Hakone alone involves trains, cable cars, ropeways, boats, and buses, all operated by different companies with different passes and schedules.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A guide handles all the logistics so you can focus on the experience. They also adjust the itinerary based on weather (crucial for Mt. Fuji views in Hakone) and crowds. For day trips, the value of a guide is often highest because the time savings and logistical relief are most significant.
@@ -152,21 +152,21 @@ const IsItWorthHiringGuide = () => {
               When You Might Not Need a Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I believe in being transparent — a guide isn't right for everyone, and overselling would do a disservice to both you and me.
+              I believe in being transparent: a guide isn't right for everyone, and overselling would do a disservice to both you and me.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Repeat Visitors Who Know the Basics
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If you've been to Tokyo before and already have a feel for the train system, cultural norms, and general geography, you may not need a guide for the main attractions. That said, even repeat visitors often book a guide for specific interests — a deep-dive into a neighborhood they haven't explored, or a day trip they're unfamiliar with. But for revisiting your favorite spots? You've got this.
+              If you've been to Tokyo before and already have a feel for the train system, cultural norms, and general geography, you may not need a guide for the main attractions. That said, even repeat visitors often book a guide for specific interests: a deep-dive into a neighborhood they haven't explored, or a day trip they're unfamiliar with. But for revisiting your favorite spots? You've got this.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Independent Explorers Who Love Getting Lost
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Some of the best travel experiences come from wandering without a plan — discovering a tiny ramen shop in a back alley, stumbling into a local festival, or getting lost in a neighborhood you've never heard of. If this is your travel style, a structured guided tour might feel constraining. Tokyo is incredibly safe for wandering, even at night, and the serendipity of unplanned discovery is genuinely one of the joys of visiting Japan.
+              Some of the best travel experiences come from wandering without a plan: discovering a tiny ramen shop in a back alley, stumbling into a local festival, or getting lost in a neighborhood you've never heard of. If this is your travel style, a structured guided tour might feel constraining. Tokyo is incredibly safe for wandering, even at night, and the serendipity of unplanned discovery is genuinely one of the joys of visiting Japan.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -198,17 +198,17 @@ const IsItWorthHiringGuide = () => {
               Japan's culture has layers that aren't immediately visible. Why are there two different types of rope at shrines? Why do some restaurants not accept reservations? Why is that seemingly ordinary building actually a national treasure? A guide provides the cultural operating system that makes everything click.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              You can Google individual facts, but a guide weaves them into a narrative that builds throughout the day. By the end of a tour, you don't just know more facts about Japan — you understand the underlying logic of how Japanese culture works, which enriches the rest of your trip even after the tour ends.
+              You can Google individual facts, but a guide weaves them into a narrative that builds throughout the day. By the end of a tour, you don't just know more facts about Japan. You understand the underlying logic of how Japanese culture works, which enriches the rest of your trip even after the tour ends.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hidden Spots and Local Connections
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Every guide has places that don't appear on tourist maps — the tiny temple garden that's always empty, the side street with the best taiyaki in the city, the viewpoint that gives you a perfect photo composition. These aren't secrets exactly, but they're the kind of local knowledge that takes years of walking the same streets to develop.
+              Every guide has places that don't appear on tourist maps: the tiny temple garden that's always empty, the side street with the best taiyaki in the city, the viewpoint that gives you a perfect photo composition. These aren't secrets exactly, but they're the kind of local knowledge that takes years of walking the same streets to develop.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I also have relationships with local shopkeepers, restaurant owners, and temple priests. These connections sometimes open doors that would otherwise be closed — a quick chat in Japanese can get you into a workshop demonstration, a tasting, or a story you'd never hear otherwise.
+              I also have relationships with local shopkeepers, restaurant owners, and temple priests. These connections sometimes open doors that would otherwise be closed. A quick chat in Japanese can get you into a workshop demonstration, a tasting, or a story you'd never hear otherwise.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -218,7 +218,7 @@ const IsItWorthHiringGuide = () => {
               The National Government Licensed Guide Interpreter (全国通訳案内士) is Japan's only nationally recognized professional guide certification. It requires passing extensive exams covering Japanese history, geography, culture, politics, and English proficiency. Only about 20% of test-takers pass.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This means your guide has verified deep knowledge — not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer. I've written a detailed explanation of{" "}
+              This means your guide has verified deep knowledge, not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer. I've written a detailed explanation of{" "}
                 <Link to="/blog/licensed-tour-guide-japan" className="text-accent hover:underline">
                   what the licensed tour guide system in Japan actually means
                 </Link>
@@ -245,7 +245,7 @@ const IsItWorthHiringGuide = () => {
               <Link to="/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>{" "}
-              range from ¥50,000 to ¥60,000 for a full day (7-10 hours). These include guide service, itinerary planning, and full transport navigation — essentially, you get a personal concierge for the entire day.
+              range from ¥50,000 to ¥60,000 for a full day (7-10 hours). These include guide service, itinerary planning, and full transport navigation. Essentially, you get a personal concierge for the entire day.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For the most flexible option, our{" "}
@@ -262,7 +262,7 @@ const IsItWorthHiringGuide = () => {
               When considering the cost, think about what you're getting: a full day of personalized attention from a certified professional who speaks your language, knows the culture deeply, handles all logistics, and adapts the experience to your exact interests. Compare that to the hours you'd spend planning, navigating, and potentially missing hidden gems.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              The travelers who get the most value are those who treat the guide fee not as an expense, but as an investment in the quality of their experience. Time is the most valuable thing you have on vacation — a guide helps you make the most of every hour.
+              The travelers who get the most value are those who treat the guide fee not as an expense, but as an investment in the quality of their experience. Time is the most valuable thing you have on vacation, and a guide helps you make the most of every hour.
             </p>
 
             {/* Licensed vs Unlicensed */}
@@ -270,26 +270,26 @@ const IsItWorthHiringGuide = () => {
               What You Actually Get With a Licensed Guide vs. an Unlicensed One
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Not all tour guides in Tokyo are the same. Japan has a specific national certification for professional guides — the <strong className="text-foreground">National Government Licensed Guide Interpreter (全国通訳案内士)</strong> — and understanding the difference matters for your experience.
+              Not all tour guides in Tokyo are the same. Japan has a specific national certification for professional guides, the <strong className="text-foreground">National Government Licensed Guide Interpreter (全国通訳案内士)</strong>, and understanding the difference matters for your experience.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               What the License Requires
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The national guide license exam covers Japanese history, geography, culture, current affairs, and foreign language proficiency. The pass rate is approximately 10–20% depending on the year, making it one of the more difficult professional certifications in Japan. Licensed guides have demonstrated deep, verified knowledge — not just memorized scripts for popular tourist routes.
+              The national guide license exam covers Japanese history, geography, culture, current affairs, and foreign language proficiency. The pass rate is approximately 10–20% depending on the year, making it one of the more difficult professional certifications in Japan. Licensed guides have demonstrated deep, verified knowledge, not just memorized scripts for popular tourist routes.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               The Legal Background
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Until 2018, only licensed guides were legally permitted to offer paid guiding services in Japan. The law was revised to allow unlicensed guides to operate, but the license remains the only nationally recognized quality standard. When you book a licensed guide, you're booking someone who has passed rigorous government examinations. When you book an unlicensed guide, quality can vary enormously — from passionate locals with deep knowledge to people who started guiding last week.
+              Until 2018, only licensed guides were legally permitted to offer paid guiding services in Japan. The law was revised to allow unlicensed guides to operate, but the license remains the only nationally recognized quality standard. When you book a licensed guide, you're booking someone who has passed rigorous government examinations. When you book an unlicensed guide, quality can vary enormously, from passionate locals with deep knowledge to people who started guiding last week.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Practical Differences You'll Notice
             </h3>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Depth of knowledge:</strong> Licensed guides can answer unexpected questions about history, religion, politics, and culture with nuance and accuracy. On my tours, guests frequently go off-script with questions like "Why does this shrine have a star symbol?" or "What did ordinary people eat during the Edo period?" — and I can give detailed, informed answers because the license preparation covers these topics extensively.
+                <strong className="text-foreground">Depth of knowledge:</strong> Licensed guides can answer unexpected questions about history, religion, politics, and culture with nuance and accuracy. On my tours, guests frequently go off-script with questions like "Why does this shrine have a star symbol?" or "What did ordinary people eat during the Edo period?", and I can give detailed, informed answers because the license preparation covers these topics extensively.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Language ability:</strong> The license requires proven proficiency in a foreign language. You won't encounter communication barriers or awkward misunderstandings that can derail the experience.
@@ -308,12 +308,12 @@ const IsItWorthHiringGuide = () => {
             </p>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">The Coin Question at Senso-ji:</strong> A couple from California asked me about the meaning of the coins thrown at Senso-ji's offering box. What started as a quick answer turned into a 20-minute conversation about the Edo period, the merchant class's relationship with Buddhist temples, and why the ¥5 coin carries special significance. They told me afterwards it was the highlight of their entire Japan trip — not the temple itself, but the understanding of what the temple represented in the life of old Edo. That's something you simply can't get from an information board.
+                <strong className="text-foreground">The Coin Question at Senso-ji:</strong> A couple from California asked me about the meaning of the coins thrown at Senso-ji's offering box. What started as a quick answer turned into a 20-minute conversation about the Edo period, the merchant class's relationship with Buddhist temples, and why the ¥5 coin carries special significance. They told me afterwards it was the highlight of their entire Japan trip. Not the temple itself, but the understanding of what the temple represented in the life of old Edo. That's something you simply can't get from an information board.
               </p>
             </div>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">The Rainy Day Pivot:</strong> A family from London had booked my Kamakura day trip, but heavy rain started mid-morning. Instead of pushing through the outdoor hiking trail in miserable conditions, I pivoted the entire itinerary — we visited a covered Zen meditation hall, had a long lunch at a restaurant I know well where the chef came out to explain each dish, explored covered shopping streets, and ended at a temple that's actually more atmospheric in the rain. They rated it 5 stars and said the rain made it better, not worse. Without a guide, they would have spent the day frustrated and wet.
+                <strong className="text-foreground">The Rainy Day Pivot:</strong> A family from London had booked my Kamakura day trip, but heavy rain started mid-morning. Instead of pushing through the outdoor hiking trail in miserable conditions, I pivoted the entire itinerary: we visited a covered Zen meditation hall, had a long lunch at a restaurant I know well where the chef came out to explain each dish, explored covered shopping streets, and ended at a temple that's actually more atmospheric in the rain. They rated it 5 stars and said the rain made it better, not worse. Without a guide, they would have spent the day frustrated and wet.
               </p>
             </div>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
@@ -334,7 +334,7 @@ const IsItWorthHiringGuide = () => {
                 <strong className="text-foreground">Second or third visits to Tokyo:</strong> If you already know the train system, have your favorite neighborhoods, and understand the cultural basics, you likely don't need a guide for standard sightseeing. You might still benefit from one for a specific deep-dive (a food tour, a history-focused walk, or a day trip to an area you haven't explored), but for revisiting places you already know and love, your own company is enough.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Backpacker-style travelers who prioritize spontaneity:</strong> If your travel philosophy is about wandering without a plan, discovering things by accident, and spending as little as possible, a structured guided tour will feel restrictive. And that's okay — Tokyo is incredibly safe and navigable. Some of the best travel memories come from getting lost on purpose.
+                <strong className="text-foreground">Backpacker-style travelers who prioritize spontaneity:</strong> If your travel philosophy is about wandering without a plan, discovering things by accident, and spending as little as possible, a structured guided tour will feel restrictive. And that's okay. Tokyo is incredibly safe and navigable. Some of the best travel memories come from getting lost on purpose.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Those who prefer to explore at their own pace:</strong> Some people simply prefer not to be on a schedule, even a flexible one. If the idea of meeting someone at a set time and following any kind of route feels stressful rather than helpful, a guide isn't right for you. Download a good walking tour app instead and go at your own speed.
@@ -360,13 +360,13 @@ const IsItWorthHiringGuide = () => {
                 has passed rigorous examinations and is registered with the Japan Tourism Agency. This is the single most reliable quality indicator.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Read reviews carefully.</strong> Look for reviews that mention specific details — particular stories the guide told, how they handled unexpected situations, whether they adapted to the group's interests. Generic "great guide!" reviews tell you less than detailed accounts of the actual experience.
+                <strong className="text-foreground">Read reviews carefully.</strong> Look for reviews that mention specific details: particular stories the guide told, how they handled unexpected situations, whether they adapted to the group's interests. Generic "great guide!" reviews tell you less than detailed accounts of the actual experience.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Understand private vs. group tours.</strong> Private tours (like what we offer) give you a guide's undivided attention. Group tours are cheaper per person but offer less flexibility and personalization. For families, couples, and anyone with specific interests, private tours deliver significantly more value.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Know the price range.</strong> Private walking tours in Tokyo typically cost ¥25,000–¥40,000 per group for half-day experiences. Full-day tours and day trips to Kamakura, Hakone, or Nikko range from ¥50,000–¥60,000. These are per-group prices, not per-person, so the cost per person decreases with larger groups. Be cautious of guides charging significantly less — it may indicate inexperience or lack of credentials.
+                <strong className="text-foreground">Know the price range.</strong> Private walking tours in Tokyo typically cost ¥25,000–¥40,000 per group for half-day experiences. Full-day tours and day trips to Kamakura, Hakone, or Nikko range from ¥50,000–¥60,000. These are per-group prices, not per-person, so the cost per person decreases with larger groups. Be cautious of guides charging significantly less, as it may indicate inexperience or lack of credentials.
               </li>
             </ul>
 
@@ -376,7 +376,7 @@ const IsItWorthHiringGuide = () => {
                 Still on the fence? Browse my tours and see if any match what you're looking for.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm happy to help you decide if a guided tour is right for your trip. Tell me about your travel plans and I'll give you an honest recommendation — even if that recommendation is "you'll be fine on your own."
+                I'm happy to help you decide if a guided tour is right for your trip. Tell me about your travel plans and I'll give you an honest recommendation, even if that recommendation is "you'll be fine on your own."
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">
@@ -407,7 +407,7 @@ const IsItWorthHiringGuide = () => {
                     Is English widely spoken in Tokyo without a guide?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Tokyo has become increasingly English-friendly, with station signs, major attractions, and many restaurants offering English information. You can navigate the city on your own using Google Maps and translation apps. However, deeper conversations — with shopkeepers, restaurant chefs, temple priests — still require Japanese. A guide bridges this gap and unlocks interactions that would otherwise be impossible.
+                    Tokyo has become increasingly English-friendly, with station signs, major attractions, and many restaurants offering English information. You can navigate the city on your own using Google Maps and translation apps. However, deeper conversations with shopkeepers, restaurant chefs, and temple priests still require Japanese. A guide bridges this gap and unlocks interactions that would otherwise be impossible.
                   </p>
                 </div>
                 <div>

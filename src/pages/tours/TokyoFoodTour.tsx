@@ -29,7 +29,7 @@ const features = [
     icon: MapPin,
     title: "Local Spots Only",
     description:
-      "No tourist-trap restaurants with plastic food displays and English menus marked up 40%. We go where locals eat — the ramen counter with eight stools, the tempura shop that's been family-run for three generations.",
+      "No tourist-trap restaurants with plastic food displays and English menus marked up 40%. We go where locals eat: the ramen counter with eight stools, the tempura shop that's been family-run for three generations.",
   },
   {
     icon: BookOpen,
@@ -56,34 +56,34 @@ const foodExperiences: {
     foods: "Sushi, tamagoyaki, seafood skewers, fresh wasabi",
     image: "/images/tours/food-tour-tsukiji.jpg",
     description:
-      "Start your day where Tokyo's chefs start theirs. The Tsukiji Outer Market is still the beating heart of Tokyo's food culture, even after the inner wholesale market moved to Toyosu. We'll navigate the narrow lanes together, tasting freshly grilled scallops from vendors who've been here for decades, watching masters slice maguro with single-stroke precision, and trying tamagoyaki — the sweet, layered egg omelet that's been perfected here over generations. Your guide will explain the market's 90-year history and help you order confidently at stalls where the menu is only in Japanese.",
+      "Start your day where Tokyo's chefs start theirs. The Tsukiji Outer Market is still the beating heart of Tokyo's food culture, even after the inner wholesale market moved to Toyosu. We'll navigate the narrow lanes together, tasting freshly grilled scallops from vendors who've been here for decades, watching masters slice maguro with single-stroke precision, and trying tamagoyaki, the sweet, layered egg omelet that's been perfected here over generations. Your guide will explain the market's 90-year history and help you order confidently at stalls where the menu is only in Japanese.",
   },
   {
     title: "Asakusa Traditional Street Food",
     foods: "Ningyo-yaki, melon-pan, hand-pulled soba, age-manju",
     description:
-      "Asakusa is Tokyo's old downtown, and its food reflects centuries of tradition. Along Nakamise Street and the surrounding backstreets, we'll try ningyo-yaki — small cakes filled with sweet red bean paste, baked in molds shaped like the Seven Lucky Gods. We'll find the best melon-pan (crispy-topped sweet bread) fresh from the oven, visit a soba shop where noodles are still made by hand daily, and discover age-manju — deep-fried steamed buns with a satisfying crunch that gives way to soft, sweet filling. This is comfort food with centuries of history behind it.",
+      "Asakusa is Tokyo's old downtown, and its food reflects centuries of tradition. Along Nakamise Street and the surrounding backstreets, we'll try ningyo-yaki, small cakes filled with sweet red bean paste, baked in molds shaped like the Seven Lucky Gods. We'll find the best melon-pan (crispy-topped sweet bread) fresh from the oven, visit a soba shop where noodles are still made by hand daily, and discover age-manju, deep-fried steamed buns with a satisfying crunch that gives way to soft, sweet filling. This is comfort food with centuries of history behind it.",
   },
   {
     title: "Ramen Discovery Tour",
     foods: "Tonkotsu, shoyu, miso, tsukemen, gyoza",
     image: "/images/tours/food-tour-ramen-tokyo.jpg",
     description:
-      "Tokyo is arguably the ramen capital of the world, with over 10,000 ramen shops across the city. Each neighborhood has its loyalties, each shop its closely guarded recipe. We'll explore the major styles — rich, creamy tonkotsu from Kyushu, clear and elegant shoyu from Tokyo's own tradition, bold miso ramen born in Hokkaido — and we'll visit shops where the master has spent years perfecting a single bowl. Your guide will teach you proper ramen etiquette (yes, slurping is not just acceptable, it's expected) and help you customize your order with confidence.",
+      "Tokyo is arguably the ramen capital of the world, with over 10,000 ramen shops across the city. Each neighborhood has its loyalties, each shop its closely guarded recipe. We'll explore the major styles: rich, creamy tonkotsu from Kyushu, clear and elegant shoyu from Tokyo's own tradition, bold miso ramen born in Hokkaido. We'll visit shops where the master has spent years perfecting a single bowl. Your guide will teach you proper ramen etiquette (yes, slurping is not just acceptable, it's expected) and help you customize your order with confidence.",
   },
   {
     title: "Izakaya Evening Experience",
     foods: "Yakitori, sake flights, edamame, karaage, small plates",
     image: "/images/tours/food-tour-izakaya.jpg",
     description:
-      "As the lanterns flicker on in Tokyo's yokocho (alleyway bar districts), a different food world comes alive. Izakaya are Japan's answer to the gastropub — informal, convivial, and bursting with flavor. We'll visit izakaya where salarymen unwind after work, tasting perfectly charcoal-grilled yakitori (each cut of chicken has its own name and ideal preparation), sipping through a curated sake flight, and sharing small plates that showcase seasonal ingredients. Your guide handles all ordering and explains the unwritten rules that make izakaya culture uniquely Japanese.",
+      "As the lanterns flicker on in Tokyo's yokocho (alleyway bar districts), a different food world comes alive. Izakaya are Japan's answer to the gastropub: informal, convivial, and bursting with flavor. We'll visit izakaya where salarymen unwind after work, tasting perfectly charcoal-grilled yakitori (each cut of chicken has its own name and ideal preparation), sipping through a curated sake flight, and sharing small plates that showcase seasonal ingredients. Your guide handles all ordering and explains the unwritten rules that make izakaya culture uniquely Japanese.",
   },
   {
     title: "Depachika Tour",
     foods: "Wagashi, bento boxes, French pastries, pickles, seasonal sweets",
     image: "/images/tours/food-tour-depachika.jpg",
     description:
-      "The basement floors of Tokyo's department stores — known as depachika — are food wonderlands that most tourists walk right past. These are not ordinary food courts. They're curated collections of Japan's finest food artisans, from wagashi (traditional sweets) makers who've held imperial warrants for centuries to French-trained pastry chefs creating Tokyo-exclusive confections. We'll sample our way through exquisite bento boxes, discover regional specialties from across Japan, and find the perfect edible souvenirs to bring home.",
+      "The basement floors of Tokyo's department stores, known as depachika, are food wonderlands that most tourists walk right past. These are not ordinary food courts. They're curated collections of Japan's finest food artisans, from wagashi (traditional sweets) makers who've held imperial warrants for centuries to French-trained pastry chefs creating Tokyo-exclusive confections. We'll sample our way through exquisite bento boxes, discover regional specialties from across Japan, and find the perfect edible souvenirs to bring home.",
   },
 ];
 
@@ -110,7 +110,7 @@ const dietaryOptions = [
     icon: AlertTriangle,
     title: "Allergies & Restrictions",
     description:
-      "Shellfish, nuts, eggs, dairy — whatever your allergy, your guide will communicate directly with each vendor and restaurant in Japanese to ensure your safety. We carry allergy cards in Japanese and know how to ask the right questions. Your peace of mind is non-negotiable.",
+      "Shellfish, nuts, eggs, dairy: whatever your allergy, your guide will communicate directly with each vendor and restaurant in Japanese to ensure your safety. We carry allergy cards in Japanese and know how to ask the right questions. Your peace of mind is non-negotiable.",
   },
 ];
 
@@ -139,7 +139,7 @@ const relatedArticles = [
     description: "What to eat, when to go, and how to navigate Tokyo's iconic market.",
   },
   {
-    title: "What to See in Asakusa — A Local's Guide",
+    title: "What to See in Asakusa: A Local's Guide",
     path: "/blog/asakusa-guide-what-to-see",
     description: "Temple visits, street food, and hidden spots most tourists miss.",
   },
@@ -173,7 +173,7 @@ const TokyoFoodTour = () => {
               Tokyo Private Food Tour
             </h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Discover Tokyo's culinary soul — from street food stalls to
+              Discover Tokyo's culinary soul, from street food stalls to
               neighborhood favorites. A private, guided journey through the
               flavors that define this city, tailored entirely to your tastes.
             </p>
@@ -277,7 +277,7 @@ const TokyoFoodTour = () => {
               Dietary Accommodations
             </h2>
             <p className="mt-4 text-body">
-              Navigating dietary restrictions in Japan can feel daunting — the
+              Navigating dietary restrictions in Japan can feel daunting. The
               language barrier is real, ingredients are not always obvious, and
               many dishes contain hidden allergens. That is exactly why having a
               local guide matters. We handle everything so you can eat with
@@ -337,7 +337,7 @@ const TokyoFoodTour = () => {
                 <h3 className="text-xl font-medium text-foreground">Price</h3>
               </div>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Private tour — contact for a personalized quote</li>
+                <li>Private tour, contact for a personalized quote</li>
                 <li>Pricing depends on duration, group size, and areas covered</li>
                 <li>
                   <Link
@@ -412,7 +412,7 @@ const TokyoFoodTour = () => {
           </h2>
           <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
             Whether you are a sushi purist, a ramen fanatic, or someone who
-            wants to try everything — we will create your perfect Tokyo food
+            wants to try everything, we will create your perfect Tokyo food
             day. Share your preferences, dietary needs, and food dreams, and
             your guide will handle the rest.
           </p>

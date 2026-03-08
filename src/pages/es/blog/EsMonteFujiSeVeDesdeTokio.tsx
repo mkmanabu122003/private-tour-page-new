@@ -80,7 +80,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               La Respuesta Corta: Sí, Pero Depende del Día
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El Monte Fuji está a unos 100 kilómetros al suroeste de Tokio. Es la montaña más alta de Japón, con 3.776 metros, y su forma cónica perfecta la hace visible desde distancias enormes — siempre que la atmósfera lo permita. El problema no es la distancia, sino lo que hay entre tú y la montaña: humedad, contaminación, nubes y calima. Sí, se ve el Monte Fuji desde Tokio, pero no todos los días del año.
+              El Monte Fuji está a unos 100 kilómetros al suroeste de Tokio. Es la montaña más alta de Japón, con 3.776 metros, y su forma cónica perfecta la hace visible desde distancias enormes, siempre que la atmósfera lo permita. El problema no es la distancia, sino lo que hay entre tú y la montaña: humedad, contaminación, nubes y calima. Sí, se ve el Monte Fuji desde Tokio, pero no todos los días del año.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -118,7 +118,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               Tokyo Skytree (el más famoso)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Con 634 metros de altura, el Tokyo Skytree es el punto más alto de la ciudad y, lógicamente, uno de los mejores sitios desde donde se ve el Monte Fuji desde Tokio. Desde la plataforma de observación Tembo Deck (a 350 metros) o la Tembo Galleria (a 450 metros), el Fuji aparece al suroeste como una silueta inconfundible. En días claros de invierno, la vista es sencillamente sobrecogedora. El inconveniente es el precio — alrededor de 2.100 yenes para la primera plataforma y 3.400 yenes para las dos — y las colas, que pueden ser largas en fines de semana y festivos. Mi consejo: ve entre semana, justo cuando abren, para disfrutar de la vista sin aglomeraciones.
+              Con 634 metros de altura, el Tokyo Skytree es el punto más alto de la ciudad y, lógicamente, uno de los mejores sitios desde donde se ve el Monte Fuji desde Tokio. Desde la plataforma de observación Tembo Deck (a 350 metros) o la Tembo Galleria (a 450 metros), el Fuji aparece al suroeste como una silueta inconfundible. En días claros de invierno, la vista es sencillamente sobrecogedora. El inconveniente es el precio (alrededor de 2.100 yenes para la primera plataforma y 3.400 yenes para las dos) y las colas, que pueden ser largas en fines de semana y festivos. Mi consejo: ve entre semana, justo cuando abren, para disfrutar de la vista sin aglomeraciones.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -168,7 +168,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               Atardecer: el Fuji en silueta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El atardecer también puede funcionar, aunque la visibilidad suele ser peor que por la mañana. La ventaja es estética: cuando se ve el Monte Fuji desde Tokio al atardecer, aparece como una silueta oscura contra un cielo encendido. No ves los detalles — ni la nieve, ni las laderas — pero la forma cónica perfecta se recorta con una belleza casi irreal. Odaiba y la zona del Tokyo Gate Bridge son ideales para esta hora.
+              El atardecer también puede funcionar, aunque la visibilidad suele ser peor que por la mañana. La ventaja es estética: cuando se ve el Monte Fuji desde Tokio al atardecer, aparece como una silueta oscura contra un cielo encendido. No ves los detalles, ni la nieve, ni las laderas, pero la forma cónica perfecta se recorta con una belleza casi irreal. Odaiba y la zona del Tokyo Gate Bridge son ideales para esta hora.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -190,14 +190,14 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               Las 36 vistas de Hokusai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              En la década de 1830, el artista ukiyo-e Katsushika Hokusai publicó su serie "Treinta y seis vistas del Monte Fuji", una colección de grabados en madera que mostraban el Fuji desde distintos puntos y en distintas estaciones. La más famosa, "La gran ola de Kanagawa", muestra una ola gigante con el Fuji pequeño al fondo — una de las imágenes más reconocibles del arte universal. Lo que muchos no saben es que muchas de esas 36 vistas fueron pintadas desde lugares dentro o cerca de Tokio (entonces llamado Edo). Hokusai ya sabía, hace casi 200 años, que se ve el Monte Fuji desde Tokio y que esa visión era digna de ser inmortalizada. Si te interesa el arte, el Museo Sumida Hokusai, cerca del Skytree, tiene reproducciones magníficas.
+              En la década de 1830, el artista ukiyo-e Katsushika Hokusai publicó su serie "Treinta y seis vistas del Monte Fuji", una colección de grabados en madera que mostraban el Fuji desde distintos puntos y en distintas estaciones. La más famosa, "La gran ola de Kanagawa", muestra una ola gigante con el Fuji pequeño al fondo, una de las imágenes más reconocibles del arte universal. Lo que muchos no saben es que muchas de esas 36 vistas fueron pintadas desde lugares dentro o cerca de Tokio (entonces llamado Edo). Hokusai ya sabía, hace casi 200 años, que se ve el Monte Fuji desde Tokio y que esa visión era digna de ser inmortalizada. Si te interesa el arte, el Museo Sumida Hokusai, cerca del Skytree, tiene reproducciones magníficas.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Por qué los japoneses miran al Fuji como los españoles al mar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Esto es algo que les digo a mis invitados de habla hispana y que siempre conecta: para nosotros, el Fuji es lo que el mar es para los españoles. Es esa presencia constante que te orienta, que te recuerda dónde estás y que te da cierta paz cuando la ves. Cuando un tokiota se levanta por la mañana y ve el Fuji desde su ventana, siente que el día empieza bien. Cuando un español mira al horizonte y ve el Mediterráneo azul, siente lo mismo. Es un paisaje que forma parte de la identidad, no solo de la geografía. Tal vez por eso la pregunta "¿se ve el Monte Fuji desde Tokio?" tiene tanta carga emocional. No es solo una cuestión de visibilidad meteorológica — es una cuestión de conexión con un lugar.
+              Esto es algo que les digo a mis invitados de habla hispana y que siempre conecta: para nosotros, el Fuji es lo que el mar es para los españoles. Es esa presencia constante que te orienta, que te recuerda dónde estás y que te da cierta paz cuando la ves. Cuando un tokiota se levanta por la mañana y ve el Fuji desde su ventana, siente que el día empieza bien. Cuando un español mira al horizonte y ve el Mediterráneo azul, siente lo mismo. Es un paisaje que forma parte de la identidad, no solo de la geografía. Tal vez por eso la pregunta "¿se ve el Monte Fuji desde Tokio?" tiene tanta carga emocional. No es solo una cuestión de visibilidad meteorológica, es una cuestión de conexión con un lugar.
             </p>
 
             {/* Preguntas frecuentes */}
@@ -266,7 +266,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                 ¿Quieres ver el Monte Fuji con un guía local que conoce los mejores miradores?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                En mis tours privados por Tokio, te llevo a los miradores que la mayoría de turistas no conocen, te explico la historia y la cultura detrás del Fuji, y me aseguro de que tengas la mejor oportunidad de verlo según las condiciones del día. Si prefieres una excursión al Monte Fuji en persona, también la organizo. Sin prisas, sin grupos grandes — solo tú, tu acompañante y un guía local que lleva años enamorado de esta montaña.
+                En mis tours privados por Tokio, te llevo a los miradores que la mayoría de turistas no conocen, te explico la historia y la cultura detrás del Fuji, y me aseguro de que tengas la mejor oportunidad de verlo según las condiciones del día. Si prefieres una excursión al Monte Fuji en persona, también la organizo. Sin prisas, sin grupos grandes. Solo tú, tu acompañante y un guía local que lleva años enamorado de esta montaña.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours" className="btn-accent">

@@ -16,7 +16,7 @@ const credentials = [
   {
     icon: Shield,
     title: "Government-Licensed Guide",
-    description: "National Government Licensed Guide Interpreter (全国通訳案内士) — the highest professional guiding certification in Japan, requiring extensive knowledge of history, culture, geography, and fluency in English.",
+    description: "National Government Licensed Guide Interpreter (全国通訳案内士), the highest professional guiding certification in Japan, requiring extensive knowledge of history, culture, geography, and fluency in English.",
   },
   {
     icon: Globe,
@@ -54,7 +54,7 @@ const whyChooseGuide = [
   {
     icon: Utensils,
     title: "Full Travel Support",
-    description: "From restaurant reservations and train navigation to cultural etiquette tips — your guide handles the details so you can enjoy the journey.",
+    description: "From restaurant reservations and train navigation to cultural etiquette tips, your guide handles the details so you can enjoy the journey.",
   },
 ];
 
@@ -64,7 +64,7 @@ const allReviews = [
     author: "Couple visiting Tokyo",
   },
   {
-    text: "Manabu's tour was one of the best I've been on — he is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
+    text: "Manabu's tour was one of the best I've been on. He is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
     author: "Solo traveler",
   },
   {
@@ -98,7 +98,7 @@ const About = () => {
     <Layout>
       <SEO
         title="About Us | Meet Your Tokyo Tour Guide | Tanuki Tabi Travel"
-        description="Meet Manabu — government-licensed Tokyo guide (全国通訳案内士), 500+ tours, 4.86★ rating. Born in Kanazawa, raised in Kyoto, now guiding visitors through Tokyo."
+        description="Meet Manabu, government-licensed Tokyo guide (全国通訳案内士), 500+ tours, 4.86★ rating. Born in Kanazawa, raised in Kyoto, now guiding visitors through Tokyo."
         canonicalPath="/about"
         hreflang={[
           { lang: "en", path: "/about" },
@@ -125,7 +125,7 @@ const About = () => {
                 tour guides in Japan.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Born in Kanazawa, raised in Kyoto, and now living in Tokyo — I
+                Born in Kanazawa, raised in Kyoto, and now living in Tokyo, I
                 bring a unique perspective from Japan's most culturally rich
                 regions. With over 500 tours completed and a 4.86-star average
                 rating, I'm passionate about sharing Japan's stories with
@@ -167,8 +167,8 @@ const About = () => {
               <p>
                 My guiding philosophy is built on one principle: <strong className="text-foreground">every traveler
                 is different</strong>. In the first 30 minutes of every tour, I pay close
-                attention to what excites you — whether it's architecture, street
-                food, historical trivia, or photography — and I adapt the route
+                attention to what excites you, whether it's architecture, street
+                food, historical trivia, or photography, and I adapt the route
                 in real time.
               </p>
               <p>
@@ -180,12 +180,12 @@ const About = () => {
               <p>
                 My years in business gave me the opportunity to travel and work with
                 people from diverse backgrounds. I noticed how visitors to Japan often
-                missed the context and meaning behind what they were seeing — the "why"
+                missed the context and meaning behind what they were seeing, the "why"
                 that makes experiences truly meaningful.
               </p>
               <p className="font-medium text-foreground">
                 Today, nothing brings me more joy than seeing the moment of understanding
-                in a guest's eyes — when a temple isn't just old stones, but a living
+                in a guest's eyes: when a temple isn't just old stones, but a living
                 connection to centuries of belief and craftsmanship.
               </p>
             </div>
@@ -337,7 +337,7 @@ const About = () => {
                 </p>
                 <footer>
                   <cite className="not-italic font-medium text-foreground text-sm">
-                    — {review.author}
+                    - {review.author}
                   </cite>
                 </footer>
               </blockquote>

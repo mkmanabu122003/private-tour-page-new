@@ -62,7 +62,7 @@ const EsYanakaTokio = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Hay un Tokio que la mayoría de los viajeros nunca ven. No está en Shibuya, ni en Shinjuku, ni en las calles eléctricas de Akihabara. Está en Yanaka, un barrio donde el tiempo decidió detenerse hace décadas y donde todavía es posible caminar por calles que tienen el mismo aspecto que en los años cincuenta. Si tuviera que explicarlo con una imagen que un hispanohablante entienda, diría que Yanaka es como el Albaicín de Granada o el barrio de San Telmo en Buenos Aires — un lugar que se resiste al paso del tiempo.
+              Hay un Tokio que la mayoría de los viajeros nunca ven. No está en Shibuya, ni en Shinjuku, ni en las calles eléctricas de Akihabara. Está en Yanaka, un barrio donde el tiempo decidió detenerse hace décadas y donde todavía es posible caminar por calles que tienen el mismo aspecto que en los años cincuenta. Si tuviera que explicarlo con una imagen que un hispanohablante entienda, diría que Yanaka es como el Albaicín de Granada o el barrio de San Telmo en Buenos Aires, un lugar que se resiste al paso del tiempo.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Llevo años caminando por este barrio como guía con licencia, y cada vez que traigo a alguien por primera vez, la reacción es la misma: silencio. No el silencio incómodo, sino el de quien descubre algo que no esperaba encontrar. En este artículo te comparto mi <strong className="text-foreground">yanaka tokio itinerario</strong> completo de tres horas, paso a paso, con los detalles que solo conoce alguien que ha recorrido estas calles cientos de veces.
@@ -128,7 +128,7 @@ const EsYanakaTokio = () => {
               Sé lo que estás pensando: ¿un cementerio? En Japón, los cementerios no son lugares sombríos ni deprimentes. Son parques. El cementerio de Yanaka es uno de los más antiguos de Tokio, y en primavera se convierte en uno de los mejores lugares para ver cerezos en flor, mucho menos concurrido que Ueno o Shinjuku Gyoen. Entre las tumbas hay árboles centenarios, caminos de piedra y un silencio que invita a la reflexión. Aquí están enterrados samuráis del período Edo, artistas, escritores y personas que construyeron el Tokio moderno.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Yo siempre me detengo junto a la tumba de Tokugawa Yoshinobu, el último shogún de Japón. Es una lápida modesta para un hombre que tuvo en sus manos el destino de un imperio. Les cuento a mis invitados su historia — cómo entregó el poder al emperador, cómo vivió sus últimos años pintando y haciendo fotografía — y siempre veo cómo la historia de Japón cobra vida de una manera que ningún libro de texto puede lograr.
+              Yo siempre me detengo junto a la tumba de Tokugawa Yoshinobu, el último shogún de Japón. Es una lápida modesta para un hombre que tuvo en sus manos el destino de un imperio. Les cuento a mis invitados su historia, cómo entregó el poder al emperador, cómo vivió sus últimos años pintando y haciendo fotografía, y siempre veo cómo la historia de Japón cobra vida de una manera que ningún libro de texto puede lograr.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -148,7 +148,7 @@ const EsYanakaTokio = () => {
               La ruta termina en Yuyake Dandan, una escalera de piedra que baja desde la zona alta del barrio hacia Yanaka Ginza. "Yuyake" significa "atardecer" y "dandan" significa "escalones". Los vecinos le pusieron ese nombre porque desde aquí se ven las puestas de sol más bonitas del barrio, con los tejados bajos de las casas recortados contra un cielo naranja. Si puedes planificar tu visita para llegar aquí a última hora de la tarde, la recompensa es extraordinaria. Es uno de esos momentos en los que entiendes por qué este <strong className="text-foreground">yanaka tokio itinerario</strong> es tan especial.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              En los escalones suele haber gatos — Yanaka es famoso por sus gatos callejeros, y hay hasta una escultura de un gato tallada en madera en uno de los postes. Los vecinos los cuidan, les ponen agua y comida, y los gatos se dejan acariciar por los visitantes como si fueran los verdaderos dueños del barrio. Que, pensándolo bien, probablemente lo son.
+              En los escalones suele haber gatos. Yanaka es famoso por sus gatos callejeros, y hay hasta una escultura de un gato tallada en madera en uno de los postes. Los vecinos los cuidan, les ponen agua y comida, y los gatos se dejan acariciar por los visitantes como si fueran los verdaderos dueños del barrio. Que, pensándolo bien, probablemente lo son.
             </p>
 
             {/* Qué comer */}
@@ -163,21 +163,21 @@ const EsYanakaTokio = () => {
               Los croquetas de menchi-katsu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              En Yanaka Ginza hay varias carnicerías que venden menchi-katsu recién frito: croquetas de carne picada empanadas y crujientes por fuera, jugosas por dentro. Cuestan entre 150 y 250 yenes y se comen de pie, envueltas en un papel que absorbe el aceite. Son la comida callejera perfecta del barrio — nada sofisticada, absolutamente deliciosa. Yo siempre compro una al inicio del paseo y otra al final. Es mi ritual.
+              En Yanaka Ginza hay varias carnicerías que venden menchi-katsu recién frito: croquetas de carne picada empanadas y crujientes por fuera, jugosas por dentro. Cuestan entre 150 y 250 yenes y se comen de pie, envueltas en un papel que absorbe el aceite. Son la comida callejera perfecta del barrio: nada sofisticada, absolutamente deliciosa. Yo siempre compro una al inicio del paseo y otra al final. Es mi ritual.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Helado de sabores japoneses
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Hay una heladería en Yanaka Ginza que ofrece sabores que no encontrarás en ningún otro lugar: sakura (flor de cerezo), kurogoma (sésamo negro), murasaki imo (boniato morado) y matcha intenso. Un cucurucho cuesta unos 350 yenes. Es especialmente perfecto en los meses cálidos, cuando el paseo por el barrio te deja con ganas de algo fresco. Pero incluso en invierno, los japoneses comen helado — no preguntes por qué, simplemente únete a la costumbre.
+              Hay una heladería en Yanaka Ginza que ofrece sabores que no encontrarás en ningún otro lugar: sakura (flor de cerezo), kurogoma (sésamo negro), murasaki imo (boniato morado) y matcha intenso. Un cucurucho cuesta unos 350 yenes. Es especialmente perfecto en los meses cálidos, cuando el paseo por el barrio te deja con ganas de algo fresco. Pero incluso en invierno, los japoneses comen helado (no preguntes por qué, simplemente únete a la costumbre).
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Los dulces tradicionales de las abuelas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Hay tiendas de wagashi (dulces japoneses tradicionales) en Yanaka que llevan generaciones en la misma familia. Venden dorayaki, daifuku, manju y senbei hechos a mano cada mañana. Los precios son ridículamente bajos — 100 a 300 yenes por pieza — y la calidad es la misma que encontrarías en una tienda de wagashi de lujo en Ginza, pero sin la etiqueta de precio ni la pretensión. Muchas de estas tiendas están atendidas por señoras mayores que te envuelven cada dulce con un cuidado que te hace sentir que estás recibiendo un regalo, no comprando un producto.
+              Hay tiendas de wagashi (dulces japoneses tradicionales) en Yanaka que llevan generaciones en la misma familia. Venden dorayaki, daifuku, manju y senbei hechos a mano cada mañana. Los precios son ridículamente bajos, 100 a 300 yenes por pieza, y la calidad es la misma que encontrarías en una tienda de wagashi de lujo en Ginza, pero sin la etiqueta de precio ni la pretensión. Muchas de estas tiendas están atendidas por señoras mayores que te envuelven cada dulce con un cuidado que te hace sentir que estás recibiendo un regalo, no comprando un producto.
             </p>
 
             {/* Cuándo ir */}
@@ -215,10 +215,10 @@ const EsYanakaTokio = () => {
               Por qué este barrio enamora a los viajeros repetidores
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Muchos de mis invitados son personas que ya han estado en Tokio dos, tres, incluso cinco veces. Han visto Senso-ji, han cruzado Shibuya, han comido en Tsukiji. Vienen a Yanaka buscando algo diferente, y lo encuentran. No es mejor ni peor que el Tokio moderno — es otro Tokio, uno que existía antes de los trenes bala y los rascacielos, y que sigue existiendo gracias a los vecinos que se niegan a dejar que desaparezca.
+              Muchos de mis invitados son personas que ya han estado en Tokio dos, tres, incluso cinco veces. Han visto Senso-ji, han cruzado Shibuya, han comido en Tsukiji. Vienen a Yanaka buscando algo diferente, y lo encuentran. No es mejor ni peor que el Tokio moderno, es otro Tokio, uno que existía antes de los trenes bala y los rascacielos, y que sigue existiendo gracias a los vecinos que se niegan a dejar que desaparezca.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si es tu primer viaje a Tokio, este <strong className="text-foreground">yanaka tokio itinerario</strong> te dará una perspectiva que cambiará completamente tu forma de entender la ciudad. Y si ya conoces Tokio, te mostrará la capa más profunda, la que está debajo de las luces y el ruido. Puedes combinar esta ruta con otros barrios de la zona — en mi{" "}
+              Si es tu primer viaje a Tokio, este <strong className="text-foreground">yanaka tokio itinerario</strong> te dará una perspectiva que cambiará completamente tu forma de entender la ciudad. Y si ya conoces Tokio, te mostrará la capa más profunda, la que está debajo de las luces y el ruido. Puedes combinar esta ruta con otros barrios de la zona. En mi{" "}
               <Link to="/es/blog/itinerario-tokio-5-dias" className="text-accent hover:underline">
                 itinerario de 5 días por Tokio
               </Link>
@@ -255,7 +255,7 @@ const EsYanakaTokio = () => {
               ¿Se puede combinar con otros barrios?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Sí. Yanaka está a diez minutos a pie del parque de Ueno, lo que permite combinar ambos en un día completo. También puedes conectar con Nezu y Sendagi, que junto con Yanaka forman el área conocida como "Yanesen" — tres barrios tradicionales que conservan la misma atmósfera. En nuestro tour cubrimos los puntos más interesantes de esta zona extendida.
+              Sí. Yanaka está a diez minutos a pie del parque de Ueno, lo que permite combinar ambos en un día completo. También puedes conectar con Nezu y Sendagi, que junto con Yanaka forman el área conocida como "Yanesen", tres barrios tradicionales que conservan la misma atmósfera. En nuestro tour cubrimos los puntos más interesantes de esta zona extendida.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -271,7 +271,7 @@ const EsYanakaTokio = () => {
                 ¿Quieres descubrir el Tokio que sobrevivió al tiempo?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                En nuestro tour por Yanaka, te llevaré por los callejones, templos y rincones que no aparecen en ninguna guía. Te contaré las historias que hacen que cada piedra y cada puerta tengan sentido. Caminaremos despacio, comeremos lo que comen los vecinos, y terminaremos viendo el atardecer desde Yuyake Dandan. Sin prisas, sin multitudes — solo el Tokio auténtico.
+                En nuestro tour por Yanaka, te llevaré por los callejones, templos y rincones que no aparecen en ninguna guía. Te contaré las historias que hacen que cada piedra y cada puerta tengan sentido. Caminaremos despacio, comeremos lo que comen los vecinos, y terminaremos viendo el atardecer desde Yuyake Dandan. Sin prisas, sin multitudes. Solo el Tokio auténtico.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours/yanaka" className="btn-accent">

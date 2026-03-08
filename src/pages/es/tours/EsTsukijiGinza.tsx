@@ -64,9 +64,9 @@ const EsTsukijiGinza = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Mercado Exterior de Tsukiji — mariscos frescos y comida callejera",
-                    "Degustaciones locales — delicias japonesas de temporada",
-                    "Distrito de compras de Ginza — desde marcas de lujo hasta tiendas tradicionales",
+                    "Mercado Exterior de Tsukiji: mariscos frescos y comida callejera",
+                    "Degustaciones locales: delicias japonesas de temporada",
+                    "Distrito de compras de Ginza: desde marcas de lujo hasta tiendas tradicionales",
                     "Teatro histórico Kabuki-za",
                     "Callejones escondidos e izakayas locales",
                   ].map((item) => (

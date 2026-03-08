@@ -20,7 +20,7 @@ const EsQueSecomeEnJapon = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tours/tokyo-food-tour-hero.jpg"
-          alt="Tour gastronómico en Tokio — qué se come en Japón"
+          alt="Tour gastronómico en Tokio: qué se come en Japón"
           className="w-full h-full object-cover"
           loading="eager"
         />

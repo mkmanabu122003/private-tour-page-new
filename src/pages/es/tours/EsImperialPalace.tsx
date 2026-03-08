@@ -67,9 +67,9 @@ const EsImperialPalace = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Jardines del Este del Palacio Imperial — hermosos jardines japoneses",
+                    "Jardines del Este del Palacio Imperial: hermosos jardines japoneses",
                     "Cimientos históricos del castillo y fosos",
-                    "Puente Nijubashi — el icónico puente doble",
+                    "Puente Nijubashi: el icónico puente doble",
                     "Arquitectura del distrito empresarial de Marunouchi",
                     "Edificio restaurado de ladrillo rojo de la estación de Tokio",
                   ].map((item) => (

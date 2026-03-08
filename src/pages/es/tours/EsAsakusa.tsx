@@ -36,7 +36,7 @@ const EsAsakusa = () => {
               Tour Privado por Asakusa con Guía en Español
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Asakusa es el barrio más tradicional de Tokio y el lugar donde Manabu comenzó su carrera como guía — conoce cada rincón como si fuera su propio barrio.
+              Asakusa es el barrio más tradicional de Tokio y el lugar donde Manabu comenzó su carrera como guía. Conoce cada rincón como si fuera su propio barrio.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Vive la magia del distrito más antiguo y tradicional de Tokio. Este tour a pie te lleva por el icónico Templo Senso-ji, la bulliciosa calle comercial Nakamise y rincones escondidos que solo los locales conocen.
@@ -74,9 +74,9 @@ const EsAsakusa = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Templo Senso-ji — el templo más antiguo y famoso de Tokio",
-                    "Puerta Kaminarimon — la icónica Puerta del Trueno",
-                    "Calle comercial Nakamise — dulces tradicionales y recuerdos",
+                    "Templo Senso-ji, el templo más antiguo y famoso de Tokio",
+                    "Puerta Kaminarimon, la icónica Puerta del Trueno",
+                    "Calle comercial Nakamise, dulces tradicionales y recuerdos",
                     "Callejones ocultos y rincones locales",
                     "Vistas del río Sumida y puntos fotográficos del Skytree",
                   ].map((item) => (

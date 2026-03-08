@@ -8,7 +8,7 @@ const ShinjukuGuide = () => {
     <Layout>
       <SEO
         title="Shinjuku Guide: What a Licensed Guide Shows Clients"
-        description="Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time — and what to skip."
+        description="Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time, and what to skip."
         canonicalPath="/blog/shinjuku-guide"
       />
 
@@ -38,7 +38,7 @@ const ShinjukuGuide = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu — a Tokyo-based National Government Licensed Guide Interpreter who has walked Shinjuku's streets with hundreds of international visitors.
+              Written by Manabu, a Tokyo-based National Government Licensed Guide Interpreter who has walked Shinjuku's streets with hundreds of international visitors.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ const ShinjukuGuide = () => {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Shinjuku Station handles 3.5 million passengers daily, making it the busiest
               transport hub on the planet. If you arrive without a plan, it can feel
-              genuinely overwhelming — the station alone has over 200 exits, and the streets
+              genuinely overwhelming. The station alone has over 200 exits, and the streets
               above are a sensory assault of neon signage, rushing commuters, and competing
               loudspeaker announcements. But once you learn how Shinjuku is laid out and
               understand what each pocket of the district offers, this neighborhood transforms
@@ -71,7 +71,7 @@ const ShinjukuGuide = () => {
               quite like it.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              This guide covers everything you need to navigate Shinjuku with confidence —
+              This guide covers everything you need to navigate Shinjuku with confidence,
               from the skyscraper-lined west side to the entertainment-packed east side, from
               tiny Golden Gai bars to the serene beauty of Shinjuku Gyoen. I'll share the
               same tips I give my tour guests: where to go, what to skip, how much to budget,
@@ -86,13 +86,13 @@ const ShinjukuGuide = () => {
               The key to understanding Shinjuku is knowing that the train tracks divide
               it into two completely different worlds.{" "}
               <strong className="text-foreground">West Shinjuku</strong> is the business
-              and government district — a grid of towering skyscrapers, corporate
+              and government district, a grid of towering skyscrapers, corporate
               headquarters, and wide avenues that feel almost American in their scale.
               The Tokyo Metropolitan Government Building dominates the skyline here, and
               its twin observation decks on the 45th floor offer free panoramic views of
               the city. On clear days, you can see Mt. Fuji in the distance. This is also
               where you'll find the Park Hyatt Tokyo, made famous by the film{" "}
-              <em>Lost in Translation</em> — the New York Bar on the 52nd floor is worth
+              <em>Lost in Translation</em>. The New York Bar on the 52nd floor is worth
               a visit for the view alone, though drinks start around ¥2,500 and there is
               a cover charge in the evening.
             </p>
@@ -108,7 +108,7 @@ const ShinjukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Navigation tip:</strong> Don't try to
               walk through the station to get from west to east. Use the south exit
-              concourse — it connects both sides at street level and is far less
+              concourse. It connects both sides at street level and is far less
               confusing than the underground passages. Alternatively, the Southern
               Terrace exit near Takashimaya Times Square gives you a clear orientation
               point on the south side.
@@ -131,23 +131,23 @@ const ShinjukuGuide = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Golden Gai is unlike anything else on Earth. Packed into six narrow alleys
-              barely wide enough for two people to pass, you'll find over 200 tiny bars —
+              barely wide enough for two people to pass, you'll find over 200 tiny bars,
               most seating no more than six to eight people. These aren't sleek cocktail
               lounges; they're cramped, characterful, smoke-scented rooms presided over
               by a single bartender-owner, or "mama" or "master," who sets the rules, the
-              music, and the atmosphere. Each bar has its own identity — some specialize
+              music, and the atmosphere. Each bar has its own identity. Some specialize
               in jazz, others in horror movies, punk rock, photography, or simply
               conversation with the owner.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Etiquette matters here.</strong> Most
               bars charge a cover (typically ¥500-1,500), which is clearly posted on or
-              near the door. This is standard practice, not a scam — the cover charge
+              near the door. This is standard practice, not a scam. The cover charge
               helps these tiny businesses survive on just a handful of customers per
               night. Always check the sign before entering. Some bars are regulars-only
               spots where the owner serves the same small group of friends night after
               night. These will sometimes have a sign indicating they're members-only or
-              will simply feel unwelcoming — don't force it. Move to the next door. Many
+              will simply feel unwelcoming. Don't force it. Move to the next door. Many
               bars now actively welcome tourists and display English menus or "Welcome"
               signs. Start with those if you're visiting for the first time.
             </p>
@@ -159,7 +159,7 @@ const ShinjukuGuide = () => {
               crowded, with lines forming outside the more popular spots. Budget around
               ¥1,000-2,000 per bar (cover charge plus one or two drinks), and plan to
               visit two or three bars over the course of an evening. That's the Golden
-              Gai rhythm — you're not meant to spend all night in one place. The joy is
+              Gai rhythm. You're not meant to spend all night in one place. The joy is
               in the hopping, the discovering, the random conversations with strangers
               in a space so small your elbows are touching.
             </p>
@@ -178,7 +178,7 @@ const ShinjukuGuide = () => {
                 className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                Omoide Yokocho — smoke, yakitori, and cold beer under the tracks
+                Omoide Yokocho: smoke, yakitori, and cold beer under the tracks
               </figcaption>
             </figure>
 
@@ -187,8 +187,8 @@ const ShinjukuGuide = () => {
               Omoide Yokocho (Memory Lane)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tucked directly beside Shinjuku Station's west exit, Omoide Yokocho — also
-              known by its less polite nickname "Piss Alley" — is a narrow strip of
+              Tucked directly beside Shinjuku Station's west exit, Omoide Yokocho, also
+              known by its less polite nickname "Piss Alley," is a narrow strip of
               yakitori stalls and tiny eateries that has survived since the post-war
               black market era of the 1940s. The atmosphere is the real draw here: smoke
               rising from charcoal grills, lanterns swaying overhead, the clatter of
@@ -199,11 +199,11 @@ const ShinjukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">An honest assessment:</strong> The
               atmosphere is far better than the food. The yakitori is decent but not
-              exceptional — you can find superior grilled chicken at dedicated yakitori
+              exceptional. You can find superior grilled chicken at dedicated yakitori
               restaurants elsewhere in Shinjuku for similar prices. What you're paying
               for here is the experience of eating elbow-to-elbow with salarymen on tiny
               stools, under bare light bulbs, in a setting that looks like a movie set
-              from the 1950s. Is it worth it? Absolutely — just come with the right
+              from the 1950s. Is it worth it? Absolutely, just come with the right
               expectations. Order a beer, a few skewers of chicken skin and tsukune
               (chicken meatball), and soak in the ambiance. Budget around ¥1,500-2,500
               per person for a few skewers and drinks.
@@ -222,7 +222,7 @@ const ShinjukuGuide = () => {
                 className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                Shinjuku Gyoen — a peaceful escape from the surrounding urban energy
+                Shinjuku Gyoen, a peaceful escape from the surrounding urban energy
               </figcaption>
             </figure>
 
@@ -236,8 +236,8 @@ const ShinjukuGuide = () => {
               of what makes Shinjuku Gyoen special. Originally a feudal lord's residence
               during the Edo period, then an imperial garden, Shinjuku Gyoen opened to
               the public after World War II and now spans 144 acres of meticulously
-              maintained landscapes. The park blends three distinct garden styles —
-              formal French, English landscape, and traditional Japanese — each flowing
+              maintained landscapes. The park blends three distinct garden styles:
+              formal French, English landscape, and traditional Japanese, each flowing
               into the next so naturally you barely notice the transitions.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -254,8 +254,8 @@ const ShinjukuGuide = () => {
               Entry is ¥500 for adults, and the park is closed on Mondays (or the
               following day if Monday is a holiday). Hours vary by season but generally
               run from 9 AM to 4:30 PM (last entry at 4 PM). Bring a bento from a
-              nearby convenience store or depachika and have lunch on the great lawn —
-              it's the perfect midday break from Shinjuku's intensity. The greenhouse
+              nearby convenience store or depachika and have lunch on the great lawn.
+              It's the perfect midday break from Shinjuku's intensity. The greenhouse
               near the main gate houses an impressive tropical plant collection if you
               want to extend your visit.
             </p>
@@ -267,7 +267,7 @@ const ShinjukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kabukicho is Shinjuku's entertainment district, and it wears its reputation
               loudly. The giant neon gateway arch, the towering video screens, the
-              competing sounds from pachinko parlors and karaoke chains — it's Tokyo at
+              competing sounds from pachinko parlors and karaoke chains. It's Tokyo at
               maximum volume. Despite its somewhat seedy reputation,{" "}
               <strong className="text-foreground">Kabukicho is generally safe for
               tourists</strong>, even late at night. The area has been heavily cleaned up
@@ -276,20 +276,20 @@ const ShinjukuGuide = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Scams to watch for:</strong> The main
-              risk in Kabukicho comes from touts — people on the street trying to lure
+              risk in Kabukicho comes from touts, people on the street trying to lure
               you into bars or clubs. The rule is simple: if someone approaches you on
               the street, decline and keep walking. Legitimate establishments don't need
               to recruit customers from the sidewalk. Be especially cautious of anyone
-              offering "free" drinks or suspiciously cheap deals — these almost always
+              offering "free" drinks or suspiciously cheap deals. These almost always
               lead to inflated bills. Stick to places you've researched in advance or
               that have clearly posted prices, and you'll be fine.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For entertainment, the area has plenty of legitimate and fun options. The
-              Godzilla head perched atop Hotel Gracery is a must-see landmark — the best
+              Godzilla head perched atop Hotel Gracery is a must-see landmark. The best
               view is from the street below or from the hotel's terrace cafe on the 8th
               floor, where you can get remarkably close to the beast. Karaoke is also a
-              quintessential Kabukicho experience — large chains like Big Echo and
+              quintessential Kabukicho experience. Large chains like Big Echo and
               Karaoke Kan (the one from <em>Lost in Translation</em>) offer private rooms
               at reasonable rates, especially during daytime and early evening happy
               hours. If you've heard of the Robot Restaurant, note that it closed
@@ -313,13 +313,13 @@ const ShinjukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               The basement floors of Isetan, Takashimaya, and Odakyu department stores
               are culinary wonderlands that most tourists walk right past. Japanese
-              department store food halls — called{" "}
-              <strong className="text-foreground">depachika</strong> — stock an
+              department store food halls, called{" "}
+              <strong className="text-foreground">depachika</strong>, stock an
               extraordinary range of prepared foods, bento boxes, wagashi (traditional
               sweets), fresh produce, and gourmet treats, all presented with the kind
               of care and artistry that makes you feel guilty eating them. Isetan's
               basement in particular is legendary among food lovers. Prices are
-              reasonable for the quality — a beautifully composed bento box runs
+              reasonable for the quality. A beautifully composed bento box runs
               ¥800-1,500, and you can assemble an incredible picnic for Shinjuku Gyoen
               without spending much at all. Visit around 6-7 PM for discounted items
               as stalls mark down unsold food before closing.
@@ -333,7 +333,7 @@ const ShinjukuGuide = () => {
               well-known "ramen streets" that can have hour-long waits and cater
               heavily to tourists, seek out standalone shops on the side streets east
               of the station. Fuunji, located near the south exit, is famous for its
-              concentrated tsukemen (dipping noodles) and draws a constant line — but
+              concentrated tsukemen (dipping noodles) and draws a constant line, but
               it moves fast and the bowl is worth the wait. For a more traditional
               Tokyo-style shoyu (soy sauce) ramen, the shops in the alleys behind the
               east exit offer the real deal at honest prices, usually ¥900-1,200 per
@@ -346,14 +346,14 @@ const ShinjukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               One of Shinjuku's greatest strengths is that it never truly closes. After
               midnight, when the trains stop running and the crowds thin slightly,
-              Shinjuku's late-night dining scene comes alive for a different audience —
+              Shinjuku's late-night dining scene comes alive for a different audience:
               bartenders finishing their shifts, night workers, and night owls who know
               that some of the best food appears after dark. Izakayas (Japanese pub-style
               restaurants) throughout east Shinjuku serve food until 2-3 AM or later.
               The 24-hour gyudon (beef bowl) chains like Matsuya and Yoshinoya are
               reliable, cheap, and surprisingly satisfying at 3 AM. For something more
               special, look for late-night sushi counters and ramen shops that cater
-              to the post-drinking crowd — the quality is often excellent because the
+              to the post-drinking crowd, and the quality is often excellent because the
               clientele is discerning.
             </p>
 
@@ -365,7 +365,7 @@ const ShinjukuGuide = () => {
                 <strong className="text-foreground">Ticket machines:</strong> Many
                 ramen shops and casual restaurants use vending machine ordering. Buy
                 your ticket at the machine by the door, hand it to the staff, and sit
-                down. No Japanese required — most machines have photos.
+                down. No Japanese required, most machines have photos.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Lunch sets:</strong> Visit
@@ -381,7 +381,7 @@ const ShinjukuGuide = () => {
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Standing bars (tachinomi):</strong>{" "}
                 These no-seat bars near the station offer drinks and small plates at
-                rock-bottom prices — a beer and a snack for under ¥500.
+                rock-bottom prices, a beer and a snack for under ¥500.
               </li>
             </ul>
 
@@ -402,7 +402,7 @@ const ShinjukuGuide = () => {
                 the evening. If you miss it, you have three options: a taxi (expensive,
                 ¥3,000-10,000 depending on distance), a manga cafe or capsule hotel
                 (¥1,500-3,000 to rest until the 5 AM first train), or simply staying
-                out all night — Shinjuku is one of the few places in Tokyo where this
+                out all night. Shinjuku is one of the few places in Tokyo where this
                 is entirely viable.
               </li>
               <li className="text-muted-foreground leading-relaxed">
@@ -432,25 +432,25 @@ const ShinjukuGuide = () => {
               Morning (7:00–9:00 AM): Shinjuku Gyoen Morning Walk
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Start your day with the calm before the storm. Shinjuku Gyoen opens at 9 AM (but the surrounding area is quiet and pleasant for an early walk). Arrive right when the gates open to enjoy the gardens in near-solitude — the contrast with the chaos you'll experience later makes this especially rewarding. The morning light through the Japanese garden is perfect for photography, and you'll have the wide lawns almost to yourself.
+              Start your day with the calm before the storm. Shinjuku Gyoen opens at 9 AM (but the surrounding area is quiet and pleasant for an early walk). Arrive right when the gates open to enjoy the gardens in near-solitude. The contrast with the chaos you'll experience later makes this especially rewarding. The morning light through the Japanese garden is perfect for photography, and you'll have the wide lawns almost to yourself.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Midday (12:00–2:00 PM): Depachika Lunch Strategy
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Head to the basement floor of Isetan or Takashimaya department stores for the depachika experience. The trick is timing: arrive just before the lunch rush (around 11:30 AM) or slightly after (1:30 PM) for the best selection without crowds. Assemble a bento box and side dishes for a fraction of restaurant prices. If the weather is good, take your depachika haul back to Shinjuku Gyoen for a picnic — this is exactly what many Tokyo office workers do, and it's one of the most pleasant lunch experiences in the city.
+              Head to the basement floor of Isetan or Takashimaya department stores for the depachika experience. The trick is timing: arrive just before the lunch rush (around 11:30 AM) or slightly after (1:30 PM) for the best selection without crowds. Assemble a bento box and side dishes for a fraction of restaurant prices. If the weather is good, take your depachika haul back to Shinjuku Gyoen for a picnic. This is exactly what many Tokyo office workers do, and it's one of the most pleasant lunch experiences in the city.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Late Afternoon (5:00–7:00 PM): Omoide Yokocho at Golden Hour
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This is the magic window for Omoide Yokocho. The yakitori stalls are firing up, the after-work crowd is just starting to trickle in, and the setting sun casts that perfect warm light through the smoke and steam. Grab a stool at one of the open-front stalls, order a beer and a few skewers, and watch the transition from day to night. The atmosphere at this hour is unmatched — bustling but not yet overwhelming, authentic and full of character.
+              This is the magic window for Omoide Yokocho. The yakitori stalls are firing up, the after-work crowd is just starting to trickle in, and the setting sun casts that perfect warm light through the smoke and steam. Grab a stool at one of the open-front stalls, order a beer and a few skewers, and watch the transition from day to night. The atmosphere at this hour is unmatched: bustling but not yet overwhelming, authentic and full of character.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Evening (7:00 PM onwards): Kabukicho and Golden Gai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              As darkness falls, Shinjuku transforms. The neon signs come alive, and the energy shifts from daytime commerce to nighttime entertainment. Start with a walk through Kabukicho to take in the sensory spectacle — the giant Godzilla head, the towering screens, the buzzing crowds. Then head to Golden Gai around 8–9 PM when the bars are open but not yet packed. End the evening with late-night ramen at one of the side-street shops east of the station. The perfect Shinjuku day ends with a steaming bowl of noodles around 11 PM.
+              As darkness falls, Shinjuku transforms. The neon signs come alive, and the energy shifts from daytime commerce to nighttime entertainment. Start with a walk through Kabukicho to take in the sensory spectacle: the giant Godzilla head, the towering screens, the buzzing crowds. Then head to Golden Gai around 8–9 PM when the bars are open but not yet packed. End the evening with late-night ramen at one of the side-street shops east of the station. The perfect Shinjuku day ends with a steaming bowl of noodles around 11 PM.
             </p>
 
             {/* Hidden Spots */}
@@ -462,7 +462,7 @@ const ShinjukuGuide = () => {
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Hanazono Shrine at night.</strong> Tucked right behind Kabukicho's neon chaos, Hanazono Shrine is a pocket of serenity that most tourists walk right past. The shrine is illuminated at night with soft red lanterns, creating a surreal contrast with the entertainment district just meters away. Visit after 8 PM for the full effect — you'll go from sensory overload to peaceful contemplation in about 30 seconds. The shrine is also the site of a popular flea market on Sundays.
+                <strong className="text-foreground">Hanazono Shrine at night.</strong> Tucked right behind Kabukicho's neon chaos, Hanazono Shrine is a pocket of serenity that most tourists walk right past. The shrine is illuminated at night with soft red lanterns, creating a surreal contrast with the entertainment district just meters away. Visit after 8 PM for the full effect. You'll go from sensory overload to peaceful contemplation in about 30 seconds. The shrine is also the site of a popular flea market on Sundays.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">The Tokyo Metropolitan Government Building South Observatory at sunset.</strong> Most visitors know about the free observation decks, but few realize the south tower closes at 5:30 PM while the north tower stays open until 11 PM. The strategic play is to visit the south tower around 4:30 PM for the west-facing sunset views (Mt. Fuji on clear days), then walk over to the north tower after dark for the night cityscape. Two observation decks, two completely different experiences, zero cost.
@@ -474,7 +474,7 @@ const ShinjukuGuide = () => {
                 <strong className="text-foreground">The rooftop garden at Takashimaya Times Square.</strong> On the upper floors of Takashimaya, there's a small rooftop terrace that offers a completely different perspective of Shinjuku's skyline. Almost no tourists know about it. Take the elevator to the top floor, find the exit to the terrace, and enjoy a quiet moment above the chaos. Best visited in the late afternoon.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Nishi-Shinjuku's camera district.</strong> The streets immediately west of Shinjuku Station (before you reach the skyscraper area) are home to several second-hand camera shops — Kitamura Camera, Map Camera, and others. Even if you're not buying, browsing these shops is a uniquely Japanese experience, with pristine vintage cameras and lenses displayed like jewelry. Photographers on my tours always thank me for this detour.
+                <strong className="text-foreground">Nishi-Shinjuku's camera district.</strong> The streets immediately west of Shinjuku Station (before you reach the skyscraper area) are home to several second-hand camera shops like Kitamura Camera, Map Camera, and others. Even if you're not buying, browsing these shops is a uniquely Japanese experience, with pristine vintage cameras and lenses displayed like jewelry. Photographers on my tours always thank me for this detour.
               </li>
             </ul>
 
@@ -512,24 +512,24 @@ const ShinjukuGuide = () => {
               What I Actually Show Clients in This Shinjuku Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              When I bring private tour clients to Shinjuku, I don't just show them the neon signs and say "here's the famous crossing." I show them why Shinjuku looks the way it does — and how it connects to the rest of Tokyo's story.
+              When I bring private tour clients to Shinjuku, I don't just show them the neon signs and say "here's the famous crossing." I show them why Shinjuku looks the way it does, and how it connects to the rest of Tokyo's story.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Shinjuku is pure Yamanote — the "high city" side of Tokyo's ancient class divide. While the{" "}
+              Shinjuku is pure Yamanote, the "high city" side of Tokyo's ancient class divide. While the{" "}
               <Link to="/blog/tokyo-hidden-gems" className="text-accent hover:underline">
                 neighborhoods I cover in my Tokyo hidden gems guide
               </Link>
-              {" "}represent old Shitamachi merchant culture, Shinjuku represents what happened when those merchant traditions met 20th-century capitalism. The department stores, the entertainment district, the sheer commercial intensity — this is the energy of Edo-period merchants channeled through modern Japanese ambition.
+              {" "}represent old Shitamachi merchant culture, Shinjuku represents what happened when those merchant traditions met 20th-century capitalism. The department stores, the entertainment district, the sheer commercial intensity: this is the energy of Edo-period merchants channeled through modern Japanese ambition.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Understanding this context changes how you see Shinjuku. Golden Gai isn't just "a cool bar alley" — it's the last surviving fragment of the black market economy that sprang up after WWII, when this area was bombed flat and rebuilt by entrepreneurs with nothing to lose. Omoide Yokocho isn't just "a food alley" — it's a memory of post-war street vendors who fed a starving city and never left. When I explain this history to my clients, Shinjuku stops being overwhelming and starts being fascinating.
+              Understanding this context changes how you see Shinjuku. Golden Gai isn't just "a cool bar alley." It's the last surviving fragment of the black market economy that sprang up after WWII, when this area was bombed flat and rebuilt by entrepreneurs with nothing to lose. Omoide Yokocho isn't just "a food alley." It's a memory of post-war street vendors who fed a starving city and never left. When I explain this history to my clients, Shinjuku stops being overwhelming and starts being fascinating.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If you're building a{" "}
               <Link to="/blog/tokyo-itinerary-5-days" className="text-accent hover:underline">
                 5-day Tokyo itinerary
               </Link>
-              , I recommend saving Shinjuku for the evening of Day 3 or later — after you've already seen old Tokyo in Asakusa and Yanaka. The contrast makes Shinjuku's modern energy far more striking.
+              , I recommend saving Shinjuku for the evening of Day 3 or later, after you've already seen old Tokyo in Asakusa and Yanaka. The contrast makes Shinjuku's modern energy far more striking.
             </p>
 
             {/* Station Survival Guide */}
@@ -603,7 +603,7 @@ const ShinjukuGuide = () => {
                     Is Shinjuku safe at night?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Yes, Shinjuku is generally very safe at night, including the Kabukicho entertainment district. Japan has one of the lowest crime rates in the world, and violent crime against tourists is extremely rare. The main things to watch for are touts trying to lure you into overpriced bars — simply decline and keep walking. Stick to well-lit streets, don't accept drinks from strangers, and use common sense. I regularly guide evening tours through Shinjuku and have never had a safety incident.
+                    Yes, Shinjuku is generally very safe at night, including the Kabukicho entertainment district. Japan has one of the lowest crime rates in the world, and violent crime against tourists is extremely rare. The main things to watch for are touts trying to lure you into overpriced bars. Simply decline and keep walking. Stick to well-lit streets, don't accept drinks from strangers, and use common sense. I regularly guide evening tours through Shinjuku and have never had a safety incident.
                   </p>
                 </div>
                 <div>
@@ -611,7 +611,7 @@ const ShinjukuGuide = () => {
                     How long should I spend in Shinjuku?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    For a thorough visit, plan half a day to a full day. If you're short on time, an evening visit (5 PM onwards) captures Shinjuku at its most atmospheric — start with Omoide Yokocho at sunset, explore Kabukicho and Golden Gai after dark, and end with late-night ramen. If you can spend a full day, add morning time at Shinjuku Gyoen and an afternoon exploring the department stores and food halls.
+                    For a thorough visit, plan half a day to a full day. If you're short on time, an evening visit (5 PM onwards) captures Shinjuku at its most atmospheric: start with Omoide Yokocho at sunset, explore Kabukicho and Golden Gai after dark, and end with late-night ramen. If you can spend a full day, add morning time at Shinjuku Gyoen and an afternoon exploring the department stores and food halls.
                   </p>
                 </div>
                 <div>
@@ -619,7 +619,7 @@ const ShinjukuGuide = () => {
                     What is Shinjuku best known for?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Shinjuku is best known for its vibrant nightlife (Golden Gai and Kabukicho), the world's busiest train station, stunning city views from the free Tokyo Metropolitan Government Building observation decks, Shinjuku Gyoen National Garden, and its incredible density of restaurants and bars. It's essentially Tokyo at maximum intensity — neon lights, towering buildings, and endless entertainment options packed into one district.
+                    Shinjuku is best known for its vibrant nightlife (Golden Gai and Kabukicho), the world's busiest train station, stunning city views from the free Tokyo Metropolitan Government Building observation decks, Shinjuku Gyoen National Garden, and its incredible density of restaurants and bars. It's essentially Tokyo at maximum intensity: neon lights, towering buildings, and endless entertainment options packed into one district.
                   </p>
                 </div>
                 <div>
@@ -627,7 +627,7 @@ const ShinjukuGuide = () => {
                     Is Kabukicho safe for tourists?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Kabukicho is safe for tourists and has been significantly cleaned up in recent years with increased police presence and family-friendly developments. The main risk is being approached by touts who try to lure you into bars or clubs with promises of cheap drinks — these often lead to inflated bills. The simple rule is: if someone approaches you on the street, decline politely and move on. Stick to establishments with clearly posted prices and good reviews, and you'll have a great time.
+                    Kabukicho is safe for tourists and has been significantly cleaned up in recent years with increased police presence and family-friendly developments. The main risk is being approached by touts who try to lure you into bars or clubs with promises of cheap drinks. These often lead to inflated bills. The simple rule is: if someone approaches you on the street, decline politely and move on. Stick to establishments with clearly posted prices and good reviews, and you'll have a great time.
                   </p>
                 </div>
               </div>
@@ -644,7 +644,7 @@ const ShinjukuGuide = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Shinjuku Guide: What a Licensed Guide Actually Shows Clients",
-            "description": "Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time — and what to skip.",
+            "description": "Shinjuku is Tokyo's most overwhelming neighborhood. A licensed guide who brings clients here weekly explains what's worth your time, and what to skip.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
@@ -679,7 +679,7 @@ const ShinjukuGuide = () => {
                 "name": "Is Shinjuku safe at night?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, Shinjuku is generally very safe at night, including Kabukicho. Japan has one of the lowest crime rates in the world. The main things to watch for are touts trying to lure you into overpriced bars — simply decline and keep walking. Use common sense and stick to well-lit streets.",
+                  "text": "Yes, Shinjuku is generally very safe at night, including Kabukicho. Japan has one of the lowest crime rates in the world. The main things to watch for are touts trying to lure you into overpriced bars. Simply decline and keep walking. Use common sense and stick to well-lit streets.",
                 },
               },
               {

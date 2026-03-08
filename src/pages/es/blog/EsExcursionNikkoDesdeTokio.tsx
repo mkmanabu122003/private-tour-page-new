@@ -80,14 +80,14 @@ const EsExcursionNikkoDesdeTokio = () => {
               Un poco de historia: el mausoleo de Tokugawa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Para entender Nikko hay que entender a Tokugawa Ieyasu, el shogun que unificó Japón en 1603 y fundó una dinastía que gobernaría durante más de 250 años. Cuando Ieyasu murió en 1616, su nieto Iemitsu ordenó la construcción de un mausoleo que reflejara el poder absoluto de la familia. El resultado fue Toshogu, un complejo de santuarios tan elaborado y tan cargado de simbolismo político que no tiene equivalente en todo Japón. Piensa en ello como el Escorial en España — un mausoleo de poder. No es un templo donde ir a meditar en silencio. Es una declaración: "aquí descansa quien gobernó todo esto".
+              Para entender Nikko hay que entender a Tokugawa Ieyasu, el shogun que unificó Japón en 1603 y fundó una dinastía que gobernaría durante más de 250 años. Cuando Ieyasu murió en 1616, su nieto Iemitsu ordenó la construcción de un mausoleo que reflejara el poder absoluto de la familia. El resultado fue Toshogu, un complejo de santuarios tan elaborado y tan cargado de simbolismo político que no tiene equivalente en todo Japón. Piensa en ello como el Escorial en España, un mausoleo de poder. No es un templo donde ir a meditar en silencio. Es una declaración: "aquí descansa quien gobernó todo esto".
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              Lo que hace especial a Nikko (naturaleza + historia)
+              Lo que hace especial a Nikko: naturaleza + historia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Lo que diferencia a Nikko de otros destinos históricos japoneses es su entorno natural. Los santuarios no están en medio de una ciudad moderna sino envueltos en un bosque de cedros japoneses (sugi) que llevan ahí más de 400 años. Algunos de estos árboles superan los 40 metros de altura y sus troncos son tan gruesos que tres personas no pueden abrazarlos. La luz que se filtra entre las copas, el musgo que cubre las piedras, el sonido del agua corriendo por todas partes — todo esto crea una experiencia sensorial que ninguna foto puede capturar. Es la naturaleza y la historia coexistiendo de una forma que en Japón solo encuentras aquí.
+              Lo que diferencia a Nikko de otros destinos históricos japoneses es su entorno natural. Los santuarios no están en medio de una ciudad moderna sino envueltos en un bosque de cedros japoneses (sugi) que llevan ahí más de 400 años. Algunos de estos árboles superan los 40 metros de altura y sus troncos son tan gruesos que tres personas no pueden abrazarlos. La luz que se filtra entre las copas, el musgo que cubre las piedras, el sonido del agua corriendo por todas partes... todo esto crea una experiencia sensorial que ninguna foto puede capturar. Es la naturaleza y la historia coexistiendo de una forma que en Japón solo encuentras aquí.
             </p>
 
             {/* Cómo llegar */}
@@ -109,7 +109,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               Opción 2: JR Shinkansen + línea local (la más rápida)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si tienes el Japan Rail Pass, esta opción sale "gratis" dentro de tu pase. Tomas el Tohoku Shinkansen desde Tokio o Ueno hasta Utsunomiya (unos 50 minutos) y ahí cambias a la línea JR Nikko (otros 45 minutos). El tiempo total es de aproximadamente 1 hora y 40 minutos, ligeramente más rápido que Tobu. Sin JR Pass, el coste es significativamente mayor — alrededor de 5.500 yenes por trayecto — así que solo merece la pena si ya tienes el pase activado.
+              Si tienes el Japan Rail Pass, esta opción sale "gratis" dentro de tu pase. Tomas el Tohoku Shinkansen desde Tokio o Ueno hasta Utsunomiya (unos 50 minutos) y ahí cambias a la línea JR Nikko (otros 45 minutos). El tiempo total es de aproximadamente 1 hora y 40 minutos, ligeramente más rápido que Tobu. Sin JR Pass, el coste es significativamente mayor, alrededor de 5.500 yenes por trayecto, así que solo merece la pena si ya tienes el pase activado.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -131,7 +131,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               Toshogu: el santuario más decorado de Japón
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El santuario Toshogu es el plato principal y necesitas al menos 90 minutos para verlo con calma. La puerta Yomeimon, con más de 500 tallas de dragones, flores, sabios y criaturas míticas, es la pieza central. Los artesanos que la construyeron tardaron 12 años. Fíjate en que una de las columnas tiene el patrón tallado al revés — se hizo a propósito. En la creencia japonesa, la perfección invita a la decadencia, así que el "error" deliberado protege al edificio de la ruina. Ese tipo de detalle es lo que un guía te puede señalar y una audioguía no.
+              El santuario Toshogu es el plato principal y necesitas al menos 90 minutos para verlo con calma. La puerta Yomeimon, con más de 500 tallas de dragones, flores, sabios y criaturas míticas, es la pieza central. Los artesanos que la construyeron tardaron 12 años. Fíjate en que una de las columnas tiene el patrón tallado al revés: se hizo a propósito. En la creencia japonesa, la perfección invita a la decadencia, así que el "error" deliberado protege al edificio de la ruina. Ese tipo de detalle es lo que un guía te puede señalar y una audioguía no.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dentro del complejo encontrarás también los famosos tres monos sabios (no ver, no oír, no hablar) tallados en el establo sagrado, y el gato durmiente (nemuri-neko) sobre la puerta que lleva a la tumba de Ieyasu. La subida a la tumba, por unas 200 escaleras de piedra entre cedros inmensos, es uno de los momentos más sobrecogedores de toda la excursión. La entrada a Toshogu cuesta 1.300 yenes para adultos.
@@ -141,7 +141,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               Puente Shinkyo y el río Daiya
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El puente Shinkyo, pintado en rojo lacado brillante, cruza el río Daiya justo a la entrada de la zona de santuarios. Es considerado uno de los tres puentes más bellos de Japón. Puedes cruzarlo por 300 yenes o simplemente admirarlo desde la orilla — la vista desde abajo, con el agua cristalina del río, los árboles y el puente rojo enmarcando la escena, es honestamente igual de buena. Es un punto de parada perfecto para tomar fotos antes de subir hacia los santuarios.
+              El puente Shinkyo, pintado en rojo lacado brillante, cruza el río Daiya justo a la entrada de la zona de santuarios. Es considerado uno de los tres puentes más bellos de Japón. Puedes cruzarlo por 300 yenes o simplemente admirarlo desde la orilla. La vista desde abajo, con el agua cristalina del río, los árboles y el puente rojo enmarcando la escena, es honestamente igual de buena. Es un punto de parada perfecto para tomar fotos antes de subir hacia los santuarios.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -167,14 +167,14 @@ const EsExcursionNikkoDesdeTokio = () => {
               Primavera y verano
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La primavera trae los cerezos en flor a Nikko, normalmente una o dos semanas después de Tokio por la diferencia de altitud. El verano es verde, exuberante y considerablemente más fresco que Tokio — una ventaja real cuando la capital está a 35 grados y 90% de humedad. Nikko en verano funciona casi como un refugio de montaña: bosques densos, cascadas con niebla y temperaturas que pueden ser 5 a 8 grados más bajas que en la ciudad.
+              La primavera trae los cerezos en flor a Nikko, normalmente una o dos semanas después de Tokio por la diferencia de altitud. El verano es verde, exuberante y considerablemente más fresco que Tokio, una ventaja real cuando la capital está a 35 grados y 90% de humedad. Nikko en verano funciona casi como un refugio de montaña: bosques densos, cascadas con niebla y temperaturas que pueden ser 5 a 8 grados más bajas que en la ciudad.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Invierno: Nikko bajo la nieve
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Nikko en invierno es un secreto bien guardado. La nieve cubre los tejados de los santuarios y los cedros, creando un paisaje de postal que muy pocos turistas ven porque la mayoría evita viajar en enero y febrero. Hay menos servicios de autobús hacia el Lago Chuzenji, pero los santuarios siguen abiertos y la experiencia de caminar entre los cedros nevados, prácticamente solo, es difícil de superar. Lleva ropa de abrigo seria — las temperaturas pueden bajar a -5 grados.
+              Nikko en invierno es un secreto bien guardado. La nieve cubre los tejados de los santuarios y los cedros, creando un paisaje de postal que muy pocos turistas ven porque la mayoría evita viajar en enero y febrero. Hay menos servicios de autobús hacia el Lago Chuzenji, pero los santuarios siguen abiertos y la experiencia de caminar entre los cedros nevados, prácticamente solo, es difícil de superar. Lleva ropa de abrigo seria: las temperaturas pueden bajar a -5 grados.
             </p>
 
             {/* ¿Con guía o por tu cuenta? */}
@@ -200,7 +200,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               Mi experiencia guiando en Nikko
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Después de tantas visitas a Nikko, lo que más disfruto es ver la cara de mis invitados cuando entienden la escala de lo que están viendo. Toshogu no es solo un santuario bonito — es el proyecto arquitectónico más ambicioso de toda la era Edo, financiado con el equivalente a miles de millones de dólares actuales, construido por los mejores artesanos del país. Cuando explico eso, cuando señalo la columna invertida, cuando cuento la historia del gato que duerme porque ya no hay guerras que vigilar, el lugar cobra vida de una forma que una guía de papel no puede lograr. Es exactamente por eso que ofrecemos nuestro{" "}
+              Después de tantas visitas a Nikko, lo que más disfruto es ver la cara de mis invitados cuando entienden la escala de lo que están viendo. Toshogu no es solo un santuario bonito, es el proyecto arquitectónico más ambicioso de toda la era Edo, financiado con el equivalente a miles de millones de dólares actuales, construido por los mejores artesanos del país. Cuando explico eso, cuando señalo la columna invertida, cuando cuento la historia del gato que duerme porque ya no hay guerras que vigilar, el lugar cobra vida de una forma que una guía de papel no puede lograr. Es exactamente por eso que ofrecemos nuestro{" "}
               <Link to="/es/tours/nikko-day-trip" className="text-accent hover:underline">
                 tour guiado de un día a Nikko
               </Link>

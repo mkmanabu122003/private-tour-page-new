@@ -22,7 +22,7 @@ const EsValeLaPenaGuia = () => {
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
           src="/images/tour-photos/tour-photo-2.jpg"
-          alt="Tour privado en Tokio — ¿vale la pena un guía?"
+          alt="Tour privado en Tokio, ¿vale la pena un guía?"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -55,7 +55,7 @@ const EsValeLaPenaGuia = () => {
               </span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu — Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours privados completados en Tokio. Esta es una respuesta honesta de alguien que se dedica a esto profesionalmente.
+              Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours privados completados en Tokio. Esta es una respuesta honesta de alguien que se dedica a esto profesionalmente.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ const EsValeLaPenaGuia = () => {
               Entonces, ¿por qué contratarías un guía turístico privado?
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Después de haber guiado más de 500 tours en Tokio, he visto los momentos en los que un guía marca una diferencia real — y los momentos en los que los viajeros están perfectamente bien por su cuenta. Esto no es un discurso de ventas. Es un análisis honesto de alguien que ha visto ambos lados, para que puedas tomar la decisión correcta para tu viaje.
+              Después de haber guiado más de 500 tours en Tokio, he visto los momentos en los que un guía marca una diferencia real, y los momentos en los que los viajeros están perfectamente bien por su cuenta. Esto no es un discurso de ventas. Es un análisis honesto de alguien que ha visto ambos lados, para que puedas tomar la decisión correcta para tu viaje.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Creo que las mejores decisiones de viaje surgen de información honesta, no de presión. Si lees este artículo y decides que no necesitas un guía, es una elección perfectamente válida. Tokio seguirá siendo increíble.
@@ -88,14 +88,14 @@ const EsValeLaPenaGuia = () => {
               Visitantes Primerizos que Buscan Profundidad, No Solo Selfies
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tokio puede resultar abrumador en tu primera visita. No porque sea difícil de recorrer — no lo es — sino porque hay tanto sucediendo bajo la superficie que no puedes ver. Un templo no es solo un edificio; es una pieza viva de la historia con rituales, simbolismo y funciones comunitarias que no están escritas en los paneles informativos.
+              Tokio puede resultar abrumador en tu primera visita. No porque sea difícil de recorrer (no lo es), sino porque hay tanto sucediendo bajo la superficie que no puedes ver. Un templo no es solo un edificio; es una pieza viva de la historia con rituales, simbolismo y funciones comunitarias que no están escritas en los paneles informativos.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En mi{" "}
               <Link to="/es/tours/asakusa" className="text-accent hover:underline">
                 tour por Asakusa
               </Link>
-              , por ejemplo, no solo señalo el Templo Senso-ji — explico por qué los guardianes de la puerta tienen un aspecto feroz, qué significa el ritual del incienso y por qué los papeles de fortuna atados en los bastidores pueden ser en realidad fortunas de "mala suerte" que los visitantes dejan atrás. Estas capas de significado transforman el turismo en comprensión.
+              , por ejemplo, no solo señalo el Templo Senso-ji, explico por qué los guardianes de la puerta tienen un aspecto feroz, qué significa el ritual del incienso y por qué los papeles de fortuna atados en los bastidores pueden ser en realidad fortunas de "mala suerte" que los visitantes dejan atrás. Estas capas de significado transforman el turismo en comprensión.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los visitantes primerizos me dicen constantemente que el contexto cultural lo cambia todo. Es la diferencia entre "vi un templo" y "entendí por qué este templo ha sido el corazón espiritual de este barrio durante 1.400 años."
@@ -115,7 +115,7 @@ const EsValeLaPenaGuia = () => {
               Familias con Niños
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Viajar con niños por Tokio es maravilloso pero requiere gestionar el ritmo. Los niños se cansan, tienen hambre y se aburren en momentos diferentes a los adultos. Un guía ajusta la ruta en tiempo real — sabemos dónde están los baños más cercanos, qué templos tienen espacios para que los niños corran y cómo mantener a los viajeros más jóvenes interesados con historias y elementos interactivos.
+              Viajar con niños por Tokio es maravilloso pero requiere gestionar el ritmo. Los niños se cansan, tienen hambre y se aburren en momentos diferentes a los adultos. Un guía ajusta la ruta en tiempo real: sabemos dónde están los baños más cercanos, qué templos tienen espacios para que los niños corran y cómo mantener a los viajeros más jóvenes interesados con historias y elementos interactivos.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nuestras rutas son mayormente planas y aptas para cochecitos. Recibimos regularmente a familias con niños de todas las edades, y he desarrollado técnicas de narración que mantienen a los niños fascinados mientras los adultos obtienen la profundidad cultural que buscan.
@@ -147,7 +147,7 @@ const EsValeLaPenaGuia = () => {
               <Link to="/es/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>{" "}
-              implican sistemas de transporte complejos, múltiples conexiones y destinos que son mucho menos amigables con el inglés que el centro de Tokio. Solo Hakone implica trenes, teleféricos, funiculares, barcos y autobuses — todos operados por diferentes compañías con diferentes pases y horarios.
+              implican sistemas de transporte complejos, múltiples conexiones y destinos que son mucho menos amigables con el inglés que el centro de Tokio. Solo Hakone implica trenes, teleféricos, funiculares, barcos y autobuses, todos operados por diferentes compañías con diferentes pases y horarios.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Un guía se encarga de toda la logística para que puedas concentrarte en la experiencia. También ajustan el itinerario según el clima (crucial para las vistas del Monte Fuji en Hakone) y las multitudes. Para las excursiones de un día, el valor de un guía suele ser más alto porque el ahorro de tiempo y el alivio logístico son más significativos.
@@ -158,21 +158,21 @@ const EsValeLaPenaGuia = () => {
               Cuándo Podrías No Necesitar un Guía
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Creo en la transparencia — un guía no es adecuado para todos, y exagerar las ventajas sería un mal servicio tanto para ti como para mí.
+              Creo en la transparencia: un guía no es adecuado para todos, y exagerar las ventajas sería un mal servicio tanto para ti como para mí.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Visitantes Repetidos que Conocen lo Básico
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si ya has estado en Tokio antes y conoces el sistema de trenes, las normas culturales y la geografía general, puede que no necesites un guía para las atracciones principales. Dicho esto, incluso los visitantes repetidos a menudo contratan un guía para intereses específicos — una inmersión profunda en un barrio que no han explorado, o una excursión de un día con la que no están familiarizados. Pero para revisitar tus lugares favoritos, ya te las apañas solo.
+              Si ya has estado en Tokio antes y conoces el sistema de trenes, las normas culturales y la geografía general, puede que no necesites un guía para las atracciones principales. Dicho esto, incluso los visitantes repetidos a menudo contratan un guía para intereses específicos: una inmersión profunda en un barrio que no han explorado, o una excursión de un día con la que no están familiarizados. Pero para revisitar tus lugares favoritos, ya te las apañas solo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Exploradores Independientes que Disfrutan Perdiéndose
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Algunas de las mejores experiencias de viaje surgen de deambular sin plan — descubrir una pequeña tienda de ramen en un callejón trasero, tropezar con un festival local o perderse en un barrio del que nunca habías oído hablar. Si este es tu estilo de viaje, un tour guiado estructurado podría sentirse restrictivo. Tokio es increíblemente seguro para pasear, incluso de noche, y la serendipia del descubrimiento no planificado es genuinamente una de las alegrías de visitar Japón.
+              Algunas de las mejores experiencias de viaje surgen de deambular sin plan, descubrir una pequeña tienda de ramen en un callejón trasero, tropezar con un festival local o perderse en un barrio del que nunca habías oído hablar. Si este es tu estilo de viaje, un tour guiado estructurado podría sentirse restrictivo. Tokio es increíblemente seguro para pasear, incluso de noche, y la serendipia del descubrimiento no planificado es genuinamente una de las alegrías de visitar Japón.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -204,17 +204,17 @@ const EsValeLaPenaGuia = () => {
               La cultura de Japón tiene capas que no son inmediatamente visibles. ¿Por qué hay dos tipos diferentes de cuerda en los santuarios? ¿Por qué algunos restaurantes no aceptan reservas? ¿Por qué ese edificio aparentemente ordinario es en realidad un tesoro nacional? Un guía proporciona el sistema operativo cultural que hace que todo encaje.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Puedes buscar datos individuales en Google, pero un guía los entrelaza en una narrativa que se construye a lo largo del día. Al final de un tour, no solo sabes más datos sobre Japón — entiendes la lógica subyacente de cómo funciona la cultura japonesa, lo que enriquece el resto de tu viaje incluso después de que el tour termine.
+              Puedes buscar datos individuales en Google, pero un guía los entrelaza en una narrativa que se construye a lo largo del día. Al final de un tour, no solo sabes más datos sobre Japón, entiendes la lógica subyacente de cómo funciona la cultura japonesa, lo que enriquece el resto de tu viaje incluso después de que el tour termine.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Lugares Ocultos y Conexiones Locales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Cada guía tiene lugares que no aparecen en los mapas turísticos — el pequeño jardín de un templo que siempre está vacío, la calle lateral con el mejor taiyaki de la ciudad, el mirador que te da una composición fotográfica perfecta. No son exactamente secretos, pero son el tipo de conocimiento local que lleva años de caminar por las mismas calles para desarrollar.
+              Cada guía tiene lugares que no aparecen en los mapas turísticos: el pequeño jardín de un templo que siempre está vacío, la calle lateral con el mejor taiyaki de la ciudad, el mirador que te da una composición fotográfica perfecta. No son exactamente secretos, pero son el tipo de conocimiento local que lleva años de caminar por las mismas calles para desarrollar.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              También tengo relaciones con comerciantes locales, dueños de restaurantes y sacerdotes de templos. Estas conexiones a veces abren puertas que de otro modo estarían cerradas — una conversación rápida en japonés puede conseguirte acceso a una demostración de un taller, una degustación o una historia que nunca escucharías de otra manera.
+              También tengo relaciones con comerciantes locales, dueños de restaurantes y sacerdotes de templos. Estas conexiones a veces abren puertas que de otro modo estarían cerradas. Una conversación rápida en japonés puede conseguirte acceso a una demostración de un taller, una degustación o una historia que nunca escucharías de otra manera.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -224,7 +224,7 @@ const EsValeLaPenaGuia = () => {
               El Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) es la única certificación profesional de guía reconocida a nivel nacional en Japón. Requiere aprobar exámenes exhaustivos que cubren historia japonesa, geografía, cultura, política y dominio del inglés. Solo alrededor del 20% de los examinados aprueban.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Esto significa que tu guía tiene un conocimiento profundo verificado — no solo guiones memorizados, sino una comprensión genuina de la cultura e historia japonesas que le permite responder preguntas inesperadas y proporcionar un contexto que va más allá de la narrativa turística estándar. Puedes preguntar sobre cualquier cosa y recibirás una respuesta reflexiva e informada.
+              Esto significa que tu guía tiene un conocimiento profundo verificado, no solo guiones memorizados, sino una comprensión genuina de la cultura e historia japonesas que le permite responder preguntas inesperadas y proporcionar un contexto que va más allá de la narrativa turística estándar. Puedes preguntar sobre cualquier cosa y recibirás una respuesta reflexiva e informada.
             </p>
 
             {/* Cuánto Cuesta */}
@@ -247,7 +247,7 @@ const EsValeLaPenaGuia = () => {
               <Link to="/es/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>{" "}
-              cuestan entre ¥50.000 y ¥60.000 por un día completo (7-10 horas). Incluyen servicio de guía, planificación del itinerario y navegación completa del transporte — esencialmente, tienes un conserje personal durante todo el día.
+              cuestan entre ¥50.000 y ¥60.000 por un día completo (7-10 horas). Incluyen servicio de guía, planificación del itinerario y navegación completa del transporte: esencialmente, tienes un conserje personal durante todo el día.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Para la opción más flexible, nuestro{" "}
@@ -264,7 +264,7 @@ const EsValeLaPenaGuia = () => {
               Al considerar el coste, piensa en lo que obtienes: un día completo de atención personalizada de un profesional certificado que habla tu idioma, conoce la cultura en profundidad, se encarga de toda la logística y adapta la experiencia a tus intereses exactos. Compáralo con las horas que pasarías planificando, navegando y potencialmente perdiéndote joyas ocultas.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Los viajeros que obtienen más valor son aquellos que tratan la tarifa del guía no como un gasto, sino como una inversión en la calidad de su experiencia. El tiempo es lo más valioso que tienes en vacaciones — un guía te ayuda a aprovechar al máximo cada hora.
+              Los viajeros que obtienen más valor son aquellos que tratan la tarifa del guía no como un gasto, sino como una inversión en la calidad de su experiencia. El tiempo es lo más valioso que tienes en vacaciones, y un guía te ayuda a aprovechar al máximo cada hora.
             </p>
 
             {/* Guía con Licencia vs. sin Licencia */}
@@ -272,26 +272,26 @@ const EsValeLaPenaGuia = () => {
               Lo que Realmente Obtienes con un Guía con Licencia vs. uno sin Licencia
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No todos los guías turísticos en Tokio son iguales. Japón cuenta con una certificación nacional específica para guías profesionales — el <strong className="text-foreground">Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士)</strong> — y entender la diferencia importa a la hora de valorar la calidad de tu experiencia.
+              No todos los guías turísticos en Tokio son iguales. Japón cuenta con una certificación nacional específica para guías profesionales, el <strong className="text-foreground">Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士)</strong>, y entender la diferencia importa a la hora de valorar la calidad de tu experiencia.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Lo que Exige la Licencia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El examen de la licencia nacional de guía abarca historia japonesa, geografía, cultura, actualidad y dominio de una lengua extranjera. La tasa de aprobados ronda el 10-20% según el año, lo que la convierte en una de las certificaciones profesionales más difíciles de Japón. Los guías con licencia han demostrado un conocimiento profundo y verificado — no se trata de guiones memorizados para las rutas turísticas más populares.
+              El examen de la licencia nacional de guía abarca historia japonesa, geografía, cultura, actualidad y dominio de una lengua extranjera. La tasa de aprobados ronda el 10-20% según el año, lo que la convierte en una de las certificaciones profesionales más difíciles de Japón. Los guías con licencia han demostrado un conocimiento profundo y verificado, no se trata de guiones memorizados para las rutas turísticas más populares.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               El Contexto Legal
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Hasta 2018, solo los guías con licencia podían ofrecer legalmente servicios de guía remunerados en Japón. La ley se modificó para permitir que guías sin licencia también operaran, pero la licencia sigue siendo el único estándar de calidad reconocido a nivel nacional. Cuando contratas a un guía con licencia, estás contratando a alguien que ha superado exámenes gubernamentales rigurosos. Cuando contratas a un guía sin licencia, la calidad puede variar enormemente — desde locales apasionados con conocimientos profundos hasta personas que empezaron a hacer de guía la semana pasada.
+              Hasta 2018, solo los guías con licencia podían ofrecer legalmente servicios de guía remunerados en Japón. La ley se modificó para permitir que guías sin licencia también operaran, pero la licencia sigue siendo el único estándar de calidad reconocido a nivel nacional. Cuando contratas a un guía con licencia, estás contratando a alguien que ha superado exámenes gubernamentales rigurosos. Cuando contratas a un guía sin licencia, la calidad puede variar enormemente, desde locales apasionados con conocimientos profundos hasta personas que empezaron a hacer de guía la semana pasada.
             </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Diferencias Prácticas que Notarás
             </h3>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Profundidad de conocimiento:</strong> Los guías con licencia pueden responder preguntas inesperadas sobre historia, religión, política y cultura con matiz y precisión. En mis tours, los invitados se salen constantemente del guion con preguntas como "¿Por qué este santuario tiene un símbolo de estrella?" o "¿Qué comía la gente corriente durante el período Edo?" — y puedo dar respuestas detalladas e informadas porque la preparación para la licencia cubre estos temas en profundidad.
+                <strong className="text-foreground">Profundidad de conocimiento:</strong> Los guías con licencia pueden responder preguntas inesperadas sobre historia, religión, política y cultura con matiz y precisión. En mis tours, los invitados se salen constantemente del guion con preguntas como "¿Por qué este santuario tiene un símbolo de estrella?" o "¿Qué comía la gente corriente durante el período Edo?", y puedo dar respuestas detalladas e informadas porque la preparación para la licencia cubre estos temas en profundidad.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Dominio del idioma:</strong> La licencia exige un nivel demostrado de competencia en una lengua extranjera. No te encontrarás con barreras de comunicación ni malentendidos incómodos que puedan arruinar la experiencia.
@@ -310,12 +310,12 @@ const EsValeLaPenaGuia = () => {
             </p>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">La Pregunta de las Monedas en Senso-ji:</strong> Una pareja de California me preguntó sobre el significado de las monedas que se lanzan en la caja de ofrendas de Senso-ji. Lo que empezó como una respuesta rápida se convirtió en una conversación de 20 minutos sobre el período Edo, la relación de la clase mercantil con los templos budistas y por qué la moneda de ¥5 tiene un significado especial. Me dijeron después que fue el momento más memorable de todo su viaje a Japón — no el templo en sí, sino la comprensión de lo que el templo representaba en la vida del antiguo Edo. Eso es algo que simplemente no puedes obtener de un panel informativo.
+                <strong className="text-foreground">La Pregunta de las Monedas en Senso-ji:</strong> Una pareja de California me preguntó sobre el significado de las monedas que se lanzan en la caja de ofrendas de Senso-ji. Lo que empezó como una respuesta rápida se convirtió en una conversación de 20 minutos sobre el período Edo, la relación de la clase mercantil con los templos budistas y por qué la moneda de ¥5 tiene un significado especial. Me dijeron después que fue el momento más memorable de todo su viaje a Japón, no el templo en sí, sino la comprensión de lo que el templo representaba en la vida del antiguo Edo. Eso es algo que simplemente no puedes obtener de un panel informativo.
               </p>
             </div>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong className="text-foreground">El Cambio de Planes por Lluvia:</strong> Una familia de Londres había reservado mi excursión de un día a Kamakura, pero una lluvia intensa empezó a media mañana. En lugar de seguir adelante con la ruta de senderismo al aire libre en condiciones desagradables, reorganicé todo el itinerario — visitamos una sala de meditación zen cubierta, disfrutamos de un almuerzo largo en un restaurante que conozco bien donde el chef salió a explicar cada plato, exploramos calles comerciales cubiertas y terminamos en un templo que en realidad tiene más atmósfera bajo la lluvia. Le dieron 5 estrellas y dijeron que la lluvia lo mejoró, no lo empeoró. Sin guía, habrían pasado el día frustrados y empapados.
+                <strong className="text-foreground">El Cambio de Planes por Lluvia:</strong> Una familia de Londres había reservado mi excursión de un día a Kamakura, pero una lluvia intensa empezó a media mañana. En lugar de seguir adelante con la ruta de senderismo al aire libre en condiciones desagradables, reorganicé todo el itinerario: visitamos una sala de meditación zen cubierta, disfrutamos de un almuerzo largo en un restaurante que conozco bien donde el chef salió a explicar cada plato, exploramos calles comerciales cubiertas y terminamos en un templo que en realidad tiene más atmósfera bajo la lluvia. Le dieron 5 estrellas y dijeron que la lluvia lo mejoró, no lo empeoró. Sin guía, habrían pasado el día frustrados y empapados.
               </p>
             </div>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
@@ -336,7 +336,7 @@ const EsValeLaPenaGuia = () => {
                 <strong className="text-foreground">Segunda o tercera visita a Tokio:</strong> Si ya conoces el sistema de trenes, tienes tus barrios favoritos y entiendes las bases culturales, probablemente no necesites un guía para las visitas turísticas habituales. Podrías beneficiarte de uno para una inmersión específica (un tour gastronómico, un paseo centrado en la historia o una excursión a una zona que no has explorado), pero para revisitar lugares que ya conoces y te encantan, tu propia compañía es suficiente.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Viajeros mochileros que priorizan la espontaneidad:</strong> Si tu filosofía de viaje consiste en deambular sin plan, descubrir cosas por casualidad y gastar lo mínimo posible, un tour guiado estructurado te resultará restrictivo. Y está bien — Tokio es increíblemente seguro y fácil de recorrer. Algunos de los mejores recuerdos de viaje surgen de perderse a propósito.
+                <strong className="text-foreground">Viajeros mochileros que priorizan la espontaneidad:</strong> Si tu filosofía de viaje consiste en deambular sin plan, descubrir cosas por casualidad y gastar lo mínimo posible, un tour guiado estructurado te resultará restrictivo. Y está bien. Tokio es increíblemente seguro y fácil de recorrer. Algunos de los mejores recuerdos de viaje surgen de perderse a propósito.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Quienes prefieren explorar a su propio ritmo:</strong> Algunas personas simplemente prefieren no tener un horario, aunque sea flexible. Si la idea de quedar con alguien a una hora fija y seguir cualquier tipo de ruta te genera más estrés que alivio, un guía no es para ti. Descárgate una buena aplicación de recorridos a pie y ve a tu aire.
@@ -362,13 +362,13 @@ const EsValeLaPenaGuia = () => {
                 ha superado exámenes rigurosos y está registrado en la Agencia de Turismo de Japón. Es el indicador de calidad más fiable que existe.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Lee las reseñas con atención.</strong> Busca reseñas que mencionen detalles concretos — historias específicas que el guía contó, cómo gestionó situaciones imprevistas, si se adaptó a los intereses del grupo. Las reseñas genéricas del tipo "¡gran guía!" te dicen menos que los relatos detallados de la experiencia real.
+                <strong className="text-foreground">Lee las reseñas con atención.</strong> Busca reseñas que mencionen detalles concretos: historias específicas que el guía contó, cómo gestionó situaciones imprevistas, si se adaptó a los intereses del grupo. Las reseñas genéricas del tipo "¡gran guía!" te dicen menos que los relatos detallados de la experiencia real.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Entiende la diferencia entre tours privados y grupales.</strong> Los tours privados (como los que ofrecemos) te dan la atención exclusiva del guía. Los tours grupales son más baratos por persona pero ofrecen menos flexibilidad y personalización. Para familias, parejas y cualquier persona con intereses específicos, los tours privados aportan un valor significativamente mayor.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Conoce el rango de precios.</strong> Los tours privados a pie en Tokio suelen costar entre ¥25.000 y ¥40.000 por grupo para experiencias de medio día. Los tours de día completo y las excursiones a Kamakura, Hakone o Nikko oscilan entre ¥50.000 y ¥60.000. Son precios por grupo, no por persona, así que el coste por persona se reduce con grupos más grandes. Ten precaución con guías que cobren significativamente menos — puede indicar falta de experiencia o de credenciales.
+                <strong className="text-foreground">Conoce el rango de precios.</strong> Los tours privados a pie en Tokio suelen costar entre ¥25.000 y ¥40.000 por grupo para experiencias de medio día. Los tours de día completo y las excursiones a Kamakura, Hakone o Nikko oscilan entre ¥50.000 y ¥60.000. Son precios por grupo, no por persona, así que el coste por persona se reduce con grupos más grandes. Ten precaución con guías que cobren significativamente menos, ya que puede indicar falta de experiencia o de credenciales.
               </li>
             </ul>
 
@@ -378,7 +378,7 @@ const EsValeLaPenaGuia = () => {
                 ¿Aún no te decides? Echa un vistazo a mis tours y comprueba si alguno encaja con lo que buscas.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Estaré encantado de ayudarte a decidir si un tour guiado es adecuado para tu viaje. Cuéntame tus planes de viaje y te daré una recomendación honesta — incluso si esa recomendación es "estarás bien por tu cuenta."
+                Estaré encantado de ayudarte a decidir si un tour guiado es adecuado para tu viaje. Cuéntame tus planes de viaje y te daré una recomendación honesta, incluso si esa recomendación es "estarás bien por tu cuenta."
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/es/tours" className="btn-accent">
@@ -409,7 +409,7 @@ const EsValeLaPenaGuia = () => {
                     ¿Se habla inglés ampliamente en Tokio sin guía?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Tokio se ha vuelto cada vez más accesible en inglés, con señalización en estaciones, atracciones principales y muchos restaurantes que ofrecen información en inglés. Puedes moverte por la ciudad por tu cuenta usando Google Maps y aplicaciones de traducción. Sin embargo, las conversaciones más profundas — con tenderos, chefs de restaurantes, sacerdotes de templos — siguen requiriendo japonés. Un guía cubre ese vacío y desbloquea interacciones que de otra manera serían imposibles.
+                    Tokio se ha vuelto cada vez más accesible en inglés, con señalización en estaciones, atracciones principales y muchos restaurantes que ofrecen información en inglés. Puedes moverte por la ciudad por tu cuenta usando Google Maps y aplicaciones de traducción. Sin embargo, las conversaciones más profundas, con tenderos, chefs de restaurantes, sacerdotes de templos, siguen requiriendo japonés. Un guía cubre ese vacío y desbloquea interacciones que de otra manera serían imposibles.
                   </p>
                 </div>
                 <div>

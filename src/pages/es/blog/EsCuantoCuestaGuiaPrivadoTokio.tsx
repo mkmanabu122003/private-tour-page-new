@@ -62,10 +62,10 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              "¿Cuánto cuesta un guía privado en Tokio?" Es la pregunta que más recibo por email, y la respuesta honesta es: depende enormemente. He visto presupuestos de 0 yenes (sí, gratis) y facturas de más de 100.000 yenes por un solo día. La diferencia no es solo de precio — es de lo que realmente obtienes a cambio.
+              "¿Cuánto cuesta un guía privado en Tokio?" Es la pregunta que más recibo por email, y la respuesta honesta es: depende enormemente. He visto presupuestos de 0 yenes (sí, gratis) y facturas de más de 100.000 yenes por un solo día. La diferencia no es solo de precio, es de lo que realmente obtienes a cambio.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Soy Manabu, guía con licencia nacional en Tokio, y llevo años trabajando en esto. En este artículo voy a ser completamente transparente sobre cuánto cuesta un guía privado en Tokio, incluyendo mis propias tarifas. No voy a venderte nada — solo quiero que tengas la información real para tomar una buena decisión antes de tu viaje.
+              Soy Manabu, guía con licencia nacional en Tokio, y llevo años trabajando en esto. En este artículo voy a ser completamente transparente sobre cuánto cuesta un guía privado en Tokio, incluyendo mis propias tarifas. No voy a venderte nada; solo quiero que tengas la información real para tomar una buena decisión antes de tu viaje.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Si te preguntas si merece la pena el gasto, también escribí un artículo específico sobre{" "}
@@ -141,7 +141,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               Guías Con Licencia Oficial (30,000-50,000 yen/día)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Aquí es donde estoy yo. Los guías con licencia nacional hemos pasado un examen riguroso del gobierno japonés que cubre historia, geografía, cultura y protocolo turístico. Mis tarifas están en este rango, y lo que ofrezco incluye itinerarios personalizados, conocimiento profundo de cada zona que visitamos, y la capacidad de resolver cualquier problema sobre la marcha — desde cambios de planes por lluvia hasta encontrar el restaurante perfecto para alguien con alergias alimentarias.
+              Aquí es donde estoy yo. Los guías con licencia nacional hemos pasado un examen riguroso del gobierno japonés que cubre historia, geografía, cultura y protocolo turístico. Mis tarifas están en este rango, y lo que ofrezco incluye itinerarios personalizados, conocimiento profundo de cada zona que visitamos, y la capacidad de resolver cualquier problema sobre la marcha, desde cambios de planes por lluvia hasta encontrar el restaurante perfecto para alguien con alergias alimentarias.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -177,7 +177,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               Costes Ocultos Que Debes Preguntar Antes
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Antes de reservar, pregunta siempre por: <strong className="text-foreground">recargos por horas extra</strong> (algunos guías cobran por bloques, otros por hora adicional), <strong className="text-foreground">costes de desplazamiento</strong> del guía hasta el punto de encuentro (especialmente si tu hotel está lejos del centro), y <strong className="text-foreground">política de cancelación</strong>. He visto viajeros sorprendidos por cargos de 5.000 yenes por una hora extra que no esperaban. La transparencia es clave — cualquier guía profesional debería desglosar estos costes sin problema.
+              Antes de reservar, pregunta siempre por: <strong className="text-foreground">recargos por horas extra</strong> (algunos guías cobran por bloques, otros por hora adicional), <strong className="text-foreground">costes de desplazamiento</strong> del guía hasta el punto de encuentro (especialmente si tu hotel está lejos del centro), y <strong className="text-foreground">política de cancelación</strong>. He visto viajeros sorprendidos por cargos de 5.000 yenes por una hora extra que no esperaban. La transparencia es clave; cualquier guía profesional debería desglosar estos costes sin problema.
             </p>
 
             {/* Por qué la diferencia */}
@@ -196,7 +196,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               <Link to="/es/blog/guia-licencia-oficial-japon" className="text-accent hover:underline">
                 licencia oficial de guía-intérprete en Japón
               </Link>{" "}
-              no es fácil de obtener. El examen cubre historia japonesa desde el periodo Jomon hasta la actualidad, geografía de las 47 prefecturas, protocolo turístico internacional, y dominio avanzado de un idioma extranjero. Los guías con licencia invertimos años de formación, y eso se refleja en el precio — pero también en la calidad del servicio.
+              no es fácil de obtener. El examen cubre historia japonesa desde el periodo Jomon hasta la actualidad, geografía de las 47 prefecturas, protocolo turístico internacional, y dominio avanzado de un idioma extranjero. Los guías con licencia invertimos años de formación, y eso se refleja en el precio, pero también en la calidad del servicio.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -210,14 +210,14 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               Idioma (Guías en Español Son Más Escasos)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Aquí hay un factor que afecta directamente a los hispanohablantes: <strong className="text-foreground">hay muy pocos guías con licencia que hablen español en Tokio</strong>. La mayoría trabaja en inglés, y la oferta en español es limitada. Esto significa que los guías que ofrecemos servicio en español podemos cobrar algo más — simplemente porque la demanda supera la oferta. Si el inglés no es un problema para tu grupo, tendrás más opciones y posiblemente precios ligeramente más bajos.
+              Aquí hay un factor que afecta directamente a los hispanohablantes: <strong className="text-foreground">hay muy pocos guías con licencia que hablen español en Tokio</strong>. La mayoría trabaja en inglés, y la oferta en español es limitada. Esto significa que los guías que ofrecemos servicio en español podemos cobrar algo más, simplemente porque la demanda supera la oferta. Si el inglés no es un problema para tu grupo, tendrás más opciones y posiblemente precios ligeramente más bajos.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Tamaño del Grupo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              La mayoría de guías privados en Tokio cobramos por servicio, no por persona. Esto significa que para un grupo de cuatro personas, el coste por persona se reduce a la mitad comparado con una pareja. Es una de las ventajas del tour privado frente al grupal — si viajáis en familia o con amigos, el precio por cabeza puede ser sorprendentemente razonable.
+              La mayoría de guías privados en Tokio cobramos por servicio, no por persona. Esto significa que para un grupo de cuatro personas, el coste por persona se reduce a la mitad comparado con una pareja. Es una de las ventajas del tour privado frente al grupal: si viajáis en familia o con amigos, el precio por cabeza puede ser sorprendentemente razonable.
             </p>
 
             {/* Cómo elegir */}
@@ -232,7 +232,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               Pregunta por la Licencia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              No es obligatorio que tu guía tenga licencia para pasar un buen día, pero es un indicador fiable de profesionalidad. Si un guía tiene la licencia nacional, sabes que ha pasado un filtro serio. Pregúntalo directamente — un guía con licencia no tendrá problema en confirmarlo.
+              No es obligatorio que tu guía tenga licencia para pasar un buen día, pero es un indicador fiable de profesionalidad. Si un guía tiene la licencia nacional, sabes que ha pasado un filtro serio. Pregúntalo directamente; un guía con licencia no tendrá problema en confirmarlo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -268,14 +268,14 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               Para Quién Sí (Familias, Viajeros de Lujo, Primer Viaje)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si es tu primer viaje a Japón y no hablas japonés, un guía privado transforma completamente la experiencia. Las familias con niños son quienes más valor sacan — gestionar la logística de Tokio con niños pequeños es agotador, y un guía que conoce los atajos, los baños y los restaurantes kid-friendly te ahorra horas de estrés. Los viajeros de lujo que valoran su tiempo y quieren acceso a experiencias curadas también encontrarán que la inversión se justifica con creces.
+              Si es tu primer viaje a Japón y no hablas japonés, un guía privado transforma completamente la experiencia. Las familias con niños son quienes más valor sacan, ya que gestionar la logística de Tokio con niños pequeños es agotador, y un guía que conoce los atajos, los baños y los restaurantes kid-friendly te ahorra horas de estrés. Los viajeros de lujo que valoran su tiempo y quieren acceso a experiencias curadas también encontrarán que la inversión se justifica con creces.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Para Quién No (Mochileros, Viajeros Experimentados en Japón)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si ya has visitado Japón varias veces, hablas algo de japonés y disfrutas descubriendo lugares por tu cuenta, probablemente no necesitas un guía. Tampoco tiene sentido si tu presupuesto es ajustado — esos 30.000-50.000 yenes pueden financiar varios días de comida, transporte y alojamiento. No voy a intentar convencerte de algo que no necesitas.
+              Si ya has visitado Japón varias veces, hablas algo de japonés y disfrutas descubriendo lugares por tu cuenta, probablemente no necesitas un guía. Tampoco tiene sentido si tu presupuesto es ajustado: esos 30.000-50.000 yenes pueden financiar varios días de comida, transporte y alojamiento. No voy a intentar convencerte de algo que no necesitas.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -305,7 +305,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   ¿Es más barato en grupo?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  En términos absolutos, no — el guía cobra lo mismo. Pero por persona, sí, es significativamente más barato. Un tour de 40.000 yenes para una pareja cuesta 20.000 por persona. El mismo tour para una familia de cuatro cuesta 10.000 por persona. Algunos guías cobran un suplemento a partir de 5-6 personas, pero la tarifa base rara vez cambia.
+                  En términos absolutos, no: el guía cobra lo mismo. Pero por persona, sí, es significativamente más barato. Un tour de 40.000 yenes para una pareja cuesta 20.000 por persona. El mismo tour para una familia de cuatro cuesta 10.000 por persona. Algunos guías cobran un suplemento a partir de 5-6 personas, pero la tarifa base rara vez cambia.
                 </p>
               </div>
 
@@ -323,7 +323,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   ¿Hay guías que hablen español?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Sí, pero somos pocos. La mayoría de guías con licencia en Tokio trabajan en inglés, chino o coreano. Los guías en español existimos, pero la oferta es limitada, así que te recomiendo reservar con bastante antelación — especialmente en temporada alta (primavera con los cerezos y otoño con el follaje).
+                  Sí, pero somos pocos. La mayoría de guías con licencia en Tokio trabajan en inglés, chino o coreano. Los guías en español existimos, pero la oferta es limitada, así que te recomiendo reservar con bastante antelación, especialmente en temporada alta (primavera con los cerezos y otoño con el follaje).
                 </p>
               </div>
 
@@ -332,7 +332,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   ¿Dónde encuentro guías privados en Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Las opciones principales son: plataformas como Viator, GetYourGuide y TripAdvisor Experiences (gran variedad, precios competitivos, calidad variable); la Japan Guide Association (guías con licencia oficial); y webs individuales de guías como la mía. Mi consejo: si buscas un guía con licencia que hable español, empieza buscando directamente — las plataformas grandes suelen estar dominadas por servicios en inglés.
+                  Las opciones principales son: plataformas como Viator, GetYourGuide y TripAdvisor Experiences (gran variedad, precios competitivos, calidad variable); la Japan Guide Association (guías con licencia oficial); y webs individuales de guías como la mía. Mi consejo: si buscas un guía con licencia que hable español, empieza buscando directamente, ya que las plataformas grandes suelen estar dominadas por servicios en inglés.
                 </p>
               </div>
             </div>
@@ -340,7 +340,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                Mis Tarifas Son Públicas — Sin Sorpresas
+                Mis Tarifas Son Públicas, Sin Sorpresas
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Creo en la transparencia total. Puedes ver exactamente cuánto cuestan mis tours, qué incluyen y qué no antes de contactarme. Si después de leer este artículo tienes preguntas sobre precios o quieres un presupuesto personalizado para tu viaje, escríbeme sin compromiso. Prefiero que tomes una decisión informada a que reserves con dudas.

@@ -112,7 +112,7 @@ const trustSignals = [
   {
     icon: Shield,
     title: "Government-Licensed Guide",
-    description: "National Government Licensed Guide Interpreter (全国通訳案内士) — the highest guiding credential in Japan.",
+    description: "National Government Licensed Guide Interpreter (全国通訳案内士), the highest guiding credential in Japan.",
   },
   {
     icon: Star,
@@ -127,7 +127,7 @@ const trustSignals = [
   {
     icon: Users,
     title: "Private & Personalized",
-    description: "Every tour is exclusively yours. No strangers, no rigid schedules — just your group and your guide.",
+    description: "Every tour is exclusively yours. No strangers, no rigid schedules. Just your group and your guide.",
   },
 ];
 
@@ -138,7 +138,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Manabu's tour was one of the best I've been on — he is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
+    text: "Manabu's tour was one of the best I've been on. He is professional, kind, very knowledgeable and an awesome story-teller. His route is well-planned and offers fun experiences. You can tell he is a full-time tour guide because of the effort he puts in.",
     author: "Solo traveler",
     rating: 5,
   },
@@ -154,7 +154,7 @@ const Index = () => {
     <Layout>
       <SEO
         title="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with Manabu, a government-licensed guide with 500+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond — tailored to you."
+        description="Explore Tokyo with Manabu, a government-licensed guide with 500+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond, tailored to you."
         canonicalPath="/"
         hreflang={[
           { lang: "en", path: "/" },
@@ -177,7 +177,7 @@ const Index = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Tokyo Walks with Manabu —{" "}
+              Tokyo Walks with Manabu:{" "}
               <span className="text-accent">Your Licensed Local Guide</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
@@ -185,7 +185,7 @@ const Index = () => {
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Every tour starts with a simple question: What excites you most about
-              Tokyo? From there, the route is yours. I don't follow a script — I
+              Tokyo? From there, the route is yours. I don't follow a script. I
               follow your curiosity.
             </p>
 
@@ -233,14 +233,14 @@ const Index = () => {
                 Most tour guides follow a fixed route. I don't.
               </p>
               <p>
-                In the first 30 minutes, I ask what matters to you — the food, the
+                In the first 30 minutes, I ask what matters to you: the food, the
                 history, the hidden spots, the photo opportunities. Then I adapt as we
                 go. If you want to linger at a temple, we linger. If you want to skip
                 ahead to lunch, we skip.
               </p>
               <p>
                 That's why guests from over 30 countries have called this the best
-                tour of the trip — not just of Tokyo, but of their entire journey.
+                tour of the trip, not just of Tokyo, but of their entire journey.
               </p>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-3 md:gap-4">
@@ -319,19 +319,19 @@ const Index = () => {
               <p className="text-label text-accent mb-4">Your Guide</p>
               <div className="w-10 h-px bg-accent mb-6" />
               <h2 className="heading-section text-foreground">
-                Meet Manabu — Your Licensed Tokyo Guide
+                Meet Manabu, Your Licensed Tokyo Guide
               </h2>
               <p className="mt-4 text-body">
                 I'm Manabu, a National Government Licensed Guide Interpreter
                 (全国通訳案内士) with over 500 tours completed and a 4.86-star
                 average rating. Born in Kanazawa, raised in Kyoto, and now based
-                in Tokyo — I bring insights from across Japan's rich cultural
+                in Tokyo, I bring insights from across Japan's rich cultural
                 regions.
               </p>
               <p className="mt-4 text-body">
                 My approach is simple: in the first 30 minutes, I learn what
                 excites you, then I adapt the tour in real time. It's not a
-                lecture — it's a conversation.
+                lecture. It's a conversation.
               </p>
               <Link to="/about" className="btn-outline mt-8 inline-flex">
                 Learn more about your guide
@@ -377,7 +377,7 @@ const Index = () => {
                 Share What Excites You
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                History, food, hidden alleys — I'll build the route around you.
+                History, food, hidden alleys. I'll build the route around you.
               </p>
             </div>
             <div className="text-center">
@@ -451,7 +451,7 @@ const Index = () => {
                 </p>
                 <footer className="pt-4 border-t border-border">
                   <cite className="not-italic font-medium text-foreground text-sm">
-                    — {testimonial.author}
+                    - {testimonial.author}
                   </cite>
                 </footer>
               </blockquote>

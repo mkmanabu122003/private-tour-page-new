@@ -58,7 +58,7 @@ const tokyoTours = [
   {
     id: "custom",
     title: "Custom Private Tour",
-    description: "Create your perfect Tokyo experience. Share your interests—food, history, photography, anime—and I'll design a personalized itinerary just for you.",
+    description: "Create your perfect Tokyo experience. Share your interests (food, history, photography, anime) and I'll design a personalized itinerary just for you.",
     duration: "Flexible",
     price: "From ¥10,000/hour",
     difficulty: "Customizable",
@@ -122,7 +122,7 @@ const Tours = () => {
     <Layout>
       <SEO
         title="Tokyo Tours & Day Trips | Private Guided Tours | Tanuki Tabi Travel"
-        description="Browse private Tokyo walking tours led by a certified guide. Asakusa, Shibuya, Harajuku, Yanaka, Kamakura day trips and more — all fully personalized."
+        description="Browse private Tokyo walking tours led by a certified guide. Asakusa, Shibuya, Harajuku, Yanaka, Kamakura day trips and more. All fully personalized."
         canonicalPath="/tours"
         hreflang={[
           { lang: "en", path: "/tours" },

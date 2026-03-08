@@ -73,7 +73,7 @@ const EsYanaka = () => {
                 <h2 className="heading-section text-foreground mb-6">Puntos Destacados</h2>
                 <ul className="space-y-3">
                   {[
-                    "Yanaka Ginza — encantadora calle comercial retro",
+                    "Yanaka Ginza: encantadora calle comercial retro",
                     "Templos históricos y cementerios",
                     "Tiendas de artesanía tradicional y cafés",
                     "Observación de gatos en el barrio felino de Japón",

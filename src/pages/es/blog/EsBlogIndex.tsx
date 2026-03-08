@@ -18,7 +18,7 @@ const blogPosts: BlogPost[] = [
   // Guías de Barrios de Tokio
   {
     slug: "guia-asakusa",
-    title: "Guía de Asakusa — Qué Ver Más Allá del Templo Senso-ji",
+    title: "Guía de Asakusa: Qué Ver Más Allá del Templo Senso-ji",
     description:
       "Consejos de un guía local para explorar Asakusa. Más allá del Senso-ji: santuarios escondidos, comida callejera y los mejores horarios para visitar.",
     date: "25 de febrero de 2026",
@@ -38,7 +38,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "guia-shibuya-harajuku",
-    title: "Shibuya y Harajuku — Guía Local del Tokio Moderno",
+    title: "Shibuya y Harajuku: Guía Local del Tokio Moderno",
     description:
       "Explora Shibuya y Harajuku como un local. Cruce de Shibuya, calle Takeshita, cafés escondidos y los mejores puntos fotográficos.",
     date: "25 de febrero de 2026",
@@ -48,7 +48,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "guia-shinjuku",
-    title: "Guía de Shinjuku — El Corazón de Neón de Tokio",
+    title: "Guía de Shinjuku: El Corazón de Neón de Tokio",
     description:
       "Navega Shinjuku como un local. Golden Gai, Omoide Yokocho, Kabukicho, Shinjuku Gyoen y los mejores lugares donde comer.",
     date: "25 de febrero de 2026",
@@ -99,7 +99,7 @@ const blogPosts: BlogPost[] = [
   // Guías de Excursiones
   {
     slug: "comparativa-excursiones",
-    title: "Kamakura vs Hakone vs Nikko — ¿Qué Excursión Elegir?",
+    title: "Kamakura vs Hakone vs Nikko: ¿Qué Excursión Elegir?",
     description:
       "¿No puedes decidir entre Kamakura, Hakone o Nikko? Un guía local compara tiempo de viaje, puntos destacados y para quién es mejor cada excursión.",
     date: "25 de febrero de 2026",
@@ -150,7 +150,7 @@ const blogPosts: BlogPost[] = [
   // Planifica tu Viaje
   {
     slug: "itinerario-tokio-3-dias",
-    title: "El Itinerario Perfecto de 3 Días por Tokio — Por un Guía Local",
+    title: "El Itinerario Perfecto de 3 Días por Tokio, Por un Guía Local",
     description:
       "Planifica 3 días perfectos en Tokio con consejos de un guía local con licencia. Asakusa, Shibuya, Tsukiji, excursiones y joyas ocultas.",
     date: "25 de febrero de 2026",
@@ -170,7 +170,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "mejor-epoca-visitar-tokio",
-    title: "Mejor Época para Visitar Tokio — Guía Mes a Mes",
+    title: "Mejor Época para Visitar Tokio: Guía Mes a Mes",
     description:
       "¿Cuándo visitar Tokio? Un guía local analiza el clima, eventos, multitudes y costes de cada mes para planificar el viaje perfecto.",
     date: "25 de febrero de 2026",
@@ -190,9 +190,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "etiqueta-templos-santuarios",
-    title: "Etiqueta en Templos y Santuarios de Japón — Guía Completa",
+    title: "Etiqueta en Templos y Santuarios de Japón: Guía Completa",
     description:
-      "¿Visitas templos y santuarios en Japón? Aprende la etiqueta esencial — cómo rezar, purificarte e inclinarte con respeto.",
+      "¿Visitas templos y santuarios en Japón? Aprende la etiqueta esencial: cómo rezar, purificarte e inclinarte con respeto.",
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
@@ -203,7 +203,7 @@ const blogPosts: BlogPost[] = [
     slug: "propinas-en-japon",
     title: "Propinas en Japón: Lo Que Necesitas Saber",
     description:
-      "En Japón no es costumbre dejar propina — la mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento.",
+      "En Japón no es costumbre dejar propina. La mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento.",
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Cultura Japonesa",
@@ -331,7 +331,7 @@ const EsBlogIndex = () => {
         <div className="container-section">
           <div className="max-w-2xl">
             <p className="text-label text-accent mb-3">De Tu Guía</p>
-            <h1 className="heading-display text-foreground">Blog — Consejos de un Guía Local en Tokio</h1>
+            <h1 className="heading-display text-foreground">Blog: Consejos de un Guía Local en Tokio</h1>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Consejos de viaje, itinerarios y recomendaciones desde dentro para
               planificar la experiencia perfecta en Tokio.

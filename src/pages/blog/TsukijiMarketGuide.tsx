@@ -56,10 +56,10 @@ const TsukijiMarketGuide = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              "Isn't Tsukiji closed?" I hear this question at least once a week from visitors planning their Tokyo itinerary. And I understand the confusion. The headlines from 2018 were everywhere: Tsukiji Market closes, the tuna auctions move to Toyosu, an era ends. But here's what those headlines got wrong — or at least left out. Only the inner wholesale market moved. The outer market, the part that matters most to visitors, never closed. It's still here, still thriving, and still one of the best food experiences in Tokyo.
+              "Isn't Tsukiji closed?" I hear this question at least once a week from visitors planning their Tokyo itinerary. And I understand the confusion. The headlines from 2018 were everywhere: Tsukiji Market closes, the tuna auctions move to Toyosu, an era ends. But here's what those headlines got wrong, or at least left out. Only the inner wholesale market moved. The outer market, the part that matters most to visitors, never closed. It's still here, still thriving, and still one of the best food experiences in Tokyo.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm Manabu, a nationally licensed tour guide, and I walk through Tsukiji's outer market several times each week with guests from around the world. This tsukiji guide is everything I wish visitors knew before arriving — what actually happened to the market, what's still worth seeing, what to eat, and how to time your visit so you get the best experience possible. Whether you're a serious food lover or simply curious about one of Tokyo's most storied neighborhoods, this tsukiji guide will help you make the most of your morning.
+              I'm Manabu, a nationally licensed tour guide, and I walk through Tsukiji's outer market several times each week with guests from around the world. This tsukiji guide is everything I wish visitors knew before arriving: what actually happened to the market, what's still worth seeing, what to eat, and how to time your visit so you get the best experience possible. Whether you're a serious food lover or simply curious about one of Tokyo's most storied neighborhoods, this tsukiji guide will help you make the most of your morning.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Let me walk you through it the same way I walk my tour guests through the market: honestly, with no hype, and with the kind of detail you can only get from someone who's been doing this for years.
@@ -70,30 +70,30 @@ const TsukijiMarketGuide = () => {
               What Happened to Tsukiji (The Quick Version)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji Market opened in 1935, built after the Great Kanto Earthquake destroyed the previous fish market at Nihonbashi. For over 80 years, it served as the world's largest wholesale fish market — a cavernous, chaotic space where thousands of tons of seafood were auctioned and sold before dawn every single day. The inner market was where the famous tuna auctions happened, where licensed wholesalers in rubber boots raced around on motorized carts called turret trucks, and where the sheer scale of Japan's seafood industry was on full display.
+              Tsukiji Market opened in 1935, built after the Great Kanto Earthquake destroyed the previous fish market at Nihonbashi. For over 80 years, it served as the world's largest wholesale fish market, a cavernous, chaotic space where thousands of tons of seafood were auctioned and sold before dawn every single day. The inner market was where the famous tuna auctions happened, where licensed wholesalers in rubber boots raced around on motorized carts called turret trucks, and where the sheer scale of Japan's seafood industry was on full display.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               By the 2000s, the inner market's facilities were aging badly. The buildings were decades past their intended lifespan, sanitation standards were difficult to maintain, and the narrow lanes made modern refrigerated logistics nearly impossible. After years of political debate and delays, the inner wholesale market officially relocated to Toyosu, a modern facility on a man-made island in Tokyo Bay, in October 2018.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              But here's the crucial distinction that gets lost in the retelling: the inner market and the outer market were always two separate entities. The inner market was the wholesale floor — professionals only, with limited tourist access. The outer market was (and remains) a dense network of retail shops, restaurants, and food stalls that grew up around the wholesale operation over decades. When the inner market moved, the outer market stayed put. The roughly 400 shops and restaurants that line Tsukiji's narrow streets had no reason to leave — their customers were locals, chefs, and food-loving visitors, not wholesale buyers.
+              But here's the crucial distinction that gets lost in the retelling: the inner market and the outer market were always two separate entities. The inner market was the wholesale floor, professionals only, with limited tourist access. The outer market was (and remains) a dense network of retail shops, restaurants, and food stalls that grew up around the wholesale operation over decades. When the inner market moved, the outer market stayed put. The roughly 400 shops and restaurants that line Tsukiji's narrow streets had no reason to leave. Their customers were locals, chefs, and food-loving visitors, not wholesale buyers.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              So if someone tells you "Tsukiji is closed," they're repeating a half-truth. The wholesale floor is gone. The soul of the market — the part you can actually taste, touch, and experience as a visitor — is very much alive. And in some ways, it's better than before. With the wholesale operation gone, the outer market has leaned even further into its identity as a food destination. New shops have opened, existing ones have expanded, and the overall experience is more visitor-friendly than it was a decade ago. Any good tsukiji guide will tell you the same thing: the outer market is the real draw.
+              So if someone tells you "Tsukiji is closed," they're repeating a half-truth. The wholesale floor is gone. The soul of the market, the part you can actually taste, touch, and experience as a visitor, is very much alive. And in some ways, it's better than before. With the wholesale operation gone, the outer market has leaned even further into its identity as a food destination. New shops have opened, existing ones have expanded, and the overall experience is more visitor-friendly than it was a decade ago. Any good tsukiji guide will tell you the same thing: the outer market is the real draw.
             </p>
 
             {/* Section 2: The Outer Market */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              What's Still There — The Outer Market
+              What's Still There: The Outer Market
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The outer market occupies a compact grid of narrow lanes just south of the former inner market site. It's walkable in 20 minutes if you're in a hurry, but I've never met anyone who could get through it that fast — there's too much to see, smell, and taste. Over 400 shops and restaurants are packed into these few blocks, and the density is part of the charm. You'll turn a corner and find yourself face-to-face with a vendor slicing a tuna head the size of a small dog, or a grandmother grilling tamagoyaki on a rectangular pan that's older than you are.
+              The outer market occupies a compact grid of narrow lanes just south of the former inner market site. It's walkable in 20 minutes if you're in a hurry, but I've never met anyone who could get through it that fast. There's too much to see, smell, and taste. Over 400 shops and restaurants are packed into these few blocks, and the density is part of the charm. You'll turn a corner and find yourself face-to-face with a vendor slicing a tuna head the size of a small dog, or a grandmother grilling tamagoyaki on a rectangular pan that's older than you are.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The types of businesses here fall into a few categories. <strong className="text-foreground">Fresh seafood shops</strong> sell everything from whole fish to prepared sashimi, uni boxes, and dried goods like katsuobushi (bonito flakes) and kombu (kelp). <strong className="text-foreground">Kitchen supply stores</strong> carry Japanese knives, ceramics, lacquerware, and cooking tools — many of these shops have been supplying professional chefs for generations. <strong className="text-foreground">Food stalls and street vendors</strong> grill scallops, squid, and wagyu skewers to order, fill paper cups with fresh uni and ikura, and hand you sticks of golden tamagoyaki still warm from the pan. And then there are the <strong className="text-foreground">sit-down restaurants</strong>, ranging from tiny sushi counters with six seats to proper seafood restaurants serving elaborate kaisendon (seafood rice bowls) and set meals.
+              The types of businesses here fall into a few categories. <strong className="text-foreground">Fresh seafood shops</strong> sell everything from whole fish to prepared sashimi, uni boxes, and dried goods like katsuobushi (bonito flakes) and kombu (kelp). <strong className="text-foreground">Kitchen supply stores</strong> carry Japanese knives, ceramics, lacquerware, and cooking tools. Many of these shops have been supplying professional chefs for generations. <strong className="text-foreground">Food stalls and street vendors</strong> grill scallops, squid, and wagyu skewers to order, fill paper cups with fresh uni and ikura, and hand you sticks of golden tamagoyaki still warm from the pan. And then there are the <strong className="text-foreground">sit-down restaurants</strong>, ranging from tiny sushi counters with six seats to proper seafood restaurants serving elaborate kaisendon (seafood rice bowls) and set meals.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              What strikes me every time I walk through is how alive it all is. This isn't a museum or a tourist recreation — it's a working market where local chefs still come to source ingredients, where neighborhood residents buy their groceries, and where the vendors know their products with an expertise that borders on obsessive. The fishmonger who sells you a piece of otoro (fatty tuna belly) can tell you which ocean it came from, when it was caught, and how many days it's been aging. That level of knowledge and pride is what makes Tsukiji special, and no relocation can take that away.
+              What strikes me every time I walk through is how alive it all is. This isn't a museum or a tourist recreation. It's a working market where local chefs still come to source ingredients, where neighborhood residents buy their groceries, and where the vendors know their products with an expertise that borders on obsessive. The fishmonger who sells you a piece of otoro (fatty tuna belly) can tell you which ocean it came from, when it was caught, and how many days it's been aging. That level of knowledge and pride is what makes Tsukiji special, and no relocation can take that away.
             </p>
             <figure className="my-8">
               <img
@@ -102,7 +102,7 @@ const TsukijiMarketGuide = () => {
                 className="w-full rounded-lg"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                The outer market's narrow lanes — over 400 shops packed into a few walkable blocks
+                The outer market's narrow lanes, over 400 shops packed into a few walkable blocks
               </figcaption>
             </figure>
 
@@ -111,21 +111,21 @@ const TsukijiMarketGuide = () => {
               What to Eat and Where (My Personal Picks)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This is the part of my tsukiji guide where I get to share what I actually eat when I'm here — not as a guide performing for clients, but as someone who genuinely loves this market and has strong opinions about its food. Come hungry. Seriously. Skip breakfast at the hotel. You'll want the stomach space.
+              This is the part of my tsukiji guide where I get to share what I actually eat when I'm here, not as a guide performing for clients, but as someone who genuinely loves this market and has strong opinions about its food. Come hungry. Seriously. Skip breakfast at the hotel. You'll want the stomach space.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              Tamagoyaki — The Icon
+              Tamagoyaki: The Icon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If Tsukiji has a signature food, it's tamagoyaki — the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick costs around 100 to 200 yen, and watching the cook build it layer by layer — pouring batter, rolling, pouring again — is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.
+              If Tsukiji has a signature food, it's tamagoyaki, the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick costs around 100 to 200 yen, and watching the cook build it layer by layer (pouring batter, rolling, pouring again) is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              Fresh Sushi — Standing Up, As It Should Be
+              Fresh Sushi: Standing Up, As It Should Be
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers — in some cases from the same families who used to work the inner market floor — and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 2,000 to 3,000 yen, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots like Sushi Dai have two-hour queues and international reputations, but honestly, the lesser-known standing counters serve fish that's just as fresh at half the wait. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
+              Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers, in some cases from the same families who used to work the inner market floor, and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 2,000 to 3,000 yen, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots like Sushi Dai have two-hour queues and international reputations, but honestly, the lesser-known standing counters serve fish that's just as fresh at half the wait. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
               <Link to="/blog/sushi-guide-tokyo" className="text-accent hover:underline">
                 sushi guide for Tokyo
               </Link>{" "}
@@ -136,14 +136,14 @@ const TsukijiMarketGuide = () => {
               Seafood Rice Bowls (Kaisendon)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If you want a proper sit-down meal rather than grazing on street food, a kaisendon — a bowl of warm sushi rice topped with an assortment of raw seafood — is the way to go. The best versions feature glistening slices of maguro (tuna), salmon, hamachi (yellowtail), ikura (salmon roe), and sometimes uni, all arranged over perfectly seasoned rice. Expect to pay 1,500 to 3,000 yen depending on the toppings. My advice: go to the shops set back from the main tourist lanes. The restaurants at the market's edges charge premium prices for the same fish you can get for less deeper inside. Quality is consistent across the market — location is the markup.
+              If you want a proper sit-down meal rather than grazing on street food, a kaisendon (a bowl of warm sushi rice topped with an assortment of raw seafood) is the way to go. The best versions feature glistening slices of maguro (tuna), salmon, hamachi (yellowtail), ikura (salmon roe), and sometimes uni, all arranged over perfectly seasoned rice. Expect to pay 1,500 to 3,000 yen depending on the toppings. My advice: go to the shops set back from the main tourist lanes. The restaurants at the market's edges charge premium prices for the same fish you can get for less deeper inside. Quality is consistent across the market. Location is the markup.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              Pickles and Dried Goods — The Souvenirs Worth Buying
+              Pickles and Dried Goods: The Souvenirs Worth Buying
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Not everything at Tsukiji needs to be eaten on the spot. The pickle shops (tsukemono-ya) sell an astonishing variety of Japanese pickled vegetables — from classic cucumber and daikon to more unusual items like pickled plums, wasabi-marinated lotus root, and sake-lees pickled turnips. Most shops offer free samples, and the vendors are patient with curious visitors. Dried goods shops carry katsuobushi, kombu, nori, and dried shrimp — the building blocks of Japanese cooking. If you want to take the flavors of Japan home with you, these are the souvenirs that actually matter. They're lightweight, packaged for travel, and will transform your home cooking in ways that a keychain from the airport never could.
+              Not everything at Tsukiji needs to be eaten on the spot. The pickle shops (tsukemono-ya) sell an astonishing variety of Japanese pickled vegetables, from classic cucumber and daikon to more unusual items like pickled plums, wasabi-marinated lotus root, and sake-lees pickled turnips. Most shops offer free samples, and the vendors are patient with curious visitors. Dried goods shops carry katsuobushi, kombu, nori, and dried shrimp, the building blocks of Japanese cooking. If you want to take the flavors of Japan home with you, these are the souvenirs that actually matter. They're lightweight, packaged for travel, and will transform your home cooking in ways that a keychain from the airport never could.
             </p>
 
             {/* Section 4: Getting There */}
@@ -151,7 +151,7 @@ const TsukijiMarketGuide = () => {
               How to Get There and When to Arrive
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Timing is everything at Tsukiji, and this is where a proper tsukiji guide earns its value. The market operates on a rhythm shaped by decades of tradition — arrive at the right time and you'll have an extraordinary experience. Arrive too late and you'll find shuttered stalls and picked-over displays.
+              Timing is everything at Tsukiji, and this is where a proper tsukiji guide earns its value. The market operates on a rhythm shaped by decades of tradition. Arrive at the right time and you'll have an extraordinary experience. Arrive too late and you'll find shuttered stalls and picked-over displays.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Arrive by 8:00 AM.</strong> This is the sweet spot. The stalls are fully set up and stocked, the grills are fired up, the fish is at peak freshness, and the crowds haven't yet built to their midday density. By 8 AM, you'll have room to browse, ask questions, take photos, and eat without feeling rushed. Between 9 and 10 AM is still good but noticeably busier. After 11 AM, you're competing with lunch crowds. By 1 to 2 PM, many stalls begin closing, and by 3 PM the market is largely shut down for the day.
@@ -160,7 +160,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal — Tuesday through Friday gives you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays</strong> — most stalls are closed, and you'll be wandering through empty lanes wondering where all the food went. Some Wednesdays also see partial closures, as individual shops set their own rest days. If you only have one morning in Tokyo for food, make it a weekday at Tsukiji.
+              <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday through Friday gives you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays</strong>. Most stalls are closed, and you'll be wandering through empty lanes wondering where all the food went. Some Wednesdays also see partial closures, as individual shops set their own rest days. If you only have one morning in Tokyo for food, make it a weekday at Tsukiji.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Plan to spend 90 minutes to two hours for a thorough visit. That gives you enough time to walk the full market, eat three or four things, browse the knife shops and pickle vendors, and leave satisfied rather than overwhelmed. If you're interested in pairing your market visit with ramen later in the day, my{" "}
@@ -178,16 +178,16 @@ const TsukijiMarketGuide = () => {
               This is the question I get asked more than any other in my tsukiji guide conversations with visitors, so let me give you an honest comparison. Both markets have value, but they offer fundamentally different experiences, and most visitors only need one.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Tsukiji Outer Market</strong> is about food, atmosphere, and sensory immersion. You walk through narrow lanes, eat from stalls, interact with vendors, and experience the market on a human scale. It's tactile, immediate, and deeply satisfying. No reservation is needed. You show up, you eat, you explore. The experience is organic and personal — every visit is slightly different depending on what's in season, what catches your eye, and which vendor decides to offer you a free sample of their best uni.
+              <strong className="text-foreground">Tsukiji Outer Market</strong> is about food, atmosphere, and sensory immersion. You walk through narrow lanes, eat from stalls, interact with vendors, and experience the market on a human scale. It's tactile, immediate, and deeply satisfying. No reservation is needed. You show up, you eat, you explore. The experience is organic and personal. Every visit is slightly different depending on what's in season, what catches your eye, and which vendor decides to offer you a free sample of their best uni.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Toyosu Market</strong> is about spectacle and scale. The main attraction is the tuna auction, which takes place at dawn and is genuinely impressive — watching auctioneers sell multi-million-yen bluefin tuna in a matter of seconds is unlike anything else in the world. But the experience is observed from behind glass on elevated walkways. You're watching, not participating. The auction requires an advance online reservation that books up weeks ahead, and the market itself is a modern, sterile facility that lacks the atmospheric charm of Tsukiji's weathered lanes.
+              <strong className="text-foreground">Toyosu Market</strong> is about spectacle and scale. The main attraction is the tuna auction, which takes place at dawn and is genuinely impressive. Watching auctioneers sell multi-million-yen bluefin tuna in a matter of seconds is unlike anything else in the world. But the experience is observed from behind glass on elevated walkways. You're watching, not participating. The auction requires an advance online reservation that books up weeks ahead, and the market itself is a modern, sterile facility that lacks the atmospheric charm of Tsukiji's weathered lanes.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              My honest recommendation: <strong className="text-foreground">if you only have time for one, choose Tsukiji</strong>. The food is better for visitors, the atmosphere is richer, and the experience requires zero advance planning. If you're a serious seafood enthusiast and can secure a Toyosu auction reservation, do both — Toyosu at dawn for the auction, then Tsukiji by 8 AM for breakfast. It makes for an unforgettable morning, though an exhausting one.
+              My honest recommendation: <strong className="text-foreground">if you only have time for one, choose Tsukiji</strong>. The food is better for visitors, the atmosphere is richer, and the experience requires zero advance planning. If you're a serious seafood enthusiast and can secure a Toyosu auction reservation, do both: Toyosu at dawn for the auction, then Tsukiji by 8 AM for breakfast. It makes for an unforgettable morning, though an exhausting one.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              One thing I tell all my guests: Tsukiji's outer market is not a consolation prize for the inner market's departure. It's the main event. Always has been, even when the wholesale floor was still operating next door. The inner market was fascinating for industry insiders, but the outer market is where the food is — and food is what brings people to Tsukiji in the first place.
+              One thing I tell all my guests: Tsukiji's outer market is not a consolation prize for the inner market's departure. It's the main event. Always has been, even when the wholesale floor was still operating next door. The inner market was fascinating for industry insiders, but the outer market is where the food is, and food is what brings people to Tsukiji in the first place.
             </p>
 
             {/* CTA */}
@@ -196,7 +196,7 @@ const TsukijiMarketGuide = () => {
                 Want to experience Tsukiji with a local who knows every stall?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                On our walking tours, I take you through the market the way I experience it myself — no tourist traps, no overpriced bowls at the entrance, just the best food and the stories behind the vendors who make it. I'll help you navigate the lanes, order with confidence, and eat things you'd never find on your own. Tsukiji is best experienced with someone who knows it by heart.
+                On our walking tours, I take you through the market the way I experience it myself: no tourist traps, no overpriced bowls at the entrance, just the best food and the stories behind the vendors who make it. I'll help you navigate the lanes, order with confidence, and eat things you'd never find on your own. Tsukiji is best experienced with someone who knows it by heart.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tours" className="btn-accent">
@@ -215,7 +215,7 @@ const TsukijiMarketGuide = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji Market still open in 2026?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market — with over 400 shops, restaurants, and food stalls — remains open and thriving. It's one of the best food destinations in Tokyo and well worth a morning visit.
+                    Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market, with over 400 shops, restaurants, and food stalls, remains open and thriving. It's one of the best food destinations in Tokyo and well worth a morning visit.
                   </p>
                 </div>
                 <div>
@@ -227,13 +227,13 @@ const TsukijiMarketGuide = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji open on weekends?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays. Weekday mornings (Tuesday through Friday) offer the best experience — full selection, fewer crowds, and a more relaxed atmosphere.
+                    Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays. Weekday mornings (Tuesday through Friday) offer the best experience: full selection, fewer crowds, and a more relaxed atmosphere.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Should I visit Tsukiji or Toyosu?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    For most visitors, Tsukiji is the better choice. The food variety is greater, the atmosphere is more immersive, and no reservation is needed. Toyosu is worth visiting only if you specifically want to see the tuna auction, which requires an advance online reservation. If you have time, you can do both in one morning — Toyosu at dawn, Tsukiji by 8 AM.
+                    For most visitors, Tsukiji is the better choice. The food variety is greater, the atmosphere is more immersive, and no reservation is needed. Toyosu is worth visiting only if you specifically want to see the tuna auction, which requires an advance online reservation. If you have time, you can do both in one morning: Toyosu at dawn, Tsukiji by 8 AM.
                   </p>
                 </div>
                 <div>

@@ -34,7 +34,7 @@ const EsHakone = () => {
               Excursión Privada a Hakone con Guía en Español
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Vive lo mejor de Hakone en un solo día — navega por el Lago Ashi con el Monte Fuji como telón de fondo, sube en el teleférico sobre valles volcánicos humeantes y descubre el icónico torii junto al lago del Santuario de Hakone. Tu guía navega el complejo sistema de transporte para que tú te concentres en las vistas.
+              Vive lo mejor de Hakone en un solo día: navega por el Lago Ashi con el Monte Fuji como telón de fondo, sube en el teleférico sobre valles volcánicos humeantes y descubre el icónico torii junto al lago del Santuario de Hakone. Tu guía navega el complejo sistema de transporte para que tú te concentres en las vistas.
             </p>
           </div>
         </div>
@@ -65,9 +65,9 @@ const EsHakone = () => {
                 <ul className="space-y-3">
                   {[
                     "Crucero en barco pirata por el Lago Ashi con vistas al Monte Fuji (clima permitting)",
-                    "Teleférico de Hakone — vistas aéreas sobre el valle volcánico de Owakudani",
-                    "Owakudani — aguas termales volcánicas, famosos huevos negros",
-                    "Santuario de Hakone — icónico torii junto al lago",
+                    "Teleférico de Hakone: vistas aéreas sobre el valle volcánico de Owakudani",
+                    "Owakudani: aguas termales volcánicas, famosos huevos negros",
+                    "Santuario de Hakone: icónico torii junto al lago",
                     "Opcional: Museo al Aire Libre de Hakone o experiencia de onsen (aguas termales)",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -108,7 +108,7 @@ const EsHakone = () => {
                   {[
                     "Guía con licencia oficial que habla español durante todo el día",
                     "Planificación personalizada del itinerario",
-                    "Navegación del transporte de Hakone (teleférico, crucero, autobuses — ¡es complejo!)",
+                    "Navegación del transporte de Hakone (teleférico, crucero, autobuses... ¡es complejo!)",
                     "Recomendaciones de restaurantes y onsen",
                     "Explicaciones culturales y geológicas",
                   ].map((item) => (
@@ -124,7 +124,7 @@ const EsHakone = () => {
                 <h2 className="heading-section text-foreground mb-6">No Incluido</h2>
                 <ul className="space-y-3">
                   {[
-                    "Hakone Free Pass (aprox. ¥6,100 — cubre todo el transporte de Hakone + ida y vuelta desde Shinjuku)",
+                    "Hakone Free Pass (aprox. ¥6,100, cubre todo el transporte de Hakone + ida y vuelta desde Shinjuku)",
                     "Almuerzo",
                     "Entradas al museo / tarifas de onsen",
                     "Suplemento Romancecar (aprox. ¥1,110 por trayecto, opcional)",
@@ -176,7 +176,7 @@ const EsHakone = () => {
                 <div className="flex gap-4 items-start bg-card border border-border rounded-lg p-6">
                   <Info className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <p className="text-muted-foreground leading-relaxed">
-                    El sistema de transporte de Hakone (trenes, funiculares, teleféricos, autobuses, barcos) puede ser abrumador para los visitantes primerizos. Un guía navega el famoso "Circuito de Hakone" de manera eficiente, ahorrándote tiempo y confusión. Más importante aún, la visibilidad del Monte Fuji cambia cada hora — tu guía ajusta el itinerario en tiempo real para maximizar tus posibilidades de esa vista icónica.
+                    El sistema de transporte de Hakone (trenes, funiculares, teleféricos, autobuses, barcos) puede ser abrumador para los visitantes primerizos. Un guía navega el famoso "Circuito de Hakone" de manera eficiente, ahorrándote tiempo y confusión. Más importante aún, la visibilidad del Monte Fuji cambia cada hora, y tu guía ajusta el itinerario en tiempo real para maximizar tus posibilidades de esa vista icónica.
                   </p>
                 </div>
               </div>
