@@ -299,7 +299,7 @@ const EsQueComerEnJapon = () => {
                 En mis tours gastronómicos, te llevo a los restaurantes y puestos que los turistas no encuentran solos. Te enseño a usar las máquinas de tickets, a leer los menús, a sorber los fideos correctamente y, sobre todo, a disfrutar cada plato con el contexto cultural que lo hace especial. Desde mercados de barrio hasta izakayas escondidas bajo las vías del tren, cada tour es una aventura culinaria que recordarás mucho después de volver a casa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Todos los Tours
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

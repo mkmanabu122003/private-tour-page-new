@@ -317,7 +317,7 @@ const EsQueSecomeEnJapon = () => {
                 La mejor forma de explorar la gastronomía japonesa es con alguien que conozca cada callejón, cada puesto y cada plato secreto. En nuestros tours gastronómicos te llevo a los sitios donde comen los locales, te explico cada plato, te ayudo con las alergias y me aseguro de que cada bocado merezca la pena. Sin intermediarios, sin trampas turísticas, solo comida auténtica japonesa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Nuestros Tours
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

@@ -285,7 +285,7 @@ const EsPropinasenJapon = () => {
                 Ahora que sabes que no necesitas preocuparte por las <strong className="text-foreground">propinas en Japón</strong>, lo único que te queda es disfrutar. En nuestros tours privados te acompaño personalmente por Tokio, Kioto y más allá, explicándote no solo los lugares sino la cultura que hay detrás, como esta historia de las propinas. Sin prisas, sin grupos grandes, y con toda la autenticidad de un guía japonés con licencia oficial. La mejor forma de agradecerme será esa sonrisa cuando pruebes tu primer ramen de verdad.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Nuestros Tours Privados
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

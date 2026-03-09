@@ -310,7 +310,7 @@ const EsItinerarioTokio5Dias = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No necesitas un guía para los cinco días. Tokio es una ciudad segura, con señalización en inglés y un transporte público impecable. Pero un guía local marca la diferencia en uno o dos días clave, por ejemplo, el día 1 en Asakusa (para entender el contexto histórico y gastronómico) o el día 3 en Tsukiji (para que comas en los puestos correctos y no en las trampas para turistas). Es exactamente lo que ofrecemos en nuestros{" "}
-              <Link to="/es/tours/" className="text-accent hover:underline">
+              <Link to="/es/tours" className="text-accent hover:underline">
                 tours privados por Tokio
               </Link>.
             </p>
@@ -324,7 +324,7 @@ const EsItinerarioTokio5Dias = () => {
                 Cada viajero es distinto. Si este itinerario Tokio 5 días te sirve como base pero quieres ajustarlo a tus intereses (más gastronomía, más templos, más barrios ocultos), puedo diseñar una ruta a medida y acompañarte en los días que elijas. Sin prisas, sin grupos, solo tú y un guía que conoce cada callejón de esta ciudad.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Tours Privados
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

@@ -240,7 +240,7 @@ const EsTemplosFamososJapon = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Sea cual sea tu itinerario, en nuestros{" "}
-              <Link to="/es/tours/" className="text-accent hover:underline">
+              <Link to="/es/tours" className="text-accent hover:underline">
                 tours privados
               </Link>
               {" "}siempre incluimos visitas a templos y santuarios con explicaciones detalladas de su historia, su arquitectura y sus rituales. No es lo mismo ver un torii que entender por qué está ahí.
@@ -307,7 +307,7 @@ const EsTemplosFamososJapon = () => {
                 En nuestros tours privados por Tokio, Kioto y Nara, te llevo a los templos y santuarios más importantes con explicaciones detalladas de su historia, sus rituales y su significado. No es una visita turística al uso, es una inmersión cultural que transforma la manera en que ves Japón. Cada tour se adapta a tus intereses y a tu ritmo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Nuestros Tours Privados
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

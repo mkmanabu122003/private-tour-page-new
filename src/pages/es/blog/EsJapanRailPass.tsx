@@ -328,7 +328,7 @@ const EsJapanRailPass = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Si tienes dudas sobre tu caso concreto, escríbeme. Parte de lo que hago como guía es ayudar a mis clientes a planificar la logística de transporte antes de que lleguen a Japón, y te puedo hacer el cálculo exacto para tu itinerario. También puedes echar un vistazo a nuestros{" "}
-              <Link to="/es/tours/" className="text-accent hover:underline">
+              <Link to="/es/tours" className="text-accent hover:underline">
                 tours privados
               </Link>{" "}
               si quieres explorar Japón con un guía local que se encargue de toda la planificación.
@@ -342,7 +342,7 @@ const EsJapanRailPass = () => {
                 En nuestros tours privados me encargo de toda la logística: te digo exactamente qué pases comprar (o no comprar), te ayudo con las reservas de shinkansen y diseño un itinerario que maximice tu tiempo y tu presupuesto. Sin sorpresas, sin gastos innecesarios.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Tours Privados
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

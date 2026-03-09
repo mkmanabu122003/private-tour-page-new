@@ -21,7 +21,7 @@ const EsCustom = () => {
 
       <section className="pt-8 pb-4">
         <div className="container-section">
-          <Link to="/es/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/es" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-4 h-4" />
             Volver a Tours
           </Link>
@@ -173,7 +173,7 @@ const EsCustom = () => {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/es/contact" className="btn-accent">Contactar</Link>
-            <Link to="/es/" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">Ver Tours Disponibles</Link>
+            <Link to="/es" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">Ver Tours Disponibles</Link>
           </div>
         </div>
       </section>

@@ -244,7 +244,7 @@ const EsMonteFujiDesdeTokio = () => {
                 Organizo excursiones privadas al Monte Fuji adaptadas al clima del día, tus intereses y tu ritmo. Nada de autobuses turísticos con 40 personas ni paradas en tiendas de souvenirs obligatorias. Solo tú, la montaña y un guía que conoce cada rincón de la zona. Si prefieres, también puedo integrar la visita al Fuji dentro de un itinerario más amplio por Tokio y alrededores.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Nuestros Tours
                 </Link>
                 <Link to="/es/contact" className="btn-outline">
