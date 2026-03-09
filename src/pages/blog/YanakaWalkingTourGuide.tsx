@@ -15,8 +15,8 @@ const YanakaWalkingTourGuide = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-backstreet-local.jpg"
-          alt="Quiet traditional backstreet in old Tokyo — the atmosphere of Yanaka's hidden lanes"
+          src="/images/blog/yanaka-ginza-shopping-street.jpg"
+          alt="Yanaka Ginza shopping street viewed from the Yuyake Dandan stairs"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -70,13 +70,13 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/tours/senso-ji-temple-tokyo.jpg"
-                alt="Traditional temple architecture in Tokyo — Yanaka is home to over 70 Buddhist temples"
+                src="/images/blog/yanaka-candy-shop-art.jpg"
+                alt="Traditional candy shop in Yanaka with colorful wall art"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Temple grounds in old Tokyo. Yanaka holds the highest concentration of Buddhist temples in the city
+                A traditional candy shop in Yanaka, where old-fashioned sweets and hand-painted art define the neighborhood character
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -95,13 +95,13 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src=""
-                alt="Tree-lined path through Yanaka Cemetery, one of Tokyo's most peaceful walks"
+                src="/images/blog/yanaka-street-food-display.jpg"
+                alt="Traditional street food display in Yanaka with senbei and mochi"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                The main avenue of Yanaka Cemetery, lined with cherry trees and a world away from central Tokyo
+                Street food stalls along the Yanaka walking route, offering traditional snacks like senbei and mochi
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -120,13 +120,13 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/tours/kamakura-hasedera-temple.jpg"
-                alt="Serene temple garden — similar tranquility awaits at Yanaka's seventy-plus Buddhist temples"
+                src="/images/blog/yanaka-pottery-shop.jpg"
+                alt="Traditional pottery and ceramics shop in Yanaka"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Temple gardens like this one define the peaceful character of Yanaka's backstreets
+                A traditional pottery shop in Yanaka, where artisans continue centuries-old craft traditions
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -145,13 +145,13 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-street-food.jpg"
-                alt="Traditional Japanese street food — Yanaka Ginza offers a similar old-fashioned snacking experience"
+                src="/images/blog/yanaka-soba-restaurant.jpg"
+                alt="Traditional soba restaurant in Yanaka with green noren curtain at the entrance"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Street food culture thrives in Tokyo's traditional shopping streets like Yanaka Ginza
+                A traditional soba restaurant in Yanaka, where handmade buckwheat noodles are served in a quiet backstreet setting
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -220,7 +220,7 @@ const YanakaWalkingTourGuide = () => {
             "@type": "BlogPosting",
             "headline": "Yanaka Walking Tour: Tokyo's Hidden Neighborhood",
             "description": "Yanaka is old Tokyo at its finest — temples, shotengai, and no crowds. A local guide shares the best walking route through this hidden gem.",
-            "image": "https://tanuki-tabi-travel.com/images/tours/asakusa-backstreet-local.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/yanaka-ginza-shopping-street.jpg",
             "author": {
               "@type": "Person",
               "name": "Manabu",
