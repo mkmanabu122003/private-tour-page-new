@@ -181,13 +181,13 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "nikko-day-trip-from-tokyo",
-    title: "Nikko Day Trip from Tokyo: 2026 Guide",
+    title: "Nikko Day Trip from Tokyo: Complete Guide (2025)",
     description:
-      "Nikko is 2 hours from Tokyo and one of Japan's most ornate shrine complexes. A licensed guide explains how to get there, what to see, and how to plan.",
-    date: "March 7, 2026",
+      "Planning a Nikko day trip from Tokyo? A licensed guide covers trains, top sights, and why a private guided tour makes all the difference.",
+    date: "March 8, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
-    image: "/images/blog/nikko-toshogu-hero.jpg",
+    image: "/images/candidates/nikko/PXL_20240718_040319956.MP.jpg",
   },
   {
     slug: "yokohama-day-trip-from-tokyo",
@@ -270,6 +270,16 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
     image: "/images/blog/tsukiji-fresh-sushi.jpg",
+  },
+  {
+    slug: "vegetarian-food-tour-tokyo",
+    title: "Vegetarian Food Tour Tokyo: A Complete Guide for Dietary Restrictions",
+    description:
+      "Worried about dietary restrictions in Tokyo? A licensed private guide shares the best vegetarian-friendly food spots and how to customize your tour.",
+    date: "March 8, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food Guides",
+    image: "/images/candidates/tsukiji/Photos-3-001/PXL_20240927_000302980.jpg",
   },
   // Helpful Guides
   {
