@@ -280,7 +280,7 @@ const EsAbout = () => {
                 ))}
               </div>
 
-              <Link to="/es/" className="btn-accent mt-8 inline-flex">
+              <Link to="/es" className="btn-accent mt-8 inline-flex">
                 Explorar Tours
               </Link>
             </div>
@@ -337,7 +337,7 @@ const EsAbout = () => {
             Tengo muchas ganas de compartir mis lugares favoritos y las historias que hacen de Tokio una ciudad tan especial. Creemos recuerdos juntos.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/" className="btn-accent">
+            <Link to="/es" className="btn-accent">
               Ver Tours
             </Link>
             <Link to="/es/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">

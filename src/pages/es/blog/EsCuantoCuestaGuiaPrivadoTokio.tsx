@@ -346,7 +346,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 Creo en la transparencia total. Puedes ver exactamente cuánto cuestan mis tours, qué incluyen y qué no antes de contactarme. Si después de leer este artículo tienes preguntas sobre precios o quieres un presupuesto personalizado para tu viaje, escríbeme sin compromiso. Prefiero que tomes una decisión informada a que reserves con dudas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver mis tarifas y tours disponibles
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

@@ -153,10 +153,10 @@ const EsIndex = () => {
       <SEO
         title="Tour Privado en Tokio con Guía Japonés Nativo en Español | Tanuki Tabi Travel"
         description="Tour privado por Tokio con Manabu, guía japonés nativo con licencia oficial del gobierno (全国通訳案内士). Más de 500 tours completados y valoración de 4.86★. Itinerario 100% personalizado."
-        canonicalPath="/es/"
+        canonicalPath="/es"
         hreflang={[
           { lang: "en", path: "/" },
-          { lang: "es", path: "/es/" },
+          { lang: "es", path: "/es" },
           { lang: "x-default", path: "/" },
         ]}
       />

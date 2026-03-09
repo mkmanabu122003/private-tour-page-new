@@ -7,8 +7,8 @@ const AsakusaGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Asakusa Guide: What to See Beyond Senso-ji | Local Tips | Tanuki Tabi Travel"
-        description="Complete guide to Asakusa by a licensed Tokyo guide. Senso-ji Temple, Nakamise Street, hidden alleyways, and the best local food spots, all covered."
+        title="Asakusa Guide 2026: Beyond Senso-ji (Local Tips)"
+        description="Most visitors miss 90% of Asakusa. A guide with 500+ tours shares hidden alleys, local food spots & timing tricks beyond the Senso-ji crowds."
         canonicalPath="/blog/asakusa-guide-what-to-see"
       />
 

@@ -7,8 +7,8 @@ const TempleEtiquette = () => {
   return (
     <Layout>
       <SEO
-        title="Temple & Shrine Etiquette in Japan: Do's and Don'ts | Tanuki Tabi Travel"
-        description="Japan temple and shrine etiquette explained by a licensed Tokyo guide with 500+ tours. Dos and don'ts, common mistakes, and insider tips for visiting Senso-ji and beyond. Written by an expert local guide."
+        title="Japan Temple & Shrine Etiquette: 8 Rules You Should Know"
+        description="Dress code, prayer steps, purification ritual & common mistakes at Japanese temples and shrines. Explained by a licensed Tokyo guide with 500+ tours."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
       />
 

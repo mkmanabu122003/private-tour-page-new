@@ -249,7 +249,7 @@ const EsGuiaLicenciaOficialJapon = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   La opción más directa es consultar el directorio de la JNTO o contactar directamente a empresas de tours que especifiquen que trabajan con guías licenciados. Si estás leyendo esto, ya has encontrado uno. Puedes ver nuestros{" "}
-                  <Link to="/es/tours/" className="text-accent hover:underline">
+                  <Link to="/es/tours" className="text-accent hover:underline">
                     tours disponibles aquí
                   </Link>
                   .
@@ -279,7 +279,7 @@ const EsGuiaLicenciaOficialJapon = () => {
                 Soy Manabu, guía con licencia oficial en Japón registrado ante el gobierno. Ofrezco tours privados en español por Tokio, Kioto y otras ciudades japonesas. Cada tour se diseña a medida según tus intereses, tu ritmo y lo que quieras descubrir. Sin grupos grandes, sin rutas genéricas. Solo tú, tu acompañante o tu familia, y un guía que conoce este país en profundidad.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Tours Disponibles
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

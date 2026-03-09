@@ -280,7 +280,7 @@ const EsComidaCallejeraTokio = () => {
                 En mis tours privados te llevo por los callejones y puestos que las guías de viaje no mencionan. Te ayudo a pedir, te explico qué estás comiendo y me aseguro de que pruebes lo mejor de cada barrio. Asakusa, Yanaka, Tsukiji... tú eliges la ruta y yo pongo los años de experiencia. Sin grupos grandes, sin prisas, solo tú y la mejor comida callejera de Tokio.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Nuestros Tours
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

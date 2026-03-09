@@ -356,7 +356,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                       artículo completo sobre los costes de un guía privado en Tokio
                     </Link>{" "}
                     donde desgloso todas las opciones. En resumen: los tours son por grupo, no por persona, así que cuantos más seáis, más económico resulta por cabeza. Consulta nuestras{" "}
-                    <Link to="/es/tours/" className="text-accent hover:underline">
+                    <Link to="/es/tours" className="text-accent hover:underline">
                       páginas de tours
                     </Link>{" "}
                     para ver los precios específicos de cada experiencia.
@@ -374,7 +374,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                 Si después de leer esto sientes que un guía privado podría enriquecer tu viaje, me encantaría acompañarte. Y si todavía tienes dudas, escríbeme, te daré una recomendación honesta, incluso si esa recomendación es "ve por tu cuenta." Prefiero perder una reserva que tener un cliente insatisfecho.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/es/tours/" className="btn-accent">
+                <Link to="/es/tours" className="btn-accent">
                   Ver Todos los Tours
                 </Link>
                 <Link to="/es/contact" className="btn-outline">

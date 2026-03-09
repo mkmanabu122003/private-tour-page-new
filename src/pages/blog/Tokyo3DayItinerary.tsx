@@ -7,8 +7,8 @@ const Tokyo3DayItinerary = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo 3-Day Itinerary 2026 | First-Timer's Complete Guide"
-        description="Spend three days in Tokyo with this local guide's itinerary. What to do in Tokyo for 3 days, from Asakusa temples and Tsukiji food to Shibuya nightlife and day trips."
+        title="Tokyo 3-Day Itinerary 2026: Day-by-Day Local Guide"
+        description="A day-by-day Tokyo itinerary built from 500+ tours. Day 1: Asakusa & Yanaka. Day 2: Harajuku & Shibuya. Day 3: Tsukiji or a day trip. No wasted time."
         canonicalPath="/blog/tokyo-3-day-itinerary"
       />
 

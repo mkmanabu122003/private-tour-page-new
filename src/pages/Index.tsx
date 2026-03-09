@@ -158,7 +158,7 @@ const Index = () => {
         canonicalPath="/"
         hreflang={[
           { lang: "en", path: "/" },
-          { lang: "es", path: "/es/" },
+          { lang: "es", path: "/es" },
           { lang: "x-default", path: "/" },
         ]}
       />
