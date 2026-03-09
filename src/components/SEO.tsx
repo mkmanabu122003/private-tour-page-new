@@ -16,6 +16,9 @@ interface SEOProps {
 const BASE_URL = "https://tanuki-tabi-travel.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
 
+const ensureTrailingSlash = (p: string) =>
+  p === "/" || p.endsWith("/") ? p : `${p}/`;
+
 export const SEO = ({
   title,
   description,
@@ -23,7 +26,7 @@ export const SEO = ({
   ogImage = DEFAULT_OG_IMAGE,
   hreflang,
 }: SEOProps) => {
-  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
+  const canonicalUrl = `${BASE_URL}${ensureTrailingSlash(canonicalPath)}`;
 
   return (
     <Helmet>
@@ -51,7 +54,7 @@ export const SEO = ({
           key={entry.lang}
           rel="alternate"
           hrefLang={entry.lang}
-          href={`${BASE_URL}${entry.path}`}
+          href={`${BASE_URL}${ensureTrailingSlash(entry.path)}`}
         />
       ))}
     </Helmet>
