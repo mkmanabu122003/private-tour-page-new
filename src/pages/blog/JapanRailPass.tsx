@@ -7,8 +7,8 @@ const JapanRailPass = () => {
   return (
     <Layout>
       <SEO
-        title="Japan Rail Pass 2026: Is It Worth It? | Tanuki Tabi"
-        description="The JR Pass price went up significantly. Is it still worth buying? A licensed guide does the math for common itineraries and gives an honest answer."
+        title="JR Pass 2026: Price Breakdown & Is It Still Worth It?"
+        description="The JR Pass jumped to ¥50,000. A licensed guide compares real route costs for Tokyo-Kyoto, Osaka & more. Find out if the pass saves you money in 2026."
         canonicalPath="/blog/japan-rail-pass-worth-it"
       />
 

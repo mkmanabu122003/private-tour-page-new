@@ -7,8 +7,8 @@ const IsItWorthHiringGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Is It Worth Hiring a Tour Guide in Tokyo? Honest Take"
-        description="A licensed Tokyo guide answers honestly: do you need a guide, or can you do Tokyo solo? Including when it's worth it and when it isn't."
+        title="Hiring a Tour Guide in Tokyo: When It's Worth It (2026)"
+        description="A licensed Tokyo guide with 500+ tours shares when hiring a guide is worth it—and when you're better off solo. Honest breakdown, no sales pitch."
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
       />
 

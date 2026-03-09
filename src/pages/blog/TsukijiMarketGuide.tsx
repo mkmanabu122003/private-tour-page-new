@@ -7,8 +7,8 @@ const TsukijiMarketGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Tsukiji Market Guide 2026: What's Still Worth It"
-        description="The inner market closed in 2018. But the outer market is alive. A local guide explains what remains, what's worth eating, and how to visit right."
+        title="Tsukiji Outer Market 2026: Still Open & What to Eat"
+        description="Yes, Tsukiji outer market is still open in 2026 with 400+ shops. A local guide shares the best food stalls, timing tips & what changed since 2018."
         canonicalPath="/blog/tsukiji-market-guide"
       />
 

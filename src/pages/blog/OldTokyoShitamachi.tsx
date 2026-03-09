@@ -7,8 +7,8 @@ const OldTokyoShitamachi = () => {
   return (
     <Layout>
       <SEO
-        title="Old Tokyo Still Exists: A Guide's Map to Shitamachi"
-        description="Shitamachi, Tokyo's 'low city,' survived bombs, earthquakes, and redevelopment. A licensed guide shows you what remains and why it still matters."
+        title="Shitamachi Tokyo: Where to Find Old Tokyo in 2026"
+        description="Explore Shitamachi, Tokyo's historic low city. A licensed guide maps Yanaka, Asakusa & hidden neighborhoods where Edo-era atmosphere still survives."
         canonicalPath="/blog/old-tokyo-shitamachi"
       />
 
