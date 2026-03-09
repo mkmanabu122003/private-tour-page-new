@@ -50,7 +50,7 @@ const EsGuiaTsukiji = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/tsukiji-food-guide-hero.jpg"
+          src="/images/tours/food-tour-tsukiji.jpg"
           alt="Guía del mercado de Tsukiji para amantes de la gastronomía"
           className="w-full h-full object-cover"
         />

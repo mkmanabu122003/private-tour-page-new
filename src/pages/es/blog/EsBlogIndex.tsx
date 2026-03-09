@@ -64,7 +64,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/tsukiji-food-guide-hero.jpg",
+    image: "/images/tours/food-tour-tsukiji.jpg",
   },
   {
     slug: "mercado-tsukiji-tokio",
@@ -84,7 +84,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/tours/asakusa-kaminarimon-morning.jpg",
+    image: "/images/blog/yanaka-ginza-shopping-street.jpg",
   },
   {
     slug: "shitamachi-tokio",
@@ -105,7 +105,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/blog/day-trip-comparison-hero.jpg",
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
   {
     slug: "excursion-nikko-desde-tokio",

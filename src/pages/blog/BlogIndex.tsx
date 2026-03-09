@@ -53,7 +53,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
-    image: "/images/blog/tsukiji-food-guide-hero.jpg",
+    image: "/images/tours/food-tour-tsukiji.jpg",
   },
   // Day Trip Guides
   {
@@ -64,7 +64,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
-    image: "/images/blog/day-trip-comparison-hero.jpg",
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
   // Planning Your Trip
   {
@@ -126,7 +126,7 @@ const blogPosts: BlogPost[] = [
     date: "March 8, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
-    image: "/images/tours/asakusa-backstreet-local.jpg",
+    image: "/images/blog/yanaka-ginza-shopping-street.jpg",
   },
   {
     slug: "yanaka-tokyo-walking-route",
@@ -279,7 +279,7 @@ const blogPosts: BlogPost[] = [
     date: "March 8, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
-    image: "/images/candidates/tsukiji/Photos-3-001/PXL_20240927_000302980.jpg",
+    image: "/images/blog/vegetarian-matcha-wagashi.jpg",
   },
   // Helpful Guides
   {

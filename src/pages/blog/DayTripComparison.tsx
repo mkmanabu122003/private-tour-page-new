@@ -44,7 +44,7 @@ const DayTripComparison = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/day-trip-comparison-hero.jpg"
+          src="/images/blog/nikko-toshogu-hero.jpg"
           alt="Kamakura vs Hakone vs Nikko - best day trips from Tokyo"
           className="w-full h-full object-cover"
         />

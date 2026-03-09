@@ -15,8 +15,8 @@ const VegetarianFoodTourTokyo = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/candidates/tsukiji/Photos-3-001/PXL_20240927_000302980.jpg"
-          alt="Fresh vegetables and produce at a Tokyo market stall"
+          src="/images/blog/vegetarian-matcha-wagashi.jpg"
+          alt="Matcha tea and traditional wagashi sweets, a perfect vegetarian-friendly experience in Tokyo"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -70,8 +70,8 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/asakusa/Photos-3-001/PXL_20241130_073346158.jpg"
-                alt="Traditional Japanese food stalls along a busy Tokyo street"
+                src="/images/blog/tokyo-street-snack.jpg"
+                alt="Traditional Japanese monaka ice cream, a popular plant-based street snack in Tokyo"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
@@ -95,8 +95,8 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/tsukiji/Photos-3-001/PXL_20250302_072511103.jpg"
-                alt="Tsukiji Outer Market with vendors selling fresh produce and prepared food"
+                src="/images/blog/vegetarian-temple-vegetables.jpg"
+                alt="Daikon radish offering at a Tokyo shrine, reflecting the connection between vegetables and Japanese culture"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
@@ -123,8 +123,8 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/shinjuku/Photos-3-001/PXL_20241124_085630263.jpg"
-                alt="Atmospheric backstreet restaurant alley in Shinjuku at dusk"
+                src="/images/blog/izakaya-dining-atmosphere.jpg"
+                alt="Intimate izakaya dining atmosphere in Tokyo, where private food tours include personalized service"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
@@ -148,8 +148,8 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/asakusa/Photos-3-001/PXL_20241030_072249070.jpg"
-                alt="Close-up of traditional Japanese food preparation in a Tokyo kitchen"
+                src="/images/blog/yanaka-street-food-display.jpg"
+                alt="Traditional Japanese street food display with senbei rice crackers and mochi, all vegetarian-friendly"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />
@@ -197,7 +197,7 @@ const VegetarianFoodTourTokyo = () => {
             "@type": "BlogPosting",
             "headline": "Vegetarian Food Tour Tokyo: A Complete Guide for Dietary Restrictions",
             "description": "Worried about dietary restrictions in Tokyo? A licensed private guide shares the best vegetarian-friendly food spots and how to customize your tour.",
-            "image": "https://tanuki-tabi-travel.com/images/candidates/tsukiji/Photos-3-001/PXL_20240927_000302980.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/vegetarian-matcha-wagashi.jpg",
             "author": {
               "@type": "Person",
               "name": "Manabu",

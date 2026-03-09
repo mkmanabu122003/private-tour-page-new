@@ -19,8 +19,8 @@ const EsYanakaTokio = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-kaminarimon-morning.jpg"
-          alt="Calles tranquilas de Yanaka en Tokio"
+          src="/images/blog/yanaka-ginza-shopping-street.jpg"
+          alt="Calle comercial Yanaka Ginza vista desde las escaleras Yuyake Dandan"
           className="w-full h-full object-cover"
           loading="eager"
         />
