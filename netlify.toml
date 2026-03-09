@@ -5,51 +5,78 @@
 # 301 redirects: old /routes/ URLs → new /tours/ URLs
 [[redirects]]
   from = "/routes/ginza-the-luxury-shopping-district"
-  to = "/tours/tsukiji-ginza"
+  to = "/tours/tsukiji-ginza/"
   status = 301
 
 [[redirects]]
   from = "/routes/asakusa-senso-ji-temple"
-  to = "/tours/asakusa"
+  to = "/tours/asakusa/"
   status = 301
 
 [[redirects]]
   from = "/routes/yanaka-old-town"
-  to = "/tours/yanaka"
+  to = "/tours/yanaka/"
   status = 301
 
 [[redirects]]
   from = "/routes/shibuya-harajuku"
-  to = "/tours/shibuya-harajuku"
+  to = "/tours/shibuya-harajuku/"
   status = 301
 
 [[redirects]]
   from = "/routes/imperial-palace"
-  to = "/tours/imperial-palace"
+  to = "/tours/imperial-palace/"
   status = 301
 
 [[redirects]]
   from = "/routes/selection-of-temples-and-shrines"
-  to = "/tours/asakusa"
+  to = "/tours/asakusa/"
+  status = 301
+
+[[redirects]]
+  from = "/routes/shita-machi"
+  to = "/tours/asakusa/"
   status = 301
 
 # Catch-all: any other old /routes/ URL → /tours listing page
 [[redirects]]
   from = "/routes/*"
-  to = "/tours"
+  to = "/tours/"
   status = 301
 
 # /custom-tours → /tours/custom redirect
 [[redirects]]
   from = "/custom-tours"
-  to = "/tours/custom"
+  to = "/tours/custom/"
   status = 301
 
 # /booking → /contact redirect (no booking page exists)
 [[redirects]]
   from = "/booking"
-  to = "/contact"
+  to = "/contact/"
   status = 301
+
+# 301 redirects: other legacy URLs
+[[redirects]]
+  from = "/multi-day-tours"
+  to = "/tours/"
+  status = 301
+
+# 404: removed pages with no replacement
+[[redirects]]
+  from = "/policies"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/cookies"
+  to = "/404.html"
+  status = 404
 
 # SPA catch-all (must be last)
 [[redirects]]
