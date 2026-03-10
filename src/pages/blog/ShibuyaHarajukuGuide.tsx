@@ -142,7 +142,7 @@ const ShibuyaHarajukuGuide = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/harajuku-cat-street.jpg"
+                src="/images/tours/harajuku-takeshita-street.jpg"
                 alt="Cat Street Harajuku - the real fashion street"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />

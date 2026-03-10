@@ -187,7 +187,7 @@ const blogPosts: BlogPost[] = [
     date: "March 8, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
-    image: "/images/candidates/nikko/PXL_20240718_040319956.MP.jpg",
+    image: "/images/blog/nikko-toshogu-hero.jpg",
   },
   {
     slug: "yokohama-day-trip-from-tokyo",

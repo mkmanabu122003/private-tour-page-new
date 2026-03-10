@@ -170,7 +170,7 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/train/PXL_20240726_023308396.jpg"
+                src="/images/blog/jr-okachimachi-station-entrance.jpg"
                 alt="JR train platform — Nippori Station on the Yamanote Line is the gateway to Yanaka"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
