@@ -67,7 +67,7 @@ const foodExperiences: {
   {
     title: "Ramen Discovery Tour",
     foods: "Tonkotsu, shoyu, miso, tsukemen, gyoza",
-    image: "/images/tours/food-tour-ramen-tokyo.jpg",
+    image: "/images/blog/ramen-guide-hero.jpg",
     description:
       "Tokyo is arguably the ramen capital of the world, with over 10,000 ramen shops across the city. Each neighborhood has its loyalties, each shop its closely guarded recipe. We'll explore the major styles: rich, creamy tonkotsu from Kyushu, clear and elegant shoyu from Tokyo's own tradition, bold miso ramen born in Hokkaido. We'll visit shops where the master has spent years perfecting a single bowl. Your guide will teach you proper ramen etiquette (yes, slurping is not just acceptable, it's expected) and help you customize your order with confidence.",
   },
@@ -81,7 +81,7 @@ const foodExperiences: {
   {
     title: "Depachika Tour",
     foods: "Wagashi, bento boxes, French pastries, pickles, seasonal sweets",
-    image: "/images/tours/food-tour-depachika.jpg",
+    image: "/images/blog/japanese-elegant-gift-wrapping.jpg",
     description:
       "The basement floors of Tokyo's department stores, known as depachika, are food wonderlands that most tourists walk right past. These are not ordinary food courts. They're curated collections of Japan's finest food artisans, from wagashi (traditional sweets) makers who've held imperial warrants for centuries to French-trained pastry chefs creating Tokyo-exclusive confections. We'll sample our way through exquisite bento boxes, discover regional specialties from across Japan, and find the perfect edible souvenirs to bring home.",
   },
