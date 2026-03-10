@@ -15,7 +15,7 @@ const NikkoDayTrip = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/candidates/nikko/PXL_20240718_040319956.MP.jpg"
+          src="/images/blog/nikko-toshogu-hero.jpg"
           alt="The ornate Yomeimon Gate at Nikko Tosho-gu Shrine surrounded by towering cedar trees"
           className="w-full h-full object-cover"
           loading="eager"
@@ -70,9 +70,9 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/train/PXL_20240726_023308396.jpg"
+                src="/images/blog/shinkansen-n700-tokyo-station.jpg"
                 alt="Train heading toward Nikko through the Japanese countryside"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -95,9 +95,9 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/nikko/PXL_20240718_040819618.jpg"
+                src="/images/blog/nikko-ornate-temple-hall.jpg"
                 alt="Intricate carvings and gold leaf decoration at Nikko Tosho-gu Shrine"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -123,9 +123,9 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/nikko/PXL_20240719_021128437.jpg"
+                src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
                 alt="Ancient cedar trees lining the path through Nikko's shrine complex"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -148,9 +148,9 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/autumn/PXL_20241125_034511698.jpg"
+                src="/images/blog/kamakura-serene-temple-garden.jpg"
                 alt="Brilliant autumn foliage surrounding Nikko's mountain landscape"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -179,9 +179,9 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/candidates/nikko/PXL_20240719_040905028.jpg"
+                src="/images/blog/nikko-ornate-temple-hall.jpg"
                 alt="A guide explaining the history and symbolism of carvings at Tosho-gu Shrine"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -231,7 +231,7 @@ const NikkoDayTrip = () => {
             "@type": "BlogPosting",
             "headline": "Nikko Day Trip from Tokyo: Complete Guide",
             "description": "Planning a Nikko day trip from Tokyo? A licensed guide covers trains, top sights, and why a private guided tour makes all the difference.",
-            "image": "https://tanuki-tabi-travel.com/images/candidates/nikko/PXL_20240718_040319956.MP.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/nikko-toshogu-hero.jpg",
             "author": {
               "@type": "Person",
               "name": "Manabu",

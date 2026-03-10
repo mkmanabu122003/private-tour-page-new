@@ -72,7 +72,7 @@ const VegetarianFoodTourTokyo = () => {
               <img
                 src="/images/blog/tokyo-street-snack.jpg"
                 alt="Traditional Japanese monaka ice cream, a popular plant-based street snack in Tokyo"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -97,7 +97,7 @@ const VegetarianFoodTourTokyo = () => {
               <img
                 src="/images/blog/tsukiji-daifuku-mochi-shop.jpg"
                 alt="Colorful daifuku mochi and strawberry sweets at Tsukiji Outer Market"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -125,7 +125,7 @@ const VegetarianFoodTourTokyo = () => {
               <img
                 src="/images/blog/izakaya-dining-atmosphere.jpg"
                 alt="Intimate izakaya dining atmosphere in Tokyo, where private food tours include personalized service"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -150,7 +150,7 @@ const VegetarianFoodTourTokyo = () => {
               <img
                 src="/images/blog/yanaka-street-food-display.jpg"
                 alt="Traditional Japanese street food display with senbei rice crackers and mochi, all vegetarian-friendly"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">

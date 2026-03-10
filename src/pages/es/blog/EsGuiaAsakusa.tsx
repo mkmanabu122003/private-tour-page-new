@@ -78,7 +78,7 @@ const EsGuiaAsakusa = () => {
               <img
                 src="/images/blog/asakusa-sensoji-pagoda.jpg"
                 alt="Pagoda de cinco pisos en el Templo Senso-ji de Asakusa"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -142,7 +142,7 @@ const EsGuiaAsakusa = () => {
               <img
                 src="/images/blog/asakusa-hidden-shrine.jpg"
                 alt="Santuario de Asakusa - joya oculta junto al Senso-ji"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -167,7 +167,7 @@ const EsGuiaAsakusa = () => {
               <img
                 src="/images/blog/asakusa-hoppy-street.jpg"
                 alt="Calle Hoppy en Asakusa - callejón de bares locales al atardecer"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -200,7 +200,7 @@ const EsGuiaAsakusa = () => {
               <img
                 src="/images/blog/asakusa-street-food.jpg"
                 alt="Comida callejera en Nakamise-dori - pan de melón y dulces"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">

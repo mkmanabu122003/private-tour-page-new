@@ -91,7 +91,7 @@ const EsGuiaShinjuku = () => {
               <img
                 src="/images/blog/shinjuku-golden-gai-bars.jpg"
                 alt="Golden Gai - distrito de bares íntimos en Shinjuku"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Los estrechos callejones de Golden Gai albergan más de 200 diminutos bares
@@ -119,7 +119,7 @@ const EsGuiaShinjuku = () => {
               <img
                 src="/images/blog/shinjuku-omoide-yokocho.jpg"
                 alt="Omoide Yokocho Memory Lane - yakitori bajo las vías del tren"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Omoide Yokocho: humo, yakitori y cerveza fría bajo las vías
@@ -144,7 +144,7 @@ const EsGuiaShinjuku = () => {
               <img
                 src="/images/blog/shinjuku-gyoen-garden.jpg"
                 alt="Jardín Nacional Shinjuku Gyoen - un escape tranquilo en Tokio"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Shinjuku Gyoen, un escape tranquilo de la energía urbana circundante

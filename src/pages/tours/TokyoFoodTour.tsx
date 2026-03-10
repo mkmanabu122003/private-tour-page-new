@@ -68,7 +68,7 @@ const foodExperiences: {
   {
     title: "Ramen Discovery Tour",
     foods: "Tonkotsu, shoyu, miso, tsukemen, gyoza",
-    image: "/images/tours/food-tour-ramen-tokyo.jpg",
+    image: "/images/blog/ramen-guide-hero.jpg",
     description:
       "Tokyo is arguably the ramen capital of the world, with over 10,000 ramen shops across the city. Each neighborhood has its loyalties, each shop its closely guarded recipe. We'll explore the major styles: rich, creamy tonkotsu from Kyushu, clear and elegant shoyu from Tokyo's own tradition, bold miso ramen born in Hokkaido. We'll visit shops where the master has spent years perfecting a single bowl. Your guide will teach you proper ramen etiquette (yes, slurping is not just acceptable, it's expected) and help you customize your order with confidence.",
   },
@@ -82,7 +82,7 @@ const foodExperiences: {
   {
     title: "Depachika Tour",
     foods: "Wagashi, bento boxes, French pastries, pickles, seasonal sweets",
-    image: "/images/tours/food-tour-depachika.jpg",
+    image: "/images/blog/japanese-elegant-gift-wrapping.jpg",
     description:
       "The basement floors of Tokyo's department stores, known as depachika, are food wonderlands that most tourists walk right past. These are not ordinary food courts. They're curated collections of Japan's finest food artisans, from wagashi (traditional sweets) makers who've held imperial warrants for centuries to French-trained pastry chefs creating Tokyo-exclusive confections. We'll sample our way through exquisite bento boxes, discover regional specialties from across Japan, and find the perfect edible souvenirs to bring home.",
   },
@@ -150,8 +150,8 @@ const TokyoFoodTour = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Food Tour | Private Guided Food Experience | Tanuki Tabi Travel"
-        description="Taste Tokyo's best food with a local licensed guide. From Tsukiji street food to hidden ramen shops, customize your private food tour experience."
+        title="Tokyo Food Tour | Best Private Local Food Experience | Tanuki Tabi"
+        description="Join a private Tokyo food tour with a licensed local guide. Explore Tsukiji Market, hidden ramen shops, and izakaya. Fully customizable for vegetarian, vegan, halal, and gluten-free diets."
         canonicalPath="/tours/tokyo-food-tour"
       />
 
@@ -300,6 +300,23 @@ const TokyoFoodTour = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Vegetarian Food Tour at Tsukiji */}
+          <div className="mt-12 max-w-3xl mx-auto text-center">
+            <h3 className="heading-card text-foreground mb-3">
+              Vegetarian Food Tour at Tsukiji Market
+            </h3>
+            <p className="text-body">
+              Tsukiji Outer Market is not just about seafood. Our vegetarian food
+              tour at Tsukiji features freshly grilled vegetables, tamagoyaki
+              (Japanese egg omelet), pickled seasonal produce, miso-based soups,
+              and handmade mochi sweets. Your guide will create a custom menu
+              focused entirely on plant-based and vegetarian options, navigating
+              the stalls in Japanese to confirm every ingredient. Whether you
+              follow a strict vegetarian diet or simply prefer lighter fare,
+              Tsukiji has far more to offer than most visitors ever discover.
+            </p>
           </div>
         </div>
       </section>
@@ -496,7 +513,7 @@ const TokyoFoodTour = () => {
             "@type": "TouristTrip",
             "name": "Tokyo Private Food Tour",
             "description":
-              "Private guided food tour of Tokyo with a licensed guide",
+              "Private guided food tour of Tokyo with a licensed local guide. Explore Tsukiji Market, hidden ramen shops, izakaya, and more. Fully customizable for vegetarian, vegan, halal, and gluten-free diets.",
             "touristType": "Food enthusiasts",
             "provider": {
               "@type": "Organization",
@@ -507,6 +524,61 @@ const TokyoFoodTour = () => {
               "@type": "Offer",
               "priceCurrency": "JPY",
               "availability": "https://schema.org/InStock",
+            },
+          }),
+        }}
+      />
+
+      {/* Product + Offer Schema for rich search results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Tokyo Private Food Tour",
+            "description":
+              "A fully customizable private food tour in Tokyo led by a licensed local guide. Visit Tsukiji Market, hidden ramen shops, izakaya alleys, and more. Accommodates vegetarian, vegan, halal, and gluten-free diets.",
+            "brand": {
+              "@type": "Organization",
+              "name": "Tanuki Tabi Travel",
+              "url": "https://tanuki-tabi-travel.com",
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://tanuki-tabi-travel.com/tours/tokyo-food-tour",
+              "priceCurrency": "JPY",
+              "price": "15000",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2026-01-01",
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Tokyo",
+              "addressCountry": "JP",
+            },
+          }),
+        }}
+      />
+
+      {/* TouristAttraction Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristAttraction",
+            "name": "Tokyo Private Food Tour by Tanuki Tabi Travel",
+            "description":
+              "Explore Tokyo's best local food spots with a private licensed guide. From Tsukiji Market street food to ramen, izakaya, and depachika — fully customizable and dietary-friendly.",
+            "touristType": ["Food Tourism", "Culinary Experience"],
+            "url": "https://tanuki-tabi-travel.com/tours/tokyo-food-tour",
+            "isAccessibleForFree": false,
+            "availableLanguage": ["en", "ja"],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tokyo",
+              "addressCountry": "JP",
             },
           }),
         }}

@@ -72,7 +72,7 @@ const AsakusaGuideNew = () => {
               <img
                 src="/images/blog/asakusa-sensoji-pagoda.jpg"
                 alt="Empty Senso-ji Temple grounds at dawn in Asakusa"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -117,7 +117,7 @@ const AsakusaGuideNew = () => {
               <img
                 src="/images/blog/asakusa-hoppy-street.jpg"
                 alt="Hoppy Street in Asakusa with lanterns and local izakaya"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -149,7 +149,7 @@ const AsakusaGuideNew = () => {
               <img
                 src="/images/blog/asakusa-street-food.jpg"
                 alt="Traditional street food and senbei rice crackers in Asakusa"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
