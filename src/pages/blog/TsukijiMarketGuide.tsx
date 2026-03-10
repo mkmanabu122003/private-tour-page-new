@@ -99,7 +99,7 @@ const TsukijiMarketGuide = () => {
               <img
                 src="/images/blog/tsukiji-outer-market-lanes.jpg"
                 alt="Narrow lanes of Tsukiji outer market with food stalls"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The outer market's narrow lanes, over 400 shops packed into a few walkable blocks
@@ -125,7 +125,7 @@ const TsukijiMarketGuide = () => {
                 src="/images/blog/tsukiji-tamagoyaki-on-stick.jpg"
                 alt="Golden tamagoyaki egg omelette on a stick at Tsukiji outer market"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Tsukiji's iconic tamagoyaki — golden, fluffy, and best eaten straight from the grill
@@ -147,7 +147,7 @@ const TsukijiMarketGuide = () => {
                 src="/images/blog/tsukiji-fresh-maguro-sashimi.jpg"
                 alt="Fresh sliced maguro tuna sashimi served at Tsukiji market"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Freshly sliced maguro at Tsukiji — sourced directly from the wholesalers that morning
@@ -172,7 +172,7 @@ const TsukijiMarketGuide = () => {
                 src="/images/blog/tsukiji-dried-goods-souvenirs.jpg"
                 alt="Tsukiji market stall displaying wasabi sesame seeds and specialty dried goods souvenirs"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Wasabi sesame, dried seasonings, and other Tsukiji-exclusive souvenirs that pack more flavor than any airport gift shop

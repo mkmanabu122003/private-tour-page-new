@@ -74,7 +74,7 @@ const JapanRailPass = () => {
                 src="/images/blog/shinkansen-n700-tokyo-station.jpg"
                 alt="N700 Series Shinkansen bullet train at a station platform in Japan"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The N700 Series Shinkansen — the backbone of Japan's high-speed rail network covered by the JR Pass
@@ -111,7 +111,7 @@ const JapanRailPass = () => {
                 src="/images/blog/fushimi-inari-senbon-torii-kyoto.jpg"
                 alt="Thousands of vermillion torii gates forming a tunnel at Fushimi Inari Shrine in Kyoto"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The iconic senbon torii at Fushimi Inari, Kyoto — one of the top reasons travelers take the Shinkansen from Tokyo
@@ -126,7 +126,7 @@ const JapanRailPass = () => {
                 src="/images/blog/kinkakuji-golden-pavilion-kyoto.jpg"
                 alt="Kinkaku-ji, the Golden Pavilion temple reflecting on a pond in Kyoto, Japan"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Kinkaku-ji (Golden Pavilion) in Kyoto — the classic route from Tokyo makes the JR Pass pay for itself
@@ -172,7 +172,7 @@ const JapanRailPass = () => {
                 src="/images/blog/jr-okachimachi-station-entrance.jpg"
                 alt="JR Okachimachi Station entrance in Tokyo showing the JR logo and ticket gates"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A typical JR station in central Tokyo — IC cards work seamlessly at every gate

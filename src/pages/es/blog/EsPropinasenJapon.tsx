@@ -153,7 +153,7 @@ const EsPropinasenJapon = () => {
                 src="/images/blog/ryokan-nakai-kimono-greeting.jpg"
                 alt="Una nakai-san en elegante kimono recibiendo a los huéspedes en la entrada de un ryokan tradicional japonés"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Una nakai-san en un ryokan tradicional — el kokorozuke es el único contexto donde un regalo monetario puede ser apropiado
@@ -171,7 +171,7 @@ const EsPropinasenJapon = () => {
                 src="/images/tours/night-tour-omoide-yokocho.jpg"
                 alt="Mostrador animado de yakitori en Omoide Yokocho en Shinjuku con comensales y cocineros en ambiente ahumado"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Una izakaya típica de mostrador en Shinjuku — la intimidad entre cocinero y cliente forma parte de la experiencia, y la propina rompería esa dinámica
@@ -210,7 +210,7 @@ const EsPropinasenJapon = () => {
                 src="/images/blog/japanese-elegant-gift-wrapping.jpg"
                 alt="Cajas de regalo japonesas elegantemente envueltas con lazos de cinta azul, representando el arte del regalo en Japón"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 En Japón, la presentación importa tanto como el regalo — un pequeño obsequio bellamente envuelto dice más que el dinero

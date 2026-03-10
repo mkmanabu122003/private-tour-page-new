@@ -113,7 +113,7 @@ const TempleEtiquette = () => {
                 src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
                 alt="Visitors approaching through a stone torii gate at Nikko Toshogu shrine with ornate Yomeimon gate visible beyond"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Walking through the stone torii at Nikko Toshogu — notice how visitors naturally walk to the sides, leaving the center path clear
@@ -151,7 +151,7 @@ const TempleEtiquette = () => {
                 src="/images/blog/shrine-chozuya-dragon-purification.jpg"
                 alt="Dragon-shaped water spout at a chozuya purification fountain with bamboo ladles at a Japanese shrine"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A chozuya with a dragon water spout — look for the bamboo ladles and follow the five-step purification sequence
@@ -210,7 +210,7 @@ const TempleEtiquette = () => {
                 src="/images/blog/nikko-ornate-temple-hall.jpg"
                 alt="Ornate Buddhist temple hall at Nikko with red pillars, gold trim, and stone lanterns"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A richly decorated temple hall at Nikko — Buddhist temples tend to be more ornate and contemplative than Shinto shrines
@@ -255,7 +255,7 @@ const TempleEtiquette = () => {
                 src="/images/blog/kamakura-serene-temple-garden.jpg"
                 alt="Serene Japanese temple garden in Kamakura with traditional tea house and camellia flowers"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A temple garden in Kamakura — these tranquil spaces invite quiet contemplation, not selfie sessions

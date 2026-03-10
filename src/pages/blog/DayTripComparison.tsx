@@ -131,7 +131,7 @@ const DayTripComparison = () => {
               <img
                 src="/images/blog/kamakura-buddha-comparison.jpg"
                 alt="Great Buddha in Kamakura - popular day trip from Tokyo"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The Great Buddha of Kamakura, one of Japan's most iconic landmarks
@@ -174,7 +174,7 @@ const DayTripComparison = () => {
               <img
                 src="/images/blog/hakone-fuji-comparison.jpg"
                 alt="Mt Fuji from Hakone - scenic day trip from Tokyo"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Mt. Fuji from Lake Ashi, Hakone's most sought-after view

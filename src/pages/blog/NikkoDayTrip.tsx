@@ -72,7 +72,7 @@ const NikkoDayTrip = () => {
               <img
                 src="/images/candidates/train/PXL_20240726_023308396.jpg"
                 alt="Train heading toward Nikko through the Japanese countryside"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -97,7 +97,7 @@ const NikkoDayTrip = () => {
               <img
                 src="/images/candidates/nikko/PXL_20240718_040819618.jpg"
                 alt="Intricate carvings and gold leaf decoration at Nikko Tosho-gu Shrine"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -125,7 +125,7 @@ const NikkoDayTrip = () => {
               <img
                 src="/images/candidates/nikko/PXL_20240719_021128437.jpg"
                 alt="Ancient cedar trees lining the path through Nikko's shrine complex"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -150,7 +150,7 @@ const NikkoDayTrip = () => {
               <img
                 src="/images/candidates/autumn/PXL_20241125_034511698.jpg"
                 alt="Brilliant autumn foliage surrounding Nikko's mountain landscape"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -181,7 +181,7 @@ const NikkoDayTrip = () => {
               <img
                 src="/images/candidates/nikko/PXL_20240719_040905028.jpg"
                 alt="A guide explaining the history and symbolism of carvings at Tosho-gu Shrine"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">

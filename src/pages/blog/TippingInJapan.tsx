@@ -122,7 +122,7 @@ const TippingInJapan = () => {
                 src="/images/tours/night-tour-omoide-yokocho.jpg"
                 alt="Busy yakitori counter at Omoide Yokocho in Shinjuku with diners and cooks in a smoky atmosphere"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A typical counter-style izakaya in Shinjuku — the intimacy between cook and customer is part of the experience, and tipping would disrupt that dynamic
@@ -145,7 +145,7 @@ const TippingInJapan = () => {
                 src="/images/blog/ryokan-nakai-kimono-greeting.jpg"
                 alt="A nakai-san in elegant kimono greeting guests at a traditional Japanese ryokan entrance"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A nakai-san at a traditional ryokan — kokorozuke is the only context where a monetary gift is sometimes appropriate
@@ -184,7 +184,7 @@ const TippingInJapan = () => {
                 src="/images/blog/japanese-elegant-gift-wrapping.jpg"
                 alt="Elegantly wrapped Japanese gift boxes with blue ribbon bows, representing the art of gift-giving in Japan"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 In Japan, presentation matters as much as the gift itself — a small, beautifully wrapped souvenir speaks louder than cash

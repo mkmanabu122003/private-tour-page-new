@@ -79,7 +79,7 @@ const ShibuyaHarajukuGuide = () => {
               <img
                 src="/images/blog/shibuya-crossing-guide.jpg"
                 alt="How to enjoy Shibuya Crossing - best viewing spots"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Shibuya Crossing from above. Up to 3,000 people cross each signal change
@@ -144,7 +144,7 @@ const ShibuyaHarajukuGuide = () => {
               <img
                 src="/images/blog/harajuku-cat-street.jpg"
                 alt="Cat Street Harajuku - the real fashion street"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Cat Street, Harajuku's real fashion street, away from the Takeshita crowds
@@ -168,7 +168,7 @@ const ShibuyaHarajukuGuide = () => {
               <img
                 src="/images/blog/meiji-shrine-forest.jpg"
                 alt="Forest path at Meiji Shrine - quiet escape near Harajuku"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The forested approach to Meiji Shrine, a world away from Harajuku's crowds
