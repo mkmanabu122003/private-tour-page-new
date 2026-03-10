@@ -61,6 +61,7 @@ const foodExperiences: {
   {
     title: "Asakusa Traditional Street Food",
     foods: "Ningyo-yaki, melon-pan, hand-pulled soba, age-manju",
+    image: "/images/tours/food-tour-asakusa.jpg",
     description:
       "Asakusa is Tokyo's old downtown, and its food reflects centuries of tradition. Along Nakamise Street and the surrounding backstreets, we'll try ningyo-yaki, small cakes filled with sweet red bean paste, baked in molds shaped like the Seven Lucky Gods. We'll find the best melon-pan (crispy-topped sweet bread) fresh from the oven, visit a soba shop where noodles are still made by hand daily, and discover age-manju, deep-fried steamed buns with a satisfying crunch that gives way to soft, sweet filling. This is comfort food with centuries of history behind it.",
   },

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mountain, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
-import hamarikyu from "@/assets/hamarikyu.jpg";
+import nikkoToshogu from "@/assets/nikko-toshogu.jpg";
 
 const EsNikko = () => {
   return (
@@ -44,7 +44,7 @@ const EsNikko = () => {
       <section className="pb-12">
         <div className="container-section">
           <div className="aspect-[16/9] max-w-2xl rounded-lg overflow-hidden">
-            <img src={hamarikyu} alt="Tallas ornamentadas del Santuario Toshogu en Nikko" className="w-full h-full object-cover" />
+            <img src={nikkoToshogu} alt="Puerta torii de piedra y edificios del Santuario Toshogu en Nikko" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

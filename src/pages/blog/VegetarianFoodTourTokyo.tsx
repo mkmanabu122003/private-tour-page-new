@@ -95,8 +95,8 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/vegetarian-temple-vegetables.jpg"
-                alt="Daikon radish offering at a Tokyo shrine, reflecting the connection between vegetables and Japanese culture"
+                src="/images/blog/tsukiji-daifuku-mochi-shop.jpg"
+                alt="Colorful daifuku mochi and strawberry sweets at Tsukiji Outer Market"
                 className="w-full rounded-lg shadow-md"
                 loading="lazy"
               />

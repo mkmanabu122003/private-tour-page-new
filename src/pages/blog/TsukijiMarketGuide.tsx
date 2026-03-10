@@ -44,8 +44,8 @@ const TsukijiMarketGuide = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/tsukiji-market-guide-hero.jpg"
-          alt="Tsukiji Market outer market streets in 2026"
+          src="/images/blog/tsukiji-market-seafood-stalls.jpg"
+          alt="Seafood skewer stalls at Tsukiji Outer Market in Tokyo"
           className="w-full h-full object-cover"
         />
       </div>

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
-import tourUeno from "@/assets/tour-ueno.jpg";
+import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.jpg";
 import tourYanaka from "@/assets/tour-yanaka.jpg";
-import uenoNight from "@/assets/ueno-night.jpg";
+import yanakaCandyShop from "@/assets/yanaka-candy-shop.jpg";
 
 const EsYanaka = () => {
   return (
@@ -50,9 +50,9 @@ const EsYanaka = () => {
         <div className="container-section">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { src: tourUeno, alt: "Calle tradicional del barrio de Yanaka en Tokio" },
+              { src: yanakaGinzaStairs, alt: "Calle comercial Yanaka Ginza vista desde las escaleras Yuyake Dandan" },
               { src: tourYanaka, alt: "Calle comercial retro Yanaka Ginza con tiendas locales" },
-              { src: uenoNight, alt: "Templo del Parque Ueno iluminado al atardecer" },
+              { src: yanakaCandyShop, alt: "Tienda tradicional de dulces Goto no Ame en Yanaka" },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />

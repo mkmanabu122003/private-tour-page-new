@@ -166,7 +166,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
-    image: "/images/blog/tsukiji-food-guide-hero.jpg",
+    image: "/images/blog/tsukiji-outer-market-entrance.jpg",
   },
   // Day Trip Guides (new)
   {

@@ -11,6 +11,9 @@ import imperialPalace from "@/assets/imperial-palace.jpg";
 import imperialBridge from "@/assets/imperial-bridge.jpg";
 import tokyoStation from "@/assets/tokyo-station.jpg";
 import hamarikyu from "@/assets/hamarikyu.jpg";
+import nikkoToshogu from "@/assets/nikko-toshogu.jpg";
+import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.jpg";
+import yanakaCandyShop from "@/assets/yanaka-candy-shop.jpg";
 
 const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
   asakusa: {
@@ -130,9 +133,9 @@ const tourData = {
     startTime: "9:30 AM or 1:30 PM",
     meetingPoint: "Nippori Station, North Exit",
     images: [
-      { src: tourUeno, alt: "Traditional Yanaka neighborhood street in Tokyo", position: "center" },
+      { src: yanakaGinzaStairs, alt: "Yanaka Ginza shopping street viewed from Yuyake Dandan stairs", position: "center" },
       { src: tourYanaka, alt: "Yanaka Ginza retro shopping street with local shops", position: "center" },
-      { src: uenoNight, alt: "Ueno Park temple illuminated at evening", position: "center" },
+      { src: yanakaCandyShop, alt: "Goto no Ame traditional candy shop in Yanaka", position: "center" },
     ],
     highlights: [
       "Yanaka Ginza - Charming retro shopping street",
@@ -480,7 +483,7 @@ const tourData = {
     startTime: "7:30 AM",
     meetingPoint: "Tokyo Station",
     images: [
-      { src: hamarikyu, alt: "Toshogu Shrine ornate carvings in Nikko", position: "center" },
+      { src: nikkoToshogu, alt: "Stone torii gate and shrine buildings at Toshogu Shrine in Nikko", position: "center" },
     ],
     highlights: [
       "Toshogu Shrine: UNESCO World Heritage, Japan's most ornate shrine complex",
