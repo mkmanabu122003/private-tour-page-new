@@ -120,6 +120,17 @@ const TsukijiMarketGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               If Tsukiji has a signature food, it's tamagoyaki, the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick costs around 100 to 200 yen, and watching the cook build it layer by layer (pouring batter, rolling, pouring again) is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-tamagoyaki-on-stick.jpg"
+                alt="Golden tamagoyaki egg omelette on a stick at Tsukiji outer market"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Tsukiji's iconic tamagoyaki — golden, fluffy, and best eaten straight from the grill
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Fresh Sushi: Standing Up, As It Should Be
@@ -131,6 +142,17 @@ const TsukijiMarketGuide = () => {
               </Link>{" "}
               that goes into much more detail.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-fresh-maguro-sashimi.jpg"
+                alt="Fresh sliced maguro tuna sashimi served at Tsukiji market"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Freshly sliced maguro at Tsukiji — sourced directly from the wholesalers that morning
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Seafood Rice Bowls (Kaisendon)
@@ -145,6 +167,17 @@ const TsukijiMarketGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Not everything at Tsukiji needs to be eaten on the spot. The pickle shops (tsukemono-ya) sell an astonishing variety of Japanese pickled vegetables, from classic cucumber and daikon to more unusual items like pickled plums, wasabi-marinated lotus root, and sake-lees pickled turnips. Most shops offer free samples, and the vendors are patient with curious visitors. Dried goods shops carry katsuobushi, kombu, nori, and dried shrimp, the building blocks of Japanese cooking. If you want to take the flavors of Japan home with you, these are the souvenirs that actually matter. They're lightweight, packaged for travel, and will transform your home cooking in ways that a keychain from the airport never could.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-dried-goods-souvenirs.jpg"
+                alt="Tsukiji market stall displaying wasabi sesame seeds and specialty dried goods souvenirs"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Wasabi sesame, dried seasonings, and other Tsukiji-exclusive souvenirs that pack more flavor than any airport gift shop
+              </figcaption>
+            </figure>
 
             {/* Section 4: Getting There */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -160,7 +193,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday through Friday gives you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays</strong>. Most stalls are closed, and you'll be wandering through empty lanes wondering where all the food went. Some Wednesdays also see partial closures, as individual shops set their own rest days. If you only have one morning in Tokyo for food, make it a weekday at Tsukiji.
+              <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday, Thursday, and Friday give you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays and Wednesdays</strong>. Most stalls are closed on both days, and you'll be wandering through empty lanes wondering where all the food went. Always check the market's official calendar before your visit, as additional closure days occur around holidays. If you only have one morning in Tokyo for food, make it a Tuesday, Thursday, or Friday at Tsukiji.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Plan to spend 90 minutes to two hours for a thorough visit. That gives you enough time to walk the full market, eat three or four things, browse the knife shops and pickle vendors, and leave satisfied rather than overwhelmed. If you're interested in pairing your market visit with ramen later in the day, my{" "}
@@ -181,7 +214,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Tsukiji Outer Market</strong> is about food, atmosphere, and sensory immersion. You walk through narrow lanes, eat from stalls, interact with vendors, and experience the market on a human scale. It's tactile, immediate, and deeply satisfying. No reservation is needed. You show up, you eat, you explore. The experience is organic and personal. Every visit is slightly different depending on what's in season, what catches your eye, and which vendor decides to offer you a free sample of their best uni.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Toyosu Market</strong> is about spectacle and scale. The main attraction is the tuna auction, which takes place at dawn and is genuinely impressive. Watching auctioneers sell multi-million-yen bluefin tuna in a matter of seconds is unlike anything else in the world. But the experience is observed from behind glass on elevated walkways. You're watching, not participating. The auction requires an advance online reservation that books up weeks ahead, and the market itself is a modern, sterile facility that lacks the atmospheric charm of Tsukiji's weathered lanes.
+              <strong className="text-foreground">Toyosu Market</strong> is about spectacle and scale. The main attraction is the tuna auction, which takes place at dawn and is genuinely impressive. Watching auctioneers sell multi-million-yen bluefin tuna in a matter of seconds is unlike anything else in the world. But the experience is observed from behind glass on elevated walkways. You're watching, not participating. The auction requires winning a <strong className="text-foreground">monthly lottery</strong> (applied online, with winners chosen at random — not first-come-first-served). Only about 100 visitors are admitted per day, and applications open roughly one month in advance. The market itself is a modern, sterile facility that lacks the atmospheric charm of Tsukiji's weathered lanes.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               My honest recommendation: <strong className="text-foreground">if you only have time for one, choose Tsukiji</strong>. The food is better for visitors, the atmosphere is richer, and the experience requires zero advance planning. If you're a serious seafood enthusiast and can secure a Toyosu auction reservation, do both: Toyosu at dawn for the auction, then Tsukiji by 8 AM for breakfast. It makes for an unforgettable morning, though an exhausting one.
@@ -227,13 +260,13 @@ const TsukijiMarketGuide = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji open on weekends?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays. Weekday mornings (Tuesday through Friday) offer the best experience: full selection, fewer crowds, and a more relaxed atmosphere.
+                    Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays and Wednesdays. Weekday mornings (Tuesday, Thursday, and Friday) offer the best experience: full selection, fewer crowds, and a more relaxed atmosphere.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Should I visit Tsukiji or Toyosu?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    For most visitors, Tsukiji is the better choice. The food variety is greater, the atmosphere is more immersive, and no reservation is needed. Toyosu is worth visiting only if you specifically want to see the tuna auction, which requires an advance online reservation. If you have time, you can do both in one morning: Toyosu at dawn, Tsukiji by 8 AM.
+                    For most visitors, Tsukiji is the better choice. The food variety is greater, the atmosphere is more immersive, and no reservation is needed. Toyosu is worth visiting only if you specifically want to see the tuna auction, which requires winning a monthly lottery (not a simple reservation). If you have time, you can do both in one morning: Toyosu at dawn, Tsukiji by 8 AM.
                   </p>
                 </div>
                 <div>
@@ -264,8 +297,8 @@ const TsukijiMarketGuide = () => {
         mainEntity: [
           { "@type": "Question", name: "Is Tsukiji Market still open in 2026?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market with over 400 shops, restaurants, and food stalls remains open and thriving." }},
           { "@type": "Question", name: "What time should I arrive at Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Aim for 8:00 AM. Stalls are fully stocked, grills are hot, and crowds are manageable. Most stalls close by 1-2 PM." }},
-          { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays. Weekday mornings (Tuesday-Friday) are best." }},
-          { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires advance reservation." }},
+          { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best." }},
+          { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},
           { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }}
         ]
       })}} />
