@@ -85,7 +85,7 @@ const EsGuiaShibuyaHarajuku = () => {
               <img
                 src="/images/blog/shibuya-crossing-guide.jpg"
                 alt="Cómo disfrutar del Cruce de Shibuya - mejores puntos de observación"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El Cruce de Shibuya desde arriba. Hasta 3.000 personas cruzan en cada cambio de semáforo
@@ -150,7 +150,7 @@ const EsGuiaShibuyaHarajuku = () => {
               <img
                 src="/images/blog/harajuku-cat-street.jpg"
                 alt="Cat Street en Harajuku - la verdadera calle de la moda"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Cat Street, la verdadera calle de la moda de Harajuku, lejos de las multitudes de Takeshita
@@ -174,7 +174,7 @@ const EsGuiaShibuyaHarajuku = () => {
               <img
                 src="/images/blog/meiji-shrine-forest.jpg"
                 alt="Camino boscoso en el Santuario Meiji - escape tranquilo cerca de Harajuku"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El camino arbolado hacia el Santuario Meiji, un mundo aparte de las multitudes de Harajuku

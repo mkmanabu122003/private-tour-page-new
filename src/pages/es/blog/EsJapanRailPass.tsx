@@ -91,7 +91,7 @@ const EsJapanRailPass = () => {
                 src="/images/blog/shinkansen-n700-tokyo-station.jpg"
                 alt="Tren bala Shinkansen Serie N700 en un andén de estación en Japón"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El Shinkansen Serie N700 — la columna vertebral de la red de alta velocidad japonesa cubierta por el JR Pass
@@ -160,7 +160,7 @@ const EsJapanRailPass = () => {
                 src="/images/blog/fushimi-inari-senbon-torii-kyoto.jpg"
                 alt="Miles de puertas torii bermellón formando un túnel en el santuario Fushimi Inari de Kioto"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Los icónicos senbon torii de Fushimi Inari, Kioto — una de las razones principales por las que los viajeros toman el Shinkansen desde Tokio
@@ -178,7 +178,7 @@ const EsJapanRailPass = () => {
                 src="/images/blog/kinkakuji-golden-pavilion-kyoto.jpg"
                 alt="Kinkaku-ji, el Pabellón Dorado reflejándose en un estanque en Kioto, Japón"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Kinkaku-ji (Pabellón Dorado) en Kioto — la ruta clásica desde Tokio hace que el JR Pass se amortice solo
@@ -286,7 +286,7 @@ const EsJapanRailPass = () => {
                 src="/images/blog/jr-okachimachi-station-entrance.jpg"
                 alt="Entrada de la estación JR Okachimachi en Tokio mostrando el logotipo de JR y las puertas de acceso"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Una estación JR típica en el centro de Tokio — las tarjetas IC funcionan en todas las puertas

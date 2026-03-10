@@ -72,7 +72,7 @@ const YanakaWalkingTourGuide = () => {
               <img
                 src="/images/blog/yanaka-candy-shop-art.jpg"
                 alt="Traditional candy shop in Yanaka with colorful wall art"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -97,7 +97,7 @@ const YanakaWalkingTourGuide = () => {
               <img
                 src="/images/blog/yanaka-street-food-display.jpg"
                 alt="Traditional street food display in Yanaka with senbei and mochi"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -122,7 +122,7 @@ const YanakaWalkingTourGuide = () => {
               <img
                 src="/images/blog/yanaka-pottery-shop.jpg"
                 alt="Traditional pottery and ceramics shop in Yanaka"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -147,7 +147,7 @@ const YanakaWalkingTourGuide = () => {
               <img
                 src="/images/blog/yanaka-soba-restaurant.jpg"
                 alt="Traditional soba restaurant in Yanaka with green noren curtain at the entrance"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
@@ -172,7 +172,7 @@ const YanakaWalkingTourGuide = () => {
               <img
                 src="/images/candidates/train/PXL_20240726_023308396.jpg"
                 alt="JR train platform — Nippori Station on the Yamanote Line is the gateway to Yanaka"
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">

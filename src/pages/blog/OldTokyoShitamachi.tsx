@@ -89,7 +89,7 @@ const OldTokyoShitamachi = () => {
                 src="/images/blog/asakusa-jizo-statues-red-bibs.jpg"
                 alt="Row of Jizo stone statues wearing red bibs at an Asakusa temple in old Tokyo"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Jizo statues with red bibs near a temple in Asakusa — each bib is a personal prayer, a quiet reminder of Shitamachi's spiritual roots
@@ -107,7 +107,7 @@ const OldTokyoShitamachi = () => {
                 src="/images/blog/yanaka-ginza-shotengai-entrance.jpg"
                 alt="Entrance gate to Yanaka Ginza shopping street with local shoppers in old Tokyo"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The entrance to Yanaka Ginza — this slope lined with family-run shops feels more like a village than a part of Tokyo
@@ -123,7 +123,7 @@ const OldTokyoShitamachi = () => {
                 src="/images/blog/ningyocho-amazake-yokocho-tofu-shop.jpg"
                 alt="Traditional tofu and amazake shop in Ningyocho's Amazake Yokocho alley, Tokyo"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A tofu shop on Amazake Yokocho in Ningyocho — these family-run stores have been here for generations
@@ -160,7 +160,7 @@ const OldTokyoShitamachi = () => {
                 src="/images/blog/yanaka-traditional-pottery-storefront.jpg"
                 alt="Traditional pottery and ceramics shop storefront in Yanaka with handmade bowls on display"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A ceramics shop in Yanaka — the wooden storefront and handmade wares are exactly what Shitamachi looks like when you know where to look

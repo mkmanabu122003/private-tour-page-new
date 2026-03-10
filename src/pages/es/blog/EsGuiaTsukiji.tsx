@@ -106,7 +106,7 @@ const EsGuiaTsukiji = () => {
               <img
                 src="/images/blog/tsukiji-fresh-sushi.jpg"
                 alt="Sushi fresco en el mercado de Tsukiji en Tokio"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Sushi fresco en Tsukiji. El pescado llega de los mayoristas cada mañana
@@ -126,7 +126,7 @@ const EsGuiaTsukiji = () => {
               <img
                 src="/images/blog/tsukiji-tamagoyaki.jpg"
                 alt="Tamagoyaki, tortilla japonesa de huevo en el mercado de Tsukiji"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Tamagoyaki en palito, la comida callejera más icónica de Tsukiji
@@ -186,7 +186,7 @@ const EsGuiaTsukiji = () => {
               <img
                 src="/images/blog/ginza-shopping-street.jpg"
                 alt="Distrito de lujo de Ginza - combínalo con Tsukiji para un día perfecto"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Ginza, a pocos pasos de Tsukiji, un mundo completamente diferente

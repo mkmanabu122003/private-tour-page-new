@@ -148,7 +148,7 @@ const EsMercadoTsukijiTokio = () => {
                 src="/images/blog/tsukiji-fresh-maguro-sashimi.jpg"
                 alt="Sashimi de atún maguro recién cortado servido en el mercado de Tsukiji"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Maguro recién cortado en Tsukiji — comprado directamente a los mayoristas esa misma mañana
@@ -166,7 +166,7 @@ const EsMercadoTsukijiTokio = () => {
                 src="/images/blog/tsukiji-tamagoyaki-on-stick.jpg"
                 alt="Tamagoyaki dorado en palito en el mercado exterior de Tsukiji"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El icónico tamagoyaki de Tsukiji — dorado, esponjoso y mejor recién salido de la plancha
@@ -184,7 +184,7 @@ const EsMercadoTsukijiTokio = () => {
                 src="/images/blog/tsukiji-dried-goods-souvenirs.jpg"
                 alt="Puesto del mercado de Tsukiji con sésamo de wasabi y productos secos especiales como recuerdo"
                 loading="lazy"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Sésamo de wasabi, condimentos secos y otros recuerdos exclusivos de Tsukiji con más sabor que cualquier tienda de aeropuerto

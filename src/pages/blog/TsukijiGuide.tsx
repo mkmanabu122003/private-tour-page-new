@@ -100,7 +100,7 @@ const TsukijiGuide = () => {
               <img
                 src="/images/blog/tsukiji-fresh-sushi.jpg"
                 alt="Fresh sushi at Tsukiji Market Tokyo"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Fresh sushi at Tsukiji. The fish arrives from wholesalers every morning
@@ -120,7 +120,7 @@ const TsukijiGuide = () => {
               <img
                 src="/images/blog/tsukiji-tamagoyaki.jpg"
                 alt="Tamagoyaki Japanese egg omelette at Tsukiji Market"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Tamagoyaki on a stick, Tsukiji's most iconic street food
@@ -180,7 +180,7 @@ const TsukijiGuide = () => {
               <img
                 src="/images/blog/ginza-shopping-street.jpg"
                 alt="Ginza luxury district - combine with Tsukiji for perfect day"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Ginza, just a short walk from Tsukiji, a completely different world

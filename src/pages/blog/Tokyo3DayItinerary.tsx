@@ -100,7 +100,7 @@ const Tokyo3DayItinerary = () => {
               <img
                 src="/images/blog/asakusa-sensoji-pagoda.jpg"
                 alt="Senso-ji Temple pagoda in Asakusa, a highlight of any Tokyo 3-day itinerary"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -160,7 +160,7 @@ const Tokyo3DayItinerary = () => {
               <img
                 src="/images/blog/asakusa-street-food.jpg"
                 alt="Street food stalls near Asakusa and Ueno, part of Tokyo's vibrant food scene"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -208,7 +208,7 @@ const Tokyo3DayItinerary = () => {
               <img
                 src="/images/tours/harajuku-takeshita-street.jpg"
                 alt="Harajuku Takeshita Street, colorful and crowded with youth culture shops"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -251,7 +251,7 @@ const Tokyo3DayItinerary = () => {
               <img
                 src="/images/blog/shinjuku-omoide-yokocho.jpg"
                 alt="Omoide Yokocho in Shinjuku, narrow alley lined with yakitori stalls and lanterns"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -286,7 +286,7 @@ const Tokyo3DayItinerary = () => {
               <img
                 src="/images/blog/tsukiji-fresh-sushi.jpg"
                 alt="Fresh sushi breakfast at Tsukiji Outer Market in Tokyo"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">

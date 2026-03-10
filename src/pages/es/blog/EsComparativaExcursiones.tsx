@@ -137,7 +137,7 @@ const EsComparativaExcursiones = () => {
               <img
                 src="/images/blog/kamakura-buddha-comparison.jpg"
                 alt="Gran Buda de Kamakura - excursión popular desde Tokio"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El Gran Buda de Kamakura, uno de los monumentos más icónicos de Japón
@@ -180,7 +180,7 @@ const EsComparativaExcursiones = () => {
               <img
                 src="/images/blog/hakone-fuji-comparison.jpg"
                 alt="Monte Fuji desde Hakone - excursión escénica desde Tokio"
-                className="w-full rounded-lg"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El Monte Fuji desde el Lago Ashi, la vista más codiciada de Hakone
