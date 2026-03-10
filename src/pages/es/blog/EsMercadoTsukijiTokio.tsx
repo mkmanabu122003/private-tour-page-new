@@ -19,8 +19,8 @@ const EsMercadoTsukijiTokio = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/tsukiji-food-guide-hero.jpg"
-          alt="Mercado exterior de Tsukiji en Tokio"
+          src="/images/blog/tsukiji-market-seafood-stalls.jpg"
+          alt="Puestos de brochetas de mariscos en el Mercado Exterior de Tsukiji en Tokio"
           className="w-full h-full object-cover"
           loading="eager"
         />

@@ -74,7 +74,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/tsukiji-food-guide-hero.jpg",
+    image: "/images/blog/tsukiji-outer-market-entrance.jpg",
   },
   {
     slug: "yanaka-tokio-itinerario",
