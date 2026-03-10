@@ -114,6 +114,17 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Al acercarte a la puerta torii, detente brevemente y haz una <strong className="text-foreground">reverencia ligera</strong> antes de pasar. Este es tu saludo al kami (deidad) que reside en el recinto del santuario. Piensa en ello como llamar a la puerta antes de entrar en la casa de alguien. Una vez que hayas cruzado la puerta, <strong className="text-foreground">camina por los lados del sendero de acceso</strong>, no por el centro. El centro del camino, llamado <strong className="text-foreground">sei-chu</strong>, se considera el camino de la deidad. Caminar por el lado izquierdo o derecho muestra respeto al dejar libre el camino de la deidad. Notarás que la mayoría de los visitantes japoneses se desplazan naturalmente hacia un lado.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
+                alt="Visitantes cruzando la puerta torii de piedra en el santuario Nikko Toshogu con la puerta Yomeimon al fondo"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Cruzando el torii de piedra en Nikko Toshogu — observa cómo los visitantes caminan naturalmente por los lados, dejando libre el camino central
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Temizu: La Purificación de Manos
@@ -141,6 +152,17 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               No te preocupes por memorizar cada detalle; muchos temizuya ahora tienen carteles con instrucciones en inglés, y desde la pandemia, algunos han sido cerrados o simplificados. Si el agua no está fluyendo o los cucharones han sido retirados, simplemente puedes saltarte este paso.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/shrine-chozuya-dragon-purification.jpg"
+                alt="Fuente de purificación chozuya con caño en forma de dragón y cucharones de bambú en un santuario japonés"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Un chozuya con caño de dragón — busca los cucharones de bambú y sigue los cinco pasos de purificación
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Oración: Ni-hai, Ni-hakushu, Ichi-hai
@@ -189,6 +211,17 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               La etiqueta en los templos budistas coincide en algunos aspectos con las costumbres de los santuarios, pero difiere en varios puntos importantes. La atmósfera general tiende a ser más silenciosa y contemplativa, reflejando el énfasis del budismo en la paz interior y la atención plena.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-ornate-temple-hall.jpg"
+                alt="Salón de templo budista ornamentado en Nikko con pilares rojos, detalles dorados y linternas de piedra"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Un salón de templo ricamente decorado en Nikko — los templos budistas suelen ser más ornamentados y contemplativos que los santuarios sintoístas
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Incienso: Purificación con Humo
@@ -223,6 +256,17 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Las políticas de fotografía varían ampliamente entre templos. Las áreas exteriores y los jardines casi siempre se pueden fotografiar. Sin embargo, muchos templos <strong className="text-foreground">prohíben la fotografía dentro de sus salones principales</strong>, particularmente cerca de las zonas del altar y las estatuas sagradas. Busca siempre la señalización: el icono de una cámara con una línea roja es universal. En caso de duda, pregunta a un miembro del personal o a un monje. Incluso donde la fotografía esté permitida, usa tu cámara con respeto: sin flash, sin palos de selfie cerca de objetos sagrados, y sin poses que puedan considerarse irrespetuosas (apoyarse en estatuas, imitar poses budistas como broma, etc.). Silencia también el sonido del obturador, ya que el clic repetido de las cámaras en un salón de oración silencioso es realmente molesto.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/kamakura-serene-temple-garden.jpg"
+                alt="Jardín sereno de templo japonés en Kamakura con casa de té tradicional y flores de camelia"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Un jardín de templo en Kamakura — estos espacios tranquilos invitan a la contemplación silenciosa, no a las sesiones de selfies
+              </figcaption>
+            </figure>
 
             {/* General Etiquette */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

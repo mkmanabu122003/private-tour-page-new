@@ -143,6 +143,17 @@ const EsMercadoTsukijiTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tsukiji tiene docenas de locales de sushi, y no todos merecen tu tiempo ni tu dinero. Mi regla de oro: evita cualquier restaurante con captadores en la puerta intentando atraerte en varios idiomas. Los mejores locales de sushi de Tsukiji no necesitan hacer eso: tienen cola porque son buenos. Los restaurantes de sushi de pie (tachigui-zushi) ofrecen una relación calidad-precio extraordinaria: por 2.000-3.000 yenes comes 8-10 piezas de sushi preparadas al momento con pescado que llegó esa misma mañana. Para una experiencia más relajada, los locales con asiento ofrecen menús omakase desde 3.500 yenes. Mi consejo: no persigas los nombres famosos con colas de dos horas. Camina un poco más adentro y descubrirás barras excelentes con esperas de 15 minutos.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-fresh-maguro-sashimi.jpg"
+                alt="Sashimi de atún maguro recién cortado servido en el mercado de Tsukiji"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Maguro recién cortado en Tsukiji — comprado directamente a los mayoristas esa misma mañana
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Tamagoyaki, el bocado imprescindible
@@ -150,6 +161,17 @@ const EsMercadoTsukijiTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si hay un símbolo del mercado exterior de Tsukiji, es el tamagoyaki: una tortilla japonesa espesa, ligeramente dulce, cocinada capa a capa en una sartén rectangular especial. Las dos tiendas históricas son Yamachou (más dulce, casi como un postre) y Shouro (más salada, con más sabor a dashi). Un palito de tamagoyaki cuesta entre 100 y 200 yenes, y verlo preparar es parte de la experiencia. Cada vez que traigo un grupo, el tamagoyaki es lo que más sorprende a quienes nunca han estado en Japón. No te lo saltes.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-tamagoyaki-on-stick.jpg"
+                alt="Tamagoyaki dorado en palito en el mercado exterior de Tsukiji"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                El icónico tamagoyaki de Tsukiji — dorado, esponjoso y mejor recién salido de la plancha
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Marisco a la parrilla y wagyu en brocheta
@@ -157,6 +179,17 @@ const EsMercadoTsukijiTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los callejones del mercado están salpicados de puestos donde asan marisco al momento: vieiras gigantes de Hokkaido con mantequilla y soja, patas de cangrejo real, gambas, calamar y lo que la temporada traiga. Las vieiras (hotate) son mi recomendación número uno: a 500-800 yenes por pieza, son enormes y el sabor es incomparable al de cualquier vieira que hayas probado fuera de Japón. Para los carnívoros, varios puestos venden brochetas de wagyu A4 y A5 asadas sobre carbón por 800-1.500 yenes. El marmolado de la carne se derrite literalmente en la boca. Es un capricho, pero estás en Tsukiji, y aquí los caprichos están justificados.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-dried-goods-souvenirs.jpg"
+                alt="Puesto del mercado de Tsukiji con sésamo de wasabi y productos secos especiales como recuerdo"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Sésamo de wasabi, condimentos secos y otros recuerdos exclusivos de Tsukiji con más sabor que cualquier tienda de aeropuerto
+              </figcaption>
+            </figure>
 
             {/* Cómo ir y cuándo llegar */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -181,7 +214,7 @@ const EsMercadoTsukijiTokio = () => {
               Días de cierre: la trampa del domingo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Este es el error más frecuente que veo entre los turistas: planificar su visita a Tsukiji en domingo. <strong className="text-foreground">La mayoría de los puestos del mercado exterior cierran los domingos</strong> y algunos también los miércoles. No hay un calendario unificado porque cada tienda establece su propio horario, pero como regla general: de martes a sábado encontrarás el mercado funcionando a pleno rendimiento. El lunes es variable (algunos puestos cierran), y el domingo es decepcionante. Si tu único día libre es el domingo, no vengas a Tsukiji. Planifica otra actividad y guarda el mercado para otro día.
+              Este es el error más frecuente que veo entre los turistas: planificar su visita a Tsukiji en domingo. <strong className="text-foreground">La mayoría de los puestos del mercado exterior cierran los domingos</strong>, y <strong className="text-foreground">los miércoles son también un día habitual de cierre</strong>, con muchos puestos y restaurantes cerrados. No hay un calendario unificado porque cada tienda establece su propio horario, pero como regla general: los martes, jueves y viernes son los mejores días, y los sábados también son buenos aunque más concurridos. El lunes es variable (algunos puestos cierran), y el domingo es decepcionante. Si tu único día libre es el domingo, no vengas a Tsukiji. Planifica otra actividad y guarda el mercado para otro día.
             </p>
 
             {/* Tsukiji vs. Toyosu */}
@@ -196,7 +229,7 @@ const EsMercadoTsukijiTokio = () => {
               Lo que ofrece Toyosu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Toyosu es el mercado mayorista moderno. Su gran atractivo es la subasta de atún rojo, donde ejemplares que pueden costar millones de yenes se venden en cuestión de minutos. Los visitantes observan desde una plataforma elevada detrás de cristal. Es un espectáculo fascinante, pero requiere reserva previa online y hay que estar allí antes de las 6:00 de la mañana. Toyosu también tiene corredores de observación donde puedes ver a los profesionales trabajar, y una zona de restaurantes con locales de sushi de buena calidad. El edificio es limpio, moderno y organizado, pero carece del alma que solo los años y la acumulación de historias pueden dar a un lugar.
+              Toyosu es el mercado mayorista moderno. Su gran atractivo es la subasta de atún rojo, donde ejemplares que pueden costar millones de yenes se venden en cuestión de minutos. Los visitantes observan desde una plataforma elevada detrás de cristal. Es un espectáculo fascinante, pero el acceso requiere ganar un <strong className="text-foreground">sorteo mensual</strong> (se solicita online y los ganadores se eligen al azar, no por orden de llegada). Solo se admiten unos 100 visitantes al día, y hay que estar allí antes de las 6:00 de la mañana. Toyosu también tiene corredores de observación donde puedes ver a los profesionales trabajar, y una zona de restaurantes con locales de sushi de buena calidad. El edificio es limpio, moderno y organizado, pero carece del alma que solo los años y la acumulación de historias pueden dar a un lugar.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">

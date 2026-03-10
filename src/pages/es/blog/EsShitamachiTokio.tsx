@@ -117,6 +117,17 @@ const EsShitamachiTokio = () => {
                 tour por Asakusa con guía local
               </Link>.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/asakusa-jizo-statues-red-bibs.jpg"
+                alt="Fila de estatuas Jizo de piedra con baberos rojos en un templo de Asakusa en el antiguo Tokio"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Estatuas Jizo con baberos rojos cerca de un templo en Asakusa — cada babero es una oración personal, un recordatorio silencioso de las raíces espirituales del shitamachi
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Yanaka: el más auténtico
@@ -127,6 +138,17 @@ const EsShitamachiTokio = () => {
                 guía completa con itinerario por Yanaka
               </Link>.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/yanaka-ginza-shotengai-entrance.jpg"
+                alt="Puerta de entrada a la calle comercial Yanaka Ginza con compradores locales en el antiguo Tokio"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                La entrada a Yanaka Ginza — esta cuesta con tiendas familiares se siente más como un pueblo que como parte de Tokio
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Shibamata: el que los turistas no conocen
@@ -153,6 +175,17 @@ const EsShitamachiTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Antes de que existieran los konbini y los supermercados, los japoneses compraban en las shotengai, calles comerciales de barrio, a menudo cubiertas con un techo de plástico o lona, donde cada tienda se especializaba en una cosa. La verdulería, la pescadería, la tienda de arroz, la de encurtidos. En el shitamachi, muchas de estas shotengai sobreviven, aunque algunas luchan contra la despoblación y el envejecimiento. Caminar por una shotengai es entender cómo funcionaba la vida diaria en el Tokio de antes: la tendera que te conocía, que sabía qué tofu te gustaba, que te fiaba si andabas corto de dinero a final de mes.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/ningyocho-amazake-yokocho-tofu-shop.jpg"
+                alt="Tienda tradicional de tofu y amazake en el callejón Amazake Yokocho de Ningyocho, Tokio"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Una tienda de tofu en Amazake Yokocho, Ningyocho — estos negocios familiares llevan generaciones en el mismo lugar
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Los sento (baños públicos)
@@ -174,6 +207,17 @@ const EsShitamachiTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               En el shitamachi quedan artesanos que practican oficios que en el resto de Tokio ya desaparecieron. Fabricantes de shoji (puertas correderas de papel), torneros de madera que hacen koma (peonzas), artesanos del vidrio soplado edo-kiriko, y preparadores de tatami que trabajan con la misma técnica que sus bisabuelos. Muchos de estos talleres están abiertos a visitantes, y algunos ofrecen experiencias donde puedes probar el oficio con tus propias manos. Es una forma de turismo que no consume el lugar, sino que lo sostiene.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/yanaka-traditional-pottery-storefront.jpg"
+                alt="Fachada de tienda tradicional de cerámica en Yanaka con cuencos artesanales expuestos"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Una tienda de cerámica en Yanaka — la fachada de madera y las piezas artesanales son exactamente lo que descubres en el shitamachi cuando sabes dónde mirar
+              </figcaption>
+            </figure>
 
             {/* Cómo visitar */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

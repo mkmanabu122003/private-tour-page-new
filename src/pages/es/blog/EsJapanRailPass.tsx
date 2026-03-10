@@ -86,6 +86,17 @@ const EsJapanRailPass = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               En octubre de 2023, JR Group subió el precio del Japan Rail Pass en aproximadamente un 70%. El pase ordinario de 7 días pasó de 29.650 a 50.000 yenes. Fue un cambio drástico que pilló a muchos viajeros por sorpresa. ¿La razón? El pase llevaba años sin actualizarse mientras los costes operativos subían. JR también quería desincentivar el uso masivo del shinkansen Nozomi (el más rápido), que el pase nunca ha incluido. Desde entonces, los precios se han mantenido estables, pero la ecuación sobre si el japan rail pass vale la pena cambió radicalmente.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinkansen-n700-tokyo-station.jpg"
+                alt="Tren bala Shinkansen Serie N700 en un andén de estación en Japón"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                El Shinkansen Serie N700 — la columna vertebral de la red de alta velocidad japonesa cubierta por el JR Pass
+              </figcaption>
+            </figure>
 
             {/* Cuánto cuesta */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -144,19 +155,41 @@ const EsJapanRailPass = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Vamos a los números. Aquí es donde realmente puedes decidir si el japan rail pass vale la pena para tu viaje. Usaré precios reales de billetes individuales en 2026 para los trayectos más comunes.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/fushimi-inari-senbon-torii-kyoto.jpg"
+                alt="Miles de puertas torii bermellón formando un túnel en el santuario Fushimi Inari de Kioto"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Los icónicos senbon torii de Fushimi Inari, Kioto — una de las razones principales por las que los viajeros toman el Shinkansen desde Tokio
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Itinerario Tokio-Kioto-Osaka-Hiroshima
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Este es el itinerario clásico de primera visita a Japón, y es donde el JR Pass brilla. Si planeas moverte entre estas cuatro ciudades en 7 días, los números hablan solos. El trayecto Tokio-Kioto en shinkansen Hikari cuesta unos 13.320 yenes por tramo. Kioto-Hiroshima sale por unos 11.420 yenes. Hiroshima-Osaka, unos 10.230 yenes. Y Osaka-Tokio de vuelta, unos 13.620 yenes. Si además añades una excursión a Miyajima desde Hiroshima (incluida en el pase), los billetes individuales superan con creces los 50.000 yenes del pase de 7 días.
+              Este es el itinerario clásico de primera visita a Japón, y es donde el JR Pass brilla. Si planeas moverte entre estas cuatro ciudades en 7 días, los números hablan solos. El trayecto Tokio-Kioto en shinkansen Hikari cuesta unos 13.850 yenes por tramo. Kioto-Hiroshima sale por unos 11.300 yenes. Hiroshima-Osaka, unos 10.230 yenes. Y Osaka-Tokio de vuelta, unos 14.400 yenes. Si además añades una excursión a Miyajima desde Hiroshima (incluida en el pase), los billetes individuales superan los 50.000 yenes del pase de 7 días.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/kinkakuji-golden-pavilion-kyoto.jpg"
+                alt="Kinkaku-ji, el Pabellón Dorado reflejándose en un estanque en Kioto, Japón"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Kinkaku-ji (Pabellón Dorado) en Kioto — la ruta clásica desde Tokio hace que el JR Pass se amortice solo
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Itinerario Tokio-Kioto-Kanazawa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Otro itinerario donde el japan rail pass vale la pena. Tokio a Kioto en Hikari: 13.320 yenes. Kioto a Kanazawa en el tren Thunderbird: unos 6.800 yenes. Kanazawa a Tokio en el shinkansen Hokuriku: unos 14.180 yenes. Total de billetes individuales: aproximadamente 34.300 yenes solo ida. Si haces estos trayectos de ida y vuelta, o añades alguna excursión (por ejemplo, a Nara desde Kioto, cubierta por el pase), te acercas o superas los 50.000 yenes del pase.
+              Otro itinerario donde el japan rail pass vale la pena. Tokio a Kioto en Hikari: 13.850 yenes. Kioto a Kanazawa (Thunderbird hasta Tsuruga + shinkansen Tsurugi): unos 7.720 yenes. Kanazawa a Tokio en el shinkansen Hokuriku: unos 14.180 yenes. Total de billetes individuales: aproximadamente 35.750 yenes solo ida. Si haces estos trayectos de ida y vuelta, o añades alguna excursión (por ejemplo, a Nara desde Kioto, cubierta por el pase), te acercas o superas los 50.000 yenes del pase.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -177,12 +210,12 @@ const EsJapanRailPass = () => {
                 <tbody>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">Tokio → Kioto (Hikari)</td>
-                    <td className="py-3 pr-4">13.320 yen</td>
+                    <td className="py-3 pr-4">13.850 yen</td>
                     <td className="py-3 rowspan-6" rowSpan={1}>Incluido</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">Kioto → Hiroshima (Sakura)</td>
-                    <td className="py-3 pr-4">11.420 yen</td>
+                    <td className="py-3 pr-4">11.300 yen</td>
                     <td className="py-3">Incluido</td>
                   </tr>
                   <tr className="border-b border-border/50">
@@ -197,19 +230,19 @@ const EsJapanRailPass = () => {
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">Osaka → Tokio (Hikari)</td>
-                    <td className="py-3 pr-4">13.620 yen</td>
+                    <td className="py-3 pr-4">14.400 yen</td>
                     <td className="py-3">Incluido</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4 font-medium text-foreground">Total billetes</td>
-                    <td className="py-3 pr-4 font-medium text-foreground">48.950 yen</td>
+                    <td className="py-3 pr-4 font-medium text-foreground">50.140 yen</td>
                     <td className="py-3 font-medium text-foreground">50.000 yen (pase)</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Con este itinerario base los números están muy ajustados. Pero si añades cualquier trayecto extra (una excursión a Nara, un tren local JR en Tokio, el ferry a Miyajima), el pase empieza a salir rentable. Y si viajas Tokio-Kioto-Kanazawa-Tokio, con los 34.300 yenes de ida ya estás al 69% del coste del pase, y cualquier uso adicional te pone en positivo. La clave está en contar todos los trenes JR que usarás, incluidos los locales y regionales.
+              Con este itinerario base los números ya igualan prácticamente el precio del pase. Si añades cualquier trayecto extra (una excursión a Nara, un tren local JR en Tokio, el ferry a Miyajima), el pase sale claramente rentable. Y si viajas Tokio-Kioto-Kanazawa-Tokio, con los 35.750 yenes de ida ya estás al 71% del coste del pase, y cualquier uso adicional te pone en positivo. La clave está en contar todos los trenes JR que usarás, incluidos los locales y regionales.
             </p>
 
             {/* Para quién NO vale la pena */}
@@ -248,6 +281,17 @@ const EsJapanRailPass = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si has llegado hasta aquí y concluyes que el japan rail pass vale la pena para tu caso, perfecto. Pero si no, aquí van las alternativas que recomiendo a mis clientes y que a menudo resultan más económicas.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/jr-okachimachi-station-entrance.jpg"
+                alt="Entrada de la estación JR Okachimachi en Tokio mostrando el logotipo de JR y las puertas de acceso"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Una estación JR típica en el centro de Tokio — las tarjetas IC funcionan en todas las puertas
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Suica/Pasmo (tarjetas IC)

@@ -84,6 +84,17 @@ const OldTokyoShitamachi = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Asakusa is the most famous old Tokyo neighborhood, and it's where I start most of my tours. Senso-ji, Tokyo's oldest temple (founded in 645 AD), anchors the district, but Asakusa's real character lives in the narrow streets behind the temple: Hoppy Street with its open-air drinking stalls, the craft workshops that still produce handmade goods, and the shotengai (covered shopping arcades) where you can buy everything from kitchen knives to festival costumes. Asakusa was the entertainment capital of Edo. Think of it as Tokyo's Broadway of the 1800s, except with kabuki theaters and pleasure quarters.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/asakusa-jizo-statues-red-bibs.jpg"
+                alt="Row of Jizo stone statues wearing red bibs at an Asakusa temple in old Tokyo"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Jizo statues with red bibs near a temple in Asakusa — each bib is a personal prayer, a quiet reminder of Shitamachi's spiritual roots
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Yanaka</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -91,11 +102,33 @@ const OldTokyoShitamachi = () => {
               <Link to="/blog/yanaka-tokyo-walking-route" className="text-accent hover:underline">walking route for Yanaka</Link>{" "}
               that covers the best spots.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/yanaka-ginza-shotengai-entrance.jpg"
+                alt="Entrance gate to Yanaka Ginza shopping street with local shoppers in old Tokyo"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                The entrance to Yanaka Ginza — this slope lined with family-run shops feels more like a village than a part of Tokyo
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Ningyocho and Nihonbashi</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Ningyocho was once Edo's theater district. Its name means "doll town," a reference to the puppet theaters that thrived here. Today it's a quiet commercial neighborhood where modern offices sit alongside shops that have been selling the same products for 200 years. Nihonbashi, the "Japan Bridge," was the official center of the Edo road system; every distance in Japan was measured from this bridge. The original wooden bridge was replaced with a stone one in 1911, and it now sits beneath an expressway overpass in one of Tokyo's most poignant contrasts between old and new.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/ningyocho-amazake-yokocho-tofu-shop.jpg"
+                alt="Traditional tofu and amazake shop in Ningyocho's Amazake Yokocho alley, Tokyo"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A tofu shop on Amazake Yokocho in Ningyocho — these family-run stores have been here for generations
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Shibamata</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -122,6 +155,17 @@ const OldTokyoShitamachi = () => {
                 <strong className="text-foreground">Festival decorations out of season:</strong> Paper lanterns, mikoshi (portable shrines) stored under tarps, or festival posters on community boards. All signs you're in a genuine Shitamachi neighborhood. Some festivals here have been celebrated continuously for over 300 years.
               </li>
             </ul>
+            <figure className="my-8">
+              <img
+                src="/images/blog/yanaka-traditional-pottery-storefront.jpg"
+                alt="Traditional pottery and ceramics shop storefront in Yanaka with handmade bowls on display"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A ceramics shop in Yanaka — the wooden storefront and handmade wares are exactly what Shitamachi looks like when you know where to look
+              </figcaption>
+            </figure>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
               How to Visit Shitamachi Without a Guide
@@ -139,7 +183,7 @@ const OldTokyoShitamachi = () => {
                 <strong className="text-foreground">Walk from Ueno to Yanaka.</strong> Ueno Park is the dividing line between Yamanote and Shitamachi. Walking from the park's western edge (museums) to its northern edge (Yanaka) takes you from one Tokyo to the other in fifteen minutes.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Visit the Shitamachi Museum in Ueno.</strong> This small museum near Shinobazu Pond recreates Shitamachi street scenes from the early 1900s: a merchant's shop, a coppersmith's workshop, a tenement apartment. Excellent primer before exploring the real neighborhoods.
+                <strong className="text-foreground">Visit the Shitamachi Museum in Ueno.</strong> Recently renovated and reopened in 2025, this museum near Shinobazu Pond recreates Shitamachi street scenes from the early 1900s: a merchant's shop, a coppersmith's workshop, a tenement apartment. The updated exhibits feature excellent English signage and immersive displays. An excellent primer before exploring the real neighborhoods.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Eat where the locals eat.</strong> Shitamachi neighborhoods are where Tokyo's food culture was born. Look for shops that are simple, busy with Japanese customers, and have been in the same spot for decades.

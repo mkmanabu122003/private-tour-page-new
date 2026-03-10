@@ -148,6 +148,17 @@ const EsPropinasenJapon = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               La diferencia clave con la propina occidental es el momento: se da antes del servicio, no después. No es una recompensa por un buen servicio recibido, sino una muestra de respeto y confianza por adelantado. Es sutil pero importante.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/ryokan-nakai-kimono-greeting.jpg"
+                alt="Una nakai-san en elegante kimono recibiendo a los huéspedes en la entrada de un ryokan tradicional japonés"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Una nakai-san en un ryokan tradicional — el kokorozuke es el único contexto donde un regalo monetario puede ser apropiado
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Restaurantes y taxis
@@ -155,6 +166,17 @@ const EsPropinasenJapon = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               En restaurantes y taxis, la respuesta es sencilla: no dejes propina. Nunca. En los restaurantes, paga exactamente lo que dice la cuenta. En los taxis, el taxímetro marca el precio final, no redondees hacia arriba, no dejes el cambio. De hecho, los taxis japoneses tienen un sistema de cambio automático y el conductor te devolverá hasta el último yen. Intentar dejar propina en un taxi puede crear una confusión incómoda, especialmente si hay barrera de idioma. Simplemente paga, di "arigatou gozaimasu" y bájate. Perfecto.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tours/night-tour-omoide-yokocho.jpg"
+                alt="Mostrador animado de yakitori en Omoide Yokocho en Shinjuku con comensales y cocineros en ambiente ahumado"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Una izakaya típica de mostrador en Shinjuku — la intimidad entre cocinero y cliente forma parte de la experiencia, y la propina rompería esa dinámica
+              </figcaption>
+            </figure>
 
             {/* Cómo mostrar agradecimiento sin propina */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -183,6 +205,17 @@ const EsPropinasenJapon = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Y si no trajiste nada de tu país, una carta escrita a mano, incluso en español, incluso con errores, es un tesoro. Yo guardo cada carta que he recibido de mis invitados. Las releo cuando tengo un día difícil. Un billete de 10.000 yenes se gasta. Una carta se guarda para siempre.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/japanese-elegant-gift-wrapping.jpg"
+                alt="Cajas de regalo japonesas elegantemente envueltas con lazos de cinta azul, representando el arte del regalo en Japón"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                En Japón, la presentación importa tanto como el regalo — un pequeño obsequio bellamente envuelto dice más que el dinero
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Una reseña online (lo que más valoran hoy)

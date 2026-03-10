@@ -108,6 +108,17 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               As you approach the torii gate, pause briefly and offer a <strong className="text-foreground">shallow bow</strong> before passing through. This is your greeting to the kami (deity) who resides within the shrine grounds. Think of it as knocking before entering someone's home. Once through the gate, <strong className="text-foreground">walk along the sides of the approach path</strong>, not straight down the center. The center of the path, called the <strong className="text-foreground">sei-chu</strong>, is considered the pathway for the deity. Walking along the left or right side shows respect by leaving the deity's path clear. You'll notice that most Japanese visitors naturally drift to one side.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
+                alt="Visitors approaching through a stone torii gate at Nikko Toshogu shrine with ornate Yomeimon gate visible beyond"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Walking through the stone torii at Nikko Toshogu — notice how visitors naturally walk to the sides, leaving the center path clear
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Temizu: The Hand-Washing Purification
@@ -135,6 +146,17 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Don't worry about memorizing every detail. Many temizuya now have instruction signs in English, and since the pandemic, some have been closed or simplified. If the water isn't flowing or the ladles have been removed, you can simply skip this step.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/shrine-chozuya-dragon-purification.jpg"
+                alt="Dragon-shaped water spout at a chozuya purification fountain with bamboo ladles at a Japanese shrine"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A chozuya with a dragon water spout — look for the bamboo ladles and follow the five-step purification sequence
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Prayer: Ni-hai, Ni-hakushu, Ichi-hai
@@ -183,6 +205,17 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Buddhist temple etiquette overlaps with shrine customs in some ways but differs in several important respects. The overall atmosphere tends to be quieter and more contemplative, reflecting Buddhism's emphasis on inner peace and mindfulness.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-ornate-temple-hall.jpg"
+                alt="Ornate Buddhist temple hall at Nikko with red pillars, gold trim, and stone lanterns"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A richly decorated temple hall at Nikko — Buddhist temples tend to be more ornate and contemplative than Shinto shrines
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Incense: Purifying with Smoke
@@ -217,6 +250,17 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Photography policies vary widely between temples. Outdoor areas and gardens are almost always fine to photograph. However, many temples <strong className="text-foreground">prohibit photography inside their main halls</strong>, particularly near altar areas and sacred statues. Always look for signage. A camera icon with a red line through it is universal. When in doubt, ask a staff member or a monk. Even where photography is permitted, use your camera respectfully: no flash, no selfie sticks near sacred objects, and no posing in ways that could be seen as disrespectful (leaning on statues, mimicking Buddhist poses as a joke, and so on). Silence your shutter sound as well. The repeated click of cameras in a quiet prayer hall is genuinely disruptive.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/kamakura-serene-temple-garden.jpg"
+                alt="Serene Japanese temple garden in Kamakura with traditional tea house and camellia flowers"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A temple garden in Kamakura — these tranquil spaces invite quiet contemplation, not selfie sessions
+              </figcaption>
+            </figure>
 
             {/* General Etiquette */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

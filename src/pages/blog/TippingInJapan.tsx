@@ -117,6 +117,17 @@ const TippingInJapan = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tipping at restaurants in Japan isn't expected, not at high-end sushi counters, not at izakaya (Japan's answer to a Spanish tapas bar), not at ramen shops. If you leave money on the table, the server will likely chase you down the street to return it, assuming you forgot it. I've seen this happen with my clients at least a dozen times, and the resulting sidewalk exchange (the flustered tourist, the earnest server running with a ¥1,000 note) is a perfect example of the confusion that tipping creates here.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tours/night-tour-omoide-yokocho.jpg"
+                alt="Busy yakitori counter at Omoide Yokocho in Shinjuku with diners and cooks in a smoky atmosphere"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A typical counter-style izakaya in Shinjuku — the intimacy between cook and customer is part of the experience, and tipping would disrupt that dynamic
+              </figcaption>
+            </figure>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Hotels
             </h3>
@@ -129,6 +140,17 @@ const TippingInJapan = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the one partial exception. At some traditional ryokan, there is a custom called <em>kokorozuke</em>, a small gift of money placed in a decorative envelope and given to the nakai-san (the attendant who serves your meals and prepares your room). This is not a tip in the Western sense. It's closer to a gift between equals, and the envelope is critical. Handing over bare cash would cause confusion. If you stay at a high-end ryokan, your concierge or hotel can advise you on whether kokorozuke is appropriate and how much to give (typically ¥1,000–¥3,000).
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/ryokan-nakai-kimono-greeting.jpg"
+                alt="A nakai-san in elegant kimono greeting guests at a traditional Japanese ryokan entrance"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A nakai-san at a traditional ryokan — kokorozuke is the only context where a monetary gift is sometimes appropriate
+              </figcaption>
+            </figure>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Taxis
             </h3>
@@ -157,6 +179,17 @@ const TippingInJapan = () => {
                 <strong className="text-foreground">A handwritten note.</strong> This is surprisingly powerful in Japan. I've received handwritten thank-you cards from guests that I still keep years later. In a culture that values sincerity and effort, a handwritten note in English (or attempted Japanese) communicates something that money never can.
               </li>
             </ul>
+            <figure className="my-8">
+              <img
+                src="/images/blog/japanese-elegant-gift-wrapping.jpg"
+                alt="Elegantly wrapped Japanese gift boxes with blue ribbon bows, representing the art of gift-giving in Japan"
+                loading="lazy"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                In Japan, presentation matters as much as the gift itself — a small, beautifully wrapped souvenir speaks louder than cash
+              </figcaption>
+            </figure>
 
             {/* H2: What about tour guides? */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
