@@ -4,7 +4,7 @@ import { Award, Globe, Briefcase, Heart, MapPin, Languages, Shield, Users, BookO
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import heroImage from "@/assets/asakusa-temple.jpg";
+import heroImage from "@/assets/asakusa-temple.webp";
 
 const stats = [
   { label: "Tours Completados", value: "500+" },
@@ -140,6 +140,9 @@ const EsAbout = () => {
                   src={guidePortrait}
                   alt="Manabu, guía privado con licencia oficial en Tokio"
                   className="w-full h-full object-cover"
+                  fetchpriority="high"
+                  width={600}
+                  height={800}
                 />
               </div>
             </div>
@@ -243,6 +246,9 @@ const EsAbout = () => {
                   src={heroImage}
                   alt="Distrito histórico de Asakusa en Tokio con el Templo Senso-ji y arquitectura tradicional"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={800}
+                  height={450}
                 />
               </div>
             </div>

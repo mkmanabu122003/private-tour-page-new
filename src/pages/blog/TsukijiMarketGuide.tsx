@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const TsukijiMarketGuide = () => {
   return (
@@ -44,9 +45,12 @@ const TsukijiMarketGuide = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/tsukiji-market-seafood-stalls.jpg"
+          src="/images/blog/tsukiji-market-seafood-stalls.webp"
           alt="Seafood skewer stalls at Tsukiji Outer Market in Tokyo"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -97,9 +101,12 @@ const TsukijiMarketGuide = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/tours/tsukiji-outer-market.jpg"
+                src="/images/tours/tsukiji-outer-market.webp"
                 alt="Narrow lanes of Tsukiji outer market with food stalls"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The outer market's narrow lanes, over 400 shops packed into a few walkable blocks
@@ -122,10 +129,12 @@ const TsukijiMarketGuide = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-tamagoyaki-on-stick.jpg"
+                src="/images/blog/tsukiji-tamagoyaki-on-stick.webp"
                 alt="Golden tamagoyaki egg omelette on a stick at Tsukiji outer market"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Tsukiji's iconic tamagoyaki — golden, fluffy, and best eaten straight from the grill
@@ -144,10 +153,12 @@ const TsukijiMarketGuide = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-fresh-maguro-sashimi.jpg"
+                src="/images/blog/tsukiji-fresh-maguro-sashimi.webp"
                 alt="Fresh sliced maguro tuna sashimi served at Tsukiji market"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Freshly sliced maguro at Tsukiji — sourced directly from the wholesalers that morning
@@ -169,10 +180,12 @@ const TsukijiMarketGuide = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-dried-goods-souvenirs.jpg"
+                src="/images/blog/tsukiji-dried-goods-souvenirs.webp"
                 alt="Tsukiji market stall displaying wasabi sesame seeds and specialty dried goods souvenirs"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Wasabi sesame, dried seasonings, and other Tsukiji-exclusive souvenirs that pack more flavor than any airport gift shop
@@ -281,8 +294,11 @@ const TsukijiMarketGuide = () => {
         </div>
       </section>
 
+      <RelatedTourCards tourIds={["tsukiji-ginza","tokyo-food-tour"]} />
+
       {/* BlogPosting Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Tsukiji Market Guide: What's Still Worth Seeing in 2026",
         description: "The inner market closed in 2018. But the outer market is alive. A local guide explains what remains, what's worth eating, and how to visit right.",

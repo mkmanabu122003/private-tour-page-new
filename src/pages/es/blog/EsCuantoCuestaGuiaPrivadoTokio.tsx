@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsCuantoCuestaGuiaPrivadoTokio = () => {
   return (
@@ -19,10 +20,13 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tour-photos/group-photo.jpg"
+          src="/images/tour-photos/group-photo.webp"
           alt="Grupo de turistas con guía privado en Tokio"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -357,6 +361,8 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

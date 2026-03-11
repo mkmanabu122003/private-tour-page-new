@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const VegetarianFoodTourTokyo = () => {
   return (
@@ -15,10 +16,13 @@ const VegetarianFoodTourTokyo = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/vegetarian-matcha-wagashi.jpg"
+          src="/images/blog/vegetarian-matcha-wagashi.webp"
           alt="Matcha tea and traditional wagashi sweets, a perfect vegetarian-friendly experience in Tokyo"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -70,10 +74,12 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/tokyo-street-snack.jpg"
+                src="/images/blog/tokyo-street-snack.webp"
                 alt="Traditional Japanese monaka ice cream, a popular plant-based street snack in Tokyo"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Tokyo's food scene offers far more plant-based options than most visitors expect
@@ -95,10 +101,12 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-daifuku-mochi-shop.jpg"
+                src="/images/blog/tsukiji-daifuku-mochi-shop.webp"
                 alt="Colorful daifuku mochi and strawberry sweets at Tsukiji Outer Market"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Tsukiji Outer Market, home to surprising vegetarian finds alongside the famous seafood
@@ -123,10 +131,12 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/izakaya-dining-atmosphere.jpg"
+                src="/images/blog/izakaya-dining-atmosphere.webp"
                 alt="Intimate izakaya dining atmosphere in Tokyo, where private food tours include personalized service"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 The intimate backstreet dining alleys of Shinjuku, where hidden gems await
@@ -148,10 +158,12 @@ const VegetarianFoodTourTokyo = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-street-food-display.jpg"
+                src="/images/blog/yanaka-street-food-display.webp"
                 alt="Traditional Japanese street food display with senbei rice crackers and mochi, all vegetarian-friendly"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Clear communication with staff is the key to eating safely with dietary restrictions in Japan
@@ -188,6 +200,8 @@ const VegetarianFoodTourTokyo = () => {
         </div>
       </section>
 
+      <RelatedTourCards tourIds={["tokyo-food-tour"]} />
+
       {/* BlogPosting Schema */}
       <script
         type="application/ld+json"
@@ -197,7 +211,7 @@ const VegetarianFoodTourTokyo = () => {
             "@type": "BlogPosting",
             "headline": "Vegetarian Food Tour Tokyo: A Complete Guide for Dietary Restrictions",
             "description": "Worried about dietary restrictions in Tokyo? A licensed private guide shares the best vegetarian-friendly food spots and how to customize your tour.",
-            "image": "https://tanuki-tabi-travel.com/images/blog/vegetarian-matcha-wagashi.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/vegetarian-matcha-wagashi.webp",
             "author": {
               "@type": "Person",
               "name": "Manabu",

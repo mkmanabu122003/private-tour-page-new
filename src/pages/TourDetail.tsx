@@ -3,17 +3,18 @@ import { useState, useCallback, useEffect } from "react";
 import { Clock, Users, MapPin, Check, X, ArrowLeft, ChevronLeft, ChevronRight, ArrowRight, Calendar, Mountain, Footprints, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 import useEmblaCarousel from "embla-carousel-react";
-import tourYanaka from "@/assets/tour-yanaka.jpg";
-import tourUeno from "@/assets/tour-ueno.jpg";
-import uenoNight from "@/assets/ueno-night.jpg";
-import imperialPalace from "@/assets/imperial-palace.jpg";
-import imperialBridge from "@/assets/imperial-bridge.jpg";
-import tokyoStation from "@/assets/tokyo-station.jpg";
-import hamarikyu from "@/assets/hamarikyu.jpg";
-import nikkoToshogu from "@/assets/nikko-toshogu.jpg";
-import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.jpg";
-import yanakaCandyShop from "@/assets/yanaka-candy-shop.jpg";
+import tourYanaka from "@/assets/tour-yanaka.webp";
+import tourUeno from "@/assets/tour-ueno.webp";
+import uenoNight from "@/assets/ueno-night.webp";
+import imperialPalace from "@/assets/imperial-palace.webp";
+import imperialBridge from "@/assets/imperial-bridge.webp";
+import tokyoStation from "@/assets/tokyo-station.webp";
+import hamarikyu from "@/assets/hamarikyu.webp";
+import nikkoToshogu from "@/assets/nikko-toshogu.webp";
+import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.webp";
+import yanakaCandyShop from "@/assets/yanaka-candy-shop.webp";
 
 const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
   asakusa: {
@@ -87,10 +88,10 @@ const tourData = {
     startTime: "10:00 AM or 2:00 PM",
     meetingPoint: "Asakusa Station, Exit 1",
     images: [
-      { src: "/images/tours/asakusa-kaminarimon-morning.jpg", alt: "Kaminarimon Gate Asakusa - private walking tour starting point", position: "center" },
-      { src: "/images/tours/asakusa-nakamise-street.jpg", alt: "Nakamise-dori shopping street leading to Senso-ji Temple", position: "center" },
-      { src: "/images/tours/senso-ji-temple-tokyo.jpg", alt: "Senso-ji Temple main hall - oldest temple in Tokyo", position: "center" },
-      { src: "/images/tours/asakusa-backstreet-local.jpg", alt: "Hidden backstreet in Asakusa away from tourist crowds", position: "center" },
+      { src: "/images/tours/asakusa-kaminarimon-morning.webp", alt: "Kaminarimon Gate Asakusa - private walking tour starting point", position: "center" },
+      { src: "/images/tours/asakusa-nakamise-street.webp", alt: "Nakamise-dori shopping street leading to Senso-ji Temple", position: "center" },
+      { src: "/images/tours/senso-ji-temple-tokyo.webp", alt: "Senso-ji Temple main hall - oldest temple in Tokyo", position: "center" },
+      { src: "/images/tours/asakusa-backstreet-local.webp", alt: "Hidden backstreet in Asakusa away from tourist crowds", position: "center" },
     ],
     highlights: [
       "Senso-ji Temple - Tokyo's oldest and most famous temple",
@@ -179,9 +180,9 @@ const tourData = {
     startTime: "10:30 AM or 2:30 PM",
     meetingPoint: "Shibuya Station, Hachiko Exit",
     images: [
-      { src: "/images/tours/shibuya-scramble-crossing.jpg", alt: "Shibuya Scramble Crossing - Tokyo's most famous intersection", position: "center" },
-      { src: "/images/tours/harajuku-takeshita-street.jpg", alt: "Takeshita Street Harajuku - center of Tokyo youth culture", position: "center" },
-      { src: "/images/tours/meiji-shrine-torii-gate.jpg", alt: "Meiji Shrine entrance - peaceful contrast to busy Harajuku", position: "center" },
+      { src: "/images/tours/shibuya-scramble-crossing.webp", alt: "Shibuya Scramble Crossing - Tokyo's most famous intersection", position: "center" },
+      { src: "/images/tours/harajuku-takeshita-street.webp", alt: "Takeshita Street Harajuku - center of Tokyo youth culture", position: "center" },
+      { src: "/images/tours/meiji-shrine-torii-gate.webp", alt: "Meiji Shrine entrance - peaceful contrast to busy Harajuku", position: "center" },
     ],
     highlights: [
       "Shibuya Crossing - The world's busiest pedestrian crossing",
@@ -225,9 +226,9 @@ const tourData = {
     startTime: "9:00 AM or 1:00 PM",
     meetingPoint: "Tsukiji Market Station, Exit A1",
     images: [
-      { src: "/images/tours/tsukiji-outer-market.jpg", alt: "Tsukiji Outer Market - Tokyo private food tour", position: "center" },
-      { src: "/images/tours/tsukiji-street-food.jpg", alt: "Fresh seafood skewers at Tsukiji Market Tokyo", position: "center" },
-      { src: "/images/tours/ginza-shopping-district.jpg", alt: "Ginza luxury shopping district - combine with Tsukiji tour", position: "center" },
+      { src: "/images/tours/tsukiji-outer-market.webp", alt: "Tsukiji Outer Market - Tokyo private food tour", position: "center" },
+      { src: "/images/tours/tsukiji-street-food.webp", alt: "Fresh seafood skewers at Tsukiji Market Tokyo", position: "center" },
+      { src: "/images/tours/ginza-shopping-district.webp", alt: "Ginza luxury shopping district - combine with Tsukiji tour", position: "center" },
     ],
     highlights: [
       "Tsukiji Outer Market - Fresh seafood and street food",
@@ -359,9 +360,9 @@ const tourData = {
     startTime: "8:30 AM",
     meetingPoint: "Your hotel in Tokyo",
     images: [
-      { src: "/images/tours/kamakura-great-buddha.jpg", alt: "Great Buddha of Kamakura - day trip from Tokyo with guide", position: "center" },
-      { src: "/images/tours/kamakura-coast-enoden.jpg", alt: "Kamakura coastal view - seaside day trip from Tokyo", position: "center" },
-      { src: "/images/tours/kamakura-hasedera-temple.jpg", alt: "Hasedera Temple gardens in Kamakura", position: "center" },
+      { src: "/images/tours/kamakura-great-buddha.webp", alt: "Great Buddha of Kamakura - day trip from Tokyo with guide", position: "center" },
+      { src: "/images/tours/kamakura-coast-enoden.webp", alt: "Kamakura coastal view - seaside day trip from Tokyo", position: "center" },
+      { src: "/images/tours/kamakura-hasedera-temple.webp", alt: "Hasedera Temple gardens in Kamakura", position: "center" },
     ],
     highlights: [
       "Great Buddha at Kotoku-in: 13th century bronze statue, one of Japan's most iconic landmarks",
@@ -420,9 +421,9 @@ const tourData = {
     startTime: "8:00 AM",
     meetingPoint: "Your hotel in Tokyo",
     images: [
-      { src: "/images/tours/hakone-lake-ashi-fuji.jpg", alt: "Lake Ashi with Mt Fuji view - Hakone day trip from Tokyo", position: "center" },
-      { src: "/images/tours/hakone-ropeway-owakudani.jpg", alt: "Hakone Ropeway over Owakudani volcanic valley", position: "center" },
-      { src: "/images/tours/hakone-pirate-ship-ashi.jpg", alt: "Pirate ship cruise on Lake Ashi Hakone", position: "center" },
+      { src: "/images/tours/hakone-lake-ashi-fuji.webp", alt: "Lake Ashi with Mt Fuji view - Hakone day trip from Tokyo", position: "center" },
+      { src: "/images/tours/hakone-ropeway-owakudani.webp", alt: "Hakone Ropeway over Owakudani volcanic valley", position: "center" },
+      { src: "/images/tours/hakone-pirate-ship-ashi.webp", alt: "Pirate ship cruise on Lake Ashi Hakone", position: "center" },
     ],
     highlights: [
       "Lake Ashi pirate ship cruise with Mt. Fuji views (weather permitting)",
@@ -640,6 +641,10 @@ const TourDetail = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover"
                   style={{ objectPosition: image.position }}
+                  fetchpriority={index === 0 ? "high" : undefined}
+                  loading={index === 0 ? undefined : "lazy"}
+                  width={1600}
+                  height={900}
                 />
               </div>
             ))}
@@ -681,6 +686,9 @@ const TourDetail = () => {
                   src={image.src}
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={64}
+                  height={48}
                 />
               </button>
             ))}
@@ -879,6 +887,25 @@ const TourDetail = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            Ready to book? Secure your private tour →
+          </p>
+          <Link
+            to="/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Book Now
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Licensed guide · Private tour
+          </p>
+        </div>
+      </section>
+
       {/* Day Trip CTA */}
       {"whyGuide" in tour && (
         <section className="py-16 bg-primary text-primary-foreground">
@@ -967,6 +994,8 @@ const TourDetail = () => {
           }}
         />
       )}
+
+      <StickyBookingBar tourName={tour.title} price={tour.price} />
     </Layout>
   );
 };

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 
 const nightExperiences: {
   title: string;
@@ -13,21 +14,21 @@ const nightExperiences: {
     area: "Shinjuku",
     description:
       "Over 200 tiny bars crammed into six narrow alleys, each seating just 5-10 people. Every bar has its own personality: jazz bars, punk bars, film bars, bars where the owner only speaks through a puppet. Your guide knows which ones welcome first-timers and which to skip.",
-    image: "/images/tours/night-tour-golden-gai.jpg",
+    image: "/images/tours/night-tour-golden-gai.webp",
   },
   {
     title: "Omoide Yokocho",
     area: "Memory Lane, Shinjuku",
     description:
       "Yakitori smoke drifts through narrow lanes under the rumble of trains overhead. This postwar alley of tiny food stalls has barely changed since the 1940s. Order grilled chicken skewers and cold beer elbow-to-elbow with salarymen winding down their day.",
-    image: "/images/tours/night-tour-omoide-yokocho.jpg",
+    image: "/images/tours/night-tour-omoide-yokocho.webp",
   },
   {
     title: "Shibuya Crossing at Night",
     area: "Shibuya",
     description:
       "The world's busiest pedestrian crossing takes on a completely different energy after dark. Neon signs blaze from every building, giant screens pulse with light, and up to 3,000 people cross in a single green light. It's Tokyo at its most electric.",
-    image: "/images/tours/night-tour-shibuya.jpg",
+    image: "/images/tours/night-tour-shibuya.webp",
   },
   {
     title: "Yurakucho & Shinbashi",
@@ -63,9 +64,12 @@ const TokyoNightTour = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/tokyo-night-tour-hero.jpg"
+          src="/images/tours/tokyo-night-tour-hero.webp"
           alt="Tokyo night tour - neon-lit streets of Shinjuku"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </section>
@@ -146,6 +150,9 @@ const TokyoNightTour = () => {
                     src={experience.image}
                     alt={experience.title}
                     className="w-full h-48 object-cover"
+                    loading="lazy"
+                    width={800}
+                    height={600}
                   />
                 )}
                 <div className="p-6">
@@ -305,6 +312,24 @@ const TokyoNightTour = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            Ready to book? Secure your private tour →
+          </p>
+          <Link
+            to="/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Book Now
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Licensed guide · Private tour
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container-section">
@@ -434,6 +459,8 @@ const TokyoNightTour = () => {
           }),
         }}
       />
+
+      <StickyBookingBar tourName="Tokyo Night Tour" price="Contact for quote" />
     </Layout>
   );
 };

@@ -3,7 +3,7 @@ import { Award, Globe, Briefcase, Heart, MapPin, Languages, Shield, Users, BookO
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import heroImage from "@/assets/asakusa-temple.jpg";
+import heroImage from "@/assets/asakusa-temple.webp";
 
 const stats = [
   { label: "Tours Completed", value: "500+" },
@@ -148,6 +148,9 @@ const About = () => {
                   src={guidePortrait}
                   alt="Manabu, government-licensed Tokyo private tour guide"
                   className="w-full h-full object-cover"
+                  fetchpriority="high"
+                  width={600}
+                  height={800}
                 />
               </div>
             </div>
@@ -263,6 +266,9 @@ const About = () => {
                   src={heroImage}
                   alt="Historic Asakusa district in Tokyo with Senso-ji temple and traditional architecture"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={1600}
+                  height={900}
                 />
               </div>
             </div>

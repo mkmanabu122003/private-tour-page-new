@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const ShibuyaHarajukuGuide = () => {
   return (
@@ -44,9 +45,12 @@ const ShibuyaHarajukuGuide = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/shibuya-harajuku-guide-hero.jpg"
+          src="/images/blog/shibuya-harajuku-guide-hero.webp"
           alt="Guide to Shibuya and Harajuku - Tokyo's modern side"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -77,9 +81,12 @@ const ShibuyaHarajukuGuide = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/shibuya-crossing-guide.jpg"
+                src="/images/blog/shibuya-crossing-guide.webp"
                 alt="How to enjoy Shibuya Crossing - best viewing spots"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Shibuya Crossing from above. Up to 3,000 people cross each signal change
@@ -142,9 +149,12 @@ const ShibuyaHarajukuGuide = () => {
 
             <figure className="my-8">
               <img
-                src="/images/tours/harajuku-takeshita-street.jpg"
+                src="/images/tours/harajuku-takeshita-street.webp"
                 alt="Cat Street Harajuku - the real fashion street"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Cat Street, Harajuku's real fashion street, away from the Takeshita crowds
@@ -166,9 +176,12 @@ const ShibuyaHarajukuGuide = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/meiji-shrine-forest.jpg"
+                src="/images/blog/meiji-shrine-forest.webp"
                 alt="Forest path at Meiji Shrine - quiet escape near Harajuku"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The forested approach to Meiji Shrine, a world away from Harajuku's crowds
@@ -266,6 +279,8 @@ const ShibuyaHarajukuGuide = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
 
       {/* BlogPosting Schema */}
       <script

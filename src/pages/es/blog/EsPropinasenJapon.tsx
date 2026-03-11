@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsPropinasenJapon = () => {
   return (
@@ -19,10 +20,13 @@ const EsPropinasenJapon = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-kaminarimon-gate.jpg"
+          src="/images/tours/asakusa-kaminarimon-gate.webp"
           alt="Puerta Kaminarimon en Asakusa, entendiendo la cultura de las propinas en Japón"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -150,9 +154,11 @@ const EsPropinasenJapon = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/ryokan-nakai-kimono-greeting.jpg"
+                src="/images/blog/ryokan-nakai-kimono-greeting.webp"
                 alt="Una nakai-san en elegante kimono recibiendo a los huéspedes en la entrada de un ryokan tradicional japonés"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -168,9 +174,11 @@ const EsPropinasenJapon = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/tours/night-tour-omoide-yokocho.jpg"
+                src="/images/tours/night-tour-omoide-yokocho.webp"
                 alt="Mostrador animado de yakitori en Omoide Yokocho en Shinjuku con comensales y cocineros en ambiente ahumado"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -207,9 +215,11 @@ const EsPropinasenJapon = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/japanese-elegant-gift-wrapping.jpg"
+                src="/images/blog/japanese-elegant-gift-wrapping.webp"
                 alt="Cajas de regalo japonesas elegantemente envueltas con lazos de cinta azul, representando el arte del regalo en Japón"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -329,6 +339,8 @@ const EsPropinasenJapon = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} lang="es" customSubtitles={{"custom":"Deja que tu guía se encargue de todo"}} />
 
       {/* BlogPosting Schema */}
       <script

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const JapanRailPass = () => {
   return (
@@ -15,10 +16,13 @@ const JapanRailPass = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/hakone-lake-ashi-fuji.jpg"
+          src="/images/tours/hakone-lake-ashi-fuji.webp"
           alt="Lake Ashi and Mt. Fuji in Hakone, a popular JR Pass day trip from Tokyo"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -71,10 +75,12 @@ const JapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/shinkansen-n700-tokyo-station.jpg"
+                src="/images/blog/shinkansen-n700-tokyo-station.webp"
                 alt="N700 Series Shinkansen bullet train at a station platform in Japan"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The N700 Series Shinkansen — the backbone of Japan's high-speed rail network covered by the JR Pass
@@ -108,10 +114,12 @@ const JapanRailPass = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/fushimi-inari-senbon-torii-kyoto.jpg"
+                src="/images/blog/fushimi-inari-senbon-torii-kyoto.webp"
                 alt="Thousands of vermillion torii gates forming a tunnel at Fushimi Inari Shrine in Kyoto"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The iconic senbon torii at Fushimi Inari, Kyoto — one of the top reasons travelers take the Shinkansen from Tokyo
@@ -123,10 +131,12 @@ const JapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/kinkakuji-golden-pavilion-kyoto.jpg"
+                src="/images/blog/kinkakuji-golden-pavilion-kyoto.webp"
                 alt="Kinkaku-ji, the Golden Pavilion temple reflecting on a pond in Kyoto, Japan"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Kinkaku-ji (Golden Pavilion) in Kyoto — the classic route from Tokyo makes the JR Pass pay for itself
@@ -169,10 +179,12 @@ const JapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/jr-okachimachi-station-entrance.jpg"
+                src="/images/blog/jr-okachimachi-station-entrance.webp"
                 alt="JR Okachimachi Station entrance in Tokyo showing the JR logo and ticket gates"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A typical JR station in central Tokyo — IC cards work seamlessly at every gate
@@ -249,7 +261,9 @@ const JapanRailPass = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["custom","asakusa"]} />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Japan Rail Pass in 2026: Is It Actually Worth It? (With Real Numbers)",
         description: "The JR Pass price went up significantly. Is it still worth buying? A licensed guide does the math for common itineraries.",

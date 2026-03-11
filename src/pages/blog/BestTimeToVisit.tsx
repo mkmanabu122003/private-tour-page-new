@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const BestTimeToVisit = () => {
   return (
@@ -15,10 +16,13 @@ const BestTimeToVisit = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/meiji-shrine-torii-gate.jpg"
+          src="/images/tours/meiji-shrine-torii-gate.webp"
           alt="Meiji Shrine torii gate in Tokyo, beautiful in every season"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -236,7 +240,9 @@ const BestTimeToVisit = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Best Time to Visit Tokyo: A Local Guide's Honest Answer (Not the Usual One)",
         description: "Cherry blossoms or autumn leaves? A licensed Tokyo guide with 500+ tours gives his honest seasonal breakdown, including when NOT to come.",

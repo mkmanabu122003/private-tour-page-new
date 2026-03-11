@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsGuiaShibuyaHarajuku = () => {
   return (
@@ -50,9 +51,12 @@ const EsGuiaShibuyaHarajuku = () => {
       {/* Imagen Principal */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/shibuya-harajuku-guide-hero.jpg"
+          src="/images/blog/shibuya-harajuku-guide-hero.webp"
           alt="Guía de Shibuya y Harajuku - el lado moderno de Tokio"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -83,8 +87,11 @@ const EsGuiaShibuyaHarajuku = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/shibuya-crossing-guide.jpg"
+                src="/images/blog/shibuya-crossing-guide.webp"
                 alt="Cómo disfrutar del Cruce de Shibuya - mejores puntos de observación"
+                loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -148,8 +155,11 @@ const EsGuiaShibuyaHarajuku = () => {
 
             <figure className="my-8">
               <img
-                src="/images/tours/harajuku-takeshita-street.jpg"
+                src="/images/tours/harajuku-takeshita-street.webp"
                 alt="Cat Street en Harajuku - la verdadera calle de la moda"
+                loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -172,8 +182,11 @@ const EsGuiaShibuyaHarajuku = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/meiji-shrine-forest.jpg"
+                src="/images/blog/meiji-shrine-forest.webp"
                 alt="Camino boscoso en el Santuario Meiji - escape tranquilo cerca de Harajuku"
+                loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -272,6 +285,8 @@ const EsGuiaShibuyaHarajuku = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

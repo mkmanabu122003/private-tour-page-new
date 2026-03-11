@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const TempleEtiquette = () => {
   return (
@@ -15,10 +16,13 @@ const TempleEtiquette = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/senso-ji-temple-tokyo.jpg"
+          src="/images/tours/senso-ji-temple-tokyo.webp"
           alt="Senso-ji Temple in Tokyo, learn proper temple etiquette"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -110,10 +114,12 @@ const TempleEtiquette = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
+                src="/images/blog/nikko-toshogu-stone-torii-gate.webp"
                 alt="Visitors approaching through a stone torii gate at Nikko Toshogu shrine with ornate Yomeimon gate visible beyond"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Walking through the stone torii at Nikko Toshogu — notice how visitors naturally walk to the sides, leaving the center path clear
@@ -148,10 +154,12 @@ const TempleEtiquette = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/shrine-chozuya-dragon-purification.jpg"
+                src="/images/blog/shrine-chozuya-dragon-purification.webp"
                 alt="Dragon-shaped water spout at a chozuya purification fountain with bamboo ladles at a Japanese shrine"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A chozuya with a dragon water spout — look for the bamboo ladles and follow the five-step purification sequence
@@ -207,10 +215,12 @@ const TempleEtiquette = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-ornate-temple-hall.jpg"
+                src="/images/blog/nikko-ornate-temple-hall.webp"
                 alt="Ornate Buddhist temple hall at Nikko with red pillars, gold trim, and stone lanterns"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A richly decorated temple hall at Nikko — Buddhist temples tend to be more ornate and contemplative than Shinto shrines
@@ -252,10 +262,12 @@ const TempleEtiquette = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/kamakura-serene-temple-garden.jpg"
+                src="/images/blog/kamakura-serene-temple-garden.webp"
                 alt="Serene Japanese temple garden in Kamakura with traditional tea house and camellia flowers"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A temple garden in Kamakura — these tranquil spaces invite quiet contemplation, not selfie sessions
@@ -516,6 +528,8 @@ const TempleEtiquette = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["asakusa","imperial-palace"]} />
 
       {/* BlogPosting Schema */}
       <script

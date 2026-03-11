@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsGuiaTsukiji = () => {
   return (
@@ -50,9 +51,12 @@ const EsGuiaTsukiji = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/tours/food-tour-tsukiji.jpg"
+          src="/images/tours/food-tour-tsukiji.webp"
           alt="Guía del mercado de Tsukiji para amantes de la gastronomía"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -104,9 +108,12 @@ const EsGuiaTsukiji = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-fresh-sushi.jpg"
+                src="/images/blog/tsukiji-fresh-sushi.webp"
                 alt="Sushi fresco en el mercado de Tsukiji en Tokio"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Sushi fresco en Tsukiji. El pescado llega de los mayoristas cada mañana
@@ -124,9 +131,12 @@ const EsGuiaTsukiji = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-tamagoyaki.jpg"
+                src="/images/blog/tsukiji-tamagoyaki.webp"
                 alt="Tamagoyaki, tortilla japonesa de huevo en el mercado de Tsukiji"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Tamagoyaki en palito, la comida callejera más icónica de Tsukiji
@@ -184,9 +194,12 @@ const EsGuiaTsukiji = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/ginza-shopping-street.jpg"
+                src="/images/blog/ginza-shopping-street.webp"
                 alt="Distrito de lujo de Ginza - combínalo con Tsukiji para un día perfecto"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Ginza, a pocos pasos de Tsukiji, un mundo completamente diferente
@@ -245,6 +258,8 @@ const EsGuiaTsukiji = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

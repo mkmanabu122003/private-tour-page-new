@@ -100,6 +100,25 @@ const EsContact = () => {
         </div>
       </section>
 
+      {/* Personal Touch */}
+      <section className="py-8 bg-secondary/30 border-b border-border">
+        <div className="container-section">
+          <div className="flex items-center gap-4 max-w-2xl">
+            <img
+              src="/images/tour-photos/group-photo.webp"
+              alt="Manabu, tu guía turístico con licencia en Tokio"
+              className="w-14 h-14 rounded-full object-cover border-2 border-accent shrink-0"
+              loading="lazy"
+              width={56}
+              height={56}
+            />
+            <p className="text-muted-foreground text-sm leading-relaxed italic">
+              "Leo personalmente cada mensaje y respondo en menos de 24 horas." — <span className="text-foreground font-medium not-italic">Manabu</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section className="py-16">
         <div className="container-section">
@@ -166,14 +185,22 @@ const EsContact = () => {
                       className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
                     >
                       <option value="">Selecciona un tour</option>
-                      <option value="asakusa">Tour por Asakusa</option>
-                      <option value="yanaka">Ueno y Yanaka</option>
-                      <option value="shibuya-harajuku">Shibuya y Harajuku</option>
-                      <option value="tsukiji-ginza">Tsukiji y Ginza</option>
-                      <option value="imperial-palace">Palacio Imperial</option>
-                      <option value="kamakura">Excursión a Kamakura</option>
-                      <option value="hakone">Excursión a Hakone</option>
-                      <option value="nikko">Excursión a Nikko</option>
+                      <optgroup label="Tours por Tokio">
+                        <option value="asakusa">Tour por Asakusa</option>
+                        <option value="yanaka">Ueno y Yanaka</option>
+                        <option value="shibuya-harajuku">Shibuya y Harajuku</option>
+                        <option value="tsukiji-ginza">Tsukiji y Ginza</option>
+                        <option value="imperial-palace">Palacio Imperial</option>
+                      </optgroup>
+                      <optgroup label="Tours de Experiencia">
+                        <option value="tokyo-food-tour">Tour Gastronómico</option>
+                        <option value="tokyo-night-tour">Tour Nocturno</option>
+                      </optgroup>
+                      <optgroup label="Excursiones de un Día">
+                        <option value="kamakura-day-trip">Excursión a Kamakura</option>
+                        <option value="hakone-day-trip">Excursión a Hakone</option>
+                        <option value="nikko-day-trip">Excursión a Nikko</option>
+                      </optgroup>
                       <option value="custom">Tour Personalizado</option>
                       <option value="other">Otro / No estoy seguro</option>
                     </select>
@@ -237,7 +264,7 @@ const EsContact = () => {
                     "Enviando..."
                   ) : (
                     <>
-                      Enviar
+                      Enviar Mi Solicitud de Reserva
                       <Send className="ml-2 w-4 h-4" />
                     </>
                   )}

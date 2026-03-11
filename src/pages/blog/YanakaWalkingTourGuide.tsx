@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const YanakaWalkingTourGuide = () => {
   return (
@@ -15,10 +16,13 @@ const YanakaWalkingTourGuide = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/yanaka-ginza-shopping-street.jpg"
+          src="/images/blog/yanaka-ginza-shopping-street.webp"
           alt="Yanaka Ginza shopping street viewed from the Yuyake Dandan stairs"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -70,10 +74,12 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-candy-shop-art.jpg"
+                src="/images/blog/yanaka-candy-shop-art.webp"
                 alt="Traditional candy shop in Yanaka with colorful wall art"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 A traditional candy shop in Yanaka, where old-fashioned sweets and hand-painted art define the neighborhood character
@@ -95,10 +101,12 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-street-food-display.jpg"
+                src="/images/blog/yanaka-street-food-display.webp"
                 alt="Traditional street food display in Yanaka with senbei and mochi"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Street food stalls along the Yanaka walking route, offering traditional snacks like senbei and mochi
@@ -120,10 +128,12 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-pottery-shop.jpg"
+                src="/images/blog/yanaka-pottery-shop.webp"
                 alt="Traditional pottery and ceramics shop in Yanaka"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 A traditional pottery shop in Yanaka, where artisans continue centuries-old craft traditions
@@ -145,10 +155,12 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-soba-restaurant.jpg"
+                src="/images/blog/yanaka-soba-restaurant.webp"
                 alt="Traditional soba restaurant in Yanaka with green noren curtain at the entrance"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 A traditional soba restaurant in Yanaka, where handmade buckwheat noodles are served in a quiet backstreet setting
@@ -170,10 +182,12 @@ const YanakaWalkingTourGuide = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/jr-okachimachi-station-entrance.jpg"
+                src="/images/blog/jr-okachimachi-station-entrance.webp"
                 alt="JR train platform — Nippori Station on the Yamanote Line is the gateway to Yanaka"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Getting to Yanaka is simple thanks to the JR Yamanote Line, which stops at Nippori Station
@@ -211,6 +225,8 @@ const YanakaWalkingTourGuide = () => {
         </div>
       </section>
 
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
       {/* BlogPosting Schema */}
       <script
         type="application/ld+json"
@@ -220,7 +236,7 @@ const YanakaWalkingTourGuide = () => {
             "@type": "BlogPosting",
             "headline": "Yanaka Walking Tour: Tokyo's Hidden Neighborhood",
             "description": "Yanaka is old Tokyo at its finest — temples, shotengai, and no crowds. A local guide shares the best walking route through this hidden gem.",
-            "image": "https://tanuki-tabi-travel.com/images/blog/yanaka-ginza-shopping-street.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/yanaka-ginza-shopping-street.webp",
             "author": {
               "@type": "Person",
               "name": "Manabu",

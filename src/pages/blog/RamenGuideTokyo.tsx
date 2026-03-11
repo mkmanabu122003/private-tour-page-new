@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const RamenGuideTokyo = () => {
   return (
@@ -15,10 +16,13 @@ const RamenGuideTokyo = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/ramen-guide-hero.jpg"
+          src="/images/blog/ramen-guide-hero.webp"
           alt="A bowl of rich Tokyo ramen with sesame, greens, and toppings"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -214,7 +218,9 @@ const RamenGuideTokyo = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Ramen Guide Tokyo: What a Local Guide Actually Orders (And Where)",
         description: "There are 10,000+ ramen shops in Tokyo. A licensed guide cuts through the noise and tells you exactly what to order and where.",

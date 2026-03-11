@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const NikkoDayTrip = () => {
   return (
@@ -15,10 +16,13 @@ const NikkoDayTrip = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/nikko-toshogu-hero.jpg"
+          src="/images/blog/nikko-toshogu-hero.webp"
           alt="The ornate Yomeimon Gate at Nikko Tosho-gu Shrine surrounded by towering cedar trees"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -70,10 +74,12 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/shinkansen-n700-tokyo-station.jpg"
+                src="/images/blog/shinkansen-n700-tokyo-station.webp"
                 alt="Train heading toward Nikko through the Japanese countryside"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 The journey north from Tokyo takes you through increasingly rural scenery as the mountains draw closer
@@ -95,10 +101,12 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-ornate-temple-hall.jpg"
+                src="/images/blog/nikko-ornate-temple-hall.webp"
                 alt="Intricate carvings and gold leaf decoration at Nikko Tosho-gu Shrine"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Every surface at Tosho-gu is alive with carvings, gold leaf, and centuries of craftsmanship
@@ -123,10 +131,12 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
+                src="/images/blog/nikko-toshogu-stone-torii-gate.webp"
                 alt="Ancient cedar trees lining the path through Nikko's shrine complex"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 The centuries-old cedar forest surrounding Nikko's shrines deserves unhurried exploration
@@ -148,10 +158,12 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/kamakura-serene-temple-garden.jpg"
+                src="/images/blog/kamakura-serene-temple-garden.webp"
                 alt="Brilliant autumn foliage surrounding Nikko's mountain landscape"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Nikko's autumn colors, particularly around Lake Chuzenji and Kegon Falls, are among the finest in Japan
@@ -179,10 +191,12 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-ornate-temple-hall.jpg"
+                src="/images/blog/nikko-ornate-temple-hall.webp"
                 alt="A guide explaining the history and symbolism of carvings at Tosho-gu Shrine"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Understanding the stories behind each carving transforms Tosho-gu from a beautiful building into a living narrative
@@ -222,6 +236,8 @@ const NikkoDayTrip = () => {
         </div>
       </section>
 
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
       {/* BlogPosting Schema */}
       <script
         type="application/ld+json"
@@ -231,7 +247,7 @@ const NikkoDayTrip = () => {
             "@type": "BlogPosting",
             "headline": "Nikko Day Trip from Tokyo: Complete Guide",
             "description": "Planning a Nikko day trip from Tokyo? A licensed guide covers trains, top sights, and why a private guided tour makes all the difference.",
-            "image": "https://tanuki-tabi-travel.com/images/blog/nikko-toshogu-hero.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/nikko-toshogu-hero.webp",
             "author": {
               "@type": "Person",
               "name": "Manabu",

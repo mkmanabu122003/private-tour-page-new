@@ -102,6 +102,22 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Personal Touch */}
+      <section className="py-8 bg-secondary/30 border-b border-border">
+        <div className="container-section">
+          <div className="flex items-center gap-4 max-w-2xl">
+            <img
+              src="/images/tour-photos/group-photo.webp"
+              alt="Manabu, your licensed Tokyo tour guide"
+              className="w-14 h-14 rounded-full object-cover border-2 border-accent shrink-0"
+            />
+            <p className="text-muted-foreground text-sm leading-relaxed italic">
+              "I personally read every message and reply within 24 hours." — <span className="text-foreground font-medium not-italic">Manabu</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section className="py-16">
         <div className="container-section">
@@ -169,11 +185,22 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
                     >
                       <option value="">Select a tour</option>
-                      <option value="asakusa">Asakusa Walking Tour</option>
-                      <option value="yanaka">Ueno & Yanaka Discovery</option>
-                      <option value="shibuya-harajuku">Shibuya & Harajuku Tour</option>
-                      <option value="tsukiji-ginza">Tsukiji & Ginza Tour</option>
-                      <option value="imperial-palace">Imperial Palace & Marunouchi</option>
+                      <optgroup label="Tokyo Walking Tours">
+                        <option value="asakusa">Asakusa Walking Tour</option>
+                        <option value="yanaka">Ueno & Yanaka Discovery</option>
+                        <option value="shibuya-harajuku">Shibuya & Harajuku Tour</option>
+                        <option value="tsukiji-ginza">Tsukiji & Ginza Tour</option>
+                        <option value="imperial-palace">Imperial Palace & Marunouchi</option>
+                      </optgroup>
+                      <optgroup label="Experience Tours">
+                        <option value="tokyo-food-tour">Tokyo Food Tour</option>
+                        <option value="tokyo-night-tour">Tokyo Night Tour</option>
+                      </optgroup>
+                      <optgroup label="Day Trips from Tokyo">
+                        <option value="kamakura-day-trip">Kamakura Day Trip</option>
+                        <option value="hakone-day-trip">Hakone Day Trip</option>
+                        <option value="nikko-day-trip">Nikko Day Trip</option>
+                      </optgroup>
                       <option value="custom">Custom Private Tour</option>
                       <option value="other">Other / Not sure</option>
                     </select>
@@ -237,7 +264,7 @@ const Contact = () => {
                     "Sending..."
                   ) : (
                     <>
-                      Send Message
+                      Send My Booking Request
                       <Send className="ml-2 w-4 h-4" />
                     </>
                   )}

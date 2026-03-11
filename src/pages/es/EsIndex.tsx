@@ -11,14 +11,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import heroImage from "@/assets/sumida.jpg";
+import heroImage from "@/assets/sumida.webp";
 
 // Hero image: group-photo.jpg from public/images/tour-photos/
-const heroGroupPhoto = "/images/tour-photos/group-photo.jpg";
-import tourUeno from "@/assets/tour-ueno.jpg";
+const heroGroupPhoto = "/images/tour-photos/group-photo.webp";
+import tourUeno from "@/assets/tour-ueno.webp";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import imperialPalace from "@/assets/imperial-palace.jpg";
-import hamarikyu from "@/assets/hamarikyu.jpg";
+import imperialPalace from "@/assets/imperial-palace.webp";
+import hamarikyu from "@/assets/hamarikyu.webp";
 
 const tours = [
   {
@@ -28,7 +28,7 @@ const tours = [
     duration: "3 horas",
     price: "¥30,000",
     difficulty: "Fácil",
-    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
+    image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
   {
     id: "yanaka",
@@ -46,7 +46,7 @@ const tours = [
     duration: "3.5 horas",
     price: "¥35,000",
     difficulty: "Fácil",
-    image: "/images/tours/shibuya-crossing-tokyo.jpg",
+    image: "/images/tours/shibuya-crossing-tokyo.webp",
   },
   {
     id: "tsukiji-ginza",
@@ -55,7 +55,7 @@ const tours = [
     duration: "3 horas",
     price: "¥30,000",
     difficulty: "Fácil",
-    image: "/images/tours/tsukiji-market-food-tokyo.jpg",
+    image: "/images/tours/tsukiji-market-food-tokyo.webp",
   },
   {
     id: "imperial-palace",
@@ -73,7 +73,7 @@ const tours = [
     duration: "7-8 horas",
     price: "¥50,000",
     difficulty: "Fácil-Moderado",
-    image: "/images/tours/kamakura-great-buddha.jpg",
+    image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
     id: "hakone-day-trip",
@@ -82,7 +82,7 @@ const tours = [
     duration: "8-10 horas",
     price: "¥55,000",
     difficulty: "Fácil",
-    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     id: "nikko-day-trip",
@@ -102,7 +102,7 @@ const tours = [
     price: "Desde ¥10,000/hora",
     difficulty: "Personalizable",
     // TODO: replace with custom tour image (e.g. a map, planning scene, or collage)
-    image: "/images/tour-photos/group-photo.jpg",
+    image: "/images/tour-photos/group-photo.webp",
   },
 ];
 
@@ -168,6 +168,9 @@ const EsIndex = () => {
             src={heroGroupPhoto}
             alt="Foto grupal con invitados durante un tour privado a pie por Tokio"
             className="w-full h-full object-cover"
+            fetchpriority="high"
+            width={1600}
+            height={900}
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -188,8 +191,8 @@ const EsIndex = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/es/tours" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
-                Ver los Tours Disponibles
+              <Link to="/es/contact" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
+                Reserva Tu Tour Privado
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link to="/es/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
@@ -291,6 +294,9 @@ const EsIndex = () => {
                           src={tour.image}
                           alt={tour.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          width={600}
+                          height={450}
                         />
                         <div className="absolute top-4 left-4">
                           <span className="text-label px-3 py-1.5 bg-background/90 backdrop-blur-sm rounded-full">
@@ -357,6 +363,9 @@ const EsIndex = () => {
                   src={guidePortrait}
                   alt="Manabu, guía privado con licencia oficial en Tokio"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                 />
               </div>
             </div>
@@ -413,9 +422,9 @@ const EsIndex = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: "/images/tour-photos/group-photo.jpg", alt: "Foto grupal con invitados durante un tour privado a pie por Tokio", caption: "Tour privado en Tokio" },
-              { src: "/images/tour-photos/photo1.jpg", alt: "Explorando los monumentos culturales de Tokio en un tour guiado", caption: "Explorando el viejo Tokio juntos" },
-              { src: "/images/tour-photos/photo2.jpg", alt: "Descubriendo los tesoros ocultos de Tokio con un guía local", caption: "Descubriendo Tokio" },
+              { src: "/images/tour-photos/group-photo.webp", alt: "Foto grupal con invitados durante un tour privado a pie por Tokio", caption: "Tour privado en Tokio" },
+              { src: "/images/tour-photos/photo1.webp", alt: "Explorando los monumentos culturales de Tokio en un tour guiado", caption: "Explorando el viejo Tokio juntos" },
+              { src: "/images/tour-photos/photo2.webp", alt: "Descubriendo los tesoros ocultos de Tokio con un guía local", caption: "Descubriendo Tokio" },
             ].map((photo) => (
               <div key={photo.src} className="flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg">
@@ -472,6 +481,27 @@ const EsIndex = () => {
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
             Más de 500 reseñas de cinco estrellas de viajeros de todo el mundo
+          </p>
+        </div>
+      </section>
+
+      {/* Post-Review CTA */}
+      <section className="py-16 md:py-20 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <h2 className="heading-section text-foreground">
+            ¿Listo para Descubrir el Tokio Auténtico?
+          </h2>
+          <div className="mt-8">
+            <Link
+              to="/es/contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-lg"
+            >
+              Reservar Ahora
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Respuesta en menos de 24 horas
           </p>
         </div>
       </section>

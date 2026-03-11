@@ -1,13 +1,13 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
-import tourAsakusa from "@/assets/tour-asakusa.jpg";
-import tourUeno from "@/assets/tour-ueno.jpg";
-import tourYanaka from "@/assets/tour-yanaka.jpg";
-import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
-import tsukijiMarket from "@/assets/tsukiji-market.jpg";
-import imperialPalace from "@/assets/imperial-palace.jpg";
-import hamarikyu from "@/assets/hamarikyu.jpg";
+import tourAsakusa from "@/assets/tour-asakusa.webp";
+import tourUeno from "@/assets/tour-ueno.webp";
+import tourYanaka from "@/assets/tour-yanaka.webp";
+import shibuyaCrossing from "@/assets/shibuya-crossing.webp";
+import tsukijiMarket from "@/assets/tsukiji-market.webp";
+import imperialPalace from "@/assets/imperial-palace.webp";
+import hamarikyu from "@/assets/hamarikyu.webp";
 
 const tokyoTours = [
   {
@@ -17,7 +17,7 @@ const tokyoTours = [
     duration: "3 hours",
     price: "¥30,000",
     difficulty: "Easy",
-    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
+    image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
   {
     id: "yanaka",
@@ -95,7 +95,7 @@ const dayTrips = [
     duration: "7-8 hours",
     price: "¥50,000",
     difficulty: "Easy-Moderate",
-    image: "/images/tours/kamakura-great-buddha.jpg",
+    image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
     id: "hakone-day-trip",
@@ -104,7 +104,7 @@ const dayTrips = [
     duration: "8-10 hours",
     price: "¥55,000",
     difficulty: "Easy",
-    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     id: "nikko-day-trip",
@@ -113,7 +113,7 @@ const dayTrips = [
     duration: "9-10 hours",
     price: "¥60,000",
     difficulty: "Moderate",
-    image: "/images/blog/nikko-toshogu-hero.jpg",
+    image: "/images/blog/nikko-toshogu-hero.webp",
   },
 ];
 

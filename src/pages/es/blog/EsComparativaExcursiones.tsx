@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsComparativaExcursiones = () => {
   return (
@@ -50,9 +51,12 @@ const EsComparativaExcursiones = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/nikko-toshogu-hero.jpg"
+          src="/images/blog/nikko-toshogu-hero.webp"
           alt="Kamakura vs Hakone vs Nikko - mejores excursiones desde Tokio"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -135,9 +139,12 @@ const EsComparativaExcursiones = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/kamakura-buddha-comparison.jpg"
+                src="/images/blog/kamakura-buddha-comparison.webp"
                 alt="Gran Buda de Kamakura - excursión popular desde Tokio"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El Gran Buda de Kamakura, uno de los monumentos más icónicos de Japón
@@ -178,9 +185,12 @@ const EsComparativaExcursiones = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/hakone-fuji-comparison.jpg"
+                src="/images/blog/hakone-fuji-comparison.webp"
                 alt="Monte Fuji desde Hakone - excursión escénica desde Tokio"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El Monte Fuji desde el Lago Ashi, la vista más codiciada de Hakone
@@ -329,6 +339,8 @@ const EsComparativaExcursiones = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

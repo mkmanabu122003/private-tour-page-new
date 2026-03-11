@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const TippingInJapan = () => {
   return (
@@ -15,10 +16,13 @@ const TippingInJapan = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-kaminarimon-gate.jpg"
+          src="/images/tours/asakusa-kaminarimon-gate.webp"
           alt="Kaminarimon Gate in Asakusa, understanding tipping culture in Japan"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -119,10 +123,12 @@ const TippingInJapan = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/tours/night-tour-omoide-yokocho.jpg"
+                src="/images/tours/night-tour-omoide-yokocho.webp"
                 alt="Busy yakitori counter at Omoide Yokocho in Shinjuku with diners and cooks in a smoky atmosphere"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A typical counter-style izakaya in Shinjuku — the intimacy between cook and customer is part of the experience, and tipping would disrupt that dynamic
@@ -142,10 +148,12 @@ const TippingInJapan = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/ryokan-nakai-kimono-greeting.jpg"
+                src="/images/blog/ryokan-nakai-kimono-greeting.webp"
                 alt="A nakai-san in elegant kimono greeting guests at a traditional Japanese ryokan entrance"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 A nakai-san at a traditional ryokan — kokorozuke is the only context where a monetary gift is sometimes appropriate
@@ -181,10 +189,12 @@ const TippingInJapan = () => {
             </ul>
             <figure className="my-8">
               <img
-                src="/images/blog/japanese-elegant-gift-wrapping.jpg"
+                src="/images/blog/japanese-elegant-gift-wrapping.webp"
                 alt="Elegantly wrapped Japanese gift boxes with blue ribbon bows, representing the art of gift-giving in Japan"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 In Japan, presentation matters as much as the gift itself — a small, beautifully wrapped souvenir speaks louder than cash
@@ -273,6 +283,8 @@ const TippingInJapan = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} customSubtitles={{"custom":"Let your guide handle everything"}} />
 
       {/* BlogPosting Schema */}
       <script

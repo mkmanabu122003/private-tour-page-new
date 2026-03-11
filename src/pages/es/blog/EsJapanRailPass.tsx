@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsJapanRailPass = () => {
   return (
@@ -19,10 +20,13 @@ const EsJapanRailPass = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/hakone-lake-ashi-fuji.jpg"
+          src="/images/tours/hakone-lake-ashi-fuji.webp"
           alt="Lago Ashi y Monte Fuji: excursión con Japan Rail Pass"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -88,9 +92,11 @@ const EsJapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/shinkansen-n700-tokyo-station.jpg"
+                src="/images/blog/shinkansen-n700-tokyo-station.webp"
                 alt="Tren bala Shinkansen Serie N700 en un andén de estación en Japón"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -157,9 +163,11 @@ const EsJapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/fushimi-inari-senbon-torii-kyoto.jpg"
+                src="/images/blog/fushimi-inari-senbon-torii-kyoto.webp"
                 alt="Miles de puertas torii bermellón formando un túnel en el santuario Fushimi Inari de Kioto"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -175,9 +183,11 @@ const EsJapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/kinkakuji-golden-pavilion-kyoto.jpg"
+                src="/images/blog/kinkakuji-golden-pavilion-kyoto.webp"
                 alt="Kinkaku-ji, el Pabellón Dorado reflejándose en un estanque en Kioto, Japón"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -283,9 +293,11 @@ const EsJapanRailPass = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/jr-okachimachi-station-entrance.jpg"
+                src="/images/blog/jr-okachimachi-station-entrance.webp"
                 alt="Entrada de la estación JR Okachimachi en Tokio mostrando el logotipo de JR y las puertas de acceso"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -397,6 +409,8 @@ const EsJapanRailPass = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom","asakusa"]} lang="es" />
 
       {/* BlogPosting Schema */}
       <script

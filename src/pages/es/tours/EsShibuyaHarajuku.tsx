@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 
 const EsShibuyaHarajuku = () => {
   return (
@@ -44,12 +45,12 @@ const EsShibuyaHarajuku = () => {
         <div className="container-section">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { src: "/images/tours/shibuya-scramble-crossing.jpg", alt: "Cruce de Shibuya - la intersección más famosa de Tokio" },
-              { src: "/images/tours/harajuku-takeshita-street.jpg", alt: "Calle Takeshita en Harajuku - centro de la cultura juvenil de Tokio" },
-              { src: "/images/tours/meiji-shrine-torii-gate.jpg", alt: "Entrada al Santuario Meiji - contraste pacífico con el bullicioso Harajuku" },
+              { src: "/images/tours/shibuya-scramble-crossing.webp", alt: "Cruce de Shibuya - la intersección más famosa de Tokio" },
+              { src: "/images/tours/harajuku-takeshita-street.webp", alt: "Calle Takeshita en Harajuku - centro de la cultura juvenil de Tokio" },
+              { src: "/images/tours/meiji-shrine-torii-gate.webp", alt: "Entrada al Santuario Meiji - contraste pacífico con el bullicioso Harajuku" },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
               </div>
             ))}
           </div>
@@ -181,6 +182,24 @@ const EsShibuyaHarajuku = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            ¿Listo para reservar? Asegura tu tour privado →
+          </p>
+          <Link
+            to="/es/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Reservar Ahora
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Guía con licencia · Tour privado
+          </p>
+        </div>
+      </section>
+
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <h2 className="heading-section">¿Listo para Explorar Shibuya y Harajuku?</h2>
@@ -193,6 +212,7 @@ const EsShibuyaHarajuku = () => {
           </div>
         </div>
       </section>
+      <StickyBookingBar tourName="Tour Privado por Shibuya y Harajuku" price="¥35,000" />
     </Layout>
   );
 };

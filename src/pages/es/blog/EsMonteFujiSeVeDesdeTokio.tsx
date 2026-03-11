@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsMonteFujiSeVeDesdeTokio = () => {
   return (
@@ -19,10 +20,13 @@ const EsMonteFujiSeVeDesdeTokio = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/hakone-pirate-ship-ashi.jpg"
+          src="/images/tours/hakone-pirate-ship-ashi.webp"
           alt="Monte Fuji visto desde el lago Ashi en Hakone"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -280,6 +284,8 @@ const EsMonteFujiSeVeDesdeTokio = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

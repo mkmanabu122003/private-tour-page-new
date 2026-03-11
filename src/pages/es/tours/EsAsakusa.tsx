@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 
 const EsAsakusa = () => {
   return (
@@ -50,13 +51,13 @@ const EsAsakusa = () => {
         <div className="container-section">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { src: "/images/tours/asakusa-kaminarimon-morning.jpg", alt: "Puerta Kaminarimon en Asakusa - punto de inicio del tour privado" },
-              { src: "/images/tours/asakusa-nakamise-street.jpg", alt: "Calle Nakamise-dori hacia el Templo Senso-ji" },
-              { src: "/images/tours/senso-ji-temple-tokyo.jpg", alt: "Templo Senso-ji - el templo más antiguo de Tokio" },
-              { src: "/images/tours/asakusa-backstreet-local.jpg", alt: "Callejón escondido de Asakusa lejos de las multitudes" },
+              { src: "/images/tours/asakusa-kaminarimon-morning.webp", alt: "Puerta Kaminarimon en Asakusa - punto de inicio del tour privado" },
+              { src: "/images/tours/asakusa-nakamise-street.webp", alt: "Calle Nakamise-dori hacia el Templo Senso-ji" },
+              { src: "/images/tours/senso-ji-temple-tokyo.webp", alt: "Templo Senso-ji - el templo más antiguo de Tokio" },
+              { src: "/images/tours/asakusa-backstreet-local.webp", alt: "Callejón escondido de Asakusa lejos de las multitudes" },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
               </div>
             ))}
           </div>
@@ -196,6 +197,24 @@ const EsAsakusa = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            ¿Listo para reservar? Asegura tu tour privado →
+          </p>
+          <Link
+            to="/es/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Reservar Ahora
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Guía con licencia · Tour privado
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
@@ -213,6 +232,7 @@ const EsAsakusa = () => {
           </div>
         </div>
       </section>
+      <StickyBookingBar tourName="Tour Privado por Asakusa" price="¥30,000" />
     </Layout>
   );
 };

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsShitamachiTokio = () => {
   return (
@@ -19,10 +20,13 @@ const EsShitamachiTokio = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-backstreet-local.jpg"
+          src="/images/tours/asakusa-backstreet-local.webp"
           alt="Calles tradicionales del shitamachi en Tokio"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -119,10 +123,12 @@ const EsShitamachiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-jizo-statues-red-bibs.jpg"
+                src="/images/blog/asakusa-jizo-statues-red-bibs.webp"
                 alt="Fila de estatuas Jizo de piedra con baberos rojos en un templo de Asakusa en el antiguo Tokio"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Estatuas Jizo con baberos rojos cerca de un templo en Asakusa — cada babero es una oración personal, un recordatorio silencioso de las raíces espirituales del shitamachi
@@ -140,10 +146,12 @@ const EsShitamachiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-ginza-shotengai-entrance.jpg"
+                src="/images/blog/yanaka-ginza-shotengai-entrance.webp"
                 alt="Puerta de entrada a la calle comercial Yanaka Ginza con compradores locales en el antiguo Tokio"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 La entrada a Yanaka Ginza — esta cuesta con tiendas familiares se siente más como un pueblo que como parte de Tokio
@@ -177,10 +185,12 @@ const EsShitamachiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/ningyocho-amazake-yokocho-tofu-shop.jpg"
+                src="/images/blog/ningyocho-amazake-yokocho-tofu-shop.webp"
                 alt="Tienda tradicional de tofu y amazake en el callejón Amazake Yokocho de Ningyocho, Tokio"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Una tienda de tofu en Amazake Yokocho, Ningyocho — estos negocios familiares llevan generaciones en el mismo lugar
@@ -209,10 +219,12 @@ const EsShitamachiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/yanaka-traditional-pottery-storefront.jpg"
+                src="/images/blog/yanaka-traditional-pottery-storefront.webp"
                 alt="Fachada de tienda tradicional de cerámica en Yanaka con cuencos artesanales expuestos"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Una tienda de cerámica en Yanaka — la fachada de madera y las piezas artesanales son exactamente lo que descubres en el shitamachi cuando sabes dónde mirar
@@ -324,6 +336,8 @@ const EsShitamachiTokio = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["yanaka","asakusa"]} lang="es" />
 
       {/* BlogPosting Schema */}
       <script
