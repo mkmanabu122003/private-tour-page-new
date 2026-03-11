@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const AsakusaGuideNew = () => {
   return (
@@ -15,10 +16,13 @@ const AsakusaGuideNew = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/asakusa-guide-hero.jpg"
+          src="/images/blog/asakusa-guide-hero.webp"
           alt="Early morning at Senso-ji Temple in Asakusa before the crowds arrive"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -70,10 +74,12 @@ const AsakusaGuideNew = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-sensoji-pagoda.jpg"
+                src="/images/blog/asakusa-sensoji-pagoda.webp"
                 alt="Empty Senso-ji Temple grounds at dawn in Asakusa"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Senso-ji at 7am, a completely different experience from the midday crowds
@@ -115,10 +121,12 @@ const AsakusaGuideNew = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-hoppy-street.jpg"
+                src="/images/blog/asakusa-hoppy-street.webp"
                 alt="Hoppy Street in Asakusa with lanterns and local izakaya"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Hoppy Street, the beating heart of local Asakusa life, just minutes from Senso-ji
@@ -147,10 +155,12 @@ const AsakusaGuideNew = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-street-food.jpg"
+                src="/images/blog/asakusa-street-food.webp"
                 alt="Traditional street food and senbei rice crackers in Asakusa"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Freshly grilled senbei and traditional sweets, the real flavors of Asakusa
@@ -264,6 +274,8 @@ const AsakusaGuideNew = () => {
         </div>
       </section>
 
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
       {/* BlogPosting Schema */}
       <script
         type="application/ld+json"
@@ -273,7 +285,7 @@ const AsakusaGuideNew = () => {
             "@type": "BlogPosting",
             "headline": "Asakusa Guide: What to See, What to Skip, and How to Go Before 9am",
             "description": "Asakusa is Tokyo's most visited neighborhood, and most people see it wrong. A licensed guide who works there daily tells you what actually matters.",
-            "image": "https://tanuki-tabi-travel.com/images/blog/asakusa-guide-hero.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/asakusa-guide-hero.webp",
             "author": {
               "@type": "Person",
               "name": "Manabu",

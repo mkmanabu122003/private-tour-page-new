@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mountain, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 
 const EsHakone = () => {
   return (
@@ -44,12 +45,12 @@ const EsHakone = () => {
         <div className="container-section">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { src: "/images/tours/hakone-lake-ashi-fuji.jpg", alt: "Lago Ashi con vista del Monte Fuji - excursión desde Tokio" },
-              { src: "/images/tours/hakone-ropeway-owakudani.jpg", alt: "Teleférico de Hakone sobre el valle volcánico de Owakudani" },
-              { src: "/images/tours/hakone-pirate-ship-ashi.jpg", alt: "Crucero en barco pirata por el Lago Ashi en Hakone" },
+              { src: "/images/tours/hakone-lake-ashi-fuji.webp", alt: "Lago Ashi con vista del Monte Fuji - excursión desde Tokio" },
+              { src: "/images/tours/hakone-ropeway-owakudani.webp", alt: "Teleférico de Hakone sobre el valle volcánico de Owakudani" },
+              { src: "/images/tours/hakone-pirate-ship-ashi.webp", alt: "Crucero en barco pirata por el Lago Ashi en Hakone" },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
               </div>
             ))}
           </div>
@@ -228,6 +229,24 @@ const EsHakone = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            ¿Listo para reservar? Asegura tu tour privado →
+          </p>
+          <Link
+            to="/es/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Reservar Ahora
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Guía con licencia · Tour privado
+          </p>
+        </div>
+      </section>
+
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <h2 className="heading-section">¿Listo para Explorar Hakone?</h2>
@@ -240,6 +259,7 @@ const EsHakone = () => {
           </div>
         </div>
       </section>
+      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥55,000" />
     </Layout>
   );
 };

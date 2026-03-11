@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 
 const features = [
   {
@@ -54,35 +55,35 @@ const foodExperiences: {
   {
     title: "Tsukiji Outer Market Morning Crawl",
     foods: "Sushi, tamagoyaki, seafood skewers, fresh wasabi",
-    image: "/images/tours/food-tour-tsukiji.jpg",
+    image: "/images/tours/food-tour-tsukiji.webp",
     description:
       "Start your day where Tokyo's chefs start theirs. The Tsukiji Outer Market is still the beating heart of Tokyo's food culture, even after the inner wholesale market moved to Toyosu. We'll navigate the narrow lanes together, tasting freshly grilled scallops from vendors who've been here for decades, watching masters slice maguro with single-stroke precision, and trying tamagoyaki, the sweet, layered egg omelet that's been perfected here over generations. Your guide will explain the market's 90-year history and help you order confidently at stalls where the menu is only in Japanese.",
   },
   {
     title: "Asakusa Traditional Street Food",
     foods: "Ningyo-yaki, melon-pan, hand-pulled soba, age-manju",
-    image: "/images/tours/food-tour-asakusa.jpg",
+    image: "/images/tours/food-tour-asakusa.webp",
     description:
       "Asakusa is Tokyo's old downtown, and its food reflects centuries of tradition. Along Nakamise Street and the surrounding backstreets, we'll try ningyo-yaki, small cakes filled with sweet red bean paste, baked in molds shaped like the Seven Lucky Gods. We'll find the best melon-pan (crispy-topped sweet bread) fresh from the oven, visit a soba shop where noodles are still made by hand daily, and discover age-manju, deep-fried steamed buns with a satisfying crunch that gives way to soft, sweet filling. This is comfort food with centuries of history behind it.",
   },
   {
     title: "Ramen Discovery Tour",
     foods: "Tonkotsu, shoyu, miso, tsukemen, gyoza",
-    image: "/images/blog/ramen-guide-hero.jpg",
+    image: "/images/blog/ramen-guide-hero.webp",
     description:
       "Tokyo is arguably the ramen capital of the world, with over 10,000 ramen shops across the city. Each neighborhood has its loyalties, each shop its closely guarded recipe. We'll explore the major styles: rich, creamy tonkotsu from Kyushu, clear and elegant shoyu from Tokyo's own tradition, bold miso ramen born in Hokkaido. We'll visit shops where the master has spent years perfecting a single bowl. Your guide will teach you proper ramen etiquette (yes, slurping is not just acceptable, it's expected) and help you customize your order with confidence.",
   },
   {
     title: "Izakaya Evening Experience",
     foods: "Yakitori, sake flights, edamame, karaage, small plates",
-    image: "/images/tours/food-tour-izakaya.jpg",
+    image: "/images/tours/food-tour-izakaya.webp",
     description:
       "As the lanterns flicker on in Tokyo's yokocho (alleyway bar districts), a different food world comes alive. Izakaya are Japan's answer to the gastropub: informal, convivial, and bursting with flavor. We'll visit izakaya where salarymen unwind after work, tasting perfectly charcoal-grilled yakitori (each cut of chicken has its own name and ideal preparation), sipping through a curated sake flight, and sharing small plates that showcase seasonal ingredients. Your guide handles all ordering and explains the unwritten rules that make izakaya culture uniquely Japanese.",
   },
   {
     title: "Depachika Tour",
     foods: "Wagashi, bento boxes, French pastries, pickles, seasonal sweets",
-    image: "/images/blog/japanese-elegant-gift-wrapping.jpg",
+    image: "/images/blog/japanese-elegant-gift-wrapping.webp",
     description:
       "The basement floors of Tokyo's department stores, known as depachika, are food wonderlands that most tourists walk right past. These are not ordinary food courts. They're curated collections of Japan's finest food artisans, from wagashi (traditional sweets) makers who've held imperial warrants for centuries to French-trained pastry chefs creating Tokyo-exclusive confections. We'll sample our way through exquisite bento boxes, discover regional specialties from across Japan, and find the perfect edible souvenirs to bring home.",
   },
@@ -150,8 +151,8 @@ const TokyoFoodTour = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Food Tour | Best Private Local Food Experience | Tanuki Tabi"
-        description="Join a private Tokyo food tour with a licensed local guide. Explore Tsukiji Market, hidden ramen shops, and izakaya. Fully customizable for vegetarian, vegan, halal, and gluten-free diets."
+        title="Tokyo Private Food Tour | Vegetarian & Custom Menus | Licensed Guide"
+        description="Custom private food tours in Tokyo for all dietary needs. Vegetarian, halal, gluten-free options. Licensed guide with 500+ tours. Book your personalized food experience."
         canonicalPath="/tours/tokyo-food-tour"
       />
 
@@ -159,9 +160,12 @@ const TokyoFoodTour = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/tokyo-food-tour-hero.jpg"
+          src="/images/tours/tokyo-food-tour-hero.webp"
           alt="Private Tokyo food tour - taste authentic Japanese cuisine"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </section>
@@ -247,6 +251,9 @@ const TokyoFoodTour = () => {
                     src={experience.image}
                     alt={experience.title}
                     className="w-full h-48 object-cover"
+                    loading="lazy"
+                    width={800}
+                    height={600}
                   />
                 )}
                 <div className="p-6">
@@ -422,6 +429,25 @@ const TokyoFoodTour = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            Ready to book? Secure your private tour →
+          </p>
+          <Link
+            to="/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Book Now
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Licensed guide · Private tour
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container-section text-center">
@@ -583,6 +609,8 @@ const TokyoFoodTour = () => {
           }),
         }}
       />
+
+      <StickyBookingBar tourName="Tokyo Food Tour" price="Contact for quote" />
     </Layout>
   );
 };

@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/asakusa-guide-hero.jpg",
+    image: "/images/blog/asakusa-guide-hero.webp",
   },
   {
     slug: "asakusa-tokio-guia",
@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/asakusa-guide-hero.jpg",
+    image: "/images/blog/asakusa-guide-hero.webp",
   },
   {
     slug: "guia-shibuya-harajuku",
@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/shibuya-harajuku-guide-hero.jpg",
+    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
   },
   {
     slug: "guia-shinjuku",
@@ -54,7 +54,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/shinjuku-guide-hero.jpg",
+    image: "/images/blog/shinjuku-guide-hero.webp",
   },
   {
     slug: "guia-tsukiji",
@@ -64,7 +64,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/tours/food-tour-tsukiji.jpg",
+    image: "/images/tours/food-tour-tsukiji.webp",
   },
   {
     slug: "mercado-tsukiji-tokio",
@@ -74,7 +74,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/tsukiji-outer-market-entrance.jpg",
+    image: "/images/blog/tsukiji-outer-market-entrance.webp",
   },
   {
     slug: "yanaka-tokio-itinerario",
@@ -84,7 +84,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/blog/yanaka-ginza-shopping-street.jpg",
+    image: "/images/blog/yanaka-ginza-shopping-street.webp",
   },
   {
     slug: "shitamachi-tokio",
@@ -94,7 +94,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
-    image: "/images/tours/asakusa-backstreet-local.jpg",
+    image: "/images/tours/asakusa-backstreet-local.webp",
   },
   // Guías de Excursiones
   {
@@ -105,7 +105,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/blog/nikko-toshogu-hero.jpg",
+    image: "/images/blog/nikko-toshogu-hero.webp",
   },
   {
     slug: "excursion-nikko-desde-tokio",
@@ -115,7 +115,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/blog/nikko-toshogu-hero.jpg",
+    image: "/images/blog/nikko-toshogu-hero.webp",
   },
   {
     slug: "kamakura-desde-tokio",
@@ -125,7 +125,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/tours/kamakura-great-buddha.jpg",
+    image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
     slug: "monte-fuji-desde-tokio",
@@ -135,7 +135,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/tours/hakone-ropeway-owakudani.jpg",
+    image: "/images/tours/hakone-ropeway-owakudani.webp",
   },
   {
     slug: "monte-fuji-se-ve-desde-tokio",
@@ -145,7 +145,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/tours/hakone-pirate-ship-ashi.jpg",
+    image: "/images/tours/hakone-pirate-ship-ashi.webp",
   },
   // Planifica tu Viaje
   {
@@ -156,7 +156,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
-    image: "/images/tours/shibuya-crossing-tokyo.jpg",
+    image: "/images/tours/shibuya-crossing-tokyo.webp",
   },
   {
     slug: "itinerario-tokio-5-dias",
@@ -166,7 +166,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
-    image: "/images/tours/shibuya-scramble-crossing.jpg",
+    image: "/images/tours/shibuya-scramble-crossing.webp",
   },
   {
     slug: "mejor-epoca-visitar-tokio",
@@ -176,7 +176,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
-    image: "/images/blog/meiji-shrine-forest.jpg",
+    image: "/images/blog/meiji-shrine-forest.webp",
   },
   {
     slug: "japan-rail-pass-vale-la-pena",
@@ -186,7 +186,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
-    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     slug: "etiqueta-templos-santuarios",
@@ -196,7 +196,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Planifica tu Viaje",
-    image: "/images/tours/senso-ji-temple-tokyo.jpg",
+    image: "/images/tours/senso-ji-temple-tokyo.webp",
   },
   // Cultura Japonesa
   {
@@ -207,7 +207,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Cultura Japonesa",
-    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
+    image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
   {
     slug: "templos-famosos-japon",
@@ -217,7 +217,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Cultura Japonesa",
-    image: "/images/blog/asakusa-sensoji-pagoda.jpg",
+    image: "/images/blog/asakusa-sensoji-pagoda.webp",
   },
   // Gastronomía Japonesa
   {
@@ -228,7 +228,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
-    image: "/images/tours/tokyo-food-tour-hero.jpg",
+    image: "/images/tours/tokyo-food-tour-hero.webp",
   },
   {
     slug: "que-comer-en-japon",
@@ -238,7 +238,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
-    image: "/images/tours/food-tour-izakaya.jpg",
+    image: "/images/tours/food-tour-izakaya.webp",
   },
   {
     slug: "comida-callejera-tokio",
@@ -248,7 +248,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
-    image: "/images/tours/tsukiji-street-food.jpg",
+    image: "/images/tours/tsukiji-street-food.webp",
   },
   {
     slug: "tsukiji-2026",
@@ -258,7 +258,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Gastronomía Japonesa",
-    image: "/images/blog/tsukiji-tamagoyaki.jpg",
+    image: "/images/blog/tsukiji-tamagoyaki.webp",
   },
   // Guías Útiles
   {
@@ -269,7 +269,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
-    image: "/images/tour-photos/tour-photo-2.jpg",
+    image: "/images/tour-photos/tour-photo-2.webp",
   },
   {
     slug: "vale-la-pena-guia-privado-tokio",
@@ -279,7 +279,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
-    image: "/images/tour-photos/photo1.jpg",
+    image: "/images/tour-photos/photo1.webp",
   },
   {
     slug: "cuanto-cuesta-guia-privado-tokio",
@@ -289,7 +289,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
-    image: "/images/tour-photos/group-photo.jpg",
+    image: "/images/tour-photos/group-photo.webp",
   },
   {
     slug: "guia-licencia-oficial-japon",
@@ -299,7 +299,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
-    image: "/images/tour-photos/tour-photo-1.jpg",
+    image: "/images/tour-photos/tour-photo-1.webp",
   },
 ];
 
@@ -366,6 +366,8 @@ const EsBlogIndex = () => {
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
+                          width={600}
+                          height={338}
                         />
                       </div>
                       <div className="p-6">

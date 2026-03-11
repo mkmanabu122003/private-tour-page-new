@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const Tokyo3DayItinerary = () => {
   return (
@@ -15,10 +16,13 @@ const Tokyo3DayItinerary = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/shibuya-crossing-tokyo.jpg"
+          src="/images/tours/shibuya-crossing-tokyo.webp"
           alt="Shibuya Crossing in Tokyo, a must-see on any 3-day itinerary"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -98,10 +102,12 @@ const Tokyo3DayItinerary = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-sensoji-pagoda.jpg"
+                src="/images/blog/asakusa-sensoji-pagoda.webp"
                 alt="Senso-ji Temple pagoda in Asakusa, a highlight of any Tokyo 3-day itinerary"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Senso-ji's five-story pagoda. Arrive before 9 AM for the most peaceful experience
@@ -158,10 +164,12 @@ const Tokyo3DayItinerary = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-street-food.jpg"
+                src="/images/blog/asakusa-street-food.webp"
                 alt="Street food stalls near Asakusa and Ueno, part of Tokyo's vibrant food scene"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Street food stalls in east Tokyo. Graze your way through grilled skewers, fresh seafood, and seasonal snacks
@@ -206,10 +214,12 @@ const Tokyo3DayItinerary = () => {
 
             <figure className="my-8">
               <img
-                src="/images/tours/harajuku-takeshita-street.jpg"
+                src="/images/tours/harajuku-takeshita-street.webp"
                 alt="Harajuku Takeshita Street, colorful and crowded with youth culture shops"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Takeshita Street in Harajuku. The shift from Meiji Shrine's calm forest to this sensory overload takes about 30 seconds
@@ -249,10 +259,12 @@ const Tokyo3DayItinerary = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/shinjuku-omoide-yokocho.jpg"
+                src="/images/blog/shinjuku-omoide-yokocho.webp"
                 alt="Omoide Yokocho in Shinjuku, narrow alley lined with yakitori stalls and lanterns"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Omoide Yokocho at night. This narrow alley of yakitori stalls has been a Shinjuku landmark since the 1940s
@@ -284,10 +296,12 @@ const Tokyo3DayItinerary = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-fresh-sushi.jpg"
+                src="/images/blog/tsukiji-fresh-sushi.webp"
                 alt="Fresh sushi breakfast at Tsukiji Outer Market in Tokyo"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Sushi for breakfast at Tsukiji. The freshest fish you'll find anywhere in Tokyo
@@ -421,6 +435,8 @@ const Tokyo3DayItinerary = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
 
       {/* BlogPosting Schema */}
       <script

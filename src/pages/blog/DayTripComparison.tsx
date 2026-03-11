@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const DayTripComparison = () => {
   return (
@@ -44,9 +45,12 @@ const DayTripComparison = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/nikko-toshogu-hero.jpg"
+          src="/images/blog/nikko-toshogu-hero.webp"
           alt="Kamakura vs Hakone vs Nikko - best day trips from Tokyo"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -129,9 +133,12 @@ const DayTripComparison = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/kamakura-buddha-comparison.jpg"
+                src="/images/blog/kamakura-buddha-comparison.webp"
                 alt="Great Buddha in Kamakura - popular day trip from Tokyo"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 The Great Buddha of Kamakura, one of Japan's most iconic landmarks
@@ -172,9 +179,12 @@ const DayTripComparison = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/hakone-fuji-comparison.jpg"
+                src="/images/blog/hakone-fuji-comparison.webp"
                 alt="Mt Fuji from Hakone - scenic day trip from Tokyo"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Mt. Fuji from Lake Ashi, Hakone's most sought-after view
@@ -323,6 +333,8 @@ const DayTripComparison = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
 
       {/* BlogPosting Schema */}
       <script

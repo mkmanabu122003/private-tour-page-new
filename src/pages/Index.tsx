@@ -10,17 +10,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import heroImage from "@/assets/sumida.jpg";
+import heroImage from "@/assets/sumida.webp";
 
 // Hero image: group-photo.jpg from public/images/tour-photos/
-const heroGroupPhoto = "/images/tour-photos/group-photo.jpg";
-import tourUeno from "@/assets/tour-ueno.jpg";
+const heroGroupPhoto = "/images/tour-photos/group-photo.webp";
+import tourUeno from "@/assets/tour-ueno.webp";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
-import imperialPalace from "@/assets/imperial-palace.jpg";
-import hamarikyu from "@/assets/hamarikyu.jpg";
-import asakusaTemple from "@/assets/asakusa-temple.jpg";
-import tsukijiMarket from "@/assets/tsukiji-market.jpg";
-import shibuyaStreet from "@/assets/shibuya-street.jpg";
+import imperialPalace from "@/assets/imperial-palace.webp";
+import hamarikyu from "@/assets/hamarikyu.webp";
+import asakusaTemple from "@/assets/asakusa-temple.webp";
+import tsukijiMarket from "@/assets/tsukiji-market.webp";
+import shibuyaStreet from "@/assets/shibuya-street.webp";
 
 const tours = [
   {
@@ -30,7 +30,7 @@ const tours = [
     duration: "3 hours",
     price: "¥30,000",
     difficulty: "Easy",
-    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
+    image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
   {
     id: "yanaka",
@@ -48,7 +48,7 @@ const tours = [
     duration: "3.5 hours",
     price: "¥35,000",
     difficulty: "Easy",
-    image: "/images/tours/shibuya-crossing-tokyo.jpg",
+    image: "/images/tours/shibuya-crossing-tokyo.webp",
   },
   {
     id: "tsukiji-ginza",
@@ -57,7 +57,7 @@ const tours = [
     duration: "3 hours",
     price: "¥30,000",
     difficulty: "Easy",
-    image: "/images/tours/tsukiji-market-food-tokyo.jpg",
+    image: "/images/tours/tsukiji-market-food-tokyo.webp",
   },
   {
     id: "imperial-palace",
@@ -75,7 +75,7 @@ const tours = [
     duration: "7-8 hours",
     price: "¥50,000",
     difficulty: "Easy-Moderate",
-    image: "/images/tours/kamakura-great-buddha.jpg",
+    image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
     id: "hakone-day-trip",
@@ -84,7 +84,7 @@ const tours = [
     duration: "8-10 hours",
     price: "¥55,000",
     difficulty: "Easy",
-    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     id: "nikko-day-trip",
@@ -104,7 +104,7 @@ const tours = [
     price: "From ¥10,000/hour",
     difficulty: "Customizable",
     // TODO: replace with custom tour image (e.g. a map, planning scene, or collage)
-    image: "/images/tour-photos/group-photo.jpg",
+    image: "/images/tour-photos/group-photo.webp",
   },
 ];
 
@@ -154,7 +154,7 @@ const Index = () => {
     <Layout>
       <SEO
         title="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel"
-        description="Explore Tokyo with Manabu, a government-licensed guide with 500+ tours and a 4.86★ rating. Private walking tours of Asakusa, Shibuya, and beyond, tailored to you."
+        description="Tokyo's licensed private tour guide with 500+ tours and 4.86★ rating. Custom walking tours for food, culture, history. Vegetarian & dietary needs welcome. Book direct."
         canonicalPath="/"
         hreflang={[
           { lang: "en", path: "/" },
@@ -170,6 +170,9 @@ const Index = () => {
             src={heroGroupPhoto}
             alt="Group photo with guests during a private Tokyo walking tour"
             className="w-full h-full object-cover"
+            fetchpriority="high"
+            width={1600}
+            height={900}
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -190,8 +193,8 @@ const Index = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/tours" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
-                See Available Tours
+              <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
+                Book Your Private Tour
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link to="/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
@@ -249,6 +252,9 @@ const Index = () => {
                   src={asakusaTemple}
                   alt="Senso-ji Temple with Tokyo Skytree"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={800}
+                  height={600}
                 />
               </div>
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
@@ -256,6 +262,9 @@ const Index = () => {
                   src={tsukijiMarket}
                   alt="Tsukiji fish market"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={800}
+                  height={600}
                 />
               </div>
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
@@ -263,6 +272,9 @@ const Index = () => {
                   src={shibuyaStreet}
                   alt="Shibuya streets at night"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={800}
+                  height={600}
                 />
               </div>
             </div>
@@ -345,6 +357,9 @@ const Index = () => {
                   src={guidePortrait}
                   alt="Manabu, government-licensed Tokyo tour guide, ready to lead a private walking tour"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                 />
               </div>
             </div>
@@ -401,9 +416,9 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: "/images/tour-photos/group-photo.jpg", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
-              { src: "/images/tour-photos/photo1.jpg", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
-              { src: "/images/tour-photos/photo2.jpg", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
+              { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
+              { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
+              { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
             ].map((photo) => (
               <div key={photo.src} className="flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg">
@@ -460,6 +475,27 @@ const Index = () => {
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
             500+ five-star reviews from travelers worldwide
+          </p>
+        </div>
+      </section>
+
+      {/* Post-Review CTA */}
+      <section className="py-16 md:py-20 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <h2 className="heading-section text-foreground">
+            Ready to See the Real Tokyo?
+          </h2>
+          <div className="mt-8">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-lg"
+            >
+              Book Now
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Reply within 24 hours
           </p>
         </div>
       </section>

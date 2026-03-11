@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const ShinjukuGuide = () => {
   return (
@@ -47,9 +48,12 @@ const ShinjukuGuide = () => {
       {/* Hero Image */}
       <div className="w-full h-[300px] md:h-[400px]">
         <img
-          src="/images/blog/shinjuku-guide-hero.jpg"
+          src="/images/blog/shinjuku-guide-hero.webp"
           alt="Shinjuku guide - navigating Tokyo's neon-lit heart"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
       </div>
 
@@ -116,9 +120,12 @@ const ShinjukuGuide = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/shinjuku-golden-gai-bars.jpg"
+                src="/images/blog/shinjuku-golden-gai-bars.webp"
                 alt="Golden Gai - intimate bar district in Shinjuku"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Golden Gai's narrow alleys are home to over 200 tiny bars
@@ -173,9 +180,12 @@ const ShinjukuGuide = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/shinjuku-omoide-yokocho.jpg"
+                src="/images/blog/shinjuku-omoide-yokocho.webp"
                 alt="Omoide Yokocho Memory Lane - yakitori under the train tracks"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Omoide Yokocho: smoke, yakitori, and cold beer under the tracks
@@ -217,9 +227,12 @@ const ShinjukuGuide = () => {
 
             <figure className="my-8">
               <img
-                src="/images/blog/shinjuku-gyoen-garden.jpg"
+                src="/images/blog/shinjuku-gyoen-garden.webp"
                 alt="Shinjuku Gyoen National Garden - peaceful escape in Tokyo"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Shinjuku Gyoen, a peaceful escape from the surrounding urban energy
@@ -635,6 +648,8 @@ const ShinjukuGuide = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
 
       {/* BlogPosting Schema */}
       <script

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const SensojiMostVisited = () => {
   return (
@@ -15,10 +16,13 @@ const SensojiMostVisited = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/asakusa-sensoji-pagoda.jpg"
+          src="/images/blog/asakusa-sensoji-pagoda.webp"
           alt="Senso-ji Temple pagoda in Asakusa, Tokyo"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -207,7 +211,9 @@ const SensojiMostVisited = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Is Senso-ji Really the World's Most Visited Religious Site?",
         description: "You'll hear Senso-ji gets 30 million visitors a year. A licensed guide who works there daily examines the claim, and what it means for your visit.",

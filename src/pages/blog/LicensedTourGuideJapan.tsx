@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const LicensedTourGuideJapan = () => {
   return (
@@ -15,10 +16,13 @@ const LicensedTourGuideJapan = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tour-photos/tour-photo-1.jpg"
+          src="/images/tour-photos/tour-photo-1.webp"
           alt="Licensed tour guide leading a private tour in Tokyo"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -249,6 +253,8 @@ const LicensedTourGuideJapan = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
 
       {/* BlogPosting Schema */}
       <script

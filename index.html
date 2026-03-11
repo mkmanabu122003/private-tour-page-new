@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Manabu - Government-Licensed Tour Guide" />
     <meta name="google-site-verification" content="VnhwzF1aG0HWEowI9D68NkcX69nlmLf4n4dM2aeaBRE" />
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPZ0VWHMPF"></script>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <!-- Google Analytics (GA4) - deferred to avoid render blocking -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-HPZ0VWHMPF');
+      // Load gtag.js after page load to avoid render blocking
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HPZ0VWHMPF';
+        s.async = true;
+        document.head.appendChild(s);
+      });
     </script>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!--helmet-head-->
     <title>Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel</title>
-    <meta name="description" content="Explore Tokyo with a licensed private tour guide. Custom walking tours of Asakusa, Ginza, Akihabara and more. Personalized itineraries for your interests." />
+    <meta name="description" content="Tokyo's licensed private tour guide with 500+ tours and 4.86★ rating. Custom walking tours for food, culture, history. Vegetarian & dietary needs welcome. Book direct." />
     <link rel="canonical" href="https://tanuki-tabi-travel.com/" />
     <meta property="og:title" content="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel" />
-    <meta property="og:description" content="Explore Tokyo with a licensed private tour guide. Custom walking tours of Asakusa, Ginza, Akihabara and more. Personalized itineraries for your interests." />
+    <meta property="og:description" content="Tokyo's licensed private tour guide with 500+ tours and 4.86★ rating. Custom walking tours for food, culture, history. Vegetarian & dietary needs welcome. Book direct." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tanuki-tabi-travel.com" />
     <meta property="og:site_name" content="Tanuki Tabi Travel" />
     <meta property="og:image" content="https://tanuki-tabi-travel.com/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tokyo Private Tour Guide | Custom Walking Tours | Tanuki Tabi Travel" />
-    <meta name="twitter:description" content="Explore Tokyo with a licensed private tour guide. Custom walking tours of Asakusa, Ginza, Akihabara and more." />
+    <meta name="twitter:description" content="Tokyo's licensed private tour guide with 500+ tours and 4.86★ rating. Custom walking tours for food, culture, history. Book direct." />
     <meta name="twitter:image" content="https://tanuki-tabi-travel.com/og-image.png" />
     <!--/helmet-head-->
   </head>

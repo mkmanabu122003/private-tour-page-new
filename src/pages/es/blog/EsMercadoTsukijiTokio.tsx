@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsMercadoTsukijiTokio = () => {
   return (
@@ -19,10 +20,13 @@ const EsMercadoTsukijiTokio = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/tsukiji-market-seafood-stalls.jpg"
+          src="/images/blog/tsukiji-market-seafood-stalls.webp"
           alt="Puestos de brochetas de mariscos en el Mercado Exterior de Tsukiji en Tokio"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -145,9 +149,11 @@ const EsMercadoTsukijiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-fresh-maguro-sashimi.jpg"
+                src="/images/blog/tsukiji-fresh-maguro-sashimi.webp"
                 alt="Sashimi de atún maguro recién cortado servido en el mercado de Tsukiji"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -163,9 +169,11 @@ const EsMercadoTsukijiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-tamagoyaki-on-stick.jpg"
+                src="/images/blog/tsukiji-tamagoyaki-on-stick.webp"
                 alt="Tamagoyaki dorado en palito en el mercado exterior de Tsukiji"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -181,9 +189,11 @@ const EsMercadoTsukijiTokio = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/tsukiji-dried-goods-souvenirs.jpg"
+                src="/images/blog/tsukiji-dried-goods-souvenirs.webp"
                 alt="Puesto del mercado de Tsukiji con sésamo de wasabi y productos secos especiales como recuerdo"
                 loading="lazy"
+                width={800}
+                height={533}
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
@@ -334,6 +344,8 @@ const EsMercadoTsukijiTokio = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["tsukiji-ginza","tokyo-food-tour"]} lang="es" />
 
       {/* FAQ Schema */}
       <script

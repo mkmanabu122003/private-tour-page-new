@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mountain, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
-import nikkoToshogu from "@/assets/nikko-toshogu.jpg";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import nikkoToshogu from "@/assets/nikko-toshogu.webp";
 
 const EsNikko = () => {
   return (
@@ -44,7 +45,7 @@ const EsNikko = () => {
       <section className="pb-12">
         <div className="container-section">
           <div className="aspect-[16/9] max-w-2xl rounded-lg overflow-hidden">
-            <img src={nikkoToshogu} alt="Puerta torii de piedra y edificios del Santuario Toshogu en Nikko" className="w-full h-full object-cover" />
+            <img src={nikkoToshogu} alt="Puerta torii de piedra y edificios del Santuario Toshogu en Nikko" className="w-full h-full object-cover" loading="lazy" width={800} height={450} />
           </div>
         </div>
       </section>
@@ -222,6 +223,24 @@ const EsNikko = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            ¿Listo para reservar? Asegura tu tour privado →
+          </p>
+          <Link
+            to="/es/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Reservar Ahora
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Guía con licencia · Tour privado
+          </p>
+        </div>
+      </section>
+
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <h2 className="heading-section">¿Listo para Explorar Nikko?</h2>
@@ -234,6 +253,7 @@ const EsNikko = () => {
           </div>
         </div>
       </section>
+      <StickyBookingBar tourName="Excursión Privada a Nikko" price="¥60,000" />
     </Layout>
   );
 };

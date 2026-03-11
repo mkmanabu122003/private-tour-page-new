@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
-import imperialPalace from "@/assets/imperial-palace.jpg";
-import imperialBridge from "@/assets/imperial-bridge.jpg";
-import tokyoStation from "@/assets/tokyo-station.jpg";
+import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import imperialPalace from "@/assets/imperial-palace.webp";
+import imperialBridge from "@/assets/imperial-bridge.webp";
+import tokyoStation from "@/assets/tokyo-station.webp";
 
 const EsImperialPalace = () => {
   return (
@@ -52,7 +53,7 @@ const EsImperialPalace = () => {
               { src: tokyoStation, alt: "Edificio histórico de ladrillo rojo de la estación de Tokio en Marunouchi" },
             ].map((img) => (
               <div key={img.alt} className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
               </div>
             ))}
           </div>
@@ -184,6 +185,24 @@ const EsImperialPalace = () => {
         </div>
       </section>
 
+      {/* Inline Booking CTA */}
+      <section className="py-12 bg-accent/5 border-y border-accent/10">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            ¿Listo para reservar? Asegura tu tour privado →
+          </p>
+          <Link
+            to="/es/contact"
+            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+          >
+            Reservar Ahora
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Guía con licencia · Tour privado
+          </p>
+        </div>
+      </section>
+
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <h2 className="heading-section">¿Listo para Explorar el Palacio Imperial?</h2>
@@ -196,6 +215,7 @@ const EsImperialPalace = () => {
           </div>
         </div>
       </section>
+      <StickyBookingBar tourName="Tour del Palacio Imperial y Marunouchi" price="¥25,000" />
     </Layout>
   );
 };

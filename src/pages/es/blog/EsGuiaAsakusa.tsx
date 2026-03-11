@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsGuiaAsakusa = () => {
   return (
@@ -21,10 +22,13 @@ const EsGuiaAsakusa = () => {
       {/* Imagen Principal */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/asakusa-guide-hero.jpg"
+          src="/images/blog/asakusa-guide-hero.webp"
           alt="Guía completa de Asakusa - más allá del Templo Senso-ji"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -76,10 +80,12 @@ const EsGuiaAsakusa = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-sensoji-pagoda.jpg"
+                src="/images/blog/asakusa-sensoji-pagoda.webp"
                 alt="Pagoda de cinco pisos en el Templo Senso-ji de Asakusa"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 La zona de la puerta Hozomon en el Senso-ji. Llega temprano para vivirla sin aglomeraciones
@@ -140,10 +146,12 @@ const EsGuiaAsakusa = () => {
             </h3>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-hidden-shrine.jpg"
+                src="/images/blog/asakusa-hidden-shrine.webp"
                 alt="Santuario de Asakusa - joya oculta junto al Senso-ji"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Santuario Imado, un favorito local y joya oculta cerca del Senso-ji, famoso por sus maneki-neko (gatos de la suerte)
@@ -165,10 +173,12 @@ const EsGuiaAsakusa = () => {
             </h3>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-hoppy-street.jpg"
+                src="/images/blog/asakusa-hoppy-street.webp"
                 alt="Calle Hoppy en Asakusa - callejón de bares locales al atardecer"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 La Calle Hoppy cobra vida a media tarde, un mundo aparte de las multitudes turísticas
@@ -198,10 +208,12 @@ const EsGuiaAsakusa = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-street-food.jpg"
+                src="/images/blog/asakusa-street-food.webp"
                 alt="Comida callejera en Nakamise-dori - pan de melón y dulces"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Dulces de matcha en Kaminari Issa, uno de los manjares más queridos de Asakusa cerca del Senso-ji
@@ -289,6 +301,8 @@ const EsGuiaAsakusa = () => {
         </div>
       </section>
 
+      <RelatedTourCards tourIds={["asakusa","yanaka"]} lang="es" />
+
       {/* BlogPosting Schema */}
       <script
         type="application/ld+json"
@@ -298,7 +312,7 @@ const EsGuiaAsakusa = () => {
             "@type": "BlogPosting",
             "headline": "Guía de Asakusa: Qué Ver Más Allá del Templo Senso-ji",
             "description": "Consejos de un guía local para explorar Asakusa más allá del Templo Senso-ji.",
-            "image": "https://tanuki-tabi-travel.com/images/blog/asakusa-guide-hero.jpg",
+            "image": "https://tanuki-tabi-travel.com/images/blog/asakusa-guide-hero.webp",
             "author": {
               "@type": "Person",
               "name": "Manabu",

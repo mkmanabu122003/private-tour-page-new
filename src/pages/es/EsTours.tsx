@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { Clock, Users, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
-import tourUeno from "@/assets/tour-ueno.jpg";
-import tourYanaka from "@/assets/tour-yanaka.jpg";
-import shibuyaCrossing from "@/assets/shibuya-crossing.jpg";
-import tsukijiMarket from "@/assets/tsukiji-market.jpg";
-import imperialPalace from "@/assets/imperial-palace.jpg";
-import hamarikyu from "@/assets/hamarikyu.jpg";
+import tourUeno from "@/assets/tour-ueno.webp";
+import tourYanaka from "@/assets/tour-yanaka.webp";
+import shibuyaCrossing from "@/assets/shibuya-crossing.webp";
+import tsukijiMarket from "@/assets/tsukiji-market.webp";
+import imperialPalace from "@/assets/imperial-palace.webp";
+import hamarikyu from "@/assets/hamarikyu.webp";
 
 interface EsTourCardProps {
   id: string;
@@ -27,6 +27,9 @@ const EsTourCard = ({ id, title, description, duration, price, difficulty, image
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+        width={600}
+        height={450}
       />
       <div className="absolute top-4 left-4">
         <span className="text-label px-3 py-1.5 bg-background/90 backdrop-blur-sm rounded-full">
@@ -71,7 +74,7 @@ const tokyoTours = [
     duration: "3 horas",
     price: "¥30,000",
     difficulty: "Fácil",
-    image: "/images/tours/asakusa-kaminarimon-gate.jpg",
+    image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
   {
     id: "yanaka",
@@ -128,7 +131,7 @@ const dayTrips = [
     duration: "7-8 horas",
     price: "¥50,000",
     difficulty: "Fácil-Moderado",
-    image: "/images/tours/kamakura-great-buddha.jpg",
+    image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
     id: "hakone-day-trip",
@@ -137,7 +140,7 @@ const dayTrips = [
     duration: "8-10 horas",
     price: "¥55,000",
     difficulty: "Fácil",
-    image: "/images/tours/hakone-lake-ashi-fuji.jpg",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     id: "nikko-day-trip",
@@ -146,7 +149,7 @@ const dayTrips = [
     duration: "9-10 horas",
     price: "¥60,000",
     difficulty: "Moderado",
-    image: "/images/blog/nikko-toshogu-hero.jpg",
+    image: "/images/blog/nikko-toshogu-hero.webp",
   },
 ];
 

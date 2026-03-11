@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const EsEtiquetaTemplos = () => {
   return (
@@ -21,10 +22,13 @@ const EsEtiquetaTemplos = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/senso-ji-temple-tokyo.jpg"
+          src="/images/tours/senso-ji-temple-tokyo.webp"
           alt="Templo Senso-ji en Tokio, etiqueta en templos japoneses"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -116,10 +120,12 @@ const EsEtiquetaTemplos = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-toshogu-stone-torii-gate.jpg"
+                src="/images/blog/nikko-toshogu-stone-torii-gate.webp"
                 alt="Visitantes cruzando la puerta torii de piedra en el santuario Nikko Toshogu con la puerta Yomeimon al fondo"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Cruzando el torii de piedra en Nikko Toshogu — observa cómo los visitantes caminan naturalmente por los lados, dejando libre el camino central
@@ -154,10 +160,12 @@ const EsEtiquetaTemplos = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/shrine-chozuya-dragon-purification.jpg"
+                src="/images/blog/shrine-chozuya-dragon-purification.webp"
                 alt="Fuente de purificación chozuya con caño en forma de dragón y cucharones de bambú en un santuario japonés"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Un chozuya con caño de dragón — busca los cucharones de bambú y sigue los cinco pasos de purificación
@@ -213,10 +221,12 @@ const EsEtiquetaTemplos = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-ornate-temple-hall.jpg"
+                src="/images/blog/nikko-ornate-temple-hall.webp"
                 alt="Salón de templo budista ornamentado en Nikko con pilares rojos, detalles dorados y linternas de piedra"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Un salón de templo ricamente decorado en Nikko — los templos budistas suelen ser más ornamentados y contemplativos que los santuarios sintoístas
@@ -258,10 +268,12 @@ const EsEtiquetaTemplos = () => {
             </p>
             <figure className="my-8">
               <img
-                src="/images/blog/kamakura-serene-temple-garden.jpg"
+                src="/images/blog/kamakura-serene-temple-garden.webp"
                 alt="Jardín sereno de templo japonés en Kamakura con casa de té tradicional y flores de camelia"
                 loading="lazy"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                width={800}
+                height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 Un jardín de templo en Kamakura — estos espacios tranquilos invitan a la contemplación silenciosa, no a las sesiones de selfies
@@ -522,6 +534,8 @@ const EsEtiquetaTemplos = () => {
           </article>
         </div>
       </section>
+
+      <RelatedTourCards tourIds={["asakusa","imperial-palace"]} lang="es" />
 
       {/* BlogPosting Schema */}
       <script

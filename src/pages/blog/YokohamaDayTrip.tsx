@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const YokohamaDayTrip = () => {
   return (
@@ -15,10 +16,13 @@ const YokohamaDayTrip = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/yokohama-minatomirai-hero.jpg"
+          src="/images/blog/yokohama-minatomirai-hero.webp"
           alt="Yokohama Minato Mirai skyline at dusk with Landmark Tower and Cosmo World ferris wheel"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -223,7 +227,9 @@ const YokohamaDayTrip = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Yokohama Day Trip from Tokyo: What's Actually Worth the Journey",
         description: "Yokohama is 30 minutes from Tokyo. But is it worth a full day? A licensed guide gives an honest answer, and what to combine it with.",

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const TokyoItinerary5Days = () => {
   return (
@@ -15,10 +16,13 @@ const TokyoItinerary5Days = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/shibuya-scramble-crossing.jpg"
+          src="/images/tours/shibuya-scramble-crossing.webp"
           alt="Shibuya Scramble Crossing, iconic Tokyo landmark for your 5-day itinerary"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -199,7 +203,9 @@ const TokyoItinerary5Days = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["custom"]} showViewAll />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Tokyo Itinerary 5 Days: What I'd Actually Plan as a Licensed Guide",
         description: "Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients.",

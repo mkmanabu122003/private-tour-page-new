@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const YanakaWalkingRoute = () => {
   return (
@@ -15,10 +16,13 @@ const YanakaWalkingRoute = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/tours/asakusa-kaminarimon-morning.jpg"
+          src="/images/tours/asakusa-kaminarimon-morning.webp"
           alt="Quiet morning street scene in traditional Tokyo"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
+          width={1600}
+          height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </section>
@@ -260,7 +264,9 @@ const YanakaWalkingRoute = () => {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <RelatedTourCards tourIds={["yanaka"]} />
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
         headline: "Yanaka Tokyo: A Guide's 3-Hour Walking Route",
         description: "Yanaka survived the 1923 earthquake and WWII bombing. It's the closest thing to old Tokyo that still exists. Here's how to walk it properly.",

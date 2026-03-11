@@ -13,7 +13,7 @@ export const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2">
               <Link to="/es" className="inline-flex flex-col items-center gap-1">
-                <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-14 w-auto brightness-0 invert" />
+                <img src="/images/logo.webp" alt="Tanuki Tabi Travel" className="h-14 w-auto brightness-0 invert" loading="lazy" width={56} height={56} />
                 <span className="font-serif text-base font-semibold tracking-[0.15em] text-primary-foreground uppercase">Tanuki Tabi Travel</span>
               </Link>
               <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
@@ -122,7 +122,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex flex-col items-center gap-1">
-              <img src="/images/logo.png" alt="Tanuki Tabi Travel" className="h-14 w-auto brightness-0 invert" />
+              <img src="/images/logo.webp" alt="Tanuki Tabi Travel" className="h-14 w-auto brightness-0 invert" loading="lazy" width={56} height={56} />
               <span className="font-serif text-base font-semibold tracking-[0.15em] text-primary-foreground uppercase">Tanuki Tabi Travel</span>
             </Link>
             <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">

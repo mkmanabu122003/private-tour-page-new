@@ -27,6 +27,9 @@ export const TourCard = ({
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+          width={800}
+          height={600}
         />
         <div className="absolute top-4 left-4">
           <span className="text-label px-3 py-1.5 bg-background/90 backdrop-blur-sm rounded-full">
