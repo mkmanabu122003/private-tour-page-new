@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Award, Users, Shield, Star, MapPin, Heart, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { trackBookNowClick } from "@/lib/ga4";
 import { TourCard } from "@/components/tours/TourCard";
 import {
   Carousel,
@@ -191,7 +192,7 @@ const EsIndex = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/es/contact" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
+              <Link to="/es/contact" data-cta="book-now" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]" onClick={() => trackBookNowClick("Reserva Tu Tour Privado")}>
                 Reserva Tu Tour Privado
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -494,7 +495,9 @@ const EsIndex = () => {
           <div className="mt-8">
             <Link
               to="/es/contact"
+              data-cta="book-now"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-lg"
+              onClick={() => trackBookNowClick("Reservar Ahora")}
             >
               Reservar Ahora
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -514,7 +517,7 @@ const EsIndex = () => {
             Reserva tu tour privado o escríbenos para diseñar un itinerario a medida.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" className="btn-accent">
+            <Link to="/es/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Reservar Mi Tour")}>
               Reservar Mi Tour
             </Link>
             <Link to="/es/about" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">

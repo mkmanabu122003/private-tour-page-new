@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
+import { trackContactPageView, trackFormSubmit } from "@/lib/ga4";
 
 const Contact = () => {
   const { toast } = useToast();
+
+  useEffect(() => {
+    trackContactPageView();
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,6 +54,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        trackFormSubmit();
         toast({
           title: "Message sent!",
           description: "Thank you for your inquiry. I'll respond within 24 hours.",

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Award, Users, Shield, Star, MapPin, Heart, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { trackBookNowClick } from "@/lib/ga4";
 import { TourCard } from "@/components/tours/TourCard";
 import {
   Carousel,
@@ -193,7 +194,7 @@ const Index = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]">
+              <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]" onClick={() => trackBookNowClick("Book Your Private Tour")}>
                 Book Your Private Tour
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -488,7 +489,9 @@ const Index = () => {
           <div className="mt-8">
             <Link
               to="/contact"
+              data-cta="book-now"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-lg"
+              onClick={() => trackBookNowClick("Book Now")}
             >
               Book Now
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -509,7 +512,7 @@ const Index = () => {
             tour or reach out to discuss a custom itinerary.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-accent">
+            <Link to="/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Book Your Tour")}>
               Book Your Tour
             </Link>
             <Link to="/about" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">

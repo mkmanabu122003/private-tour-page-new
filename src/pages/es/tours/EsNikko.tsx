@@ -1,12 +1,16 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mountain, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import nikkoToshogu from "@/assets/nikko-toshogu.webp";
 
 const EsNikko = () => {
+  useEffect(() => { trackTourPageView("Excursión Privada a Nikko"); }, []);
+
   return (
     <Layout>
       <SEO
@@ -213,7 +217,7 @@ const EsNikko = () => {
                     </div>
                   </div>
                 </div>
-                <Link to="/es/contact" className="btn-accent w-full text-center">
+                <Link to="/es/contact" className="btn-accent w-full text-center" data-cta="book-now" onClick={() => trackBookNowClick("Reservar Esta Excursión")}>
                   Reservar Esta Excursión
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -232,6 +236,8 @@ const EsNikko = () => {
           <Link
             to="/es/contact"
             className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+            data-cta="book-now"
+            onClick={() => trackBookNowClick("Reservar Ahora")}
           >
             Reservar Ahora
           </Link>
@@ -248,7 +254,7 @@ const EsNikko = () => {
             Reserva tu excursión privada a Nikko con un guía japonés nativo que habla español.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" className="btn-accent">Reservar Mi Tour</Link>
+            <Link to="/es/contact" className="btn-accent" data-cta="book-now" onClick={() => trackBookNowClick("Reservar Mi Tour")}>Reservar Mi Tour</Link>
             <Link to="/es" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">Ver Todos los Tours</Link>
           </div>
         </div>

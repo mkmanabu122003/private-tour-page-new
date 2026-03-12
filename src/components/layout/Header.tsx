@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { trackBookNowClick } from "@/lib/ga4";
 
 const tokyoTours = [
   { name: "Asakusa", href: "/tours/asakusa" },
@@ -191,7 +192,7 @@ export const Header = () => {
                 <Globe className="w-4 h-4" />
                 EN
               </Link>
-              <Link to="/es/contact" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]">
+              <Link to="/es/contact" data-cta="book-now" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]" onClick={() => trackBookNowClick("Reservar Ahora")}>
                 Reservar Ahora
               </Link>
             </div>
@@ -325,8 +326,9 @@ export const Header = () => {
 
                 <Link
                   to="/es/contact"
+                  data-cta="book-now"
                   className="btn-accent text-center mt-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => { setMobileMenuOpen(false); trackBookNowClick("Reservar Ahora"); }}
                 >
                   Reservar Ahora
                 </Link>
@@ -484,7 +486,7 @@ export const Header = () => {
               <Globe className="w-4 h-4" />
               ES
             </Link>
-            <Link to="/contact" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]">
+            <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]" onClick={() => trackBookNowClick("Book Now")}>
               Book Now
             </Link>
           </div>
@@ -632,8 +634,9 @@ export const Header = () => {
 
               <Link
                 to="/contact"
+                data-cta="book-now"
                 className="btn-accent text-center mt-2"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => { setMobileMenuOpen(false); trackBookNowClick("Book Now"); }}
               >
                 Book Now
               </Link>
