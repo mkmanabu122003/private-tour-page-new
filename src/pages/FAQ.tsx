@@ -31,10 +31,6 @@ const faqCategories: FAQCategory[] = [
         answer: "We recommend booking at least 1-2 weeks in advance, especially during peak seasons (March-May for cherry blossoms, October-November for autumn). Last-minute bookings are sometimes possible, just ask!",
       },
       {
-        question: "What is your cancellation policy?",
-        answer: "Free cancellation up to 48 hours before the tour. Cancellations within 48 hours are charged in full. In case of severe weather warnings (typhoons etc.), you'll receive a full refund or reschedule option.",
-      },
-      {
         question: "Can I book for just 1 person?",
         answer: "Yes! Solo travelers are very welcome. Pricing may differ from group rates, so contact us for a quote.",
       },
