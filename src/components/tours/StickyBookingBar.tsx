@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { trackBookNowClick } from "@/lib/ga4";
 
 interface StickyBookingBarProps {
   tourName: string;
@@ -34,7 +35,9 @@ export const StickyBookingBar = ({ tourName, price }: StickyBookingBarProps) => 
         </div>
         <Link
           to="/contact"
+          data-cta="book-now"
           className="shrink-0 inline-flex items-center justify-center px-5 sm:px-7 py-2.5 sm:py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-sm sm:text-base"
+          onClick={() => trackBookNowClick("Book Now")}
         >
           Book Now
           <ArrowRight className="ml-2 w-4 h-4" />

@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
 const nightExperiences: {
   title: string;
@@ -51,6 +53,10 @@ const nightExperiences: {
 ];
 
 const TokyoNightTour = () => {
+  useEffect(() => {
+    trackTourPageView("Tokyo Night Tour");
+  }, []);
+
   return (
     <Layout>
       <SEO
@@ -320,7 +326,9 @@ const TokyoNightTour = () => {
           </p>
           <Link
             to="/contact"
+            data-cta="book-now"
             className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
+            onClick={() => trackBookNowClick("Book Now")}
           >
             Book Now
           </Link>

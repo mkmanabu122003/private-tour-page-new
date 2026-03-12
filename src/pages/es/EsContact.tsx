@@ -1,13 +1,19 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
+import { trackContactPageView, trackFormSubmit } from "@/lib/ga4";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
 const EsContact = () => {
   const { toast } = useToast();
+
+  useEffect(() => {
+    trackContactPageView();
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,6 +54,7 @@ const EsContact = () => {
       });
 
       if (response.ok) {
+        trackFormSubmit();
         toast({
           title: "¡Mensaje enviado!",
           description: "Gracias por tu consulta. Responderé en menos de 24 horas.",
