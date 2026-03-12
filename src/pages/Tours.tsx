@@ -224,7 +224,6 @@ const Tours = () => {
               </h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Book at least 48 hours ahead</li>
-                <li>• Free cancellation up to 24h</li>
                 <li>• Payment on the day</li>
                 <li>• Custom tours available</li>
               </ul>

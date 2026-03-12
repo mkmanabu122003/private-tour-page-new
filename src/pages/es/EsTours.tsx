@@ -242,7 +242,6 @@ const EsTours = () => {
               </h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Reserva con al menos 48 horas de antelación</li>
-                <li>• Cancelación gratuita hasta 24h antes</li>
                 <li>• Pago el día del tour</li>
                 <li>• Tours personalizados disponibles</li>
               </ul>

@@ -32,10 +32,6 @@ const faqCategories: FAQCategory[] = [
         answer: "Recomendamos reservar al menos 1-2 semanas antes, especialmente durante las temporadas altas (marzo-mayo para los cerezos en flor, octubre-noviembre para el otoño). Las reservas de último momento a veces son posibles. ¡Solo pregunta!",
       },
       {
-        question: "¿Cuál es la política de cancelación?",
-        answer: "Cancelación gratuita hasta 48 horas antes del tour. Las cancelaciones dentro de las 48 horas se cobran en su totalidad. En caso de alertas meteorológicas graves (tifones, etc.), recibirás un reembolso completo o la opción de reprogramar.",
-      },
-      {
         question: "¿Puedo reservar para una sola persona?",
         answer: "¡Sí! Los viajeros individuales son muy bienvenidos. El precio puede variar respecto a las tarifas de grupo, así que contáctanos para un presupuesto.",
       },
