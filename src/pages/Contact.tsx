@@ -324,10 +324,6 @@ const Contact = () => {
                       <Check className="w-4 h-4 text-highlight mt-0.5 shrink-0" />
                       Custom tours available
                     </li>
-                    <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <Check className="w-4 h-4 text-highlight mt-0.5 shrink-0" />
-                      Free cancellation up to 24h
-                    </li>
                   </ul>
                 </div>
               </div>
