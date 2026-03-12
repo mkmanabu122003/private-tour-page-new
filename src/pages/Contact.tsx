@@ -3,6 +3,7 @@ import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
+import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -107,7 +108,7 @@ const Contact = () => {
         <div className="container-section">
           <div className="flex items-center gap-4 max-w-2xl">
             <img
-              src="/images/tour-photos/group-photo.webp"
+              src={guidePortrait}
               alt="Manabu, your licensed Tokyo tour guide"
               className="w-14 h-14 rounded-full object-cover border-2 border-accent shrink-0"
             />
