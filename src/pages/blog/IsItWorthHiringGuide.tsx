@@ -224,6 +224,9 @@ const IsItWorthHiringGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               This means your guide has verified deep knowledge, not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A key skill the license tests is cultural translation — explaining Japanese concepts in ways that resonate with foreign visitors. For example, I often describe a torii gate as something like the holy water font at a church entrance: it marks where the sacred space begins, and passing through it is a transition from the everyday world to the spiritual one. This kind of bridge-building is what separates a licensed guide from someone who simply knows the facts.
+            </p>
 
             {/* How Much Does It Cost */}
             <h2 className="heading-section text-foreground mt-16 mb-6">
@@ -360,6 +363,9 @@ const IsItWorthHiringGuide = () => {
                 has passed rigorous examinations and is registered with the Japan Tourism Agency. This is the single most reliable quality indicator.
               </li>
               <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Verify their credentials.</strong> Every licensed guide is issued a registration card by their prefectural government, including their name, registration number, languages, and issuing prefecture. A legitimate guide will have no problem providing this. You can also search the Japan Guide Association (JGA) or Japan Federation of Certified Guides (JFCG) directories for member listings.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Read reviews carefully.</strong> Look for reviews that mention specific details: particular stories the guide told, how they handled unexpected situations, whether they adapted to the group's interests. Generic "great guide!" reviews tell you less than detailed accounts of the actual experience.
               </li>
               <li className="text-muted-foreground leading-relaxed">
@@ -371,22 +377,17 @@ const IsItWorthHiringGuide = () => {
             </ul>
 
             {/* CTA */}
-            <div className="bg-secondary/50 rounded-lg p-8 mt-12">
+            <section className="cta-section bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                Still on the fence? Browse my tours and see if any match what you're looking for.
+                Ready to Book Your Private Tokyo Tour?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm happy to help you decide if a guided tour is right for your trip. Tell me about your travel plans and I'll give you an honest recommendation, even if that recommendation is "you'll be fine on your own."
+                Experience Tokyo with a licensed, local guide who brings the city's history and culture to life. Our private tours start from ¥25,000 and are fully customized to your interests.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/tours" className="btn-accent">
-                  View All Tours
-                </Link>
-                <Link to="/contact" className="btn-outline">
-                  Contact Us
-                </Link>
-              </div>
-            </div>
+              <Link to="/contact" className="btn-accent">
+                Book Your Private Tour
+              </Link>
+            </section>
 
             {/* FAQ Section */}
             <div className="mt-16">

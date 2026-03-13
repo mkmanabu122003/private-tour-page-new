@@ -25,7 +25,7 @@ import AsakusaGuideNew from "./pages/blog/AsakusaGuideNew";
 import JapanRailPass from "./pages/blog/JapanRailPass";
 import KamakuraDayTrip from "./pages/blog/KamakuraDayTrip";
 import KawagoeDayTrip from "./pages/blog/KawagoeDayTrip";
-import LicensedTourGuideJapan from "./pages/blog/LicensedTourGuideJapan";
+
 import NikkoDayTrip from "./pages/blog/NikkoDayTrip";
 import OldTokyoShitamachi from "./pages/blog/OldTokyoShitamachi";
 import RamenGuideTokyo from "./pages/blog/RamenGuideTokyo";
@@ -65,7 +65,7 @@ import EsMejorEpocaVisitarTokio from "./pages/es/blog/EsMejorEpocaVisitarTokio";
 import EsEtiquetaTemplos from "./pages/es/blog/EsEtiquetaTemplos";
 import EsValeLaPenaGuia from "./pages/es/blog/EsValeLaPenaGuia";
 import EsComparativaExcursiones from "./pages/es/blog/EsComparativaExcursiones";
-import EsMonteFujiDesdeTokio from "./pages/es/blog/EsMonteFujiDesdeTokio";
+
 import EsPropinasenJapon from "./pages/es/blog/EsPropinasenJapon";
 import EsQueSecomeEnJapon from "./pages/es/blog/EsQueSecomeEnJapon";
 import EsMercadoTsukijiTokio from "./pages/es/blog/EsMercadoTsukijiTokio";
@@ -115,7 +115,7 @@ const AppRoutes = () => (
         <Route path="/blog/japan-rail-pass-worth-it" element={<JapanRailPass />} />
         <Route path="/blog/kamakura-day-trip-from-tokyo" element={<KamakuraDayTrip />} />
         <Route path="/blog/kawagoe-day-trip-from-tokyo" element={<KawagoeDayTrip />} />
-        <Route path="/blog/licensed-tour-guide-japan" element={<LicensedTourGuideJapan />} />
+
         <Route path="/blog/nikko-day-trip-from-tokyo" element={<NikkoDayTrip />} />
         <Route path="/blog/old-tokyo-shitamachi" element={<OldTokyoShitamachi />} />
         <Route path="/blog/ramen-guide-tokyo" element={<RamenGuideTokyo />} />
@@ -156,7 +156,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/etiqueta-templos-santuarios" element={<EsEtiquetaTemplos />} />
         <Route path="/es/blog/vale-la-pena-contratar-guia" element={<EsValeLaPenaGuia />} />
         <Route path="/es/blog/comparativa-excursiones" element={<EsComparativaExcursiones />} />
-        <Route path="/es/blog/monte-fuji-desde-tokio" element={<EsMonteFujiDesdeTokio />} />
+
         <Route path="/es/blog/propinas-en-japon" element={<EsPropinasenJapon />} />
         <Route path="/es/blog/que-se-come-en-japon" element={<EsQueSecomeEnJapon />} />
         <Route path="/es/blog/mercado-tsukiji-tokio" element={<EsMercadoTsukijiTokio />} />

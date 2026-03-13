@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTAEs } from "@/components/blog/ArticleFooterCTAEs";
 
 const EsMonteFujiSeVeDesdeTokio = () => {
   return (
@@ -66,11 +67,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Si lo que quieres es ir al Monte Fuji, lee mi{" "}
-              <Link to="/es/blog/monte-fuji-desde-tokio" className="text-accent hover:underline">
-                guía completa para visitarlo
-              </Link>
-              . Este artículo es para quienes quieren verlo sin salir de Tokio.
+              Este artículo cubre todo sobre ver el Monte Fuji desde Tokio: los mejores miradores, las horas ideales y la época del año. Si también quieres visitarlo en persona, más abajo encontrarás cómo llegar en tren o autobús.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Es una de las preguntas que más me hacen como guía: "¿Se ve el Monte Fuji desde Tokio?" La respuesta corta es sí, absolutamente. La respuesta larga es: depende del día, de la hora y de dónde te coloques. Llevo años guiando viajeros por Tokio, y una de las mayores satisfacciones de mi trabajo es ese momento en que un visitante ve el Fuji por primera vez desde un mirador inesperado y se queda sin palabras. No importa cuántas fotos hayas visto: cuando se ve el Monte Fuji desde Tokio con tus propios ojos, es otra cosa.
@@ -204,6 +201,35 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               Esto es algo que les digo a mis invitados de habla hispana y que siempre conecta: para nosotros, el Fuji es lo que el mar es para los españoles. Es esa presencia constante que te orienta, que te recuerda dónde estás y que te da cierta paz cuando la ves. Cuando un tokiota se levanta por la mañana y ve el Fuji desde su ventana, siente que el día empieza bien. Cuando un español mira al horizonte y ve el Mediterráneo azul, siente lo mismo. Es un paisaje que forma parte de la identidad, no solo de la geografía. Tal vez por eso la pregunta "¿se ve el Monte Fuji desde Tokio?" tiene tanta carga emocional. No es solo una cuestión de visibilidad meteorológica, es una cuestión de conexión con un lugar.
             </p>
 
+            {/* ¿Quieres verlo más de cerca? */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              ¿Quieres Verlo Más de Cerca? Cómo Ir al Monte Fuji desde Tokio
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si ver el Fuji desde Tokio te deja con ganas de más, puedes visitarlo en persona en una excursión de un día. La zona de los Cinco Lagos (Kawaguchiko) está a menos de 2 horas de Shinjuku.
+            </p>
+
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              En tren (la opción más práctica)
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Desde Shinjuku, el <strong className="text-foreground">tren expreso Fuji Excursion</strong> te lleva directamente a Kawaguchiko en 1 hora y 50 minutos (4.130 yenes por trayecto). Tiene reserva obligatoria y se agota rápido. Si tienes el Japan Rail Pass, puedes cubrir parte del trayecto hasta Otsuki y pagar solo el tramo final (1.170 yenes).
+            </p>
+
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              En autobús (la más económica)
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Los autobuses salen de Shinjuku Busta y llegan a Kawaguchiko en unas 2 horas por unos 2.200 yenes. La mitad del precio del tren, aunque el tráfico puede alargar el viaje en fines de semana.
+            </p>
+
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              ¿Subir o solo verlo?
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              El Monte Fuji solo se puede escalar entre julio y septiembre. Desde 2024, existe un sistema de reservas obligatorio y una tasa de 2.000 yenes. La subida desde la Quinta Estación toma 5-7 horas. Pero fuera de temporada de escalada, las vistas son incluso mejores: la montaña nevada, sin multitudes, con la posibilidad de combinar miradores, onsen (aguas termales) con vista al Fuji y pueblos tradicionales como Oshino Hakkai. Para la mayoría de mis clientes, ver el Fuji de cerca sin subirlo es una experiencia igual de memorable.
+            </p>
+
             {/* Preguntas frecuentes */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Preguntas Frecuentes
@@ -242,11 +268,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                   ¿Cuántos kilómetros hay entre Tokio y el Monte Fuji?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Aproximadamente 100 kilómetros en línea recta desde el centro de Tokio hasta la cima del Monte Fuji. En coche o autobús, el trayecto es de unos 130 kilómetros y tarda entre hora y media y dos horas. Si quieres visitarlo en persona, lee mi{" "}
-                  <Link to="/es/blog/monte-fuji-desde-tokio" className="text-accent hover:underline">
-                    guía completa para ir al Monte Fuji desde Tokio
-                  </Link>
-                  .
+                  Aproximadamente 100 kilómetros en línea recta desde el centro de Tokio hasta la cima del Monte Fuji. En coche o autobús, el trayecto es de unos 130 kilómetros y tarda entre hora y media y dos horas. Consulta la sección "Cómo ir al Monte Fuji desde Tokio" más arriba para opciones de transporte y precios.
                 </p>
               </div>
 
@@ -281,6 +303,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                 </Link>
               </div>
             </div>
+            <ArticleFooterCTAEs />
           </article>
         </div>
       </section>

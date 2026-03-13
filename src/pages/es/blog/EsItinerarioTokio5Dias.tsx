@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTAEs } from "@/components/blog/ArticleFooterCTAEs";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsItinerarioTokio5Dias = () => {
@@ -224,7 +225,7 @@ const EsItinerarioTokio5Dias = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si quieres ver el Monte Fuji y relajarte en aguas termales, Hakone es tu excursión. El <strong className="text-foreground">Hakone Free Pass</strong> (unos 6.100 yenes) incluye el tren desde Shinjuku y todos los transportes dentro de Hakone: teleférico, barco pirata por el lago Ashi y autobús. En un día claro, las vistas del Fuji desde Owakudani son espectaculares. Para una guía detallada de esta excursión, lee mi artículo sobre{" "}
-              <Link to="/es/blog/monte-fuji-desde-tokio" className="text-accent hover:underline">
+              <Link to="/es/blog/monte-fuji-se-ve-desde-tokio" className="text-accent hover:underline">
                 cómo ver el Monte Fuji desde Tokio
               </Link>.
             </p>
@@ -339,6 +340,7 @@ const EsItinerarioTokio5Dias = () => {
                 </Link>
               </div>
             </div>
+            <ArticleFooterCTAEs />
           </article>
         </div>
       </section>

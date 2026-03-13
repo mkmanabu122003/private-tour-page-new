@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTAEs } from "@/components/blog/ArticleFooterCTAEs";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsItinerarioTokio3Dias = () => {
@@ -350,6 +351,7 @@ const EsItinerarioTokio3Dias = () => {
                 </Link>
               </div>
             </div>
+            <ArticleFooterCTAEs />
           </article>
         </div>
       </section>

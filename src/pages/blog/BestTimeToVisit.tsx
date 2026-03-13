@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTA } from "@/components/blog/ArticleFooterCTA";
 
 const BestTimeToVisit = () => {
   return (
@@ -236,6 +237,7 @@ const BestTimeToVisit = () => {
                 </div>
               </div>
             </div>
+            <ArticleFooterCTA />
           </article>
         </div>
       </section>
