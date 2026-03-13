@@ -1,0 +1,47 @@
+name: Setup SEO Pipeline Labels
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create pipeline labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [
+              { name: 'seo-auto-action', color: 'D85A30', description: 'SEO pipeline auto-action trigger' },
+              { name: 'pr-created', color: '1D9E75', description: 'PR has been created for this issue' },
+              { name: 'auto-failed', color: 'E24B4A', description: 'Auto-implementation failed' },
+              { name: 'content', color: '534AB7', description: 'Content-related action' },
+              { name: 'technical', color: '378ADD', description: 'Technical SEO action' },
+              { name: 'seo', color: 'BA7517', description: 'SEO optimization action' }
+            ];
+
+            for (const label of labels) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ...label
+                });
+                console.log(`Created: ${label.name}`);
+              } catch (e) {
+                if (e.status === 422) {
+                  // Label already exists, update it
+                  await github.rest.issues.updateLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    ...label
+                  });
+                  console.log(`Updated: ${label.name}`);
+                } else {
+                  throw e;
+                }
+              }
+            }
+            console.log('All labels ready!');
