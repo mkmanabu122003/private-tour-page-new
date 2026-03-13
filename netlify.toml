@@ -92,6 +92,13 @@
   status = 301
   force = true
 
+# Spanish blog article consolidation: monte fuji duplicate → canonical
+[[redirects]]
+  from = "/es/blog/monte-fuji-desde-tokio"
+  to = "/es/blog/monte-fuji-se-ve-desde-tokio"
+  status = 301
+  force = true
+
 # Remove trailing slashes: /path/ → /path (301 redirect)
 [[redirects]]
   from = "/:splat/"

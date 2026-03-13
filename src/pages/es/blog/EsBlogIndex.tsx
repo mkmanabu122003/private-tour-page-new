@@ -128,16 +128,6 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
-    slug: "monte-fuji-desde-tokio",
-    title: "Monte Fuji desde Tokio: Guía Completa 2026 para Verlo o Subir",
-    description:
-      "¿Cómo ir al Monte Fuji desde Tokio? Un guía con licencia oficial explica las mejores opciones para verlo o subirlo, temporadas, precios y errores que evitar.",
-    date: "7 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías de Excursiones",
-    image: "/images/tours/hakone-ropeway-owakudani.webp",
-  },
-  {
     slug: "monte-fuji-se-ve-desde-tokio",
     title: "¿Se Ve el Monte Fuji desde Tokio? Cuándo, Desde Dónde y Cómo",
     description:

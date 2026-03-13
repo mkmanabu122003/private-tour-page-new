@@ -225,7 +225,7 @@ const EsItinerarioTokio5Dias = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si quieres ver el Monte Fuji y relajarte en aguas termales, Hakone es tu excursión. El <strong className="text-foreground">Hakone Free Pass</strong> (unos 6.100 yenes) incluye el tren desde Shinjuku y todos los transportes dentro de Hakone: teleférico, barco pirata por el lago Ashi y autobús. En un día claro, las vistas del Fuji desde Owakudani son espectaculares. Para una guía detallada de esta excursión, lee mi artículo sobre{" "}
-              <Link to="/es/blog/monte-fuji-desde-tokio" className="text-accent hover:underline">
+              <Link to="/es/blog/monte-fuji-se-ve-desde-tokio" className="text-accent hover:underline">
                 cómo ver el Monte Fuji desde Tokio
               </Link>.
             </p>
