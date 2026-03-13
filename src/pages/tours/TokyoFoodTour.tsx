@@ -435,6 +435,33 @@ const TokyoFoodTour = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="container-section">
+          <h2 className="heading-section text-foreground text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-2">What dietary restrictions can you accommodate?</h3>
+              <p className="text-muted-foreground leading-relaxed">We accommodate vegetarian, vegan, pescatarian, halal, gluten-free, and most common allergies. Let us know your needs when booking and we'll plan every stop around your requirements. Your guide carries allergy cards in Japanese for restaurant communication.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-2">How many people can join the tour?</h3>
+              <p className="text-muted-foreground leading-relaxed">Our private food tours accommodate 1-6 people per group. Smaller groups (2-4) work best for intimate restaurant experiences, as many of the hidden spots we visit have limited seating.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-2">What areas do you visit on the food tour?</h3>
+              <p className="text-muted-foreground leading-relaxed">Routes vary based on your preferences, but popular areas include Tsukiji Outer Market, Ginza's depachika (department store food halls), Asakusa's traditional street food, and hidden ramen alleys in Shinjuku. We customize every tour — tell us what you love to eat.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-2">How much should I budget for food during the tour?</h3>
+              <p className="text-muted-foreground leading-relaxed">Expect to spend ¥3,000-5,000 per person on food and drinks. This covers multiple tastings and a sit-down meal. Food costs are not included in the tour price so you can choose exactly what appeals to you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -614,6 +641,51 @@ const TokyoFoodTour = () => {
               "addressLocality": "Tokyo",
               "addressCountry": "JP",
             },
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What dietary restrictions can you accommodate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We accommodate vegetarian, vegan, pescatarian, halal, gluten-free, and most common allergies. Your guide carries allergy cards in Japanese for restaurant communication.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "How many people can join the tour?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our private food tours accommodate 1-6 people per group. Smaller groups (2-4) work best for intimate restaurant experiences.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "What areas do you visit on the food tour?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Routes vary based on preferences. Popular areas include Tsukiji Outer Market, Ginza's depachika, Asakusa's traditional street food, and hidden ramen alleys in Shinjuku.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "How much should I budget for food during the tour?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Expect to spend ¥3,000-5,000 per person on food and drinks. This covers multiple tastings and a sit-down meal. Food costs are not included in the tour price.",
+                },
+              },
+            ],
           }),
         }}
       />

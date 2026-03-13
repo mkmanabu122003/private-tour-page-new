@@ -527,7 +527,7 @@ const tourData = {
       difficulty: "Moderate. Some uphill walking and stairs at Toshogu",
       goodFor: "History buffs, nature lovers, UNESCO heritage enthusiasts, photographers",
     },
-    whyGuide: "Toshogu Shrine has over 5,000 intricate carvings. Without a guide, you'll walk past 90% of them without understanding their meaning. The shrine complex is a masterpiece of Tokugawa-era craftsmanship, and a knowledgeable guide transforms the visit from \"pretty buildings\" into a deep dive into Japanese political and spiritual history. The guide also handles the complex transport logistics between Nikko town and the mountain lake area.",
+    whyGuide: "Toshogu Shrine has over 5,000 intricate carvings. Without a guide, you'll walk past 90% of them without understanding their meaning. The shrine complex is a masterpiece of Tokugawa-era craftsmanship, and a knowledgeable guide transforms the visit from \"pretty buildings\" into a deep dive into Japanese political and spiritual history. The guide also handles the complex transport logistics between Nikko town and the mountain lake area. Note: Nikko is partially accessible with the JR Pass — see our JR Pass guide for details.",
     suitableFor: [
       "History buffs and culture enthusiasts",
       "Nature lovers and photographers",
@@ -572,6 +572,12 @@ const tourFAQs: Record<string, { question: string; answer: string }[]> = {
     { question: "Will we see the Shibuya Crossing from above?", answer: "Yes! Your guide will take you to the best observation points for watching and photographing the famous scramble crossing from above." },
     { question: "Is this tour suitable for teenagers?", answer: "Absolutely — this is one of our most popular tours for families with teens. Harajuku's fashion scene, crepe shops, and pop culture make it a highlight." },
     { question: "Do we visit Meiji Shrine on this tour?", answer: "Yes. Meiji Shrine is a peaceful contrast to busy Harajuku and a highlight of the tour. We walk through the forested approach and explain the Shinto rituals." },
+  ],
+  yanaka: [
+    { question: "What makes Yanaka different from other Tokyo neighborhoods?", answer: "Yanaka is one of the few areas that survived the WWII bombings and post-war redevelopment. It retains its pre-war atmosphere with narrow lanes, traditional wooden houses, over 70 Buddhist temples, and a genuine local community. It feels like stepping back to 1950s Tokyo." },
+    { question: "Is the Yanaka tour suitable for elderly travelers?", answer: "Yes. The route is mostly flat with gentle slopes. We walk at a relaxed pace through quiet residential streets. There are plenty of rest stops at temples, cafes, and parks along the way." },
+    { question: "What is Yanaka Ginza shopping street?", answer: "Yanaka Ginza is a charming 170-meter shopping street with about 60 small shops — traditional snack sellers, craft shops, and local eateries. It's a living local shopping street, not a tourist attraction, which is exactly what makes it special." },
+    { question: "Can we combine Yanaka with Ueno on the same tour?", answer: "Yes! Our Yanaka tour includes parts of Ueno. The two areas are adjacent, and combining them gives you the contrast between Tokyo's cultural museum district and its most nostalgic residential neighborhood." },
   ],
   custom: [
     { question: "How do I tell you what I want to see?", answer: "After booking, we'll exchange messages about your interests, pace, food preferences, and any specific places you want to visit. Your guide then designs a custom itinerary." },
