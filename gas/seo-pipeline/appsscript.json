@@ -1,0 +1,19 @@
+{
+  "timeZone": "Asia/Tokyo",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "SearchConsole",
+        "version": "v1",
+        "serviceId": "searchconsole"
+      },
+      {
+        "userSymbol": "AnalyticsData",
+        "version": "v1beta",
+        "serviceId": "analyticsdata"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}
