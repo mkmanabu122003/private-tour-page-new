@@ -245,6 +245,77 @@ const EsKamakura = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué tan lejos está Kamakura de Tokio?</h3>
+                <p className="text-muted-foreground leading-relaxed">Kamakura está a aproximadamente 1 hora de Tokio en tren. Normalmente tomamos la línea JR Yokosuka desde la estación de Tokio directamente hasta la estación de Kamakura.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede personalizar el itinerario de Kamakura?</h3>
+                <p className="text-muted-foreground leading-relaxed">Por supuesto. Kamakura tiene más de 65 templos y santuarios. Tu guía adaptará la ruta a tus intereses, ya sea historia, rutas de senderismo, jardines zen o vistas al mar.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Vale la pena visitar Kamakura con niños?</h3>
+                <p className="text-muted-foreground leading-relaxed">¡Sí! A los niños les encanta el Gran Buda (se puede entrar dentro de la estatua), la playa y la comida callejera en Komachi-dori. El recorrido es mayormente plano y accesible.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué ropa debo llevar a Kamakura?</h3>
+                <p className="text-muted-foreground leading-relaxed">Es imprescindible llevar calzado cómodo para caminar. Algunos recintos de templos tienen caminos de grava y escaleras. Viste con modestia para las visitas a templos (hombros y rodillas cubiertos). En verano, lleva sombrero y protector solar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Qué tan lejos está Kamakura de Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kamakura está a aproximadamente 1 hora de Tokio en tren. Normalmente tomamos la línea JR Yokosuka desde la estación de Tokio directamente hasta la estación de Kamakura."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Se puede personalizar el itinerario de Kamakura?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Por supuesto. Kamakura tiene más de 65 templos y santuarios. Tu guía adaptará la ruta a tus intereses, ya sea historia, rutas de senderismo, jardines zen o vistas al mar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Vale la pena visitar Kamakura con niños?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "¡Sí! A los niños les encanta el Gran Buda (se puede entrar dentro de la estatua), la playa y la comida callejera en Komachi-dori. El recorrido es mayormente plano y accesible."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué ropa debo llevar a Kamakura?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Es imprescindible llevar calzado cómodo para caminar. Algunos recintos de templos tienen caminos de grava y escaleras. Viste con modestia para las visitas a templos (hombros y rodillas cubiertos). En verano, lleva sombrero y protector solar."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">

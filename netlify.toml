@@ -85,6 +85,13 @@
   status = 301
   force = true
 
+# Spanish blog article consolidation: licensed guide article → hiring guide article
+[[redirects]]
+  from = "/es/blog/guia-licencia-oficial-japon"
+  to = "/es/blog/vale-la-pena-contratar-guia"
+  status = 301
+  force = true
+
 # Remove trailing slashes: /path/ → /path (301 redirect)
 [[redirects]]
   from = "/:splat/"

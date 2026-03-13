@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsItinerarioTokio5Dias = () => {
   return (
@@ -171,6 +172,8 @@ const EsItinerarioTokio5Dias = () => {
                 En Golden Gai, muchos bares cobran un "charge" de entrada (500 a 1.500 yenes) además de las bebidas. Es completamente normal y no es una estafa: cubre el espacio y los aperitivos que te ponen. Pregunta siempre antes de sentarte para evitar sorpresas.
               </p>
             </div>
+
+            <InlineCTAEs />
 
             {/* Día 3 */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

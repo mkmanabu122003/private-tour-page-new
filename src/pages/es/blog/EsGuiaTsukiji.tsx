@@ -4,13 +4,14 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsGuiaTsukiji = () => {
   return (
     <Layout>
       <SEO
-        title="Guía de Tsukiji para Amantes de la Gastronomía | Tokio"
-        description="Guía del mercado exterior de Tsukiji escrita por un guía local. Qué comer, cuándo ir y cómo aprovechar al máximo tu visita al barrio gastronómico de Tokio."
+        title="Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)"
+        description="Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia."
         canonicalPath="/es/blog/guia-tsukiji"
         hreflang={[
           { lang: "en", path: "/blog/tsukiji-guide-food-lover" },
@@ -32,7 +33,7 @@ const EsGuiaTsukiji = () => {
             </Link>
             <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
             <h1 className="heading-display text-foreground">
-              Guía del Mercado de Tsukiji: Un Recorrido para Amantes de la Gastronomía
+              Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -64,12 +65,24 @@ const EsGuiaTsukiji = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            {/* Featured Snippet / Summary Box */}
+            <div className="bg-accent/5 border border-accent/20 rounded-lg p-6 mb-10">
+              <p className="text-foreground font-medium mb-2">Resumen rápido — Mercado Exterior de Tsukiji en 2026</p>
+              <ul className="text-muted-foreground text-sm space-y-1 list-disc list-inside">
+                <li><strong className="text-foreground">Estado:</strong> Abierto — más de 460 puestos y restaurantes en funcionamiento</li>
+                <li><strong className="text-foreground">Horario:</strong> Aprox. 9:00–14:00 (la mayoría de puestos cierran entre 13:00 y 14:00)</li>
+                <li><strong className="text-foreground">Cerrado:</strong> Domingos y algunos miércoles (sigue el calendario del mercado mayorista)</li>
+                <li><strong className="text-foreground">Mejores días:</strong> Martes, jueves y viernes por la mañana</li>
+                <li><strong className="text-foreground">Acceso:</strong> Estación Tsukiji (Línea Hibiya) — 1 minuto a pie</li>
+              </ul>
+            </div>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Si amas la comida, y me refiero a amarla de verdad, no solo comer sino entender de dónde viene y cómo se prepara, entonces el Mercado Exterior de Tsukiji merece un lugar destacado en tu itinerario por Tokio. Sí, el famoso mercado mayorista interior se trasladó a Toyosu en 2018, y sí, todavía oirás a gente decir "Tsukiji está cerrado". Se equivocan. El mercado exterior está vivo, próspero y posiblemente mejor para los visitantes de lo que jamás fue el antiguo piso mayorista.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Como guía con licencia que camina por Tsukiji varias veces a la semana, he visto cómo el mercado ha evolucionado a lo largo de los años. Algunos de los antiguos vendedores mayoristas se han ido, pero las aproximadamente 400 tiendas y restaurantes que conforman el mercado exterior solo han mejorado en su servicio a los amantes de la gastronomía. Los puestos son más accesibles, la variedad es extraordinaria, y la calidad de lo que puedes comer aquí, a menudo preparado justo frente a ti, rivaliza o supera a muchos restaurantes con asiento de la ciudad.
+              Como guía con licencia que camina por Tsukiji varias veces a la semana, he visto cómo el mercado ha evolucionado a lo largo de los años. Algunos de los antiguos vendedores mayoristas se han ido, pero las aproximadamente 460 tiendas y restaurantes que conforman el mercado exterior solo han mejorado en su servicio a los amantes de la gastronomía. Los puestos son más accesibles, la variedad es extraordinaria, y la calidad de lo que puedes comer aquí, a menudo preparado justo frente a ti, rivaliza o supera a muchos restaurantes con asiento de la ciudad.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Esta guía es todo lo que les cuento a mis invitados del tour antes de recorrer el mercado juntos. Cubriré qué comer, qué saltarse, cuándo ir y cómo combinar Tsukiji con un paseo por la cercana Ginza para un día gastronómico perfecto en Tokio.
@@ -178,6 +191,8 @@ const EsGuiaTsukiji = () => {
               No todo en Tsukiji merece tu espacio estomacal. <strong className="text-foreground">Ten cuidado con los restaurantes de sushi con captadores agresivos afuera</strong> intentando atraerte. Los mejores lugares de sushi en Tsukiji no necesitan reclutar clientes desde la calle. También evita las bandejas de sushi preenvasadas envueltas en plástico que algunas tiendas venden cerca de los bordes exteriores del mercado. Estas se hacen con antelación y pueden estar ahí durante horas. En un mercado donde la frescura es todo el punto, comer sushi que se preparó a las 6 AM y permanece hasta el mediodía anula completamente el propósito. Finalmente, evita los boles de marisco "de lujo" sobreprecios (kaisen-don) que cuestan de 4.000 a 5.000 yenes en las entradas más turísticas; puedes obtener una calidad igual o mejor más adentro del mercado por la mitad del precio.
             </p>
 
+            <InlineCTAEs href="/es/tours/tsukiji-ginza" />
+
             {/* Cuándo Ir */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Cuándo Ir
@@ -186,7 +201,7 @@ const EsGuiaTsukiji = () => {
               El horario importa enormemente en Tsukiji. El mercado exterior es un mercado en funcionamiento, no un parque temático, y sus ritmos reflejan la industria pesquera que lo creó. <strong className="text-foreground">El mejor momento para visitar es entre semana por la mañana, entre las 9:00 y las 11:00 AM.</strong> A esa hora, todos los puestos están abiertos y completamente abastecidos, las parrillas están calientes, el pescado está en su máxima frescura, y las multitudes aún no han alcanzado su pico del mediodía. Tendrás espacio para curiosear, hacer preguntas y comer sin sentirte apresurado.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Evita los fines de semana si es posible.</strong> Los sábados por la mañana traen tanto turistas como compradores locales, y los estrechos callejones se congestionan genuinamente. Sigue siendo una experiencia que vale la pena, pero pasarás más tiempo navegando entre multitudes que disfrutando de la comida. El domingo es un problema diferente: <strong className="text-foreground">la mayoría de los puestos están cerrados los domingos</strong>, así que una visita en domingo será decepcionante. <strong className="text-foreground">Los miércoles son también un día habitual de cierre</strong>, con muchos puestos y restaurantes cerrados. Los mejores días son martes, jueves y viernes.
+              <strong className="text-foreground">Evita los fines de semana si es posible.</strong> Los sábados por la mañana traen tanto turistas como compradores locales, y los estrechos callejones se congestionan genuinamente. Sigue siendo una experiencia que vale la pena, pero pasarás más tiempo navegando entre multitudes que disfrutando de la comida. El domingo es un problema diferente: <strong className="text-foreground">la mayoría de los puestos están cerrados los domingos</strong>, así que una visita en domingo será decepcionante. <strong className="text-foreground">Algunos miércoles también son día de cierre</strong> (el mercado exterior sigue el calendario del mercado mayorista de Toyosu, no todos los miércoles). Consulta el <a href="https://www.tsukiji.or.jp/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">calendario oficial</a> antes de tu visita. Los mejores días son martes, jueves y viernes.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Muchos puestos comienzan a cerrar entre la 1:00 y las 2:00 PM, y a las 3:00 PM el mercado está prácticamente cerrado. Si llegas después del mediodía, encontrarás una selección reducida y algunos de los mejores productos ya agotados. Planifica tu visita como una actividad matutina, llega con hambre, y date al menos 90 minutos a dos horas para un recorrido completo.
@@ -259,7 +274,7 @@ const EsGuiaTsukiji = () => {
         </div>
       </section>
 
-      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
+      <RelatedTourCards tourIds={["tsukiji-ginza","custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script
@@ -268,8 +283,8 @@ const EsGuiaTsukiji = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Guía del Mercado de Tsukiji: Un Recorrido para Amantes de la Gastronomía",
-            "description": "Guía del mercado exterior de Tsukiji escrita por un guía local. Qué comer, cuándo ir y cómo aprovechar al máximo tu visita al barrio gastronómico de Tokio.",
+            "headline": "Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)",
+            "description": "Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

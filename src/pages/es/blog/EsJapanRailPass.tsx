@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsJapanRailPass = () => {
   return (
@@ -255,6 +256,8 @@ const EsJapanRailPass = () => {
               Con este itinerario base los números ya igualan prácticamente el precio del pase. Si añades cualquier trayecto extra (una excursión a Nara, un tren local JR en Tokio, el ferry a Miyajima), el pase sale claramente rentable. Y si viajas Tokio-Kioto-Kanazawa-Tokio, con los 35.750 yenes de ida ya estás al 71% del coste del pase, y cualquier uso adicional te pone en positivo. La clave está en contar todos los trenes JR que usarás, incluidos los locales y regionales.
             </p>
 
+            <InlineCTAEs />
+
             {/* Para quién NO vale la pena */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Para quién NO vale la pena
@@ -267,6 +270,10 @@ const EsJapanRailPass = () => {
               Si tu viaje se centra en Tokio, el japan rail pass vale la pena cero. Lo digo sin rodeos. En Tokio te moverás principalmente en metro (líneas Tokyo Metro y Toei), que no están cubiertas por el JR Pass. Sí, hay algunas líneas JR dentro de Tokio (como la famosa línea Yamanote), pero un día de uso intensivo en la Yamanote te costará como mucho 500-800 yenes. Para eso, una tarjeta Suica o Pasmo es infinitamente más práctica. Si buscas ideas para tu estancia en la capital, echa un vistazo a nuestro{" "}
               <Link to="/es/blog/itinerario-tokio-5-dias" className="text-accent hover:underline">
                 itinerario de 5 días en Tokio
+              </Link>{" "}
+              o a nuestro{" "}
+              <Link to="/es/tours/tsukiji-ginza" className="text-accent hover:underline">
+                tour gastronómico por Tsukiji y Ginza
               </Link>.
             </p>
 
@@ -274,7 +281,7 @@ const EsJapanRailPass = () => {
               Si tu itinerario es Tokio + una excursión
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 1.900 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu. Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 6.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
+              Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 1.900 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu (consulta nuestra <Link to="/es/blog/excursion-nikko-desde-tokio" className="text-accent hover:underline">guía de excursión a Nikko</Link> para más detalles). Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 6.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -337,7 +344,7 @@ const EsJapanRailPass = () => {
                   ¿Dónde se compra el Japan Rail Pass?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Puedes comprarlo online a través de la web oficial de JR o de agencias autorizadas, y recogerlo en las oficinas de canje de las principales estaciones al llegar a Japón (Narita, Haneda, Tokio, Kioto, Osaka, etc.). También se puede comprar directamente en Japón en las oficinas JR de las estaciones principales, aunque el precio es el mismo. Recomiendo comprarlo online antes de viajar para evitar colas.
+                  Desde octubre de 2023, el Japan Rail Pass <strong className="text-foreground">solo se puede comprar online</strong> a través de la web oficial de JR o de agencias autorizadas. Ya no se vende en las estaciones dentro de Japón. Después de comprarlo online, lo canjeas por el pase físico en las oficinas JR de las principales estaciones al llegar (Narita, Haneda, Tokio, Kioto, Osaka, etc.). Recomiendo comprarlo al menos una semana antes del viaje.
                 </p>
               </div>
 
@@ -355,7 +362,7 @@ const EsJapanRailPass = () => {
                   ¿Incluye el shinkansen Nozomi?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  No, y este es un punto importante. El Nozomi (el shinkansen más rápido en la línea Tokaido-Sanyo) y el Mizuho NO están incluidos. Debes usar el Hikari o el Sakura, que hacen más paradas y tardan unos 15-20 minutos más en los trayectos largos. En la práctica, la diferencia es menor de lo que parece, pero conviene saberlo para planificar los horarios.
+                  El Nozomi (el shinkansen más rápido en la línea Tokaido-Sanyo) y el Mizuho no están incluidos en el pase estándar. Debes usar el Hikari o el Sakura, que hacen más paradas y tardan unos 15-20 minutos más. Sin embargo, desde 2024 existe un <strong className="text-foreground">billete suplementario para Nozomi/Mizuho</strong> que permite a los titulares del JR Pass subir a estos trenes pagando un suplemento (por ejemplo, ¥4,960 para el trayecto Tokio–Kioto). Útil si necesitas mayor flexibilidad de horarios, ya que los Nozomi salen con mucha más frecuencia que los Hikari.
                 </p>
               </div>
 
@@ -390,6 +397,25 @@ const EsJapanRailPass = () => {
               si quieres explorar Japón con un guía local que se encargue de toda la planificación.
             </p>
 
+            {/* Explorar Tokio con guía */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Explora Tokio con un Guía Local
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si tu viaje se centra en Tokio (donde el JR Pass no merece la pena), aprovecha al máximo tu tiempo con un guía local. Estos son algunos de nuestros tours más populares:
+            </p>
+            <ul className="text-muted-foreground leading-relaxed mb-8 list-disc list-inside space-y-2">
+              <li>
+                <Link to="/es/tours/tsukiji-ginza" className="text-accent hover:underline">Tour gastronómico por Tsukiji y Ginza</Link> — el mercado de pescado más famoso del mundo + el barrio más elegante de Tokio
+              </li>
+              <li>
+                <Link to="/es/tours/asakusa" className="text-accent hover:underline">Tour por Asakusa y el Tokio Tradicional</Link> — templos, santuarios y la cultura del viejo Tokio
+              </li>
+              <li>
+                <Link to="/es/tours/nikko" className="text-accent hover:underline">Excursión de un día a Nikko</Link> — el santuario más espectacular de Japón, a 2 horas de Tokio
+              </li>
+            </ul>
+
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
                 ¿Necesitas ayuda para planificar tu transporte en Japón?
@@ -410,7 +436,7 @@ const EsJapanRailPass = () => {
         </div>
       </section>
 
-      <RelatedTourCards tourIds={["custom","asakusa"]} lang="es" />
+      <RelatedTourCards tourIds={["nikko","tsukiji-ginza","custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

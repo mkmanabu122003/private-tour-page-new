@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsEtiquetaTemplos = () => {
   return (
@@ -211,6 +212,8 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Los <strong className="text-foreground">ema</strong> son pequeñas tablillas de madera donde escribes un deseo o una oración. Compra una en la oficina del santuario (normalmente ¥500-1,000), escribe tu deseo en el lado en blanco (está perfectamente bien escribir en español o inglés, los kami entienden todos los idiomas), y cuélgala en el soporte designado para ema. Verás cientos de deseos colgados juntos, lo cual es en sí mismo una vista hermosa. Tómate un momento para leer algunos: encontrarás de todo, desde oraciones para exámenes hasta deseos de salud y esperanzas de matrimonio, lo que te ofrece una conmovedora ventana a lo que importa a las personas.
             </p>
+
+            <InlineCTAEs />
 
             {/* Temple Step-by-Step */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

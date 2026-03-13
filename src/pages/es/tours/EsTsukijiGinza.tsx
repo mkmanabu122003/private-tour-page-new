@@ -186,6 +186,77 @@ const EsTsukijiGinza = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿A qué hora debería reservar el tour por Tsukiji y Ginza?</h3>
+                <p className="text-muted-foreground leading-relaxed">Se recomienda encarecidamente la sesión matutina que comienza a las 9:00 AM. El Mercado Exterior de Tsukiji está más fresco y animado por la mañana, y la mayoría de los puestos cierran antes de las 2:00 PM.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿El Mercado Exterior de Tsukiji sigue abierto?</h3>
+                <p className="text-muted-foreground leading-relaxed">¡Sí! Solo el mercado mayorista interior se trasladó a Toyosu en 2018. El mercado exterior, con más de 460 tiendas, restaurantes y puestos de comida, sigue completamente abierto.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué restricciones alimentarias pueden acomodar?</h3>
+                <p className="text-muted-foreground leading-relaxed">Podemos adaptarnos a la mayoría de las restricciones alimentarias, incluyendo vegetariana, pescetariana, halal y alergias comunes. Indícanoslo al reservar y planificaremos las paradas gastronómicas en consecuencia.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Cuántas personas pueden unirse al tour?</h3>
+                <p className="text-muted-foreground leading-relaxed">Nuestros tours privados acomodan de 1 a 6 personas por grupo. El precio es por grupo, lo que significa que cuantas más personas vengan, mejor es el valor por persona.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿A qué hora debería reservar el tour por Tsukiji y Ginza?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Se recomienda encarecidamente la sesión matutina que comienza a las 9:00 AM. El Mercado Exterior de Tsukiji está más fresco y animado por la mañana, y la mayoría de los puestos cierran antes de las 2:00 PM."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿El Mercado Exterior de Tsukiji sigue abierto?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "¡Sí! Solo el mercado mayorista interior se trasladó a Toyosu en 2018. El mercado exterior, con más de 460 tiendas, restaurantes y puestos de comida, sigue completamente abierto."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué restricciones alimentarias pueden acomodar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Podemos adaptarnos a la mayoría de las restricciones alimentarias, incluyendo vegetariana, pescetariana, halal y alergias comunes. Indícanoslo al reservar y planificaremos las paradas gastronómicas en consecuencia."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuántas personas pueden unirse al tour?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nuestros tours privados acomodan de 1 a 6 personas por grupo. El precio es por grupo, lo que significa que cuantas más personas vengan, mejor es el valor por persona."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">

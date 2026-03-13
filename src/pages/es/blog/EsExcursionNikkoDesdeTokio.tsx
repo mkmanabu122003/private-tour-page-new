@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsExcursionNikkoDesdeTokio = () => {
   return (
@@ -122,6 +123,8 @@ const EsExcursionNikkoDesdeTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Para que lo tengas claro de un vistazo: <strong className="text-foreground">Tobu Express desde Asakusa: ~1h50min, ~2.800 yenes</strong>. <strong className="text-foreground">Tobu Rápido desde Asakusa: ~2h20min, ~1.400 yenes</strong>. <strong className="text-foreground">JR Shinkansen + local: ~1h40min, ~5.500 yenes (cubierto por JR Pass)</strong>. Mi consejo: sal temprano. El primer tren Tobu Express sale alrededor de las 7:30 AM y te permite estar en Nikko a las 9:20, justo cuando abren los santuarios y antes de que lleguen los autobuses turísticos.
             </p>
+
+            <InlineCTAEs href="/es/tours/nikko" />
 
             {/* Qué ver */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

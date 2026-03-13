@@ -291,16 +291,6 @@ const blogPosts: BlogPost[] = [
     category: "Guías Útiles",
     image: "/images/tour-photos/group-photo.webp",
   },
-  {
-    slug: "guia-licencia-oficial-japon",
-    title: "Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa",
-    description:
-      "En Japón existe un examen nacional para guías turísticos. Qué diferencia a un guía con licencia de uno sin ella, y por qué debería importarte.",
-    date: "7 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/tour-photos/tour-photo-1.webp",
-  },
 ];
 
 const categories = [
