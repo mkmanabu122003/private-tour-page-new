@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const Tokyo3DayItinerary = () => {
   return (
@@ -175,6 +176,8 @@ const Tokyo3DayItinerary = () => {
                 Street food stalls in east Tokyo. Graze your way through grilled skewers, fresh seafood, and seasonal snacks
               </figcaption>
             </figure>
+
+            <InlineCTA message="Want a local guide to optimize your 3-day Tokyo itinerary?" href="/contact" />
 
             {/* Day 2 */}
             <h2 className="heading-section text-foreground mt-16 mb-6">

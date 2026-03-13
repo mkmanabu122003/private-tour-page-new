@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const JapanRailPass = () => {
   return (
@@ -106,7 +107,7 @@ const JapanRailPass = () => {
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kamakura (JR):</strong> ¥940</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Remember: the JR Pass covers the Hikari and Kodama Shinkansen but NOT the Nozomi or Mizuho (the fastest trains on the Tokaido/Sanyo line). The Hikari gets you to Kyoto in 2 hours 20 minutes vs. the Nozomi's 2 hours 15 minutes, barely any difference.
+              Remember: the JR Pass covers the Hikari and Kodama Shinkansen. For the Nozomi or Mizuho (the fastest trains), you'll need to purchase a supplementary ticket (about ¥4,960 for Tokyo–Kyoto). In practice, the Hikari gets you to Kyoto in about 2 hours 20 minutes vs. the Nozomi's 2 hours 15 minutes — barely any difference, so most travelers simply take the Hikari.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -153,12 +154,15 @@ const JapanRailPass = () => {
               Any itinerary with three or more Shinkansen legs plus local JR rides will almost certainly exceed ¥50,000. If you're doing the "Golden Route" with side trips, the 7-day pass pays for itself. <strong className="text-foreground">Verdict: definitely worth it.</strong>
             </p>
 
+            <InlineCTA message="Need help planning your Japan logistics?" href="/contact" />
+
             <h2 className="heading-section text-foreground mt-12 mb-6">
               When the JR Pass Is NOT Worth It
             </h2>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Tokyo-only trips:</strong> If you're staying in Tokyo for your entire visit, the JR Pass makes no sense. Tokyo's subway and metro systems (which the JR Pass doesn't cover) do most of the heavy lifting. Your daily JR usage in Tokyo might be ¥500–1,000.
+                <strong className="text-foreground">Tokyo-only trips:</strong> If you're staying in Tokyo for your entire visit, the JR Pass makes no sense. Tokyo's subway and metro systems (which the JR Pass doesn't cover) do most of the heavy lifting. Your daily JR usage in Tokyo might be ¥500–1,000. Instead, invest your budget in experiences like a{" "}
+                <Link to="/tours/tokyo-food-tour" className="text-accent hover:underline">private food tour</Link> to discover local culinary gems beyond the guidebooks.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Simple Tokyo → Kyoto → Tokyo round trip:</strong> Total Shinkansen cost: ¥27,700. The pass costs ¥50,000. You'd need ¥22,300 in additional JR rides to break even, which is unlikely unless you're doing multiple day trips.
@@ -167,7 +171,9 @@ const JapanRailPass = () => {
                 <strong className="text-foreground">Short stays (3–4 days):</strong> Even with a 7-day pass, if you're only traveling for half the window, you won't use enough rides to justify the cost. Individual tickets are almost always cheaper for short trips.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Itineraries using non-JR trains:</strong> Many popular routes use non-JR operators: the Odakyu Line to Hakone, the Tobu Line to Nikko, the Kintetsu Line in the Kansai region. The JR Pass doesn't cover these. If your itinerary relies heavily on private railways, the pass loses value.
+                <strong className="text-foreground">Itineraries using non-JR trains:</strong> Many popular routes use non-JR operators: the Odakyu Line to Hakone, the Tobu Line to Nikko, the Kintetsu Line in the Kansai region. The JR Pass doesn't cover these. If your itinerary relies heavily on private railways, the pass loses value. For day trips like{" "}
+                <Link to="/tours/nikko-day-trip" className="text-accent hover:underline">Nikko</Link>, where transport logistics can be complex, a{" "}
+                <Link to="/tours/nikko-day-trip" className="text-accent hover:underline">guided day trip</Link> handles all the transfers and lets you focus on the experience.
               </li>
             </ul>
 
@@ -213,6 +219,27 @@ const JapanRailPass = () => {
               guides, which cover transportation logistics in detail.
             </p>
 
+            {/* Related Tours */}
+            <div className="mt-16 border-t pt-12">
+              <h2 className="heading-section text-foreground mb-4">
+                Explore Tokyo With a Local Guide
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                While the JR Pass gets you across Japan, the best Tokyo experiences happen on foot. Our private walking tours reveal the stories, flavors, and hidden corners that make Tokyo unforgettable.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="text-muted-foreground leading-relaxed">
+                  <Link to="/tours/tokyo-food-tour" className="text-accent hover:underline font-medium">Tokyo Food Tour</Link> — Tsukiji, Ginza & beyond
+                </li>
+                <li className="text-muted-foreground leading-relaxed">
+                  <Link to="/tours/nikko-day-trip" className="text-accent hover:underline font-medium">Nikko Day Trip</Link> — Shrines, nature & Edo history
+                </li>
+                <li className="text-muted-foreground leading-relaxed">
+                  <Link to="/tours/tsukiji-ginza" className="text-accent hover:underline font-medium">Tsukiji & Ginza Walk</Link> — Markets, culture & cuisine
+                </li>
+              </ul>
+            </div>
+
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
@@ -234,13 +261,7 @@ const JapanRailPass = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Where do I buy the Japan Rail Pass?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    You can buy the JR Pass online through the official JR Pass website or authorized agents before arriving in Japan. You can also buy it at major JR stations in Japan (Tokyo, Osaka, Kyoto, airports), though it's slightly more convenient to arrange it before your trip. You'll need your passport for purchase and activation.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can I buy the JR Pass in Japan?</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Yes. Since 2023, you can purchase the JR Pass at major JR stations and airports in Japan. The price is the same as buying online. You'll activate it at a JR ticket office by showing your passport and choosing your start date.
+                    Since October 2023, the nationwide JR Pass can only be purchased online through the official JR Pass website or authorized agents. After purchasing online, you pick it up at a designated JR ticket office counter by showing your passport and choosing your start date. Note that regional JR passes (JR East Pass, JR West Pass, etc.) can still be purchased at station counters.
                   </p>
                 </div>
                 <div>
@@ -252,7 +273,7 @@ const JapanRailPass = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Does the JR Pass cover the Nozomi Shinkansen?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    No. The JR Pass covers the Hikari and Kodama trains on the Tokaido/Sanyo Shinkansen, but not the Nozomi or Mizuho (the fastest services). In practice, the Hikari is only 5–10 minutes slower than the Nozomi on most routes, so this limitation is minor.
+                    Not by default. However, since October 2023, JR Pass holders can purchase a supplementary "Nozomi/Mizuho Ticket" to ride these fastest trains. The supplement costs approximately ¥4,960 for Tokyo–Kyoto. Without the supplement, use the Hikari, which is only about 5 minutes slower on the same route.
                   </p>
                 </div>
               </div>
@@ -261,7 +282,7 @@ const JapanRailPass = () => {
         </div>
       </section>
 
-      <RelatedTourCards tourIds={["custom","asakusa"]} />
+      <RelatedTourCards tourIds={["nikko-day-trip","tokyo-food-tour","tsukiji-ginza"]} showViewAll />
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
@@ -275,10 +296,9 @@ const JapanRailPass = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
-          { "@type": "Question", name: "Where do I buy the Japan Rail Pass?", acceptedAnswer: { "@type": "Answer", text: "Online through the official JR Pass website or at major JR stations and airports in Japan. You need your passport." }},
-          { "@type": "Question", name: "Can I buy the JR Pass in Japan?", acceptedAnswer: { "@type": "Answer", text: "Yes, at major JR stations and airports since 2023. Same price as online." }},
+          { "@type": "Question", name: "Where do I buy the Japan Rail Pass?", acceptedAnswer: { "@type": "Answer", text: "Since October 2023, the nationwide JR Pass can only be purchased online through the official website or authorized agents. You pick it up at a JR ticket office with your passport." }},
           { "@type": "Question", name: "What's the difference between IC card and JR Pass?", acceptedAnswer: { "@type": "Answer", text: "IC cards are pay-per-ride cards for all transit. JR Pass is unlimited but only covers JR trains. Most travelers need both." }},
-          { "@type": "Question", name: "Does the JR Pass cover the Nozomi Shinkansen?", acceptedAnswer: { "@type": "Answer", text: "No. It covers Hikari and Kodama, which are only 5–10 minutes slower on most routes." }}
+          { "@type": "Question", name: "Does the JR Pass cover the Nozomi Shinkansen?", acceptedAnswer: { "@type": "Answer", text: "Not by default. Since October 2023, JR Pass holders can purchase a supplementary Nozomi/Mizuho Ticket (about ¥4,960 for Tokyo–Kyoto). Without the supplement, use the Hikari, which is only about 5 minutes slower." }}
         ]
       })}} />
     </Layout>

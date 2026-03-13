@@ -3,13 +3,14 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const TsukijiMarketGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Tsukiji Outer Market 2026: Still Open & What to Eat"
-        description="Yes, Tsukiji outer market is still open in 2026 with 400+ shops. A local guide shares the best food stalls, timing tips & what changed since 2018."
+        title="Tsukiji Outer Market Guide 2026: Yes, It's Still Open (Hours & Tips)"
+        description="Yes, Tsukiji Outer Market is still open in 2026 with 460+ shops. Most stalls open 5AM–2PM, closed Sundays & select Wednesdays. Complete visitor guide by a local guide."
         canonicalPath="/blog/tsukiji-market-guide"
       />
 
@@ -26,7 +27,7 @@ const TsukijiMarketGuide = () => {
             </Link>
             <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
             <h1 className="heading-display text-foreground">
-              Tsukiji Market Guide: What's Still Worth Seeing in 2026
+              Tsukiji Outer Market Guide 2026: Yes, It's Still Open
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -58,6 +59,15 @@ const TsukijiMarketGuide = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            {/* Quick Answer Box — Featured Snippet target */}
+            <div className="bg-accent/10 border border-accent/30 rounded-lg p-6 mb-10">
+              <p className="text-foreground leading-relaxed">
+                <strong>Is Tsukiji Outer Market still open in 2026?</strong> Yes! Tsukiji Outer Market remains fully open with 460+ shops, restaurants, and street food stalls. Only the inner wholesale auction moved to Toyosu Fish Market in October 2018. The outer market operates daily from around 5:00 AM, with most shops closing by 2:00 PM. Closed on Sundays and select Wednesdays — check the{" "}
+                <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official market calendar</a>
+                {" "}before your visit.
+              </p>
+            </div>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "Isn't Tsukiji closed?" I hear this question at least once a week from visitors planning their Tokyo itinerary. And I understand the confusion. The headlines from 2018 were everywhere: Tsukiji Market closes, the tuna auctions move to Toyosu, an era ends. But here's what those headlines got wrong, or at least left out. Only the inner wholesale market moved. The outer market, the part that matters most to visitors, never closed. It's still here, still thriving, and still one of the best food experiences in Tokyo.
@@ -192,6 +202,8 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
+            <InlineCTA message="Want to explore Tsukiji with a guide who knows every stall?" href="/tours/tsukiji-ginza" />
+
             {/* Section 4: Getting There */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               How to Get There and When to Arrive
@@ -206,7 +218,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday, Thursday, and Friday give you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays and Wednesdays</strong>. Most stalls are closed on both days, and you'll be wandering through empty lanes wondering where all the food went. Always check the market's official calendar before your visit, as additional closure days occur around holidays. If you only have one morning in Tokyo for food, make it a Tuesday, Thursday, or Friday at Tsukiji.
+              <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday, Thursday, and Friday give you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays and select Wednesdays</strong>. Most stalls are closed on Sundays and on certain Wednesdays that follow the Tokyo Central Wholesale Market calendar (not every Wednesday). Always check the <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">market's official calendar</a> before your visit, as additional closure days occur around holidays. If you only have one morning in Tokyo for food, make it a Tuesday, Thursday, or Friday at Tsukiji.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Plan to spend 90 minutes to two hours for a thorough visit. That gives you enough time to walk the full market, eat three or four things, browse the knife shops and pickle vendors, and leave satisfied rather than overwhelmed. If you're interested in pairing your market visit with ramen later in the day, my{" "}
@@ -273,7 +285,7 @@ const TsukijiMarketGuide = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji open on weekends?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays and Wednesdays. Weekday mornings (Tuesday, Thursday, and Friday) offer the best experience: full selection, fewer crowds, and a more relaxed atmosphere.
+                    Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays and on select Wednesdays (following the wholesale market calendar — not every Wednesday). Weekday mornings (Tuesday, Thursday, and Friday) offer the best experience: full selection, fewer crowds, and a more relaxed atmosphere. Check the official market calendar before your visit.
                   </p>
                 </div>
                 <div>
@@ -300,7 +312,7 @@ const TsukijiMarketGuide = () => {
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
-        headline: "Tsukiji Market Guide: What's Still Worth Seeing in 2026",
+        headline: "Tsukiji Outer Market Guide 2026: Yes, It's Still Open (Hours & Tips)",
         description: "The inner market closed in 2018. But the outer market is alive. A local guide explains what remains, what's worth eating, and how to visit right.",
         author: { "@type": "Person", name: "Manabu", jobTitle: "National Government Licensed Guide Interpreter", url: "https://tanuki-tabi-travel.com/about" },
         datePublished: "2026-03-07", dateModified: "2026-03-07",
@@ -313,7 +325,7 @@ const TsukijiMarketGuide = () => {
         mainEntity: [
           { "@type": "Question", name: "Is Tsukiji Market still open in 2026?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market with over 400 shops, restaurants, and food stalls remains open and thriving." }},
           { "@type": "Question", name: "What time should I arrive at Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Aim for 8:00 AM. Stalls are fully stocked, grills are hot, and crowds are manageable. Most stalls close by 1-2 PM." }},
-          { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best." }},
+          { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best. Check the official market calendar." }},
           { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},
           { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }}
         ]

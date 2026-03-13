@@ -292,16 +292,6 @@ const blogPosts: BlogPost[] = [
     category: "Helpful Guides",
     image: "/images/tour-photos/group-photo.webp",
   },
-  {
-    slug: "licensed-tour-guide-japan",
-    title: "What Is a Licensed Tour Guide in Japan?",
-    description:
-      "Japan has a national licensing exam for tour guides. Here's what separates a licensed guide from an unlicensed one, and why it matters for your trip.",
-    date: "March 7, 2026",
-    author: "Manabu, Licensed Tour Guide",
-    category: "Helpful Guides",
-    image: "/images/tour-photos/tour-photo-1.webp",
-  },
 ];
 
 const categories = [

@@ -78,6 +78,13 @@
   to = "/404.html"
   status = 404
 
+# Blog article consolidation: licensed guide article → hiring guide article
+[[redirects]]
+  from = "/blog/licensed-tour-guide-japan"
+  to = "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
+  status = 301
+  force = true
+
 # Remove trailing slashes: /path/ → /path (301 redirect)
 [[redirects]]
   from = "/:splat/"

@@ -538,6 +538,48 @@ const tourData = {
   },
 };
 
+const tourFAQs: Record<string, { question: string; answer: string }[]> = {
+  "tsukiji-ginza": [
+    { question: "What time should I book the Tsukiji & Ginza tour?", answer: "The morning session starting at 9:00 AM is strongly recommended. Tsukiji Outer Market is at its freshest and liveliest early in the morning, with most stalls closing by 2:00 PM." },
+    { question: "Is Tsukiji Outer Market still open?", answer: "Yes! Only the inner wholesale market moved to Toyosu in 2018. The outer market with 460+ shops, restaurants, and food stalls remains fully open." },
+    { question: "What dietary restrictions can you accommodate?", answer: "We can accommodate most dietary restrictions including vegetarian, pescatarian, halal, and common allergies. Let us know when booking and we'll plan the food stops accordingly." },
+    { question: "How many people can join the tour?", answer: "Our private tours accommodate 1-6 people per group. The per-group pricing means larger groups get better value per person." },
+  ],
+  "nikko-day-trip": [
+    { question: "How do we get to Nikko from Tokyo?", answer: "We take the JR Tohoku Shinkansen to Utsunomiya, then transfer to the JR Nikko Line. Total journey is about 2 hours. Your guide handles all navigation and tickets." },
+    { question: "Is the Nikko day trip suitable for children?", answer: "Yes, though there are some stairs and uphill walking at Toshogu Shrine. Children usually love the ornate carvings (especially the sleeping cat and three monkeys) and the waterfall." },
+    { question: "What is the best season to visit Nikko?", answer: "October to November offers spectacular autumn foliage. May brings lush spring greenery. Summer is cooler than Tokyo, making it a pleasant escape. Winter has fewer crowds but some facilities may be closed." },
+    { question: "What does the tour cost not include?", answer: "Train fares (approx. ¥5,000-8,000 round trip), Toshogu Shrine admission (¥1,600), lunch, Kegon Falls elevator (¥570, optional), and local bus fares are not included in the guide fee." },
+  ],
+  "kamakura-day-trip": [
+    { question: "How far is Kamakura from Tokyo?", answer: "Kamakura is about 1 hour from Tokyo by train. We typically take the JR Yokosuka Line from Tokyo Station directly to Kamakura Station." },
+    { question: "Can we customize the Kamakura itinerary?", answer: "Absolutely. Kamakura has over 65 temples and shrines. Your guide will tailor the route to your interests — whether that's history, hiking trails, zen gardens, or beach views." },
+    { question: "Is Kamakura worth visiting with kids?", answer: "Yes! Children love the Great Buddha (you can go inside the statue), the beach, and the street food on Komachi-dori. The walking is mostly flat and manageable." },
+    { question: "What should I wear to Kamakura?", answer: "Comfortable walking shoes are essential. Some temple grounds have gravel paths and stairs. Dress modestly for temple visits (shoulders and knees covered). Bring a hat and sunscreen in summer." },
+  ],
+  "hakone-day-trip": [
+    { question: "Will I see Mt. Fuji from Hakone?", answer: "Mt. Fuji visibility depends on weather. Clearest views are typically October through February. Your guide monitors conditions and adjusts the itinerary to maximize your chances." },
+    { question: "What is the Hakone Free Pass?", answer: "The Hakone Free Pass (approx. ¥6,100) covers round-trip train from Shinjuku plus unlimited rides on ropeway, cruise ship, cable car, and buses within Hakone. It's not included in the guide fee but highly recommended." },
+    { question: "Can we visit an onsen (hot spring) during the tour?", answer: "Yes! We can include a public foot bath (free) or a day-use onsen facility. Let your guide know your preference when booking." },
+    { question: "Is the Hakone day trip too long for elderly travelers?", answer: "The tour is mostly transport-based with short walks, so it's manageable for most fitness levels. We can adjust the pace and skip more strenuous segments if needed." },
+  ],
+  asakusa: [
+    { question: "How long is the Asakusa walking tour?", answer: "The tour is approximately 3 hours. We cover Senso-ji Temple, Nakamise Street, hidden backstreets, and Sumida River views at a comfortable pace." },
+    { question: "Is the Asakusa tour suitable for young children?", answer: "Yes! The route is flat and pram-friendly. Children enjoy the colorful temple, the fortune-telling (omikuji), and the street food on Nakamise." },
+    { question: "What's the best time of day for the Asakusa tour?", answer: "Morning (10:00 AM start) is ideal for fewer crowds and better photos. The afternoon session works well too, especially for catching the evening illumination of Senso-ji." },
+  ],
+  "shibuya-harajuku": [
+    { question: "Will we see the Shibuya Crossing from above?", answer: "Yes! Your guide will take you to the best observation points for watching and photographing the famous scramble crossing from above." },
+    { question: "Is this tour suitable for teenagers?", answer: "Absolutely — this is one of our most popular tours for families with teens. Harajuku's fashion scene, crepe shops, and pop culture make it a highlight." },
+    { question: "Do we visit Meiji Shrine on this tour?", answer: "Yes. Meiji Shrine is a peaceful contrast to busy Harajuku and a highlight of the tour. We walk through the forested approach and explain the Shinto rituals." },
+  ],
+  custom: [
+    { question: "How do I tell you what I want to see?", answer: "After booking, we'll exchange messages about your interests, pace, food preferences, and any specific places you want to visit. Your guide then designs a custom itinerary." },
+    { question: "What's the minimum booking time for a custom tour?", answer: "The minimum is 3 hours. Most guests book 4-6 hours for a half-day experience or 7-8 hours for a full day." },
+    { question: "Can you combine multiple neighborhoods?", answer: "Yes! A custom tour can cover 2-3 areas depending on the duration. Your guide plans efficient routes using Tokyo's excellent train network." },
+  ],
+};
+
 const relatedTours: Record<string, string[]> = {
   asakusa: ["yanaka", "tsukiji-ginza", "kamakura-day-trip"],
   yanaka: ["asakusa", "imperial-palace", "nikko-day-trip"],
@@ -612,6 +654,7 @@ const TourDetail = () => {
   }, [emblaApi, onSelect]);
 
   const related = relatedTours[id as string] || [];
+  const faqs = tourFAQs[id as string] || [];
 
   useEffect(() => {
     if (seo) {
@@ -912,6 +955,23 @@ const TourDetail = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      {faqs.length > 0 && (
+        <section className="py-16 bg-secondary/30">
+          <div className="container-section">
+            <h2 className="heading-section text-foreground mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-card border border-border rounded-lg p-6">
+                  <h3 className="text-lg font-medium text-foreground mb-2">{faq.question}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Day Trip CTA */}
       {"whyGuide" in tour && (
         <section className="py-16 bg-primary text-primary-foreground">
@@ -996,6 +1056,27 @@ const TourDetail = () => {
                 "name": "Tanuki Tabi Travel",
                 "url": "https://tanuki-tabi-travel.com",
               },
+            }),
+          }}
+        />
+      )}
+
+      {/* FAQ Schema */}
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer,
+                },
+              })),
             }),
           }}
         />

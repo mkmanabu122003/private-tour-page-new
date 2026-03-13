@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const NikkoDayTrip = () => {
   return (
@@ -124,6 +125,8 @@ const NikkoDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Kegon Falls</strong> sits about thirty minutes by bus from central Nikko, up a dramatic series of switchback roads that climb to the shores of Lake Chuzenji at 1,269 meters above sea level. The waterfall drops ninety-seven meters in a single breathtaking plunge from the lake's outlet, and it is ranked among the three most famous waterfalls in Japan. There is an elevator carved into the rock (570 yen) that takes you down to an observation platform at the base, and I consider it essential. From the top viewing area you see a postcard; from the base you feel the spray on your face and hear the thunderous volume of water crashing into the pool below. In autumn, the cliffs surrounding the falls turn brilliant shades of orange and gold. In winter, the peripheral streams freeze into spectacular ice columns while the main cascade keeps flowing. In any season, Kegon Falls is one of those sights that photographs do not do justice. You need to stand there, feel the mist, and hear it.
             </p>
+
+            <InlineCTA message="Want a guided Nikko day trip with all logistics handled?" href="/tours/nikko-day-trip" />
 
             {/* Section 3: How Much Time */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
