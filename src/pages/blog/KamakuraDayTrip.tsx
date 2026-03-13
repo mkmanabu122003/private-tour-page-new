@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const KamakuraDayTrip = () => {
   return (
@@ -88,6 +89,8 @@ const KamakuraDayTrip = () => {
                 <strong className="text-foreground">Enoden Railway (local):</strong> The charming local tram that runs from Kamakura Station to Enoshima along the coast. Not for getting TO Kamakura, but essential for getting around within the area. It passes through residential neighborhoods and runs right along the beach. A Kamakura day trip from Tokyo isn't complete without at least one Enoden ride.
               </li>
             </ul>
+
+            <InlineCTA message="Want a guided Kamakura day trip from Tokyo?" href="/tours/kamakura-day-trip" />
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
               What to See: Great Buddha, Engaku-ji, the Hiking Trails

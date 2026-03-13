@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const ShibuyaHarajukuGuide = () => {
   return (
@@ -131,6 +132,8 @@ const ShibuyaHarajukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dogenzaka is the sloping street that leads up the hill from the crossing, and it has a reputation as Shibuya's love hotel district. That reputation is deserved (you'll see plenty of colorful facades with hourly rates), but Dogenzaka is also home to some of the best vintage and secondhand clothing shops in Tokyo. Stores like Ragtag, Flamingo, and dozens of smaller independent shops sell everything from designer labels at a fraction of retail to perfectly curated vintage Americana. If you're into fashion or thrifting, Dogenzaka is worth an afternoon of browsing. The love hotels, by the way, are a fascinating part of Japanese urban culture in their own right, and I'm happy to explain their history and social role on tour. It's more interesting than you might expect.
             </p>
+
+            <InlineCTA message="Want to explore Shibuya and Harajuku with a local guide?" href="/tours/shibuya-harajuku" />
 
             {/* Harajuku */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

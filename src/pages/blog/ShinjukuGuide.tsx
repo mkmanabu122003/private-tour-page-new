@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const ShinjukuGuide = () => {
   return (
@@ -191,6 +192,8 @@ const ShinjukuGuide = () => {
                 Omoide Yokocho: smoke, yakitori, and cold beer under the tracks
               </figcaption>
             </figure>
+
+            <InlineCTA message="Want to discover Shinjuku's hidden side with a local?" href="/contact" />
 
             {/* Omoide Yokocho */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

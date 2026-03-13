@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const AsakusaGuideNew = () => {
   return (
@@ -114,6 +115,8 @@ const AsakusaGuideNew = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The Fortune Slips (Omikuji).</strong> Drawing a fortune at Senso-ji is practically mandatory, and the experience is straightforward: drop a 100-yen coin in the box, shake the metal cylinder until a numbered stick falls out, then find the corresponding drawer and take your paper fortune. Here is what makes Senso-ji's fortunes unique: roughly 30% of them are "bad luck" (kyo), which is far higher than most temples in Japan. This is not a mistake or a tourist gimmick. This is how traditional fortune distribution was always calculated. Most other temples have quietly adjusted their ratios over the years to keep visitors happy, but Senso-ji maintains the authentic proportions. If you get a bad fortune, the tradition is to fold it and tie it to the metal rack near the fortune stand. You are literally leaving the bad luck at the temple rather than carrying it with you. If you get a good fortune, keep it in your wallet.
             </p>
+
+            <InlineCTA message="Want to discover the stories behind Asakusa's temples?" href="/tours/asakusa" />
 
             {/* Section 3: Beyond the Temple */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

@@ -222,11 +222,7 @@ const IsItWorthHiringGuide = () => {
               The National Government Licensed Guide Interpreter (全国通訳案内士) is Japan's only nationally recognized professional guide certification. It requires passing extensive exams covering Japanese history, geography, culture, politics, and English proficiency. Only about 20% of test-takers pass.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              This means your guide has verified deep knowledge, not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer. I've written a detailed explanation of{" "}
-                <Link to="/blog/licensed-tour-guide-japan" className="text-accent hover:underline">
-                  what the licensed tour guide system in Japan actually means
-                </Link>
-                {" "}if you want to understand the certification process and why it matters.
+              This means your guide has verified deep knowledge, not just memorized scripts, but genuine understanding of Japanese culture and history that allows them to answer unexpected questions and provide context that goes beyond the standard tourist narrative. You can ask about anything, and you'll get a thoughtful, informed answer.
             </p>
 
             {/* How Much Does It Cost */}

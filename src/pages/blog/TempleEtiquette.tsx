@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const TempleEtiquette = () => {
   return (
@@ -205,6 +206,8 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               <strong className="text-foreground">Ema</strong> are small wooden plaques where you write a wish or prayer. Purchase one from the shrine office (usually ¥500-1,000), write your wish on the blank side (it's perfectly fine to write in English; the kami understand all languages), and hang it on the designated ema rack. You'll see hundreds of wishes hanging together, which in itself is a beautiful sight. Take a moment to read some. You'll find everything from exam prayers to health wishes to marriage hopes, giving you a touching window into what matters to people.
             </p>
+
+            <InlineCTA message="Want to learn temple etiquette from a local guide?" href="/contact" />
 
             {/* Temple Step-by-Step */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

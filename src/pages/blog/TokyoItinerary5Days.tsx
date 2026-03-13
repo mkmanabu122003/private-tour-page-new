@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const TokyoItinerary5Days = () => {
   return (
@@ -98,6 +99,8 @@ const TokyoItinerary5Days = () => {
               <p className="text-sm text-foreground font-medium mb-1">Guide's tip:</p>
               <p className="text-sm text-muted-foreground">Day 2 is about context. You're building an understanding of what old Tokyo looked like before the modernization you'll see on Days 3–5. Without this foundation, Shibuya and Shinjuku are just neon. With it, they become the contrast that makes Tokyo fascinating.</p>
             </div>
+
+            <InlineCTA message="Want a local guide to show you the real Tokyo?" href="/contact" />
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Day 3: Modern Tokyo and What It Means
