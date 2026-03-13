@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTAEs } from "@/components/blog/ArticleFooterCTAEs";
 
 const EsTsukiji2026 = () => {
   return (
@@ -282,6 +283,7 @@ const EsTsukiji2026 = () => {
                 </Link>
               </div>
             </div>
+            <ArticleFooterCTAEs />
           </article>
         </div>
       </section>

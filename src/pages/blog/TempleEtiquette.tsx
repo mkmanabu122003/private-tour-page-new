@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTA } from "@/components/blog/ArticleFooterCTA";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 
 const TempleEtiquette = () => {
@@ -528,6 +529,7 @@ const TempleEtiquette = () => {
                 </div>
               </div>
             </div>
+            <ArticleFooterCTA />
           </article>
         </div>
       </section>

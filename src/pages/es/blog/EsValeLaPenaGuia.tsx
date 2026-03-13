@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { ArticleFooterCTAEs } from "@/components/blog/ArticleFooterCTAEs";
 
 const EsValeLaPenaGuia = () => {
   return (
@@ -434,6 +435,7 @@ const EsValeLaPenaGuia = () => {
                 </div>
               </div>
             </div>
+            <ArticleFooterCTAEs />
           </article>
         </div>
       </section>
