@@ -25,7 +25,7 @@ import AsakusaGuideNew from "./pages/blog/AsakusaGuideNew";
 import JapanRailPass from "./pages/blog/JapanRailPass";
 import KamakuraDayTrip from "./pages/blog/KamakuraDayTrip";
 import KawagoeDayTrip from "./pages/blog/KawagoeDayTrip";
-import LicensedTourGuideJapan from "./pages/blog/LicensedTourGuideJapan";
+
 import NikkoDayTrip from "./pages/blog/NikkoDayTrip";
 import OldTokyoShitamachi from "./pages/blog/OldTokyoShitamachi";
 import RamenGuideTokyo from "./pages/blog/RamenGuideTokyo";
@@ -115,7 +115,7 @@ const AppRoutes = () => (
         <Route path="/blog/japan-rail-pass-worth-it" element={<JapanRailPass />} />
         <Route path="/blog/kamakura-day-trip-from-tokyo" element={<KamakuraDayTrip />} />
         <Route path="/blog/kawagoe-day-trip-from-tokyo" element={<KawagoeDayTrip />} />
-        <Route path="/blog/licensed-tour-guide-japan" element={<LicensedTourGuideJapan />} />
+
         <Route path="/blog/nikko-day-trip-from-tokyo" element={<NikkoDayTrip />} />
         <Route path="/blog/old-tokyo-shitamachi" element={<OldTokyoShitamachi />} />
         <Route path="/blog/ramen-guide-tokyo" element={<RamenGuideTokyo />} />
