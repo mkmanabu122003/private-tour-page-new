@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsItinerarioTokio3Dias = () => {
   return (
@@ -143,6 +144,8 @@ const EsItinerarioTokio3Dias = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Termina tu primer día en Ameyoko, la animada calle-mercado cerca de la estación de Ueno. Originalmente un mercado negro de posguerra, ahora es una bulliciosa franja de puestos de comida, vendedores de marisco y tiendas de descuentos. Ideal para comida callejera: prueba los cuencos de marisco fresco, las brochetas de carne a la parrilla o las fresas cubiertas de chocolate. La energía aquí es contagiosa y es una manera perfecta de terminar tu primer día.
             </p>
+
+            <InlineCTAEs />
 
             {/* Día 2 */}
             <h2 className="heading-section text-foreground mt-16 mb-6">

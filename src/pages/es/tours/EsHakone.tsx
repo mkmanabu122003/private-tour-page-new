@@ -233,6 +233,77 @@ const EsHakone = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede ver el Monte Fuji desde Hakone?</h3>
+                <p className="text-muted-foreground leading-relaxed">La visibilidad del Monte Fuji depende del clima. Las vistas más despejadas suelen darse de octubre a febrero. Tu guía monitorea las condiciones y ajusta el itinerario para maximizar tus posibilidades de ver el Fuji.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué es el Hakone Free Pass?</h3>
+                <p className="text-muted-foreground leading-relaxed">El Hakone Free Pass (aprox. ¥6,100) cubre el tren de ida y vuelta desde Shinjuku más viajes ilimitados en teleférico, barco, funicular y autobuses dentro de Hakone. No está incluido en la tarifa del guía, pero es muy recomendable.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede visitar un onsen (aguas termales) durante el tour?</h3>
+                <p className="text-muted-foreground leading-relaxed">¡Sí! Podemos incluir un baño de pies público (gratuito) o una instalación de onsen de uso diario. Indícale tu preferencia al guía al momento de reservar.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿La excursión a Hakone es demasiado larga para personas mayores?</h3>
+                <p className="text-muted-foreground leading-relaxed">El tour se basa principalmente en transporte con caminatas cortas, por lo que es manejable para la mayoría de los niveles de condición física. Podemos ajustar el ritmo y omitir los tramos más exigentes si es necesario.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Se puede ver el Monte Fuji desde Hakone?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La visibilidad del Monte Fuji depende del clima. Las vistas más despejadas suelen darse de octubre a febrero. Tu guía monitorea las condiciones y ajusta el itinerario para maximizar tus posibilidades de ver el Fuji."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué es el Hakone Free Pass?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El Hakone Free Pass (aprox. ¥6,100) cubre el tren de ida y vuelta desde Shinjuku más viajes ilimitados en teleférico, barco, funicular y autobuses dentro de Hakone. No está incluido en la tarifa del guía, pero es muy recomendable."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Se puede visitar un onsen (aguas termales) durante el tour?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "¡Sí! Podemos incluir un baño de pies público (gratuito) o una instalación de onsen de uso diario. Indícale tu preferencia al guía al momento de reservar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿La excursión a Hakone es demasiado larga para personas mayores?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El tour se basa principalmente en transporte con caminatas cortas, por lo que es manejable para la mayoría de los niveles de condición física. Podemos ajustar el ritmo y omitir los tramos más exigentes si es necesario."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">

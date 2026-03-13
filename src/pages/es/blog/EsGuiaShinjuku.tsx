@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsGuiaShinjuku = () => {
   return (
@@ -135,6 +136,8 @@ const EsGuiaShinjuku = () => {
                 Omoide Yokocho: humo, yakitori y cerveza fría bajo las vías
               </figcaption>
             </figure>
+
+            <InlineCTAEs />
 
             {/* Omoide Yokocho */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

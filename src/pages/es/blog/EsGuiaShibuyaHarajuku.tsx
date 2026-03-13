@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 
 const EsGuiaShibuyaHarajuku = () => {
   return (
@@ -137,6 +138,8 @@ const EsGuiaShibuyaHarajuku = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dogenzaka es la calle en pendiente que sube la colina desde el cruce, y tiene fama de ser el distrito de los love hotels de Shibuya. Esa fama está justificada (verás muchas fachadas coloridas con tarifas por horas), pero Dogenzaka también alberga algunas de las mejores tiendas de ropa vintage y de segunda mano de Tokio. Tiendas como Ragtag, Flamingo y docenas de establecimientos independientes más pequeños venden desde marcas de diseñador a una fracción del precio de venta hasta americana vintage perfectamente seleccionada. Si te interesa la moda o el thrifting, Dogenzaka merece una tarde de exploración. Los love hotels, por cierto, son una parte fascinante de la cultura urbana japonesa, y con gusto explico su historia y papel social durante el tour; es más interesante de lo que podrías pensar.
             </p>
+
+            <InlineCTAEs href="/es/tours/shibuya-harajuku" />
 
             {/* Harajuku */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

@@ -201,6 +201,65 @@ const EsAsakusa = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Cuánto dura el tour a pie por Asakusa?</h3>
+                <p className="text-muted-foreground leading-relaxed">El tour dura aproximadamente 3 horas. Recorremos el Templo Senso-ji, la calle Nakamise, callejones escondidos y las vistas del río Sumida a un ritmo cómodo.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿El tour por Asakusa es adecuado para niños pequeños?</h3>
+                <p className="text-muted-foreground leading-relaxed">¡Sí! La ruta es plana y apta para carritos de bebé. A los niños les encanta el colorido templo, las fortunas (omikuji) y la comida callejera de Nakamise.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es el mejor momento del día para el tour por Asakusa?</h3>
+                <p className="text-muted-foreground leading-relaxed">La mañana (inicio a las 10:00 AM) es ideal por haber menos multitudes y mejores fotos. La sesión de la tarde también funciona muy bien, especialmente para disfrutar de la iluminación nocturna del Senso-ji.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuánto dura el tour a pie por Asakusa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El tour dura aproximadamente 3 horas. Recorremos el Templo Senso-ji, la calle Nakamise, callejones escondidos y las vistas del río Sumida a un ritmo cómodo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿El tour por Asakusa es adecuado para niños pequeños?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "¡Sí! La ruta es plana y apta para carritos de bebé. A los niños les encanta el colorido templo, las fortunas (omikuji) y la comida callejera de Nakamise."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuál es el mejor momento del día para el tour por Asakusa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La mañana (inicio a las 10:00 AM) es ideal por haber menos multitudes y mejores fotos. La sesión de la tarde también funciona muy bien, especialmente para disfrutar de la iluminación nocturna del Senso-ji."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">

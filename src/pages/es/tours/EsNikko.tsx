@@ -227,6 +227,77 @@ const EsNikko = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Cómo se llega a Nikko desde Tokio?</h3>
+                <p className="text-muted-foreground leading-relaxed">Tomamos el Shinkansen JR Tohoku hasta Utsunomiya y luego hacemos trasbordo a la línea JR Nikko. El trayecto total es de unas 2 horas. Tu guía se encarga de toda la navegación y los billetes.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿La excursión a Nikko es adecuada para niños?</h3>
+                <p className="text-muted-foreground leading-relaxed">Sí, aunque hay algunas escaleras y subidas en el Santuario Toshogu. A los niños suelen encantarles las tallas ornamentadas (especialmente el gato dormido y los tres monos sabios) y las cascadas.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es la mejor época para visitar Nikko?</h3>
+                <p className="text-muted-foreground leading-relaxed">De octubre a noviembre ofrece un espectacular follaje otoñal. Mayo trae un exuberante verdor primaveral. El verano es más fresco que Tokio, lo que lo convierte en una escapada agradable. El invierno tiene menos multitudes, pero algunas instalaciones pueden estar cerradas.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué no incluye el precio del tour?</h3>
+                <p className="text-muted-foreground leading-relaxed">Los billetes de tren (aprox. ¥5,000-8,000 ida y vuelta), la entrada al Santuario Toshogu (¥1,600), el almuerzo, el ascensor de las Cascadas Kegon (¥570, opcional) y las tarifas de autobús local no están incluidos en la tarifa del guía.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cómo se llega a Nikko desde Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tomamos el Shinkansen JR Tohoku hasta Utsunomiya y luego hacemos trasbordo a la línea JR Nikko. El trayecto total es de unas 2 horas. Tu guía se encarga de toda la navegación y los billetes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿La excursión a Nikko es adecuada para niños?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí, aunque hay algunas escaleras y subidas en el Santuario Toshogu. A los niños suelen encantarles las tallas ornamentadas (especialmente el gato dormido y los tres monos sabios) y las cascadas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuál es la mejor época para visitar Nikko?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "De octubre a noviembre ofrece un espectacular follaje otoñal. Mayo trae un exuberante verdor primaveral. El verano es más fresco que Tokio, lo que lo convierte en una escapada agradable. El invierno tiene menos multitudes, pero algunas instalaciones pueden estar cerradas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué no incluye el precio del tour?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Los billetes de tren (aprox. ¥5,000-8,000 ida y vuelta), la entrada al Santuario Toshogu (¥1,600), el almuerzo, el ascensor de las Cascadas Kegon (¥570, opcional) y las tarifas de autobús local no están incluidos en la tarifa del guía."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
