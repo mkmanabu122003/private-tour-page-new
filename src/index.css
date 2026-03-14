@@ -169,7 +169,7 @@
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-[#C9A84C] text-white font-semibold rounded transition-colors duration-200 hover:bg-[#B8960C];
+    @apply inline-flex items-center justify-center px-6 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded transition-colors duration-200 hover:bg-[#E2C07A];
   }
 
   .btn-outline {
