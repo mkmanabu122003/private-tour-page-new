@@ -92,7 +92,7 @@ function executeApprovedActions() {
   const sheet = ss.getSheetByName('Actions');
 
   if (!sheet) {
-    SpreadsheetApp.getUi().alert('Actionsシートが見つかりません');
+    Logger.log('Actionsシートが見つかりません');
     return;
   }
 
@@ -130,12 +130,9 @@ function executeApprovedActions() {
   }
 
   if (createdCount > 0) {
-    SpreadsheetApp.getUi().alert(
-      `${createdCount}件のGitHub Issueを作成しました。\n` +
-        `Claude Codeが自動的に実装を開始します。`
-    );
+    Logger.log(`${createdCount}件のGitHub Issueを作成しました。Claude Codeが自動的に実装を開始します。`);
   } else {
-    SpreadsheetApp.getUi().alert('承認済みの未処理アクションはありません。');
+    Logger.log('承認済みの未処理アクションはありません。');
   }
 }
 
