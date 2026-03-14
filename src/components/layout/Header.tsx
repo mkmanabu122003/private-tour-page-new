@@ -192,8 +192,8 @@ export const Header = () => {
                 <Globe className="w-4 h-4" />
                 EN
               </Link>
-              <Link to="/es/contact" data-cta="book-now" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]" onClick={() => trackBookNowClick("Reservar Ahora")}>
-                Reservar Ahora
+              <Link to="/es/contact" data-cta="book-now" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]" onClick={() => trackBookNowClick("Solicitar Tour")}>
+                Solicitar Tour
               </Link>
             </div>
 
@@ -328,9 +328,9 @@ export const Header = () => {
                   to="/es/contact"
                   data-cta="book-now"
                   className="btn-accent text-center mt-2"
-                  onClick={() => { setMobileMenuOpen(false); trackBookNowClick("Reservar Ahora"); }}
+                  onClick={() => { setMobileMenuOpen(false); trackBookNowClick("Solicitar Tour"); }}
                 >
-                  Reservar Ahora
+                  Solicitar Tour
                 </Link>
               </div>
             </div>
@@ -486,8 +486,8 @@ export const Header = () => {
               <Globe className="w-4 h-4" />
               ES
             </Link>
-            <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-white font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]" onClick={() => trackBookNowClick("Book Now")}>
-              Book Now
+            <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded text-sm transition-colors duration-200 hover:bg-[#B8960C]" onClick={() => trackBookNowClick("Request a Tour")}>
+              Request a Tour
             </Link>
           </div>
 
@@ -636,9 +636,9 @@ export const Header = () => {
                 to="/contact"
                 data-cta="book-now"
                 className="btn-accent text-center mt-2"
-                onClick={() => { setMobileMenuOpen(false); trackBookNowClick("Book Now"); }}
+                onClick={() => { setMobileMenuOpen(false); trackBookNowClick("Request a Tour"); }}
               >
-                Book Now
+                Request a Tour
               </Link>
             </div>
           </div>
