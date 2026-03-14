@@ -46,6 +46,7 @@ const JapanRailPass = () => {
             <p className="mt-4 text-sm text-muted-foreground italic">
               Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who helps clients plan logistics for 500+ tours.
             </p>
+            <p className="mt-1 text-sm text-muted-foreground">Last updated: March 2026</p>
           </div>
         </div>
       </section>
