@@ -223,26 +223,41 @@ const EsIndex = () => {
         </div>
       </section>
 
-      {/* Sin Guión Section */}
+      {/* How to Book */}
       <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
         <div className="container-section">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-section text-foreground">
-              Sin Guión. Sin Prisas. Tu Tokio a Tu Manera.
-            </h2>
-            <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
-              <p>
-                La mayoría de los guías siguen una ruta fija. Yo no.
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-label text-accent mb-4">Reserva Fácil</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
+            <h2 className="heading-section text-foreground">Cómo Reservar</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-medium text-foreground mb-3">
+                Elige tu experiencia
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Explora nuestros tours o cuéntame tu día ideal en Tokio.
               </p>
-              <p>
-                En los primeros 30 minutos, te pregunto qué te importa: la comida,
-                la historia, los rincones escondidos, las oportunidades para fotos.
-                Luego me adapto sobre la marcha. Si quieres quedarte más tiempo en un
-                templo, nos quedamos. Si prefieres adelantarte al almuerzo, lo hacemos.
+            </div>
+            <div className="text-center">
+              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-medium text-foreground mb-3">
+                Comparte lo que te apasiona
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Historia, gastronomía, callejones ocultos... creo la ruta a tu medida.
               </p>
-              <p>
-                Por eso, viajeros de más de 30 países han dicho que este fue el mejor
-                tour del viaje, no solo de Tokio, sino de todo su recorrido.
+            </div>
+            <div className="text-center">
+              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-medium text-foreground mb-3">
+                Recorremos Tokio juntos
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Sin guiones. Sin multitudes. Solo tú, tu guía y la ciudad.
               </p>
             </div>
           </div>
@@ -374,47 +389,6 @@ const EsIndex = () => {
         </div>
       </section>
 
-      {/* How to Book */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-label text-accent mb-4">Reserva Fácil</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">Cómo Reservar</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Elige tu experiencia
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Explora nuestros tours o cuéntame tu día ideal en Tokio.
-              </p>
-            </div>
-            <div className="text-center">
-              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Comparte lo que te apasiona
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Historia, gastronomía, callejones ocultos... creo la ruta a tu medida.
-              </p>
-            </div>
-            <div className="text-center">
-              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Recorremos Tokio juntos
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Sin guiones. Sin multitudes. Solo tú, tu guía y la ciudad.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Tour Photos */}
       <section aria-label="Fotos de tours" className="py-20 md:py-28">
         <div className="container-section">
@@ -486,44 +460,25 @@ const EsIndex = () => {
         </div>
       </section>
 
-      {/* Post-Review CTA */}
-      <section className="py-16 md:py-20 bg-accent/5 border-y border-accent/10">
-        <div className="container-section text-center">
-          <h2 className="heading-section text-foreground">
-            ¿Listo para Descubrir el Tokio Auténtico?
-          </h2>
-          <div className="mt-8">
-            <Link
-              to="/es/contact"
-              data-cta="book-now"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-lg"
-              onClick={() => trackBookNowClick("Reservar Ahora")}
-            >
-              Reservar Ahora
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Respuesta en menos de 24 horas
-          </p>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <h2 className="heading-section">¿Listo para Explorar Tokio?</h2>
           <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
-            Reserva tu tour privado o escríbenos para diseñar un itinerario a medida.
+            Cuéntame tus intereses y diseñaré un itinerario personalizado para ti.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Reservar Mi Tour")}>
-              Reservar Mi Tour
+            <Link to="/es/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Solicitar un Tour")}>
+              Solicitar un Tour
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
-            <Link to="/es/about" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
-              Más Información
+            <Link to="/es/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+              Ver Tours
             </Link>
           </div>
+          <p className="mt-4 text-sm text-primary-foreground/50">
+            Respuesta en menos de 24 horas
+          </p>
         </div>
       </section>
 

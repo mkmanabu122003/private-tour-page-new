@@ -19,9 +19,6 @@ import tourUeno from "@/assets/tour-ueno.webp";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.webp";
 import hamarikyu from "@/assets/hamarikyu.webp";
-import asakusaTemple from "@/assets/asakusa-temple.webp";
-import tsukijiMarket from "@/assets/tsukiji-market.webp";
-import shibuyaStreet from "@/assets/shibuya-street.webp";
 
 const tours = [
   {
@@ -194,8 +191,8 @@ const Index = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]" onClick={() => trackBookNowClick("Book Your Private Tour")}>
-                Book Your Private Tour
+              <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]" onClick={() => trackBookNowClick("Request Your Private Tour")}>
+                Request Your Private Tour
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link to="/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
@@ -225,59 +222,42 @@ const Index = () => {
         </div>
       </section>
 
-      {/* No Script Section */}
+      {/* How It Works */}
       <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
         <div className="container-section">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-section text-foreground">
-              No Script. No Rush. Just Your Kind of Tokyo.
-            </h2>
-            <div className="mt-8 text-muted-foreground leading-relaxed space-y-4 text-left">
-              <p>
-                Most tour guides follow a fixed route. I don't.
-              </p>
-              <p>
-                In the first 30 minutes, I ask what matters to you: the food, the
-                history, the hidden spots, the photo opportunities. Then I adapt as we
-                go. If you want to linger at a temple, we linger. If you want to skip
-                ahead to lunch, we skip.
-              </p>
-              <p>
-                That's why guests from over 30 countries have called this the best
-                tour of the trip, not just of Tokyo, but of their entire journey.
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-label text-accent mb-4">Simple Booking</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
+            <h2 className="heading-section text-foreground">How It Works</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                Choose Your Experience
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Browse curated tours or tell me your dream day in Tokyo.
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-3 gap-3 md:gap-4">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                  src={asakusaTemple}
-                  alt="Senso-ji Temple with Tokyo Skytree"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                />
-              </div>
-              <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                  src={tsukijiMarket}
-                  alt="Tsukiji fish market"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                />
-              </div>
-              <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                  src={shibuyaStreet}
-                  alt="Shibuya streets at night"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                />
-              </div>
+            <div className="text-center">
+              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                Share What Excites You
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                History, food, hidden alleys. I'll build the route around you.
+              </p>
+            </div>
+            <div className="text-center">
+              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                Walk Tokyo Together
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                No scripts. No crowds. Just you, your guide, and the city.
+              </p>
             </div>
           </div>
         </div>
@@ -368,47 +348,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-label text-accent mb-4">Simple Booking</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">How It Works</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                Choose Your Experience
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Browse curated tours or tell me your dream day in Tokyo.
-              </p>
-            </div>
-            <div className="text-center">
-              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                Share What Excites You
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                History, food, hidden alleys. I'll build the route around you.
-              </p>
-            </div>
-            <div className="text-center">
-              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                Walk Tokyo Together
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                No scripts. No crowds. Just you, your guide, and the city.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Tour Photos */}
       <section aria-label="Tour photos" className="py-20 md:py-28">
         <div className="container-section">
@@ -480,45 +419,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Post-Review CTA */}
-      <section className="py-16 md:py-20 bg-accent/5 border-y border-accent/10">
-        <div className="container-section text-center">
-          <h2 className="heading-section text-foreground">
-            Ready to See the Real Tokyo?
-          </h2>
-          <div className="mt-8">
-            <Link
-              to="/contact"
-              data-cta="book-now"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-lg"
-              onClick={() => trackBookNowClick("Book Now")}
-            >
-              Book Now
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Reply within 24 hours
-          </p>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container-section text-center">
           <h2 className="heading-section">Ready to Explore Tokyo?</h2>
           <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
-            Let's create an unforgettable experience together. Book your private
-            tour or reach out to discuss a custom itinerary.
+            Let's create an unforgettable experience together. Tell me your interests
+            and I'll design a personalized itinerary just for you.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Book Your Tour")}>
-              Book Your Tour
+            <Link to="/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Request a Tour")}>
+              Request a Tour
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
-            <Link to="/about" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
-              Learn More About Me
+            <Link to="/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+              Browse Tours
             </Link>
           </div>
+          <p className="mt-4 text-sm text-primary-foreground/50">
+            Reply within 24 hours
+          </p>
         </div>
       </section>
 
