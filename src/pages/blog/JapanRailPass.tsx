@@ -134,14 +134,14 @@ const JapanRailPass = () => {
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">14-day Green Car</td>
                     <td className="py-3 pr-4">¥64,120</td>
-                    <td className="py-3 pr-4">¥113,000</td>
-                    <td className="py-3">+76%</td>
+                    <td className="py-3 pr-4">¥110,000</td>
+                    <td className="py-3">+72%</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4">21-day Green Car</td>
                     <td className="py-3 pr-4">¥83,390</td>
-                    <td className="py-3 pr-4">¥143,000</td>
-                    <td className="py-3">+71%</td>
+                    <td className="py-3 pr-4">¥140,000</td>
+                    <td className="py-3">+68%</td>
                   </tr>
                 </tbody>
               </table>
@@ -169,7 +169,7 @@ const JapanRailPass = () => {
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Kyoto → Hiroshima (Sakura):</strong> ¥11,300</li>
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kanazawa (Hakutaka):</strong> ¥14,180</li>
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Nikko (JR + Tobu):</strong> ~¥2,800 (JR portion only)</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kamakura (JR):</strong> ¥940</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kamakura (JR):</strong> ¥1,040</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Remember: the JR Pass covers the Hikari and Kodama Shinkansen. For the Nozomi or Mizuho (the fastest trains), you'll need to purchase a supplementary ticket (about ¥4,960 for Tokyo–Kyoto). In practice, the Hikari gets you to Kyoto in about 2 hours 20 minutes vs. the Nozomi's 2 hours 15 minutes — barely any difference, so most travelers simply take the Hikari.
@@ -211,7 +211,7 @@ const JapanRailPass = () => {
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Multi-City: Tokyo → Kanazawa → Kyoto → Tokyo</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tokyo→Kanazawa (¥14,180) + Kanazawa→Kyoto (¥7,720) + Kyoto→Tokyo (¥13,850) = <strong className="text-foreground">¥35,750</strong> in Shinkansen alone. Add Tokyo-area JR rides (Kamakura day trip: ¥1,880 round-trip, airport Narita Express: ¥3,070–3,250) and you're at ¥40,700+. Getting close to ¥50,000 but may not exceed it. <strong className="text-foreground">Verdict: borderline. Calculate your specific JR rides carefully.</strong>
+              Tokyo→Kanazawa (¥14,180) + Kanazawa→Kyoto (¥7,720) + Kyoto→Tokyo (¥13,850) = <strong className="text-foreground">¥35,750</strong> in Shinkansen alone. Add Tokyo-area JR rides (Kamakura day trip: ¥2,080 round-trip, airport Narita Express: ¥3,070–3,250) and you're at ¥40,700+. Getting close to ¥50,000 but may not exceed it. <strong className="text-foreground">Verdict: borderline. Calculate your specific JR rides carefully.</strong>
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Extended: Tokyo → Kyoto → Osaka → Kanazawa → Tokyo (+ day trips)</h3>
@@ -361,7 +361,7 @@ const JapanRailPass = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">What are the cheapest ways to travel Japan without the JR Pass?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    For budget travelers, the best alternatives are: (1) a Suica IC card for all local and metro travel, (2) individual Shinkansen tickets booked via SmartEX for long-distance trips — early bookings can include discounts, (3) overnight highway buses between Tokyo and Osaka/Kyoto for ¥3,000–6,000, and (4) regional JR passes (like the JR Kansai Area Pass from ¥2,400) if your trip is concentrated in one region. A{" "}
+                    For budget travelers, the best alternatives are: (1) a Suica IC card for all local and metro travel, (2) individual Shinkansen tickets booked via SmartEX for long-distance trips — early bookings can include discounts, (3) overnight highway buses between Tokyo and Osaka/Kyoto for ¥3,000–6,000, and (4) regional JR passes (like the JR Kansai Area Pass from ¥2,800) if your trip is concentrated in one region. A{" "}
                     <Link to="/tours" className="text-accent hover:underline">private guided tour</Link>{" "}
                     removes the logistics entirely — transportation planning is handled as part of the experience.
                   </p>

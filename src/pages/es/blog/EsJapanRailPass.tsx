@@ -200,14 +200,14 @@ const EsJapanRailPass = () => {
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">14 días Green Car</td>
                     <td className="py-3 pr-4">64.120 yen</td>
-                    <td className="py-3 pr-4">113.000 yen</td>
-                    <td className="py-3">+76%</td>
+                    <td className="py-3 pr-4">110.000 yen</td>
+                    <td className="py-3">+72%</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4">21 días Green Car</td>
                     <td className="py-3 pr-4">83.390 yen</td>
-                    <td className="py-3 pr-4">143.000 yen</td>
-                    <td className="py-3">+71%</td>
+                    <td className="py-3 pr-4">140.000 yen</td>
+                    <td className="py-3">+68%</td>
                   </tr>
                 </tbody>
               </table>
@@ -292,7 +292,7 @@ const EsJapanRailPass = () => {
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">Hiroshima → Miyajima (ferry JR)</td>
-                    <td className="py-3 pr-4">360 yen (ida y vuelta)</td>
+                    <td className="py-3 pr-4">400 yen (ida y vuelta)</td>
                     <td className="py-3">Incluido</td>
                   </tr>
                   <tr className="border-b border-border/50">
@@ -342,7 +342,7 @@ const EsJapanRailPass = () => {
               Si tu itinerario es Tokio + una excursión
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 1.900 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu (consulta nuestra <Link to="/es/blog/excursion-nikko-desde-tokio" className="text-accent hover:underline">guía de excursión a Nikko</Link> para más detalles). Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 6.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
+              Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 2.080 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu (consulta nuestra <Link to="/es/blog/excursion-nikko-desde-tokio" className="text-accent hover:underline">guía de excursión a Nikko</Link> para más detalles). Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 7.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -384,7 +384,7 @@ const EsJapanRailPass = () => {
               Pases regionales (Kansai, Hokkaido, etc.)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground">JR Kansai Area Pass</strong> (1-4 días, desde 2.400 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región.
+              Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground">JR Kansai Area Pass</strong> (1-4 días, desde 2.800 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -423,7 +423,7 @@ const EsJapanRailPass = () => {
                   ¿Incluye el shinkansen Nozomi?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  El Nozomi (el shinkansen más rápido en la línea Tokaido-Sanyo) y el Mizuho no están incluidos en el pase estándar. Debes usar el Hikari o el Sakura, que hacen más paradas y tardan unos 15-20 minutos más. Sin embargo, desde 2024 existe un <strong className="text-foreground">billete suplementario para Nozomi/Mizuho</strong> que permite a los titulares del JR Pass subir a estos trenes pagando un suplemento (por ejemplo, ¥4,960 para el trayecto Tokio–Kioto). Útil si necesitas mayor flexibilidad de horarios, ya que los Nozomi salen con mucha más frecuencia que los Hikari.
+                  El Nozomi (el shinkansen más rápido en la línea Tokaido-Sanyo) y el Mizuho no están incluidos en el pase estándar. Debes usar el Hikari o el Sakura, que hacen más paradas y tardan unos 15-20 minutos más. Sin embargo, desde octubre de 2023 existe un <strong className="text-foreground">billete suplementario para Nozomi/Mizuho</strong> que permite a los titulares del JR Pass subir a estos trenes pagando un suplemento (por ejemplo, ¥4,960 para el trayecto Tokio–Kioto). Útil si necesitas mayor flexibilidad de horarios, ya que los Nozomi salen con mucha más frecuencia que los Hikari.
                 </p>
               </div>
 
