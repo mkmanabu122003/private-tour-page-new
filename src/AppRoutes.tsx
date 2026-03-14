@@ -40,6 +40,12 @@ import YanakaWalkingRoute from "./pages/blog/YanakaWalkingRoute";
 import YanakaWalkingTourGuide from "./pages/blog/YanakaWalkingTourGuide";
 import YokohamaDayTrip from "./pages/blog/YokohamaDayTrip";
 import VegetarianFoodTourTokyo from "./pages/blog/VegetarianFoodTourTokyo";
+import TokyoPrivateTourGuideCost from "./pages/blog/TokyoPrivateTourGuideCost";
+import TokyoWithKidsFamilyTour from "./pages/blog/TokyoWithKidsFamilyTour";
+import WhatToExpectPrivateTour from "./pages/blog/WhatToExpectPrivateTour";
+import HakoneDayTripGuideVsSolo from "./pages/blog/HakoneDayTripGuideVsSolo";
+import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
+import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
 import EsAsakusa from "./pages/es/tours/EsAsakusa";
@@ -84,6 +90,8 @@ import EsTsukiji2026 from "./pages/es/blog/EsTsukiji2026";
 import EsShitamachiTokio from "./pages/es/blog/EsShitamachiTokio";
 import EsCuantoCuestaGuiaPrivadoTokio from "./pages/es/blog/EsCuantoCuestaGuiaPrivadoTokio";
 import EsValeLaPenaGuiaPrivadoTokio from "./pages/es/blog/EsValeLaPenaGuiaPrivadoTokio";
+import EsPrimeraVezTokioGuiaLocal from "./pages/es/blog/EsPrimeraVezTokioGuiaLocal";
+import EsTourGastronomicoTokio from "./pages/es/blog/EsTourGastronomicoTokio";
 
 const queryClient = new QueryClient();
 
@@ -130,6 +138,12 @@ const AppRoutes = () => (
         <Route path="/blog/yanaka-walking-tour-guide" element={<YanakaWalkingTourGuide />} />
         <Route path="/blog/yokohama-day-trip-from-tokyo" element={<YokohamaDayTrip />} />
         <Route path="/blog/vegetarian-food-tour-tokyo" element={<VegetarianFoodTourTokyo />} />
+        <Route path="/blog/tokyo-private-tour-guide-cost" element={<TokyoPrivateTourGuideCost />} />
+        <Route path="/blog/tokyo-with-kids-family-tour" element={<TokyoWithKidsFamilyTour />} />
+        <Route path="/blog/what-to-expect-private-tour-tokyo" element={<WhatToExpectPrivateTour />} />
+        <Route path="/blog/hakone-day-trip-guide-vs-solo" element={<HakoneDayTripGuideVsSolo />} />
+        <Route path="/blog/tsukiji-to-ginza-food-walk" element={<TsukijiToGinzaFoodWalk />} />
+        <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
         <Route path="/es/tours" element={<EsTours />} />
@@ -175,6 +189,8 @@ const AppRoutes = () => (
         <Route path="/es/blog/shitamachi-tokio" element={<EsShitamachiTokio />} />
         <Route path="/es/blog/cuanto-cuesta-guia-privado-tokio" element={<EsCuantoCuestaGuiaPrivadoTokio />} />
         <Route path="/es/blog/vale-la-pena-guia-privado-tokio" element={<EsValeLaPenaGuiaPrivadoTokio />} />
+        <Route path="/es/blog/primera-vez-tokio-guia-local" element={<EsPrimeraVezTokioGuiaLocal />} />
+        <Route path="/es/blog/tour-gastronomico-tokio" element={<EsTourGastronomicoTokio />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
