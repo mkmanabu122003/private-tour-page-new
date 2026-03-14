@@ -153,13 +153,11 @@ ${files}
 <claude-code-prompt>
 ${claudePrompt}
 
-Additional instructions:
-- Create a new branch from main named: seo/${actionId}
+Important constraints:
+- Do NOT create branches, do NOT commit, do NOT push, do NOT create PRs — the CI workflow handles all of that automatically
+- Just make the code changes directly in the working directory
 - Make the minimum changes necessary
-- Run \`npm run build\` to verify the build passes
-- Commit with a descriptive message
-- Create a PR back to main with a clear description of changes
-- Do NOT merge the PR — leave it for human review
+- Ensure the changes will pass \`npm run build\`
 </claude-code-prompt>
 
 ---
