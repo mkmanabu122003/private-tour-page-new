@@ -1,10 +1,12 @@
 /**
  * 日次レポートメールを送信（分析・アクション付き）
+ * レポートPDFを 年/月/日 フォルダに保存し、メールに添付する
  */
 function sendDailyReport(gscData, ga4Data, analysis, date, email) {
   if (!email) return;
 
-  const ssUrl = SpreadsheetApp.getActiveSpreadsheet().getUrl();
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ssUrl = ss.getUrl();
   const subject = `📊 SEO日次レポート — ${date}`;
 
   let body = `SEO日次レポート: ${date}\n`;
@@ -55,5 +57,36 @@ function sendDailyReport(gscData, ga4Data, analysis, date, email) {
   body += `📋 ダッシュボード: ${ssUrl}\n`;
   body += `→ Actionsシートで承認 → 「SEO Pipeline」メニュー → 「承認済みアクションを実行」\n`;
 
-  GmailApp.sendEmail(email, subject, body);
+  // スプレッドシートのPDFを生成して日付フォルダに保存
+  try {
+    const pdfBlob = exportSpreadsheetAsPdf_(ss);
+    const fileName = `SEO-Report-${date}.pdf`;
+    const savedFile = saveReportToDateFolder(pdfBlob, date, fileName);
+
+    // メールにもPDFを添付
+    GmailApp.sendEmail(email, subject, body, {
+      attachments: [savedFile.getAs(MimeType.PDF)]
+    });
+
+    Logger.log(`レポートPDFを保存しました: ${savedFile.getUrl()}`);
+  } catch (e) {
+    Logger.log(`PDF保存エラー（メールはPDFなしで送信）: ${e.message}`);
+    GmailApp.sendEmail(email, subject, body);
+  }
+}
+
+/**
+ * スプレッドシートをPDFとしてエクスポートする
+ */
+function exportSpreadsheetAsPdf_(ss) {
+  const ssId = ss.getId();
+  const token = ScriptApp.getOAuthToken();
+  const url = `https://docs.google.com/spreadsheets/d/${ssId}/export?format=pdf&portrait=false&size=A4&fitw=true`;
+
+  const response = UrlFetchApp.fetch(url, {
+    headers: { Authorization: 'Bearer ' + token },
+    muteHttpExceptions: true
+  });
+
+  return response.getBlob().setContentType(MimeType.PDF);
 }

@@ -7,8 +7,14 @@ on:
 jobs:
   implement:
     # seo-auto-action ラベルが付いたIssueでのみ実行
-    if: contains(github.event.issue.labels.*.name, 'seo-auto-action')
+    # auto-failed や pr-created ラベルが付いている場合はスキップ
+    if: |
+      contains(github.event.issue.labels.*.name, 'seo-auto-action') &&
+      !contains(github.event.issue.labels.*.name, 'pr-created')
     runs-on: ubuntu-latest
+    concurrency:
+      group: seo-auto-${{ github.event.issue.number }}
+      cancel-in-progress: true
 
     permissions:
       contents: write
@@ -56,7 +62,15 @@ jobs:
 
       - name: Create branch
         run: |
-          git checkout -b ${{ steps.extract.outputs.branch }}
+          BRANCH="${{ steps.extract.outputs.branch }}"
+
+          # リモートに同名ブランチがあれば削除
+          if git ls-remote --heads origin "$BRANCH" | grep -q .; then
+            echo "Deleting existing remote branch: $BRANCH"
+            git push origin --delete "$BRANCH" || true
+          fi
+
+          git checkout -b "$BRANCH"
 
       - name: Run Claude Code
         env:
@@ -70,6 +84,7 @@ jobs:
         run: npm run build
 
       - name: Commit and push
+        id: push
         run: |
           git config user.name "SEO Pipeline Bot"
           git config user.email "seo-bot@tanuki-tabi-travel.com"
@@ -78,35 +93,53 @@ jobs:
           # 変更がある場合のみコミット
           if git diff --staged --quiet; then
             echo "No changes to commit"
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
           git commit -m "seo: auto-implement action from issue #${{ steps.extract.outputs.issue_number }}"
           git push origin ${{ steps.extract.outputs.branch }}
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request
+        if: steps.push.outputs.has_changes == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             const issueNumber = ${{ steps.extract.outputs.issue_number }};
             const branch = '${{ steps.extract.outputs.branch }}';
 
-            // PR作成
-            const pr = await github.rest.pulls.create({
+            // 既存のPRがないか確認
+            const existingPRs = await github.rest.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: context.payload.issue.title.replace('[SEO Auto]', '[SEO PR]'),
-              body: `## Auto-generated PR\n\nImplements #${issueNumber}\n\n**Please review the changes before merging.**\n\nAfter merging, Netlify will auto-deploy.`,
-              head: branch,
-              base: 'main'
+              head: `${context.repo.owner}:${branch}`,
+              state: 'open'
             });
+
+            let prUrl;
+            if (existingPRs.data.length > 0) {
+              prUrl = existingPRs.data[0].html_url;
+              console.log(`PR already exists: ${prUrl}`);
+            } else {
+              // PR作成
+              const pr = await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: context.payload.issue.title.replace('[SEO Auto]', '[SEO PR]'),
+                body: `## Auto-generated PR\n\nImplements #${issueNumber}\n\n**Please review the changes before merging.**\n\nAfter merging, Netlify will auto-deploy.`,
+                head: branch,
+                base: 'main'
+              });
+              prUrl = pr.data.html_url;
+            }
 
             // Issueにコメント
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issueNumber,
-              body: `✅ PR created: ${pr.data.html_url}\n\nPlease review and merge when ready.`
+              body: `✅ PR created: ${prUrl}\n\nPlease review and merge when ready.`
             });
 
             // Issueのステータスを更新
@@ -115,6 +148,19 @@ jobs:
               repo: context.repo.repo,
               issue_number: issueNumber,
               labels: ['pr-created']
+            });
+
+      - name: No changes found
+        if: steps.push.outputs.has_changes == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = ${{ steps.extract.outputs.issue_number }};
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: `⚠️ Claude Code ran but produced no changes. The implementation may need manual intervention.`
             });
 
       - name: Handle failure
