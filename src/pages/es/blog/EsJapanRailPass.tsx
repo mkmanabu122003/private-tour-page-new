@@ -12,7 +12,7 @@ const EsJapanRailPass = () => {
     <Layout>
       <SEO
         title="Japan Rail Pass 2026: ¿vale la pena? La respuesta honesta de un guía"
-        description="¿Comprar el JR Pass o no? Un guía oficial japonés hace los cálculos reales según tu itinerario y te dice cuándo conviene y cuándo no."
+        description="Subida de precios del JR Pass 2026: de ¥29.650 a ¥50.000. Un guía con licencia compara los costes y explica cuándo sigue mereciendo la pena comprarlo."
         canonicalPath="/es/blog/japan-rail-pass-vale-la-pena"
         hreflang={[
           { lang: "es", path: "/es/blog/japan-rail-pass-vale-la-pena" },
@@ -154,6 +154,66 @@ const EsJapanRailPass = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
               El pase Green Car equivale a la primera clase. Los asientos son más amplios, hay más espacio para las piernas y los vagones van menos llenos. ¿Mi opinión honesta? Para la mayoría de los viajeros, el pase ordinario es más que suficiente. Los asientos de clase ordinaria en el shinkansen japonés son ya bastante cómodos (mucho más que cualquier tren europeo en segunda clase). Solo recomiendo el Green Car si tienes algún problema de movilidad, necesitas trabajar durante el trayecto con más espacio, o simplemente quieres darte un lujo. La diferencia de precio es considerable y rara vez justifica la mejora.
+            </p>
+
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Comparativa: precios antes y después de la subida de 2023
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para entender por qué la ecuación del JR Pass cambió tan drásticamente, aquí tienes la comparativa completa de todos los tipos de pase antes y después del aumento de octubre de 2023. A fecha de marzo de 2026, estos precios siguen vigentes.
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full text-sm text-muted-foreground border-collapse">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Tipo de pase</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Antes (hasta oct. 2023)</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Precio actual 2026</th>
+                    <th className="text-left py-3 text-foreground font-medium">Subida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7 días Ordinario</td>
+                    <td className="py-3 pr-4">29.650 yen</td>
+                    <td className="py-3 pr-4">50.000 yen</td>
+                    <td className="py-3">+69%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14 días Ordinario</td>
+                    <td className="py-3 pr-4">47.250 yen</td>
+                    <td className="py-3 pr-4">80.000 yen</td>
+                    <td className="py-3">+69%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">21 días Ordinario</td>
+                    <td className="py-3 pr-4">60.450 yen</td>
+                    <td className="py-3 pr-4">100.000 yen</td>
+                    <td className="py-3">+65%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7 días Green Car</td>
+                    <td className="py-3 pr-4">39.600 yen</td>
+                    <td className="py-3 pr-4">70.000 yen</td>
+                    <td className="py-3">+77%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14 días Green Car</td>
+                    <td className="py-3 pr-4">64.120 yen</td>
+                    <td className="py-3 pr-4">113.000 yen</td>
+                    <td className="py-3">+76%</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4">21 días Green Car</td>
+                    <td className="py-3 pr-4">83.390 yen</td>
+                    <td className="py-3 pr-4">143.000 yen</td>
+                    <td className="py-3">+71%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              El impacto concreto: con el precio antiguo, un solo viaje de ida y vuelta Tokio–Kioto (27.700 yenes) casi amortizaba el pase de 7 días. Con el precio actual de 50.000 yenes, ese mismo viaje solo cubre el 55% del coste del pase. Ahora necesitas dos o más trayectos largos en shinkansen más desplazamientos locales en JR para salir ganando.
             </p>
 
             {/* Para quién SÍ vale la pena */}
@@ -384,6 +444,23 @@ const EsJapanRailPass = () => {
                   Si lo compras online, puedes hacerlo hasta el día antes del inicio de la validez. Sin embargo, recomiendo comprarlo al menos una semana antes del viaje para tener tiempo de resolver cualquier problema con el pedido. Una vez en Japón, al canjearlo en la oficina JR, eliges la fecha de inicio de validez (que puede ser cualquier día dentro de los 30 días siguientes al canje).
                 </p>
               </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿Ha vuelto a subir el precio del JR Pass en 2026?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  No. A marzo de 2026, los precios del Japan Rail Pass siguen siendo los mismos que se establecieron en octubre de 2023. El último aumento fue ese 69% de 2023 — de 29.650 a 50.000 yenes para el pase ordinario de 7 días. No hay ningún incremento oficial anunciado para 2026. Te recomiendo revisar la web oficial del JR Pass antes de comprar para confirmar los precios más recientes.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿Merece la pena el JR Pass tras la subida de precios de 2023?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sí, pero solo para los itinerarios adecuados. La subida de 2023 convirtió el pase en una compra discutible para quien solo quiere hacer un viaje de ida y vuelta a Kioto. Para rutas multi-ciudad que cubran Tokio, Kioto, Osaka e Hiroshima en 7 días, los números siguen saliendo. La clave es hacer el cálculo con tu itinerario real — tal y como explicamos en este artículo — en lugar de comprar el pase "por si acaso". Si necesitas ayuda con el cálculo, escríbeme desde la{" "}
+                  <Link to="/es/contact" className="text-accent hover:underline">página de contacto</Link>.
+                </p>
+              </div>
             </div>
 
             {/* Conclusión y CTA */}
@@ -454,6 +531,7 @@ const EsJapanRailPass = () => {
               "name": "Manabu",
             },
             "datePublished": "2026-03-07",
+            "dateModified": "2026-03-14",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",

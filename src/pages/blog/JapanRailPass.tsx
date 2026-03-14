@@ -11,7 +11,7 @@ const JapanRailPass = () => {
     <Layout>
       <SEO
         title="JR Pass 2026: Price Breakdown & Is It Still Worth It?"
-        description="The JR Pass jumped to ¥50,000. A licensed guide compares real route costs for Tokyo-Kyoto, Osaka & more. Find out if the pass saves you money in 2026."
+        description="JR Pass 2026 price increase: from ¥29,650 to ¥50,000. A licensed guide breaks down which itineraries still make it worth buying — and budget alternatives."
         canonicalPath="/blog/japan-rail-pass-worth-it"
       />
 
@@ -88,6 +88,69 @@ const JapanRailPass = () => {
                 The N700 Series Shinkansen — the backbone of Japan's high-speed rail network covered by the JR Pass
               </figcaption>
             </figure>
+
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              JR Pass Price Changes in 2026
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The last JR Pass price increase took effect in October 2023 — a nearly 70% jump that fundamentally changed the math for travelers. As of March 2026, those prices remain unchanged. Here is a complete side-by-side comparison so you can see exactly how much the increase affected each pass type.
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full text-sm text-muted-foreground border-collapse">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Pass Type</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Before Oct 2023</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Current 2026 Price</th>
+                    <th className="text-left py-3 text-foreground font-medium">% Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7-day Ordinary</td>
+                    <td className="py-3 pr-4">¥29,650</td>
+                    <td className="py-3 pr-4">¥50,000</td>
+                    <td className="py-3">+69%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14-day Ordinary</td>
+                    <td className="py-3 pr-4">¥47,250</td>
+                    <td className="py-3 pr-4">¥80,000</td>
+                    <td className="py-3">+69%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">21-day Ordinary</td>
+                    <td className="py-3 pr-4">¥60,450</td>
+                    <td className="py-3 pr-4">¥100,000</td>
+                    <td className="py-3">+65%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7-day Green Car</td>
+                    <td className="py-3 pr-4">¥39,600</td>
+                    <td className="py-3 pr-4">¥70,000</td>
+                    <td className="py-3">+77%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14-day Green Car</td>
+                    <td className="py-3 pr-4">¥64,120</td>
+                    <td className="py-3 pr-4">¥113,000</td>
+                    <td className="py-3">+76%</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4">21-day Green Car</td>
+                    <td className="py-3 pr-4">¥83,390</td>
+                    <td className="py-3 pr-4">¥143,000</td>
+                    <td className="py-3">+71%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">What this means in practice:</strong> at the old price, a single Tokyo–Kyoto round trip (¥27,700) almost paid for the 7-day pass. At ¥50,000, that same round trip covers only 55% of the pass cost. You now need two or more Shinkansen legs — plus local JR rides — to break even.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The pass still offers real value for multi-city itineraries. For Tokyo–Kyoto–Osaka–Hiroshima in 7 days, the numbers still work in its favor. But "when in doubt, buy it" is no longer sound advice. The sections below show you exactly which itineraries tip the scale — and budget-friendly alternatives when yours does not.
+            </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
               How to Calculate If It's Worth It for Your Trip
@@ -211,6 +274,11 @@ const JapanRailPass = () => {
                 <strong className="text-foreground">Highway buses:</strong> For budget travelers, overnight highway buses between Tokyo and Kyoto/Osaka cost ¥3,000–6,000, a fraction of the Shinkansen price. They're comfortable, safe, and save you a night of hotel costs. Not glamorous, but extremely practical.
               </li>
             </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Budget traveler strategy:</strong> the most cost-effective setup for most Tokyo-focused trips is a loaded Suica card for local transit, one or two individually purchased Shinkansen tickets booked through SmartEX for any long-distance hops, and overnight highway buses if you are flexible on timing. This combination will almost always beat the ¥50,000 pass cost unless you are traveling a classic multi-city Golden Route. A{" "}
+              <Link to="/tours" className="text-accent hover:underline">private guided tour</Link>{" "}
+              is another smart way to get expert local access without the overhead of pass logistics — all transportation is handled for you.
+            </p>
 
             <p className="text-muted-foreground leading-relaxed mb-4">
               For planning your Tokyo itinerary specifically, check my{" "}
@@ -277,6 +345,26 @@ const JapanRailPass = () => {
                     Not by default. However, since October 2023, JR Pass holders can purchase a supplementary "Nozomi/Mizuho Ticket" to ride these fastest trains. The supplement costs approximately ¥4,960 for Tokyo–Kyoto. Without the supplement, use the Hikari, which is only about 5 minutes slower on the same route.
                   </p>
                 </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">Did the JR Pass price increase again in 2026?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. As of March 2026, JR Pass prices remain at the levels set in October 2023. The last increase was approximately 70% — from ¥29,650 to ¥50,000 for the 7-day Ordinary pass. There are no officially announced increases for 2026. Always verify the latest prices on the official JR Pass website before purchasing.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">Is the JR Pass still worth buying after the 2023 price increase?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes — but only for the right itinerary. For multi-city routes covering Tokyo, Kyoto, Osaka, and Hiroshima in 7 days, the math still works in the pass's favor. For Tokyo-focused trips or itineraries with just one or two Shinkansen legs, individual tickets or regional passes are usually cheaper. Use the calculation approach in this article rather than buying the pass "just in case."
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">What are the cheapest ways to travel Japan without the JR Pass?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    For budget travelers, the best alternatives are: (1) a Suica IC card for all local and metro travel, (2) individual Shinkansen tickets booked via SmartEX for long-distance trips — early bookings can include discounts, (3) overnight highway buses between Tokyo and Osaka/Kyoto for ¥3,000–6,000, and (4) regional JR passes (like the JR Kansai Area Pass from ¥2,400) if your trip is concentrated in one region. A{" "}
+                    <Link to="/tours" className="text-accent hover:underline">private guided tour</Link>{" "}
+                    removes the logistics entirely — transportation planning is handled as part of the experience.
+                  </p>
+                </div>
               </div>
             </div>
             <ArticleFooterCTA />
@@ -291,7 +379,7 @@ const JapanRailPass = () => {
         headline: "Japan Rail Pass in 2026: Is It Actually Worth It? (With Real Numbers)",
         description: "The JR Pass price went up significantly. Is it still worth buying? A licensed guide does the math for common itineraries.",
         author: { "@type": "Person", name: "Manabu", jobTitle: "National Government Licensed Guide Interpreter", url: "https://tanuki-tabi-travel.com/about" },
-        datePublished: "2026-03-07", dateModified: "2026-03-07",
+        datePublished: "2026-03-07", dateModified: "2026-03-14",
         publisher: { "@type": "Organization", name: "Tanuki Tabi Travel", url: "https://tanuki-tabi-travel.com" },
         mainEntityOfPage: { "@type": "WebPage", "@id": "https://tanuki-tabi-travel.com/blog/japan-rail-pass-worth-it" }
       })}} />
@@ -300,7 +388,10 @@ const JapanRailPass = () => {
         mainEntity: [
           { "@type": "Question", name: "Where do I buy the Japan Rail Pass?", acceptedAnswer: { "@type": "Answer", text: "Since October 2023, the nationwide JR Pass can only be purchased online through the official website or authorized agents. You pick it up at a JR ticket office with your passport." }},
           { "@type": "Question", name: "What's the difference between IC card and JR Pass?", acceptedAnswer: { "@type": "Answer", text: "IC cards are pay-per-ride cards for all transit. JR Pass is unlimited but only covers JR trains. Most travelers need both." }},
-          { "@type": "Question", name: "Does the JR Pass cover the Nozomi Shinkansen?", acceptedAnswer: { "@type": "Answer", text: "Not by default. Since October 2023, JR Pass holders can purchase a supplementary Nozomi/Mizuho Ticket (about ¥4,960 for Tokyo–Kyoto). Without the supplement, use the Hikari, which is only about 5 minutes slower." }}
+          { "@type": "Question", name: "Does the JR Pass cover the Nozomi Shinkansen?", acceptedAnswer: { "@type": "Answer", text: "Not by default. Since October 2023, JR Pass holders can purchase a supplementary Nozomi/Mizuho Ticket (about ¥4,960 for Tokyo–Kyoto). Without the supplement, use the Hikari, which is only about 5 minutes slower." }},
+          { "@type": "Question", name: "Did the JR Pass price increase again in 2026?", acceptedAnswer: { "@type": "Answer", text: "No. As of March 2026, JR Pass prices remain at the levels set in October 2023. The last increase was approximately 70% — from ¥29,650 to ¥50,000 for the 7-day Ordinary pass. There are no officially announced increases for 2026." }},
+          { "@type": "Question", name: "Is the JR Pass still worth buying after the 2023 price increase?", acceptedAnswer: { "@type": "Answer", text: "Yes, but only for the right itinerary. For multi-city routes covering Tokyo, Kyoto, Osaka, and Hiroshima in 7 days, the math still works. For Tokyo-focused trips with one or two Shinkansen legs, individual tickets or regional passes are usually cheaper." }},
+          { "@type": "Question", name: "What are the cheapest ways to travel Japan without the JR Pass?", acceptedAnswer: { "@type": "Answer", text: "Best budget alternatives: a Suica IC card for local travel, individual Shinkansen tickets via SmartEX for long-distance trips, overnight highway buses for ¥3,000–6,000, and regional JR passes like the JR Kansai Area Pass from ¥2,400." }}
         ]
       })}} />
     </Layout>
