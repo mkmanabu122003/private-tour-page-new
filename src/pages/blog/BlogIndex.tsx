@@ -292,6 +292,69 @@ const blogPosts: BlogPost[] = [
     category: "Helpful Guides",
     image: "/images/tour-photos/group-photo.webp",
   },
+  {
+    slug: "tokyo-private-tour-guide-cost",
+    title: "How Much Does a Private Tour Guide Cost in Tokyo? 2026",
+    description:
+      "Tokyo tour guide prices range from ¥15,000 to ¥80,000 per day. A licensed local guide explains what affects the cost and what you actually get.",
+    date: "March 14, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Helpful Guides",
+    image: "/images/tour-photos/group-photo.webp",
+  },
+  {
+    slug: "what-to-expect-private-tour",
+    title: "What to Expect on a Private Tour in Tokyo (From Your Guide)",
+    description:
+      "Meeting point, pace, flexibility, food, rain plans. A Tokyo guide walks you through exactly what happens from start to finish.",
+    date: "March 14, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Helpful Guides",
+    image: "/images/tour-photos/tour-photo-1.webp",
+  },
+  {
+    slug: "first-time-tokyo-local-guide",
+    title: "First Time in Tokyo? Here's What a Local Guide Actually Does",
+    description:
+      "Beyond directions and translations. What a typical day with a Tokyo guide looks like, and an honest take on whether you need one.",
+    date: "March 14, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Helpful Guides",
+    image: "/images/tours/asakusa-backstreet-local.webp",
+  },
+  // New Day Trip Guides
+  {
+    slug: "hakone-day-trip-guide-vs-solo",
+    title: "Hakone Day Trip: Do You Need a Guide or Can You Go Alone? (2026)",
+    description:
+      "The Hakone Loop is doable solo, but timing is tricky. A local guide explains when going alone works and when a guide saves your day.",
+    date: "March 14, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trip Guides",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+  },
+  // New Planning
+  {
+    slug: "tokyo-with-kids-family-tour",
+    title: "Tokyo With Kids: Why Families Are Booking Private Guides (2026)",
+    description:
+      "Strollers on packed trains, meltdowns at shrines, kids who won't eat raw fish. A family-friendly guide shares how to make Tokyo work with children.",
+    date: "March 14, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Planning Your Trip",
+    image: "/images/tours/senso-ji-temple-tokyo.webp",
+  },
+  // New Food Guides
+  {
+    slug: "tsukiji-to-ginza-food-walk",
+    title: "Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off",
+    description:
+      "A 3-hour walking route from the fish market to Ginza's backstreet bars, with the stops locals actually make. No tourist traps.",
+    date: "March 14, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food Guides",
+    image: "/images/blog/tsukiji-food-guide-hero.webp",
+  },
 ];
 
 const categories = [

@@ -281,6 +281,27 @@ const blogPosts: BlogPost[] = [
     category: "Guías Útiles",
     image: "/images/tour-photos/group-photo.webp",
   },
+  {
+    slug: "primera-vez-tokio-guia-local",
+    title: "Primera Vez en Tokio: Lo Que Cambia Tener un Guía Local",
+    description:
+      "¿Tu primer viaje a Tokio? Un guía local te cuenta cómo es un día real con guía, cuándo merece la pena y cuándo puedes ir solo.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/tours/asakusa-kaminarimon-morning.webp",
+  },
+  // Gastronomía Japonesa (new)
+  {
+    slug: "tour-gastronomico-tokio",
+    title: "Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta (Guía Local)",
+    description:
+      "¿Tour de comida en Tokio o explorar solo? Un guía que habla español te cuenta qué esperar, cuánto cuesta y cuándo merece la pena.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/tours/food-tour-tsukiji.webp",
+  },
 ];
 
 const categories = [

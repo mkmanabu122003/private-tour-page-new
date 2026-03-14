@@ -3,7 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
-import { ArticleFooterCTAEs } from "@/components/blog/ArticleFooterCTAEs";
+
 
 const EsCuantoCuestaGuiaPrivadoTokio = () => {
   return (
@@ -422,8 +422,6 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 </Link>
               </div>
             </div>
-
-            <ArticleFooterCTAEs />
 
             {/* FAQ */}
             <div className="mt-16">

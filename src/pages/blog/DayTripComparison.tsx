@@ -3,7 +3,6 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
-import { ArticleFooterCTA } from "@/components/blog/ArticleFooterCTA";
 
 const DayTripComparison = () => {
   return (
@@ -331,7 +330,6 @@ const DayTripComparison = () => {
                 </Link>
               </div>
             </div>
-            <ArticleFooterCTA />
           </article>
         </div>
       </section>
