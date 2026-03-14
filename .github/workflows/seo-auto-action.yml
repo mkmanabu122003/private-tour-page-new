@@ -72,12 +72,15 @@ jobs:
 
           git checkout -b "$BRANCH"
 
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Run Claude Code
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           # Claude Code CLIを使用して実装
-          npx claude-code --print --dangerously-skip-permissions \
+          claude --print --dangerously-skip-permissions \
             "${{ steps.extract.outputs.prompt }}"
 
       - name: Build check
