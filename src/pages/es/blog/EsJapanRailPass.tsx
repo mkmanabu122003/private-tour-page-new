@@ -12,7 +12,7 @@ const EsJapanRailPass = () => {
     <Layout>
       <SEO
         title="Japan Rail Pass 2026: ¿vale la pena? La respuesta honesta de un guía"
-        description="¿Comprar el JR Pass o no? Un guía oficial japonés hace los cálculos reales según tu itinerario y te dice cuándo conviene y cuándo no."
+        description="Subida de precios del JR Pass 2026: de ¥29.650 a ¥50.000. Un guía con licencia compara los costes y explica cuándo sigue mereciendo la pena comprarlo."
         canonicalPath="/es/blog/japan-rail-pass-vale-la-pena"
         hreflang={[
           { lang: "es", path: "/es/blog/japan-rail-pass-vale-la-pena" },
@@ -156,6 +156,66 @@ const EsJapanRailPass = () => {
               El pase Green Car equivale a la primera clase. Los asientos son más amplios, hay más espacio para las piernas y los vagones van menos llenos. ¿Mi opinión honesta? Para la mayoría de los viajeros, el pase ordinario es más que suficiente. Los asientos de clase ordinaria en el shinkansen japonés son ya bastante cómodos (mucho más que cualquier tren europeo en segunda clase). Solo recomiendo el Green Car si tienes algún problema de movilidad, necesitas trabajar durante el trayecto con más espacio, o simplemente quieres darte un lujo. La diferencia de precio es considerable y rara vez justifica la mejora.
             </p>
 
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Comparativa: precios antes y después de la subida de 2023
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para entender por qué la ecuación del JR Pass cambió tan drásticamente, aquí tienes la comparativa completa de todos los tipos de pase antes y después del aumento de octubre de 2023. A fecha de marzo de 2026, estos precios siguen vigentes.
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full text-sm text-muted-foreground border-collapse">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Tipo de pase</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Antes (hasta oct. 2023)</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Precio actual 2026</th>
+                    <th className="text-left py-3 text-foreground font-medium">Subida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7 días Ordinario</td>
+                    <td className="py-3 pr-4">29.650 yen</td>
+                    <td className="py-3 pr-4">50.000 yen</td>
+                    <td className="py-3">+69%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14 días Ordinario</td>
+                    <td className="py-3 pr-4">47.250 yen</td>
+                    <td className="py-3 pr-4">80.000 yen</td>
+                    <td className="py-3">+69%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">21 días Ordinario</td>
+                    <td className="py-3 pr-4">60.450 yen</td>
+                    <td className="py-3 pr-4">100.000 yen</td>
+                    <td className="py-3">+65%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7 días Green Car</td>
+                    <td className="py-3 pr-4">39.600 yen</td>
+                    <td className="py-3 pr-4">70.000 yen</td>
+                    <td className="py-3">+77%</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14 días Green Car</td>
+                    <td className="py-3 pr-4">64.120 yen</td>
+                    <td className="py-3 pr-4">110.000 yen</td>
+                    <td className="py-3">+72%</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4">21 días Green Car</td>
+                    <td className="py-3 pr-4">83.390 yen</td>
+                    <td className="py-3 pr-4">140.000 yen</td>
+                    <td className="py-3">+68%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              El impacto concreto: con el precio antiguo, un solo viaje de ida y vuelta Tokio–Kioto (27.700 yenes) casi amortizaba el pase de 7 días. Con el precio actual de 50.000 yenes, ese mismo viaje solo cubre el 55% del coste del pase. Ahora necesitas dos o más trayectos largos en shinkansen más desplazamientos locales en JR para salir ganando.
+            </p>
+
             {/* Para quién SÍ vale la pena */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Para quién SÍ vale la pena (con cálculos reales)
@@ -232,7 +292,7 @@ const EsJapanRailPass = () => {
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">Hiroshima → Miyajima (ferry JR)</td>
-                    <td className="py-3 pr-4">360 yen (ida y vuelta)</td>
+                    <td className="py-3 pr-4">400 yen (ida y vuelta)</td>
                     <td className="py-3">Incluido</td>
                   </tr>
                   <tr className="border-b border-border/50">
@@ -282,7 +342,7 @@ const EsJapanRailPass = () => {
               Si tu itinerario es Tokio + una excursión
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 1.900 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu (consulta nuestra <Link to="/es/blog/excursion-nikko-desde-tokio" className="text-accent hover:underline">guía de excursión a Nikko</Link> para más detalles). Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 6.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
+              Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 2.080 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu (consulta nuestra <Link to="/es/blog/excursion-nikko-desde-tokio" className="text-accent hover:underline">guía de excursión a Nikko</Link> para más detalles). Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 7.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -324,7 +384,7 @@ const EsJapanRailPass = () => {
               Pases regionales (Kansai, Hokkaido, etc.)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground">JR Kansai Area Pass</strong> (1-4 días, desde 2.400 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región.
+              Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground">JR Kansai Area Pass</strong> (1-4 días, desde 2.800 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -363,7 +423,7 @@ const EsJapanRailPass = () => {
                   ¿Incluye el shinkansen Nozomi?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  El Nozomi (el shinkansen más rápido en la línea Tokaido-Sanyo) y el Mizuho no están incluidos en el pase estándar. Debes usar el Hikari o el Sakura, que hacen más paradas y tardan unos 15-20 minutos más. Sin embargo, desde 2024 existe un <strong className="text-foreground">billete suplementario para Nozomi/Mizuho</strong> que permite a los titulares del JR Pass subir a estos trenes pagando un suplemento (por ejemplo, ¥4,960 para el trayecto Tokio–Kioto). Útil si necesitas mayor flexibilidad de horarios, ya que los Nozomi salen con mucha más frecuencia que los Hikari.
+                  El Nozomi (el shinkansen más rápido en la línea Tokaido-Sanyo) y el Mizuho no están incluidos en el pase estándar. Debes usar el Hikari o el Sakura, que hacen más paradas y tardan unos 15-20 minutos más. Sin embargo, desde octubre de 2023 existe un <strong className="text-foreground">billete suplementario para Nozomi/Mizuho</strong> que permite a los titulares del JR Pass subir a estos trenes pagando un suplemento (por ejemplo, ¥4,960 para el trayecto Tokio–Kioto). Útil si necesitas mayor flexibilidad de horarios, ya que los Nozomi salen con mucha más frecuencia que los Hikari.
                 </p>
               </div>
 
@@ -382,6 +442,23 @@ const EsJapanRailPass = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Si lo compras online, puedes hacerlo hasta el día antes del inicio de la validez. Sin embargo, recomiendo comprarlo al menos una semana antes del viaje para tener tiempo de resolver cualquier problema con el pedido. Una vez en Japón, al canjearlo en la oficina JR, eliges la fecha de inicio de validez (que puede ser cualquier día dentro de los 30 días siguientes al canje).
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿Ha vuelto a subir el precio del JR Pass en 2026?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  No. A marzo de 2026, los precios del Japan Rail Pass siguen siendo los mismos que se establecieron en octubre de 2023. El último aumento fue ese 69% de 2023 — de 29.650 a 50.000 yenes para el pase ordinario de 7 días. No hay ningún incremento oficial anunciado para 2026. Te recomiendo revisar la web oficial del JR Pass antes de comprar para confirmar los precios más recientes.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿Merece la pena el JR Pass tras la subida de precios de 2023?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sí, pero solo para los itinerarios adecuados. La subida de 2023 convirtió el pase en una compra discutible para quien solo quiere hacer un viaje de ida y vuelta a Kioto. Para rutas multi-ciudad que cubran Tokio, Kioto, Osaka e Hiroshima en 7 días, los números siguen saliendo. La clave es hacer el cálculo con tu itinerario real — tal y como explicamos en este artículo — en lugar de comprar el pase "por si acaso". Si necesitas ayuda con el cálculo, escríbeme desde la{" "}
+                  <Link to="/es/contact" className="text-accent hover:underline">página de contacto</Link>.
                 </p>
               </div>
             </div>
@@ -454,6 +531,7 @@ const EsJapanRailPass = () => {
               "name": "Manabu",
             },
             "datePublished": "2026-03-07",
+            "dateModified": "2026-03-14",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
