@@ -1,0 +1,240 @@
+name: PR Fix Command (Claude Code)
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  fix:
+    # PRコメントで /fix から始まるコメントの場合のみ実行
+    if: |
+      github.event.issue.pull_request &&
+      startsWith(github.event.comment.body, '/fix')
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pr-fix-${{ github.event.issue.number }}
+      cancel-in-progress: false
+
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      # 権限チェック: write/maintain/admin のみ許可
+      - name: Check commenter permissions
+        id: auth
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commenter = context.payload.comment.user.login;
+            try {
+              const { data } = await github.rest.repos.getCollaboratorPermissionLevel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                username: commenter
+              });
+              const level = data.permission;
+              if (['admin', 'write', 'maintain'].includes(level)) {
+                core.info(`User ${commenter} has ${level} permission - authorized`);
+                return;
+              }
+              core.setFailed(`User ${commenter} has ${level} permission - not authorized to use /fix`);
+            } catch (error) {
+              core.setFailed(`Failed to check permissions: ${error.message}`);
+            }
+
+      # 処理開始のリアクション（👀）
+      - name: Add eyes reaction
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: 'eyes'
+            });
+
+      # プロンプト抽出 & PRブランチ情報取得
+      - name: Extract prompt and PR details
+        id: extract
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // /fix 以降のテキストをプロンプトとして抽出
+            const body = context.payload.comment.body;
+            const prompt = body.replace(/^\/fix\s*/, '').trim();
+            if (!prompt) {
+              core.setFailed('No prompt provided. Usage: /fix <description of changes>');
+              return;
+            }
+            core.setOutput('prompt', prompt);
+
+            // PR情報からブランチ名を取得
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.issue.number
+            });
+
+            core.setOutput('head_ref', pr.head.ref);
+            core.setOutput('pr_number', context.payload.issue.number);
+
+            // Fork PRへのプッシュはブロック
+            const baseRepo = `${context.repo.owner}/${context.repo.repo}`;
+            if (pr.head.repo.full_name !== baseRepo) {
+              core.setFailed(`Cannot push to forked PR branch (${pr.head.repo.full_name})`);
+            }
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.extract.outputs.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run Claude Code
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FIX_PROMPT: ${{ steps.extract.outputs.prompt }}
+        run: |
+          claude --print --dangerously-skip-permissions \
+            "You are working on a PR fix request. Follow all instructions in CLAUDE.md.
+
+          Important constraints:
+          - Do NOT create branches, do NOT commit, do NOT push, do NOT create PRs — the CI workflow handles all of that automatically
+          - Just make the code changes directly in the working directory
+          - Make the minimum changes necessary to address the request
+          - Ensure the changes will pass npm run build
+
+          Request:
+          ${FIX_PROMPT}"
+
+      - name: Build check
+        run: npm run build
+
+      - name: Commit and push
+        id: push
+        env:
+          FIX_PROMPT: ${{ steps.extract.outputs.prompt }}
+        run: |
+          git config user.name "Claude Code Bot"
+          git config user.email "claude-bot@tanuki-tabi-travel.com"
+          git add -A
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          PR_NUMBER="${{ steps.extract.outputs.pr_number }}"
+          git commit -m "fix: apply /fix command from PR #${PR_NUMBER}
+
+          Requested change: ${FIX_PROMPT}
+
+          Applied automatically by Claude Code Bot."
+
+          git push origin ${{ steps.extract.outputs.head_ref }}
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
+
+      # 成功時: 🚀 リアクション + コメント
+      - name: Report success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ steps.extract.outputs.pr_number }};
+            const hasChanges = '${{ steps.push.outputs.has_changes }}' === 'true';
+
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: 'rocket'
+            });
+
+            if (hasChanges) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: [
+                  `### :rocket: /fix completed`,
+                  '',
+                  `**Request:** ${context.payload.comment.body.replace(/^\/fix\s*/, '').trim()}`,
+                  '',
+                  `Changes committed and pushed to this PR.`,
+                  `Build: :white_check_mark: passed`,
+                  '',
+                  `> Triggered by @${context.payload.comment.user.login} ([comment](${context.payload.comment.html_url}))`,
+                  '',
+                  `[Workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+                ].join('\n')
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: [
+                  `### :warning: /fix completed - no changes`,
+                  '',
+                  `**Request:** ${context.payload.comment.body.replace(/^\/fix\s*/, '').trim()}`,
+                  '',
+                  `Claude Code ran but produced no file changes.`,
+                  '',
+                  `> Triggered by @${context.payload.comment.user.login} ([comment](${context.payload.comment.html_url}))`,
+                  '',
+                  `[Workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+                ].join('\n')
+              });
+            }
+
+      # 失敗時: 👎 リアクション + エラーコメント
+      - name: Report failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.reactions.createForIssueComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id,
+                content: '-1'
+              });
+            } catch (e) {
+              core.warning(`Could not add reaction: ${e.message}`);
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: [
+                `### :x: /fix failed`,
+                '',
+                `**Request:** ${context.payload.comment.body.replace(/^\/fix\s*/, '').trim()}`,
+                '',
+                `The workflow encountered an error. Possible causes:`,
+                `- Claude Code could not fulfill the request`,
+                `- Build failed after changes`,
+                `- Permissions or infrastructure issue`,
+                '',
+                `[View workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+                '',
+                `> Triggered by @${context.payload.comment.user.login} ([comment](${context.payload.comment.html_url}))`
+              ].join('\n')
+            });
