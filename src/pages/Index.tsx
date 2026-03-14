@@ -209,11 +209,11 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {trustSignals.map((signal) => (
               <div key={signal.title} className="text-center group">
-                <signal.icon className="w-7 h-7 text-accent mx-auto mb-4" strokeWidth={1.2} />
-                <h3 className="text-lg font-semibold text-foreground">
+                <signal.icon className="w-8 h-8 text-accent mx-auto mb-4" strokeWidth={1.2} />
+                <h3 className="text-base font-medium tracking-wide text-foreground">
                   {signal.title}
                 </h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
                   {signal.description}
                 </p>
               </div>
