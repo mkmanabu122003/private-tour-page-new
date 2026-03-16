@@ -9,8 +9,8 @@ const TokyoItinerary5Days = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo 5 Day Itinerary: A Licensed Guide's Plan"
-        description="Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients, with honest notes on what to skip."
+        title="Tokyo 5-Day Itinerary: Culture, Food & Hidden Gems (2026)"
+        description="Explore Tokyo in 5 days with a licensed local guide. Best neighborhoods, temples, food spots & timing tips for first-time visitors to Japan."
         canonicalPath="/blog/tokyo-itinerary-5-days"
       />
 
