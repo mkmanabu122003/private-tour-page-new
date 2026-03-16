@@ -9,6 +9,14 @@ function onOpen() {
     .addSeparator()
     .addItem('過去7日分をバックフィル', 'backfillLast7Days')
     .addItem('毎朝トリガーを設定', 'setupDailyTrigger')
+    .addSeparator()
+    .addSubMenu(SpreadsheetApp.getUi().createMenu('Indexing API')
+      .addItem('インデックス状況チェック', 'checkAllIndexingStatus')
+      .addItem('未インデックスURLを送信', 'submitUnindexedUrls')
+      .addItem('特定URLを送信', 'submitSpecificUrls')
+      .addItem('全サイトマップURLを送信', 'submitAllSitemapUrls')
+      .addSeparator()
+      .addItem('チェック進捗をリセット', 'resetIndexingCheck'))
     .addToUi();
 }
 
