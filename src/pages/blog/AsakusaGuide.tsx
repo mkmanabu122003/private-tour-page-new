@@ -8,8 +8,8 @@ const AsakusaGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Asakusa Guide 2026: Beyond Senso-ji (Local Tips)"
-        description="Most visitors miss 90% of Asakusa. A guide with 500+ tours shares hidden alleys, local food spots & timing tricks beyond the Senso-ji crowds."
+        title="Best Things to Do in Asakusa: Sensoji Temple, Street Food & Hidden Spots"
+        description="Discover the best of Tokyo's traditional Asakusa district. From Sensoji Temple to street food stalls, our local guide reveals must-see attractions, best photo spots, and insider tips for your visit."
         canonicalPath="/blog/asakusa-guide-what-to-see"
       />
 
@@ -304,8 +304,8 @@ const AsakusaGuide = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Asakusa Guide: What to See Beyond Senso-ji Temple",
-            "description": "A local guide's insider tips for exploring Asakusa beyond Senso-ji Temple.",
+            "headline": "Best Things to Do in Asakusa: Sensoji Temple, Street Food & Hidden Spots",
+            "description": "Discover the best of Tokyo's traditional Asakusa district. From Sensoji Temple to street food stalls, our local guide reveals must-see attractions, best photo spots, and insider tips for your visit.",
             "image": "https://tanuki-tabi-travel.com/images/blog/asakusa-guide-hero.webp",
             "author": {
               "@type": "Person",

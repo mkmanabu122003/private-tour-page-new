@@ -18,9 +18,9 @@ const blogPosts: BlogPost[] = [
   // Guías de Barrios de Tokio
   {
     slug: "guia-asakusa",
-    title: "Guía de Asakusa: Qué Ver Más Allá del Templo Senso-ji",
+    title: "Lo Mejor de Asakusa: Templo Senso-ji, Comida Callejera y Rincones Escondidos",
     description:
-      "Consejos de un guía local para explorar Asakusa. Más allá del Senso-ji: santuarios escondidos, comida callejera y los mejores horarios para visitar.",
+      "Descubre lo mejor del histórico barrio de Asakusa en Tokio. Del Templo Senso-ji a los puestos de comida callejera, nuestro guía local revela los imprescindibles, los mejores rincones para fotos y consejos exclusivos para tu visita.",
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",

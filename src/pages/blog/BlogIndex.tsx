@@ -17,9 +17,9 @@ const blogPosts: BlogPost[] = [
   // Tokyo Area Guides
   {
     slug: "asakusa-guide-what-to-see",
-    title: "Asakusa Guide: What to See Beyond Senso-ji Temple",
+    title: "Best Things to Do in Asakusa: Sensoji Temple, Street Food & Hidden Spots",
     description:
-      "A local guide's insider tips for exploring Asakusa. Go beyond Senso-ji Temple to discover hidden shrines, street food spots, and the best times to visit.",
+      "Discover the best of Tokyo's traditional Asakusa district. From Sensoji Temple to street food stalls, our local guide reveals must-see attractions, best photo spots, and insider tips for your visit.",
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",

@@ -10,8 +10,8 @@ const EsGuiaAsakusa = () => {
   return (
     <Layout>
       <SEO
-        title="Guía de Asakusa: Qué Ver y Hacer | Guía Local Tokio"
-        description="Guía completa de Asakusa escrita por un guía japonés nativo. Templo Senso-ji, calle Nakamise, gastronomía local y rincones escondidos que solo conocen los locales."
+        title="Lo Mejor de Asakusa: Templo Senso-ji, Comida Callejera y Rincones Escondidos"
+        description="Descubre lo mejor del histórico barrio de Asakusa en Tokio. Del Templo Senso-ji a los puestos de comida callejera, nuestro guía local revela los imprescindibles, los mejores rincones para fotos y consejos exclusivos para tu visita."
         canonicalPath="/es/blog/guia-asakusa"
         hreflang={[
           { lang: "en", path: "/blog/asakusa-guide-what-to-see" },
