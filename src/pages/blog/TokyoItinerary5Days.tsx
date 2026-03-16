@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { TouristTrip } from "@/components/StructuredData/TouristTrip";
 
 const TokyoItinerary5Days = () => {
   return (
@@ -226,6 +227,47 @@ const TokyoItinerary5Days = () => {
           { "@type": "Question", name: "Where should I stay?", acceptedAnswer: { "@type": "Answer", text: "Asakusa: central, affordable, great restaurants. Ueno: museum access. Shinjuku: nightlife and dining variety." }}
         ]
       })}} />
+
+      {/* TouristTrip Schema */}
+      <TouristTrip
+        name="Tokyo 5-Day Itinerary: A Licensed Guide's Plan"
+        description="Not the usual tourist circuit. A licensed Tokyo guide shares the 5-day itinerary he gives his private clients, with honest notes on what to skip."
+        url="https://tanuki-tabi-travel.com/blog/tokyo-itinerary-5-days"
+        touristType="International first-time visitors to Tokyo"
+        duration="P5D"
+        days={[
+          {
+            name: "Day 1: Arrive and Orient – Asakusa & Ueno",
+            description: "Ease into Tokyo with old Shitamachi. Senso-ji before the crowds, then Ueno Park and the Tokyo National Museum.",
+            places: ["Senso-ji Temple, Asakusa", "Nakamise-dori", "Ueno Park", "Tokyo National Museum"],
+            recommendedDuration: "PT8H",
+          },
+          {
+            name: "Day 2: Old Tokyo – Yanaka & Kagurazaka",
+            description: "Explore neighborhoods that survived earthquake and war: Yanaka's traditional lanes, Nezu Shrine, and Kagurazaka's old geisha district.",
+            places: ["Yanaka", "Yanaka Cemetery", "Yanaka Ginza", "Nezu Shrine", "Kagurazaka"],
+            recommendedDuration: "PT10H",
+          },
+          {
+            name: "Day 3: Modern Tokyo – Tsukiji, Shibuya & Harajuku",
+            description: "Breakfast at Tsukiji market, the calm of the Imperial Palace gardens, then the contrasts of Shibuya Crossing and Meiji Shrine's forest.",
+            places: ["Tsukiji Outer Market", "Imperial Palace East Gardens", "Shibuya Crossing", "Harajuku Takeshita Street", "Meiji Shrine"],
+            recommendedDuration: "PT12H",
+          },
+          {
+            name: "Day 4: Day Trip – Kamakura or Nikko",
+            description: "Escape the city: Kamakura's Great Buddha and Zen temples (1 hr from Tokyo) or Nikko's ornate Tosho-gu Shrine and cedar forests (2 hrs).",
+            places: ["Kamakura", "Kotoku-in (Great Buddha)", "Nikko", "Tosho-gu Shrine"],
+            recommendedDuration: "PT10H",
+          },
+          {
+            name: "Day 5: Slow Morning & Departure – Shinjuku",
+            description: "Free observatory at the Metropolitan Government Building, Shinjuku Gyoen garden, souvenir shopping at depachika, then the airport.",
+            places: ["Tokyo Metropolitan Government Building Observatory", "Shinjuku Gyoen", "Shinjuku depachika"],
+            recommendedDuration: "PT6H",
+          },
+        ]}
+      />
     </Layout>
   );
 };
