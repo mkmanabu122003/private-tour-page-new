@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
+[build.processing]
+  [build.processing.html]
+    pretty_urls = false
+
 # 301 redirects: old /routes/ URLs → new /tours/ URLs
 [[redirects]]
   from = "/routes/ginza-the-luxury-shopping-district"
