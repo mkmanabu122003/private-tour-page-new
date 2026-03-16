@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { TouristTrip } from "@/components/StructuredData/TouristTrip";
 
 const Tokyo3DayItinerary = () => {
   return (
@@ -466,6 +467,35 @@ const Tokyo3DayItinerary = () => {
             },
           }),
         }}
+      />
+
+      {/* TouristTrip Schema */}
+      <TouristTrip
+        name="Tokyo 3-Day Itinerary: Day-by-Day Local Guide"
+        description="A day-by-day Tokyo itinerary built from 500+ tours. Day 1: Asakusa & Yanaka. Day 2: Harajuku & Shibuya. Day 3: Tsukiji or a day trip. No wasted time."
+        url="https://tanuki-tabi-travel.com/blog/tokyo-3-day-itinerary"
+        touristType="International first-time visitors to Tokyo"
+        duration="P3D"
+        days={[
+          {
+            name: "Day 1: East Tokyo – History & Tradition",
+            description: "Explore old Tokyo from Asakusa's ancient temples to Yanaka's nostalgic lanes and Ueno's lively Ameyoko market.",
+            places: ["Senso-ji Temple, Asakusa", "Nakamise-dori", "Tokyo Skytree", "Yanaka", "Yanaka Ginza", "Ameyoko Market, Ueno"],
+            recommendedDuration: "PT10H",
+          },
+          {
+            name: "Day 2: West Tokyo – Modern Culture & Energy",
+            description: "Discover the contrasts of modern Tokyo: the sacred forest of Meiji Shrine, Harajuku's youth culture, Shibuya Crossing, and Shinjuku nightlife.",
+            places: ["Meiji Shrine", "Harajuku Takeshita Street", "Omotesando", "Shibuya Crossing", "Shinjuku Golden Gai", "Omoide Yokocho"],
+            recommendedDuration: "PT12H",
+          },
+          {
+            name: "Day 3: Central Tokyo or Day Trip",
+            description: "Choose between central Tokyo (Tsukiji, Imperial Palace East Gardens, Ginza) or a day trip to Kamakura, Hakone, or Nikko.",
+            places: ["Tsukiji Outer Market", "Imperial Palace East Gardens", "Ginza"],
+            recommendedDuration: "PT10H",
+          },
+        ]}
       />
     </Layout>
   );
