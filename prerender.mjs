@@ -25,6 +25,7 @@ const routes = [
   "/faq",
   "/blog",
   "/blog/tokyo-3-day-itinerary",
+  "/blog/tokyo-5-day-itinerary",
   "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo",
   "/blog/kamakura-vs-hakone-vs-nikko-day-trip",
   "/blog/asakusa-guide-what-to-see",
