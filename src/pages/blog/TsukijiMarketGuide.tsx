@@ -9,8 +9,8 @@ const TsukijiMarketGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Tsukiji Outer Market Guide 2026: Yes, It's Still Open (Hours & Tips)"
-        description="Yes, Tsukiji Outer Market is still open in 2026 with 460+ shops. Most stalls open 5AM–2PM, closed Sundays & select Wednesdays. Complete visitor guide by a local guide."
+        title="Tokyo Fish Market Guide 2026: Tsukiji Hours & Tips"
+        description="Tsukiji Outer Market: 460+ shops, open 5AM–2PM, closed Sundays. A local guide's picks for best food, must-try stalls, and tips to skip the crowds."
         canonicalPath="/blog/tsukiji-market-guide"
       />
 

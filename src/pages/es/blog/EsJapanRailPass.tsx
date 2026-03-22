@@ -10,7 +10,7 @@ const EsJapanRailPass = () => {
   return (
     <Layout>
       <SEO
-        title="Japan Rail Pass 2026: ¿vale la pena? La respuesta honesta de un guía"
+        title="JR Pass 2026: ¿Vale la Pena Pagar ¥50,000? Análisis Real"
         description="Subida de precios del JR Pass 2026: de ¥29.650 a ¥50.000. Un guía con licencia compara los costes y explica cuándo sigue mereciendo la pena comprarlo."
         canonicalPath="/es/blog/japan-rail-pass-vale-la-pena"
         hreflang={[

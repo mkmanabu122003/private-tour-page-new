@@ -9,7 +9,7 @@ const EsMercadoTsukijiTokio = () => {
   return (
     <Layout>
       <SEO
-        title="Mercado de Tsukiji en Tokio: qué queda y qué vale la pena ver en 2026"
+        title="Mercado Tsukiji Tokio 2026: Horarios, Qué Comer y Tips"
         description="El mercado interior de Tsukiji cerró en 2018. ¿Qué hay ahora? Un guía oficial explica qué sigue abierto, qué comer y por qué aún vale la visita."
         canonicalPath="/es/blog/mercado-tsukiji-tokio"
         hreflang={[
@@ -314,7 +314,7 @@ const EsMercadoTsukijiTokio = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Si quieres saber más sobre la gastronomía japonesa en general, echa un vistazo a nuestra guía sobre{" "}
-              <Link to="/es/blog/que-se-come-en-japon" className="text-accent hover:underline">
+              <Link to="/es/blog/que-comer-en-japon" className="text-accent hover:underline">
                 qué se come en Japón
               </Link>
               . Y si prefieres explorar Tsukiji con alguien que conoce cada rincón del mercado, te espero en nuestro{" "}

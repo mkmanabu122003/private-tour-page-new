@@ -9,8 +9,8 @@ const JapanRailPass = () => {
   return (
     <Layout>
       <SEO
-        title="JR Pass 2026: Price Breakdown & Is It Still Worth It?"
-        description="JR Pass 2026 price increase: from ¥29,650 to ¥50,000. A licensed guide breaks down which itineraries still make it worth buying — and budget alternatives."
+        title="JR Pass Price Increase 2026: Is ¥50,000 Still Worth It?"
+        description="JR Pass now costs ¥50,000. A local guide's honest math: which 2026 routes still save money, real cost comparisons, and cheaper alternatives."
         canonicalPath="/blog/japan-rail-pass-worth-it"
       />
 
