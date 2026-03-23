@@ -52,6 +52,13 @@ const routes = [
   "/blog/yanaka-tokyo-walking-route",
   "/blog/yanaka-walking-tour-guide",
   "/blog/yokohama-day-trip-from-tokyo",
+  "/blog/tokyo-private-tour-guide-cost",
+  "/blog/tokyo-with-kids-family-tour",
+  "/blog/what-to-expect-private-tour-tokyo",
+  "/blog/hakone-day-trip-guide-vs-solo",
+  "/blog/tsukiji-to-ginza-food-walk",
+  "/blog/first-time-tokyo-local-guide",
+  "/blog/tokyo-cherry-blossom-guide",
   // Spanish pages
   "/es",
   "/es/tours",
@@ -97,6 +104,9 @@ const routes = [
   "/es/blog/shitamachi-tokio",
   "/es/blog/cuanto-cuesta-guia-privado-tokio",
   "/es/blog/vale-la-pena-guia-privado-tokio",
+  "/es/blog/primera-vez-tokio-guia-local",
+  "/es/blog/tour-gastronomico-tokio",
+  "/es/blog/cerezos-en-flor-tokio",
 ];
 
 async function prerender() {

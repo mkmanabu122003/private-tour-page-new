@@ -8,7 +8,7 @@ const DayTripComparison = () => {
   return (
     <Layout>
       <SEO
-        title="Kamakura vs Hakone vs Nikko: Which Day Trip from Tokyo Is Best? | Tanuki Tabi Travel"
+        title="Kamakura vs Hakone vs Nikko: Best Day Trip from Tokyo?"
         description="Can't decide between Kamakura, Hakone, or Nikko? A local guide compares travel time, highlights, and who each trip is best for to help you choose."
         canonicalPath="/blog/kamakura-vs-hakone-vs-nikko-day-trip"
       />

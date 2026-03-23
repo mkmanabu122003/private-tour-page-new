@@ -46,6 +46,7 @@ import WhatToExpectPrivateTour from "./pages/blog/WhatToExpectPrivateTour";
 import HakoneDayTripGuideVsSolo from "./pages/blog/HakoneDayTripGuideVsSolo";
 import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
 import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
+import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
 import EsAsakusa from "./pages/es/tours/EsAsakusa";
@@ -92,6 +93,7 @@ import EsCuantoCuestaGuiaPrivadoTokio from "./pages/es/blog/EsCuantoCuestaGuiaPr
 import EsValeLaPenaGuiaPrivadoTokio from "./pages/es/blog/EsValeLaPenaGuiaPrivadoTokio";
 import EsPrimeraVezTokioGuiaLocal from "./pages/es/blog/EsPrimeraVezTokioGuiaLocal";
 import EsTourGastronomicoTokio from "./pages/es/blog/EsTourGastronomicoTokio";
+import EsCerezosEnFlorTokio from "./pages/es/blog/EsCerezosEnFlorTokio";
 
 const queryClient = new QueryClient();
 
@@ -144,6 +146,7 @@ const AppRoutes = () => (
         <Route path="/blog/hakone-day-trip-guide-vs-solo" element={<HakoneDayTripGuideVsSolo />} />
         <Route path="/blog/tsukiji-to-ginza-food-walk" element={<TsukijiToGinzaFoodWalk />} />
         <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
+        <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
         <Route path="/es/tours" element={<EsTours />} />
@@ -191,6 +194,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/vale-la-pena-guia-privado-tokio" element={<EsValeLaPenaGuiaPrivadoTokio />} />
         <Route path="/es/blog/primera-vez-tokio-guia-local" element={<EsPrimeraVezTokioGuiaLocal />} />
         <Route path="/es/blog/tour-gastronomico-tokio" element={<EsTourGastronomicoTokio />} />
+        <Route path="/es/blog/cerezos-en-flor-tokio" element={<EsCerezosEnFlorTokio />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
