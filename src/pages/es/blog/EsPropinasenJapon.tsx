@@ -9,8 +9,8 @@ const EsPropinasenJapon = () => {
   return (
     <Layout>
       <SEO
-        title="Propinas en Japón: lo que necesitas saber (lo explica un guía local)"
-        description="En Japón no es costumbre dejar propina. La mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento."
+        title="Propinas en Japón 2026: Restaurantes, Hoteles, Taxis y Guías"
+        description="No, en Japón no se deja propina — pero hay 3 excepciones. Un guía local explica la etiqueta en restaurantes, hoteles, taxis y ryokanes."
         canonicalPath="/es/blog/propinas-en-japon"
         hreflang={[
           { lang: "es", path: "/es/blog/propinas-en-japon" },
@@ -261,7 +261,7 @@ const EsPropinasenJapon = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Ya mencioné "arigatou gozaimasu" y "gochisousama deshita". Añade <strong className="text-foreground">"sumimasen"</strong> (disculpe/perdón, usado para llamar la atención del camarero o pedir paso) e <strong className="text-foreground">"itadakimasu"</strong> (se dice antes de comer, como un "buen provecho" pero dirigido a la comida y a quienes la prepararon). Con estas cuatro frases, te garantizo que recibirás sonrisas por todo Japón. Es como cuando un turista japonés llega a España y dice "muchas gracias" o "está delicioso" con acento, te derrite el corazón, ¿verdad? Pues funciona exactamente igual aquí. Si quieres descubrir más sobre la gastronomía japonesa y qué probar durante tu viaje, echa un vistazo a nuestra{" "}
-              <Link to="/es/blog/que-se-come-en-japon" className="text-accent hover:underline">
+              <Link to="/es/blog/que-comer-en-japon" className="text-accent hover:underline">
                 guía sobre qué se come en Japón
               </Link>
               .

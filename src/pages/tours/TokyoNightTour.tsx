@@ -60,8 +60,8 @@ const TokyoNightTour = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Night Tour | Private Evening Experience | Tanuki Tabi Travel"
-        description="Experience Tokyo after dark with a local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots safely with a licensed private guide."
+        title="Tokyo Night Tour 2026: Private Evening Walk with Local Guide"
+        description="Experience Tokyo after dark — neon-lit streets, hidden bars, izakayas & nightlife spots with a licensed private guide. Golden Gai, Omoide Yokocho & more."
         canonicalPath="/tours/tokyo-night-tour"
       />
 

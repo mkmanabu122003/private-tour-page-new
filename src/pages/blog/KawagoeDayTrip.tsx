@@ -8,9 +8,14 @@ const KawagoeDayTrip = () => {
   return (
     <Layout>
       <SEO
-        title="Kawagoe Day Trip from Tokyo: Little Edo Guide"
-        description="Kawagoe is 30 minutes from Tokyo and looks like feudal Japan. A licensed guide explains what to see, what to skip, and how to get the most out of one day."
+        title="Kawagoe Day Trip from Tokyo 2026: Little Edo in 30 Minutes"
+        description="Kawagoe's Edo-era warehouses are just 30 min from Ikebukuro. Complete walking route, best sweet potato treats, and how to avoid weekend crowds."
         canonicalPath="/blog/kawagoe-day-trip-from-tokyo"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Kawagoe Day Trip" },
+        ]}
       />
 
       {/* Hero Image */}

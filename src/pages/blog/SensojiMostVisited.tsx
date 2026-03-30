@@ -8,9 +8,14 @@ const SensojiMostVisited = () => {
   return (
     <Layout>
       <SEO
-        title="Senso-ji Temple: Why 30 Million Visit Each Year (2026)"
-        description="Senso-ji in Asakusa draws 30 million visitors a year. A local guide explains what makes it special, best times to avoid crowds, and what most tourists miss."
+        title="Senso-ji Temple: 30M Annual Visitors — Best Times & Hidden Spots"
+        description="Senso-ji is Tokyo's most visited temple with 30 million visitors/year. Beat the crowds: best hours, secret viewpoints, and 5 things most tourists walk past."
         canonicalPath="/blog/senso-ji-most-visited-temple"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Senso-ji Temple" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -231,7 +236,7 @@ const SensojiMostVisited = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
-          { "@type": "Question", name: "Is Senso-ji really the most visited temple in the world?", acceptedAnswer: { "@type": "Answer", text: "Senso-ji consistently ranks among the most visited religious sites globally, with an estimated 30 million visitors per year. Whether it holds the absolute top spot depends on how you define and count visitors, but it is the most visited temple in Japan and one of the busiest religious sites on Earth." }},
+          { "@type": "Question", name: "How many visitors does Senso-ji Temple get per year?", acceptedAnswer: { "@type": "Answer", text: "Senso-ji receives an estimated 30 million visitors per year, making it the most visited temple in Japan and one of the busiest religious sites on Earth. It consistently ranks among the most visited religious sites globally." }},
           { "@type": "Question", name: "What is the best time of day to visit Senso-ji?", acceptedAnswer: { "@type": "Answer", text: "Before 8 AM is the best time. The grounds are open 24 hours, and the main hall opens at 6 AM (6:30 AM from October to March). Evening visits after 5 PM are also excellent with beautiful illumination." }},
           { "@type": "Question", name: "Does Senso-ji charge an entrance fee?", acceptedAnswer: { "@type": "Answer", text: "No. Senso-ji is completely free to enter, including the main hall. Optional costs include fortune slips (100 yen), incense, and amulets. The Denboin Garden charges a small fee during its limited seasonal opening." }},
           { "@type": "Question", name: "How long should I spend at Senso-ji?", acceptedAnswer: { "@type": "Answer", text: "Most visitors spend 30-45 minutes, but 90 minutes to two hours is recommended. This gives time to explore the main hall, Asakusa Shrine, and the backstreets. Add 30 minutes if Denboin Garden is open." }}

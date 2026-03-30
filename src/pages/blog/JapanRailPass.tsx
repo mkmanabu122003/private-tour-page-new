@@ -9,9 +9,14 @@ const JapanRailPass = () => {
   return (
     <Layout>
       <SEO
-        title="JR Pass Price Increase 2026: Is ¥50,000 Still Worth It?"
-        description="JR Pass now costs ¥50,000. A local guide's honest math: which 2026 routes still save money, real cost comparisons, and cheaper alternatives."
+        title="JR Pass Prices 2026: 7/14/21-Day Costs & Is It Worth It?"
+        description="JR Pass 2026 prices: ¥50,000 (7-day), ¥80,000 (14-day), ¥100,000 (21-day). See real route-by-route cost comparisons and find out if the pass saves money for YOUR itinerary. Updated March 2026."
         canonicalPath="/blog/japan-rail-pass-worth-it"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "JR Pass Prices 2026" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -385,6 +390,7 @@ const JapanRailPass = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
+          { "@type": "Question", name: "How much does the Japan Rail Pass cost in 2026?", acceptedAnswer: { "@type": "Answer", text: "The Japan Rail Pass costs ¥50,000 for 7 days (Ordinary), ¥80,000 for 14 days, and ¥100,000 for 21 days as of 2026. Green Car passes cost ¥70,000, ¥100,000, and ¥130,000 respectively. Prices have not changed since the October 2023 increase." }},
           { "@type": "Question", name: "Where do I buy the Japan Rail Pass?", acceptedAnswer: { "@type": "Answer", text: "Since October 2023, the nationwide JR Pass can only be purchased online through the official website or authorized agents. You pick it up at a JR ticket office with your passport." }},
           { "@type": "Question", name: "What's the difference between IC card and JR Pass?", acceptedAnswer: { "@type": "Answer", text: "IC cards are pay-per-ride cards for all transit. JR Pass is unlimited but only covers JR trains. Most travelers need both." }},
           { "@type": "Question", name: "Does the JR Pass cover the Nozomi Shinkansen?", acceptedAnswer: { "@type": "Answer", text: "Not by default. Since October 2023, JR Pass holders can purchase a supplementary Nozomi/Mizuho Ticket (about ¥4,960 for Tokyo–Kyoto). Without the supplement, use the Hikari, which is only about 5 minutes slower." }},

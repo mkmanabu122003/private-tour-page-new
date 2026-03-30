@@ -8,9 +8,14 @@ const TippingInJapan = () => {
   return (
     <Layout>
       <SEO
-        title="Tipping in Japan: What You Need to Know | Tanuki Tabi"
-        description="Tipping isn't customary in Japan. Most Japanese people aren't used to receiving tips and may feel confused. A licensed guide explains why, and how to show appreciation."
+        title="Tipping in Japan 2026: Restaurants, Hotels, Taxis & Tour Guides"
+        description="No, you don't tip in Japan — but there are 3 exceptions. A local guide explains the etiquette for restaurants, hotels, taxis, and ryokan stays."
         canonicalPath="/blog/tipping-in-japan"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Tipping in Japan" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -326,34 +331,34 @@ const TippingInJapan = () => {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "What happens if I accidentally tip someone in Japan?",
+                name: "Do you tip in Japan?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Nothing bad at all. The server will likely return the money thinking you forgot your change, or the person may look puzzled but won't be upset. Japanese people understand tipping is a foreign custom.",
+                  text: "No. Tipping is not customary in Japan and can even cause confusion. Restaurants, taxis, hotels, and shops do not expect tips. The one exception is kokorozuke at traditional ryokan — a small gift of money in a decorative envelope for your personal attendant.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Is tipping in Japan changing because of tourism?",
+                name: "Is it bad to tip in Japan?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Slowly, in very specific contexts like international hotels. But the broader culture hasn't shifted. The no-tipping norm remains firmly in place at restaurants, taxis, and shops.",
+                  text: "It's not offensive, but it can be awkward. A server may return the money thinking you forgot your change. Japanese people understand tipping is a foreign custom and won't be upset, but the gesture is unnecessary.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Are there any situations where tipping in Japan is acceptable?",
+                name: "What is the average tip in Japan restaurants?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "The closest equivalent is kokorozuke at traditional ryokan, a small gift of money in a decorative envelope given to your personal attendant. Outside of this, tipping is not expected.",
+                  text: "Zero. There is no tipping at restaurants in Japan. Some upscale restaurants add a 10% service charge to the bill, but this is included automatically. You never need to add extra money.",
                 },
               },
               {
                 "@type": "Question",
-                name: "How much should I budget for service charges in Japan?",
+                name: "Should I tip my tour guide in Japan?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Some upscale restaurants add a 10% service charge. Most places include service in the price. Budget zero for tips. Japan's pricing is refreshingly transparent.",
+                  text: "Tips are not expected but appreciated by some guides, especially those working with international visitors. If you'd like to show appreciation, a small gift from your home country or a kind review is often more meaningful than cash.",
                 },
               },
             ],

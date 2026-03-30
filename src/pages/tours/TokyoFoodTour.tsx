@@ -139,12 +139,12 @@ const relatedTours = [
 const relatedArticles = [
   {
     title: "A Food Lover's Guide to Tsukiji Market",
-    path: "/blog/tsukiji-guide-food-lover",
+    path: "/blog/tsukiji-market-guide",
     description: "What to eat, when to go, and how to navigate Tokyo's iconic market.",
   },
   {
     title: "What to See in Asakusa: A Local's Guide",
-    path: "/blog/asakusa-guide-what-to-see",
+    path: "/blog/asakusa-guide",
     description: "Temple visits, street food, and hidden spots most tourists miss.",
   },
 ];
@@ -157,8 +157,8 @@ const TokyoFoodTour = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Private Food Tour | Vegetarian & Custom Menus | Licensed Guide"
-        description="Custom private food tours in Tokyo for all dietary needs. Vegetarian, halal, gluten-free options. Licensed guide with 500+ tours. Book your personalized food experience."
+        title="Tokyo Food Tour 2026: Private Tasting Walk with Local Guide (¥30,000~)"
+        description="Taste Tokyo's best street food, hidden izakayas & local favorites on a private food tour. Vegetarian, halal & gluten-free options. Licensed guide, groups 1-6."
         canonicalPath="/tours/tokyo-food-tour"
       />
 

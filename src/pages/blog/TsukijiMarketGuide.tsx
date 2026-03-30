@@ -12,6 +12,11 @@ const TsukijiMarketGuide = () => {
         title="Tokyo Fish Market Guide 2026: Tsukiji Hours & Tips"
         description="Tsukiji Outer Market: 460+ shops, open 5AM–2PM, closed Sundays. A local guide's picks for best food, must-try stalls, and tips to skip the crowds."
         canonicalPath="/blog/tsukiji-market-guide"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Tsukiji Market Guide" },
+        ]}
       />
 
       {/* Article Header */}
@@ -323,7 +328,7 @@ const TsukijiMarketGuide = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
-          { "@type": "Question", name: "Is Tsukiji Market still open in 2026?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market with over 400 shops, restaurants, and food stalls remains open and thriving." }},
+          { "@type": "Question", name: "Is Tsukiji Outer Market still open after the Toyosu move?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but Tsukiji Outer Market with over 400 shops, restaurants, and food stalls remains open and thriving in 2026." }},
           { "@type": "Question", name: "What time should I arrive at Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Aim for 8:00 AM. Stalls are fully stocked, grills are hot, and crowds are manageable. Most stalls close by 1-2 PM." }},
           { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best. Check the official market calendar." }},
           { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},

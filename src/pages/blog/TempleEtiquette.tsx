@@ -9,9 +9,14 @@ const TempleEtiquette = () => {
   return (
     <Layout>
       <SEO
-        title="Japan Temple & Shrine Etiquette: 8 Rules You Should Know"
-        description="Dress code, prayer steps, purification ritual & common mistakes at Japanese temples and shrines. Explained by a licensed Tokyo guide with 500+ tours."
+        title="How to Behave at Japanese Temples & Shrines: 8 Dos and Don'ts"
+        description="Purification ritual, prayer steps, photo rules & 5 mistakes that offend locals. A licensed guide's etiquette checklist for first-time visitors to Japan."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Temple & Shrine Etiquette" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -574,6 +579,14 @@ const TempleEtiquette = () => {
             "mainEntity": [
               {
                 "@type": "Question",
+                "name": "How should you behave at a Japanese shrine or temple?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Be quiet and respectful. Remove your shoes when entering indoor areas. Don't touch sacred objects. Bow at torii gates. At shrines, follow the ni-hai ni-hakushu ichi-hai prayer ritual (two bows, two claps, one bow). At temples, press palms together and bow without clapping. No flash photography inside halls.",
+                },
+              },
+              {
+                "@type": "Question",
                 "name": "Can I visit temples and shrines for free?",
                 "acceptedAnswer": {
                   "@type": "Answer",
@@ -604,6 +617,27 @@ const TempleEtiquette = () => {
                   "text": "The standard practice at Shinto shrines is ni-hai, ni-hakushu, ichi-hai: two deep bows, two claps, then one final deep bow. Toss a coin into the offering box and ring the bell before praying. At Buddhist temples, press your palms together silently (gassho) and bow without clapping.",
                 },
               },
+            ],
+          }),
+        }}
+      />
+
+      {/* HowTo Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Visit a Japanese Temple or Shrine",
+            "description": "Step-by-step etiquette guide for visiting temples and shrines in Japan, from a licensed Tokyo guide.",
+            "step": [
+              { "@type": "HowToStep", "name": "Bow at the entrance", "text": "At shrines, bow once before passing through the torii gate. Walk along the sides of the path — the center is reserved for the deity." },
+              { "@type": "HowToStep", "name": "Purify at the chōzuya", "text": "Take the ladle with your right hand, pour water over your left hand, switch hands and wash your right, then pour water into your cupped left hand to rinse your mouth. Do not drink directly from the ladle." },
+              { "@type": "HowToStep", "name": "Make an offering", "text": "Toss a coin (¥5 coins are considered lucky) gently into the offering box. Avoid throwing coins hard." },
+              { "@type": "HowToStep", "name": "Pray at a shrine", "text": "Ring the bell if available. Bow deeply twice, clap twice, make your wish silently, then bow once more (ni-hai, ni-hakushu, ichi-hai)." },
+              { "@type": "HowToStep", "name": "Pray at a temple", "text": "At Buddhist temples, press your palms together (gassho) and bow once. Do not clap — clapping is only for Shinto shrines." },
+              { "@type": "HowToStep", "name": "Leave respectfully", "text": "Bow once more when leaving the sacred area. At shrines, turn to face the main hall and bow before exiting through the torii gate." },
             ],
           }),
         }}

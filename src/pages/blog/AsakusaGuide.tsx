@@ -8,9 +8,14 @@ const AsakusaGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Best Things to Do in Asakusa: Sensoji Temple, Street Food & Hidden Spots"
-        description="Discover the best of Tokyo's traditional Asakusa district. From Sensoji Temple to street food stalls, our local guide reveals must-see attractions, best photo spots, and insider tips for your visit."
+        title="Asakusa Guide 2026: Top 12 Things to Do (Local's Picks)"
+        description="A licensed Tokyo guide's ranked list of Asakusa attractions — from Senso-ji Temple to hidden alleyways. Includes what to skip and best times to visit."
         canonicalPath="/blog/asakusa-guide-what-to-see"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Asakusa Guide" },
+        ]}
       />
 
       {/* Hero Image */}

@@ -108,6 +108,7 @@
   from = "/:splat/"
   to = "/:splat"
   status = 301
+  force = true
 
 # SPA catch-all (must be last)
 [[redirects]]
