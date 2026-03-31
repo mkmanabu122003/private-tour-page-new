@@ -17,16 +17,6 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   // Guías de Barrios de Tokio
   {
-    slug: "guia-asakusa",
-    title: "Lo Mejor de Asakusa: Templo Senso-ji, Comida Callejera y Rincones Escondidos",
-    description:
-      "Descubre lo mejor del histórico barrio de Asakusa en Tokio. Del Templo Senso-ji a los puestos de comida callejera, nuestro guía local revela los imprescindibles, los mejores rincones para fotos y consejos exclusivos para tu visita.",
-    date: "25 de febrero de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/asakusa-guide-hero.webp",
-  },
-  {
     slug: "asakusa-tokio-guia",
     title: "Asakusa: Qué Ver, Qué Evitar y Cómo Ir Antes Que los Turistas",
     description:
@@ -55,16 +45,6 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
     image: "/images/blog/shinjuku-guide-hero.webp",
-  },
-  {
-    slug: "guia-tsukiji",
-    title: "Guía de Tsukiji para Amantes de la Gastronomía",
-    description:
-      "Guía local del Mercado Exterior de Tsukiji. Qué comer, qué evitar, mejores horarios y cómo combinarlo con Ginza.",
-    date: "25 de febrero de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/tours/food-tour-tsukiji.webp",
   },
   {
     slug: "mercado-tsukiji-tokio",
@@ -105,7 +85,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/blog/nikko-toshogu-hero.webp",
+    image: "/images/blog/day-trip-comparison-hero.webp",
   },
   {
     slug: "excursion-nikko-desde-tokio",
@@ -211,16 +191,6 @@ const blogPosts: BlogPost[] = [
   },
   // Gastronomía Japonesa
   {
-    slug: "que-se-come-en-japon",
-    title: "¿Qué Se Come en Japón? La Guía de Comida Japonesa Que Nadie Más Te Da",
-    description:
-      "Más allá del sushi y el ramen: un guía local japonés te explica qué comer realmente en Japón, dónde encontrarlo y qué evitar como turista.",
-    date: "7 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/tours/tokyo-food-tour-hero.webp",
-  },
-  {
     slug: "que-comer-en-japon",
     title: "Qué Comer en Japón: 15 Platos Que No Puedes Perderte",
     description:
@@ -251,16 +221,6 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/tsukiji-tamagoyaki.webp",
   },
   // Guías Útiles
-  {
-    slug: "vale-la-pena-contratar-guia",
-    title: "¿Vale la Pena Contratar un Guía Turístico Privado en Tokio?",
-    description:
-      "¿Merece la pena un guía privado en Tokio? Un guía con licencia explica cuándo tiene sentido, qué obtienes y quién se beneficia más.",
-    date: "25 de febrero de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/tour-photos/tour-photo-2.webp",
-  },
   {
     slug: "vale-la-pena-guia-privado-tokio",
     title: "¿Vale la Pena un Guía Privado en Tokio? Mi Respuesta Sin Rodeos",

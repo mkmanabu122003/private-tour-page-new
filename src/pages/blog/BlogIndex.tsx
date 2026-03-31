@@ -16,16 +16,6 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   // Tokyo Area Guides
   {
-    slug: "asakusa-guide-what-to-see",
-    title: "Best Things to Do in Asakusa: Sensoji Temple, Street Food & Hidden Spots",
-    description:
-      "Discover the best of Tokyo's traditional Asakusa district. From Sensoji Temple to street food stalls, our local guide reveals must-see attractions, best photo spots, and insider tips for your visit.",
-    date: "February 25, 2026",
-    author: "Manabu, Licensed Tour Guide",
-    category: "Tokyo Area Guides",
-    image: "/images/blog/asakusa-guide-hero.webp",
-  },
-  {
     slug: "shibuya-harajuku-guide",
     title: "Shibuya & Harajuku: A Local Guide to Tokyo's Modern Side",
     description:
@@ -45,16 +35,6 @@ const blogPosts: BlogPost[] = [
     category: "Tokyo Area Guides",
     image: "/images/blog/shinjuku-guide-hero.webp",
   },
-  {
-    slug: "tsukiji-guide-food-lover",
-    title: "Tsukiji Market Guide: A Food Lover's Walkthrough",
-    description:
-      "A local guide to Tsukiji Outer Market. What to eat, what to skip, best times to visit, and how to combine with Ginza for a perfect Tokyo food day.",
-    date: "February 25, 2026",
-    author: "Manabu, Licensed Tour Guide",
-    category: "Tokyo Area Guides",
-    image: "/images/tours/food-tour-tsukiji.webp",
-  },
   // Day Trip Guides
   {
     slug: "kamakura-vs-hakone-vs-nikko-day-trip",
@@ -64,7 +44,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
-    image: "/images/blog/nikko-toshogu-hero.webp",
+    image: "/images/blog/day-trip-comparison-hero.webp",
   },
   // Planning Your Trip
   {
@@ -238,7 +218,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
-    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+    image: "/images/blog/shinkansen-n700-tokyo-station.webp",
   },
   {
     slug: "tipping-in-japan",
@@ -300,7 +280,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
-    image: "/images/tour-photos/group-photo.webp",
+    image: "/images/tour-photos/tour-photo-2.webp",
   },
   {
     slug: "what-to-expect-private-tour",
@@ -320,7 +300,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
-    image: "/images/tours/asakusa-backstreet-local.webp",
+    image: "/images/tour-photos/tour-photo-3.webp",
   },
   // New Day Trip Guides
   {
@@ -342,9 +322,19 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
-    image: "/images/tours/senso-ji-temple-tokyo.webp",
+    image: "/images/tours/asakusa-nakamise-street.webp",
   },
   // New Food Guides
+  {
+    slug: "tsukiji-vs-toyosu",
+    title: "Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?",
+    description:
+      "Tsukiji Outer Market (street food, 460+ stalls) vs Toyosu Fish Market (tuna auction, modern facility). A local guide compares both and tells you which to choose.",
+    date: "March 31, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food Guides",
+    image: "/images/blog/tsukiji-market-seafood-stalls.webp",
+  },
   {
     slug: "tsukiji-to-ginza-food-walk",
     title: "Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off",
