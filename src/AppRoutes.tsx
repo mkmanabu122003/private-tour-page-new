@@ -47,6 +47,7 @@ import HakoneDayTripGuideVsSolo from "./pages/blog/HakoneDayTripGuideVsSolo";
 import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
 import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
+import TsukijiVsToyosu from "./pages/blog/TsukijiVsToyosu";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
 import EsAsakusa from "./pages/es/tours/EsAsakusa";
@@ -147,6 +148,7 @@ const AppRoutes = () => (
         <Route path="/blog/tsukiji-to-ginza-food-walk" element={<TsukijiToGinzaFoodWalk />} />
         <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
         <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
+        <Route path="/blog/tsukiji-vs-toyosu" element={<TsukijiVsToyosu />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
         <Route path="/es/tours" element={<EsTours />} />

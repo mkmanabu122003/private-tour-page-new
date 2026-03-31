@@ -13,7 +13,7 @@ const EsKamakura = () => {
   return (
     <Layout>
       <SEO
-        title="Excursión Privada a Kamakura en Español desde Tokio"
+        title="Excursión a Kamakura desde Tokio 2026: Gran Buda y Templos (¥50,000~)"
         description="Excursión privada a Kamakura con guía japonés nativo en español. Gran Buda, templos ancestrales y costa japonesa en un día completo desde Tokio. Desde ¥50,000."
         canonicalPath="/es/tours/kamakura-day-trip"
         hreflang={[

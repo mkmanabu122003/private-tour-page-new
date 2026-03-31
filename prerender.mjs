@@ -59,6 +59,7 @@ const routes = [
   "/blog/tsukiji-to-ginza-food-walk",
   "/blog/first-time-tokyo-local-guide",
   "/blog/tokyo-cherry-blossom-guide",
+  "/blog/tsukiji-vs-toyosu",
   // Spanish pages
   "/es",
   "/es/tours",

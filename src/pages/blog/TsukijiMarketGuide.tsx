@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
 
 const TsukijiMarketGuide = () => {
   return (
@@ -65,11 +66,13 @@ const TsukijiMarketGuide = () => {
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Quick Answer Box — Featured Snippet target */}
-            <div className="bg-accent/10 border border-accent/30 rounded-lg p-6 mb-10">
+            <div className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg mb-8">
+              <p className="font-semibold text-foreground mb-2">Quick Answer</p>
               <p className="text-foreground leading-relaxed">
-                <strong>Is Tsukiji Outer Market still open in 2026?</strong> Yes! Tsukiji Outer Market remains fully open with 460+ shops, restaurants, and street food stalls. Only the inner wholesale auction moved to Toyosu Fish Market in October 2018. The outer market operates daily from around 5:00 AM, with most shops closing by 2:00 PM. Closed on Sundays and select Wednesdays — check the{" "}
-                <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official market calendar</a>
-                {" "}before your visit.
+                <strong>Yes, Tsukiji Outer Market is open in 2026</strong> with 460+ shops and food stalls. Only the inner wholesale auction moved to Toyosu in 2018. Hours: most shops open around 5:00 AM and close by 2:00 PM. Closed Sundays and select Wednesdays.
+              </p>
+              <p className="text-muted-foreground mt-3 text-sm italic">
+                But here's what most guides don't tell you: half the best stalls close by 11 AM, and the vendors worth visiting aren't on the main street. A local guide's hour-by-hour strategy below.
               </p>
             </div>
 
@@ -208,6 +211,11 @@ const TsukijiMarketGuide = () => {
             </figure>
 
             <InlineCTA message="Want to explore Tsukiji with a guide who knows every stall?" href="/tours/tsukiji-ginza" />
+
+            <GuideInsiderNote date="March 28, 2026">
+              <p>The market is noticeably busier this spring compared to last year — cherry blossom season is overlapping with spring break travel. If you're visiting in late March or April, arrive by 7:30 AM instead of the usual 8:00 AM.</p>
+              <p>Two stalls I'm currently recommending to clients: the grilled mochi shop in the second alley (just reopened after renovation) and the new craft sake tasting counter near the east entrance — they offer 3-pour flights for ¥500.</p>
+            </GuideInsiderNote>
 
             {/* Section 4: Getting There */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

@@ -2,15 +2,21 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const YokohamaDayTrip = () => {
   return (
     <Layout>
       <SEO
-        title="Yokohama Day Trip from Tokyo: Worth It? | Tanuki Tabi"
-        description="Yokohama is 30 minutes from Tokyo. But is it worth a full day? A licensed guide gives an honest answer, and what to combine it with."
+        title="Yokohama Day Trip from Tokyo 2026: Is It Worth Visiting?"
+        description="Yokohama is just 30 min from Tokyo — but is it worth a full day? Chinatown, Ramen Museum, waterfront views & what to combine it with. A local guide's honest verdict."
         canonicalPath="/blog/yokohama-day-trip-from-tokyo"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Yokohama Day Trip" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -51,6 +57,10 @@ const YokohamaDayTrip = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            <QuickAnswer
+              answer="Yes, Yokohama is worth visiting — it's only 30 minutes from Tokyo and feels like a completely different city. Best combined with a half-day: morning in Yokohama, afternoon in Kamakura."
+              hook="But most visitors waste time on the wrong attractions. Here's exactly what's worth seeing and what to skip, from a guide who takes clients there regularly."
+            />
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "Should I bother with Yokohama? It's basically just another part of Tokyo, right?" I get asked this more than almost any other day trip question. And I understand the hesitation. Yokohama is only 30 minutes from central Tokyo by train. When you look at a map, the two cities blur together in one continuous sprawl. So why would you spend a precious day of your trip going somewhere that feels like it's barely outside Tokyo?
             </p>
@@ -216,6 +226,12 @@ const YokohamaDayTrip = () => {
                   </p>
                 </div>
                 <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">How long do you need in Yokohama?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    3-4 hours for the main attractions (Chinatown, waterfront, Ramen Museum). A full day if you add the Cup Noodles Museum, Sankeien Garden, or combine with Kamakura.
+                  </p>
+                </div>
+                <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">What's the best food to try in Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yokohama Chinatown is the main draw: nikuman (steamed pork buns), xiaolongbao (soup dumplings), Peking duck, and mango pudding. Outside Chinatown, try Yokohama's local ramen style, Iekei ramen, a rich tonkotsu-soy blend that's thicker and more robust than Tokyo-style ramen. For something unique, the Shin-Yokohama Ramen Museum has eight ramen shops under one roof, each representing a different regional style.
@@ -241,9 +257,10 @@ const YokohamaDayTrip = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
-          { "@type": "Question", name: "Is a yokohama day trip from tokyo worth it?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially if you're interested in food, international history, or want an easy trip. Yokohama is only 30 minutes from Tokyo with a noticeably different atmosphere. Plan a full day for the complete experience or a half day for highlights." }},
+          { "@type": "Question", name: "Is Yokohama worth a day trip from Tokyo?", acceptedAnswer: { "@type": "Answer", text: "Yes. Yokohama is 30 minutes from central Tokyo and offers Chinatown, the Cup Noodles Museum, harbor views, and a completely different atmosphere from Tokyo. A half-day is enough for the highlights." }},
           { "@type": "Question", name: "How do I get from Tokyo to Yokohama?", acceptedAnswer: { "@type": "Answer", text: "JR Tokaido Line from Tokyo Station (25 minutes, JR Pass covered), JR Yokosuka Line from Shinagawa (25 minutes), or Tokyu Toyoko Line from Shibuya (30 minutes). The Minatomirai Line takes you directly to the waterfront." }},
-          { "@type": "Question", name: "Can I visit Yokohama and Kamakura in the same day?", acceptedAnswer: { "@type": "Answer", text: "Yes. They're on the same train line, 25 minutes apart. Spend the morning in one and the afternoon in the other for a full 8-9 hour day trip." }},
+          { "@type": "Question", name: "Can I visit Yokohama and Kamakura in the same day?", acceptedAnswer: { "@type": "Answer", text: "Yes, and it's a great combination. Spend the morning in Yokohama (Chinatown + waterfront) then take the 30-minute train to Kamakura for the afternoon (Great Buddha + temples)." }},
+          { "@type": "Question", name: "How long do you need in Yokohama?", acceptedAnswer: { "@type": "Answer", text: "3-4 hours for the main attractions (Chinatown, waterfront, Ramen Museum). A full day if you add the Cup Noodles Museum, Sankeien Garden, or combine with Kamakura." }},
           { "@type": "Question", name: "What's the best food to try in Yokohama?", acceptedAnswer: { "@type": "Answer", text: "Chinatown staples: nikuman, xiaolongbao, Peking duck. Outside Chinatown: Iekei ramen (Yokohama's local style). The Shin-Yokohama Ramen Museum has eight regional ramen shops under one roof." }}
         ]
       })}} />

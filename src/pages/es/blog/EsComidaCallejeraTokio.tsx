@@ -9,8 +9,8 @@ const EsComidaCallejeraTokio = () => {
   return (
     <Layout>
       <SEO
-        title="Comida callejera en Tokio: lo que come un guía local (y dónde encontrarlo)"
-        description="Takoyaki, yakitori, taiyaki... Un guía oficial de Tokio te lleva por los mejores puestos de comida callejera en Asakusa, Yanaka y más."
+        title="Comida Callejera en Tokio 2026: Dónde Comer Según un Guía Local"
+        description="Takoyaki, yakitori, taiyaki y más. Los mejores puestos de comida callejera en Asakusa, Yanaka y Tsukiji. Guía de un local con mapa y precios."
         canonicalPath="/es/blog/comida-callejera-tokio"
         hreflang={[
           { lang: "es", path: "/es/blog/comida-callejera-tokio" },
@@ -35,13 +35,15 @@ const EsComidaCallejeraTokio = () => {
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
+                <li>/</li>
+                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li>/</li>
+                <li className="text-foreground">Comida Callejera en Tokio</li>
+              </ol>
+            </nav>
             <p className="text-label text-accent mb-3">Gastronomía Japonesa</p>
             <h1 className="heading-display text-foreground">
               Comida Callejera en Tokio: Lo Que Come un Guía Local (y Dónde Encontrarlo)
@@ -73,11 +75,11 @@ const EsComidaCallejeraTokio = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Si ya has leído nuestra{" "}
-              <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">
+              <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">
                 guía completa de Asakusa
               </Link>
               {" "}o nuestro artículo sobre{" "}
-              <Link to="/es/blog/que-se-come-en-japon" className="text-accent hover:underline">
+              <Link to="/es/blog/que-comer-en-japon" className="text-accent hover:underline">
                 qué se come en Japón
               </Link>
               , este post es el complemento perfecto. Aquí vamos al detalle callejero, al puesto con humo, al snack de 200 yenes que te cambia el día.
@@ -306,7 +308,7 @@ const EsComidaCallejeraTokio = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Comida Callejera en Tokio: Lo Que Come un Guía Local (y Dónde Encontrarlo)",
-            "description": "Takoyaki, yakitori, taiyaki... Un guía oficial de Tokio te lleva por los mejores puestos de comida callejera en Asakusa, Yanaka y más.",
+            "description": "Takoyaki, yakitori, taiyaki y más. Los mejores puestos de comida callejera en Asakusa, Yanaka y Tsukiji. Guía de un local con mapa y precios.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

@@ -10,8 +10,8 @@ const EsGuiaShinjuku = () => {
   return (
     <Layout>
       <SEO
-        title="Guía de Shinjuku: El Corazón de Tokio | Guía Local"
-        description="La guía completa de Shinjuku escrita por un guía de Tokio con licencia. Lugares ocultos, mejores horarios, cómo sobrevivir a la estación y consejos que no encontrarás en ninguna guía."
+        title="Qué Ver en Shinjuku 2026: Guía Local de Barrio"
+        description="Shinjuku es mucho más que rascacielos y neón. Un guía oficial te lleva por Golden Gai, Omoide Yokocho, el mirador gratuito y rincones que no salen en las guías."
         canonicalPath="/es/blog/guia-shinjuku"
         hreflang={[
           { lang: "en", path: "/blog/shinjuku-guide" },
@@ -24,13 +24,15 @@ const EsGuiaShinjuku = () => {
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
+                <li>/</li>
+                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li>/</li>
+                <li className="text-foreground">Guía de Shinjuku</li>
+              </ol>
+            </nav>
             <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
             <h1 className="heading-display text-foreground">
               Guía de Shinjuku: El Corazón Iluminado de Neón de Tokio

@@ -9,7 +9,7 @@ const TempleEtiquette = () => {
   return (
     <Layout>
       <SEO
-        title="How to Behave at Japanese Temples & Shrines: 8 Dos and Don'ts"
+        title="Japanese Temple & Shrine Etiquette: 8 Dos and Don'ts"
         description="Purification ritual, prayer steps, photo rules & 5 mistakes that offend locals. A licensed guide's etiquette checklist for first-time visitors to Japan."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
         breadcrumbs={[

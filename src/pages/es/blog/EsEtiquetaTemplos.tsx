@@ -11,7 +11,7 @@ const EsEtiquetaTemplos = () => {
     <Layout>
       <SEO
         title="Cómo Comportarse en Templos y Santuarios de Japón: 8 Reglas"
-        description="Ritual de purificación, pasos para rezar, normas de fotos y 5 errores que molestan a los locales. Guía de etiqueta de un guía oficial para tu primera visita a Japón."
+        description="Ritual de purificación, pasos para rezar, normas de fotos y 5 errores que molestan a los locales. Consejos de etiqueta de un guía oficial para tu primera visita a Japón."
         canonicalPath="/es/blog/etiqueta-templos-santuarios"
         hreflang={[
           { lang: "en", path: "/blog/japan-temple-shrine-etiquette" },

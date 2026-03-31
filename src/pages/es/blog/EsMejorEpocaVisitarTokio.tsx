@@ -9,13 +9,18 @@ const EsMejorEpocaVisitarTokio = () => {
   return (
     <Layout>
       <SEO
-        title="¿Cuándo es la Mejor Época para Visitar Tokio? | Guía Local"
-        description="Guía por temporadas para visitar Tokio escrita por un guía japonés nativo. Cerezos, festivales de verano, otoño y Tokio en invierno, todo explicado desde dentro."
+        title="Mejor Época para Visitar Tokio 2026: Guía Mes a Mes"
+        description="Mejores meses: marzo-abril (cerezos) y octubre-noviembre (otoño). Más barato: enero. Peor: agosto. Guía mes a mes de un guía local con clima, eventos y consejos."
         canonicalPath="/es/blog/mejor-epoca-visitar-tokio"
         hreflang={[
           { lang: "en", path: "/blog/best-time-to-visit-tokyo" },
           { lang: "es", path: "/es/blog/mejor-epoca-visitar-tokio" },
           { lang: "x-default", path: "/blog/best-time-to-visit-tokyo" },
+        ]}
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/es/blog" },
+          { name: "Mejor Época para Visitar Tokio" },
         ]}
       />
 
@@ -323,8 +328,8 @@ const EsMejorEpocaVisitarTokio = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "La Mejor Época para Visitar Tokio: Guía Mes a Mes",
-            "description": "Guía por temporadas para visitar Tokio escrita por un guía japonés nativo. Cerezos, festivales de verano, otoño y Tokio en invierno, todo explicado desde dentro.",
+            "headline": "Mejor Época para Visitar Tokio 2026: Guía Mes a Mes",
+            "description": "Mejores meses: marzo-abril (cerezos) y octubre-noviembre (otoño). Más barato: enero. Peor: agosto. Guía mes a mes de un guía local con clima, eventos y consejos.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

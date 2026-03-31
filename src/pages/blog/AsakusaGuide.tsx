@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
 
 const AsakusaGuide = () => {
   return (
@@ -296,6 +297,11 @@ const AsakusaGuide = () => {
                 </Link>
               </div>
             </div>
+            <GuideInsiderNote date="March 27, 2026">
+              <p>Cherry blossom season is starting in Asakusa — the trees along the Sumida River are beginning to bloom. If you're visiting in the next two weeks, walk north along the river after visiting Senso-ji for some of the best (and least crowded) sakura viewing in central Tokyo.</p>
+              <p>Also worth noting: the small senbei (rice cracker) shop on the back street behind Demboin-dori has started offering a new matcha-flavored cracker that's become my go-to recommendation for clients looking for an edible souvenir.</p>
+            </GuideInsiderNote>
+
           </article>
         </div>
       </section>

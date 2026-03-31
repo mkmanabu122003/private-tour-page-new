@@ -10,8 +10,8 @@ const EsItinerarioTokio5Dias = () => {
   return (
     <Layout>
       <SEO
-        title="Itinerario Tokio 5 días: la ruta que yo haría como guía (día a día)"
-        description="El itinerario de Tokio para 5 días que recomiendo a mis clientes: barrios, comida, transporte y los errores que evitar en cada día."
+        title="Itinerario en Tokio 5 Días 2026: Plan Día a Día (Guía Local)"
+        description="Día 1: Asakusa y Ueno. Día 2: Tsukiji y Ginza. Día 3: Shibuya y Harajuku. Día 4: Excursión. Día 5: Joyas ocultas. Ruta probada de un guía oficial."
         canonicalPath="/es/blog/itinerario-tokio-5-dias"
         hreflang={[
           { lang: "es", path: "/es/blog/itinerario-tokio-5-dias" },
@@ -111,7 +111,7 @@ const EsItinerarioTokio5Dias = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Empieza tu primer día en Tokio llegando al templo Senso-ji antes de las 8:00 AM. A esa hora, la calle Nakamise-dori todavía tiene las persianas bajadas y el recinto del templo está casi vacío. Puedes caminar por el enorme portón Kaminarimon sin pelearte por una foto y sentir la atmósfera real del lugar. Senso-ji es el templo más antiguo de Tokio (fundado en el año 645) y, aunque es tremendamente turístico al mediodía, a primera hora conserva una dignidad que merece la pena experimentar. Para más detalles sobre este barrio, consulta mi{" "}
-              <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">
+              <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">
                 guía completa de Asakusa
               </Link>.
             </p>

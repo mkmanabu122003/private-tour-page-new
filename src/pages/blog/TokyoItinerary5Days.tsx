@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { TouristTrip } from "@/components/StructuredData/TouristTrip";
@@ -10,9 +11,14 @@ const TokyoItinerary5Days = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo 5-Day Itinerary: Culture, Food & Hidden Gems (2026)"
-        description="Explore Tokyo in 5 days with a licensed local guide. Best neighborhoods, temples, food spots & timing tips for first-time visitors to Japan."
+        title="Tokyo 5-Day Itinerary 2026: Day-by-Day Plan (Local Guide)"
+        description="Day 1: Asakusa & Ueno. Day 2: Tsukiji & Ginza. Day 3: Shibuya & Harajuku. Day 4: Day trip. Day 5: Hidden gems. A licensed guide's tested 5-day route."
         canonicalPath="/blog/tokyo-itinerary-5-days"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Tokyo 5-Day Itinerary" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -53,6 +59,10 @@ const TokyoItinerary5Days = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            <QuickAnswer
+              answer="5 days in Tokyo: Day 1 — Asakusa & Ueno (traditional). Day 2 — Tsukiji & Ginza (food & shopping). Day 3 — Shibuya & Harajuku (pop culture). Day 4 — Day trip (Kamakura, Hakone, or Nikko). Day 5 — Hidden gems & local neighborhoods."
+              hook="But the biggest mistake in online itineraries is trying to cover too much. A local guide who plans 500+ trips explains the 'depth beats breadth' approach below."
+            />
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               After planning over 500 private tours in Tokyo, I've noticed the same mistake in nearly every 5-day Tokyo itinerary I see online: they try to cover everything. Shibuya on Monday, Asakusa on Tuesday, Harajuku on Wednesday, like checking boxes on a list. The result is exhausting, shallow, and leaves visitors feeling like they "saw Tokyo" without ever understanding it.
             </p>
@@ -268,6 +278,20 @@ const TokyoItinerary5Days = () => {
           },
         ]}
       />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Spend 5 Days in Tokyo",
+        "description": "A day-by-day Tokyo itinerary planned by a licensed local guide, designed for depth over breadth.",
+        "step": [
+          { "@type": "HowToStep", "name": "Day 1: Traditional Tokyo", "text": "Explore Asakusa (Senso-ji Temple, Nakamise Street), walk to Ueno Park, and end in Yanaka's nostalgic backstreets." },
+          { "@type": "HowToStep", "name": "Day 2: Food & Markets", "text": "Start early at Tsukiji Outer Market for breakfast, walk to Ginza for shopping and lunch, explore Nihonbashi in the afternoon." },
+          { "@type": "HowToStep", "name": "Day 3: Pop Culture & Fashion", "text": "Morning at Meiji Shrine and Harajuku's Takeshita Street, afternoon in Shibuya (Crossing, Center-gai), evening in Shinjuku." },
+          { "@type": "HowToStep", "name": "Day 4: Day Trip", "text": "Choose Kamakura (temples & Great Buddha), Hakone (Mt. Fuji views & hot springs), or Nikko (UNESCO shrines & nature)." },
+          { "@type": "HowToStep", "name": "Day 5: Hidden Gems", "text": "Imperial Palace East Gardens in the morning, then explore a local neighborhood like Shimokitazawa, Yanaka, or Koenji." }
+        ]
+      })}} />
     </Layout>
   );
 };

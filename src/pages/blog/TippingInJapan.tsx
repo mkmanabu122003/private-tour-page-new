@@ -3,12 +3,13 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { QuickAnswer } from "@/components/blog/QuickAnswer";
 
 const TippingInJapan = () => {
   return (
     <Layout>
       <SEO
-        title="Tipping in Japan 2026: Restaurants, Hotels, Taxis & Tour Guides"
+        title="Tipping in Japan 2026: Restaurants, Hotels & Taxis"
         description="No, you don't tip in Japan — but there are 3 exceptions. A local guide explains the etiquette for restaurants, hotels, taxis, and ryokan stays."
         canonicalPath="/blog/tipping-in-japan"
         breadcrumbs={[
@@ -68,6 +69,11 @@ const TippingInJapan = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            <QuickAnswer
+              answer="The average tip in Japan is ¥0. Tipping is not customary and can cause confusion — most Japanese workers will try to return the money. This applies to restaurants, taxis, hotels, and shops."
+              hook="But there are 3 specific situations where showing gratitude IS expected — and getting it wrong can be awkward. A local guide explains the full etiquette below."
+            />
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               It was a warm October afternoon in Asakusa. I had just finished a four-hour tour with a couple from Chicago. We'd walked through Senso-ji, explored the backstreets, eaten fresh senbei from a 200-year-old shop, and I'd explained the Edo-period merchant class system while standing on the exact spot where the old fish market used to be. They were beaming. As we said goodbye near Kaminarimon Gate, the husband reached into his wallet and pulled out a ¥5,000 note.

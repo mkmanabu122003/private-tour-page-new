@@ -9,8 +9,8 @@ const EsMercadoTsukijiTokio = () => {
   return (
     <Layout>
       <SEO
-        title="Mercado Tsukiji Tokio 2026: Horarios, Qué Comer y Tips"
-        description="El mercado interior de Tsukiji cerró en 2018. ¿Qué hay ahora? Un guía oficial explica qué sigue abierto, qué comer y por qué aún vale la visita."
+        title="Mercado Tsukiji 2026: Horario, Qué Comer y Cómo Llegar"
+        description="El Mercado Tsukiji sigue abierto en 2026 con 460+ puestos. Horario: 5:00-14:00, cerrado domingos. Guía local con los mejores puestos y consejos."
         canonicalPath="/es/blog/mercado-tsukiji-tokio"
         hreflang={[
           { lang: "es", path: "/es/blog/mercado-tsukiji-tokio" },
@@ -35,13 +35,15 @@ const EsMercadoTsukijiTokio = () => {
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
+                <li>/</li>
+                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li>/</li>
+                <li className="text-foreground">Mercado Tsukiji</li>
+              </ol>
+            </nav>
             <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
             <h1 className="heading-display text-foreground">
               Mercado de Tsukiji en Tokio: Qué Queda y Qué Vale la Pena Ver en 2026
@@ -408,7 +410,7 @@ const EsMercadoTsukijiTokio = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Mercado de Tsukiji en Tokio: Qué Queda y Qué Vale la Pena Ver en 2026",
-            "description": "El mercado interior de Tsukiji cerró en 2018. ¿Qué hay ahora? Un guía oficial explica qué sigue abierto, qué comer y por qué aún vale la visita.",
+            "description": "El Mercado Tsukiji sigue abierto en 2026 con 460+ puestos. Horario: 5:00-14:00, cerrado domingos. Guía local con los mejores puestos y consejos.",
             "author": {
               "@type": "Person",
               "name": "Manabu",

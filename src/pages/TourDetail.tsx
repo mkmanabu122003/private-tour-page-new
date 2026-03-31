@@ -19,7 +19,7 @@ import yanakaCandyShop from "@/assets/yanaka-candy-shop.webp";
 
 const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
   asakusa: {
-    title: "Private Asakusa Walking Tour 2026: Senso-ji & Hidden Spots (¥30,000~)",
+    title: "Asakusa Walking Tour 2026: Senso-ji & Hidden Spots",
     description: "Explore Asakusa beyond the tourist trail with a licensed Tokyo guide. Senso-ji Temple, Nakamise Street, hidden alleyways & local food. Groups 1-6, from ¥30,000.",
     h1: "Asakusa Private Walking Tour",
   },
@@ -29,17 +29,17 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Yanaka Private Walking Tour",
   },
   "shibuya-harajuku": {
-    title: "Private Shibuya & Harajuku Tour 2026: Pop Culture Walk (¥35,000~)",
+    title: "Shibuya & Harajuku Tour 2026: Pop Culture Walk",
     description: "Walk Shibuya Crossing, explore Harajuku's Takeshita Street & visit Meiji Shrine with a licensed guide. Youth culture explained in depth. From ¥35,000.",
     h1: "Shibuya & Harajuku Private Walking Tour",
   },
   "tsukiji-ginza": {
-    title: "Tsukiji Market & Ginza Food Tour 2026: Private Tasting Walk (¥30,000~)",
+    title: "Tsukiji & Ginza Food Tour 2026: Tasting Walk",
     description: "Taste Tokyo's best street food at Tsukiji Outer Market and stroll upscale Ginza with a licensed guide. Morning tour, all dietary needs. From ¥30,000.",
     h1: "Tsukiji & Ginza Private Walking Tour",
   },
   "imperial-palace": {
-    title: "Imperial Palace Tour Tokyo 2026: Private History Walk (¥25,000~)",
+    title: "Imperial Palace Tour Tokyo 2026: History Walk",
     description: "Walk the Imperial Palace East Gardens and Marunouchi with a certified guide. Tokyo's historical and modern heart in one tour. From ¥25,000.",
     h1: "Imperial Palace Private Walking Tour",
   },
@@ -49,17 +49,17 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Custom Private Tour: Your Tokyo, Your Way",
   },
   "kamakura-day-trip": {
-    title: "Kamakura Day Trip from Tokyo 2026: Private Guided Tour (¥50,000~)",
+    title: "Kamakura Day Trip from Tokyo 2026: Guided Tour",
     description: "Private day trip to Kamakura: Great Buddha, ancient temples & coastal scenery with a licensed guide. Train from Tokyo, full day, groups 1-6. From ¥50,000.",
     h1: "Kamakura Day Trip from Tokyo: Private Guided Tour",
   },
   "hakone-day-trip": {
-    title: "Hakone Day Trip from Tokyo 2026: Mt. Fuji Views & Hot Springs (¥55,000~)",
+    title: "Hakone Day Trip from Tokyo 2026: Mt. Fuji & Onsen",
     description: "See Mt. Fuji, cruise Lake Ashi & experience onsen culture on a private Hakone day trip. Licensed guide, full day from Tokyo. From ¥55,000.",
     h1: "Hakone Day Trip from Tokyo: Mt. Fuji Views & Hot Springs",
   },
   "nikko-day-trip": {
-    title: "Nikko Day Trip from Tokyo 2026: Private Guided Tour (¥60,000~)",
+    title: "Nikko Day Trip from Tokyo 2026: Guided Tour",
     description: "Visit UNESCO Toshogu Shrine and Nikko's mountain scenery on a private day trip from Tokyo. Licensed guide, full day, groups 1-6. From ¥60,000.",
     h1: "Nikko Day Trip from Tokyo: UNESCO Shrines & Mountain Scenery",
   },

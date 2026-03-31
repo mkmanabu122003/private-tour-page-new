@@ -157,7 +157,7 @@ const TokyoFoodTour = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Food Tour 2026: Private Tasting Walk with Local Guide (¥30,000~)"
+        title="Tokyo Food Tour 2026: Private Tasting Walk (¥30,000~)"
         description="Taste Tokyo's best street food, hidden izakayas & local favorites on a private food tour. Vegetarian, halal & gluten-free options. Licensed guide, groups 1-6."
         canonicalPath="/tours/tokyo-food-tour"
       />
@@ -458,6 +458,202 @@ const TokyoFoodTour = () => {
               <h3 className="text-lg font-medium text-foreground mb-2">How much should I budget for food during the tour?</h3>
               <p className="text-muted-foreground leading-relaxed">Expect to spend ¥3,000-5,000 per person on food and drinks. This covers multiple tastings and a sit-down meal. Food costs are not included in the tour price so you can choose exactly what appeals to you.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sample Itinerary */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-3">Your Day</p>
+            <h2 className="heading-section text-foreground">
+              Sample Itinerary: What a Typical Food Tour Looks Like
+            </h2>
+            <p className="mt-4 text-body">
+              Every tour is different, but here is one example of a morning food
+              tour through Tsukiji and Ginza. Think of it as a starting point
+              — your guide will adjust the route based on your interests.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="relative border-l-2 border-accent/30 pl-8 space-y-10">
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  09:00 — Meet at Tsukiji Station (Exit 1)
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  Your guide Manabu greets you and asks about dietary
+                  preferences, allergies, and how adventurous you are feeling
+                  today.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  09:15 — Tsukiji Outer Market: Tamagoyaki &amp; Fresh Seafood
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  Start with a freshly grilled tamagoyaki (Japanese rolled
+                  omelette) from a stall that has been perfecting the recipe for
+                  over 90 years. Then try fresh uni (sea urchin) on rice — or
+                  grilled scallops if seafood is not your thing.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  09:45 — Hidden Back-Alley Sushi Counter
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  A 6-seat counter where the chef slices fish to order. No
+                  English menu, no tourist foot traffic — just you, the chef,
+                  and some of the freshest sushi in Tokyo.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  10:15 — Japanese Knife Shop
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  Watch a craftsman explain the difference between Western and
+                  Japanese knives. If you are interested, this is one of the best
+                  places in Tokyo to buy a quality knife.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  10:45 — Walk to Ginza via Tsukiji's Backstreets
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  Stroll through the quieter residential side of Tsukiji,
+                  stopping at a traditional wagashi (Japanese sweets) shop for
+                  matcha and seasonal confections.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  11:15 — Ginza: Tonkatsu at a 60-Year-Old Restaurant
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  End at a local tonkatsu (breaded pork cutlet) restaurant that
+                  has been serving the same recipe since the 1960s. No tourists,
+                  just office workers who have been coming here for decades.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[calc(2rem+5px)] top-1 w-3 h-3 rounded-full bg-accent" />
+                <h3 className="text-lg font-semibold text-foreground">
+                  12:00 — Tour Ends in Ginza
+                </h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">
+                  Your guide offers personalized restaurant recommendations for
+                  the rest of your Tokyo stay.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="py-16">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-3">Pricing</p>
+            <h2 className="heading-section text-foreground">
+              What's Included
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="card-elevated p-8">
+              <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
+                <Check className="w-6 h-6 text-accent" />
+                Included
+              </h3>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  Licensed English-speaking guide (3-4 hours)
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  Custom route based on your dietary needs
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  All food tastings (6-8 stops)
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  Restaurant reservations where needed
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  Cultural context and food history at each stop
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  Personalized restaurant recommendations for your trip
+                </li>
+              </ul>
+            </div>
+
+            <div className="card-elevated p-8">
+              <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
+                <X className="w-6 h-6 text-muted-foreground" />
+                Not Included
+              </h3>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <X className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  Transportation to/from meeting point
+                </li>
+                <li className="flex items-start gap-3">
+                  <X className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  Additional food purchases beyond tastings
+                </li>
+                <li className="flex items-start gap-3">
+                  <X className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  Alcoholic beverages
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Every Diet Welcome */}
+      <section className="py-16 bg-secondary/30">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-label text-accent mb-3">Dietary Needs</p>
+            <h2 className="heading-section text-foreground mb-6">
+              Every Diet Welcome
+            </h2>
+            <p className="text-body leading-relaxed">
+              Every food tour is fully customizable to accommodate vegetarian,
+              vegan, halal, gluten-free, and allergy needs. There is no
+              one-size-fits-all menu — your guide Manabu plans each stop around
+              what you can and love to eat. At every vendor and restaurant,
+              Manabu speaks directly to the staff in Japanese to confirm
+              ingredients, preparation methods, and potential cross-contamination
+              risks. No guessing, no awkward translation apps, no anxiety about
+              what is in your food. Just tell us your needs when you book, and
+              every bite will be safe and delicious.
+            </p>
           </div>
         </div>
       </section>

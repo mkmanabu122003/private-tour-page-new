@@ -423,14 +423,32 @@ const About = () => {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Manabu",
-            "jobTitle": "Government-Licensed Tour Guide",
+            "jobTitle": "National Government Licensed Guide Interpreter (全国通訳案内士)",
+            "description": "Government-licensed Tokyo tour guide with 500+ private tours completed. Specializes in cultural walking tours, food tours, and day trips from Tokyo.",
             "worksFor": {
               "@type": "LocalBusiness",
               "name": "Tanuki Tabi Travel",
               "url": "https://tanuki-tabi-travel.com",
             },
+            "url": "https://tanuki-tabi-travel.com/about",
             "knowsLanguage": ["Japanese", "English", "Spanish"],
-            "knowsAbout": ["Tokyo", "Japanese Culture", "Japanese History", "Walking Tours"],
+            "knowsAbout": [
+              "Tokyo tourism",
+              "Japanese culture and history",
+              "Japanese cuisine and food tours",
+              "Japan travel planning",
+              "Shinto and Buddhist temple etiquette",
+              "Day trips from Tokyo",
+            ],
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Professional License",
+              "name": "National Government Licensed Guide Interpreter (全国通訳案内士)",
+              "recognizedBy": {
+                "@type": "GovernmentOrganization",
+                "name": "Japan Tourism Agency",
+              },
+            },
           }),
         }}
       />

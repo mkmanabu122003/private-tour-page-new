@@ -2,15 +2,21 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 
 const BestTimeToVisit = () => {
   return (
     <Layout>
       <SEO
-        title="Best Time to Visit Tokyo: A Local Guide's Honest Answer"
-        description="Cherry blossoms or autumn leaves? A licensed Tokyo guide with 500+ tours gives his honest seasonal breakdown, including when NOT to come."
+        title="Best Time to Visit Tokyo 2026: Month-by-Month Guide"
+        description="Best months: March-April (cherry blossoms) & October-November (autumn). Cheapest: January. Worst: August. A Tokyo guide's honest month-by-month breakdown with crowd levels, weather & events."
         canonicalPath="/blog/best-time-to-visit-tokyo"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: "Best Time to Visit Tokyo" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -54,6 +60,125 @@ const BestTimeToVisit = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            <QuickAnswer
+              answer="The best time to visit Tokyo is March-April (cherry blossoms) or October-November (autumn colors). January is cheapest with fewest crowds. Avoid August — it's hot, humid, and expensive."
+              hook="But a local guide's top pick might surprise you. Here's the honest month-by-month breakdown, including the 'secret' month nobody recommends that probably should be your first choice."
+            />
+
+            {/* Month-by-Month Summary Table */}
+            <div className="overflow-x-auto mb-12">
+              <table className="w-full text-sm text-muted-foreground border border-border rounded-lg overflow-hidden">
+                <thead className="bg-secondary/50">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-medium text-foreground">Month</th>
+                    <th className="px-4 py-3 text-left font-medium text-foreground">Weather</th>
+                    <th className="px-4 py-3 text-left font-medium text-foreground">Crowds</th>
+                    <th className="px-4 py-3 text-left font-medium text-foreground">Cost</th>
+                    <th className="px-4 py-3 text-left font-medium text-foreground">Highlight</th>
+                    <th className="px-4 py-3 text-left font-medium text-foreground">Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-3 font-medium text-foreground">Jan</td>
+                    <td className="px-4 py-3">Cold & clear</td>
+                    <td className="px-4 py-3">Low</td>
+                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">New Year temples & sales</td>
+                    <td className="px-4 py-3">★★★★</td>
+                  </tr>
+                  <tr className="border-t border-border bg-secondary/20">
+                    <td className="px-4 py-3 font-medium text-foreground">Feb</td>
+                    <td className="px-4 py-3">Cold & dry</td>
+                    <td className="px-4 py-3">Low</td>
+                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">Plum blossoms begin</td>
+                    <td className="px-4 py-3">★★★</td>
+                  </tr>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-3 font-medium text-foreground">Mar</td>
+                    <td className="px-4 py-3">Mild warming</td>
+                    <td className="px-4 py-3">Rising</td>
+                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">Cherry blossoms begin late March</td>
+                    <td className="px-4 py-3">★★★★★</td>
+                  </tr>
+                  <tr className="border-t border-border bg-secondary/20">
+                    <td className="px-4 py-3 font-medium text-foreground">Apr</td>
+                    <td className="px-4 py-3">Warm & pleasant</td>
+                    <td className="px-4 py-3">Very High</td>
+                    <td className="px-4 py-3">$$$$</td>
+                    <td className="px-4 py-3">Peak cherry blossoms</td>
+                    <td className="px-4 py-3">★★★★★</td>
+                  </tr>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-3 font-medium text-foreground">May</td>
+                    <td className="px-4 py-3">Warm</td>
+                    <td className="px-4 py-3">High (Golden Week early)</td>
+                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">Fresh green season</td>
+                    <td className="px-4 py-3">★★★★</td>
+                  </tr>
+                  <tr className="border-t border-border bg-secondary/20">
+                    <td className="px-4 py-3 font-medium text-foreground">Jun</td>
+                    <td className="px-4 py-3">Warm & rainy</td>
+                    <td className="px-4 py-3">Moderate</td>
+                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">Rainy season (tsuyu) begins</td>
+                    <td className="px-4 py-3">★★</td>
+                  </tr>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-3 font-medium text-foreground">Jul</td>
+                    <td className="px-4 py-3">Hot & humid</td>
+                    <td className="px-4 py-3">High</td>
+                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">Summer festivals & fireworks</td>
+                    <td className="px-4 py-3">★★★</td>
+                  </tr>
+                  <tr className="border-t border-border bg-secondary/20">
+                    <td className="px-4 py-3 font-medium text-foreground">Aug</td>
+                    <td className="px-4 py-3">Very hot & humid</td>
+                    <td className="px-4 py-3">Very High (Obon)</td>
+                    <td className="px-4 py-3">$$$$</td>
+                    <td className="px-4 py-3">Peak summer - avoid if possible</td>
+                    <td className="px-4 py-3">★★</td>
+                  </tr>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-3 font-medium text-foreground">Sep</td>
+                    <td className="px-4 py-3">Warm</td>
+                    <td className="px-4 py-3">Moderate</td>
+                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">Typhoon season but crowds thin</td>
+                    <td className="px-4 py-3">★★★</td>
+                  </tr>
+                  <tr className="border-t border-border bg-secondary/20">
+                    <td className="px-4 py-3 font-medium text-foreground">Oct</td>
+                    <td className="px-4 py-3">Cool & crisp</td>
+                    <td className="px-4 py-3">Rising</td>
+                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">Autumn colors begin</td>
+                    <td className="px-4 py-3">★★★★★</td>
+                  </tr>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-3 font-medium text-foreground">Nov</td>
+                    <td className="px-4 py-3">Cool</td>
+                    <td className="px-4 py-3">Moderate</td>
+                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">Peak autumn foliage</td>
+                    <td className="px-4 py-3">★★★★★</td>
+                  </tr>
+                  <tr className="border-t border-border bg-secondary/20">
+                    <td className="px-4 py-3 font-medium text-foreground">Dec</td>
+                    <td className="px-4 py-3">Cold</td>
+                    <td className="px-4 py-3">Moderate</td>
+                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">Winter illuminations & holiday atmosphere</td>
+                    <td className="px-4 py-3">★★★★</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Three times a week, I get this email: "When is the best time to visit Tokyo?" And three times a week, I fight the urge to write back: "It depends. On you." Because that's the honest answer. The couple from Sydney who wanted cherry blossoms and didn't mind crowds had a completely different "best time" than the retired professor from Chicago who wanted empty temples and cheap flights. Both had the trip of a lifetime. One in April, one in January.
             </p>
@@ -244,8 +369,8 @@ const BestTimeToVisit = () => {
 
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "BlogPosting",
-        headline: "Best Time to Visit Tokyo: A Local Guide's Honest Answer (Not the Usual One)",
-        description: "Cherry blossoms or autumn leaves? A licensed Tokyo guide with 500+ tours gives his honest seasonal breakdown, including when NOT to come.",
+        headline: "Best Time to Visit Tokyo 2026: Month-by-Month Guide (Local Tips)",
+        description: "Best months: March-April (cherry blossoms) & October-November (autumn). Cheapest: January. Worst: August. A Tokyo guide's honest month-by-month breakdown with crowd levels, weather & events.",
         author: { "@type": "Person", name: "Manabu", jobTitle: "National Government Licensed Guide Interpreter", url: "https://tanuki-tabi-travel.com/about" },
         datePublished: "2026-03-07", dateModified: "2026-03-07",
         publisher: { "@type": "Organization", name: "Tanuki Tabi Travel", url: "https://tanuki-tabi-travel.com" },
@@ -258,7 +383,11 @@ const BestTimeToVisit = () => {
           { "@type": "Question", name: "What is Golden Week and should I avoid it?", acceptedAnswer: { "@type": "Answer", text: "Japan's longest holiday (April 29–May 5). Extremely crowded. Recommend arriving after it ends unless planned months ahead." }},
           { "@type": "Question", name: "Is Tokyo safe during typhoon season?", acceptedAnswer: { "@type": "Answer", text: "Yes. Direct hits are uncommon. September is peak risk but manageable with flexible scheduling. Infrastructure handles typhoons well." }},
           { "@type": "Question", name: "What's the cheapest month to visit Tokyo?", acceptedAnswer: { "@type": "Answer", text: "January and September offer the lowest prices, 40–60% below cherry blossom season peaks." }},
-          { "@type": "Question", name: "What should I pack for Tokyo in winter?", acceptedAnswer: { "@type": "Answer", text: "Layers: warm coat, sweater, scarf, gloves. Heattech thermal underlayers from Uniqlo are the local secret." }}
+          { "@type": "Question", name: "What should I pack for Tokyo in winter?", acceptedAnswer: { "@type": "Answer", text: "Layers: warm coat, sweater, scarf, gloves. Heattech thermal underlayers from Uniqlo are the local secret." }},
+          { "@type": "Question", name: "What is the best month to visit Tokyo?", acceptedAnswer: { "@type": "Answer", text: "March-April for cherry blossoms and October-November for autumn colors are the most popular times. However, January offers the best combination of clear skies, low crowds, and affordable prices." }},
+          { "@type": "Question", name: "What is the cheapest time to visit Tokyo?", acceptedAnswer: { "@type": "Answer", text: "January and early February offer the lowest hotel rates and airfares. Expect prices 30-50% lower than peak cherry blossom season in April." }},
+          { "@type": "Question", name: "When should you NOT visit Tokyo?", acceptedAnswer: { "@type": "Answer", text: "Late June through mid-July is rainy season (tsuyu) with persistent drizzle. August is extremely hot (35°C+) and humid. Both periods also coincide with higher prices due to Japanese holidays." }},
+          { "@type": "Question", name: "Is Tokyo worth visiting in winter?", acceptedAnswer: { "@type": "Answer", text: "Absolutely. Winter (December-February) brings crisp, clear skies perfect for seeing Mt. Fuji, fewer tourists, lower prices, and beautiful winter illuminations across the city." }}
         ]
       })}} />
     </Layout>

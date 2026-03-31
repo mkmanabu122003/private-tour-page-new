@@ -9,8 +9,8 @@ const EsQueComerEnJapon = () => {
   return (
     <Layout>
       <SEO
-        title="Qué comer en Japón: 15 platos que no puedes perderte según un guía local"
-        description="Lista definitiva de comida japonesa imprescindible. Un guía oficial con 500+ tours te dice qué pedir, dónde y en qué orden probarlos."
+        title="Qué Comer en Japón 2026: 15 Platos Imprescindibles (Guía Local)"
+        description="Sushi, ramen, tempura y mucho más. Un guía oficial con 500+ tours te dice qué pedir, dónde encontrarlo y en qué orden probarlo. Lista definitiva."
         canonicalPath="/es/blog/que-comer-en-japon"
         hreflang={[
           { lang: "es", path: "/es/blog/que-comer-en-japon" },
@@ -35,13 +35,15 @@ const EsQueComerEnJapon = () => {
       <section className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
+                <li>/</li>
+                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li>/</li>
+                <li className="text-foreground">Qué Comer en Japón</li>
+              </ol>
+            </nav>
             <p className="text-label text-accent mb-3">Gastronomía Japonesa</p>
             <h1 className="heading-display text-foreground">
               Qué Comer en Japón: 15 Platos Que No Puedes Perderte
@@ -325,7 +327,7 @@ const EsQueComerEnJapon = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Qué Comer en Japón: 15 Platos Que No Puedes Perderte",
-            "description": "Lista definitiva de comida japonesa imprescindible. Un guía oficial con 500+ tours te dice qué pedir, dónde y en qué orden probarlos.",
+            "description": "Sushi, ramen, tempura y mucho más. Un guía oficial con 500+ tours te dice qué pedir, dónde encontrarlo y en qué orden probarlo. Lista definitiva.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
