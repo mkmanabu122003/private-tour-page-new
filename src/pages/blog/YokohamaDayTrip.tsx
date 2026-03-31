@@ -10,7 +10,7 @@ const YokohamaDayTrip = () => {
     <Layout>
       <SEO
         title="Yokohama Day Trip from Tokyo 2026: Is It Worth Visiting?"
-        description="Yokohama is just 30 min from Tokyo — but is it worth a full day? Chinatown, Ramen Museum, waterfront views & what to combine it with. A local guide's honest verdict."
+        description="Yokohama is 30 min from Tokyo — but is it worth a full day? Chinatown, Ramen Museum, waterfront & what to combine it with. A guide's honest verdict."
         canonicalPath="/blog/yokohama-day-trip-from-tokyo"
         breadcrumbs={[
           { name: "Home", path: "/" },

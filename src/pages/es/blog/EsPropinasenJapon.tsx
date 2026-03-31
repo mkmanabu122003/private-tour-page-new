@@ -66,7 +66,7 @@ const EsPropinasenJapon = () => {
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
             <QuickAnswerEs
-              answer="La propina media en Japón es ¥0. No es costumbre dejar propina y puede causar confusión — la mayoría de trabajadores intentarán devolverte el dinero."
+              answer="En Japón no se deja propina. No es costumbre y puede causar confusión — la mayoría de trabajadores intentarán devolverte el dinero."
               hook="Pero hay 3 situaciones específicas donde mostrar gratitud SÍ se espera — y hacerlo mal puede resultar incómodo. Un guía local explica la etiqueta completa a continuación."
             />
             {/* La primera vez que intenté rechazar una propina */}

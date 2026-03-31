@@ -10,7 +10,7 @@ const BestTimeToVisit = () => {
     <Layout>
       <SEO
         title="Best Time to Visit Tokyo 2026: Month-by-Month Guide"
-        description="Best months: March-April (cherry blossoms) & October-November (autumn). Cheapest: January. Worst: August. A Tokyo guide's honest month-by-month breakdown with crowd levels, weather & events."
+        description="Best months: March-April (cherry blossoms) & October-November (autumn). Cheapest: January. A Tokyo guide's month-by-month breakdown with crowd levels & weather."
         canonicalPath="/blog/best-time-to-visit-tokyo"
         breadcrumbs={[
           { name: "Home", path: "/" },

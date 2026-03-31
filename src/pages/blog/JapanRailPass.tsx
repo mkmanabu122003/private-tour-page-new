@@ -10,7 +10,7 @@ const JapanRailPass = () => {
     <Layout>
       <SEO
         title="JR Pass Prices 2026: 7/14/21-Day Costs & Is It Worth It?"
-        description="JR Pass 2026 prices: ¥50,000 (7-day), ¥80,000 (14-day), ¥100,000 (21-day). See real route-by-route cost comparisons and find out if the pass saves money for YOUR itinerary. Updated March 2026."
+        description="JR Pass 2026: ¥50,000 (7-day), ¥80,000 (14-day), ¥100,000 (21-day). Route-by-route cost comparisons to find out if the pass saves money for your itinerary."
         canonicalPath="/blog/japan-rail-pass-worth-it"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -75,7 +75,7 @@ const JapanRailPass = () => {
               Before the 2023 price increase, the Japan Rail Pass was worth it for almost any trip that included a round-trip Tokyo–Kyoto journey. The old 7-day pass cost ¥29,650, and a single round-trip Hikari ticket between Tokyo and Kyoto cost about ¥27,700. The math was simple: if you're going to Kyoto and back, get the pass.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              At the new price of ¥50,000, that calculus changed. A round-trip Hikari Shinkansen between Tokyo and Kyoto costs about ¥27,700 (¥13,850 each way). The Nozomi is slightly more expensive at ¥14,170 each way, but the JR Pass doesn't cover it — only the Hikari (which is just 5 minutes slower). So the pass saves you nothing on a simple Tokyo–Kyoto round trip. You need additional travel to justify the cost.
+              At the new price of ¥50,000, that calculus changed. A round-trip Hikari Shinkansen between Tokyo and Kyoto costs about ¥27,940 (¥13,970 each way). The Nozomi is slightly more expensive at ¥14,170 each way, but the JR Pass doesn't cover it — only the Hikari (which is just 5 minutes slower). So the pass saves you nothing on a simple Tokyo–Kyoto round trip. You need additional travel to justify the cost.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The Japan Rail Pass is still worth it for some itineraries. But "some" is doing more work than it used to. Let me show you exactly when it pays off and when it doesn't.
@@ -167,7 +167,7 @@ const JapanRailPass = () => {
               Key prices to know (2026, one-way, reserved seat):
             </p>
             <ul className="space-y-2 mb-8">
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kyoto (Hikari):</strong> ¥13,850</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kyoto (Hikari):</strong> ¥13,970</li>
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Osaka (Hikari):</strong> ¥14,400</li>
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Hiroshima (Hikari + Sakura):</strong> ¥18,910</li>
               <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Kyoto → Hiroshima (Sakura):</strong> ¥11,300</li>
@@ -197,7 +197,7 @@ const JapanRailPass = () => {
             </figure>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Classic Route: Tokyo → Kyoto → Osaka → Hiroshima → Tokyo</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Individual ticket costs: Tokyo→Kyoto (¥13,850) + Kyoto→Hiroshima (¥11,300) + Hiroshima→Tokyo (¥18,910) = <strong className="text-foreground">¥44,060</strong>. Add local JR rides in each city and the total easily exceeds the ¥50,000 pass price. <strong className="text-foreground">Verdict: worth it.</strong>
+              Individual ticket costs: Tokyo→Kyoto (¥13,970) + Kyoto→Hiroshima (¥11,300) + Hiroshima→Tokyo (¥18,910) = <strong className="text-foreground">¥44,180</strong>. Add local JR rides in each city and the total easily exceeds the ¥50,000 pass price. <strong className="text-foreground">Verdict: worth it.</strong>
             </p>
             <figure className="my-8">
               <img
@@ -215,7 +215,7 @@ const JapanRailPass = () => {
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Multi-City: Tokyo → Kanazawa → Kyoto → Tokyo</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tokyo→Kanazawa (¥14,180) + Kanazawa→Kyoto (¥7,720) + Kyoto→Tokyo (¥13,850) = <strong className="text-foreground">¥35,750</strong> in Shinkansen alone. Add Tokyo-area JR rides (Kamakura day trip: ¥2,080 round-trip, airport Narita Express: ¥3,070–3,250) and you're at ¥40,700+. Getting close to ¥50,000 but may not exceed it. <strong className="text-foreground">Verdict: borderline. Calculate your specific JR rides carefully.</strong>
+              Tokyo→Kanazawa (¥14,180) + Kanazawa→Kyoto (¥7,720) + Kyoto→Tokyo (¥13,970) = <strong className="text-foreground">¥35,870</strong> in Shinkansen alone. Add Tokyo-area JR rides (Kamakura day trip: ¥2,080 round-trip, airport Narita Express: ¥3,070–3,250) and you're at ¥40,700+. Getting close to ¥50,000 but may not exceed it. <strong className="text-foreground">Verdict: borderline. Calculate your specific JR rides carefully.</strong>
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Extended: Tokyo → Kyoto → Osaka → Kanazawa → Tokyo (+ day trips)</h3>
