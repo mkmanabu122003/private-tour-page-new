@@ -106,8 +106,37 @@ const EsExcursionNikkoDesdeTokio = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Opción 1: Tobu Railway desde Asakusa (la más económica)
             </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-spacia-x-exterior.webp"
+                alt="Tren Tobu Spacia X en la estación de Tobu-Nikko"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                El Tobu Spacia X en la estación de Tobu-Nikko — la forma más cómoda y directa de llegar a Nikko desde Tokio
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La línea Tobu sale de la estación de Asakusa y te lleva directamente a Tobu-Nikko. El tren expreso limitado (tokkyuu) tarda aproximadamente 1 hora y 50 minutos y cuesta alrededor de 2.800 yenes por trayecto. Si quieres ahorrar más, puedes tomar el tren rápido (kaisoku), que tarda unas 2 horas y 20 minutos pero cuesta solo unos 1.400 yenes. Esta es la opción que más recomiendo a los viajeros con presupuesto ajustado. La estación de salida en Asakusa está justo al lado del barrio del Senso-ji, así que puedes combinar ambas visitas si te organizas bien.
+              La línea Tobu sale de la estación de Asakusa y te lleva directamente a Tobu-Nikko. El tren expreso limitado, el flamante "Spacia X", tarda aproximadamente 1 hora y 50 minutos y cuesta alrededor de 2.800 yenes por trayecto. Si quieres ahorrar más, puedes tomar el tren rápido (kaisoku), que tarda unas 2 horas y 20 minutos pero cuesta solo unos 1.400 yenes. Esta es la opción que más recomiendo a los viajeros con presupuesto ajustado. La estación de salida en Asakusa está justo al lado del barrio del Senso-ji, así que puedes combinar ambas visitas si te organizas bien.
+            </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-spacia-x-premium-interior.webp"
+                alt="Asientos premium del Spacia X con amplios sillones reclinables dorados"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Los asientos premium del Spacia X — amplios, reclinables y con ventanas panorámicas
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si quieres que el viaje sea parte de la experiencia, el Spacia X ofrece un vagón premium con asientos reclinables amplios, mucho espacio para las piernas y ventanas panorámicas. El sobrecoste es modesto — unos 1.000 yenes más que un asiento estándar — y en un trayecto matutino, puedes ver cómo el paisaje urbano de Tokio da paso a arrozales, colinas boscosas y finalmente las montañas de Tochigi. Mis clientes dicen a menudo que el vagón premium marcó el tono de todo el día.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -147,8 +176,41 @@ const EsExcursionNikkoDesdeTokio = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Puente Shinkyo y el río Daiya
             </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-shinkyo-bridge-daiya-river.webp"
+                alt="El puente bermellón Shinkyo sobre el río Daiya a principios de primavera"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                El puente Shinkyo sobre el río Daiya — uno de los primeros monumentos que ves caminando desde la estación
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El puente Shinkyo, pintado en rojo lacado brillante, cruza el río Daiya justo a la entrada de la zona de santuarios. Es considerado uno de los tres puentes más bellos de Japón. Puedes cruzarlo por 300 yenes o simplemente admirarlo desde la orilla. La vista desde abajo, con el agua cristalina del río, los árboles y el puente rojo enmarcando la escena, es honestamente igual de buena. Es un punto de parada perfecto para tomar fotos antes de subir hacia los santuarios.
+            </p>
+
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Kanmangafuchi y los Narabi Jizo
+            </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-narabi-jizo-statues.webp"
+                alt="Fila de estatuas Jizo cubiertas de musgo con baberos y gorros rojos a lo largo del sendero de Kanmangafuchi"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Los Narabi Jizo — decenas de estatuas de piedra con gorros rojos alineadas en un sendero silencioso junto al río Daiya
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              La mayoría de visitantes no sale del recinto de Toshogu, y por eso se pierde uno de los paseos más atmosféricos de toda la región. A unos veinte minutos a pie del complejo de santuarios, un sendero junto al río lleva a Kanmangafuchi, una garganta volcánica tallada por el río Daiya. A lo largo del camino se encuentran los Narabi Jizo, una fila de unas setenta estatuas de piedra cubiertas con baberos y gorros rojos, con los rostros desgastados por siglos de intemperie. La leyenda dice que cada vez que alguien intenta contarlas, obtiene un número diferente, de ahí su apodo de "Bake Jizo" (Jizo fantasma). El sendero está a la sombra de árboles centenarios, el río ruge abajo y es probable que tengas el lugar casi para ti solo. Es el tipo de rincón que demuestra por qué un guía marca la diferencia: yo llevo a todos mis clientes aquí y siempre se convierte en uno de sus recuerdos favoritos. El paseo ida y vuelta dura unos treinta minutos y es completamente gratuito.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -156,6 +218,45 @@ const EsExcursionNikkoDesdeTokio = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si sales temprano de Tokio y eres eficiente en los santuarios, puedes tomar el autobús desde Nikko hasta el Lago Chuzenji (unos 50 minutos, carretera de montaña con curvas espectaculares). El lago, de origen volcánico, está a 1.269 metros de altitud y la cascada Kegon cae 97 metros desde su desagüe. Un ascensor te baja a la base de la cascada por 570 yenes. En otoño, con los arces rojos reflejados en el agua, es uno de los paisajes más impresionantes de la región de Kanto. Pero sé realista con los tiempos: si eliges subir al lago, necesitarás un día muy largo o sacrificar parte de la visita a los santuarios.
+            </p>
+
+            {/* Qué comer */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Qué comer en Nikko
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+              <figure>
+                <img
+                  src="/images/blog/nikko-katsudon-lunch.webp"
+                  alt="Un bol de katsudon con sopa miso en un restaurante local cerca de la estación de Nikko"
+                  className="w-full h-[250px] object-cover rounded-lg shadow-md"
+                  loading="lazy"
+                  width={600}
+                  height={400}
+                />
+                <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                  Un katsudon contundente — el combustible perfecto entre visita y visita
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/images/blog/nikko-age-yuba-manju.webp"
+                  alt="Mano sujetando un age-yuba manju recién frito, especialidad callejera de Nikko"
+                  className="w-full h-[250px] object-cover rounded-lg shadow-md"
+                  loading="lazy"
+                  width={600}
+                  height={400}
+                />
+                <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                  Age yuba manju — el snack estrella de Nikko, crujiente por fuera y relleno de yuba cremosa
+                </figcaption>
+              </figure>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              El ingrediente estrella de Nikko es la yuba, la fina capa que se forma en la superficie de la leche de soja calentada. A diferencia de la yuba que puedes encontrar en Tokio o Kioto, la de Nikko se elabora con un estilo único en la región — más gruesa, más rica y a menudo servida fresca de formas que no encontrarás en ningún otro sitio. Busca yuba soba (fideos de trigo sarraceno con yuba fresca), yuba donburi (bol de arroz con capas de yuba) o los menús kaiseki de yuba que ofrecen algunos restaurantes tradicionales cerca del santuario.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para algo más rápido, no te pierdas el age yuba manju de las tiendas cerca de la entrada del santuario. Son bollos fritos rellenos de una mezcla cremosa de yuba — crujientes por fuera, suaves y sabrosos por dentro, y hay que comerlos inmediatamente mientras están calientes. A unos 300 yenes cada uno, son el tentempié perfecto entre visita y visita. Si buscas una comida más contundente, los restaurantes cerca de la estación sirven excelentes katsudon y sets de soba que te darán energía para toda la tarde.
             </p>
 
             {/* Cuándo ir */}
@@ -218,6 +319,19 @@ const EsExcursionNikkoDesdeTokio = () => {
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Preguntas frecuentes sobre la excursión a Nikko desde Tokio
             </h2>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-toshogu-ticket-queue.webp"
+                alt="Larga cola de visitantes esperando para comprar entradas en Toshogu una mañana de primavera"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                La cola para las entradas de Toshogu una mañana de primavera — por eso siempre recomiendo llegar antes de las 9:30
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               ¿Se puede hacer en un día?

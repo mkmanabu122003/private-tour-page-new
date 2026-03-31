@@ -75,19 +75,36 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/shinkansen-n700-tokyo-station.webp"
-                alt="Train heading toward Nikko through the Japanese countryside"
+                src="/images/blog/nikko-spacia-x-exterior.webp"
+                alt="Tobu Spacia X limited express train at Tobu-Nikko Station"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                The journey north from Tokyo takes you through increasingly rural scenery as the mountains draw closer
+                The Tobu Spacia X at Tobu-Nikko Station — the most comfortable and direct way to reach Nikko from Tokyo
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Getting to Nikko is straightforward once you know which train to take, but there are two completely different routes and choosing the wrong one can cost you both money and time. The route I recommend to almost everyone is the Tobu Nikko Line, which departs from Tobu Asakusa Station in central Tokyo. The limited express trains on this line, branded as "Spacia X" or the older "Spacia Kinu," run direct to Tobu-Nikko Station without requiring any transfers. The ride takes approximately one hour and fifty minutes, and a one-way ticket costs around 2,800 yen for a reserved seat on the limited express. If you are willing to ride the regular rapid train instead of the limited express, you can get there for about 1,400 yen, though the journey takes closer to two hours and twenty minutes with a transfer at Shimo-Imaichi.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-spacia-x-premium-interior.webp"
+                alt="Premium seats inside the Tobu Spacia X with spacious golden-brown recliners"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                The Spacia X premium seats — wide recliners, generous legroom, and large windows for watching the scenery change from city to mountains
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you want to make the journey itself part of the experience, the Spacia X offers a premium car with wide, golden-brown reclining seats, generous legroom, and panoramic windows. The extra cost is modest — roughly 1,000 yen more than a standard reserved seat — and on a morning departure, you get to watch the Tokyo cityscape gradually give way to rice paddies, then forested hills, then the mountains of Tochigi. It is a surprisingly relaxing way to start a day trip, and my clients often say the premium car set the tone for the whole experience. The standard car is perfectly comfortable too, but if the premium seats are available when you book, I recommend treating yourself.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The second route uses the JR network. You take the Tohoku Shinkansen from Tokyo Station or Ueno Station to Utsunomiya, which takes roughly fifty minutes, and then transfer to the JR Nikko Line for another forty-five minutes. The total travel time is similar to the Tobu limited express, but the cost is significantly higher at around 5,500 yen one way. The only reason to choose this route is if you already hold a Japan Rail Pass, which covers the entire fare. If you do not have a JR Pass, the Tobu line from Asakusa is the obvious choice. It is cheaper, it is more direct, and the Asakusa departure point puts you right in one of Tokyo's most interesting neighborhoods if you want to grab breakfast before you go.
@@ -119,9 +136,42 @@ const NikkoDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Do not skip the climb to Ieyasu's actual tomb. A stone stairway behind the main hall leads up through ancient cedar forest to a surprisingly simple bronze pagoda that holds his remains. After all the gold and overwhelming decoration below, the quiet simplicity of his grave is deeply striking. It was intentional. Even in death, the Tokugawa understood contrast as a design tool, and the effect on visitors four hundred years later is exactly what they planned. I always tell my clients that the tomb is where Nikko shifts from spectacle to something genuinely moving. The forest up there is cool, silent, and thick with moss, and standing beside the grave of the man who shaped modern Japan while surrounded by trees that were already old when he was alive is an experience that no photograph can capture.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-shinkyo-bridge-daiya-river.webp"
+                alt="The vermilion Shinkyo Bridge spanning the Daiya River gorge in early spring"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Shinkyo Bridge over the Daiya River — one of the first landmarks you see on the walk from the station to the shrines
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Shinkyo Bridge</strong> is the first major landmark you encounter when approaching the shrine area on foot, and it is worth more than a passing glance. This sacred vermilion bridge spans the Daiya River gorge and has been here in some form since the eighth century, though the current structure dates to 1636. According to legend, the Buddhist monk Shodo Shonin was blocked by the river on his journey to reach the sacred mountains, and two serpents appeared to form a bridge for him to cross. The bridge is photogenic in any season, but in autumn when the maple trees along the riverbank turn crimson and the water runs clear over green rocks beneath the red lacquer, it is genuinely one of the most beautiful single views in all of Japan. You can walk across the bridge for a 300-yen fee, which is worth doing for the view upstream toward the mountains, but the best photographs are actually taken from the road bridge next to it, which is free.
             </p>
+            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+              Kanmangafuchi Abyss and the Narabi Jizo
+            </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/nikko-narabi-jizo-statues.webp"
+                alt="Row of moss-covered Jizo statues wearing red bibs and caps along the Kanmangafuchi Abyss path"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                The Narabi Jizo — dozens of moss-covered stone statues in red caps lining a quiet forest path along the Daiya River gorge
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Most visitors to Nikko never leave the Tosho-gu area, which means they miss one of the most atmospheric walks in the entire region. About twenty minutes on foot from the shrine complex, a riverside path leads to Kanmangafuchi Abyss, a volcanic gorge carved by the Daiya River. Along the path stand the Narabi Jizo, a row of roughly seventy stone Jizo statues draped in red bibs and caps, their faces worn smooth by centuries of weather. Legend says that every time someone tries to count them, they get a different number — earning them the nickname "Bake Jizo" (ghost Jizo). The path is shaded by old-growth trees, the river rushes below, and you are likely to have the place almost entirely to yourself. It is the kind of spot that reminds you why having a guide matters: I bring every client here, and it consistently becomes one of their favorite memories of the trip. The walk takes about thirty minutes round trip from the main shrine area and requires no entrance fee.
+            </p>
+
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Kegon Falls</strong> sits about thirty minutes by bus from central Nikko, up a dramatic series of switchback roads that climb to the shores of Lake Chuzenji at 1,269 meters above sea level. The waterfall drops ninety-seven meters in a single breathtaking plunge from the lake's outlet, and it is ranked among the three most famous waterfalls in Japan. There is an elevator carved into the rock (570 yen) that takes you down to an observation platform at the base, and I consider it essential. From the top viewing area you see a postcard; from the base you feel the spray on your face and hear the thunderous volume of water crashing into the pool below. In autumn, the cliffs surrounding the falls turn brilliant shades of orange and gold. In winter, the peripheral streams freeze into spectacular ice columns while the main cascade keeps flowing. In any season, Kegon Falls is one of those sights that photographs do not do justice. You need to stand there, feel the mist, and hear it.
             </p>
@@ -134,15 +184,15 @@ const NikkoDayTrip = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/nikko-toshogu-stone-torii-gate.webp"
-                alt="Ancient cedar trees lining the path through Nikko's shrine complex"
+                src="/images/blog/nikko-toshogu-ticket-queue.webp"
+                alt="Long queue of visitors waiting for tickets at Tosho-gu Shrine entrance on a spring morning"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                The centuries-old cedar forest surrounding Nikko's shrines deserves unhurried exploration
+                The ticket queue at Tosho-gu on a spring morning — this is why I always recommend arriving before 9:30 AM
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -155,21 +205,60 @@ const NikkoDayTrip = () => {
               For those with more flexible schedules, spending a night in Nikko opens up possibilities that a day trip simply cannot offer. Kinugawa Onsen, about thirty minutes from central Nikko by train, has excellent traditional Japanese inns with outdoor hot spring baths overlooking the river gorge. Soaking in a rotenburo (outdoor bath) after a full day of walking through shrines and waterfalls is one of the most restorative experiences Japan has to offer. An overnight stay also lets you visit Tosho-gu in the late afternoon when the light hits the gold leaf at a low angle and the crowds have thinned, which is when the shrine looks most alive. If your itinerary allows even one extra night, Nikko rewards that generosity many times over.
             </p>
 
+            {/* Section: What to Eat */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              What to Eat in Nikko
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+              <figure>
+                <img
+                  src="/images/blog/nikko-katsudon-lunch.webp"
+                  alt="A bowl of katsudon with miso soup at a local restaurant near Nikko station"
+                  className="w-full h-[250px] object-cover rounded-lg shadow-md"
+                  loading="lazy"
+                  width={600}
+                  height={400}
+                />
+                <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                  A hearty katsudon lunch — the perfect fuel between shrine visits
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/images/blog/nikko-age-yuba-manju.webp"
+                  alt="Hand holding a freshly fried age-yuba manju, a Nikko street food specialty"
+                  className="w-full h-[250px] object-cover rounded-lg shadow-md"
+                  loading="lazy"
+                  width={600}
+                  height={400}
+                />
+                <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                  Age yuba manju — Nikko's signature street snack, crispy on the outside with a soft tofu skin filling
+                </figcaption>
+              </figure>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Nikko's signature ingredient is yuba, the thin skin that forms on the surface of heated soy milk. Unlike the yuba you might find in Tokyo or Kyoto, Nikko yuba is made in a style unique to the region — thicker, richer, and often served fresh in ways you will not encounter elsewhere. Look for yuba soba (buckwheat noodles topped with fresh yuba), yuba donburi (rice bowl with layered yuba), or the multi-course yuba kaiseki that some traditional restaurants offer near the shrine area. For a sit-down lunch, the restaurants along the main road between the station and Shinkyo Bridge are your best options.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              For something quicker, grab an age yuba manju from one of the shops near the shrine entrance. These are deep-fried buns filled with a soft, creamy yuba mixture — crispy on the outside, rich and savory inside, and best eaten immediately while they are still hot. At around 300 yen each, they are the perfect walking snack between sights. I have probably eaten hundreds of these over the years, and I still stop for one every time I visit. If you are looking for a more substantial meal, the local restaurants near the station serve excellent katsudon and soba sets that will fuel you for an afternoon of walking.
+            </p>
+
             {/* Section 4: Seasons */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Nikko in Each Season: When to Go
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/kamakura-serene-temple-garden.webp"
-                alt="Brilliant autumn foliage surrounding Nikko's mountain landscape"
+                src="/images/blog/nikko-toshogu-summer-torii.webp"
+                alt="Visitors walking through the stone torii gate toward Tosho-gu Shrine in lush summer greenery"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Nikko's autumn colors, particularly around Lake Chuzenji and Kegon Falls, are among the finest in Japan
+                Summer at Tosho-gu — the cedar forest is at its greenest and temperatures are noticeably cooler than Tokyo
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
