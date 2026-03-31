@@ -196,6 +196,27 @@ const About = () => {
         </div>
       </section>
 
+      {/* Guest Photo */}
+      <section className="py-12">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <figure>
+              <img
+                src="/images/tour-photos/asakusa-guest-selfie.webp"
+                alt="Manabu with tour guests by the Sumida River in Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                With guests along the Sumida River in Asakusa — every tour is a new conversation
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose a Licensed Private Guide */}
       <section className="py-20 bg-secondary/30">
         <div className="container-section">

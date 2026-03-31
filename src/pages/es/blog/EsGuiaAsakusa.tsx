@@ -205,6 +205,20 @@ const EsGuiaAsakusa = () => {
               A unos 10 minutos a pie al oeste del Senso-ji se encuentra Kappabashi-dori, también conocida como la Ciudad de las Cocinas. Esta calle de 800 metros está flanqueada por más de 170 tiendas especializadas que venden todo lo que una cocina profesional pueda necesitar: cuchillos japoneses forjados a mano, vajilla de cerámica, utensilios de bambú, lacados, menaje de calidad de restaurante y las increíblemente realistas muestras de comida de plástico (shokuhin sampuru) que ves en los escaparates de los restaurantes de todo Japón. Aunque no estés buscando utensilios de cocina, Kappabashi es fascinante para pasear. Solo las tiendas de cuchillos ya merecen el desvío: los cuchillos de cocina japoneses son famosos en todo el mundo, y los artesanos aquí pueden ayudarte a elegir la hoja adecuada para tu estilo de cocina. Varias tiendas ofrecen grabado de cuchillos, lo que lo convierte en un recuerdo verdaderamente único. Busca la estatua gigante de una cabeza de chef en el extremo sur de la calle, no tiene pérdida.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-guest-selfie.webp"
+                alt="Manabu con invitados del tour junto al río Sumida en Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Explorando la ribera de Asakusa con invitados — la zona del río Sumida es una de mis partes favoritas del tour
+              </figcaption>
+            </figure>
+
             {/* Mejor Comida Callejera */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               La Mejor Comida Callejera de Asakusa

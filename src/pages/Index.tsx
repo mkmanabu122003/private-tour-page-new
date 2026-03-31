@@ -354,11 +354,12 @@ const Index = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="heading-section text-foreground">Tours in Photos</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
               { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
               { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
+              { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie with guests by the Sumida River near Asakusa with Asahi Beer Tower in the background", caption: "Exploring Asakusa with guests" },
             ].map((photo) => (
               <div key={photo.src} className="flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg">

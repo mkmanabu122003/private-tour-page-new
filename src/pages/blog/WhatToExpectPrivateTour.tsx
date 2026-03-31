@@ -192,6 +192,19 @@ const WhatToExpectPrivateTour = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               If we stumble upon a local festival, a temple ceremony, or a shop with incredible craftsmanship, we can stop and experience it. Some of the most memorable moments on my tours have been unplanned. That's the magic of private touring that no fixed itinerary can offer.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-guest-selfie.webp"
+                alt="Manabu with guests enjoying a private tour by the Sumida River in Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Every tour is a conversation — here with guests along the Sumida River in Asakusa
+              </figcaption>
+            </figure>
 
             {/* What I Don't Do */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

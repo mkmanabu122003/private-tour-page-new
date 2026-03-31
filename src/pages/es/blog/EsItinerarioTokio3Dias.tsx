@@ -85,7 +85,7 @@ const EsItinerarioTokio3Dias = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Comienza tu viaje por Tokio donde la propia ciudad comenzó: Asakusa. Este barrio alberga el Senso-ji, el templo más antiguo de Tokio, fundado en el siglo VII. Atraviesa el icónico Kaminarimon (Puerta del Trueno) y recorre Nakamise-dori, una calle comercial que ha servido a visitantes durante siglos. Para una inmersión más profunda en la zona, lee nuestra{" "}
-              <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">
+              <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">
                 guía completa de Asakusa
               </Link>
               .
@@ -113,6 +113,19 @@ const EsItinerarioTokio3Dias = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               No necesitas subir al Skytree (largas colas y caro), pero las vistas desde la base y el centro comercial Solamachi circundante merecen los 15 minutos de caminata. El complejo también tiene excelentes opciones gastronómicas si te está entrando hambre.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-guest-selfie.webp"
+                alt="Guía Manabu con invitados junto al río Sumida cerca de Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                El paseo por el río Sumida entre Asakusa y el Skytree es uno de los momentos destacados del tour
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Almuerzo: Sabores Locales Cerca de Asakusa

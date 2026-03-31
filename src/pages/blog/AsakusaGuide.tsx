@@ -202,6 +202,20 @@ const AsakusaGuide = () => {
               About a 10-minute walk west from Senso-ji lies Kappabashi-dori, also known as Kitchen Town. This 800-meter-long street is lined with over 170 specialty shops selling everything a professional kitchen could need: hand-forged Japanese knives, ceramic tableware, bamboo utensils, lacquerware, restaurant-quality cookware, and the incredibly realistic plastic food samples (shokuhin sampuru) that you see in restaurant display windows across Japan. Even if you're not in the market for kitchen supplies, Kappabashi is fascinating to walk through. The knife shops alone are worth the detour. Japanese kitchen knives are world-famous, and the craftsmen here can help you choose the right blade for your cooking style. Several shops offer knife engraving, making this a truly unique souvenir. Look for the giant chef's head statue on the south end of the street. You can't miss it.
             </p>
 
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-guest-selfie.webp"
+                alt="Manabu with tour guests by the Sumida River in Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Exploring the Asakusa riverside with guests — the Sumida River area is one of my favorite parts of the tour
+              </figcaption>
+            </figure>
+
             {/* Best Street Food */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Best Street Food in Asakusa
