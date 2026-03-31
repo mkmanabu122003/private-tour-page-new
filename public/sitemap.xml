@@ -566,6 +566,18 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/blog/tesoros-ocultos-tokio</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/blog/ruta-gastronomica-tsukiji-ginza</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Info Pages -->
   <url>

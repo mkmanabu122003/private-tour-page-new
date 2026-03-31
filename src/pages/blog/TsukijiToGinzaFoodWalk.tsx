@@ -10,8 +10,13 @@ const TsukijiToGinzaFoodWalk = () => {
     <Layout>
       <SEO
         title="Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off"
-        description="A 3-hour walking route from the fish market to Ginza's backstreet bars, with the stops locals actually make. No tourist traps."
+        description="A 3-hour walking route from Tsukiji fish market to the izakaya under the tracks in Yurakucho and Shinbashi. The stops Tokyo locals actually make."
         canonicalPath="/blog/tsukiji-to-ginza-food-walk"
+        hreflang={[
+          { lang: "en", path: "/blog/tsukiji-to-ginza-food-walk" },
+          { lang: "es", path: "/es/blog/ruta-gastronomica-tsukiji-ginza" },
+          { lang: "x-default", path: "/blog/tsukiji-to-ginza-food-walk" },
+        ]}
       />
 
       {/* Hero Image */}
@@ -140,6 +145,38 @@ const TsukijiToGinzaFoodWalk = () => {
               <strong className="text-foreground">If you're going alone:</strong> Counter seats and standing bars are actually easier for solo travelers. Sit at the counter, point at what others are eating, and the staff will take care of you. Basic Japanese helps (sumimasen, kore kudasai) but isn't strictly necessary.
             </p>
 
+            {/* Stop 5: Shinbashi Extension */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Stop 5: Shinbashi — The Deeper End (5:30 PM onward)
+            </h2>
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-under-the-tracks.webp"
+                alt="Izakaya restaurants under the elevated JR tracks near Shinbashi Station at night"
+                className="w-full rounded-lg"
+                loading="lazy"
+                width={1600}
+                height={1205}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                The izakaya strip under the tracks near Shinbashi — where the menus are handwritten and the regulars outnumber the tourists.
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you still have energy (and stomach space), keep walking south along the tracks toward Shinbashi Station. The atmosphere shifts as you move away from Yurakucho: the bars get smaller, the menus become Japanese-only, and the clientele becomes almost entirely local office workers winding down their day. This is the deeper end of the under-the-tracks strip, and it rewards the adventurous.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Look for the places with handwritten menus on the wall, steaming yakiton (grilled pork offal), and the kind of organized chaos that happens when a 10-seat bar tries to serve 30 people. The best spots have no English signage and no tourist reviews — just decades of loyal regulars and excellent charcoal-grilled chicken.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              The SL Plaza steam locomotive in front of Shinbashi Station makes a good endpoint marker — and if you arrive before 6 PM, you'll hear its whistle blow, a small echo of the 1872 railway that started here. Shinbashi was the Tokyo terminus of Japan's first train line, and the after-work drinking culture that fills these streets today is as much a part of the city's identity as any temple. I write more about why Shinbashi matters in my{" "}
+              <Link to="/blog/tokyo-hidden-gems" className="text-accent hover:underline">
+                Tokyo hidden gems guide
+              </Link>
+              .
+              {/* <!-- VERIFIED: SL Plaza C11-292 whistle at 12:00/15:00/18:00. Japan's first railway opened 1872-10-14 Shinbashi-Yokohama. Checked: 2026-03-31 --> */}
+            </p>
+
             {/* Solo vs With a Guide */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Solo vs. With a Guide
@@ -155,7 +192,7 @@ const TsukijiToGinzaFoodWalk = () => {
                 <strong className="text-foreground">The best stalls change seasonally.</strong> What's good in March isn't the same as what's good in October. I know what's in season and which vendors are at their best right now.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Some places need Japanese to order.</strong> Especially in the Ginza backstreets and Yurakucho. A guide handles the communication and can explain the menu, the specials, and the etiquette.
+                <strong className="text-foreground">Some places need Japanese to order.</strong> Especially in the Ginza backstreets, Yurakucho, and Shinbashi. A guide handles the communication and can explain the menu, the specials, and the etiquette.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Yurakucho standing bars are intimidating solo.</strong> They're loud, crowded, mostly Japanese, and the ordering system isn't obvious. With a guide, you walk in confidently and know exactly what to do.
@@ -171,10 +208,10 @@ const TsukijiToGinzaFoodWalk = () => {
             </h2>
             <ul className="space-y-3 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Total distance:</strong> About 3 km (1.8 miles), mostly flat
+                <strong className="text-foreground">Total distance:</strong> About 3.5 km (2.2 miles), mostly flat
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Total time:</strong> 3-4 hours for the food walk; add another 2-3 hours if you include the Yurakucho evening portion
+                <strong className="text-foreground">Total time:</strong> 3-4 hours for the food walk; add another 2-3 hours if you continue to Yurakucho and Shinbashi for the evening portion
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Budget:</strong> ¥3,000-5,000 per person for food tastings and a light lunch. Add ¥2,000-3,000 for Yurakucho evening drinks and food.
@@ -223,7 +260,7 @@ const TsukijiToGinzaFoodWalk = () => {
             "@type": "BlogPosting",
             headline: "Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off",
             description:
-              "A 3-hour walking route from the fish market to Ginza's backstreet bars, with the stops locals actually make. No tourist traps.",
+              "A 3-hour walking route from Tsukiji fish market to the izakaya under the tracks in Yurakucho and Shinbashi. The stops Tokyo locals actually make.",
             author: {
               "@type": "Person",
               name: "Manabu",
@@ -231,7 +268,7 @@ const TsukijiToGinzaFoodWalk = () => {
               url: "https://tanuki-tabi-travel.com/about",
             },
             datePublished: "2026-03-14",
-            dateModified: "2026-03-14",
+            dateModified: "2026-03-31",
             publisher: {
               "@type": "Organization",
               name: "Tanuki Tabi Travel",
@@ -249,6 +286,12 @@ const TsukijiToGinzaFoodWalk = () => {
       Generated: 2026-03-14
       Updated: 2026-03-14 (web search verification)
       Status: KEY ITEMS VERIFIED
+
+      Updated: 2026-03-31 (added Stop 5 Shinbashi extension, updated distance/time/description)
+
+      WEB-VERIFIED (2026-03-31):
+      - SL Plaza C11-292 whistle schedule (12:00/15:00/18:00): CONFIRMED via Atlas Obscura, VISIT MINATO CITY
+      - Japan's first railway 1872-10-14 Shinbashi-Yokohama: CONFIRMED via Wikipedia, Nippon.com
 
       WEB-VERIFIED (2026-03-14):
       - Tsukiji closing days: CONFIRMED Sundays and Wednesdays typical. Article updated.

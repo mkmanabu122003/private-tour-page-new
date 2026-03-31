@@ -67,6 +67,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/yanaka-ginza-shopping-street.webp",
   },
   {
+    slug: "tesoros-ocultos-tokio",
+    title: "Tokio Secreto: Lugares Fuera de lo Común con un Guía Local (2026)",
+    description:
+      "Después de más de 500 tours, estos son los rincones de Tokio a los que vuelvo una y otra vez — desde Yanaka hasta los izakayas de Shinbashi.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/asakusa-hidden-shrine.webp",
+  },
+  {
     slug: "shitamachi-tokio",
     title: "El Tokio de Antes: Guía del Shitamachi para Viajeros Curiosos",
     description:
@@ -252,6 +262,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/asakusa-kaminarimon-morning.webp",
   },
   // Gastronomía Japonesa (new)
+  {
+    slug: "ruta-gastronomica-tsukiji-ginza",
+    title: "De Tsukiji a Ginza: La Ruta Gastronómica Que Hacen los Locales de Tokio",
+    description:
+      "Una ruta a pie de 3 horas desde el mercado de Tsukiji hasta los izakayas bajo las vías en Yurakucho y Shinbashi. Las paradas que realmente hacen los tokiotas.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-food-guide-hero.webp",
+  },
   {
     slug: "tour-gastronomico-tokio",
     title: "Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta (Guía Local)",

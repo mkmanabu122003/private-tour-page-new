@@ -89,7 +89,6 @@ const NikkoDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Getting to Nikko is straightforward once you know which train to take, but there are two completely different routes and choosing the wrong one can cost you both money and time. The route I recommend to almost everyone is the Tobu Nikko Line, which departs from Tobu Asakusa Station in central Tokyo. The limited express trains on this line, branded as "Spacia X" or the older "Spacia Kinu," run direct to Tobu-Nikko Station without requiring any transfers. The ride takes approximately one hour and fifty minutes, and a one-way ticket costs around 2,800 yen for a reserved seat on the limited express. If you are willing to ride the regular rapid train instead of the limited express, you can get there for about 1,400 yen, though the journey takes closer to two hours and twenty minutes with a transfer at Shimo-Imaichi.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
             <figure className="my-8">
               <img
                 src="/images/blog/nikko-spacia-x-premium-interior.webp"

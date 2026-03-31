@@ -95,6 +95,8 @@ import EsValeLaPenaGuiaPrivadoTokio from "./pages/es/blog/EsValeLaPenaGuiaPrivad
 import EsPrimeraVezTokioGuiaLocal from "./pages/es/blog/EsPrimeraVezTokioGuiaLocal";
 import EsTourGastronomicoTokio from "./pages/es/blog/EsTourGastronomicoTokio";
 import EsCerezosEnFlorTokio from "./pages/es/blog/EsCerezosEnFlorTokio";
+import EsTesorosOcultosTokio from "./pages/es/blog/EsTesorosOcultosTokio";
+import EsRutaGastronomicaTsukijiGinza from "./pages/es/blog/EsRutaGastronomicaTsukijiGinza";
 
 const queryClient = new QueryClient();
 
@@ -197,6 +199,8 @@ const AppRoutes = () => (
         <Route path="/es/blog/primera-vez-tokio-guia-local" element={<EsPrimeraVezTokioGuiaLocal />} />
         <Route path="/es/blog/tour-gastronomico-tokio" element={<EsTourGastronomicoTokio />} />
         <Route path="/es/blog/cerezos-en-flor-tokio" element={<EsCerezosEnFlorTokio />} />
+        <Route path="/es/blog/tesoros-ocultos-tokio" element={<EsTesorosOcultosTokio />} />
+        <Route path="/es/blog/ruta-gastronomica-tsukiji-ginza" element={<EsRutaGastronomicaTsukijiGinza />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

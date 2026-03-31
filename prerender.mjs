@@ -108,6 +108,8 @@ const routes = [
   "/es/blog/primera-vez-tokio-guia-local",
   "/es/blog/tour-gastronomico-tokio",
   "/es/blog/cerezos-en-flor-tokio",
+  "/es/blog/tesoros-ocultos-tokio",
+  "/es/blog/ruta-gastronomica-tsukiji-ginza",
 ];
 
 async function prerender() {
