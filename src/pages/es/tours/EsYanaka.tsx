@@ -17,7 +17,7 @@ const EsYanaka = () => {
     <Layout>
       <SEO
         title="Tour por Yanaka y Ueno en Español | Guía Local Tokio"
-        description="Descubre Yanaka, el barrio más nostálgico de Tokio, con un guía japonés nativo en español. Templos, tiendas vintage y vida local auténtica. Tour privado desde ¥40,000."
+        description="Descubre Yanaka, el barrio más nostálgico de Tokio, con un guía japonés nativo en español. Templos, tiendas vintage y vida local auténtica. Tour privado desde ¥50,000."
         canonicalPath="/es/tours/yanaka"
         hreflang={[
           { lang: "en", path: "/tours/yanaka" },
@@ -157,7 +157,7 @@ const EsYanaka = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥40,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥50,000</p>
                 </div>
 
                 <div className="space-y-4">
@@ -238,7 +238,7 @@ const EsYanaka = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Descubrimiento de Ueno y Yanaka" price="¥40,000" />
+      <StickyBookingBar tourName="Descubrimiento de Ueno y Yanaka" price="¥50,000" />
     </Layout>
   );
 };

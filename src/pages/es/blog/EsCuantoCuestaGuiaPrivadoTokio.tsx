@@ -10,7 +10,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
     <Layout>
       <SEO
         title="¿Cuánto Cuesta un Guía Privado en Tokio? Precios Reales 2026"
-        description="Un guía local con licencia oficial te explica los precios reales: desde ¥25,000 hasta ¥60,000. Sin comisiones de agencia. Qué incluye y cómo elegir."
+        description="Un guía local con licencia oficial te explica los precios reales: desde ¥40,000 hasta ¥80,000. Sin comisiones de agencia. Qué incluye y cómo elegir."
         canonicalPath="/es/blog/cuanto-cuesta-guia-privado-tokio"
         hreflang={[
           { lang: "en", path: "/blog/tokyo-private-tour-guide-cost" },
@@ -70,11 +70,11 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Respuesta directa */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Un guía privado en Tokio cuesta entre ¥25,000 y ¥60,000 por grupo para un tour de medio día, y entre ¥40,000 y ¥80,000 para un día completo. Son precios por grupo, no por persona. Una familia de cuatro paga lo mismo que una pareja.
+              Un guía privado en Tokio cuesta entre ¥40,000 y ¥50,000 por grupo para un tour de medio día, y entre ¥50,000 y ¥80,000 para un día completo. Son precios por grupo, no por persona. Una familia de cuatro paga lo mismo que una pareja.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               {/* <!-- VERIFIED: 1 EUR ≈ 182 JPY, 1 USD ≈ 160 JPY as of March 2026. Checked: 2026-03-14 --> */}
-              En euros, eso equivale aproximadamente a entre 140 y 330 euros por grupo (medio día) y entre 220 y 440 euros por grupo (día completo). En dólares, entre 155 y 375 USD (medio día).
+              En euros, eso equivale aproximadamente a entre 220 y 275 euros por grupo (medio día) y entre 330 y 440 euros por grupo (día completo). En dólares, entre 250 y 315 USD (medio día).
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Escribo esto como guía que hace este trabajo cada día en Tokio, no como alguien que te redirige a una plataforma de reservas para llevarse una comisión. Voy a ser completamente transparente con los números, incluyendo mis propias tarifas, para que puedas tomar una decisión informada.
@@ -129,8 +129,8 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 </div>
                 <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
                   <div className="p-4 border-r border-border">Guía independiente con licencia</div>
-                  <div className="p-4 border-r border-border">¥25,000-60,000/grupo</div>
-                  <div className="p-4 border-r border-border">~140-330 EUR/grupo</div>
+                  <div className="p-4 border-r border-border">¥40,000-80,000/grupo</div>
+                  <div className="p-4 border-r border-border">~220-440 EUR/grupo</div>
                   <div className="p-4 border-r border-border">1-8 personas</div>
                   <div className="p-4">Itinerario personalizado, profundidad cultural, planificación previa</div>
                 </div>
@@ -227,14 +227,14 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               Tamaño del Grupo (Tarifa Plana)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La mayoría de guías privados cobramos por grupo, no por persona. Para un grupo de cuatro pagando ¥30,000 por un tour, son ¥7,500 por persona. Para una pareja, ¥15,000 cada uno. Cuanto más grande el grupo, más rentable resulta.
+              La mayoría de guías privados cobramos por grupo, no por persona. Para un grupo de cuatro pagando ¥45,000 por un tour, son ¥11,250 por persona. Para una pareja, ¥22,500 cada uno. Cuanto más grande el grupo, más rentable resulta.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Duración
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tours de medio día (3-4 horas) en Tokio central: ¥25,000-40,000 por grupo. Día completo (6-8 horas): ¥40,000-60,000. Excursiones a{" "}
+              Tours de medio día (3-4 horas) en Tokio central: ¥40,000-50,000 por grupo. Día completo (6-8 horas): ¥60,000-80,000. Excursiones a{" "}
               <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
                 Hakone
               </Link>
@@ -246,7 +246,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               <Link to="/es/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>
-              : ¥50,000-60,000 por las horas extra y la logística de transporte.
+              : ¥70,000-80,000 por las horas extra y la logística de transporte.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -286,7 +286,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 <strong className="text-foreground">Primer viaje a Japón con pocos días:</strong> Si tienes 3-5 días en Tokio, cada hora cuenta. Un guía elimina el tiempo que pasarías descifrando el mapa del metro, caminando en la dirección equivocada y esperando en sitios turísticos que no merecen tanto tiempo.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Grupos de 3+ personas:</strong> A ¥30,000 por grupo, una familia de cuatro paga ¥7,500 cada uno (unos 40 EUR). Comparable a un tour grupal pero con experiencia totalmente personalizada.
+                <strong className="text-foreground">Grupos de 3+ personas:</strong> A ¥45,000 por grupo, una familia de cuatro paga ¥11,250 cada uno (unos 62 EUR). Comparable a un tour grupal pero con experiencia totalmente personalizada.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Amantes de la gastronomía:</strong> La mejor comida de Tokio está en sitios sin carta en inglés, en sótanos y callejones estrechos. Un guía te abre puertas que son genuinamente difíciles de encontrar solo.
@@ -304,7 +304,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 <strong className="text-foreground">Te defiendes bien en inglés:</strong> Si el idioma no es una barrera, tendrás más opciones y precios algo menores
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Presupuesto ajustado:</strong> Esos ¥30,000-50,000 pueden financiar varios días de comida, transporte y alojamiento. No voy a intentar convencerte de algo que no necesitas
+                <strong className="text-foreground">Presupuesto ajustado:</strong> Esos ¥40,000-80,000 pueden financiar varios días de comida, transporte y alojamiento. No voy a intentar convencerte de algo que no necesitas
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Disfrutas perderte:</strong> Si tu estilo de viaje es improvisar y descubrir por tu cuenta, un tour guiado puede sentirse restrictivo
@@ -357,7 +357,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
             <ul className="space-y-3 mb-6">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Tours a pie por Tokio:</strong> ¥25,000-¥40,000 por grupo (2.5-4 horas). Esto incluye zonas como{" "}
+                <strong className="text-foreground">Tours a pie por Tokio:</strong> ¥40,000-¥50,000 por grupo (2.5-4 horas). Esto incluye zonas como{" "}
                 <Link to="/es/tours/asakusa" className="text-accent hover:underline">
                   Asakusa
                 </Link>
@@ -372,7 +372,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 .
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Excursiones de un día:</strong> ¥50,000-¥60,000 por grupo (7-10 horas) a{" "}
+                <strong className="text-foreground">Excursiones de un día:</strong> ¥70,000-¥80,000 por grupo (7-10 horas) a{" "}
                 <Link to="/es/tours/kamakura-day-trip" className="text-accent hover:underline">
                   Kamakura
                 </Link>
@@ -389,7 +389,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Tours personalizados:</strong> Desde{" "}
                 <Link to="/es/tours/custom" className="text-accent hover:underline">
-                  ¥10,000 por hora
+                  ¥10,000~ por hora
                 </Link>
                 . Tú diseñas el día, yo me encargo de la ejecución.
               </li>
@@ -487,7 +487,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             headline:
               "¿Cuánto Cuesta un Guía Privado en Tokio? Precios Reales 2026",
             description:
-              "Un guía local con licencia oficial te explica los precios reales: desde ¥25,000 hasta ¥60,000. Sin comisiones de agencia. Qué incluye y cómo elegir.",
+              "Un guía local con licencia oficial te explica los precios reales: desde ¥40,000 hasta ¥80,000. Sin comisiones de agencia. Qué incluye y cómo elegir.",
             author: {
               "@type": "Person",
               name: "Manabu",

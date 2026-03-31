@@ -233,7 +233,7 @@ const IsItWorthHiringGuide = () => {
               How Much Does a Private Guide Cost in Tokyo?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Private walking tours in Tokyo typically range from ¥25,000 to ¥40,000 per group for a half-day experience (2.5 to 4 hours). This is a per-group price, not per-person, so the value increases significantly with larger groups. For a family of four, it works out to about ¥7,500-10,000 per person.
+              Private walking tours in Tokyo typically range from ¥40,000 to ¥50,000 per group for a half-day experience (2.5 to 4 hours). This is a per-group price, not per-person, so the value increases significantly with larger groups. For a family of four booking a ¥45,000 tour, it works out to about ¥11,250 per person.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Day trips to{" "}
@@ -248,14 +248,14 @@ const IsItWorthHiringGuide = () => {
               <Link to="/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>{" "}
-              range from ¥50,000 to ¥60,000 for a full day (7-10 hours). These include guide service, itinerary planning, and full transport navigation. Essentially, you get a personal concierge for the entire day.
+              range from ¥70,000 to ¥80,000 for a full day (7-10 hours). These include guide service, itinerary planning, and full transport navigation. Essentially, you get a personal concierge for the entire day.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For the most flexible option, our{" "}
               <Link to="/tours/custom" className="text-accent hover:underline">
                 Custom Tour
               </Link>{" "}
-              starts from ¥10,000 per hour, letting you design exactly the experience you want. Check our{" "}
+              starts from ¥10,000~ per hour, letting you design exactly the experience you want. Check our{" "}
               <Link to="/tours" className="text-accent hover:underline">
                 tour pages
               </Link>{" "}
@@ -372,7 +372,7 @@ const IsItWorthHiringGuide = () => {
                 <strong className="text-foreground">Understand private vs. group tours.</strong> Private tours (like what we offer) give you a guide's undivided attention. Group tours are cheaper per person but offer less flexibility and personalization. For families, couples, and anyone with specific interests, private tours deliver significantly more value.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Know the price range.</strong> Private walking tours in Tokyo typically cost ¥25,000–¥40,000 per group for half-day experiences. Full-day tours and day trips to Kamakura, Hakone, or Nikko range from ¥50,000–¥60,000. These are per-group prices, not per-person, so the cost per person decreases with larger groups. Be cautious of guides charging significantly less, as it may indicate inexperience or lack of credentials.
+                <strong className="text-foreground">Know the price range.</strong> Private walking tours in Tokyo typically cost ¥40,000–¥50,000 per group for half-day experiences. Full-day tours and day trips to Kamakura, Hakone, or Nikko range from ¥70,000–¥80,000. These are per-group prices, not per-person, so the cost per person decreases with larger groups. Be cautious of guides charging significantly less, as it may indicate inexperience or lack of credentials.
               </li>
             </ul>
 
@@ -382,7 +382,7 @@ const IsItWorthHiringGuide = () => {
                 Ready to Book Your Private Tokyo Tour?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Experience Tokyo with a licensed, local guide who brings the city's history and culture to life. Our private tours start from ¥25,000 and are fully customized to your interests.
+                Experience Tokyo with a licensed, local guide who brings the city's history and culture to life. Our private tours start from ¥40,000 and are fully customized to your interests.
               </p>
               <Link to="/contact" className="btn-accent">
                 Book Your Private Tour
@@ -400,7 +400,7 @@ const IsItWorthHiringGuide = () => {
                     How much does a private tour guide cost in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Private walking tours in Tokyo typically cost ¥25,000–¥40,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips to destinations like Kamakura or Hakone range from ¥50,000–¥60,000. These are per-group prices, not per-person, so a family of four pays the same as a couple. Custom tours are available from ¥10,000 per hour for maximum flexibility.
+                    Private walking tours in Tokyo typically cost ¥40,000–¥50,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips to destinations like Kamakura or Hakone range from ¥70,000–¥80,000. These are per-group prices, not per-person, so a family of four pays the same as a couple. Custom tours are available from ¥10,000~ per hour for maximum flexibility.
                   </p>
                 </div>
                 <div>
@@ -478,7 +478,7 @@ const IsItWorthHiringGuide = () => {
                 "name": "How much does a private tour guide cost in Tokyo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Private walking tours in Tokyo typically cost ¥25,000–¥40,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips range from ¥50,000–¥60,000. These are per-group prices, not per-person. Custom tours are available from ¥10,000 per hour.",
+                  "text": "Private walking tours in Tokyo typically cost ¥40,000–¥50,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips range from ¥70,000–¥80,000. These are per-group prices, not per-person. Custom tours are available from ¥10,000~ per hour.",
                 },
               },
               {

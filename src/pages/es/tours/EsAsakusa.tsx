@@ -14,7 +14,7 @@ const EsAsakusa = () => {
     <Layout>
       <SEO
         title="Tour por Asakusa en Español | Guía Japonés Nativo | Tokio"
-        description="Recorre Asakusa con Manabu, guía japonés nativo con licencia oficial. Templo Senso-ji, calle Nakamise y gastronomía local en un tour privado de 3 horas. Desde ¥30,000."
+        description="Recorre Asakusa con Manabu, guía japonés nativo con licencia oficial. Templo Senso-ji, calle Nakamise y gastronomía local en un tour privado de 3 horas. Desde ¥45,000."
         canonicalPath="/es/tours/asakusa"
         hreflang={[
           { lang: "en", path: "/tours/asakusa" },
@@ -157,7 +157,7 @@ const EsAsakusa = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥30,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥45,000</p>
                 </div>
 
                 <div className="space-y-4">
@@ -297,7 +297,7 @@ const EsAsakusa = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Asakusa" price="¥30,000" />
+      <StickyBookingBar tourName="Tour Privado por Asakusa" price="¥45,000" />
     </Layout>
   );
 };

@@ -17,7 +17,7 @@ export const ArticleFooterCTA = ({
     <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-6">
       <span>✓ Fully customized</span>
       <span>✓ Licensed local guide</span>
-      <span>✓ From ¥25,000</span>
+      <span>✓ From ¥40,000</span>
     </div>
     <Link to="/contact" className="btn-accent">
       Book Your Private Tour

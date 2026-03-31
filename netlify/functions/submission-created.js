@@ -7,16 +7,16 @@ const FROM_EMAIL = "Manabu | Tanuki Tabi Travel <info@tanuki-tabi-travel.com>";
 const MANABU_EMAIL = "info@tanuki-tabi-travel.com";
 
 const tourInfo = {
-  asakusa: { name: "Asakusa Walking Tour", price: "¥30,000", duration: "3 hours", perPerson6: "¥5,000" },
-  yanaka: { name: "Ueno & Yanaka Discovery", price: "¥40,000", duration: "4 hours", perPerson6: "¥6,700" },
-  "shibuya-harajuku": { name: "Shibuya & Harajuku Tour", price: "¥35,000", duration: "3.5 hours", perPerson6: "¥5,800" },
-  "tsukiji-ginza": { name: "Tsukiji & Ginza Tour", price: "¥30,000", duration: "3 hours", perPerson6: "¥5,000" },
-  "imperial-palace": { name: "Imperial Palace & Marunouchi", price: "¥25,000", duration: "2.5 hours", perPerson6: "¥4,200" },
-  "tokyo-food-tour": { name: "Tokyo Food Tour", price: "¥30,000~", duration: "3-4 hours", perPerson6: "¥5,000~" },
-  "tokyo-night-tour": { name: "Tokyo Night Tour", price: "¥30,000~", duration: "3-4 hours", perPerson6: "¥5,000~" },
-  "kamakura-day-trip": { name: "Kamakura Day Trip", price: "¥50,000", duration: "7-8 hours", perPerson6: "¥8,300" },
-  "hakone-day-trip": { name: "Hakone Day Trip", price: "¥55,000", duration: "8-10 hours", perPerson6: "¥9,200" },
-  "nikko-day-trip": { name: "Nikko Day Trip", price: "¥60,000", duration: "9-10 hours", perPerson6: "¥10,000" },
+  asakusa: { name: "Asakusa Walking Tour", price: "¥45,000", duration: "3 hours", perPerson6: "¥7,500" },
+  yanaka: { name: "Ueno & Yanaka Discovery", price: "¥50,000", duration: "4 hours", perPerson6: "¥8,300" },
+  "shibuya-harajuku": { name: "Shibuya & Harajuku Tour", price: "¥50,000", duration: "3.5 hours", perPerson6: "¥8,300" },
+  "tsukiji-ginza": { name: "Tsukiji & Ginza Tour", price: "¥45,000", duration: "3 hours", perPerson6: "¥7,500" },
+  "imperial-palace": { name: "Imperial Palace & Marunouchi", price: "¥40,000", duration: "2.5 hours", perPerson6: "¥6,700" },
+  "tokyo-food-tour": { name: "Tokyo Food Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
+  "tokyo-night-tour": { name: "Tokyo Night Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
+  "kamakura-day-trip": { name: "Kamakura Day Trip", price: "¥70,000", duration: "7-8 hours", perPerson6: "¥11,700" },
+  "hakone-day-trip": { name: "Hakone Day Trip", price: "¥70,000", duration: "8-10 hours", perPerson6: "¥11,700" },
+  "nikko-day-trip": { name: "Nikko Day Trip", price: "¥80,000", duration: "9-10 hours", perPerson6: "¥13,300" },
   custom: { name: "Custom Private Tour", price: "¥10,000~/hour", duration: "Flexible", perPerson6: "varies" },
 };
 

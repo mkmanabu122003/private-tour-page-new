@@ -195,7 +195,7 @@ const HakoneDayTripGuideVsSolo = () => {
                 <strong className="text-foreground">You want to spend most of the day at an onsen</strong> rather than doing the full loop. In that case, take the train to Hakone-Yumoto, walk to a nearby onsen, relax, and come back. No guide needed.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Budget is the primary concern.</strong> The guide fee (¥55,000 for a full-day{" "}
+                <strong className="text-foreground">Budget is the primary concern.</strong> The guide fee (¥70,000 for a full-day{" "}
                 <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
                   Hakone day trip
                 </Link>
@@ -221,7 +221,7 @@ const HakoneDayTripGuideVsSolo = () => {
                 <strong className="text-foreground">Weather is uncertain</strong> and you want someone who can adapt the plan in real time
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Groups of 3+</strong> where the ¥55,000 guide fee divided among the group makes it very reasonable per person
+                <strong className="text-foreground">Groups of 3+</strong> where the ¥70,000 guide fee divided among the group makes it very reasonable per person
               </li>
             </ul>
 
@@ -295,7 +295,7 @@ const HakoneDayTripGuideVsSolo = () => {
       - Ropeway time: CORRECTED 25 min → 30 min (Sounzan→Togendai ~30 min total)
       - Pirate Ship time (30 min): CONFIRMED (25-40 min depending on route)
       - Onsen tattoo policies: CONFIRMED varies by establishment (general claim accurate)
-      - Hakone day trip price (¥55,000): matches tour page
+      - Hakone day trip price (¥70,000): matches tour page
 
       Category A verified:
       - 5 transport types correctly named and ordered

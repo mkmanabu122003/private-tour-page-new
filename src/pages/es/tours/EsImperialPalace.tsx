@@ -17,7 +17,7 @@ const EsImperialPalace = () => {
     <Layout>
       <SEO
         title="Tour por el Palacio Imperial de Tokio en Español | Guía Privado"
-        description="Visita los Jardines del Este del Palacio Imperial y Marunouchi con un guía japonés nativo en español. Historia y modernidad de Tokio en 2.5 horas. Desde ¥25,000."
+        description="Visita los Jardines del Este del Palacio Imperial y Marunouchi con un guía japonés nativo en español. Historia y modernidad de Tokio en 2.5 horas. Desde ¥40,000."
         canonicalPath="/es/tours/imperial-palace"
         hreflang={[
           { lang: "en", path: "/tours/imperial-palace" },
@@ -147,7 +147,7 @@ const EsImperialPalace = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥25,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥40,000</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -221,7 +221,7 @@ const EsImperialPalace = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour del Palacio Imperial y Marunouchi" price="¥25,000" />
+      <StickyBookingBar tourName="Tour del Palacio Imperial y Marunouchi" price="¥40,000" />
     </Layout>
   );
 };

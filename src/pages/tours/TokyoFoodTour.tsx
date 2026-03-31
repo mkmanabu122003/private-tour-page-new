@@ -20,6 +20,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import { ValueComparison } from "@/components/tours/ValueComparison";
 
 const features = [
   {
@@ -157,7 +158,7 @@ const TokyoFoodTour = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Food Tour 2026: Private Tasting Walk (¥30,000~)"
+        title="Tokyo Food Tour 2026: Private Tasting Walk (¥50,000~)"
         description="Taste Tokyo's best street food, hidden izakayas & local favorites on a private food tour. Vegetarian, halal & gluten-free options. Licensed guide, groups 1-6."
         canonicalPath="/tours/tokyo-food-tour"
       />
@@ -761,6 +762,9 @@ const TokyoFoodTour = () => {
         </div>
       </section>
 
+      {/* Value Comparison */}
+      <ValueComparison tourPrice={50000} tourName="Tokyo Food Tour" />
+
       {/* TouristTrip Schema */}
       <script
         type="application/ld+json"
@@ -805,7 +809,7 @@ const TokyoFoodTour = () => {
               "@type": "Offer",
               "url": "https://tanuki-tabi-travel.com/tours/tokyo-food-tour",
               "priceCurrency": "JPY",
-              "price": "15000",
+              "price": "50000",
               "availability": "https://schema.org/InStock",
               "validFrom": "2026-01-01",
             },

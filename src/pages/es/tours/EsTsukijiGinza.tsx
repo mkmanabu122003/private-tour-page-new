@@ -14,7 +14,7 @@ const EsTsukijiGinza = () => {
     <Layout>
       <SEO
         title="Tour por Tsukiji y Ginza en Español | Gastronomía y Lujo en Tokio"
-        description="Descubre el mercado exterior de Tsukiji y el elegante barrio de Ginza con un guía japonés nativo en español. Gastronomía local e historia en 3 horas. Desde ¥30,000."
+        description="Descubre el mercado exterior de Tsukiji y el elegante barrio de Ginza con un guía japonés nativo en español. Gastronomía local e historia en 3 horas. Desde ¥45,000."
         canonicalPath="/es/tours/tsukiji-ginza"
         hreflang={[
           { lang: "en", path: "/tours/tsukiji-ginza" },
@@ -144,7 +144,7 @@ const EsTsukijiGinza = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥30,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥45,000</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -289,7 +289,7 @@ const EsTsukijiGinza = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Tsukiji y Ginza" price="¥30,000" />
+      <StickyBookingBar tourName="Tour Privado por Tsukiji y Ginza" price="¥45,000" />
     </Layout>
   );
 };

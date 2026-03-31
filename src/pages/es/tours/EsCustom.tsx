@@ -15,7 +15,7 @@ const EsCustom = () => {
     <Layout>
       <SEO
         title="Tour Privado Personalizado en Tokio en Español | Diseña tu Ruta"
-        description="Diseña tu tour perfecto por Tokio con Manabu, guía japonés nativo en español. Cuéntanos tus intereses y creamos un itinerario exclusivo para ti. Desde ¥10,000/hora."
+        description="Diseña tu tour perfecto por Tokio con Manabu, guía japonés nativo en español. Cuéntanos tus intereses y creamos un itinerario exclusivo para ti. Desde ¥10,000~/hora."
         canonicalPath="/es/tours/custom"
         hreflang={[
           { lang: "en", path: "/tours/custom" },
@@ -135,7 +135,7 @@ const EsCustom = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥10,000/hora</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥10,000~/hora</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -261,7 +261,7 @@ const EsCustom = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado Personalizado" price="¥10,000/hora" />
+      <StickyBookingBar tourName="Tour Privado Personalizado" price="¥10,000~/hora" />
     </Layout>
   );
 };

@@ -150,7 +150,7 @@ const TokyoWithKidsFamilyTour = () => {
               Asakusa (The Kid-Friendly Route)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <Link to="/blog/asakusa-guide-what-to-see" className="text-accent hover:underline">
+              <Link to="/blog/asakusa-guide" className="text-accent hover:underline">
                 Asakusa
               </Link>
               {" "}works well with kids if you plan it right. The Nakamise shopping street has snacks and small toys. Senso-ji Temple has the incense ritual (kids love wafting smoke over themselves "for good health"). The backstreets have taiyaki shops, traditional candy stores, and rickshaw rides. I time family visits for late morning when the initial crowds thin out.
@@ -288,11 +288,11 @@ const TokyoWithKidsFamilyTour = () => {
               <Link to="/tours/asakusa" className="text-accent hover:underline">
                 walking tour through Asakusa
               </Link>
-              {" "}is ¥30,000 for the whole family. That's ¥7,500 per person for a family of four (less than many group tours charge per person). A full-day{" "}
+              {" "}is ¥45,000 for the whole family. That's ¥11,250 per person for a family of four (less than many group tours charge per person). A full-day{" "}
               <Link to="/tours/kamakura-day-trip" className="text-accent hover:underline">
                 Kamakura day trip
               </Link>
-              {" "}is ¥50,000 for the group.
+              {" "}is ¥70,000 for the group.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Compare that to the cost of a wasted day: navigating the wrong trains, ending up at a restaurant that can't accommodate your family, missing the best parts of a neighborhood because you didn't know they were there. Time is the most expensive thing you have on vacation, and with kids, wasted time has a multiplier effect on everyone's mood.
@@ -372,7 +372,7 @@ const TokyoWithKidsFamilyTour = () => {
       - Rush hour times (7:30-9:30 AM, 5:30-8:00 PM): standard, confirmed
 
       Category A verified:
-      - Tour prices match tour pages (Asakusa ¥30,000, Kamakura ¥50,000)
+      - Tour prices match tour pages (Asakusa ¥45,000, Kamakura ¥70,000)
       - Per-group pricing, kids no extra cost — consistent with site
 
       Items for Manabu to verify before publishing:

@@ -3,6 +3,7 @@ import { useState, useCallback, useEffect } from "react";
 import { Clock, Users, MapPin, Check, X, ArrowLeft, ChevronLeft, ChevronRight, ArrowRight, Calendar, Mountain, Footprints, Info } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { ValueComparison } from "@/components/tours/ValueComparison";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import useEmblaCarousel from "embla-carousel-react";
@@ -20,27 +21,27 @@ import yanakaCandyShop from "@/assets/yanaka-candy-shop.webp";
 const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
   asakusa: {
     title: "Asakusa Walking Tour 2026: Senso-ji & Hidden Spots",
-    description: "Explore Asakusa beyond the tourist trail with a licensed Tokyo guide. Senso-ji Temple, Nakamise Street, hidden alleyways & local food. Groups 1-6, from ¥30,000.",
+    description: "Explore Asakusa beyond the tourist trail with a licensed Tokyo guide. Senso-ji Temple, Nakamise Street, hidden alleyways & local food. Groups 1-6, from ¥45,000.",
     h1: "Asakusa Private Walking Tour",
   },
   yanaka: {
-    title: "Yanaka Walking Tour 2026: Tokyo's Hidden Old Town (¥40,000~)",
-    description: "Discover Yanaka and Ueno — Tokyo's most nostalgic neighborhood — on a private guided walk. Local temples, vintage shops, and authentic daily life. From ¥40,000.",
+    title: "Yanaka Walking Tour 2026: Tokyo's Hidden Old Town (¥50,000~)",
+    description: "Discover Yanaka and Ueno — Tokyo's most nostalgic neighborhood — on a private guided walk. Local temples, vintage shops, and authentic daily life. From ¥50,000.",
     h1: "Yanaka Private Walking Tour",
   },
   "shibuya-harajuku": {
     title: "Shibuya & Harajuku Tour 2026: Pop Culture Walk",
-    description: "Walk Shibuya Crossing, explore Harajuku's Takeshita Street & visit Meiji Shrine with a licensed guide. Youth culture explained in depth. From ¥35,000.",
+    description: "Walk Shibuya Crossing, explore Harajuku's Takeshita Street & visit Meiji Shrine with a licensed guide. Youth culture explained in depth. From ¥50,000.",
     h1: "Shibuya & Harajuku Private Walking Tour",
   },
   "tsukiji-ginza": {
     title: "Tsukiji & Ginza Food Tour 2026: Tasting Walk",
-    description: "Taste Tokyo's best street food at Tsukiji Outer Market and stroll upscale Ginza with a licensed guide. Morning tour, all dietary needs. From ¥30,000.",
+    description: "Taste Tokyo's best street food at Tsukiji Outer Market and stroll upscale Ginza with a licensed guide. Morning tour, all dietary needs. From ¥45,000.",
     h1: "Tsukiji & Ginza Private Walking Tour",
   },
   "imperial-palace": {
     title: "Imperial Palace Tour Tokyo 2026: History Walk",
-    description: "Walk the Imperial Palace East Gardens and Marunouchi with a certified guide. Tokyo's historical and modern heart in one tour. From ¥25,000.",
+    description: "Walk the Imperial Palace East Gardens and Marunouchi with a certified guide. Tokyo's historical and modern heart in one tour. From ¥40,000.",
     h1: "Imperial Palace Private Walking Tour",
   },
   custom: {
@@ -50,31 +51,31 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
   },
   "kamakura-day-trip": {
     title: "Kamakura Day Trip from Tokyo 2026: Guided Tour",
-    description: "Private day trip to Kamakura: Great Buddha, ancient temples & coastal scenery with a licensed guide. Train from Tokyo, full day, groups 1-6. From ¥50,000.",
+    description: "Private day trip to Kamakura: Great Buddha, ancient temples & coastal scenery with a licensed guide. Train from Tokyo, full day, groups 1-6. From ¥70,000.",
     h1: "Kamakura Day Trip from Tokyo: Private Guided Tour",
   },
   "hakone-day-trip": {
     title: "Hakone Day Trip from Tokyo 2026: Mt. Fuji & Onsen",
-    description: "See Mt. Fuji, cruise Lake Ashi & experience onsen culture on a private Hakone day trip. Licensed guide, full day from Tokyo. From ¥55,000.",
+    description: "See Mt. Fuji, cruise Lake Ashi & experience onsen culture on a private Hakone day trip. Licensed guide, full day from Tokyo. From ¥70,000.",
     h1: "Hakone Day Trip from Tokyo: Mt. Fuji Views & Hot Springs",
   },
   "nikko-day-trip": {
     title: "Nikko Day Trip from Tokyo 2026: Guided Tour",
-    description: "Visit UNESCO Toshogu Shrine and Nikko's mountain scenery on a private day trip from Tokyo. Licensed guide, full day, groups 1-6. From ¥60,000.",
+    description: "Visit UNESCO Toshogu Shrine and Nikko's mountain scenery on a private day trip from Tokyo. Licensed guide, full day, groups 1-6. From ¥80,000.",
     h1: "Nikko Day Trip from Tokyo: UNESCO Shrines & Mountain Scenery",
   },
 };
 
 const tourSchemaData: Record<string, { name: string; area: string; price: string }> = {
-  asakusa: { name: "Asakusa Private Walking Tour", area: "Asakusa", price: "30000" },
-  yanaka: { name: "Yanaka Private Walking Tour", area: "Yanaka", price: "40000" },
-  "shibuya-harajuku": { name: "Shibuya & Harajuku Private Walking Tour", area: "Shibuya & Harajuku", price: "35000" },
-  "tsukiji-ginza": { name: "Tsukiji & Ginza Private Walking Tour", area: "Tsukiji & Ginza", price: "30000" },
-  "imperial-palace": { name: "Imperial Palace Private Walking Tour", area: "Imperial Palace & Marunouchi", price: "25000" },
+  asakusa: { name: "Asakusa Private Walking Tour", area: "Asakusa", price: "45000" },
+  yanaka: { name: "Yanaka Private Walking Tour", area: "Yanaka", price: "50000" },
+  "shibuya-harajuku": { name: "Shibuya & Harajuku Private Walking Tour", area: "Shibuya & Harajuku", price: "50000" },
+  "tsukiji-ginza": { name: "Tsukiji & Ginza Private Walking Tour", area: "Tsukiji & Ginza", price: "45000" },
+  "imperial-palace": { name: "Imperial Palace Private Walking Tour", area: "Imperial Palace & Marunouchi", price: "40000" },
   custom: { name: "Custom Private Tokyo Tour", area: "Tokyo", price: "10000" },
-  "kamakura-day-trip": { name: "Kamakura Day Trip from Tokyo", area: "Kamakura", price: "50000" },
-  "hakone-day-trip": { name: "Hakone Day Trip from Tokyo", area: "Hakone", price: "55000" },
-  "nikko-day-trip": { name: "Nikko Day Trip from Tokyo", area: "Nikko", price: "60000" },
+  "kamakura-day-trip": { name: "Kamakura Day Trip from Tokyo", area: "Kamakura", price: "70000" },
+  "hakone-day-trip": { name: "Hakone Day Trip from Tokyo", area: "Hakone", price: "70000" },
+  "nikko-day-trip": { name: "Nikko Day Trip from Tokyo", area: "Nikko", price: "80000" },
 };
 
 const tourData = {
@@ -83,7 +84,7 @@ const tourData = {
     subtitle: "Discover the heart of old Tokyo",
     description: "Experience the magic of Tokyo's oldest and most traditional district. This immersive walking tour takes you through the iconic Senso-ji Temple, the bustling Nakamise shopping street, and hidden corners that only locals know.",
     duration: "3 hours",
-    price: "¥30,000",
+    price: "¥45,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:00 AM or 2:00 PM",
@@ -129,7 +130,7 @@ const tourData = {
     subtitle: "Step back in time to old Tokyo",
     description: "Escape the modern city and discover Tokyo's most nostalgic neighborhood. Yanaka survived the war and earthquakes, preserving the atmosphere of old Tokyo with its wooden houses, traditional shops, and peaceful temples.",
     duration: "4 hours",
-    price: "¥40,000",
+    price: "¥50,000",
     difficulty: "Easy",
     groupSize: "1-4 people",
     startTime: "9:30 AM or 1:30 PM",
@@ -175,7 +176,7 @@ const tourData = {
     subtitle: "Experience Tokyo's vibrant youth culture",
     description: "Dive into the heart of modern Tokyo where fashion, technology, and tradition coexist. From the world's busiest crossing to peaceful shrine grounds, this tour showcases Tokyo's dynamic energy and cultural contrasts.",
     duration: "3.5 hours",
-    price: "¥35,000",
+    price: "¥50,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:30 AM or 2:30 PM",
@@ -221,7 +222,7 @@ const tourData = {
     subtitle: "From market delights to upscale elegance",
     description: "Experience two sides of Tokyo in one tour. Start at the bustling Tsukiji Outer Market for fresh seafood and local delicacies, then stroll through sophisticated Ginza with its luxury shops, art galleries, and architectural gems.",
     duration: "3 hours",
-    price: "¥30,000",
+    price: "¥45,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "9:00 AM or 1:00 PM",
@@ -267,7 +268,7 @@ const tourData = {
     subtitle: "Discover Tokyo's historical and modern heart",
     description: "Walk through centuries of history at the Imperial Palace East Gardens, then contrast it with the gleaming skyscrapers of Marunouchi. This tour perfectly balances Tokyo's imperial heritage with its role as a modern business capital.",
     duration: "2.5 hours",
-    price: "¥25,000",
+    price: "¥40,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:00 AM or 2:00 PM",
@@ -313,7 +314,7 @@ const tourData = {
     subtitle: "Your perfect Tokyo experience",
     description: "Tell me your interests, and I'll create a personalized itinerary just for you. Whether you're passionate about food, history, anime, photography, or something completely unique, let's design your dream Tokyo day together.",
     duration: "Flexible (3-8 hours)",
-    price: "From ¥10,000/hour",
+    price: "From ¥10,000~/hour",
     difficulty: "Customizable",
     groupSize: "1-6 people",
     startTime: "Flexible",
@@ -355,7 +356,7 @@ const tourData = {
     subtitle: "Ancient temples, Great Buddha & coastal charm",
     description: "Escape Tokyo for a day and explore Kamakura, Japan's first military capital. This private day trip takes you to the iconic Great Buddha, serene temples with ocean views, and the charming Komachi-dori shopping street, all with a licensed guide who brings 800 years of samurai history to life.",
     duration: "7-8 hours",
-    price: "¥50,000",
+    price: "¥70,000",
     difficulty: "Easy to moderate",
     groupSize: "1-6 people",
     startTime: "8:30 AM",
@@ -416,7 +417,7 @@ const tourData = {
     subtitle: "Mt. Fuji views, hot springs & volcanic valleys",
     description: "Experience the best of Hakone in a single day. Cruise across Lake Ashi with Mt. Fuji as your backdrop, ride the aerial ropeway over steaming volcanic valleys, and discover the iconic lakeside torii gate of Hakone Shrine. Your guide navigates the complex transport system so you can focus on the views.",
     duration: "8-10 hours",
-    price: "¥55,000",
+    price: "¥70,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "8:00 AM",
@@ -479,7 +480,7 @@ const tourData = {
     subtitle: "UNESCO shrines, waterfalls & mountain scenery",
     description: "Journey to Nikko, home to Japan's most ornate shrine complex and breathtaking mountain scenery. Discover the UNESCO World Heritage Toshogu Shrine with its 5,000+ intricate carvings, witness the powerful Kegon Falls, and enjoy the serene beauty of Lake Chuzenji, all with expert historical commentary from your guide.",
     duration: "9-10 hours",
-    price: "¥60,000",
+    price: "¥80,000",
     difficulty: "Moderate",
     groupSize: "1-6 people",
     startTime: "7:30 AM",
@@ -1029,6 +1030,14 @@ const TourDetail = () => {
             </div>
           </div>
         </section>
+      )}
+
+      {/* Value Comparison */}
+      {schema && (
+        <ValueComparison
+          tourPrice={parseInt(schema.price, 10)}
+          tourName={schema.name}
+        />
       )}
 
       {/* JSON-LD Structured Data */}

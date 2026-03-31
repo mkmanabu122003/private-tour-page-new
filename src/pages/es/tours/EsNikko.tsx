@@ -14,8 +14,8 @@ const EsNikko = () => {
   return (
     <Layout>
       <SEO
-        title="Excursión a Nikko desde Tokio 2026: Patrimonio UNESCO (¥60,000~)"
-        description="Visita el Santuario Toshogu, Patrimonio de la Humanidad, con un guía japonés nativo en español. Cascadas y paisajes de montaña en un día completo desde Tokio. Desde ¥60,000."
+        title="Excursión a Nikko desde Tokio 2026: Patrimonio UNESCO (¥80,000~)"
+        description="Visita el Santuario Toshogu, Patrimonio de la Humanidad, con un guía japonés nativo en español. Cascadas y paisajes de montaña en un día completo desde Tokio. Desde ¥80,000."
         canonicalPath="/es/tours/nikko-day-trip"
         hreflang={[
           { lang: "en", path: "/tours/nikko-day-trip" },
@@ -185,7 +185,7 @@ const EsNikko = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥60,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥80,000</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -330,7 +330,7 @@ const EsNikko = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Nikko" price="¥60,000" />
+      <StickyBookingBar tourName="Excursión Privada a Nikko" price="¥80,000" />
     </Layout>
   );
 };

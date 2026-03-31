@@ -17,7 +17,7 @@ export const ArticleFooterCTAEs = ({
     <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-6">
       <span>✓ Totalmente personalizado</span>
       <span>✓ Guía local licenciado</span>
-      <span>✓ Desde ¥25,000</span>
+      <span>✓ Desde ¥40,000</span>
     </div>
     <Link to="/es/contact" className="btn-accent">
       Reserva tu tour privado

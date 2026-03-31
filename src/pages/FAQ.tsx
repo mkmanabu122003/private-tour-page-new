@@ -20,7 +20,7 @@ const faqCategories: FAQCategory[] = [
     items: [
       {
         question: "How much does a private tour cost?",
-        answer: "Our Tokyo walking tours range from ¥25,000 to ¥40,000 per group depending on the tour and duration. Day trips to Kamakura (¥50,000), Hakone (¥55,000), and Nikko (¥60,000) have different pricing. Check each tour page for specific rates, or contact us for a custom quote.",
+        answer: "Our Tokyo walking tours range from ¥40,000 to ¥50,000 per group depending on the tour and duration. Day trips to Kamakura (¥70,000), Hakone (¥70,000), and Nikko (¥80,000) have different pricing. Check each tour page for specific rates, or contact us for a custom quote.",
       },
       {
         question: "How do I book a tour?",

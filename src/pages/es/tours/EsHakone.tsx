@@ -13,8 +13,8 @@ const EsHakone = () => {
   return (
     <Layout>
       <SEO
-        title="Excursión a Hakone desde Tokio 2026: Monte Fuji y Aguas Termales (¥55,000~)"
-        description="Excursión privada a Hakone con guía japonés nativo en español. Monte Fuji, lago Ashi en barco y cultura de aguas termales en un día completo desde Tokio. Desde ¥55,000."
+        title="Excursión a Hakone desde Tokio 2026: Monte Fuji y Aguas Termales (¥70,000~)"
+        description="Excursión privada a Hakone con guía japonés nativo en español. Monte Fuji, lago Ashi en barco y cultura de aguas termales en un día completo desde Tokio. Desde ¥70,000."
         canonicalPath="/es/tours/hakone-day-trip"
         hreflang={[
           { lang: "en", path: "/tours/hakone-day-trip" },
@@ -191,7 +191,7 @@ const EsHakone = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥55,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥70,000</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -336,7 +336,7 @@ const EsHakone = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥55,000" />
+      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥70,000" />
     </Layout>
   );
 };

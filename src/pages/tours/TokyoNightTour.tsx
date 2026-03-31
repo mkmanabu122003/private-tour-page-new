@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import { ValueComparison } from "@/components/tours/ValueComparison";
 
 const nightExperiences: {
   title: string;
@@ -469,6 +470,9 @@ const TokyoNightTour = () => {
           </div>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparison tourPrice={50000} tourName="Tokyo Night Tour" />
 
       {/* TouristTrip Schema */}
       <script

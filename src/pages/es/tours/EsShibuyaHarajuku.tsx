@@ -14,7 +14,7 @@ const EsShibuyaHarajuku = () => {
     <Layout>
       <SEO
         title="Tour por Shibuya y Harajuku en Español | Guía Japonés Nativo | Tokio"
-        description="Recorre el famoso cruce de Shibuya y las calles de Harajuku con un guía japonés nativo en español. Santuario Meiji incluido. Tour privado 3.5 horas desde ¥35,000."
+        description="Recorre el famoso cruce de Shibuya y las calles de Harajuku con un guía japonés nativo en español. Santuario Meiji incluido. Tour privado 3.5 horas desde ¥50,000."
         canonicalPath="/es/tours/shibuya-harajuku"
         hreflang={[
           { lang: "en", path: "/tours/shibuya-harajuku" },
@@ -144,7 +144,7 @@ const EsShibuyaHarajuku = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥35,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥50,000</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -277,7 +277,7 @@ const EsShibuyaHarajuku = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Shibuya y Harajuku" price="¥35,000" />
+      <StickyBookingBar tourName="Tour Privado por Shibuya y Harajuku" price="¥50,000" />
     </Layout>
   );
 };

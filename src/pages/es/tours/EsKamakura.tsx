@@ -13,8 +13,8 @@ const EsKamakura = () => {
   return (
     <Layout>
       <SEO
-        title="Excursión a Kamakura desde Tokio 2026: Gran Buda y Templos (¥50,000~)"
-        description="Excursión privada a Kamakura con guía japonés nativo en español. Gran Buda, templos ancestrales y costa japonesa en un día completo desde Tokio. Desde ¥50,000."
+        title="Excursión a Kamakura desde Tokio 2026: Gran Buda y Templos (¥70,000~)"
+        description="Excursión privada a Kamakura con guía japonés nativo en español. Gran Buda, templos ancestrales y costa japonesa en un día completo desde Tokio. Desde ¥70,000."
         canonicalPath="/es/tours/kamakura-day-trip"
         hreflang={[
           { lang: "en", path: "/tours/kamakura-day-trip" },
@@ -201,7 +201,7 @@ const EsKamakura = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥50,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥70,000</p>
                 </div>
 
                 <div className="space-y-4">
@@ -353,7 +353,7 @@ const EsKamakura = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Kamakura" price="¥50,000" />
+      <StickyBookingBar tourName="Excursión Privada a Kamakura" price="¥70,000" />
     </Layout>
   );
 };

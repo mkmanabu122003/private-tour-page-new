@@ -10,7 +10,7 @@ const TokyoPrivateTourGuideCost = () => {
     <Layout>
       <SEO
         title="How Much Does a Private Tour Guide Cost in Tokyo? 2026"
-        description="Tokyo tour guide prices range from ¥15,000 to ¥80,000 per day. A licensed local guide explains what affects the cost and what you actually get."
+        description="Tokyo tour guide prices range from ¥20,000 to ¥80,000 per day. A licensed local guide explains what affects the cost and what you actually get."
         canonicalPath="/blog/tokyo-private-tour-guide-cost"
         hreflang={[
           { lang: "es", path: "/es/blog/cuanto-cuesta-guia-privado-tokio" },
@@ -69,7 +69,7 @@ const TokyoPrivateTourGuideCost = () => {
           <article className="max-w-3xl mx-auto prose-custom">
             {/* Direct Answer */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              A private tour guide in Tokyo costs between ¥25,000 and ¥60,000 per group for a half-day walking tour, and ¥40,000 to ¥80,000 for a full-day experience. Those are per-group prices, not per person, so a family of four pays the same as a couple.
+              A private tour guide in Tokyo costs between ¥40,000 and ¥50,000 per group for a half-day walking tour, and ¥60,000 to ¥80,000 for a full-day experience. Those are per-group prices, not per person, so a family of four pays the same as a couple.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I'm Manabu, a licensed guide who runs private tours in Tokyo every week. I'm going to break down exactly what determines the price, what you get at each level, and when hiring a guide is genuinely worth the money. I'll also tell you when it isn't.
@@ -124,7 +124,7 @@ const TokyoPrivateTourGuideCost = () => {
                 </div>
                 <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
                   <div className="p-4 border-r border-border">Independent licensed guides</div>
-                  <div className="p-4 border-r border-border">¥25,000-60,000/group</div>
+                  <div className="p-4 border-r border-border">¥40,000-80,000/group</div>
                   <div className="p-4 border-r border-border">1-8 people</div>
                   <div className="p-4 border-r border-border">Full</div>
                   <div className="p-4">Personalized itinerary, cultural depth, pre-trip planning</div>
@@ -154,7 +154,7 @@ const TokyoPrivateTourGuideCost = () => {
               Group Size (It's Usually a Flat Rate)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Most private guides in Tokyo charge per group, not per person. This is one of the biggest differences from group tours. A couple pays the same as a family of five. For a family of four booking a ¥30,000 walking tour, that's ¥7,500 per person. For a solo traveler, it's the full ¥30,000. The math favors groups.
+              Most private guides in Tokyo charge per group, not per person. This is one of the biggest differences from group tours. A couple pays the same as a family of five. For a family of four booking a ¥45,000 walking tour, that's ¥11,250 per person. For a solo traveler, it's the full ¥45,000. The math favors groups.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Some guides add a surcharge for groups larger than 6-8 people, since managing a bigger group requires more effort and changes the logistics.
@@ -164,7 +164,7 @@ const TokyoPrivateTourGuideCost = () => {
               Duration
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Half-day tours (3-4 hours) in central Tokyo typically cost ¥25,000-40,000 per group. Full-day tours (6-8 hours) run ¥40,000-60,000. Day trips to places like{" "}
+              Half-day tours (3-4 hours) in central Tokyo typically cost ¥40,000-50,000 per group. Full-day tours (6-8 hours) run ¥60,000-80,000. Day trips to places like{" "}
               <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
                 Hakone
               </Link>
@@ -176,7 +176,7 @@ const TokyoPrivateTourGuideCost = () => {
               <Link to="/tours/nikko-day-trip" className="text-accent hover:underline">
                 Nikko
               </Link>
-              {" "}cost more (¥50,000-60,000) because they involve longer hours, complex transport logistics, and travel time.
+              {" "}cost more (¥70,000-80,000) because they involve longer hours, complex transport logistics, and travel time.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -284,7 +284,7 @@ const TokyoPrivateTourGuideCost = () => {
                 <strong className="text-foreground">First-time visitors with 3-5 days:</strong> When your time is limited, every hour counts. A guide eliminates the time spent figuring out train routes, walking in wrong directions, and waiting at tourist traps. I typically save guests 2-3 hours of wasted time per day.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Groups of 3+:</strong> At ¥30,000 per group, a family of four pays ¥7,500 each. That's comparable to a group tour but with a fully personalized experience and no sharing with strangers.
+                <strong className="text-foreground">Groups of 3+:</strong> At ¥45,000 per group, a family of four pays ¥11,250 each. That's comparable to a group tour but with a fully personalized experience and no sharing with strangers.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Food-focused travelers:</strong> The best food in Tokyo is in places without English menus, hidden in basement floors and narrow alleys. A{" "}
@@ -309,7 +309,7 @@ const TokyoPrivateTourGuideCost = () => {
                 <strong className="text-foreground">Independent travelers</strong> who enjoy getting lost and discovering things by accident
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Budget travelers</strong> where ¥30,000 represents a significant chunk of the daily budget
+                <strong className="text-foreground">Budget travelers</strong> where ¥45,000 represents a significant chunk of the daily budget
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Long-stay visitors</strong> with plenty of time to figure things out at their own pace
@@ -369,7 +369,7 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
             <ul className="space-y-3 mb-6">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Walking tours in central Tokyo:</strong> ¥25,000-¥40,000 per group (2.5-4 hours). This covers areas like{" "}
+                <strong className="text-foreground">Walking tours in central Tokyo:</strong> ¥40,000-¥50,000 per group (2.5-4 hours). This covers areas like{" "}
                 <Link to="/tours/asakusa" className="text-accent hover:underline">
                   Asakusa
                 </Link>
@@ -384,7 +384,7 @@ const TokyoPrivateTourGuideCost = () => {
                 , and more.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Day trips:</strong> ¥50,000-¥60,000 per group (7-10 hours) to{" "}
+                <strong className="text-foreground">Day trips:</strong> ¥70,000-¥80,000 per group (7-10 hours) to{" "}
                 <Link to="/tours/kamakura-day-trip" className="text-accent hover:underline">
                   Kamakura
                 </Link>
@@ -401,7 +401,7 @@ const TokyoPrivateTourGuideCost = () => {
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Custom tours:</strong> From{" "}
                 <Link to="/tours/custom" className="text-accent hover:underline">
-                  ¥10,000 per hour
+                  ¥10,000~ per hour
                 </Link>
                 . You design the day, I handle the execution.
               </li>
@@ -441,7 +441,7 @@ const TokyoPrivateTourGuideCost = () => {
                     How much does a private tour guide cost in Tokyo per day?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    A private tour guide in Tokyo typically costs ¥25,000-¥60,000 per group for half-day walking tours (3-4 hours), and ¥40,000-¥80,000 for full-day tours (6-8 hours). Day trips to Hakone, Kamakura, or Nikko range from ¥50,000-¥60,000 per group. These are flat rates per group, not per person, so larger groups get more value.
+                    A private tour guide in Tokyo typically costs ¥40,000-¥50,000 per group for half-day walking tours (3-4 hours), and ¥60,000-¥80,000 for full-day tours (6-8 hours). Day trips to Hakone, Kamakura, or Nikko range from ¥70,000-¥80,000 per group. These are flat rates per group, not per person, so larger groups get more value.
                   </p>
                 </div>
                 <div>
@@ -530,7 +530,7 @@ const TokyoPrivateTourGuideCost = () => {
                 name: "How much does a private tour guide cost in Tokyo per day?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "A private tour guide in Tokyo typically costs ¥25,000-¥60,000 per group for half-day walking tours (3-4 hours), and ¥40,000-¥80,000 for full-day tours. Day trips range from ¥50,000-¥60,000 per group. These are flat rates per group, not per person.",
+                  text: "A private tour guide in Tokyo typically costs ¥40,000-¥50,000 per group for half-day walking tours (3-4 hours), and ¥60,000-¥80,000 for full-day tours. Day trips range from ¥70,000-¥80,000 per group. These are flat rates per group, not per person.",
                 },
               },
               {
