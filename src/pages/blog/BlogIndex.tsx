@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
-    image: "/images/blog/day-trip-comparison-hero.webp",
+    image: "/images/blog/hakone-fuji-comparison.webp",
   },
   // Planning Your Trip
   {

@@ -85,7 +85,7 @@ const blogPosts: BlogPost[] = [
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
-    image: "/images/blog/day-trip-comparison-hero.webp",
+    image: "/images/blog/hakone-fuji-comparison.webp",
   },
   {
     slug: "excursion-nikko-desde-tokio",
