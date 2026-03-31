@@ -129,6 +129,20 @@ const TsukijiToGinzaFoodWalk = () => {
             </p>
 
             {/* Stop 4: Yurakucho Under the Tracks */}
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-gado-shita-exterior.webp"
+                alt="Izakaya restaurants lit up under the elevated JR train tracks near Yurakucho at night"
+                className="w-full rounded-lg"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Under the tracks: tiny izakaya glow beneath the elevated JR line between Yurakucho and Shinbashi
+              </figcaption>
+            </figure>
+
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Stop 4: Yurakucho Izakaya Alley (4:00 PM onward)
             </h2>
@@ -168,6 +182,21 @@ const TsukijiToGinzaFoodWalk = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Look for the places with handwritten menus on the wall, steaming yakiton (grilled pork offal), and the kind of organized chaos that happens when a 10-seat bar tries to serve 30 people. The best spots have no English signage and no tourist reviews — just decades of loyal regulars and excellent charcoal-grilled chicken.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-temaki-handroll.webp"
+                alt="Fresh tuna temaki hand roll at a standing sushi bar in Shinbashi"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                A toro temaki hand roll at a standing sushi counter — the kind of place you'd never find without wandering deeper into Shinbashi
+              </figcaption>
+            </figure>
+
             <p className="text-muted-foreground leading-relaxed mb-8">
               The SL Plaza steam locomotive in front of Shinbashi Station makes a good endpoint marker — and if you arrive before 6 PM, you'll hear its whistle blow, a small echo of the 1872 railway that started here. Shinbashi was the Tokyo terminus of Japan's first train line, and the after-work drinking culture that fills these streets today is as much a part of the city's identity as any temple. I write more about why Shinbashi matters in my{" "}
               <Link to="/blog/tokyo-hidden-gems" className="text-accent hover:underline">

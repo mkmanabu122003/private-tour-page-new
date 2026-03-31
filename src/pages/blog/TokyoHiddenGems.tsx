@@ -176,7 +176,24 @@ const TokyoHiddenGems = () => {
               This is the ritual that gives Shinbashi its identity. It's been called the "salaryman capital of Tokyo" for decades, and that reputation isn't marketing — it's a genuine cultural phenomenon. The after-work drinking culture (<em>nominication</em>, a Japanese portmanteau of <em>nomu</em> meaning "to drink" and "communication") has shaped Japanese business relationships for generations.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Most tourists walk right past Shinbashi on their way between Tsukiji and Ginza. That's a mistake. For ¥2,000–3,000 per person, you can eat excellent yakitori, drink cold beer, and experience a side of Japanese daily life that no temple or garden can show you. I cover this area as the final stop on my{" "}
+              Most tourists walk right past Shinbashi on their way between Tsukiji and Ginza. That's a mistake. For ¥2,000–3,000 per person, you can eat excellent yakitori, drink cold beer, and experience a side of Japanese daily life that no temple or garden can show you.
+            </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-unagi-skewer.webp"
+                alt="Grilled unagi eel skewer with tare sauce at a Shinbashi izakaya"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Charcoal-grilled unagi skewer with tare sauce — the kind of dish that keeps regulars coming back
+              </figcaption>
+            </figure>
+
+            <p className="text-muted-foreground leading-relaxed mb-4"> I cover this area as the final stop on my{" "}
               <Link to="/blog/tsukiji-to-ginza-food-walk" className="text-accent hover:underline">
                 Tsukiji to Ginza food walk route
               </Link>
@@ -191,6 +208,20 @@ const TokyoHiddenGems = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Why it matters as a hidden gem:</strong> In a city where most tourist experiences are visual — temples, gardens, skylines — Shinbashi gives you something experiential: a way to participate in, not just observe, the daily rhythms of Japanese life. That's rare, and it's the kind of thing that stays with you longer than any photo.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-oden-counter.webp"
+                alt="Counter seating at a Shinbashi oden restaurant with chefs working behind the kitchen"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Counter seats facing the kitchen: the best way to experience Shinbashi's izakaya culture up close
+              </figcaption>
+            </figure>
 
             {/* H2: How to find your own hidden gems */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

@@ -230,6 +230,20 @@ const ShinjukuGuide = () => {
 
             <figure className="my-8">
               <img
+                src="/images/blog/shinjuku-omoide-yokocho-lanterns.webp"
+                alt="Omoide Yokocho narrow alley with yellow lanterns during daytime"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Omoide Yokocho by day: the same narrow alleys feel peaceful before the evening crowds arrive
+              </figcaption>
+            </figure>
+
+            <figure className="my-8">
+              <img
                 src="/images/blog/shinjuku-gyoen-garden.webp"
                 alt="Shinjuku Gyoen National Garden - peaceful escape in Tokyo"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
@@ -266,6 +280,21 @@ const ShinjukuGuide = () => {
               at different times from mid-March through late April, giving you a longer
               viewing window than most other spots in the city.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-gyoen-cherry-blossoms.webp"
+                alt="Weeping cherry trees in full bloom at Shinjuku Gyoen"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Shinjuku Gyoen's weeping cherry trees draw crowds every spring
+              </figcaption>
+            </figure>
+
             <p className="text-muted-foreground leading-relaxed mb-4">
               Entry is ¥500 for adults, and the park is closed on Mondays (or the
               following day if Monday is a holiday). Hours vary by season but generally
@@ -277,6 +306,20 @@ const ShinjukuGuide = () => {
             </p>
 
             {/* Kabukicho */}
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-kabukicho-nightlife.webp"
+                alt="Kabukicho entertainment district at night with neon lights and crowds"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Kabukicho at night: neon, energy, and Tokyo at maximum volume
+              </figcaption>
+            </figure>
+
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Kabukicho: Tokyo's Entertainment Capital
             </h2>
@@ -314,6 +357,20 @@ const ShinjukuGuide = () => {
             </p>
 
             {/* Where to Eat */}
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-yakitori-skewers.webp"
+                alt="Grilled yakitori skewers served at a Shinjuku izakaya"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Juicy yakitori skewers at one of Shinjuku's many izakayas
+              </figcaption>
+            </figure>
+
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Where to Eat in Shinjuku
             </h2>
@@ -340,6 +397,20 @@ const ShinjukuGuide = () => {
               without spending much at all. Visit around 6-7 PM for discounted items
               as stalls mark down unsold food before closing.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-isetan-exterior.webp"
+                alt="Isetan department store exterior in Shinjuku"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Isetan Shinjuku: home to one of Tokyo's finest depachika food halls
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Ramen and Noodles
@@ -372,6 +443,20 @@ const ShinjukuGuide = () => {
               to the post-drinking crowd, and the quality is often excellent because the
               clientele is discerning.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-izakaya-motsuni-sour.webp"
+                alt="Motsuni stew and lemon sour at a Shinjuku izakaya"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                A classic izakaya combo: slow-cooked motsuni stew and a refreshing lemon sour
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Budget Tips
@@ -476,6 +561,20 @@ const ShinjukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               After years of guiding tours through Shinjuku, I've collected a set of spots that never appear in the standard guidebooks but consistently surprise and delight my guests. Here are my favorites.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinjuku-hanazono-shrine.webp"
+                alt="Hanazono Shrine in Shinjuku with its striking red architecture"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Hanazono Shrine: a serene escape hidden just behind Kabukicho's neon chaos
+              </figcaption>
+            </figure>
+
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Hanazono Shrine at night.</strong> Tucked right behind Kabukicho's neon chaos, Hanazono Shrine is a pocket of serenity that most tourists walk right past. The shrine is illuminated at night with soft red lanterns, creating a surreal contrast with the entertainment district just meters away. Visit after 8 PM for the full effect. You'll go from sensory overload to peaceful contemplation in about 30 seconds. The shrine is also the site of a popular flea market on Sundays.

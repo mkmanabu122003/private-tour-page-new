@@ -176,7 +176,24 @@ const EsTesorosOcultosTokio = () => {
               Este es el ritual que le da a Shinbashi su identidad. Lleva décadas siendo llamado "la capital de los oficinistas de Tokio", y esa reputación no es marketing — es un auténtico fenómeno cultural. La cultura de beber después del trabajo (<em>nominication</em>, un acrónimo japonés de <em>nomu</em>, que significa "beber", y "communication") ha moldeado las relaciones empresariales japonesas durante generaciones.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La mayoría de turistas pasan de largo por Shinbashi en su camino entre Tsukiji y Ginza. Es un error. Por ¥2.000–3.000 por persona, puedes comer yakitori excelente, beber cerveza fría y vivir un aspecto de la vida cotidiana japonesa que ningún templo ni jardín puede mostrarte. Incluyo esta zona como última parada en mi{" "}
+              La mayoría de turistas pasan de largo por Shinbashi en su camino entre Tsukiji y Ginza. Es un error. Por ¥2.000–3.000 por persona, puedes comer yakitori excelente, beber cerveza fría y vivir un aspecto de la vida cotidiana japonesa que ningún templo ni jardín puede mostrarte.
+            </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-unagi-skewer.webp"
+                alt="Brocheta de unagi a la parrilla con salsa tare en un izakaya de Shinbashi"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Brocheta de unagi a la parrilla con salsa tare — el tipo de plato que hace volver a los habituales
+              </figcaption>
+            </figure>
+
+            <p className="text-muted-foreground leading-relaxed mb-4"> Incluyo esta zona como última parada en mi{" "}
               <Link to="/es/blog/ruta-gastronomica-tsukiji-ginza" className="text-accent hover:underline">
                 ruta gastronómica de Tsukiji a Ginza
               </Link>
@@ -191,6 +208,20 @@ const EsTesorosOcultosTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Por qué importa como tesoro oculto:</strong> En una ciudad donde la mayoría de experiencias turísticas son visuales — templos, jardines, rascacielos — Shinbashi te ofrece algo vivencial: una forma de participar en, y no solo observar, los ritmos cotidianos de la vida japonesa. Eso es poco frecuente, y es el tipo de experiencia que permanece contigo más tiempo que cualquier foto.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-oden-counter.webp"
+                alt="Asientos de barra en un restaurante de oden de Shinbashi con cocineros trabajando detrás"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Asientos de barra frente a la cocina: la mejor manera de vivir la cultura izakaya de Shinbashi de cerca
+              </figcaption>
+            </figure>
 
             {/* H2: How to find your own hidden gems */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

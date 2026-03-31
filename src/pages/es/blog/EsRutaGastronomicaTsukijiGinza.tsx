@@ -146,6 +146,20 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </p>
 
             {/* Parada 5: Extensión a Shinbashi */}
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-gado-shita-exterior.webp"
+                alt="Restaurantes izakaya iluminados bajo las vías elevadas del JR entre Yurakucho y Shinbashi de noche"
+                className="w-full rounded-lg"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Bajo las vías: los diminutos izakayas brillan bajo la línea elevada del JR entre Yurakucho y Shinbashi
+              </figcaption>
+            </figure>
+
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Parada 5: Shinbashi — El Tramo Más Profundo (17:30 en adelante)
             </h2>
@@ -168,6 +182,21 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Busca los sitios con menús escritos a mano en la pared, yakiton (casquería de cerdo a la parrilla) humeante y ese caos organizado que se produce cuando un bar de 10 asientos intenta servir a 30 personas. Los mejores locales no tienen cartel en inglés ni reseñas de turistas — solo décadas de clientes fieles y un pollo al carbón excelente.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/shinbashi-temaki-handroll.webp"
+                alt="Temaki de atún fresco en un bar de sushi de pie en Shinbashi"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <figcaption className="text-sm text-muted-foreground mt-2 italic">
+                Un temaki de toro en un mostrador de sushi de pie — el tipo de lugar que nunca encontrarías sin adentrarte más en Shinbashi
+              </figcaption>
+            </figure>
+
             <p className="text-muted-foreground leading-relaxed mb-8">
               La locomotora de vapor SL Plaza frente a la estación de Shinbashi es un buen punto de referencia para terminar — y si llegas antes de las 18:00, escucharás sonar su silbato, un pequeño eco del ferrocarril de 1872 que comenzó aquí. Shinbashi fue la terminal de Tokio de la primera línea de tren de Japón, y la cultura de tomar algo después del trabajo que llena estas calles hoy es una parte tan esencial de la identidad de la ciudad como cualquier templo. Escribo más sobre por qué Shinbashi importa en mi{" "}
               <Link to="/es/blog/tesoros-ocultos-tokio" className="text-accent hover:underline">
