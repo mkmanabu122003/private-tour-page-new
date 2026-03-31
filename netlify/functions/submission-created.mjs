@@ -42,7 +42,7 @@ function buildCustomerEmail(data) {
   return {
     from: FROM_EMAIL,
     to: email,
-    subject: `Got it, ${firstName}! Manabu will reply within 12 hours`,
+    subject: `Got it, ${firstName}! Manabu will reply within 24 hours`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -53,7 +53,7 @@ function buildCustomerEmail(data) {
 
   <p style="font-size: 16px; line-height: 1.6;">
     Thank you for reaching out! I received your booking request and will send you
-    a <strong>personalized tour plan within 12 hours</strong>.
+    a <strong>personalized tour plan within 24 hours</strong>.
   </p>
 
   ${tourSection}
@@ -160,7 +160,7 @@ function buildCustomerEmailEs(data) {
   return {
     from: FROM_EMAIL,
     to: email,
-    subject: `Recibido, ${firstName}! Manabu te responderá en 12 horas`,
+    subject: `Recibido, ${firstName}! Manabu te responderá en 24 horas`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -171,7 +171,7 @@ function buildCustomerEmailEs(data) {
 
   <p style="font-size: 16px; line-height: 1.6;">
     Gracias por escribirme. He recibido tu solicitud y te enviaré un
-    <strong>plan de tour personalizado en menos de 12 horas</strong>.
+    <strong>plan de tour personalizado en menos de 24 horas</strong>.
   </p>
 
   ${tourSection}
