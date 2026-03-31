@@ -21,9 +21,9 @@ const tourInfo = {
 };
 
 function buildCustomerEmail(data) {
-  const { name, email, tourType, date, groupSize, message } = data;
+  const { name, email, tourType, date, groupSize } = data;
   const tour = tourInfo[tourType];
-  const firstName = name.split(" ")[0];
+  const firstName = (name || "").split(" ")[0] || "there";
 
   const tourSection = tour
     ? `
@@ -75,7 +75,7 @@ function buildCustomerEmail(data) {
     Manabu<br>
     <span style="font-size: 13px; color: #8a8480;">
       National Government Licensed Guide Interpreter<br>
-      Tanuki Tabi Travel · 500+ tours · 4.86★
+      Tanuki Tabi Travel &middot; 500+ tours &middot; 4.86&#9733;
     </span>
   </p>
 
@@ -91,57 +91,10 @@ function buildCustomerEmail(data) {
   };
 }
 
-function buildNotificationEmail(data) {
-  const { name, email, tourType, date, groupSize, message } = data;
-  const tour = tourInfo[tourType];
-
-  return {
-    from: FROM_EMAIL,
-    to: MANABU_EMAIL,
-    subject: `New inquiry: ${name} — ${tour?.name || tourType || "General"}${date ? ` (${date})` : ""}`,
-    html: `
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"></head>
-<body style="font-family: monospace; padding: 20px; font-size: 14px;">
-  <h2 style="margin: 0 0 16px;">New Booking Inquiry</h2>
-  <table style="border-collapse: collapse;">
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Name:</td><td>${name}</td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Email:</td><td><a href="mailto:${email}">${email}</a></td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Tour:</td><td>${tour?.name || tourType || "Not specified"}</td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Date:</td><td>${date || "Not specified"}</td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Group:</td><td>${groupSize || "Not specified"}</td></tr>
-  </table>
-  <h3 style="margin: 20px 0 8px;">Message:</h3>
-  <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; white-space: pre-wrap;">${message}</div>
-  <p style="margin-top: 16px; color: #888;">Auto-reply has been sent to ${email}.</p>
-</body>
-</html>`,
-  };
-}
-
-async function sendEmail(payload) {
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
-
-  if (!res.ok) {
-    const error = await res.text();
-    throw new Error(`Resend API error: ${res.status} ${error}`);
-  }
-
-  return res.json();
-}
-
 function buildCustomerEmailEs(data) {
   const { name, email, tourType, date, groupSize } = data;
   const tour = tourInfo[tourType];
-  const firstName = name.split(" ")[0];
+  const firstName = (name || "").split(" ")[0] || "Hola";
 
   const tourSection = tour
     ? `
@@ -152,7 +105,7 @@ function buildCustomerEmailEs(data) {
             ${date ? `<tr><td style="padding: 4px 0;">Fecha:</td><td style="padding: 4px 0;">${date}</td></tr>` : ""}
             ${groupSize ? `<tr><td style="padding: 4px 0;">Grupo:</td><td style="padding: 4px 0;">${groupSize}</td></tr>` : ""}
             <tr><td style="padding: 4px 0;">Precio:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.price} para tu grupo</td></tr>
-            <tr><td style="padding: 4px 0;">Duración:</td><td style="padding: 4px 0;">${tour.duration}</td></tr>
+            <tr><td style="padding: 4px 0;">Duraci&oacute;n:</td><td style="padding: 4px 0;">${tour.duration}</td></tr>
           </table>
         </div>`
     : "";
@@ -160,7 +113,7 @@ function buildCustomerEmailEs(data) {
   return {
     from: FROM_EMAIL,
     to: email,
-    subject: `Recibido, ${firstName}! Manabu te responderá en 24 horas`,
+    subject: `Recibido, ${firstName}! Manabu te respondera en 24 horas`,
     html: `
 <!DOCTYPE html>
 <html>
@@ -170,37 +123,37 @@ function buildCustomerEmailEs(data) {
   <p style="font-size: 16px; line-height: 1.6;">Hola ${firstName},</p>
 
   <p style="font-size: 16px; line-height: 1.6;">
-    Gracias por escribirme. He recibido tu solicitud y te enviaré un
+    Gracias por escribirme. He recibido tu solicitud y te enviar&eacute; un
     <strong>plan de tour personalizado en menos de 24 horas</strong>.
   </p>
 
   ${tourSection}
 
   <p style="font-size: 16px; line-height: 1.6;">
-    <strong>Próximos pasos:</strong>
+    <strong>Pr&oacute;ximos pasos:</strong>
   </p>
   <ol style="font-size: 15px; line-height: 1.8; color: #5a554e;">
-    <li>Revisaré tu solicitud y planificaré una ruta personalizada según tus intereses</li>
-    <li>Recibirás un itinerario detallado con mis recomendaciones</li>
-    <li>Confirmamos la reserva — <strong>no se requiere pago hasta el día del tour</strong></li>
+    <li>Revisar&eacute; tu solicitud y planificar&eacute; una ruta personalizada seg&uacute;n tus intereses</li>
+    <li>Recibir&aacute;s un itinerario detallado con mis recomendaciones</li>
+    <li>Confirmamos la reserva &mdash; <strong>no se requiere pago hasta el d&iacute;a del tour</strong></li>
   </ol>
 
   <p style="font-size: 14px; line-height: 1.6; color: #5a554e;">
-    Estoy deseando enseñarte Tokio!
+    Estoy deseando ense&ntilde;arte Tokio!
   </p>
 
   <p style="font-size: 15px; line-height: 1.6;">
     Manabu<br>
     <span style="font-size: 13px; color: #8a8480;">
-      Guía Intérprete con Licencia Nacional del Gobierno de Japón<br>
-      Tanuki Tabi Travel · 500+ tours · 4.86★
+      Gu&iacute;a Int&eacute;rprete con Licencia Nacional del Gobierno de Jap&oacute;n<br>
+      Tanuki Tabi Travel &middot; 500+ tours &middot; 4.86&#9733;
     </span>
   </p>
 
   <hr style="border: none; border-top: 1px solid #e8e4df; margin: 24px 0;">
 
   <p style="font-size: 12px; color: #b0aaa3; line-height: 1.5;">
-    Esta es una confirmación automática. Manabu te escribirá personalmente con tu plan de tour.
+    Esta es una confirmaci&oacute;n autom&aacute;tica. Manabu te escribir&aacute; personalmente con tu plan de tour.
     Si tienes alguna pregunta urgente, responde directamente a este correo.
   </p>
 
@@ -209,42 +162,93 @@ function buildCustomerEmailEs(data) {
   };
 }
 
-export default async (event) => {
-  const { payload } = JSON.parse(event.body);
+function buildNotificationEmail(data) {
+  const { name, email, tourType, date, groupSize, message } = data;
+  const tour = tourInfo[tourType];
+
+  return {
+    from: FROM_EMAIL,
+    to: MANABU_EMAIL,
+    subject: `New inquiry: ${name || "Unknown"} - ${tour ? tour.name : tourType || "General"}${date ? " (" + date + ")" : ""}`,
+    html: `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: monospace; padding: 20px; font-size: 14px;">
+  <h2 style="margin: 0 0 16px;">New Booking Inquiry</h2>
+  <table style="border-collapse: collapse;">
+    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Name:</td><td>${name || "Not provided"}</td></tr>
+    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Email:</td><td><a href="mailto:${email}">${email}</a></td></tr>
+    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Tour:</td><td>${tour ? tour.name : tourType || "Not specified"}</td></tr>
+    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Date:</td><td>${date || "Not specified"}</td></tr>
+    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Group:</td><td>${groupSize || "Not specified"}</td></tr>
+  </table>
+  <h3 style="margin: 20px 0 8px;">Message:</h3>
+  <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; white-space: pre-wrap;">${message || "No message"}</div>
+  <p style="margin-top: 16px; color: #888;">Auto-reply has been sent to ${email}.</p>
+</body>
+</html>`,
+  };
+}
+
+async function sendEmail(payload) {
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + RESEND_API_KEY,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    const error = await res.text();
+    throw new Error("Resend API error: " + res.status + " " + error);
+  }
+
+  return res.json();
+}
+
+// Netlify event-triggered function — must use exports.handler
+exports.handler = async function (event, context) {
+  var body = JSON.parse(event.body);
+  var payload = body.payload;
 
   // Only process contact forms (EN and ES)
-  const isSpanish = payload.form_name === "contact-es";
-  if (payload.form_name !== "contact" && !isSpanish) {
+  var formName = payload.form_name;
+  var isSpanish = formName === "contact-es";
+
+  if (formName !== "contact" && !isSpanish) {
     return { statusCode: 200, body: "Skipped: not a contact form" };
   }
 
   if (!RESEND_API_KEY) {
-    console.error("RESEND_API_KEY not set");
+    console.error("RESEND_API_KEY is not set in environment variables");
     return { statusCode: 500, body: "Missing API key" };
   }
 
-  const data = payload.data || payload;
+  var data = payload.data || {};
+  console.log("Processing submission from:", data.email, "form:", formName);
 
   try {
-    // Send auto-reply (EN or ES) + notification to Manabu
-    const customerEmail = isSpanish
+    var customerEmail = isSpanish
       ? buildCustomerEmailEs(data)
       : buildCustomerEmail(data);
 
-    const [customerResult, notificationResult] = await Promise.all([
+    var results = await Promise.all([
       sendEmail(customerEmail),
       sendEmail(buildNotificationEmail(data)),
     ]);
 
-    console.log("Auto-reply sent:", customerResult);
-    console.log("Notification sent:", notificationResult);
+    console.log("Auto-reply sent to:", data.email);
+    console.log("Notification sent to:", MANABU_EMAIL);
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ customerResult, notificationResult }),
+      body: JSON.stringify({ success: true }),
     };
   } catch (error) {
-    console.error("Email send failed:", error);
+    console.error("Email send failed:", error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),
