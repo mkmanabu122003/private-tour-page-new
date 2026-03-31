@@ -127,7 +127,7 @@ export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) =
             </table>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-4">
-            One price for your whole group — no per-person charges.
+            The tour price is fixed per group — the more people you bring, the better value per person.
           </p>
         </div>
       </div>
@@ -237,7 +237,7 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
             </table>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-4">
-            Un precio para todo tu grupo — sin cargos por persona.
+            El precio del tour es fijo por grupo — cuantas más personas, mejor precio por persona.
           </p>
         </div>
       </div>
