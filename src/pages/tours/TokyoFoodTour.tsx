@@ -659,27 +659,6 @@ const TokyoFoodTour = () => {
         </div>
       </section>
 
-      {/* Inline Booking CTA */}
-      <section className="py-12 bg-accent/5 border-y border-accent/10">
-        <div className="container-section text-center">
-          <p className="text-lg sm:text-xl font-semibold text-foreground">
-            Ready to book? Secure your private tour →
-          </p>
-          <Link
-            to="/contact"
-            data-cta="book-now"
-            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
-            onClick={() => trackBookNowClick("Book Now")}
-          >
-            Book Now
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Licensed guide · Private tour
-          </p>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container-section text-center">
