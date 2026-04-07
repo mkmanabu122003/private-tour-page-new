@@ -207,115 +207,115 @@ const EsExcursionHakoneDesdeTokio = () => {
                 <strong className="text-foreground">Quieres pasar la mayor parte del día en un onsen</strong> en vez de hacer el circuito completo. En ese caso, toma el tren hasta Hakone-Yumoto, camina hasta un onsen cercano, relájate y vuelve. No necesitas guía.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">El presupuesto es tu prioridad.</strong> La tarifa del guia (¥70,000 por un dia completo de{" "}
+                <strong className="text-foreground">El presupuesto es tu prioridad.</strong> La tarifa del guía (¥70,000 por un día completo de{" "}
                 <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
-                  excursion a Hakone
+                  excursión a Hakone
                 </Link>
-                ) es una adicion importante al coste del dia. Si tu presupuesto es ajustado, el Hakone Free Pass y una buena planificacion pueden llevarte a traves del circuito por tu cuenta.
+                ) es una adición importante al coste del día. Si tu presupuesto es ajustado, el Hakone Free Pass y una buena planificación pueden llevarte a través del circuito por tu cuenta.
               </li>
             </ul>
 
-            {/* Cuando un guia lo cambia todo */}
+            {/* Cuándo un guía lo cambia todo */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Cuando un guia lo cambia todo
+              Cuándo un guía lo cambia todo
             </h2>
             <ul className="space-y-3 mb-8">
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Es tu primera vez en el circuito de Hakone</strong> y tienes poco tiempo para improvisar
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Viajas con padres mayores o niños pequeños</strong> donde la presion de los horarios y los transbordos complejos generan estres real
+                <strong className="text-foreground">Viajas con padres mayores o niños pequeños</strong> donde la presión de los horarios y los transbordos complejos generan estrés real
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Quieres combinar Hakone con algo mas</strong> (un onsen concreto, un museo, una visita a un taller artesanal)
+                <strong className="text-foreground">Quieres combinar Hakone con algo más</strong> (un onsen concreto, un museo, una visita a un taller artesanal)
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">El tiempo es incierto</strong> y quieres a alguien que pueda adaptar el plan sobre la marcha
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Grupos de 3 o mas personas</strong> donde los ¥70,000 del guia divididos entre el grupo resultan muy razonables por persona. Para un grupo de cuatro, sale a menos de ¥18,000 por persona por un dia completo con guia privado con licencia.
+                <strong className="text-foreground">Grupos de 3 o más personas</strong> donde los ¥70,000 del guía divididos entre el grupo resultan muy razonables por persona. Para un grupo de cuatro, sale a menos de ¥18,000 por persona por un día completo con guía privado con licencia.
               </li>
             </ul>
 
             <InlineCTAEs
-              message="¿Viajando en grupo o con familia? Un guia marca la diferencia."
+              message="¿Viajando en grupo o con familia? Un guía marca la diferencia."
               linkText="Ver detalles del tour a Hakone →"
               href="/es/tours/hakone-day-trip"
             />
 
             {/* Preguntas frecuentes */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
-              Preguntas frecuentes sobre la excursion a Hakone desde Tokio
+              Preguntas frecuentes sobre la excursión a Hakone desde Tokio
             </h2>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              ¿Se puede hacer la excursion a Hakone en un dia desde Tokio?
+              ¿Se puede hacer la excursión a Hakone en un día desde Tokio?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si, la mayoria de visitantes lo hacen en un dia. Necesitas entre 7 y 8 horas contando el trayecto desde Tokio. Lo importante es salir temprano (idealmente antes de las 8:00 desde Shinjuku) para tener margen suficiente y no ir con prisas en las ultimas conexiones.
+              Sí, la mayoría de visitantes lo hacen en un día. Necesitas entre 7 y 8 horas contando el trayecto desde Tokio. Lo importante es salir temprano (idealmente antes de las 8:00 desde Shinjuku) para tener margen suficiente y no ir con prisas en las últimas conexiones.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              ¿Cuanto cuesta ir a Hakone por tu cuenta?
+              ¿Cuánto cuesta ir a Hakone por tu cuenta?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El Hakone Free Pass cuesta ¥7,100 (2 dias) e incluye transporte de ida y vuelta desde Shinjuku mas todos los transportes del circuito. Si quieres ir en Romancecar, anade ¥1,200 por trayecto. Sumando comida y alguna entrada, calcula entre ¥10,000 y ¥12,000 por persona para el dia. Es una de las excursiones con mejor relacion calidad-precio desde Tokio.
+              El Hakone Free Pass cuesta ¥7,100 (2 días) e incluye transporte de ida y vuelta desde Shinjuku más todos los transportes del circuito. Si quieres ir en Romancecar, añade ¥1,200 por trayecto. Sumando comida y alguna entrada, calcula entre ¥10,000 y ¥12,000 por persona para el día. Es una de las excursiones con mejor relación calidad-precio desde Tokio.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              ¿Vale la pena contratar un guia para Hakone?
+              ¿Vale la pena contratar un guía para Hakone?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Depende de tu situacion. Si es tu primera vez, viajas con familia o quieres maximizar cada minuto sin preocuparte por horarios y logistica, un guia transforma la experiencia. Nuestro{" "}
+              Depende de tu situación. Si es tu primera vez, viajas con familia o quieres maximizar cada minuto sin preocuparte por horarios y logística, un guía transforma la experiencia. Nuestro{" "}
               <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
                 tour privado a Hakone
               </Link>
-              {" "}cuesta ¥70,000 para el grupo (no por persona), lo que para 3-4 viajeros resulta muy asequible. Si ya conoces Japon y te sientes comodo navegando el transporte publico, puedes hacerlo perfectamente solo.
+              {" "}cuesta ¥70,000 para el grupo (no por persona), lo que para 3-4 viajeros resulta muy asequible. Si ya conoces Japón y te sientes cómodo navegando el transporte público, puedes hacerlo perfectamente solo.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              ¿Que pasa si el teleferico de Hakone esta cerrado?
+              ¿Qué pasa si el teleférico de Hakone está cerrado?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Cuando el teleferico cierra por actividad volcanica, hay un autobus sustitutivo que conecta Sounzan con Togendai. El circuito sigue siendo posible, pero pierdes la experiencia aerea sobre Owakudani y los tiempos cambian. Un guia conoce la alternativa y ajusta el itinerario para que no pierdas tiempo. Si vas solo, necesitaras improvisar sobre la marcha y puede haber confusiones con los horarios del bus.
+              Cuando el teleférico cierra por actividad volcánica, hay un autobús sustitutivo que conecta Sounzan con Togendai. El circuito sigue siendo posible, pero pierdes la experiencia aérea sobre Owakudani y los tiempos cambian. Un guía conoce la alternativa y ajusta el itinerario para que no pierdas tiempo. Si vas solo, necesitarás improvisar sobre la marcha y puede haber confusiones con los horarios del bus.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              ¿Cual es la mejor epoca para visitar Hakone?
+              ¿Cuál es la mejor época para visitar Hakone?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Cada estacion tiene su encanto. La primavera (abril-mayo) y el otono (noviembre) son las epocas mas populares, con los cerezos en flor y el koyo respectivamente. El verano es caluroso pero Hakone esta en la montana y las temperaturas son mas agradables que en Tokio. El invierno ofrece los dias mas despejados para ver el Monte Fuji, pero algunas atracciones pueden tener horarios reducidos. Si tu prioridad es ver el Fuji, los meses de invierno (diciembre-febrero) suelen tener los cielos mas limpios.
+              Cada estación tiene su encanto. La primavera (abril-mayo) y el otoño (noviembre) son las épocas más populares, con los cerezos en flor y el koyo respectivamente. El verano es caluroso pero Hakone está en la montaña y las temperaturas son más agradables que en Tokio. El invierno ofrece los días más despejados para ver el Monte Fuji, pero algunas atracciones pueden tener horarios reducidos. Si tu prioridad es ver el Fuji, los meses de invierno (diciembre-febrero) suelen tener los cielos más limpios.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              ¿Hakone o Kamakura para una excursion de un dia?
+              ¿Hakone o Kamakura para una excursión de un día?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Son excursiones muy diferentes. Kamakura esta mas cerca (una hora desde Tokio), tiene el Gran Buda y playas, y funciona bien para medio dia. Hakone necesita el dia completo pero ofrece una experiencia mas variada: transporte panoramico, volcanes, lago, aguas termales. Si solo tienes tiempo para una y te atrae la naturaleza y los onsen, elige Hakone. Si prefieres templos y un ritmo mas relajado, Kamakura. Consulta nuestra{" "}
+              Son excursiones muy diferentes. Kamakura está más cerca (una hora desde Tokio), tiene el Gran Buda y playas, y funciona bien para medio día. Hakone necesita el día completo pero ofrece una experiencia más variada: transporte panorámico, volcanes, lago, aguas termales. Si solo tienes tiempo para una y te atrae la naturaleza y los onsen, elige Hakone. Si prefieres templos y un ritmo más relajado, Kamakura. Consulta nuestra{" "}
               <Link to="/es/blog/comparativa-excursiones" className="text-accent hover:underline">
                 comparativa completa
               </Link>
-              {" "}para mas detalles.
+              {" "}para más detalles.
             </p>
 
             {/* CTA final */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2 className="text-2xl font-medium text-foreground mb-4">
-                ¿Estas planificando una excursion a Hakone?
+                ¿Estás planificando una excursión a Hakone?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Tanto si prefieres ir solo como con guia, estoy encantado de responder tus preguntas sobre la ruta, los horarios y que priorizar. Consulta mi{" "}
+                Tanto si prefieres ir solo como con guía, estoy encantado de responder tus preguntas sobre la ruta, los horarios y qué priorizar. Consulta mi{" "}
                 <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
-                  tour de un dia a Hakone
+                  tour de un día a Hakone
                 </Link>
-                {" "}para mas detalles, o contactame con tu situacion concreta. En primavera y otono las plazas se llenan rapido, asi que si ya tienes fechas, mejor reservar con tiempo.
+                {" "}para más detalles, o contáctame con tu situación concreta. En primavera y otoño las plazas se llenan rápido, así que si ya tienes fechas, mejor reservar con tiempo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/es/contact?utm_source=blog&utm_medium=cta&utm_campaign=hakone-guia-vs-solo"
                   className="btn-accent"
                 >
-                  Consultar sobre tu excursion a Hakone
+                  Consultar sobre tu excursión a Hakone
                 </Link>
                 <Link to="/es/tours/hakone-day-trip" className="btn-outline">
                   Ver Tour a Hakone
@@ -336,13 +336,13 @@ const EsExcursionHakoneDesdeTokio = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: "Excursion a Hakone desde Tokio: ¿necesitas guia o puedes ir solo? (2026)",
+            headline: "Excursión a Hakone desde Tokio: ¿necesitas guía o puedes ir solo? (2026)",
             description:
-              "El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Un guia local te explica cuando vale la pena ir acompañado y cuando puedes ir por tu cuenta.",
+              "El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Un guía local te explica cuándo vale la pena ir acompañado y cuándo puedes ir por tu cuenta.",
             author: {
               "@type": "Person",
               name: "Manabu",
-              jobTitle: "Guia Interprete con Licencia Nacional",
+              jobTitle: "Guía Intérprete con Licencia Nacional",
               url: "https://tanuki-tabi-travel.com/es/about",
             },
             datePublished: "2026-03-14",
@@ -371,50 +371,50 @@ const EsExcursionHakoneDesdeTokio = () => {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "¿Se puede hacer la excursion a Hakone en un dia desde Tokio?",
+                name: "¿Se puede hacer la excursión a Hakone en un día desde Tokio?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Si, la mayoria de visitantes lo hacen en un dia. Necesitas entre 7 y 8 horas contando el trayecto desde Tokio. Lo importante es salir temprano (idealmente antes de las 8:00 desde Shinjuku).",
+                  text: "Sí, la mayoría de visitantes lo hacen en un día. Necesitas entre 7 y 8 horas contando el trayecto desde Tokio. Lo importante es salir temprano (idealmente antes de las 8:00 desde Shinjuku).",
                 },
               },
               {
                 "@type": "Question",
-                name: "¿Cuanto cuesta ir a Hakone por tu cuenta?",
+                name: "¿Cuánto cuesta ir a Hakone por tu cuenta?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "El Hakone Free Pass cuesta ¥7,100 (2 dias) e incluye transporte de ida y vuelta desde Shinjuku mas todos los transportes del circuito. Sumando comida y entradas, calcula entre ¥10,000 y ¥12,000 por persona.",
+                  text: "El Hakone Free Pass cuesta ¥7,100 (2 días) e incluye transporte de ida y vuelta desde Shinjuku más todos los transportes del circuito. Sumando comida y entradas, calcula entre ¥10,000 y ¥12,000 por persona.",
                 },
               },
               {
                 "@type": "Question",
-                name: "¿Vale la pena contratar un guia para Hakone?",
+                name: "¿Vale la pena contratar un guía para Hakone?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Depende de tu situacion. Para primera vez, viajes con familia o grupos de 3+, un guia transforma la experiencia. El tour privado cuesta ¥70,000 para el grupo (no por persona).",
+                  text: "Depende de tu situación. Para primera vez, viajes con familia o grupos de 3+, un guía transforma la experiencia. El tour privado cuesta ¥70,000 para el grupo (no por persona).",
                 },
               },
               {
                 "@type": "Question",
-                name: "¿Que pasa si el teleferico de Hakone esta cerrado?",
+                name: "¿Qué pasa si el teleférico de Hakone está cerrado?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Hay un autobus sustitutivo que conecta Sounzan con Togendai. El circuito sigue siendo posible pero los tiempos cambian. Un guia conoce la alternativa y ajusta el itinerario.",
+                  text: "Hay un autobús sustitutivo que conecta Sounzan con Togendai. El circuito sigue siendo posible pero los tiempos cambian. Un guía conoce la alternativa y ajusta el itinerario.",
                 },
               },
               {
                 "@type": "Question",
-                name: "¿Cual es la mejor epoca para visitar Hakone?",
+                name: "¿Cuál es la mejor época para visitar Hakone?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Primavera (abril-mayo) y otono (noviembre) son las epocas mas populares. El invierno ofrece los dias mas despejados para ver el Monte Fuji. Cada estacion tiene su encanto.",
+                  text: "Primavera (abril-mayo) y otoño (noviembre) son las épocas más populares. El invierno ofrece los días más despejados para ver el Monte Fuji. Cada estación tiene su encanto.",
                 },
               },
               {
                 "@type": "Question",
-                name: "¿Hakone o Kamakura para una excursion de un dia?",
+                name: "¿Hakone o Kamakura para una excursión de un día?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Son excursiones muy diferentes. Kamakura esta mas cerca y funciona para medio dia. Hakone necesita el dia completo pero ofrece transporte panoramico, volcanes, lago y aguas termales.",
+                  text: "Son excursiones muy diferentes. Kamakura está más cerca y funciona para medio día. Hakone necesita el día completo pero ofrece transporte panorámico, volcanes, lago y aguas termales.",
                 },
               },
             ],
