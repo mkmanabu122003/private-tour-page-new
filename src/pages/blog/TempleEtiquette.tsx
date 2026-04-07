@@ -9,8 +9,8 @@ const TempleEtiquette = () => {
   return (
     <Layout>
       <SEO
-        title="Japanese Temple & Shrine Etiquette: 8 Dos and Don'ts"
-        description="Purification ritual, prayer steps, photo rules & 5 mistakes that offend locals. A licensed guide's etiquette checklist for first-time visitors to Japan."
+        title="How to Pray at a Japanese Shrine: Bow-Clap-Bow & 5 Common Mistakes"
+        description="Step-by-step: purification at the temizuya, the two-bow two-clap one-bow prayer, photo etiquette, and dress code. What a licensed Tokyo guide sees tourists get wrong every day."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -46,7 +46,7 @@ const TempleEtiquette = () => {
             </Link>
             <p className="text-label text-accent mb-3">Planning Your Trip</p>
             <h1 className="heading-display text-foreground">
-              Temple & Shrine Etiquette in Japan: A Complete Guide
+              How to Pray at a Japanese Shrine & Temple: The Right Way (From a Licensed Guide)
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">

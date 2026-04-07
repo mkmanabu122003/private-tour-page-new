@@ -8,8 +8,8 @@ const IsItWorthHiringGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Hiring a Tour Guide in Tokyo: When It's Worth It (2026)"
-        description="A licensed Tokyo guide with 500+ tours shares when hiring a guide is worth it—and when you're better off solo. Honest breakdown, no sales pitch."
+        title="Is Hiring a Tour Guide in Tokyo Worth It? (2026)"
+        description="After 500+ tours, here's my honest answer: it depends on 3 things. When a guide is worth ¥40,000–50,000 and when you're better off solo."
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
       />
 

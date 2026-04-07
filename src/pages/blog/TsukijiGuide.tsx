@@ -8,7 +8,7 @@ const TsukijiGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Tsukiji Market Guide for Food Lovers | What to Eat & Skip | Tanuki Tabi Travel"
+        title="Tsukiji for Food Lovers: What to Eat & What to Skip"
         description="A local guide to Tsukiji Outer Market. What to eat, what to skip, best times to visit, and how to combine with Ginza for a perfect Tokyo food day."
         canonicalPath="/blog/tsukiji-guide-food-lover"
       />

@@ -110,6 +110,17 @@ const routes = [
   "/es/blog/cerezos-en-flor-tokio",
   "/es/blog/tesoros-ocultos-tokio",
   "/es/blog/ruta-gastronomica-tsukiji-ginza",
+  "/es/blog/excursion-hakone-desde-tokio",
+  "/es/blog/tsukiji-vs-toyosu",
+  "/es/blog/sensoji-templo-mas-visitado",
+  "/es/blog/tokio-con-ninos-tour-familiar",
+  "/es/blog/tour-vegetariano-tokio",
+  "/es/blog/excursion-kawagoe-desde-tokio",
+  "/es/blog/excursion-yokohama-desde-tokio",
+  "/es/blog/guia-ramen-tokio",
+  "/es/blog/tokio-con-presupuesto",
+  "/es/blog/que-esperar-tour-privado-tokio",
+  "/es/blog/guia-asakusa-completa",
 ];
 
 async function prerender() {

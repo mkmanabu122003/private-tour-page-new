@@ -12,6 +12,11 @@ const YokohamaDayTrip = () => {
         title="Yokohama Day Trip from Tokyo 2026: Is It Worth Visiting?"
         description="Yokohama is 30 min from Tokyo — but is it worth a full day? Chinatown, Ramen Museum, waterfront & what to combine it with. A guide's honest verdict."
         canonicalPath="/blog/yokohama-day-trip-from-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/yokohama-day-trip-from-tokyo" },
+          { lang: "es", path: "/es/blog/excursion-yokohama-desde-tokio" },
+          { lang: "x-default", path: "/blog/yokohama-day-trip-from-tokyo" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

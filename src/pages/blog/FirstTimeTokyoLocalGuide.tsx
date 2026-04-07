@@ -10,7 +10,7 @@ const FirstTimeTokyoLocalGuide = () => {
     <Layout>
       <SEO
         title="First Time in Tokyo? Here's What a Local Guide Actually Does"
-        description="Beyond directions and translations. What a typical day with a Tokyo guide looks like, and an honest take on whether you need one."
+        description="Beyond directions and translations — what a typical day with a private Tokyo guide actually looks like, and an honest take on whether you need one."
         canonicalPath="/blog/first-time-tokyo-local-guide"
         hreflang={[
           { lang: "en", path: "/blog/first-time-tokyo-local-guide" },

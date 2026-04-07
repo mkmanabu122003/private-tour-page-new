@@ -11,6 +11,11 @@ const TokyoOnABudget = () => {
         title="Tokyo on a Budget: What a Local Guide Spends"
         description="Tokyo is more affordable than its reputation. A licensed guide breaks down real daily costs (transport, food, entry fees) and where to save."
         canonicalPath="/blog/tokyo-on-a-budget"
+        hreflang={[
+          { lang: "en", path: "/blog/tokyo-on-a-budget" },
+          { lang: "es", path: "/es/blog/tokio-con-presupuesto" },
+          { lang: "x-default", path: "/blog/tokyo-on-a-budget" },
+        ]}
       />
 
       {/* Hero Image */}

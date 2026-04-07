@@ -10,8 +10,8 @@ const EsEtiquetaTemplos = () => {
   return (
     <Layout>
       <SEO
-        title="Cómo Comportarse en Templos y Santuarios de Japón: 8 Reglas"
-        description="Ritual de purificación, pasos para rezar, normas de fotos y 5 errores que molestan a los locales. Consejos de etiqueta de un guía oficial para tu primera visita a Japón."
+        title="Cómo Rezar en un Santuario Japonés: Reverencia-Aplauso y 5 Errores"
+        description="Paso a paso: purificación en el temizuya, la secuencia de dos reverencias, dos aplausos y una reverencia, normas de fotos y vestimenta. Lo que un guía oficial en Tokio ve hacer mal a los turistas cada día."
         canonicalPath="/es/blog/etiqueta-templos-santuarios"
         hreflang={[
           { lang: "en", path: "/blog/japan-temple-shrine-etiquette" },
@@ -47,7 +47,7 @@ const EsEtiquetaTemplos = () => {
             </Link>
             <p className="text-label text-accent mb-3">Planifica tu Viaje</p>
             <h1 className="heading-display text-foreground">
-              Etiqueta en Templos y Santuarios de Japón: Guía Completa
+              Cómo Rezar en un Santuario y Templo Japonés: La Forma Correcta (De un Guía Oficial)
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">

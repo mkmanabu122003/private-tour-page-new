@@ -8,7 +8,7 @@ const YanakaWalkingTourGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Yanaka Walking Tour: Tokyo's Best-Kept Secret Neighborhood | Tanuki Tabi Travel"
+        title="Yanaka Walking Tour: Tokyo's Best-Kept Secret"
         description="Yanaka is old Tokyo at its finest — temples, shotengai, and no crowds. A local guide shares the best walking route through this hidden gem."
         canonicalPath="/blog/yanaka-walking-tour-guide"
       />

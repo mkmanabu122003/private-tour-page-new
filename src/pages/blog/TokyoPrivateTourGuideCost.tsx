@@ -9,8 +9,8 @@ const TokyoPrivateTourGuideCost = () => {
   return (
     <Layout>
       <SEO
-        title="How Much Does a Private Tour Guide Cost in Tokyo? 2026"
-        description="Tokyo tour guide prices range from ¥20,000 to ¥80,000 per day. A licensed local guide explains what affects the cost and what you actually get."
+        title="Private Tour Guide Cost in Tokyo: ¥40,000–¥80,000 (2026)"
+        description="Half-day ¥40,000–50,000, full-day ¥60,000–80,000 per group. A licensed Tokyo guide breaks down what affects the price and what you actually get."
         canonicalPath="/blog/tokyo-private-tour-guide-cost"
         hreflang={[
           { lang: "es", path: "/es/blog/cuanto-cuesta-guia-privado-tokio" },
@@ -494,7 +494,7 @@ const TokyoPrivateTourGuideCost = () => {
             headline:
               "How Much Does a Private Tour Guide Cost in Tokyo? A 2026 Price Guide",
             description:
-              "Tokyo tour guide prices range from ¥15,000 to ¥80,000 per day. A licensed local guide explains what affects the cost and what you actually get for the money.",
+              "Half-day ¥40,000–50,000, full-day ¥60,000–80,000 per group. A licensed Tokyo guide breaks down what affects the price and what you actually get.",
             author: {
               "@type": "Person",
               name: "Manabu",

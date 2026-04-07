@@ -9,8 +9,8 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
   return (
     <Layout>
       <SEO
-        title="¿Cuánto Cuesta un Guía Privado en Tokio? Precios Reales 2026"
-        description="Un guía local con licencia oficial te explica los precios reales: desde ¥40,000 hasta ¥80,000. Sin comisiones de agencia. Qué incluye y cómo elegir."
+        title="Guía Privado en Tokio: Precios ¥40,000–¥80,000 (2026)"
+        description="Medio día ¥40,000–50,000, día completo ¥60,000–80,000 por grupo. Un guía con licencia oficial explica qué incluye y cómo elegir bien."
         canonicalPath="/es/blog/cuanto-cuesta-guia-privado-tokio"
         hreflang={[
           { lang: "en", path: "/blog/tokyo-private-tour-guide-cost" },

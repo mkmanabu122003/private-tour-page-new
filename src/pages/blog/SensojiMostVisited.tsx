@@ -12,6 +12,11 @@ const SensojiMostVisited = () => {
         title="Senso-ji Temple: 30M Visitors — Best Times & Tips"
         description="Senso-ji is Tokyo's most visited temple with 30 million visitors/year. Beat the crowds: best hours, secret viewpoints, and 5 things most tourists walk past."
         canonicalPath="/blog/senso-ji-most-visited-temple"
+        hreflang={[
+          { lang: "en", path: "/blog/senso-ji-most-visited-temple" },
+          { lang: "es", path: "/es/blog/sensoji-templo-mas-visitado" },
+          { lang: "x-default", path: "/blog/senso-ji-most-visited-temple" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

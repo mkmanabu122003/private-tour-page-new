@@ -11,6 +11,11 @@ const RamenGuideTokyo = () => {
         title="Ramen Guide Tokyo: What a Local Guide Orders"
         description="There are 10,000+ ramen shops in Tokyo. A licensed guide with 500+ tours cuts through the noise and tells you exactly what to order and where."
         canonicalPath="/blog/ramen-guide-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/ramen-guide-tokyo" },
+          { lang: "es", path: "/es/blog/guia-ramen-tokio" },
+          { lang: "x-default", path: "/blog/ramen-guide-tokyo" },
+        ]}
       />
 
       {/* Hero Image */}

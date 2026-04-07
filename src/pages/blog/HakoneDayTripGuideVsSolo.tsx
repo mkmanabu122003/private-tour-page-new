@@ -12,6 +12,11 @@ const HakoneDayTripGuideVsSolo = () => {
         title="Hakone Day Trip: Do You Need a Guide or Can You Go Alone? (2026)"
         description="The Hakone Loop is doable solo, but timing is tricky. A local guide explains when going alone works and when a guide saves your day."
         canonicalPath="/blog/hakone-day-trip-guide-vs-solo"
+        hreflang={[
+          { lang: "en", path: "/blog/hakone-day-trip-guide-vs-solo" },
+          { lang: "es", path: "/es/blog/excursion-hakone-desde-tokio" },
+          { lang: "x-default", path: "/blog/hakone-day-trip-guide-vs-solo" },
+        ]}
       />
 
       {/* Hero Image */}

@@ -97,6 +97,17 @@ import EsTourGastronomicoTokio from "./pages/es/blog/EsTourGastronomicoTokio";
 import EsCerezosEnFlorTokio from "./pages/es/blog/EsCerezosEnFlorTokio";
 import EsTesorosOcultosTokio from "./pages/es/blog/EsTesorosOcultosTokio";
 import EsRutaGastronomicaTsukijiGinza from "./pages/es/blog/EsRutaGastronomicaTsukijiGinza";
+import EsExcursionHakoneDesdeTokio from "./pages/es/blog/EsExcursionHakoneDesdeTokio";
+import EsTsukijiVsToyosu from "./pages/es/blog/EsTsukijiVsToyosu";
+import EsSensojiTemploMasVisitado from "./pages/es/blog/EsSensojiTemploMasVisitado";
+import EsTokioConNinosTourFamiliar from "./pages/es/blog/EsTokioConNinosTourFamiliar";
+import EsTourVegetarianoTokio from "./pages/es/blog/EsTourVegetarianoTokio";
+import EsExcursionKawagoeDesdeTokio from "./pages/es/blog/EsExcursionKawagoeDesdeTokio";
+import EsExcursionYokohamaDesdeTokio from "./pages/es/blog/EsExcursionYokohamaDesdeTokio";
+import EsGuiaRamenTokio from "./pages/es/blog/EsGuiaRamenTokio";
+import EsTokioConPresupuesto from "./pages/es/blog/EsTokioConPresupuesto";
+import EsQueEsperarTourPrivado from "./pages/es/blog/EsQueEsperarTourPrivado";
+import EsGuiaAsakusaNueva from "./pages/es/blog/EsGuiaAsakusaNueva";
 
 const queryClient = new QueryClient();
 
@@ -201,6 +212,17 @@ const AppRoutes = () => (
         <Route path="/es/blog/cerezos-en-flor-tokio" element={<EsCerezosEnFlorTokio />} />
         <Route path="/es/blog/tesoros-ocultos-tokio" element={<EsTesorosOcultosTokio />} />
         <Route path="/es/blog/ruta-gastronomica-tsukiji-ginza" element={<EsRutaGastronomicaTsukijiGinza />} />
+        <Route path="/es/blog/excursion-hakone-desde-tokio" element={<EsExcursionHakoneDesdeTokio />} />
+        <Route path="/es/blog/tsukiji-vs-toyosu" element={<EsTsukijiVsToyosu />} />
+        <Route path="/es/blog/sensoji-templo-mas-visitado" element={<EsSensojiTemploMasVisitado />} />
+        <Route path="/es/blog/tokio-con-ninos-tour-familiar" element={<EsTokioConNinosTourFamiliar />} />
+        <Route path="/es/blog/tour-vegetariano-tokio" element={<EsTourVegetarianoTokio />} />
+        <Route path="/es/blog/excursion-kawagoe-desde-tokio" element={<EsExcursionKawagoeDesdeTokio />} />
+        <Route path="/es/blog/excursion-yokohama-desde-tokio" element={<EsExcursionYokohamaDesdeTokio />} />
+        <Route path="/es/blog/guia-ramen-tokio" element={<EsGuiaRamenTokio />} />
+        <Route path="/es/blog/tokio-con-presupuesto" element={<EsTokioConPresupuesto />} />
+        <Route path="/es/blog/que-esperar-tour-privado-tokio" element={<EsQueEsperarTourPrivado />} />
+        <Route path="/es/blog/guia-asakusa-completa" element={<EsGuiaAsakusaNueva />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

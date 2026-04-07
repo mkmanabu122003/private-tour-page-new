@@ -12,6 +12,11 @@ const TokyoWithKidsFamilyTour = () => {
         title="Tokyo With Kids: Why Families Are Booking Private Guides (2026)"
         description="Strollers on packed trains, meltdowns at shrines, kids who won't eat raw fish. A family-friendly guide shares how to make Tokyo work with children."
         canonicalPath="/blog/tokyo-with-kids-family-tour"
+        hreflang={[
+          { lang: "en", path: "/blog/tokyo-with-kids-family-tour" },
+          { lang: "es", path: "/es/blog/tokio-con-ninos-tour-familiar" },
+          { lang: "x-default", path: "/blog/tokyo-with-kids-family-tour" },
+        ]}
       />
 
       {/* Hero Image */}

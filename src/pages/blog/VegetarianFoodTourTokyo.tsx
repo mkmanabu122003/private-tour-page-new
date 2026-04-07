@@ -8,9 +8,14 @@ const VegetarianFoodTourTokyo = () => {
   return (
     <Layout>
       <SEO
-        title="Vegetarian Food Tour Tokyo: A Complete Guide for Dietary Restrictions | Tanuki Tabi"
-        description="Worried about dietary restrictions in Tokyo? A licensed private guide shares the best vegetarian-friendly food spots and how to customize your tour."
+        title="Vegetarian Food Tour Tokyo: A Guide to Eating Well"
+        description="Worried about dietary restrictions in Tokyo? A licensed guide shares the best vegetarian-friendly spots, hidden vegan options, and how to order with confidence."
         canonicalPath="/blog/vegetarian-food-tour-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/vegetarian-food-tour-tokyo" },
+          { lang: "es", path: "/es/blog/tour-vegetariano-tokio" },
+          { lang: "x-default", path: "/blog/vegetarian-food-tour-tokyo" },
+        ]}
       />
 
       {/* Hero Image */}

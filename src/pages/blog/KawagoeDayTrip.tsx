@@ -11,6 +11,11 @@ const KawagoeDayTrip = () => {
         title="Kawagoe Day Trip from Tokyo 2026: Little Edo in 30 Minutes"
         description="Kawagoe's Edo-era warehouses are just 30 min from Ikebukuro. Complete walking route, best sweet potato treats, and how to avoid weekend crowds."
         canonicalPath="/blog/kawagoe-day-trip-from-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/kawagoe-day-trip-from-tokyo" },
+          { lang: "es", path: "/es/blog/excursion-kawagoe-desde-tokio" },
+          { lang: "x-default", path: "/blog/kawagoe-day-trip-from-tokyo" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

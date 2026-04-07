@@ -9,8 +9,8 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
   return (
     <Layout>
       <SEO
-        title="¿Vale la pena un guía privado en Tokio? Mi respuesta sin rodeos"
-        description="¿Necesitas un guía privado en Tokio o puedes ir solo? Un guía oficial con 500+ tours te da su respuesta honesta, con ejemplos reales de sus clientes."
+        title="¿Vale la Pena Contratar un Guía Privado en Tokio? (2026)"
+        description="Después de 500+ tours, mi respuesta honesta: depende de 3 cosas. Cuándo un guía vale ¥40,000–50,000 y cuándo es mejor ir por tu cuenta."
         canonicalPath="/es/blog/vale-la-pena-guia-privado-tokio"
         hreflang={[
           { lang: "es", path: "/es/blog/vale-la-pena-guia-privado-tokio" },

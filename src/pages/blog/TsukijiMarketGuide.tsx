@@ -10,9 +10,14 @@ const TsukijiMarketGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Fish Market Guide 2026: Tsukiji Hours & Tips"
-        description="Tsukiji Outer Market: 460+ shops, open 5AM–2PM, closed Sundays. A local guide's picks for best food, must-try stalls, and tips to skip the crowds."
+        title="Tsukiji Market Guide 2026: Hours, Best Stalls & Tips"
+        description="Tsukiji Outer Market hours: 5 AM–2 PM, closed Sundays & Wednesdays. 460+ shops — a local guide picks the 8 must-try stalls and when to go to skip crowds."
         canonicalPath="/blog/tsukiji-market-guide"
+        hreflang={[
+          { lang: "en", path: "/blog/tsukiji-market-guide" },
+          { lang: "es", path: "/es/blog/mercado-tsukiji-tokio" },
+          { lang: "x-default", path: "/blog/tsukiji-market-guide" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

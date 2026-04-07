@@ -13,7 +13,9 @@ const EsMercadoTsukijiTokio = () => {
         description="El Mercado Tsukiji sigue abierto en 2026 con 460+ puestos. Horario: 5:00-14:00, cerrado domingos. Guía local con los mejores puestos y consejos."
         canonicalPath="/es/blog/mercado-tsukiji-tokio"
         hreflang={[
+          { lang: "en", path: "/blog/tsukiji-market-guide" },
           { lang: "es", path: "/es/blog/mercado-tsukiji-tokio" },
+          { lang: "x-default", path: "/blog/tsukiji-market-guide" },
         ]}
       />
 

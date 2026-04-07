@@ -1041,7 +1041,8 @@ const TourDetail = () => {
       )}
 
       {/* JSON-LD Structured Data */}
-      {schema && (
+      {schema && tour && (
+        <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -1052,14 +1053,14 @@ const TourDetail = () => {
               "description": seo.description,
               "url": `https://tanuki-tabi-travel.com/tours/${id}`,
               "touristType": "Cultural Tourism",
-              "itinerary": tour ? {
+              "itinerary": {
                 "@type": "ItemList",
                 "itemListElement": tour.highlights.map((h: string, i: number) => ({
                   "@type": "ListItem",
                   "position": i + 1,
                   "name": h,
                 })),
-              } : undefined,
+              },
               "offers": {
                 "@type": "Offer",
                 "price": schema.price,
@@ -1074,6 +1075,51 @@ const TourDetail = () => {
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": schema.name,
+              "description": seo.description,
+              "url": `https://tanuki-tabi-travel.com/tours/${id}`,
+              "brand": {
+                "@type": "Organization",
+                "name": "Tanuki Tabi Travel",
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": schema.price,
+                "priceCurrency": "JPY",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2026-01-01",
+                "priceValidUntil": "2026-12-31",
+                "url": `https://tanuki-tabi-travel.com/tours/${id}`,
+              },
+              "areaServed": {
+                "@type": "Place",
+                "name": schema.area,
+              },
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Tanuki Tabi Travel",
+                "url": "https://tanuki-tabi-travel.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Tokyo",
+                  "addressCountry": "JP",
+                },
+              },
+              "additionalProperty": [
+                { "@type": "PropertyValue", "name": "Duration", "value": tour.duration },
+                { "@type": "PropertyValue", "name": "Group Size", "value": tour.groupSize },
+                { "@type": "PropertyValue", "name": "Languages", "value": "English, Spanish" },
+              ],
+            }),
+          }}
+        />
+        </>
       )}
 
       {/* FAQ Schema */}

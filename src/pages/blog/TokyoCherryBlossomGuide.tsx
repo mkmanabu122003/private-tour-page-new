@@ -9,7 +9,7 @@ const TokyoCherryBlossomGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Tokyo Cherry Blossoms 2026: Best Spots, Dates & Local Tips"
+        title="Tokyo Cherry Blossoms 2026: Best Spots & Dates"
         description="Tokyo sakura season 2026: bloom starts March 19, full bloom March 27. A local guide ranks the 7 best spots and shares timing tips most visitors miss."
         canonicalPath="/blog/tokyo-cherry-blossom-guide"
         hreflang={[

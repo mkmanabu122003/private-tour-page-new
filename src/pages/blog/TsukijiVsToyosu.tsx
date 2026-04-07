@@ -9,8 +9,13 @@ const TsukijiVsToyosu = () => {
     <Layout>
       <SEO
         title="Tsukiji vs Toyosu 2026: Which Fish Market to Visit?"
-        description="Tsukiji Outer Market (street food, 460+ stalls) vs Toyosu Fish Market (tuna auction, modern facility). A local guide compares both and tells you which to choose."
+        description="Tsukiji (street food, 460+ stalls) vs Toyosu (tuna auction, modern facility). A local guide compares both and tells you which to visit."
         canonicalPath="/blog/tsukiji-vs-toyosu"
+        hreflang={[
+          { lang: "en", path: "/blog/tsukiji-vs-toyosu" },
+          { lang: "es", path: "/es/blog/tsukiji-vs-toyosu" },
+          { lang: "x-default", path: "/blog/tsukiji-vs-toyosu" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

@@ -9,8 +9,8 @@ const JapanRailPass = () => {
   return (
     <Layout>
       <SEO
-        title="JR Pass Prices 2026: 7/14/21-Day Costs & Is It Worth It?"
-        description="JR Pass 2026: ¥50,000 (7-day), ¥80,000 (14-day), ¥100,000 (21-day). Route-by-route cost comparisons to find out if the pass saves money for your itinerary."
+        title="Is the JR Pass Worth It in 2026? Route-by-Route Breakdown"
+        description="After the 70% price hike, the JR Pass only saves money on specific routes. See exact fare comparisons for Tokyo-Kyoto, Tokyo-Osaka, and regional passes that beat it. Updated April 2026."
         canonicalPath="/blog/japan-rail-pass-worth-it"
         breadcrumbs={[
           { name: "Home", path: "/" },
@@ -41,7 +41,7 @@ const JapanRailPass = () => {
             </Link>
             <p className="text-label text-accent mb-3">Planning Your Trip</p>
             <h1 className="heading-display text-foreground">
-              Japan Rail Pass in 2026: Is It Actually Worth It? (With Real Numbers)
+              Is the JR Pass Worth It in 2026? A Route-by-Route Breakdown With Real Numbers
             </h1>
             <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
@@ -65,7 +65,7 @@ const JapanRailPass = () => {
               The JR Pass underwent a significant price increase in October 2023, roughly 70% higher than the old price. A 7-day Ordinary pass now costs ¥50,000 (approximately $330 USD). This change flipped the calculation for a lot of travelers. Routes and itineraries that used to make the pass an obvious bargain now require more careful math.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              I'm going to do that math for you, using real 2026 prices and the itineraries my clients actually travel. No affiliate links, no sponsored content. Just honest numbers from someone who helps travelers plan these trips every week.
+              I'm going to do that math for you, using real 2026 prices and the itineraries my clients actually travel. Just honest numbers from someone who helps travelers plan these trips every week.
             </p>
 
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -267,13 +267,19 @@ const JapanRailPass = () => {
             </figure>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Regional JR Passes:</strong> JR East, JR West, and JR Central offer regional passes that are cheaper and cover specific areas. The JR East Nagano/Niigata pass, the JR West Kansai Area pass, and the JR Tohoku pass are all significantly less than the nationwide pass and perfect for focused regional travel.
+                <strong className="text-foreground">Regional JR Passes:</strong> JR East, JR West, and JR Central offer regional passes that are cheaper and cover specific areas. The{" "}
+                <a href="https://www.jreast.co.jp/multi/en/pass/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR East passes</a>{" "}
+                (Nagano/Niigata, Tohoku), the{" "}
+                <a href="https://www.westjr.co.jp/global/en/ticket/pass/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR West passes</a>{" "}
+                (Kansai Area, Kansai-Hiroshima), and JR Central passes are all significantly less than the nationwide pass and perfect for focused regional travel.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">IC Cards (Suica/Pasmo):</strong> For travel within Tokyo and short trips to places like Kamakura or Yokohama, an IC card is all you need. Tap on, tap off, pay only for what you ride. No commitment, no calculation needed. I tell all my clients to get one regardless of whether they also buy a JR Pass.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Individual Shinkansen tickets:</strong> If you're making one or two long-distance trips, buying individual tickets is often cheaper than the pass. SmartEX (an app for booking Shinkansen tickets) sometimes offers early-bird discounts.
+                <strong className="text-foreground">Individual Shinkansen tickets:</strong> If you're making one or two long-distance trips, buying individual tickets is often cheaper than the pass.{" "}
+                <a href="https://smart-ex.jp/en/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">SmartEX</a>{" "}
+                (an app for booking Shinkansen tickets) sometimes offers early-bird discounts.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Highway buses:</strong> For budget travelers, overnight highway buses between Tokyo and Kyoto/Osaka cost ¥3,000–6,000, a fraction of the Shinkansen price. They're comfortable, safe, and save you a night of hotel costs. Not glamorous, but extremely practical.
@@ -335,7 +341,9 @@ const JapanRailPass = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Where do I buy the Japan Rail Pass?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Since October 2023, the nationwide JR Pass can only be purchased online through the official JR Pass website or authorized agents. After purchasing online, you pick it up at a designated JR ticket office counter by showing your passport and choosing your start date. Note that regional JR passes (JR East Pass, JR West Pass, etc.) can still be purchased at station counters.
+                    Since October 2023, the nationwide JR Pass can only be purchased online through the{" "}
+                    <a href="https://www.japanrailpass.net/en" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official JR Pass website</a>{" "}
+                    or authorized agents. After purchasing online, you pick it up at a designated JR ticket office counter by showing your passport and choosing your start date. Note that regional JR passes (JR East Pass, JR West Pass, etc.) can still be purchased at station counters.
                   </p>
                 </div>
                 <div>
@@ -353,7 +361,9 @@ const JapanRailPass = () => {
                 <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">Did the JR Pass price increase again in 2026?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    No. As of March 2026, JR Pass prices remain at the levels set in October 2023. The last increase was approximately 70% — from ¥29,650 to ¥50,000 for the 7-day Ordinary pass. There are no officially announced increases for 2026. Always verify the latest prices on the official JR Pass website before purchasing.
+                    No. As of March 2026, JR Pass prices remain at the levels set in October 2023. The last increase was approximately 70% — from ¥29,650 to ¥50,000 for the 7-day Ordinary pass. There are no officially announced increases for 2026. Always verify the latest prices on the{" "}
+                    <a href="https://www.japanrailpass.net/en" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official JR Pass website</a>{" "}
+                    before purchasing.
                   </p>
                 </div>
                 <div>

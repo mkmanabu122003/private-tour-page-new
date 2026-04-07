@@ -9,8 +9,8 @@ const ShibuyaHarajukuGuide = () => {
   return (
     <Layout>
       <SEO
-        title="Shibuya & Harajuku Guide: Beyond the Crossing | Tanuki Tabi Travel"
-        description="Explore Shibuya and Harajuku like a local. Insider tips on Shibuya Crossing, Takeshita Street, hidden cafes, and the best photo spots from a licensed guide."
+        title="Shibuya & Harajuku Guide 2026: Beyond the Crossing"
+        description="Shibuya Crossing is 5 minutes. Here's what to do with the rest of your day. Best photo spots, hidden streets, and a local guide's walking route."
         canonicalPath="/blog/shibuya-harajuku-guide"
       />
 

@@ -12,6 +12,11 @@ const WhatToExpectPrivateTour = () => {
         title="What to Expect on a Private Tour in Tokyo (From Your Guide)"
         description="Meeting point, pace, flexibility, food, rain plans. A Tokyo guide walks you through exactly what happens from start to finish."
         canonicalPath="/blog/what-to-expect-private-tour-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/what-to-expect-private-tour-tokyo" },
+          { lang: "es", path: "/es/blog/que-esperar-tour-privado-tokio" },
+          { lang: "x-default", path: "/blog/what-to-expect-private-tour-tokyo" },
+        ]}
       />
 
       {/* Hero Image */}

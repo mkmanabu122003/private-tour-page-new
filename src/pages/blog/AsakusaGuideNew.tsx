@@ -9,9 +9,14 @@ const AsakusaGuideNew = () => {
   return (
     <Layout>
       <SEO
-        title="Asakusa Guide: What to See and Skip | Tanuki Tabi"
-        description="Asakusa is Tokyo's most visited neighborhood, and most people see it wrong. A licensed guide who works there daily tells you what actually matters."
+        title="Asakusa Guide 2026: What to See, Skip & Hidden Spots"
+        description="Most visitors only see Senso-ji and leave. A licensed guide who works Asakusa daily shares the real highlights, best times, and 4 spots tourists walk past."
         canonicalPath="/blog/asakusa-guide"
+        hreflang={[
+          { lang: "en", path: "/blog/asakusa-guide" },
+          { lang: "es", path: "/es/blog/guia-asakusa-completa" },
+          { lang: "x-default", path: "/blog/asakusa-guide" },
+        ]}
       />
 
       {/* Hero Image */}
