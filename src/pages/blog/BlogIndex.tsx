@@ -191,6 +191,16 @@ const blogPosts: BlogPost[] = [
   },
   // Planning Your Trip (new)
   {
+    slug: "tokyo-5-day-itinerary",
+    title: "5 Day Tokyo Itinerary 2026: Day-by-Day Guide with Times & Budget",
+    description:
+      "The best 5 day Tokyo itinerary from a licensed local guide. Detailed schedules, IC card tips, ¥15,000–25,000/day budget breakdown, restaurant picks, and must-see spots.",
+    date: "March 17, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Planning Your Trip",
+    image: "/images/tours/shibuya-scramble-crossing.webp",
+  },
+  {
     slug: "tokyo-itinerary-5-days",
     title: "Tokyo 5 Day Itinerary: A Licensed Guide's Plan",
     description:
