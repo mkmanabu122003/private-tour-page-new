@@ -64,7 +64,7 @@ function buildCustomerEmail(data) {
   <ol style="font-size: 15px; line-height: 1.8; color: #5a554e;">
     <li>I'll review your request and plan a custom route based on your interests</li>
     <li>You'll receive a detailed itinerary with my recommendations</li>
-    <li>We confirm the booking — <strong>no payment needed until tour day</strong></li>
+    <li>We confirm the booking and finalize the details</li>
   </ol>
 
   <p style="font-size: 14px; line-height: 1.6; color: #5a554e;">
@@ -135,7 +135,7 @@ function buildCustomerEmailEs(data) {
   <ol style="font-size: 15px; line-height: 1.8; color: #5a554e;">
     <li>Revisar&eacute; tu solicitud y planificar&eacute; una ruta personalizada seg&uacute;n tus intereses</li>
     <li>Recibir&aacute;s un itinerario detallado con mis recomendaciones</li>
-    <li>Confirmamos la reserva &mdash; <strong>no se requiere pago hasta el d&iacute;a del tour</strong></li>
+    <li>Confirmamos la reserva y finalizamos los detalles</li>
   </ol>
 
   <p style="font-size: 14px; line-height: 1.6; color: #5a554e;">
