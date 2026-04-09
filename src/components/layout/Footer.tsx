@@ -65,13 +65,13 @@ export const Footer = () => {
               <h4 className="text-lg font-medium mb-4 mt-8">Blog</h4>
               <ul className="space-y-3">
                 <li><Link to="/es/blog/itinerario-tokio-3-dias" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Itinerario de 3 Días por Tokio</Link></li>
-                <li><Link to="/es/blog/guia-asakusa" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Asakusa</Link></li>
+                <li><Link to="/es/blog/asakusa-tokio-guia" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Asakusa</Link></li>
                 <li><Link to="/es/blog/guia-shibuya-harajuku" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Shibuya y Harajuku</Link></li>
                 <li><Link to="/es/blog/guia-shinjuku" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Shinjuku</Link></li>
-                <li><Link to="/es/blog/guia-tsukiji" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Tsukiji</Link></li>
+                <li><Link to="/es/blog/mercado-tsukiji-tokio" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Tsukiji</Link></li>
                 <li><Link to="/es/blog/mejor-epoca-visitar-tokio" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Mejor Época para Visitar Tokio</Link></li>
                 <li><Link to="/es/blog/etiqueta-templos-santuarios" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Etiqueta en Templos y Santuarios</Link></li>
-                <li><Link to="/es/blog/vale-la-pena-contratar-guia" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">¿Vale la Pena Contratar un Guía?</Link></li>
+                <li><Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">¿Vale la Pena Contratar un Guía?</Link></li>
                 <li><Link to="/es/blog/comparativa-excursiones" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Comparativa de Excursiones</Link></li>
               </ul>
             </div>
@@ -85,6 +85,7 @@ export const Footer = () => {
                 <li><Link to="/es/about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Sobre Manabu</Link></li>
                 <li><Link to="/es/faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">FAQ</Link></li>
                 <li><Link to="/es/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contacto / Reservar</Link></li>
+                <li><Link to="/es/cancellation-policy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Política de Cancelación</Link></li>
               </ul>
 
               <h4 className="text-lg font-medium mb-4 mt-8">Contacto</h4>
@@ -174,10 +175,10 @@ export const Footer = () => {
             <h4 className="text-lg font-medium mb-4 mt-8">Blog</h4>
             <ul className="space-y-3">
               <li><Link to="/blog/tokyo-3-day-itinerary" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Tokyo 3-Day Itinerary</Link></li>
-              <li><Link to="/blog/asakusa-guide-what-to-see" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Asakusa Guide</Link></li>
+              <li><Link to="/blog/asakusa-guide" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Asakusa Guide</Link></li>
               <li><Link to="/blog/shibuya-harajuku-guide" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Shibuya & Harajuku Guide</Link></li>
               <li><Link to="/blog/shinjuku-guide" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Shinjuku Guide</Link></li>
-              <li><Link to="/blog/tsukiji-guide-food-lover" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Tsukiji Guide</Link></li>
+              <li><Link to="/blog/tsukiji-market-guide" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Tsukiji Guide</Link></li>
               <li><Link to="/blog/best-time-to-visit-tokyo" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Best Time to Visit</Link></li>
               <li><Link to="/blog/japan-temple-shrine-etiquette" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Temple & Shrine Etiquette</Link></li>
               <li><Link to="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Is a Guide Worth It?</Link></li>
@@ -194,6 +195,7 @@ export const Footer = () => {
               <li><Link to="/about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Manabu</Link></li>
               <li><Link to="/faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">FAQ</Link></li>
               <li><Link to="/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact / Book</Link></li>
+              <li><Link to="/cancellation-policy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Cancellation Policy</Link></li>
             </ul>
 
             <h4 className="text-lg font-medium mb-4 mt-8">Contact</h4>

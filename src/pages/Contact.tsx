@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
@@ -262,6 +263,14 @@ const Contact = () => {
                     placeholder="Tell me about your travel plans, interests, or any questions you have..."
                   />
                 </div>
+
+                <p className="text-xs text-muted-foreground">
+                  By submitting this form, you agree to our{" "}
+                  <Link to="/cancellation-policy" className="text-accent hover:underline">
+                    cancellation policy
+                  </Link>
+                  .
+                </p>
 
                 <button
                   type="submit"

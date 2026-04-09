@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 interface FAQItem {
   question: string;
   answer: string;
+  link?: { text: string; to: string };
 }
 
 interface FAQCategory {
@@ -49,7 +50,8 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "What happens if it rains?",
-        answer: "Tours run rain or shine. Tokyo has many covered areas, indoor stops, and underground passages. Your guide will adapt the route for weather. We only cancel for severe weather warnings (typhoons etc.), in which case you'll receive a full refund or reschedule.",
+        answer: "Tours run rain or shine. Tokyo has many covered areas, indoor stops, and underground passages. Your guide will adapt the route for weather. We only cancel for severe weather warnings (typhoons etc.), in which case you'll receive a full refund or reschedule. For full details, see our cancellation policy.",
+        link: { text: "See our cancellation policy →", to: "/cancellation-policy" },
       },
       {
         question: "Can you accommodate dietary restrictions?",
@@ -176,6 +178,11 @@ const FAQ = () => {
                             <p className="text-muted-foreground leading-relaxed">
                               {faq.answer}
                             </p>
+                            {faq.link && (
+                              <Link to={faq.link.to} className="inline-block mt-2 text-sm text-accent hover:underline">
+                                {faq.link.text}
+                              </Link>
+                            )}
                           </div>
                         )}
                       </div>

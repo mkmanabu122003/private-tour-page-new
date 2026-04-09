@@ -1,5 +1,6 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
@@ -262,6 +263,14 @@ const EsContact = () => {
                     placeholder="Cuéntanos sobre tus planes de viaje, intereses o cualquier pregunta que tengas..."
                   />
                 </div>
+
+                <p className="text-xs text-muted-foreground">
+                  Al enviar este formulario, aceptas nuestra{" "}
+                  <Link to="/es/cancellation-policy" className="text-accent hover:underline">
+                    política de cancelación
+                  </Link>
+                  .
+                </p>
 
                 <button
                   type="submit"

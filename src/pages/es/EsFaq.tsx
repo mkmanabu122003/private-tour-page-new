@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 interface FAQItem {
   question: string;
   answer: string;
+  link?: { text: string; to: string };
 }
 
 interface FAQCategory {
@@ -50,7 +51,8 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "¿Qué pasa si llueve?",
-        answer: "Los tours se realizan con lluvia o sol. Tokio tiene muchas zonas cubiertas, paradas interiores y pasajes subterráneos. Tu guía adaptará la ruta según el clima. Solo cancelamos por alertas meteorológicas graves (tifones, etc.), en cuyo caso recibirás un reembolso completo o podrás reprogramar.",
+        answer: "Los tours se realizan con lluvia o sol. Tokio tiene muchas zonas cubiertas, paradas interiores y pasajes subterráneos. Tu guía adaptará la ruta según el clima. Solo cancelamos por alertas meteorológicas graves (tifones, etc.), en cuyo caso recibirás un reembolso completo o podrás reprogramar. Para más detalles, consulta nuestra política de cancelación.",
+        link: { text: "Ver nuestra política de cancelación →", to: "/es/cancellation-policy" },
       },
       {
         question: "¿Pueden acomodar restricciones alimentarias?",
@@ -177,6 +179,11 @@ const EsFaq = () => {
                             <p className="text-muted-foreground leading-relaxed">
                               {faq.answer}
                             </p>
+                            {faq.link && (
+                              <Link to={faq.link.to} className="inline-block mt-2 text-sm text-accent hover:underline">
+                                {faq.link.text}
+                              </Link>
+                            )}
                           </div>
                         )}
                       </div>

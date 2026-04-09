@@ -48,6 +48,7 @@ import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
 import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
 import TsukijiVsToyosu from "./pages/blog/TsukijiVsToyosu";
+import CancellationPolicy from "./pages/CancellationPolicy";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
 import EsAsakusa from "./pages/es/tours/EsAsakusa";
@@ -108,6 +109,7 @@ import EsGuiaRamenTokio from "./pages/es/blog/EsGuiaRamenTokio";
 import EsTokioConPresupuesto from "./pages/es/blog/EsTokioConPresupuesto";
 import EsQueEsperarTourPrivado from "./pages/es/blog/EsQueEsperarTourPrivado";
 import EsGuiaAsakusaNueva from "./pages/es/blog/EsGuiaAsakusaNueva";
+import EsCancellationPolicy from "./pages/es/EsCancellationPolicy";
 
 const queryClient = new QueryClient();
 
@@ -162,6 +164,7 @@ const AppRoutes = () => (
         <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
         <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
         <Route path="/blog/tsukiji-vs-toyosu" element={<TsukijiVsToyosu />} />
+        <Route path="/cancellation-policy" element={<CancellationPolicy />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
         <Route path="/es/tours" element={<EsTours />} />
@@ -223,6 +226,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/tokio-con-presupuesto" element={<EsTokioConPresupuesto />} />
         <Route path="/es/blog/que-esperar-tour-privado-tokio" element={<EsQueEsperarTourPrivado />} />
         <Route path="/es/blog/guia-asakusa-completa" element={<EsGuiaAsakusaNueva />} />
+        <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
