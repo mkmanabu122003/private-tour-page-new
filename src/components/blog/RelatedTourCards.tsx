@@ -235,12 +235,12 @@ export const RelatedTourCards = ({
                 <div className="mt-auto pt-5">
                   <Link
                     to={contactPath}
-                    data-cta="book-now"
-                    className="inline-flex items-center justify-center w-full px-5 py-2.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A] text-sm"
-                    onClick={() => trackBookNowClick(labels.bookNow)}
+                    data-cta="book-now-blog-related"
+                    className="btn-accent-sm w-full"
+                    onClick={() => trackBookNowClick(labels.bookNow, "blog-related")}
                   >
                     {labels.bookNow}
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    <ArrowRight className="btn-arrow" />
                   </Link>
                   <Link
                     to={tour.link}

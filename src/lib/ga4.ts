@@ -33,10 +33,11 @@ export function trackContactPageView() {
   });
 }
 
-export function trackBookNowClick(buttonText: string) {
+export function trackBookNowClick(buttonText: string, location?: string) {
   gtag("event", "book_now_click", {
     source_page: window.location.pathname,
     button_text: buttonText,
+    cta_location: location,
   });
 }
 

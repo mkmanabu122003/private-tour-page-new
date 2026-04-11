@@ -165,15 +165,46 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md transition-all duration-200 hover:opacity-90 hover:shadow-[var(--shadow-soft)];
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[var(--shadow-soft)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   }
 
+  /* Gold primary button — premium CTA across the site.
+     Polished brass finish: vertical gradient + inner highlight + warm shadow.
+     Sizes: default (md), .btn-accent-lg, .btn-accent-sm */
   .btn-accent {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded transition-colors duration-200 hover:bg-[#E2C07A];
+    @apply inline-flex items-center justify-center px-6 py-3 text-[#F5ECD4] font-semibold tracking-wide rounded-md transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4B65E];
+    background-image: linear-gradient(to bottom, #D4B65E 0%, #B8943B 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 12px rgba(139, 115, 63, 0.25);
+  }
+  .btn-accent:hover {
+    background-image: linear-gradient(to bottom, #DFC26D 0%, #C4A043 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 20px rgba(139, 115, 63, 0.35);
+  }
+  .btn-accent:active {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(139, 115, 63, 0.2);
+  }
+
+  .btn-accent-lg {
+    @apply btn-accent px-8 py-4 text-base;
+  }
+
+  .btn-accent-sm {
+    @apply btn-accent px-5 py-2.5 text-sm;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 border-[1.5px] border-primary text-primary font-semibold rounded-md transition-colors duration-200 hover:bg-primary hover:text-primary-foreground;
+    @apply inline-flex items-center justify-center px-6 py-3 border-[1.5px] border-primary text-primary font-semibold rounded-md transition-all duration-300 ease-out hover:bg-primary hover:text-primary-foreground hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  /* Arrow icon that slides on parent button hover. */
+  .btn-arrow {
+    @apply ml-2 w-4 h-4 transition-transform duration-300 ease-out;
+  }
+  .btn-accent:hover .btn-arrow,
+  .btn-accent-lg:hover .btn-arrow,
+  .btn-accent-sm:hover .btn-arrow,
+  .btn-outline:hover .btn-arrow {
+    transform: translateX(4px);
   }
 
   .link-underline {

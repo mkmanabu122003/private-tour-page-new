@@ -160,9 +160,9 @@ const EsCustom = () => {
                     </div>
                   </div>
                 </div>
-                <Link to="/es/contact" className="btn-accent w-full text-center" data-cta="book-now" onClick={() => trackBookNowClick("Solicitar Tour Personalizado")}>
+                <Link to="/es/contact" className="btn-accent w-full text-center" data-cta="book-now-tour-sidebar" onClick={() => trackBookNowClick("Solicitar Tour Personalizado", "tour-sidebar")}>
                   Solicitar Tour Personalizado
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="btn-arrow" />
                 </Link>
               </div>
             </div>
@@ -237,9 +237,9 @@ const EsCustom = () => {
           </p>
           <Link
             to="/es/contact"
-            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
-            data-cta="book-now"
-            onClick={() => trackBookNowClick("Reservar Ahora")}
+            className="btn-accent-lg mt-6"
+            data-cta="book-now-tour-inline"
+            onClick={() => trackBookNowClick("Reservar Ahora", "tour-inline")}
           >
             Reservar Ahora
           </Link>
@@ -256,8 +256,8 @@ const EsCustom = () => {
             Cuéntanos tus intereses y crearemos un itinerario único solo para ti.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" className="btn-accent" data-cta="book-now" onClick={() => trackBookNowClick("Contactar")}>Contactar</Link>
-            <Link to="/es" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">Ver Tours Disponibles</Link>
+            <Link to="/es/contact" className="btn-accent" data-cta="book-now-tour-footer" onClick={() => trackBookNowClick("Contactar", "tour-footer")}>Contactar</Link>
+            <Link to="/es" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">Ver Tours Disponibles</Link>
           </div>
         </div>
       </section>

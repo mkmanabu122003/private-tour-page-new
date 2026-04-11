@@ -192,7 +192,7 @@ const TokyoFoodTour = () => {
             <div className="mt-8">
               <Link to="/contact" className="btn-accent">
                 Book Your Food Tour
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="btn-arrow" />
               </Link>
             </div>
           </div>
@@ -674,11 +674,11 @@ const TokyoFoodTour = () => {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="btn-accent">
               Plan Your Food Tour
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="btn-arrow" />
             </Link>
             <Link
               to="/tours"
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10"
+              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
             >
               Browse All Tours
             </Link>

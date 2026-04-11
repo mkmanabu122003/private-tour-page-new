@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Shield, Star, MapPin, Heart, User } from "lucide-react";
+import { ArrowRight, BadgeCheck, Footprints, Key, Star, MessageSquare, MapPin, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { trackBookNowClick } from "@/lib/ga4";
@@ -106,24 +106,28 @@ const tours = [
 
 const trustSignals = [
   {
-    icon: Shield,
-    title: "Government-Licensed Guide",
-    description: "National Government Licensed Guide Interpreter (全国通訳案内士), the highest guiding credential in Japan.",
+    icon: BadgeCheck,
+    stat: "Licensed",
+    label: "Government Certified",
+    description: "National Guide Interpreter (全国通訳案内士)",
+  },
+  {
+    icon: Footprints,
+    stat: "500+",
+    label: "Tours Completed",
+    description: "Since 2018, guests from 40+ countries",
   },
   {
     icon: Star,
-    title: "500+ Tours Completed",
-    description: "Trusted by hundreds of travelers from around the world for quality, authenticity, and personalized experiences.",
+    stat: "4.86★",
+    label: "Average Rating",
+    description: "From verified guest reviews",
   },
   {
-    icon: Award,
-    title: "4.86★ Average Rating",
-    description: "Consistently top-rated for quality, cultural depth, and guest satisfaction.",
-  },
-  {
-    icon: Users,
-    title: "Private & Personalized",
-    description: "Every tour is exclusively yours. No strangers, no rigid schedules. Just your group and your guide.",
+    icon: Key,
+    stat: "100%",
+    label: "Private Tours",
+    description: "Just your group. No strangers.",
   },
 ];
 
@@ -189,12 +193,13 @@ const Index = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/contact" data-cta="book-now" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]" onClick={() => trackBookNowClick("Request Your Private Tour")}>
+              <Link to="/contact" data-cta="book-now-hero" className="btn-accent-lg" onClick={() => trackBookNowClick("Request Your Private Tour", "hero")}>
                 Request Your Private Tour
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="btn-arrow" />
               </Link>
-              <Link to="/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
-                Custom Tour →
+              <Link to="/tours/custom" className="group inline-flex items-center justify-center px-8 py-4 text-base bg-transparent border-[1.5px] border-white text-white font-semibold tracking-wide rounded-md transition-all duration-300 ease-out hover:bg-white/15 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                Custom Tour
+                <ArrowRight className="btn-arrow" />
               </Link>
             </div>
           </div>
@@ -204,14 +209,17 @@ const Index = () => {
       {/* Trust Signals */}
       <section className="py-16 md:py-20 bg-card border-b border-border">
         <div className="container-section">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {trustSignals.map((signal) => (
-              <div key={signal.title} className="text-center group">
-                <signal.icon className="w-8 h-8 text-accent mx-auto mb-4" strokeWidth={1.2} />
-                <h3 className="text-base font-medium tracking-wide text-foreground">
-                  {signal.title}
-                </h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              <div key={signal.label} className="text-center">
+                <signal.icon className="w-6 h-6 text-accent mx-auto mb-4" strokeWidth={1.75} />
+                <div className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+                  {signal.stat}
+                </div>
+                <div className="mt-2 text-sm font-medium text-foreground/80 tracking-wide uppercase">
+                  {signal.label}
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
                   {signal.description}
                 </p>
               </div>
@@ -255,7 +263,7 @@ const Index = () => {
           <div className="mt-12 text-center">
             <Link to="/tours" className="btn-outline">
               View All Tours
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="btn-arrow" />
             </Link>
           </div>
         </div>
@@ -344,30 +352,39 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
+                <MessageSquare className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Step 1</p>
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Choose Your Experience
+                Send Your Request
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Browse curated tours or tell me your dream day in Tokyo.
+                Tell me your dates and what excites you about Tokyo. Takes 2 minutes.
               </p>
             </div>
             <div className="text-center">
-              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Step 2</p>
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Share What Excites You
+                Get Your Custom Plan
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                History, food, hidden alleys. I'll build the route around you.
+                I reply within 24 hours with a personalized itinerary and quote.
               </p>
             </div>
             <div className="text-center">
-              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
+                <CheckCircle2 className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Step 3</p>
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                Walk Tokyo Together
+                Confirm & Pay
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                No scripts. No crowds. Just you, your guide, and the city.
+                Secure your tour with payment, then meet me in Tokyo for your day.
               </p>
             </div>
           </div>
@@ -398,7 +415,7 @@ const Index = () => {
               </p>
               <Link to="/about" className="btn-outline mt-8 inline-flex">
                 Learn more about your guide
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="btn-arrow" />
               </Link>
             </div>
 
@@ -427,11 +444,11 @@ const Index = () => {
             and I'll design a personalized itinerary just for you.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Request a Tour")}>
+            <Link to="/contact" data-cta="book-now-footer" className="btn-accent" onClick={() => trackBookNowClick("Request a Tour", "footer")}>
               Request a Tour
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="btn-arrow" />
             </Link>
-            <Link to="/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+            <Link to="/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
               Browse Tours
             </Link>
           </div>

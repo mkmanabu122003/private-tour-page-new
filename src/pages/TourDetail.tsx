@@ -931,7 +931,7 @@ const TourDetail = () => {
                   </div>
                 </div>
 
-                <Link to="/contact" data-cta="book-now" className="btn-accent w-full justify-center" onClick={() => trackBookNowClick("Book This Tour")}>
+                <Link to="/contact" data-cta="book-now-tour-sidebar" className="btn-accent w-full justify-center" onClick={() => trackBookNowClick("Book This Tour", "tour-sidebar")}>
                   Book This Tour
                 </Link>
 
@@ -949,12 +949,12 @@ const TourDetail = () => {
           </p>
           <Link
             to="/contact"
-            data-cta="book-now"
-            className="mt-4 inline-flex items-center justify-center px-7 py-3 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]"
-            onClick={() => trackBookNowClick("Book Now")}
+            data-cta="book-now-tour-inline"
+            className="btn-accent-lg mt-6"
+            onClick={() => trackBookNowClick("Book Now", "tour-inline")}
           >
             Book Now
-            <ArrowRight className="ml-2 w-4 h-4" />
+            <ArrowRight className="btn-arrow" />
           </Link>
           <p className="mt-3 text-sm text-muted-foreground">
             Licensed guide · Private tour
@@ -988,10 +988,10 @@ const TourDetail = () => {
               Let's create an unforgettable day trip experience. Contact us to book your private guided tour or customize the itinerary.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Book This Tour")}>
+              <Link to="/contact" data-cta="book-now-tour-footer" className="btn-accent" onClick={() => trackBookNowClick("Book This Tour", "tour-footer")}>
                 Book This Tour
               </Link>
-              <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+              <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
                 Customize This Trip
               </Link>
             </div>
@@ -1008,21 +1008,36 @@ const TourDetail = () => {
               {related.map((tourId) => {
                 const relatedTour = tourData[tourId as keyof typeof tourData];
                 if (!relatedTour) return null;
+                const thumb = relatedTour.images?.[0];
                 return (
                   <Link
                     key={tourId}
                     to={`/tours/${tourId}`}
-                    className="group bg-card border border-border rounded-lg p-6 hover:border-accent/50 hover:shadow-[var(--shadow-card)] transition-all"
+                    className="group bg-card border border-border rounded-lg overflow-hidden hover:border-accent/50 hover:shadow-[var(--shadow-card)] hover:-translate-y-0.5 transition-all duration-300 ease-out flex flex-col"
                   >
-                    <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
-                      {tourNames[tourId]}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                      {relatedTour.description}
-                    </p>
-                    <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
-                      <span>View Tour</span>
-                      <ArrowRight className="w-4 h-4" />
+                    {thumb && (
+                      <div className="aspect-[4/3] overflow-hidden bg-muted">
+                        <img
+                          src={thumb.src}
+                          alt={thumb.alt}
+                          loading="lazy"
+                          width={600}
+                          height={450}
+                          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+                        {tourNames[tourId]}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                        {relatedTour.description}
+                      </p>
+                      <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
+                        <span>View Tour</span>
+                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </div>
                     </div>
                   </Link>
                 );

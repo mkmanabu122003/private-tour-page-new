@@ -1,6 +1,6 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Shield, Star, MapPin, Heart, User } from "lucide-react";
+import { ArrowRight, BadgeCheck, Footprints, Key, Star, MessageSquare, MapPin, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { trackBookNowClick } from "@/lib/ga4";
@@ -109,24 +109,28 @@ const tours = [
 
 const trustSignals = [
   {
-    icon: Shield,
-    title: "Guía con Licencia Oficial",
-    description: "Intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), la acreditación más alta del país.",
+    icon: BadgeCheck,
+    stat: "Oficial",
+    label: "Guía Certificado",
+    description: "Intérprete-guía nacional (全国通訳案内士)",
+  },
+  {
+    icon: Footprints,
+    stat: "500+",
+    label: "Tours Completados",
+    description: "Desde 2018, viajeros de 40+ países",
   },
   {
     icon: Star,
-    title: "500+ Tours Completados",
-    description: "Cientos de viajeros de todo el mundo han confiado en Manabu por su calidad, autenticidad y atención personalizada.",
+    stat: "4.86★",
+    label: "Valoración Media",
+    description: "De reseñas verificadas de huéspedes",
   },
   {
-    icon: Award,
-    title: "Valoración de 4.86★",
-    description: "Consistentemente en el top de valoraciones por la profundidad cultural y la satisfacción de los visitantes.",
-  },
-  {
-    icon: Users,
-    title: "Tour 100% Privado",
-    description: "El tour es exclusivamente para ti. Sin extraños, sin horarios rígidos. Solo tu grupo y tu guía.",
+    icon: Key,
+    stat: "100%",
+    label: "Tours Privados",
+    description: "Solo tu grupo. Sin extraños.",
   },
 ];
 
@@ -192,12 +196,13 @@ const EsIndex = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <Link to="/es/contact" data-cta="book-now" className="inline-flex items-center justify-center px-7 py-3.5 bg-[#C9A84C] text-[#0D0D0D] font-semibold rounded-md transition-colors duration-200 hover:bg-[#E2C07A]" onClick={() => trackBookNowClick("Reserva Tu Tour Privado")}>
+              <Link to="/es/contact" data-cta="book-now-hero" className="btn-accent-lg" onClick={() => trackBookNowClick("Reserva Tu Tour Privado", "hero")}>
                 Reserva Tu Tour Privado
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="btn-arrow" />
               </Link>
-              <Link to="/es/tours/custom" className="inline-flex items-center justify-center px-7 py-3.5 bg-transparent border-[1.5px] border-white text-white font-semibold rounded-md transition-colors duration-200 hover:bg-white/15">
-                Tour Personalizado →
+              <Link to="/es/tours/custom" className="group inline-flex items-center justify-center px-8 py-4 text-base bg-transparent border-[1.5px] border-white text-white font-semibold tracking-wide rounded-md transition-all duration-300 ease-out hover:bg-white/15 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                Tour Personalizado
+                <ArrowRight className="btn-arrow" />
               </Link>
             </div>
           </div>
@@ -207,14 +212,17 @@ const EsIndex = () => {
       {/* Trust Signals */}
       <section className="py-16 md:py-20 bg-card border-b border-border">
         <div className="container-section">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {trustSignals.map((signal) => (
-              <div key={signal.title} className="text-center group">
-                <signal.icon className="w-8 h-8 text-accent mx-auto mb-4" strokeWidth={1.2} />
-                <h3 className="text-base font-medium tracking-wide text-foreground">
-                  {signal.title}
-                </h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              <div key={signal.label} className="text-center">
+                <signal.icon className="w-6 h-6 text-accent mx-auto mb-4" strokeWidth={1.75} />
+                <div className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+                  {signal.stat}
+                </div>
+                <div className="mt-2 text-sm font-medium text-foreground/80 tracking-wide uppercase">
+                  {signal.label}
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
                   {signal.description}
                 </p>
               </div>
@@ -376,30 +384,39 @@ const EsIndex = () => {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
+                <MessageSquare className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Paso 1</p>
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Elige tu experiencia
+                Envía tu Solicitud
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Explora nuestros tours o cuéntame tu día ideal en Tokio.
+                Cuéntame tus fechas y lo que te emociona de Tokio. Solo 2 minutos.
               </p>
             </div>
             <div className="text-center">
-              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Paso 2</p>
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Comparte lo que te apasiona
+                Recibe tu Plan a Medida
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Historia, gastronomía, callejones ocultos... creo la ruta a tu medida.
+                Te respondo en menos de 24 horas con un itinerario personalizado y presupuesto.
               </p>
             </div>
             <div className="text-center">
-              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
+                <CheckCircle2 className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Paso 3</p>
               <h3 className="text-xl font-medium text-foreground mb-3">
-                Recorremos Tokio juntos
+                Confirma y Paga
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Sin guiones. Sin multitudes. Solo tú, tu guía y la ciudad.
+                Asegura tu tour con el pago y nos vemos en Tokio para tu día.
               </p>
             </div>
           </div>
@@ -441,7 +458,7 @@ const EsIndex = () => {
               </p>
               <Link to="/es/about" className="btn-outline mt-8 inline-flex">
                 Más Información
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="btn-arrow" />
               </Link>
             </div>
 
@@ -469,11 +486,11 @@ const EsIndex = () => {
             Cuéntame tus intereses y diseñaré un itinerario personalizado para ti.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" data-cta="book-now" className="btn-accent" onClick={() => trackBookNowClick("Solicitar un Tour")}>
+            <Link to="/es/contact" data-cta="book-now-footer" className="btn-accent" onClick={() => trackBookNowClick("Solicitar un Tour", "footer")}>
               Solicitar un Tour
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="btn-arrow" />
             </Link>
-            <Link to="/es/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-200 hover:bg-primary-foreground/10">
+            <Link to="/es/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
               Ver Tours
             </Link>
           </div>
