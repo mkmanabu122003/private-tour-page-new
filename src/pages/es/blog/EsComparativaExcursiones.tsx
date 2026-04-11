@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { dayTripFinderConfigEs } from "@/data/diagnostics/dayTripFinderEs";
 
 const EsComparativaExcursiones = () => {
   return (
@@ -74,7 +76,14 @@ const EsComparativaExcursiones = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Aquí tienes una comparación honesta y detallada para ayudarte a decidir. Y si después de leer esto sigues sin poder elegir, para eso están los itinerarios personalizados.
             </p>
+          </article>
 
+          {/* Interactive Diagnostic Tool — opens in modal */}
+          <div className="max-w-3xl mx-auto">
+            <DiagnosticTrigger config={dayTripFinderConfigEs} />
+          </div>
+
+          <article className="max-w-3xl mx-auto prose-custom">
             {/* Quick Comparison Table */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Comparación Rápida

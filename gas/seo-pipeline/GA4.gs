@@ -136,6 +136,72 @@ function doGet(e) {
     });
   } else if (action === 'overview') {
     result = fetchGA4Data(pid, days + 'daysAgo', 'today');
+  } else if (action === 'diagnostic') {
+    // Diagnostic tool funnel report
+    result.events = ga4Run(pid, {
+      dateRanges: dr,
+      dimensions: [{ name: 'eventName' }],
+      metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'eventName',
+          inListFilter: {
+            values: [
+              'diagnostic_start',
+              'diagnostic_answer',
+              'diagnostic_complete',
+              'diagnostic_to_tour',
+              'diagnostic_to_contact',
+            ],
+          },
+        },
+      },
+    });
+    result.byTool = ga4Run(pid, {
+      dateRanges: dr,
+      dimensions: [
+        { name: 'eventName' },
+        { name: 'customEvent:tool_id' },
+      ],
+      metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'eventName',
+          inListFilter: {
+            values: [
+              'diagnostic_start',
+              'diagnostic_complete',
+              'diagnostic_to_tour',
+              'diagnostic_to_contact',
+            ],
+          },
+        },
+      },
+      orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+      limit: 50,
+    });
+    result.byResult = ga4Run(pid, {
+      dateRanges: dr,
+      dimensions: [
+        { name: 'eventName' },
+        { name: 'customEvent:result_id' },
+      ],
+      metrics: [{ name: 'eventCount' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'eventName',
+          inListFilter: {
+            values: [
+              'diagnostic_complete',
+              'diagnostic_to_tour',
+              'diagnostic_to_contact',
+            ],
+          },
+        },
+      },
+      orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+      limit: 50,
+    });
   }
 
   return ContentService.createTextOutput(JSON.stringify(result))
