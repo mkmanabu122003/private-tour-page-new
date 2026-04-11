@@ -18,7 +18,6 @@ const heroGroupPhoto = "/images/tour-photos/group-photo.webp";
 import tourUeno from "@/assets/tour-ueno.webp";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 import imperialPalace from "@/assets/imperial-palace.webp";
-import hamarikyu from "@/assets/hamarikyu.webp";
 
 const tours = [
   {
@@ -91,8 +90,7 @@ const tours = [
     duration: "9-10 hours",
     price: "¥80,000",
     difficulty: "Moderate",
-    // TODO: replace with Nikko image (e.g. toshogu shrine, kegon falls)
-    image: hamarikyu,
+    image: "/images/tours/nikko-toshogu.webp",
   },
   {
     id: "custom",
@@ -178,8 +176,8 @@ const Index = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Tokyo Walks with Manabu:{" "}
-              <span className="text-accent">Your Licensed Local Guide</span>
+              Tokyo Private Walking Tours{" "}
+              <span className="text-accent">with a Licensed Local Guide</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               500+ tours completed. 4.86★ average rating. Government-licensed guide.
@@ -216,6 +214,119 @@ const Index = () => {
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
                   {signal.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Tours */}
+      <section className="py-20 md:py-28 bg-secondary/30">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-4">Explore Tokyo</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
+            <h2 className="heading-section text-foreground">Featured Tours</h2>
+            <p className="mt-4 text-body">
+              Choose from carefully curated walking tours or create your own custom experience.
+            </p>
+          </div>
+
+          <div className="relative px-12">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {tours.map((tour) => (
+                  <CarouselItem key={tour.id} className="md:basis-1/2 lg:basis-1/3">
+                    <TourCard {...tour} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link to="/tours" className="btn-outline">
+              View All Tours
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-4">Guest Reviews</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
+            <h2 className="heading-section text-foreground">What Travelers Say</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <blockquote
+                key={testimonial.author}
+                className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
+              >
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-gold text-gold"
+                    />
+                  ))}
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  "{testimonial.text}"
+                </p>
+                <footer className="pt-4 border-t border-border">
+                  <cite className="not-italic font-medium text-foreground text-sm">
+                    - {testimonial.author}
+                  </cite>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            500+ five-star reviews from travelers worldwide
+          </p>
+        </div>
+      </section>
+
+      {/* Tour Photos */}
+      <section aria-label="Tour photos" className="py-20 md:py-28 bg-secondary/30">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="heading-section text-foreground">Tours in Photos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
+              { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
+              { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
+              { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie with guests by the Sumida River near Asakusa with Asahi Beer Tower in the background", caption: "Exploring Asakusa with guests" },
+            ].map((photo) => (
+              <div key={photo.src} className="flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={450}
+                  />
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
               </div>
             ))}
           </div>
@@ -263,47 +374,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Tours */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-4">Explore Tokyo</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">Featured Tours</h2>
-            <p className="mt-4 text-body">
-              Choose from carefully curated walking tours or create your own custom experience.
-            </p>
-          </div>
-
-          <div className="relative px-12">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {tours.map((tour) => (
-                  <CarouselItem key={tour.id} className="md:basis-1/2 lg:basis-1/3">
-                    <TourCard {...tour} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link to="/tours" className="btn-outline">
-              View All Tours
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* About Section (short) */}
       <section className="py-20 md:py-28">
         <div className="container-section">
@@ -345,78 +415,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Tour Photos */}
-      <section aria-label="Tour photos" className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="heading-section text-foreground">Tours in Photos</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
-              { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
-              { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
-              { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie with guests by the Sumida River near Asakusa with Asahi Beer Tower in the background", caption: "Exploring Asakusa with guests" },
-            ].map((photo) => (
-              <div key={photo.src} className="flex flex-col">
-                <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    width={600}
-                    height={450}
-                  />
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-4">Guest Reviews</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">What Travelers Say</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <blockquote
-                key={testimonial.author}
-                className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
-              >
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-gold text-gold"
-                    />
-                  ))}
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  "{testimonial.text}"
-                </p>
-                <footer className="pt-4 border-t border-border">
-                  <cite className="not-italic font-medium text-foreground text-sm">
-                    - {testimonial.author}
-                  </cite>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-
-          <p className="mt-8 text-center text-sm text-muted-foreground">
-            500+ five-star reviews from travelers worldwide
-          </p>
         </div>
       </section>
 

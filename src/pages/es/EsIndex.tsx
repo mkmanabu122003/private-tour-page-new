@@ -179,8 +179,8 @@ const EsIndex = () => {
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
             <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Tokyo con Manabu:{" "}
-              <span className="text-accent">Tu Guía Local Certificado</span>
+              Tours Privados a Pie por Tokio{" "}
+              <span className="text-accent">con Guía Local Certificado</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               Más de 500 tours completados. Valoración media de 4.86★. Guía con licencia oficial del gobierno japonés.
@@ -219,64 +219,6 @@ const EsIndex = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How to Book */}
-      <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-label text-accent mb-4">Reserva Fácil</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">Cómo Reservar</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Elige tu experiencia
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Explora nuestros tours o cuéntame tu día ideal en Tokio.
-              </p>
-            </div>
-            <div className="text-center">
-              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Comparte lo que te apasiona
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Historia, gastronomía, callejones ocultos... creo la ruta a tu medida.
-              </p>
-            </div>
-            <div className="text-center">
-              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Recorremos Tokio juntos
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Sin guiones. Sin multitudes. Solo tú, tu guía y la ciudad.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose a Native Japanese Guide */}
-      <section className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground text-center">¿Por qué elegir un guía japonés nativo?</h2>
-            <div className="mt-8 text-muted-foreground leading-relaxed space-y-4">
-              <p>
-                La mayoría de los guías en español en Tokio son hispanohablantes que aprendieron japonés. Manabu es al revés: japonés nativo que habla español.
-              </p>
-              <p>
-                Eso marca la diferencia. Conoce Tokio desde dentro, su historia, sus costumbres, los lugares donde come la gente local, y te lo cuenta directamente en español, sin filtros de traducción ni malentendidos culturales.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -351,75 +293,6 @@ const EsIndex = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-label text-accent mb-4">Tu Guía</p>
-              <div className="w-10 h-px bg-accent mb-6" />
-              <h2 className="heading-section text-foreground">
-                Conoce a Manabu, Tu Guía Oficial en Tokio
-              </h2>
-              <p className="mt-4 text-body">
-                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 500 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio. Conozco Japón desde dentro y en profundidad.
-              </p>
-              <p className="mt-4 text-body">
-                Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y adapto el tour en tiempo real. No es una clase magistral, es una conversación.
-              </p>
-              <Link to="/es/about" className="btn-outline mt-8 inline-flex">
-                Más Información
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
-                <img
-                  src={guidePortrait}
-                  alt="Manabu, guía privado con licencia oficial en Tokio"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={600}
-                  height={800}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tour Photos */}
-      <section aria-label="Fotos de tours" className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="heading-section text-foreground">Tours en Fotos</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { src: "/images/tour-photos/group-photo.webp", alt: "Foto grupal con invitados durante un tour privado a pie por Tokio", caption: "Tour privado en Tokio" },
-              { src: "/images/tour-photos/photo1.webp", alt: "Explorando los monumentos culturales de Tokio en un tour guiado", caption: "Explorando el viejo Tokio juntos" },
-              { src: "/images/tour-photos/photo2.webp", alt: "Descubriendo los tesoros ocultos de Tokio con un guía local", caption: "Descubriendo Tokio" },
-              { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie con invitados junto al río Sumida cerca de Asakusa con la Torre Asahi Beer de fondo", caption: "Explorando Asakusa con invitados" },
-            ].map((photo) => (
-              <div key={photo.src} className="flex flex-col">
-                <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    width={600}
-                    height={450}
-                  />
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="py-20 md:py-28">
         <div className="container-section">
@@ -458,6 +331,133 @@ const EsIndex = () => {
           <p className="mt-8 text-center text-sm text-muted-foreground">
             Más de 500 reseñas de cinco estrellas de viajeros de todo el mundo
           </p>
+        </div>
+      </section>
+
+      {/* Tour Photos */}
+      <section aria-label="Fotos de tours" className="py-20 md:py-28 bg-secondary/30">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="heading-section text-foreground">Tours en Fotos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { src: "/images/tour-photos/group-photo.webp", alt: "Foto grupal con invitados durante un tour privado a pie por Tokio", caption: "Tour privado en Tokio" },
+              { src: "/images/tour-photos/photo1.webp", alt: "Explorando los monumentos culturales de Tokio en un tour guiado", caption: "Explorando el viejo Tokio juntos" },
+              { src: "/images/tour-photos/photo2.webp", alt: "Descubriendo los tesoros ocultos de Tokio con un guía local", caption: "Descubriendo Tokio" },
+              { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie con invitados junto al río Sumida cerca de Asakusa con la Torre Asahi Beer de fondo", caption: "Explorando Asakusa con invitados" },
+            ].map((photo) => (
+              <div key={photo.src} className="flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={450}
+                  />
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How to Book */}
+      <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
+        <div className="container-section">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-label text-accent mb-4">Reserva Fácil</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
+            <h2 className="heading-section text-foreground">Cómo Reservar</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <MapPin className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-medium text-foreground mb-3">
+                Elige tu experiencia
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Explora nuestros tours o cuéntame tu día ideal en Tokio.
+              </p>
+            </div>
+            <div className="text-center">
+              <Heart className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-medium text-foreground mb-3">
+                Comparte lo que te apasiona
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Historia, gastronomía, callejones ocultos... creo la ruta a tu medida.
+              </p>
+            </div>
+            <div className="text-center">
+              <User className="w-8 h-8 text-accent mx-auto mb-5" strokeWidth={1.2} />
+              <h3 className="text-xl font-medium text-foreground mb-3">
+                Recorremos Tokio juntos
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Sin guiones. Sin multitudes. Solo tú, tu guía y la ciudad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose a Native Japanese Guide */}
+      <section className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="heading-section text-foreground text-center">¿Por qué elegir un guía japonés nativo?</h2>
+            <div className="mt-8 text-muted-foreground leading-relaxed space-y-4">
+              <p>
+                La mayoría de los guías en español en Tokio son hispanohablantes que aprendieron japonés. Manabu es al revés: japonés nativo que habla español.
+              </p>
+              <p>
+                Eso marca la diferencia. Conoce Tokio desde dentro, su historia, sus costumbres, los lugares donde come la gente local, y te lo cuenta directamente en español, sin filtros de traducción ni malentendidos culturales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-label text-accent mb-4">Tu Guía</p>
+              <div className="w-10 h-px bg-accent mb-6" />
+              <h2 className="heading-section text-foreground">
+                Conoce a Manabu, Tu Guía Oficial en Tokio
+              </h2>
+              <p className="mt-4 text-body">
+                Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 500 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio. Conozco Japón desde dentro y en profundidad.
+              </p>
+              <p className="mt-4 text-body">
+                Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y adapto el tour en tiempo real. No es una clase magistral, es una conversación.
+              </p>
+              <Link to="/es/about" className="btn-outline mt-8 inline-flex">
+                Más Información
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
+                <img
+                  src={guidePortrait}
+                  alt="Manabu, guía privado con licencia oficial en Tokio"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={600}
+                  height={800}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
