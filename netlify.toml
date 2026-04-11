@@ -8,7 +8,12 @@
 
 [build.processing]
   [build.processing.html]
-    pretty_urls = false
+    # pretty_urls = true (default) maps /contact → /contact.html and
+    # canonicalizes /contact.html → /contact and /contact/ → /contact.
+    # This works in conjunction with the prerender step which outputs
+    # flat .html files (not directory/index.html), avoiding the
+    # single-segment redirect loop (/contact → /contact/ → /contact).
+    pretty_urls = true
 
 # 301 redirects: old /routes/ URLs → new /tours/ URLs
 [[redirects]]
@@ -108,11 +113,13 @@
   force = true
 
 # Remove trailing slashes: /path/ → /path (301 redirect)
+# Note: pretty_urls = true already handles this, but we keep this rule
+# without force=true as a safety net. Without force, static files take
+# priority so legitimate .html files at /:splat are not affected.
 [[redirects]]
   from = "/:splat/"
   to = "/:splat"
   status = 301
-  force = true
 
 # SPA catch-all (must be last)
 [[redirects]]

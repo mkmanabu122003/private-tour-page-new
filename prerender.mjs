@@ -162,11 +162,14 @@ async function prerender() {
         );
       }
 
-      // Write the file
+      // Write the file.
+      // Root (/) → dist/index.html (required by Netlify).
+      // All other routes → dist/{path}.html (flat .html files, not directories).
+      // This avoids directory auto-redirect loops with the trailing slash rule.
       const filePath =
         url === "/"
           ? resolve("dist/index.html")
-          : resolve(`dist${url}/index.html`);
+          : resolve(`dist${url}.html`);
 
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, page);
