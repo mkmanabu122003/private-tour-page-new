@@ -48,6 +48,100 @@ function fetchGA4Data(pid, startDate, endDate) {
   };
 }
 
+/**
+ * ランディングページ別CVレポートを取得してログに出力
+ * GASエディタから手動実行 → ログをコピーして共有
+ */
+function fetchLandingPageCV() {
+  var config = getConfig();
+  var pid = config['GA4_PROPERTY_ID'] || '465121981';
+  var dr = [{ startDate: '90daysAgo', endDate: 'today' }];
+
+  var landing = ga4Run(pid, {
+    dateRanges: dr,
+    dimensions: [{ name: 'landingPage' }],
+    metrics: [
+      { name: 'sessions' },
+      { name: 'totalUsers' },
+      { name: 'keyEvents' },
+      { name: 'keyEventRate' },
+      { name: 'averageSessionDuration' },
+      { name: 'bounceRate' }
+    ],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 50
+  });
+
+  var events = ga4Run(pid, {
+    dateRanges: dr,
+    dimensions: [{ name: 'landingPage' }, { name: 'eventName' }],
+    metrics: [{ name: 'eventCount' }],
+    dimensionFilter: {
+      filter: {
+        fieldName: 'eventName',
+        inListFilter: {
+          values: ['form_submit', 'book_now_click', 'contact_page_view', 'form_start', 'tour_page_view']
+        }
+      }
+    },
+    orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+    limit: 200
+  });
+
+  var output = JSON.stringify({ landing: landing, events: events });
+  Logger.log(output);
+  return output;
+}
+
+/**
+ * Web App エンドポイント — 外部からGA4データを取得するためのAPI
+ * デプロイ: 「デプロイ」→「新しいデプロイ」→「ウェブアプリ」→ アクセス権「自分のみ」
+ */
+function doGet(e) {
+  var action = (e && e.parameter && e.parameter.action) || 'landing_cv';
+  var pid = '465121981';
+  var days = (e && e.parameter && e.parameter.days) || '90';
+  var dr = [{ startDate: days + 'daysAgo', endDate: 'today' }];
+  var result = {};
+
+  if (action === 'landing_cv') {
+    result.landing = ga4Run(pid, {
+      dateRanges: dr,
+      dimensions: [{ name: 'landingPage' }],
+      metrics: [
+        { name: 'sessions' },
+        { name: 'totalUsers' },
+        { name: 'keyEvents' },
+        { name: 'keyEventRate' },
+        { name: 'averageSessionDuration' },
+        { name: 'bounceRate' }
+      ],
+      orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+      limit: 50
+    });
+    result.events = ga4Run(pid, {
+      dateRanges: dr,
+      dimensions: [{ name: 'landingPage' }, { name: 'eventName' }],
+      metrics: [{ name: 'eventCount' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'eventName',
+          inListFilter: {
+            values: ['form_submit', 'book_now_click', 'contact_page_view', 'form_start', 'tour_page_view']
+          }
+        }
+      },
+      orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+      limit: 200
+    });
+  } else if (action === 'overview') {
+    result = fetchGA4Data(pid, days + 'daysAgo', 'today');
+  }
+
+  return ContentService.createTextOutput(JSON.stringify(result))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 function ga4Run(pid, body) {
   try {
     const r = AnalyticsData.Properties.runReport(body, 'properties/' + pid);

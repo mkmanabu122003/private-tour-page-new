@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { dayTripFinderConfig } from "@/data/diagnostics/dayTripFinder";
 
 const DayTripComparison = () => {
   return (
@@ -68,7 +70,14 @@ const DayTripComparison = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's an honest, detailed comparison to help you decide. And if you still can't choose after reading this, that's what custom itineraries are for.
             </p>
+          </article>
 
+          {/* Interactive Diagnostic Tool — opens in modal */}
+          <div className="max-w-3xl mx-auto">
+            <DiagnosticTrigger config={dayTripFinderConfig} />
+          </div>
+
+          <article className="max-w-3xl mx-auto prose-custom">
             {/* Quick Comparison Table */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Quick Comparison

@@ -59,3 +59,40 @@ export function trackBlogToTourClick(destinationTour: string) {
     destination_tour: destinationTour,
   });
 }
+
+export function trackDiagnosticStart(toolId: string) {
+  gtag("event", "diagnostic_start", {
+    tool_id: toolId,
+    page_path: window.location.pathname,
+  });
+}
+
+export function trackDiagnosticAnswer(toolId: string, questionId: string, answerIndex: number) {
+  gtag("event", "diagnostic_answer", {
+    tool_id: toolId,
+    question_id: questionId,
+    answer_index: answerIndex,
+  });
+}
+
+export function trackDiagnosticComplete(toolId: string, resultId: string) {
+  gtag("event", "diagnostic_complete", {
+    tool_id: toolId,
+    result_id: resultId,
+    page_path: window.location.pathname,
+  });
+}
+
+export function trackDiagnosticToTour(toolId: string, resultId: string) {
+  gtag("event", "diagnostic_to_tour", {
+    tool_id: toolId,
+    result_id: resultId,
+  });
+}
+
+export function trackDiagnosticToContact(toolId: string, resultId: string) {
+  gtag("event", "diagnostic_to_contact", {
+    tool_id: toolId,
+    result_id: resultId,
+  });
+}

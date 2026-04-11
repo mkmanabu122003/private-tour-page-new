@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
@@ -7,8 +7,26 @@ import { useToast } from "@/hooks/use-toast";
 import { trackContactPageView, trackFormSubmit } from "@/lib/ga4";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
+const VALID_TOUR_VALUES = [
+  "asakusa",
+  "yanaka",
+  "shibuya-harajuku",
+  "tsukiji-ginza",
+  "imperial-palace",
+  "tokyo-food-tour",
+  "tokyo-night-tour",
+  "kamakura-day-trip",
+  "hakone-day-trip",
+  "nikko-day-trip",
+  "custom",
+  "other",
+];
+
 const Contact = () => {
   const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+  const initialTour = searchParams.get("tour") || "";
+  const prefilledTour = VALID_TOUR_VALUES.includes(initialTour) ? initialTour : "";
 
   useEffect(() => {
     trackContactPageView();
@@ -17,7 +35,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    tourType: "",
+    tourType: prefilledTour,
     date: "",
     groupSize: "",
     message: "",
