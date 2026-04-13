@@ -98,6 +98,19 @@ const EsCerezosEnFlorTokio = () => {
               <li><strong>Acceso:</strong> Estación Nakameguro (Línea Tokyu Toyoko / Línea Hibiya)</li>
               <li><strong>Consejo:</strong> Camina río arriba desde Nakameguro — la mayoría de turistas se quedan cerca de la estación. El tramo hacia Ikejiri-Ohashi es más tranquilo</li>
             </ul>
+            <figure className="my-8">
+              <img
+                src="/images/blog/meguro-river-cherry-blossoms.webp"
+                alt="Cerezos en plena floración a ambos lados del río Meguro"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                El túnel de cerezos del río Meguro en plena floración — más de 800 árboles bordean ambas orillas
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
               2. Chidorigafuchi (千鳥ヶ淵) — El Más Fotogénico

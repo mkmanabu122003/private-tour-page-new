@@ -134,6 +134,19 @@ const ShibuyaHarajukuGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dogenzaka is the sloping street that leads up the hill from the crossing, and it has a reputation as Shibuya's love hotel district. That reputation is deserved (you'll see plenty of colorful facades with hourly rates), but Dogenzaka is also home to some of the best vintage and secondhand clothing shops in Tokyo. Stores like Ragtag, Flamingo, and dozens of smaller independent shops sell everything from designer labels at a fraction of retail to perfectly curated vintage Americana. If you're into fashion or thrifting, Dogenzaka is worth an afternoon of browsing. The love hotels, by the way, are a fascinating part of Japanese urban culture in their own right, and I'm happy to explain their history and social role on tour. It's more interesting than you might expect.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/ragtag-daikanyama-vintage.webp"
+                alt="RAGTAG used select shop storefront — one of Tokyo's best vintage clothing destinations"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                RAGTAG, one of Tokyo's top vintage and secondhand designer shops in the Shibuya area
+              </figcaption>
+            </figure>
 
             <InlineCTA message="Want to explore Shibuya and Harajuku with a local guide?" href="/tours/shibuya-harajuku" />
 
@@ -168,6 +181,19 @@ const ShibuyaHarajukuGuide = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Cat Street: The Real Fashion Street
             </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/daikanyama-street-scene.webp"
+                alt="Quiet backstreet in the Daikanyama and Cat Street area with independent shops"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                The relaxed backstreets around Cat Street — a world away from Takeshita's crowds
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Running roughly parallel to Takeshita Street but one block south, Cat Street (Kyuushibuya-gawa Yuuhodou) is where Harajuku's fashion-conscious locals actually shop. Built along a former riverbed, it's a winding, tree-lined street with independent boutiques, designer flagship stores, vintage shops, and some of the best coffee in the area. The atmosphere is completely different from Takeshita: relaxed, curated, and genuinely stylish. This is where Japanese streetwear brands test new concepts, where up-and-coming designers open their first shops, and where you'll spot fashion-forward locals putting together outfits that wouldn't look out of place in a magazine. If you only have time for one Harajuku street, make it Cat Street.
             </p>

@@ -167,6 +167,19 @@ const TsukijiMarketGuide = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Fresh Sushi: Standing Up, As It Should Be
             </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-fresh-tuna-display.webp"
+                alt="Fresh tuna cuts displayed at a Tsukiji market stall with handwritten price signs"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Fresh-cut tuna at Tsukiji — the quality speaks for itself, and prices are surprisingly fair
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers, in some cases from the same families who used to work the inner market floor, and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 2,000 to 3,000 yen, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots like Sushi Dai have two-hour queues and international reputations, but honestly, the lesser-known standing counters serve fish that's just as fresh at half the wait. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
               <Link to="/blog/sushi-guide-tokyo" className="text-accent hover:underline">
@@ -194,6 +207,20 @@ const TsukijiMarketGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               If you want a proper sit-down meal rather than grazing on street food, a kaisendon (a bowl of warm sushi rice topped with an assortment of raw seafood) is the way to go. The best versions feature glistening slices of maguro (tuna), salmon, hamachi (yellowtail), ikura (salmon roe), and sometimes uni, all arranged over perfectly seasoned rice. Expect to pay 1,500 to 3,000 yen depending on the toppings. My advice: go to the shops set back from the main tourist lanes. The restaurants at the market's edges charge premium prices for the same fish you can get for less deeper inside. Quality is consistent across the market. Location is the markup.
             </p>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-seafood-crab-shellfish.webp"
+                alt="Fresh snow crab and assorted shellfish including clams and shijimi at a Tsukiji market stall"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Snow crab, clams, and shijimi — the variety of fresh seafood at Tsukiji goes far beyond sushi
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Pickles and Dried Goods: The Souvenirs Worth Buying

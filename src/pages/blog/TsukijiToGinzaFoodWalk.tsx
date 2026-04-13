@@ -95,6 +95,19 @@ const TsukijiToGinzaFoodWalk = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               What to eat here: fresh tamago (egg) in its many forms, grilled scallops or uni if you're adventurous, seasonal fruit from the specialty shops, and daifuku mochi from one of the stalls along the main alley. Avoid the places with long lines of tourists and no Japanese customers. The best stalls are the ones where the locals are buying.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-daifuku-mochi-stall.webp"
+                alt="Colorful daifuku mochi display at a Tsukiji market stall"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Daifuku mochi stall at Tsukiji — the strawberry daifuku (ichigo daifuku) is a must-try
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Timing tip:</strong> Arrive between 9:00 and 10:00 AM. Earlier is better for selection; later gets crowded. Most stalls close by 2:00 PM, and some popular items sell out by noon.
             </p>
@@ -113,6 +126,62 @@ const TsukijiToGinzaFoodWalk = () => {
               The temple has a cafe (Tsumugi) that serves a famous morning set (¥1,800, daily 8:00-10:30 AM, limited to 110 meals per day) with 18 small dishes representing the Buddhist concept of gratitude for food. Reservations recommended. Even if you skip the cafe, the temple's interior is worth 10 minutes, especially the pipe organ (one of the few in a Buddhist temple in Japan).
               {/* <!-- VERIFIED: Cafe Tsumugi 18-dish breakfast ¥1,800, daily 8:00-10:30 AM, 110 meals/day limit, reservations available. Checked: 2026-03-14 --> */}
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-honganji-interior.webp"
+                alt="Ornate golden interior of Tsukiji Honganji Temple with elaborate Buddhist decorations"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Inside Tsukiji Honganji — the ornate golden interior is a surprise most visitors never discover
+              </figcaption>
+            </figure>
+
+            {/* Optional Detour: Hamarikyu Gardens */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Optional Detour: Hamarikyu Gardens (Add 60–90 min)
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If your schedule allows, a short detour south from Tsukiji brings you to Hamarikyu Gardens (浜離宮恩賜庭園), one of Tokyo's most beautiful traditional gardens. It's a 10-minute walk from the outer market, and the contrast is remarkable: one moment you're in the bustling market lanes, the next you're standing on manicured lawns with pine trees, tidal ponds, and Tokyo's skyscrapers rising behind them.
+            </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/hamarikyu-gardens-lawn.webp"
+                alt="Expansive green lawns and pine trees at Hamarikyu Gardens with Tokyo skyscrapers in the background"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Hamarikyu Gardens — a peaceful escape with the Tokyo skyline as a backdrop
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The gardens were originally a feudal lord's duck hunting grounds, later becoming an imperial detached palace. Today they're a public park with seasonal flower fields, a tidal seawater pond (one of the only ones in Tokyo), and a teahouse on the water where you can sit with matcha and wagashi while watching the boats pass on Tokyo Bay.
+            </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/hamarikyu-flower-field.webp"
+                alt="Bright yellow cosmos flower field at Hamarikyu Gardens with high-rise buildings behind"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Seasonal flower fields at Hamarikyu — cosmos in autumn, canola flowers in spring
+              </figcaption>
+            </figure>
+            <ul className="list-disc pl-6 space-y-1 text-muted-foreground mb-4">
+              <li><strong>Hours:</strong> 9:00 AM – 5:00 PM (last entry 4:30 PM)</li>
+              <li><strong>Admission:</strong> ¥300 adults</li>
+              <li><strong>Access:</strong> 10-minute walk south from Tsukiji Outer Market</li>
+              <li><strong>Tip:</strong> You can take a water bus from Hamarikyu to Asakusa — a scenic way to continue your day</li>
+            </ul>
 
             {/* Stop 3: Walk to Ginza Backstreets */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

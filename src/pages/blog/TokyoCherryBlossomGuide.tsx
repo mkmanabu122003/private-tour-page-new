@@ -105,6 +105,19 @@ const TokyoCherryBlossomGuide = () => {
               <li><strong>Crowd tip:</strong> Walk upstream from Nakameguro — most tourists stay near the station. The stretch toward Ikejiri-Ohashi is quieter and just as beautiful</li>
               <li><strong>Food:</strong> Dozens of street food vendors line the river during the festival</li>
             </ul>
+            <figure className="my-8">
+              <img
+                src="/images/blog/meguro-river-cherry-blossoms.webp"
+                alt="Cherry blossom trees in full bloom lining both sides of the Meguro River"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                The Meguro River cherry blossom tunnel at peak bloom — over 800 trees lining both banks
+              </figcaption>
+            </figure>
 
             <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
               2. Chidorigafuchi (千鳥ヶ淵) — Most Photogenic

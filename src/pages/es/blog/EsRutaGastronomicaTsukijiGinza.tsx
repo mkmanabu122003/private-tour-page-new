@@ -95,6 +95,19 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Qué comer aquí: tamago (huevo) en todas sus formas, vieiras a la parrilla o uni si eres aventurero, fruta de temporada en las tiendas especializadas y daifuku mochi en alguno de los puestos del callejón principal. Evita los sitios con largas filas de turistas y ningún cliente japonés. Los mejores puestos son aquellos donde compran los locales.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-daifuku-mochi-stall.webp"
+                alt="Colorido puesto de daifuku mochi en el mercado de Tsukiji"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Puesto de daifuku mochi en Tsukiji — el ichigo daifuku (daifuku de fresa) es imprescindible
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Consejo de horario:</strong> Llega entre las 9:00 y las 10:00. Cuanto antes, mejor surtido; más tarde, más aglomeración. La mayoría de los puestos cierran a las 14:00, y algunos productos populares se agotan antes del mediodía.
             </p>
@@ -113,6 +126,62 @@ const EsRutaGastronomicaTsukijiGinza = () => {
               El templo tiene una cafetería (Tsumugi) que sirve un famoso desayuno (¥1.800, todos los días de 8:00 a 10:30, limitado a 110 raciones diarias) con 18 pequeños platos que representan el concepto budista de gratitud por los alimentos. Se recomienda reservar. Aunque no vayas a la cafetería, el interior del templo merece 10 minutos, especialmente el órgano de tubos (uno de los pocos en un templo budista de Japón).
               {/* <!-- VERIFIED: Cafe Tsumugi 18-dish breakfast ¥1,800, daily 8:00-10:30 AM, 110 meals/day limit, reservations available. Checked: 2026-03-14 --> */}
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-honganji-interior.webp"
+                alt="Interior dorado ornamentado del templo Tsukiji Honganji con elaboradas decoraciones budistas"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Interior del Tsukiji Honganji — la ornamentación dorada es una sorpresa que la mayoría de visitantes nunca descubre
+              </figcaption>
+            </figure>
+
+            {/* Desvío opcional: Jardines Hamarikyu */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Desvío Opcional: Jardines Hamarikyu (Añade 60–90 min)
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si tu horario lo permite, un breve desvío hacia el sur desde Tsukiji te lleva a los Jardines Hamarikyu (浜離宮恩賜庭園), uno de los jardines tradicionales más hermosos de Tokio. Está a 10 minutos a pie del mercado exterior, y el contraste es asombroso: un momento estás en los bulliciosos callejones del mercado, y al siguiente te encuentras en céspedes cuidados con pinos, estanques de marea y los rascacielos de Tokio alzándose detrás.
+            </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/hamarikyu-gardens-lawn.webp"
+                alt="Amplios céspedes y pinos en los Jardines Hamarikyu con rascacielos de Tokio al fondo"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Jardines Hamarikyu — un remanso de paz con el skyline de Tokio como telón de fondo
+              </figcaption>
+            </figure>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Los jardines fueron originalmente un coto de caza de patos de un señor feudal, que más tarde se convirtió en un palacio imperial. Hoy son un parque público con campos de flores de temporada, un estanque de agua salada (uno de los únicos en Tokio) y una casa de té sobre el agua donde puedes sentarte con matcha y wagashi mientras observas los barcos pasar por la bahía de Tokio.
+            </p>
+            <figure className="my-8">
+              <img
+                src="/images/blog/hamarikyu-flower-field.webp"
+                alt="Campo de cosmos amarillos en los Jardines Hamarikyu con edificios de gran altura detrás"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Campos de flores de temporada en Hamarikyu — cosmos en otoño, colza en primavera
+              </figcaption>
+            </figure>
+            <ul className="list-disc pl-6 space-y-1 text-muted-foreground mb-4">
+              <li><strong>Horario:</strong> 9:00 – 17:00 (última entrada 16:30)</li>
+              <li><strong>Entrada:</strong> ¥300 adultos</li>
+              <li><strong>Acceso:</strong> 10 minutos a pie al sur del mercado exterior de Tsukiji</li>
+              <li><strong>Consejo:</strong> Puedes tomar un barco acuático desde Hamarikyu hasta Asakusa — una forma panorámica de continuar tu día</li>
+            </ul>
 
             {/* Parada 3: Caminata hacia las callejuelas de Ginza */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

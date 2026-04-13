@@ -148,6 +148,19 @@ const EsMercadoTsukijiTokio = () => {
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Sushi fresco: dónde sí y dónde no
             </h3>
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-fresh-tuna-display.webp"
+                alt="Cortes de atún fresco en un puesto del mercado de Tsukiji con carteles de precios escritos a mano"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Atún recién cortado en Tsukiji — la calidad habla por sí sola, y los precios son sorprendentemente justos
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tsukiji tiene docenas de locales de sushi, y no todos merecen tu tiempo ni tu dinero. Mi regla de oro: evita cualquier restaurante con captadores en la puerta intentando atraerte en varios idiomas. Los mejores locales de sushi de Tsukiji no necesitan hacer eso: tienen cola porque son buenos. Los restaurantes de sushi de pie (tachigui-zushi) ofrecen una relación calidad-precio extraordinaria: por 2.000-3.000 yenes comes 8-10 piezas de sushi preparadas al momento con pescado que llegó esa misma mañana. Para una experiencia más relajada, los locales con asiento ofrecen menús omakase desde 3.500 yenes. Mi consejo: no persigas los nombres famosos con colas de dos horas. Camina un poco más adentro y descubrirás barras excelentes con esperas de 15 minutos.
             </p>
@@ -182,6 +195,20 @@ const EsMercadoTsukijiTokio = () => {
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
                 El icónico tamagoyaki de Tsukiji — dorado, esponjoso y mejor recién salido de la plancha
+              </figcaption>
+            </figure>
+
+            <figure className="my-8">
+              <img
+                src="/images/blog/tsukiji-seafood-crab-shellfish.webp"
+                alt="Cangrejo de las nieves fresco y marisco variado incluyendo almejas y shijimi en un puesto del mercado de Tsukiji"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                Cangrejo de las nieves, almejas y shijimi — la variedad de marisco fresco en Tsukiji va mucho más allá del sushi
               </figcaption>
             </figure>
 
