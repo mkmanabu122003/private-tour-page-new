@@ -232,6 +232,16 @@ const blogPosts: BlogPost[] = [
   },
   // Food Guides
   {
+    slug: "tokyo-izakaya-guide",
+    title: "Tokyo Izakaya Guide: Where a Local Guide Drinks",
+    description:
+      "A licensed Tokyo guide reveals the izakaya alleys, ordering customs, and hidden bars tourists can't find alone. Golden Gai, Omoide Yokocho, Yurakucho & more.",
+    date: "April 13, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food & Nightlife",
+    image: "/images/tours/night-tour-omoide-yokocho.webp",
+  },
+  {
     slug: "ramen-guide-tokyo",
     title: "Ramen Guide Tokyo: What a Local Guide Orders",
     description:

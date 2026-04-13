@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
 
 const TsukijiMarketGuide = () => {
   return (
@@ -350,6 +352,8 @@ const TsukijiMarketGuide = () => {
           </article>
         </div>
       </section>
+
+      <DiagnosticTrigger config={foodFinderConfig} />
 
       <RelatedTourCards tourIds={["tsukiji-ginza","tokyo-food-tour"]} />
 

@@ -261,6 +261,17 @@ const blogPosts: BlogPost[] = [
     category: "Guías Útiles",
     image: "/images/tours/asakusa-kaminarimon-morning.webp",
   },
+  // Comida y Vida Nocturna
+  {
+    slug: "guia-izakayas-tokio",
+    title: "Guía de Izakayas en Tokio: Dónde Bebe un Guía Local",
+    description:
+      "Un guía oficial de Tokio te revela los callejones de izakayas, las costumbres para pedir y los bares ocultos que no encontrarías solo. Golden Gai, Omoide Yokocho, Yurakucho y más.",
+    date: "13 de abril de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Comida y Vida Nocturna",
+    image: "/images/tours/night-tour-omoide-yokocho.webp",
+  },
   // Gastronomía Japonesa (new)
   {
     slug: "ruta-gastronomica-tsukiji-ginza",
@@ -290,6 +301,7 @@ const categories = [
   "Planifica tu Viaje",
   "Cultura Japonesa",
   "Gastronomía Japonesa",
+  "Comida y Vida Nocturna",
   "Guías Útiles",
 ];
 

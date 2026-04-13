@@ -31,6 +31,7 @@ const routes = [
   "/blog/shibuya-harajuku-guide",
   "/blog/shinjuku-guide",
   "/blog/tsukiji-guide-food-lover",
+  "/blog/tokyo-izakaya-guide",
   "/blog/best-time-to-visit-tokyo",
   "/blog/japan-temple-shrine-etiquette",
   "/blog/asakusa-guide",
@@ -121,6 +122,7 @@ const routes = [
   "/es/blog/tokio-con-presupuesto",
   "/es/blog/que-esperar-tour-privado-tokio",
   "/es/blog/guia-asakusa-completa",
+  "/es/blog/guia-izakayas-tokio",
 ];
 
 async function prerender() {

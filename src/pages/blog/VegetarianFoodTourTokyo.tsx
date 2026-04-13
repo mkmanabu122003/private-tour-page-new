@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
 
 const VegetarianFoodTourTokyo = () => {
   return (
@@ -204,6 +206,8 @@ const VegetarianFoodTourTokyo = () => {
           </article>
         </div>
       </section>
+
+      <DiagnosticTrigger config={foodFinderConfig} />
 
       <RelatedTourCards tourIds={["tokyo-food-tour"]} />
 

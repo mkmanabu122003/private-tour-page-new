@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
 
 
 const EsRutaGastronomicaTsukijiGinza = () => {
@@ -346,6 +348,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
           </article>
         </div>
       </section>
+
+      <DiagnosticTrigger config={foodFinderEsConfig} />
 
       <RelatedTourCards tourIds={["tsukiji-ginza", "custom"]} showViewAll />
 

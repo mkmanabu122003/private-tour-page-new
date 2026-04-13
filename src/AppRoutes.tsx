@@ -29,6 +29,7 @@ import KawagoeDayTrip from "./pages/blog/KawagoeDayTrip";
 import NikkoDayTrip from "./pages/blog/NikkoDayTrip";
 import OldTokyoShitamachi from "./pages/blog/OldTokyoShitamachi";
 import RamenGuideTokyo from "./pages/blog/RamenGuideTokyo";
+import TokyoIzakayaGuide from "./pages/blog/TokyoIzakayaGuide";
 import SensojiMostVisited from "./pages/blog/SensojiMostVisited";
 import SushiGuideTokyo from "./pages/blog/SushiGuideTokyo";
 import TippingInJapan from "./pages/blog/TippingInJapan";
@@ -109,6 +110,7 @@ import EsGuiaRamenTokio from "./pages/es/blog/EsGuiaRamenTokio";
 import EsTokioConPresupuesto from "./pages/es/blog/EsTokioConPresupuesto";
 import EsQueEsperarTourPrivado from "./pages/es/blog/EsQueEsperarTourPrivado";
 import EsGuiaAsakusaNueva from "./pages/es/blog/EsGuiaAsakusaNueva";
+import EsGuiaIzakayasTokio from "./pages/es/blog/EsGuiaIzakayasTokio";
 import EsCancellationPolicy from "./pages/es/EsCancellationPolicy";
 
 const queryClient = new QueryClient();
@@ -145,6 +147,7 @@ const AppRoutes = () => (
         <Route path="/blog/nikko-day-trip-from-tokyo" element={<NikkoDayTrip />} />
         <Route path="/blog/old-tokyo-shitamachi" element={<OldTokyoShitamachi />} />
         <Route path="/blog/ramen-guide-tokyo" element={<RamenGuideTokyo />} />
+        <Route path="/blog/tokyo-izakaya-guide" element={<TokyoIzakayaGuide />} />
         <Route path="/blog/senso-ji-most-visited-temple" element={<SensojiMostVisited />} />
         <Route path="/blog/sushi-guide-tokyo" element={<SushiGuideTokyo />} />
         <Route path="/blog/tipping-in-japan" element={<TippingInJapan />} />
@@ -226,6 +229,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/tokio-con-presupuesto" element={<EsTokioConPresupuesto />} />
         <Route path="/es/blog/que-esperar-tour-privado-tokio" element={<EsQueEsperarTourPrivado />} />
         <Route path="/es/blog/guia-asakusa-completa" element={<EsGuiaAsakusaNueva />} />
+        <Route path="/es/blog/guia-izakayas-tokio" element={<EsGuiaIzakayasTokio />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
