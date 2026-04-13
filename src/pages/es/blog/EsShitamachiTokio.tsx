@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
 
 const EsShitamachiTokio = () => {
   return (
@@ -336,6 +338,8 @@ const EsShitamachiTokio = () => {
           </article>
         </div>
       </section>
+
+      <DiagnosticTrigger config={neighborhoodFinderEsConfig} />
 
       <RelatedTourCards tourIds={["yanaka","asakusa"]} lang="es" />
 

@@ -49,6 +49,9 @@ export interface DiagnosticConfig {
   signature: string;
   /** Tie-breaker order. The first id wins ties. */
   tieBreakerOrder?: string[];
+  /** Image shown on the inline trigger card. Falls back to day-trip hero. */
+  triggerImage?: string;
+  triggerImageAlt?: string;
 }
 
 interface DiagnosticProps {

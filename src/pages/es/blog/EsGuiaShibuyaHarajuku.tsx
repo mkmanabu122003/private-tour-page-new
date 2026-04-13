@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
 
 const EsGuiaShibuyaHarajuku = () => {
   return (
@@ -288,6 +290,8 @@ const EsGuiaShibuyaHarajuku = () => {
           </article>
         </div>
       </section>
+
+      <DiagnosticTrigger config={neighborhoodFinderEsConfig} />
 
       <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
 

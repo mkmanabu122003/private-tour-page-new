@@ -29,13 +29,13 @@ export const DiagnosticTrigger = ({ config }: DiagnosticTriggerProps) => {
   return (
     <DialogPrimitive.Root open={open} onOpenChange={setOpen}>
       {/* Inline trigger card */}
-      <div className="not-prose my-12 border border-border rounded-lg overflow-hidden bg-background shadow-sm">
+      <div className="not-prose my-12 max-w-2xl mx-auto border border-border rounded-lg overflow-hidden bg-background shadow-sm">
         <div className="grid md:grid-cols-5 gap-0">
           {/* Photo */}
-          <div className="relative h-40 md:h-auto md:col-span-2 min-h-[180px]">
+          <div className="relative h-48 md:h-auto md:col-span-2 min-h-[240px]">
             <img
-              src="/images/blog/day-trip-comparison-hero.webp"
-              alt="Day trips from Tokyo: Kamakura, Hakone and Nikko"
+              src={config.triggerImage || "/images/blog/day-trip-comparison-hero.webp"}
+              alt={config.triggerImageAlt || "Day trips from Tokyo: Kamakura, Hakone and Nikko"}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />

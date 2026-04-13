@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
 
 const AsakusaGuideNew = () => {
   return (
@@ -281,6 +283,8 @@ const AsakusaGuideNew = () => {
           </article>
         </div>
       </section>
+
+      <DiagnosticTrigger config={neighborhoodFinderConfig} />
 
       <RelatedTourCards tourIds={["custom"]} showViewAll />
 
