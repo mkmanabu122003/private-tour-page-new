@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import BlogIndex from "./pages/blog/BlogIndex";
 import Tokyo3DayItinerary from "./pages/blog/Tokyo3DayItinerary";
+import Tokyo5DayItinerary from "./pages/blog/Tokyo5DayItinerary";
 import IsItWorthHiringGuide from "./pages/blog/IsItWorthHiringGuide";
 import DayTripComparison from "./pages/blog/DayTripComparison";
 import AsakusaGuide from "./pages/blog/AsakusaGuide";
@@ -131,6 +132,7 @@ const AppRoutes = () => (
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/tokyo-3-day-itinerary" element={<Tokyo3DayItinerary />} />
+        <Route path="/blog/tokyo-5-day-itinerary" element={<Tokyo5DayItinerary />} />
         <Route path="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" element={<IsItWorthHiringGuide />} />
         <Route path="/blog/kamakura-vs-hakone-vs-nikko-day-trip" element={<DayTripComparison />} />
         <Route path="/blog/asakusa-guide-what-to-see" element={<AsakusaGuide />} />
