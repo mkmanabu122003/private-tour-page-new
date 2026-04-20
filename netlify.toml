@@ -108,28 +108,9 @@
   force = true
 
 # Remove trailing slashes: /path/ → /path (301 redirect)
-# /:splat/ only matches 1-segment paths, so we need explicit rules per depth.
 [[redirects]]
-  from = "/:p1/"
-  to = "/:p1"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:p1/:p2/"
-  to = "/:p1/:p2"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:p1/:p2/:p3/"
-  to = "/:p1/:p2/:p3"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:p1/:p2/:p3/:p4/"
-  to = "/:p1/:p2/:p3/:p4"
+  from = "/:splat/"
+  to = "/:splat"
   status = 301
   force = true
 
