@@ -84,8 +84,14 @@ const TsukijiGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Toyosu Market, on the other hand, is the modern wholesale facility that replaced Tsukiji's inner market. The main draw is the <strong className="text-foreground">tuna auction</strong>, a genuinely fascinating spectacle where multi-million-yen bluefin tuna are sold in minutes. However, viewing requires an online reservation that books up quickly, and the market itself is viewed from behind glass observation decks. There are some restaurants inside Toyosu, but the food variety and street-food atmosphere don't compare to Tsukiji.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               My recommendation: <strong className="text-foreground">visit Tsukiji for the food experience</strong>. If you're a serious seafood enthusiast and can secure a tuna auction reservation at Toyosu, add that as a separate early-morning trip. But for most food lovers, Tsukiji delivers a far more satisfying and memorable experience.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              For a deeper side-by-side breakdown — including the Toyosu lottery process, hours, and a combined one-morning plan — see my dedicated comparison:{" "}
+              <Link to="/blog/tsukiji-vs-toyosu" className="text-accent hover:underline font-medium">
+                Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?
+              </Link>
             </p>
 
             {/* What to Eat */}

@@ -288,6 +288,12 @@ const EsMercadoTsukijiTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si solo tienes tiempo para uno, elige Tsukiji. La experiencia es más completa, más accesible y más satisfactoria para la gran mayoría de visitantes. Si tienes tiempo y ganas para ambos, haz Toyosu al amanecer (para la subasta de atún) y Tsukiji a media mañana (para comer y explorar). Es una combinación extraordinaria que hago con algunos de mis grupos y que nunca decepciona. Pero insisto: si solo puedes ir a uno, que sea el mercado de Tsukiji en Tokio.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Si aún dudas entre los dos mercados, escribí una comparativa dedicada con tabla lado a lado, horarios, acceso y el proceso de lotería de la subasta de Toyosu:{" "}
+              <Link to="/es/blog/tsukiji-vs-toyosu" className="text-accent hover:underline font-medium">
+                Tsukiji vs Toyosu: ¿qué mercado de pescado visitar en Tokio?
+              </Link>
+            </p>
 
             {/* FAQ */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

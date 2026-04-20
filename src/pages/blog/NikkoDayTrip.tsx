@@ -305,6 +305,13 @@ const NikkoDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               The efficiency difference is also significant. On a self-guided visit, I frequently see travelers standing at bus stops confused about which bus goes where, or spending twenty minutes trying to figure out the shrine's ticket system, or missing the path to Ieyasu's tomb entirely because the entrance is not obvious. A guided Nikko day trip from Tokyo eliminates all of that friction. Every minute of your day goes toward actually experiencing Nikko rather than figuring out Nikko, and when you are working with a limited day-trip window, that efficiency is the difference between seeing two things and seeing five.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              For the full cost-vs-cost breakdown of going solo against going with a guide — including the 3 mistakes solo visitors make that eat up the best 2 hours of the day — see my dedicated comparison:{" "}
+              <Link to="/blog/nikko-day-trip-guide-vs-solo" className="text-accent hover:underline font-medium">
+                Nikko Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)
+              </Link>
+              .
+            </p>
 
             {/* CTA Section */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">

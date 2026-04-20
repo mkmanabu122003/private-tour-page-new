@@ -291,8 +291,15 @@ const TsukijiMarketGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               My honest recommendation: <strong className="text-foreground">if you only have time for one, choose Tsukiji</strong>. The food is better for visitors, the atmosphere is richer, and the experience requires zero advance planning. If you're a serious seafood enthusiast and can secure a Toyosu auction reservation, do both: Toyosu at dawn for the auction, then Tsukiji by 8 AM for breakfast. It makes for an unforgettable morning, though an exhausting one.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               One thing I tell all my guests: Tsukiji's outer market is not a consolation prize for the inner market's departure. It's the main event. Always has been, even when the wholesale floor was still operating next door. The inner market was fascinating for industry insiders, but the outer market is where the food is, and food is what brings people to Tsukiji in the first place.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              If you're still weighing the two, I wrote a dedicated side-by-side breakdown:{" "}
+              <Link to="/blog/tsukiji-vs-toyosu" className="text-accent hover:underline font-medium">
+                Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?
+              </Link>{" "}
+              — with a comparison table covering hours, access, food options, and the Toyosu tuna-auction lottery.
             </p>
 
             {/* CTA */}

@@ -323,6 +323,16 @@ const blogPosts: BlogPost[] = [
     category: "Day Trip Guides",
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
+  {
+    slug: "nikko-day-trip-guide-vs-solo",
+    title: "Nikko Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)",
+    description:
+      "Nikko from Tokyo: around ¥12,000 solo by public transit vs ¥80,000 guided. A licensed guide compares cost, language barriers, and what you actually see in each.",
+    date: "April 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trip Guides",
+    image: "/images/blog/nikko-toshogu-hero.webp",
+  },
   // New Planning
   {
     slug: "tokyo-with-kids-family-tour",

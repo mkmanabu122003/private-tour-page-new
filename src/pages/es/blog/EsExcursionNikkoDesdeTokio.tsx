@@ -303,6 +303,13 @@ const EsExcursionNikkoDesdeTokio = () => {
               </Link>
               .
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Y si quieres el desglose concreto de coste-vs-coste entre ir por tu cuenta y con guía para Nikko —incluidos los 3 errores que suelen cometer quienes van solos— te lo cuento aquí:{" "}
+              <Link to="/es/blog/nikko-con-guia-vs-solo" className="text-accent hover:underline font-medium">
+                Nikko desde Tokio 2026: ¿Con Guía o por tu Cuenta?
+              </Link>
+              .
+            </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Mi experiencia guiando en Nikko

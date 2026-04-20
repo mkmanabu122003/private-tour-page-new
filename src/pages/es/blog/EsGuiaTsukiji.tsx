@@ -103,8 +103,14 @@ const EsGuiaTsukiji = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Mercado de Toyosu, por otro lado, es la moderna instalación mayorista que reemplazó al mercado interior de Tsukiji. El atractivo principal es la <strong className="text-foreground">subasta de atún</strong>, un espectáculo genuinamente fascinante donde atunes rojos de varios millones de yenes se venden en minutos. Sin embargo, la observación requiere una reserva en línea que se agota rápidamente, y el mercado en sí se ve desde plataformas de observación detrás de cristal. Hay algunos restaurantes dentro de Toyosu, pero la variedad gastronómica y la atmósfera de comida callejera no se comparan con Tsukiji.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Mi recomendación: <strong className="text-foreground">visita Tsukiji para la experiencia gastronómica</strong>. Si eres un entusiasta serio del marisco y puedes conseguir una reserva para la subasta de atún en Toyosu, añade eso como una visita separada a primera hora de la mañana. Pero para la mayoría de los amantes de la gastronomía, Tsukiji ofrece una experiencia mucho más satisfactoria y memorable.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Para un análisis lado a lado más detallado —incluyendo el proceso de lotería de la subasta de Toyosu, horarios y un plan combinado para una sola mañana— consulta mi comparativa dedicada:{" "}
+              <Link to="/es/blog/tsukiji-vs-toyosu" className="text-accent hover:underline font-medium">
+                Tsukiji vs Toyosu: ¿qué mercado de pescado visitar en Tokio?
+              </Link>
             </p>
 
             {/* Qué Comer */}

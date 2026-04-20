@@ -127,6 +127,16 @@ const blogPosts: BlogPost[] = [
     category: "Guías de Excursiones",
     image: "/images/tours/hakone-pirate-ship-ashi.webp",
   },
+  {
+    slug: "nikko-con-guia-vs-solo",
+    title: "Nikko desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real",
+    description:
+      "Nikko en un día: unos ¥12,000 por tu cuenta en transporte público vs ¥80,000 con guía privado. Un guía con licencia compara coste, idioma y qué se ve en cada opción.",
+    date: "20 de abril de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/blog/nikko-toshogu-hero.webp",
+  },
   // Planifica tu Viaje
   {
     slug: "itinerario-tokio-3-dias",
