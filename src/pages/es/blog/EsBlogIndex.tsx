@@ -137,6 +137,26 @@ const blogPosts: BlogPost[] = [
     category: "Guías de Excursiones",
     image: "/images/blog/nikko-toshogu-hero.webp",
   },
+  {
+    slug: "kamakura-con-guia-vs-solo",
+    title: "Kamakura desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real",
+    description:
+      "Kamakura en un día: unos ¥4,000 por tu cuenta vs ¥70,000 con guía privado. Un guía con licencia compara los templos que casi nadie visita y cuándo compensa realmente ir con guía.",
+    date: "20 de abril de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/kamakura-great-buddha.webp",
+  },
+  {
+    slug: "guia-licencia-oficial-japon",
+    title: "Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa",
+    description:
+      "En Japón existe un examen nacional para guías turísticos. Qué diferencia a un guía con licencia de uno sin ella, y por qué debería importarte.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/tour-photo-1.webp",
+  },
   // Planifica tu Viaje
   {
     slug: "itinerario-tokio-3-dias",

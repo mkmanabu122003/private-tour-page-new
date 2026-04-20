@@ -46,6 +46,8 @@ import TokyoWithKidsFamilyTour from "./pages/blog/TokyoWithKidsFamilyTour";
 import WhatToExpectPrivateTour from "./pages/blog/WhatToExpectPrivateTour";
 import HakoneDayTripGuideVsSolo from "./pages/blog/HakoneDayTripGuideVsSolo";
 import NikkoDayTripGuideVsSolo from "./pages/blog/NikkoDayTripGuideVsSolo";
+import KamakuraDayTripGuideVsSolo from "./pages/blog/KamakuraDayTripGuideVsSolo";
+import LicensedVsUnlicensedTourGuidesJapan from "./pages/blog/LicensedVsUnlicensedTourGuidesJapan";
 import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
 import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
@@ -102,6 +104,7 @@ import EsTesorosOcultosTokio from "./pages/es/blog/EsTesorosOcultosTokio";
 import EsRutaGastronomicaTsukijiGinza from "./pages/es/blog/EsRutaGastronomicaTsukijiGinza";
 import EsExcursionHakoneDesdeTokio from "./pages/es/blog/EsExcursionHakoneDesdeTokio";
 import EsNikkoConGuiaVsSolo from "./pages/es/blog/EsNikkoConGuiaVsSolo";
+import EsKamakuraConGuiaVsSolo from "./pages/es/blog/EsKamakuraConGuiaVsSolo";
 import EsTsukijiVsToyosu from "./pages/es/blog/EsTsukijiVsToyosu";
 import EsSensojiTemploMasVisitado from "./pages/es/blog/EsSensojiTemploMasVisitado";
 import EsTokioConNinosTourFamiliar from "./pages/es/blog/EsTokioConNinosTourFamiliar";
@@ -166,6 +169,8 @@ const AppRoutes = () => (
         <Route path="/blog/what-to-expect-private-tour-tokyo" element={<WhatToExpectPrivateTour />} />
         <Route path="/blog/hakone-day-trip-guide-vs-solo" element={<HakoneDayTripGuideVsSolo />} />
         <Route path="/blog/nikko-day-trip-guide-vs-solo" element={<NikkoDayTripGuideVsSolo />} />
+        <Route path="/blog/kamakura-day-trip-guide-vs-solo" element={<KamakuraDayTripGuideVsSolo />} />
+        <Route path="/blog/licensed-vs-unlicensed-tour-guides-japan" element={<LicensedVsUnlicensedTourGuidesJapan />} />
         <Route path="/blog/tsukiji-to-ginza-food-walk" element={<TsukijiToGinzaFoodWalk />} />
         <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
         <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
@@ -223,6 +228,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/ruta-gastronomica-tsukiji-ginza" element={<EsRutaGastronomicaTsukijiGinza />} />
         <Route path="/es/blog/excursion-hakone-desde-tokio" element={<EsExcursionHakoneDesdeTokio />} />
         <Route path="/es/blog/nikko-con-guia-vs-solo" element={<EsNikkoConGuiaVsSolo />} />
+        <Route path="/es/blog/kamakura-con-guia-vs-solo" element={<EsKamakuraConGuiaVsSolo />} />
         <Route path="/es/blog/tsukiji-vs-toyosu" element={<EsTsukijiVsToyosu />} />
         <Route path="/es/blog/sensoji-templo-mas-visitado" element={<EsSensojiTemploMasVisitado />} />
         <Route path="/es/blog/tokio-con-ninos-tour-familiar" element={<EsTokioConNinosTourFamiliar />} />

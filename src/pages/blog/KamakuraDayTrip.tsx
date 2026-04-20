@@ -163,6 +163,13 @@ const KamakuraDayTrip = () => {
               <Link to="/blog/nikko-day-trip-from-tokyo" className="text-accent hover:underline">Nikko</Link>{" "}
               day trips from Tokyo.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you're specifically weighing whether a guided tour is worth the extra spend vs going solo — including the hydrangea season logistics at Hasedera that catch most solo visitors off guard — I wrote a dedicated comparison:{" "}
+              <Link to="/blog/kamakura-day-trip-guide-vs-solo" className="text-accent hover:underline font-medium">
+                Kamakura Day Trip 2026: Guided Tour vs Going Solo
+              </Link>
+              .
+            </p>
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">

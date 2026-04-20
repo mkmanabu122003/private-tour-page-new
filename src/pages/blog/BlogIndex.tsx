@@ -333,6 +333,26 @@ const blogPosts: BlogPost[] = [
     category: "Day Trip Guides",
     image: "/images/blog/nikko-toshogu-hero.webp",
   },
+  {
+    slug: "kamakura-day-trip-guide-vs-solo",
+    title: "Kamakura Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)",
+    description:
+      "Kamakura from Tokyo: around ¥4,000 solo vs ¥70,000 guided. A licensed guide compares the temples most visitors miss, hydrangea season logistics, and when guided actually pays off.",
+    date: "April 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trip Guides",
+    image: "/images/tours/kamakura-great-buddha.webp",
+  },
+  {
+    slug: "licensed-vs-unlicensed-tour-guides-japan",
+    title: "Licensed vs Unlicensed Tour Guides in Japan: The One Thing Most Travelers Don't Know (2026)",
+    description:
+      "Japan has a national exam for tour guides. Since 2018 the license is no longer legally required — but the difference between licensed and unlicensed is larger than most travelers realize.",
+    date: "April 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Helpful Guides",
+    image: "/images/tour-photos/tour-photo-1.webp",
+  },
   // New Planning
   {
     slug: "tokyo-with-kids-family-tour",

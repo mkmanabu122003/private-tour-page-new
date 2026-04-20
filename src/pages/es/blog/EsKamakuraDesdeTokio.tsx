@@ -198,6 +198,14 @@ const EsKamakuraDesdeTokio = () => {
               Voy a ser directo: la mayoría de los restaurantes en la parte más concurrida de Komachi-dori cobran de más y sirven de menos. Los establecimientos con fotos enormes del menú en la entrada y personal invitándote a pasar son los que más debes evitar. El shirasu-don en estos sitios suele ser más pequeño, menos fresco y más caro que en los restaurantes locales cerca de la playa. Las excepciones son las tiendas de comida callejera para llevar: algunos mochi artesanales, el helado de matcha de ciertas tiendas específicas y los senbei (galletas de arroz) recién hechos sí merecen la parada.
             </p>
 
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Si estás sopesando concretamente si compensa ir con guía o por tu cuenta —incluida la logística de la temporada de hortensias en Hasedera en junio, donde se les escapa a la mayoría de viajeros independientes—, escribí una comparativa dedicada:{" "}
+              <Link to="/es/blog/kamakura-con-guia-vs-solo" className="text-accent hover:underline font-medium">
+                Kamakura desde Tokio 2026: ¿Con Guía o por tu Cuenta?
+              </Link>
+              .
+            </p>
+
             {/* Los errores que veo en mis clientes */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Los errores que veo en mis clientes
