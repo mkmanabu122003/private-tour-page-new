@@ -290,6 +290,13 @@ const EsValeLaPenaGuia = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Hasta 2018, solo los guías con licencia podían ofrecer legalmente servicios de guía remunerados en Japón. La ley se modificó para permitir que guías sin licencia también operaran, pero la licencia sigue siendo el único estándar de calidad reconocido a nivel nacional. Cuando contratas a un guía con licencia, estás contratando a alguien que ha superado exámenes gubernamentales rigurosos. Cuando contratas a un guía sin licencia, la calidad puede variar enormemente, desde locales apasionados con conocimientos profundos hasta personas que empezaron a hacer de guía la semana pasada.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para el desglose completo de qué cubre la licencia, qué cambió con la reforma de 2018 y cómo verificar las credenciales de un guía, he preparado un artículo dedicado:{" "}
+              <Link to="/es/blog/guia-licencia-oficial-japon" className="text-accent hover:underline font-medium">
+                Guía con licencia oficial en Japón: qué significa y por qué importa
+              </Link>
+              .
+            </p>
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Diferencias Prácticas que Notarás
             </h3>

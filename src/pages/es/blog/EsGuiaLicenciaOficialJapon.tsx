@@ -13,7 +13,9 @@ const EsGuiaLicenciaOficialJapon = () => {
         description="En Japón existe un examen nacional para guías turísticos. Qué diferencia a un guía con licencia de uno sin ella, y por qué debería importarte."
         canonicalPath="/es/blog/guia-licencia-oficial-japon"
         hreflang={[
+          { lang: "en", path: "/blog/licensed-vs-unlicensed-tour-guides-japan" },
           { lang: "es", path: "/es/blog/guia-licencia-oficial-japon" },
+          { lang: "x-default", path: "/blog/licensed-vs-unlicensed-tour-guides-japan" },
         ]}
       />
 
@@ -77,7 +79,7 @@ const EsGuiaLicenciaOficialJapon = () => {
               ¿Qué es la licencia de guía oficial en Japón?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La licencia se llama formalmente Tsūyaku Annai-shi (通訳案内士), que se traduce literalmente como "intérprete-guía registrado". Es la única credencial nacional reconocida por el gobierno japonés para guías turísticos, y hasta 2018 era legalmente obligatoria para cualquier persona que quisiera guiar a visitantes extranjeros a cambio de una remuneración.
+              La licencia se llama formalmente <strong className="text-foreground">全国通訳案内士 (Zenkoku Tsūyaku Annai-shi)</strong> — "guía-intérprete nacional" —, denominación adoptada con la reforma legal de enero de 2018 (antes era simplemente Tsūyaku Annai-shi, 通訳案内士). Es la única credencial nacional reconocida por el gobierno japonés para guías turísticos, y hasta esa reforma era legalmente obligatoria para cualquier persona que quisiera guiar a visitantes extranjeros a cambio de una remuneración.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
@@ -94,14 +96,14 @@ const EsGuiaLicenciaOficialJapon = () => {
               Qué se necesita para aprobar (datos reales)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Históricamente, la tasa de aprobación del examen ha rondado entre el 10% y el 20%, dependiendo del idioma. En algunos años y para ciertos idiomas, ha caído por debajo del 10%. La preparación seria requiere entre uno y tres años de estudio dedicado. No es algo que se aprueba "de pasada". La mayoría de los candidatos son japoneses con excelente dominio de idiomas extranjeros, extranjeros con años de residencia en Japón, o ambos. Muchos se presentan varias veces antes de aprobar.
+              La tasa de aprobación reciente ronda el <strong className="text-foreground">10%</strong> a nivel global: según los datos oficiales de la JNTO para el examen de 2024, la tasa general fue del 10,0%, con un 12,1% para español y cerca del 10% para inglés. En otros idiomas ha caído por debajo del 10%. La preparación seria requiere entre uno y tres años de estudio dedicado. No es algo que se aprueba "de pasada". La mayoría de los candidatos son japoneses con excelente dominio de idiomas extranjeros, extranjeros con años de residencia en Japón, o ambos. Muchos se presentan varias veces antes de aprobar.
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Cuántos guías con licencia hay en Japón
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              A fecha de los últimos datos disponibles, hay aproximadamente 26.000 guías con licencia registrados en todo Japón. Pero esa cifra es engañosa: la gran mayoría están registrados para inglés. Para español, el número es significativamente menor, estamos hablando de unos pocos cientos en todo el país. Si buscas específicamente un <strong className="text-foreground">guía con licencia oficial en Japón</strong> que hable español, las opciones son genuinamente limitadas. Esto no es marketing, es la realidad del mercado.
+              Según los datos oficiales del Ministerio de Turismo de Japón (Kankōchō), a 1 de abril de 2025 había <strong className="text-foreground">27.950 guías con licencia</strong> registrados en total en todo Japón (contando registros por idioma, una persona puede aparecer en más de un idioma). Pero esa cifra es engañosa: la gran mayoría están registrados para inglés. Para español, el número es significativamente menor, estamos hablando de unos pocos cientos en todo el país. Si buscas específicamente un <strong className="text-foreground">guía con licencia oficial en Japón</strong> que hable español, las opciones son genuinamente limitadas. Esto no es marketing, es la realidad del mercado.
             </p>
 
             {/* Licencia vs sin licencia */}
@@ -266,7 +268,7 @@ const EsGuiaLicenciaOficialJapon = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Por supuesto. Japón es uno de los países más fáciles y seguros para viajar de forma independiente. El transporte público es excelente, la señalización incluye cada vez más idiomas, y la gente es extraordinariamente amable. Un guía no es una necesidad, es una elección que enriquece la experiencia. La pregunta no es si puedes viajar sin guía, sino si quieres entender Japón a un nivel más profundo del que una audioguía o una aplicación pueden ofrecer. Si la respuesta es sí, entonces un{" "}
-                  <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">
+                  <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">
                     guía con licencia oficial en Japón marca la diferencia
                   </Link>
                   .

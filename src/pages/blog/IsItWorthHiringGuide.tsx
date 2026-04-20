@@ -360,7 +360,11 @@ const IsItWorthHiringGuide = () => {
                 <Link to="/about" className="text-accent hover:underline">
                   licensed guide
                 </Link>{" "}
-                has passed rigorous examinations and is registered with the Japan Tourism Agency. This is the single most reliable quality indicator.
+                has passed rigorous examinations and is registered with the Japan Tourism Agency. This is the single most reliable quality indicator. For the full breakdown of what the license covers, what changed in 2018, and how to verify a guide's credentials, see{" "}
+                <Link to="/blog/licensed-vs-unlicensed-tour-guides-japan" className="text-accent hover:underline font-medium">
+                  Licensed vs Unlicensed Tour Guides in Japan
+                </Link>
+                .
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Verify their credentials.</strong> Every licensed guide is issued a registration card by their prefectural government, including their name, registration number, languages, and issuing prefecture. A legitimate guide will have no problem providing this. You can also search the Japan Guide Association (JGA) or Japan Federation of Certified Guides (JFCG) directories for member listings.
