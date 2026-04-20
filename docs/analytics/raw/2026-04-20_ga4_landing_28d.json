@@ -1,0 +1,453 @@
+{
+  "dimensionHeaders": [
+    {
+      "name": "landingPage"
+    }
+  ],
+  "metricHeaders": [
+    {
+      "name": "sessions",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "engagedSessions",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "conversions",
+      "type": "TYPE_FLOAT"
+    },
+    {
+      "name": "averageSessionDuration",
+      "type": "TYPE_SECONDS"
+    }
+  ],
+  "rows": [
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/japan-rail-pass-worth-it"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "102"
+        },
+        {
+          "value": "35"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "81.620209568627459"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/kamakura-vs-hakone-vs-nikko-day-trip"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "97"
+        },
+        {
+          "value": "53"
+        },
+        {
+          "value": "28"
+        },
+        {
+          "value": "243.81800739175259"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "66"
+        },
+        {
+          "value": "30"
+        },
+        {
+          "value": "61"
+        },
+        {
+          "value": "92.77483839393939"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tsukiji-market-guide"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "59"
+        },
+        {
+          "value": "16"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "58.277885711864407"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "(not set)"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "31"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "7.9386905806451606"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tsukiji-guide-food-lover"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "18"
+        },
+        {
+          "value": "4"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "25.328510333333334"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "17"
+        },
+        {
+          "value": "8"
+        },
+        {
+          "value": "16"
+        },
+        {
+          "value": "234.66103311764704"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/japan-temple-shrine-etiquette"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "17"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "80.509642647058826"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/guia-shibuya-harajuku"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "17"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "100.57526970588235"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/itinerario-tokio-5-dias"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "12"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "381.219605"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/guia-asakusa"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "11"
+        },
+        {
+          "value": "4"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "63.36125581818181"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/monte-fuji-se-ve-desde-tokio"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "11"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "122.15609254545456"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/comparativa-excursiones"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "10"
+        },
+        {
+          "value": "5"
+        },
+        {
+          "value": "4"
+        },
+        {
+          "value": "266.26303620000004"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tokyo-3-day-itinerary"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "5"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "223.077456"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/guia-tsukiji"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "7"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "309.24494533333331"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/asakusa-guide-what-to-see"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "8"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "0.67350025"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/hakone-day-trip-guide-vs-solo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "8"
+        },
+        {
+          "value": "6"
+        },
+        {
+          "value": "2"
+        },
+        {
+          "value": "188.05563625"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/japan-rail-pass-vale-la-pena"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "6"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "248.47110333333333"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/asakusa-guide"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "5"
+        },
+        {
+          "value": "1"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "57.308078"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/old-tokyo-shitamachi"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "5"
+        },
+        {
+          "value": "3"
+        },
+        {
+          "value": "0"
+        },
+        {
+          "value": "228.854984"
+        }
+      ]
+    }
+  ],
+  "rowCount": 74,
+  "metadata": {
+    "currencyCode": "JPY",
+    "timeZone": "Asia/Tokyo"
+  },
+  "kind": "analyticsData#runReport"
+}
