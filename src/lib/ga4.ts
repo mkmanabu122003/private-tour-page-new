@@ -61,6 +61,23 @@ export function trackBlogToTourClick(destinationTour: string) {
   });
 }
 
+// Fires blog_to_tour_click for any in-body `<a href="/tours/...">` click
+// from a `/blog/` page. Covers 170+ inline links that were untracked.
+export function installBlogToTourClickDelegate() {
+  if (typeof document === "undefined") return;
+  document.addEventListener("click", (e) => {
+    const anchor = (e.target as HTMLElement | null)?.closest?.("a");
+    if (!anchor) return;
+    const href = anchor.getAttribute("href");
+    if (!href || !/^\/(es\/)?tours(\/|$)/.test(href)) return;
+    if (!/\/blog\//.test(window.location.pathname)) return;
+    gtag("event", "blog_to_tour_click", {
+      source_blog: window.location.pathname,
+      destination_tour: href,
+    });
+  });
+}
+
 export function trackDiagnosticStart(toolId: string) {
   gtag("event", "diagnostic_start", {
     tool_id: toolId,

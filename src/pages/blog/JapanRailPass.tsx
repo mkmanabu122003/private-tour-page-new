@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { QuickAnswer } from "@/components/blog/QuickAnswer";
 
 const JapanRailPass = () => {
   return (
@@ -58,6 +59,10 @@ const JapanRailPass = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            <QuickAnswer
+              answer="JR Pass prices have not changed in 2026 — the last increase was October 2023 (+70%, to ¥50,000 for a 7-day Ordinary pass). No 2026 hike is scheduled as of April 2026."
+              hook="But here's what matters more than the price itself: after the 2023 hike, the Pass only saves money on specific itineraries. I ran the numbers for the 12 most common routes below — and 7 of them now lose you money compared to buying individual Shinkansen tickets."
+            />
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "Should I get the Japan Rail Pass?" is the second most common question I get from clients, right after "when should I visit?" And unlike the timing question, this one has a definitive mathematical answer, if you're willing to sit down with the actual numbers.
             </p>

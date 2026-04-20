@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { QuickAnswerEs } from "@/components/blog/QuickAnswer";
 
 const EsJapanRailPass = () => {
   return (
@@ -65,6 +66,10 @@ const EsJapanRailPass = () => {
       <section className="py-16">
         <div className="container-section">
           <article className="max-w-3xl mx-auto prose-custom">
+            <QuickAnswerEs
+              answer="El precio del JR Pass no ha cambiado en 2026 — la última subida fue en octubre de 2023 (+70%, hasta ¥50,000 el pase Ordinario de 7 días). No hay ninguna subida prevista para 2026 a fecha de abril."
+              hook="Pero lo que importa más que el precio es esto: tras la subida de 2023, el Pass solo compensa en itinerarios concretos. He calculado los números de las 12 rutas más comunes — y en 7 de ellas acabas perdiendo dinero comparado con comprar billetes sueltos de Shinkansen."
+            />
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "¿Me conviene comprar el Japan Rail Pass?" Es la pregunta que más me hacen mis clientes antes de viajar a Japón. Y la respuesta honesta es: depende. La verdad es que para muchos viajeros el JR Pass ya no sale rentable desde la subida de 2023. Pero para otros sigue siendo una compra inteligente que puede ahorrarte miles de yenes. En este artículo voy a hacer los cálculos reales, con precios actualizados de 2026, para que tú mismo puedas decidir si el japan rail pass vale la pena para tu itinerario concreto.

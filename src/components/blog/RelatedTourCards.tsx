@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
-import { trackBookNowClick, trackBlogToTourClick } from "@/lib/ga4";
+import { trackBookNowClick } from "@/lib/ga4";
 
 interface TourInfo {
   id: string;
@@ -246,7 +246,6 @@ export const RelatedTourCards = ({
                     to={tour.link}
                     data-cta="blog-tour-card"
                     className="block text-center mt-2 text-sm text-accent hover:underline"
-                    onClick={() => trackBlogToTourClick(tour.link)}
                   >
                     {labels.viewDetails}
                   </Link>
