@@ -1,0 +1,123 @@
+name: Production Smoke Test
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Netlify deploy
+        run: sleep 90
+
+      - name: Smoke test critical endpoints
+        env:
+          SITE: https://tanuki-tabi-travel.com
+        run: |
+          set -euo pipefail
+
+          fail=0
+
+          # Fetch headers with retry (handles transient network flakes).
+          fetch_headers() {
+            local url="$1"
+            for i in 1 2 3; do
+              if out=$(curl -sI --max-time 15 "$url"); then
+                echo "$out"
+                return 0
+              fi
+              sleep 5
+            done
+            return 1
+          }
+
+          # Extract the HTTP status code from a headers blob.
+          status_of() { echo "$1" | awk 'NR==1 {print $2}' | tr -d '\r'; }
+
+          # Extract the Location header (case-insensitive).
+          location_of() {
+            echo "$1" | awk -F': ' 'tolower($1)=="location" {print $2}' | tr -d '\r\n '
+          }
+
+          # Assert a path returns 200. Also fails if it self-redirects.
+          check_200() {
+            local path="$1"
+            local headers status location
+            headers=$(fetch_headers "$SITE$path") || { echo "FAIL: $path unreachable"; fail=1; return; }
+            status=$(status_of "$headers")
+            if [ "$status" != "200" ]; then
+              echo "FAIL: $path → $status (expected 200)"
+              fail=1
+              return
+            fi
+            echo "OK:   $path → 200"
+          }
+
+          # Assert a path returns 301 AND does not self-redirect.
+          check_301_no_loop() {
+            local path="$1"
+            local headers status location
+            headers=$(fetch_headers "$SITE$path") || { echo "FAIL: $path unreachable"; fail=1; return; }
+            status=$(status_of "$headers")
+            location=$(location_of "$headers")
+            if [ "$status" != "301" ]; then
+              echo "FAIL: $path → $status (expected 301)"
+              fail=1
+              return
+            fi
+            # Netlify returns absolute URLs; normalize to path for comparison.
+            local loc_path="${location#https://tanuki-tabi-travel.com}"
+            loc_path="${loc_path%%\?*}"
+            if [ "$loc_path" = "$path" ]; then
+              echo "FAIL: $path self-redirects to itself (loop) → $location"
+              fail=1
+              return
+            fi
+            echo "OK:   $path → 301 → $location"
+          }
+
+          echo "=== 200 checks (critical pages) ==="
+          check_200 "/"
+          check_200 "/about"
+          check_200 "/blog"
+          check_200 "/tours"
+          check_200 "/contact"
+          check_200 "/faq"
+          check_200 "/es"
+          check_200 "/es/blog"
+
+          echo ""
+          echo "=== 301 checks (trailing slash, must not self-loop) ==="
+          check_301_no_loop "/about/"
+          check_301_no_loop "/blog/"
+          check_301_no_loop "/es/about/"
+          check_301_no_loop "/es/blog/que-comer-en-japon/"
+
+          echo ""
+          echo "=== Asset checks (CSS/JS referenced by index.html) ==="
+          html=$(curl -s --max-time 15 "$SITE/")
+          js_asset=$(echo "$html" | grep -oE '/assets/index-[A-Za-z0-9_-]+\.js' | head -1)
+          css_asset=$(echo "$html" | grep -oE '/assets/index-[A-Za-z0-9_-]+\.css' | head -1)
+
+          if [ -z "$js_asset" ]; then
+            echo "FAIL: could not find JS asset in index.html (deploy may be broken)"
+            fail=1
+          else
+            check_200 "$js_asset"
+          fi
+
+          if [ -z "$css_asset" ]; then
+            echo "FAIL: could not find CSS asset in index.html"
+            fail=1
+          else
+            check_200 "$css_asset"
+          fi
+
+          echo ""
+          if [ "$fail" -ne 0 ]; then
+            echo "✗ Smoke tests FAILED"
+            exit 1
+          fi
+          echo "✓ All smoke tests passed"
