@@ -3,6 +3,7 @@
 // https://docs.netlify.com/functions/trigger-on-events/
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 const FROM_EMAIL = "Manabu | Tanuki Tabi Travel <info@tanuki-tabi-travel.com>";
 const MANABU_EMAIL = "info@tanuki-tabi-travel.com";
 
@@ -209,6 +210,63 @@ async function sendEmail(payload) {
   return res.json();
 }
 
+function buildSlackMessage(data, isSpanish) {
+  const { name, email, tourType, date, groupSize, message } = data;
+  const tour = tourInfo[tourType];
+  const lang = isSpanish ? "ES" : "EN";
+  const tourLabel = tour ? tour.name : tourType || "Not specified";
+
+  const headerText = `:jp: New Booking Inquiry (${lang}) — ${name || "Unknown"}`;
+
+  return {
+    text: headerText,
+    blocks: [
+      {
+        type: "header",
+        text: { type: "plain_text", text: headerText, emoji: true },
+      },
+      {
+        type: "section",
+        fields: [
+          { type: "mrkdwn", text: `*Name:*\n${name || "-"}` },
+          { type: "mrkdwn", text: `*Email:*\n<mailto:${email}|${email}>` },
+          { type: "mrkdwn", text: `*Tour:*\n${tourLabel}` },
+          { type: "mrkdwn", text: `*Date:*\n${date || "-"}` },
+          { type: "mrkdwn", text: `*Group:*\n${groupSize || "-"}` },
+          { type: "mrkdwn", text: `*Language:*\n${lang}` },
+        ],
+      },
+      {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `*Message:*\n>${(message || "-").replace(/\n/g, "\n>")}`,
+        },
+      },
+    ],
+  };
+}
+
+async function postToSlack(data, isSpanish) {
+  if (!SLACK_WEBHOOK_URL) {
+    console.log("SLACK_WEBHOOK_URL not set — skipping Slack notification");
+    return { skipped: true };
+  }
+
+  const res = await fetch(SLACK_WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(buildSlackMessage(data, isSpanish)),
+  });
+
+  if (!res.ok) {
+    const error = await res.text();
+    throw new Error("Slack webhook error: " + res.status + " " + error);
+  }
+
+  return { ok: true };
+}
+
 // Netlify event-triggered function — must use exports.handler
 exports.handler = async function (event, context) {
   var body = JSON.parse(event.body);
@@ -238,10 +296,15 @@ exports.handler = async function (event, context) {
     var results = await Promise.all([
       sendEmail(customerEmail),
       sendEmail(buildNotificationEmail(data)),
+      postToSlack(data, isSpanish).catch(function (err) {
+        console.error("Slack notification failed (non-fatal):", err.message);
+        return { error: err.message };
+      }),
     ]);
 
     console.log("Auto-reply sent to:", data.email);
     console.log("Notification sent to:", MANABU_EMAIL);
+    console.log("Slack result:", JSON.stringify(results[2]));
 
     return {
       statusCode: 200,
