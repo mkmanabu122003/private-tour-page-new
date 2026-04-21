@@ -163,32 +163,11 @@ function buildCustomerEmailEs(data) {
   };
 }
 
-function buildNotificationEmail(data) {
-  const { name, email, tourType, date, groupSize, message } = data;
-  const tour = tourInfo[tourType];
-
+function buildAdminCopy(customerEmail, guestEmail) {
   return {
-    from: FROM_EMAIL,
+    ...customerEmail,
     to: MANABU_EMAIL,
-    subject: `New inquiry: ${name || "Unknown"} - ${tour ? tour.name : tourType || "General"}${date ? " (" + date + ")" : ""}`,
-    html: `
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"></head>
-<body style="font-family: monospace; padding: 20px; font-size: 14px;">
-  <h2 style="margin: 0 0 16px;">New Booking Inquiry</h2>
-  <table style="border-collapse: collapse;">
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Name:</td><td>${name || "Not provided"}</td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Email:</td><td><a href="mailto:${email}">${email}</a></td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Tour:</td><td>${tour ? tour.name : tourType || "Not specified"}</td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Date:</td><td>${date || "Not specified"}</td></tr>
-    <tr><td style="padding: 4px 12px 4px 0; font-weight: bold;">Group:</td><td>${groupSize || "Not specified"}</td></tr>
-  </table>
-  <h3 style="margin: 20px 0 8px;">Message:</h3>
-  <div style="background: #f5f5f5; padding: 12px; border-radius: 4px; white-space: pre-wrap;">${message || "No message"}</div>
-  <p style="margin-top: 16px; color: #888;">Auto-reply has been sent to ${email}.</p>
-</body>
-</html>`,
+    reply_to: guestEmail,
   };
 }
 
@@ -295,7 +274,7 @@ exports.handler = async function (event, context) {
 
     var results = await Promise.all([
       sendEmail(customerEmail),
-      sendEmail(buildNotificationEmail(data)),
+      sendEmail(buildAdminCopy(customerEmail, data.email)),
       postToSlack(data, isSpanish).catch(function (err) {
         console.error("Slack notification failed (non-fatal):", err.message);
         return { error: err.message };
@@ -303,7 +282,7 @@ exports.handler = async function (event, context) {
     ]);
 
     console.log("Auto-reply sent to:", data.email);
-    console.log("Notification sent to:", MANABU_EMAIL);
+    console.log("Admin copy sent to:", MANABU_EMAIL, "(reply-to:", data.email + ")");
     console.log("Slack result:", JSON.stringify(results[2]));
 
     return {
