@@ -648,6 +648,12 @@ const ShinjukuGuide = () => {
               </Link>
               , I recommend saving Shinjuku for the evening of Day 3 or later, after you've already seen old Tokyo in Asakusa and Yanaka. The contrast makes Shinjuku's modern energy far more striking.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Trying to decide between Shinjuku, Shibuya, and Harajuku for a limited itinerary? I break down how to allocate time across all three in{" "}
+              <Link to="/blog/harajuku-vs-shibuya-vs-shinjuku" className="text-accent hover:underline">
+                Harajuku vs Shibuya vs Shinjuku: Which Fits Your Trip
+              </Link>.
+            </p>
 
             {/* Station Survival Guide */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

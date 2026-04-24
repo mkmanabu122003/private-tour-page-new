@@ -52,6 +52,10 @@ import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
 import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
 import TsukijiVsToyosu from "./pages/blog/TsukijiVsToyosu";
+import MountFujiFromTokyo from "./pages/blog/MountFujiFromTokyo";
+import HarajukuVsShibuyaVsShinjuku from "./pages/blog/HarajukuVsShibuyaVsShinjuku";
+import NaritaVsHaneda from "./pages/blog/NaritaVsHaneda";
+import OnsenDayTripsBeyondHakone from "./pages/blog/OnsenDayTripsBeyondHakone";
 import CancellationPolicy from "./pages/CancellationPolicy";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
@@ -175,6 +179,10 @@ const AppRoutes = () => (
         <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
         <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
         <Route path="/blog/tsukiji-vs-toyosu" element={<TsukijiVsToyosu />} />
+        <Route path="/blog/mount-fuji-from-tokyo" element={<MountFujiFromTokyo />} />
+        <Route path="/blog/harajuku-vs-shibuya-vs-shinjuku" element={<HarajukuVsShibuyaVsShinjuku />} />
+        <Route path="/blog/narita-vs-haneda" element={<NaritaVsHaneda />} />
+        <Route path="/blog/onsen-day-trips-beyond-hakone" element={<OnsenDayTripsBeyondHakone />} />
         <Route path="/cancellation-policy" element={<CancellationPolicy />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />

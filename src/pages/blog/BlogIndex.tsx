@@ -35,6 +35,16 @@ const blogPosts: BlogPost[] = [
     category: "Tokyo Area Guides",
     image: "/images/blog/shinjuku-guide-hero.webp",
   },
+  {
+    slug: "harajuku-vs-shibuya-vs-shinjuku",
+    title: "Harajuku vs Shibuya vs Shinjuku: Which Tokyo Neighborhood Fits Your Trip?",
+    description:
+      "3 neighborhoods, 7 minutes apart. A licensed Tokyo guide compares Harajuku, Shibuya, and Shinjuku by vibe, time needed, and who each one is actually for.",
+    date: "April 23, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Tokyo Area Guides",
+    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
+  },
   // Day Trip Guides
   {
     slug: "kamakura-vs-hakone-vs-nikko-day-trip",
@@ -45,6 +55,16 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trip Guides",
     image: "/images/blog/hakone-fuji-comparison.webp",
+  },
+  {
+    slug: "onsen-day-trips-beyond-hakone",
+    title: "5 Onsen Day Trips from Tokyo (That Aren't Hakone): 2026 Guide",
+    description:
+      "Beyond Hakone: Kusatsu, Atami, Ikaho, Chichibu, and Tokyo's own onsen. A licensed guide compares access, cost, and tattoo policy for each.",
+    date: "April 24, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trip Guides",
+    image: "/images/tours/hakone-ropeway-owakudani.webp",
   },
   // Planning Your Trip
   {
@@ -76,6 +96,26 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
     image: "/images/tours/senso-ji-temple-tokyo.webp",
+  },
+  {
+    slug: "mount-fuji-from-tokyo",
+    title: "Can You See Mt. Fuji from Tokyo? A Guide's 2026 Answer",
+    description:
+      "Yes — 40-60% of winter days. A licensed Tokyo guide reveals 5 viewpoints that work in 2026, monthly visibility data, and the free spot currently closed.",
+    date: "April 23, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Planning Your Trip",
+    image: "/images/tours/hakone-pirate-ship-ashi.webp",
+  },
+  {
+    slug: "narita-vs-haneda",
+    title: "Narita vs Haneda: Which Tokyo Airport Is Better in 2026?",
+    description:
+      "Haneda is closer and cheaper to reach. Narita has more flights and LCCs. A licensed Tokyo guide compares both by cost, time, and arrival-day practicality.",
+    date: "April 24, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Planning Your Trip",
+    image: "/images/blog/shinkansen-n700-tokyo-station.webp",
   },
   // Tokyo Area Guides (new)
   {

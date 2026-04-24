@@ -13,7 +13,9 @@ const EsMonteFujiSeVeDesdeTokio = () => {
         description="Sí, se puede ver el Monte Fuji desde Tokio. Un guía local te dice los mejores puntos, las horas y la época del año para verlo con claridad."
         canonicalPath="/es/blog/monte-fuji-se-ve-desde-tokio"
         hreflang={[
+          { lang: "en", path: "/blog/mount-fuji-from-tokyo" },
           { lang: "es", path: "/es/blog/monte-fuji-se-ve-desde-tokio" },
+          { lang: "x-default", path: "/blog/mount-fuji-from-tokyo" },
         ]}
       />
 
@@ -129,11 +131,18 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
-              Bunkyo Civic Center (gratis y sin colas)
+              Shibuya Sky (el nuevo favorito, 360°)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Este es mi favorito. El mirador del piso 25 del Bunkyo Civic Center es completamente gratuito, casi nunca tiene cola y ofrece una vista panorámica de 360 grados de Tokio. Desde la terraza orientada al oeste, se ve el Monte Fuji desde Tokio con total claridad en un buen día. El edificio está junto a la estación de Korakuen, en la línea Marunouchi del metro, así que llegar es facilísimo. Mis invitados siempre se sorprenden de que un mirador así sea gratis y esté tan vacío. Es uno de los secretos mejor guardados de la ciudad.
+              En la azotea del Shibuya Scramble Square, a 229 metros, Shibuya Sky se ha convertido rápidamente en uno de mis miradores preferidos. El Fuji queda al oeste, así que las franjas de tarde lo dejan a contraluz — y en un día claro, la silueta dorada contra el horizonte de Tokio es difícil de superar. La entrada de adulto cuesta 3.000 yenes antes de las 15:00 y 3.700 yenes después. Un aviso importante: las franjas de puesta de sol se agotan en minutos, literalmente. Reserva con antelación en la web oficial, y si no encuentras hueco al atardecer, una franja a mediodía funciona igual de bien (mejor visibilidad, menos gente).
             </p>
+
+            <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-lg p-5 my-8">
+              <p className="font-semibold text-foreground mb-2">⚠️ No vayas en 2026: Bunkyo Civic Center</p>
+              <p className="text-foreground leading-relaxed text-sm">
+                Guías y blogs antiguos recomiendan el observatorio gratuito del piso 25 del Bunkyo Civic Center como el secreto mejor guardado de Tokio. <strong>No hagas el viaje en 2026.</strong> El Sky View Lounge está cerrado por obras desde el 1 de marzo de 2025 y no reabrirá hasta diciembre de 2026. Si ves esta recomendación sin fecha, la fuente está desactualizada.
+              </p>
+            </div>
 
             <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
               Puente de Odaiba al atardecer
@@ -226,7 +235,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               ¿Subir o solo verlo?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El Monte Fuji solo se puede escalar entre julio y septiembre. Desde 2024, existe un sistema de reservas obligatorio y una tasa de 2.000 yenes. La subida desde la Quinta Estación toma 5-7 horas. Pero fuera de temporada de escalada, las vistas son incluso mejores: la montaña nevada, sin multitudes, con la posibilidad de combinar miradores, onsen (aguas termales) con vista al Fuji y pueblos tradicionales como Oshino Hakkai. Para la mayoría de mis clientes, ver el Fuji de cerca sin subirlo es una experiencia igual de memorable.
+              El Monte Fuji solo se puede escalar entre julio y septiembre. Desde 2024 existe un sistema de reservas obligatorio, y en 2025 la tasa se duplicó a <strong>4.000 yenes</strong> y se extendió a las cuatro rutas oficiales (Yoshida, Subashiri, Gotemba y Fujinomiya). La ruta Yoshida tiene además un límite diario de 4.000 escaladores; la reserva se hace online en fujisan-climb.jp. Las puertas del sendero están abiertas de 3:00 a 14:00, y fuera de esas horas solo pueden acceder quienes tengan reserva de refugio. La subida desde la Quinta Estación toma 5-7 horas. Pero fuera de temporada de escalada, las vistas son incluso mejores: la montaña nevada, sin multitudes, con la posibilidad de combinar miradores, onsen (aguas termales) con vista al Fuji y pueblos tradicionales como Oshino Hakkai. Para la mayoría de mis clientes, ver el Fuji de cerca sin subirlo es una experiencia igual de memorable.
             </p>
 
             {/* Preguntas frecuentes */}
@@ -246,10 +255,10 @@ const EsMonteFujiSeVeDesdeTokio = () => {
 
               <div>
                 <h3 className="text-lg font-medium text-foreground mb-2">
-                  ¿Cuál es el mejor mirador gratuito?
+                  ¿Cuál es el mejor mirador gratuito en 2026?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  El Bunkyo Civic Center, sin duda. Su observatorio en el piso 25 es gratuito, tiene vistas panorámicas y casi nunca hay cola. Está junto a la estación de Korakuen, en la línea Marunouchi. Es el mirador que siempre recomiendo a mis invitados.
+                  En 2026, mi recomendación gratuita es el paseo marítimo de Odaiba al atardecer, junto al Rainbow Bridge. El Bunkyo Civic Center <em>solía</em> ser mi respuesta, pero su observatorio está cerrado por obras hasta diciembre de 2026. Si lees guías antiguas que lo recomiendan, sáltalo este año.
                 </p>
               </div>
 

@@ -238,6 +238,12 @@ const ShibuyaHarajukuGuide = () => {
               </Link>{" "}
               covers these neighborhoods in depth, from hidden backstreets to cultural context that transforms a simple walk into a real understanding of modern Tokyo.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Trying to decide whether to prioritize Shibuya, Harajuku, or add Shinjuku to the same day? I break down the time allocation and sequencing in{" "}
+              <Link to="/blog/harajuku-vs-shibuya-vs-shinjuku" className="text-accent hover:underline">
+                Harajuku vs Shibuya vs Shinjuku: Which Fits Your Trip
+              </Link>.
+            </p>
 
             {/* Where to Eat */}
             <h2 className="heading-section text-foreground mt-12 mb-6">

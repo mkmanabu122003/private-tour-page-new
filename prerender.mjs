@@ -64,6 +64,10 @@ const routes = [
   "/blog/first-time-tokyo-local-guide",
   "/blog/tokyo-cherry-blossom-guide",
   "/blog/tsukiji-vs-toyosu",
+  "/blog/mount-fuji-from-tokyo",
+  "/blog/harajuku-vs-shibuya-vs-shinjuku",
+  "/blog/narita-vs-haneda",
+  "/blog/onsen-day-trips-beyond-hakone",
   // Spanish pages
   "/es",
   "/es/tours",
