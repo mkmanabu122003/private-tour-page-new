@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
+import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
 import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
 
 const AsakusaGuideNew = () => {
@@ -60,6 +61,9 @@ const AsakusaGuideNew = () => {
                 March 7, 2026
               </span>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground italic">
+              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads tours in Asakusa almost every working day.
+            </p>
           </div>
         </div>
       </section>
@@ -75,6 +79,11 @@ const AsakusaGuideNew = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               This asakusa guide is the one I wish I could hand to every visitor before they step off the train. It covers what genuinely matters here, what you can safely skip, and how to time your visit so you experience the neighborhood at its absolute best. Whether you are planning your first trip to Tokyo or returning to dig deeper into the old city, this is everything I have learned from years on the ground.
             </p>
+
+            <GuideInsiderNote date="April 24, 2026">
+              <p>The cherry blossoms along the Sumida River wrapped up a couple of weeks ago, and right now is one of my favorite quiet moments in Asakusa. The riverbank has turned from pink to a wall of fresh green, the afternoon light is shifting from spring-soft to summer-bright, and the crowds have eased compared to peak bloom.</p>
+              <p>Two dates to plan around if you are visiting in the next few weeks. First, Golden Week (late April through early May) brings heavy domestic tourist crowds to Senso-ji. If your trip overlaps, stick to the 7am start I recommend below and avoid weekends. Second, Sanja Matsuri falls on May 15 to 17 this year. If you can arrange your trip around those three days, you will see Asakusa at its wildest and most alive. Sunday is the biggest day — the main portable shrines leave Asakusa Shrine at 6am and parade around Senso-ji all day.</p>
+            </GuideInsiderNote>
 
             {/* Section 1: Why I Always Start Tours at 7am */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -122,6 +131,9 @@ const AsakusaGuideNew = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The Fortune Slips (Omikuji).</strong> Drawing a fortune at Senso-ji is practically mandatory, and the experience is straightforward: drop a 100-yen coin in the box, shake the metal cylinder until a numbered stick falls out, then find the corresponding drawer and take your paper fortune. Here is what makes Senso-ji's fortunes unique: roughly 30% of them are "bad luck" (kyo), which is far higher than most temples in Japan. This is not a mistake or a tourist gimmick. This is how traditional fortune distribution was always calculated. Most other temples have quietly adjusted their ratios over the years to keep visitors happy, but Senso-ji maintains the authentic proportions. If you get a bad fortune, the tradition is to fold it and tie it to the metal rack near the fortune stand. You are literally leaving the bad luck at the temple rather than carrying it with you. If you get a good fortune, keep it in your wallet.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Nitenmon: The Side Gate Almost Nobody Uses.</strong> Most visitors never realize you do not have to enter Senso-ji through Kaminarimon and fight the crowds on Nakamise-dori. Nitenmon, on the east side of the main hall, is a side gate that drops you right next to the five-story pagoda without ever touching the shopping street. What makes it special is that this is one of the few genuine Edo-period survivors left at Senso-ji. The current gate dates from 1649, while most of what you see elsewhere here was reconstructed after WWII firebombing. The two guardian deities flanking Nitenmon are Jikokuten and Zochoten, Buddhist protectors of the east and south, and the name "Niten-mon" literally means "gate of the two deities." Walk up to the temple from the quieter residential streets east of the grounds, enter through Nitenmon, and you will sidestep the main tourist flow entirely while seeing something that is actually historically authentic.
+            </p>
 
             <InlineCTA message="Want to discover the stories behind Asakusa's temples?" href="/tours/asakusa" />
 
@@ -157,6 +169,12 @@ const AsakusaGuideNew = () => {
                 Old Tokyo and Shitamachi guide
               </Link>{" "}
               covers the broader story of Tokyo's historic downtown culture.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Denboin Garden: Asakusa's Secret Spring Garden.</strong> Most visitors have no idea this place exists. Denboin is an Edo-period garden belonging to the abbot's residence at Senso-ji, with a tranquil pond, carefully shaped pines, a tea house, and a picture-perfect view of the five-story pagoda reflected in the water. The catch: it only opens to the public for a limited window each year, typically mid-March to early May, with a small admission fee (around ¥300). When it is open, the contrast between the crowded Nakamise-dori just outside the walls and this quiet, almost secret garden is one of the most striking experiences in Tokyo. Check the Senso-ji website for current opening dates before planning your visit — the schedule shifts slightly year to year.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Kappabashi Kitchen Street.</strong> About a ten-minute walk west of Senso-ji lies Kappabashi-dori, also known as Kitchen Town. This 800-meter street is lined with around 170 specialty shops selling everything a professional kitchen could need: hand-forged Japanese knives, ceramic tableware, bamboo utensils, lacquerware, restaurant-quality cookware, and the incredibly realistic plastic food samples (shokuhin sampuru) that fill restaurant display windows across Japan. Even if you are not shopping for kitchen supplies, Kappabashi is fascinating to walk through. The knife shops alone justify the detour — Japanese kitchen knives are world-famous, and the craftsmen here can help you choose the right blade for your cooking style. Several shops offer knife engraving, which makes this a genuinely unique souvenir. Look for the giant chef's head statue at the south end of the street. You cannot miss it.
             </p>
 
             {/* Section 4: Where to Eat */}
@@ -212,6 +230,29 @@ const AsakusaGuideNew = () => {
               <strong className="text-foreground">Winter: Hatsumode at New Year.</strong> The first temple visit of the New Year (hatsumode) is one of Japan's most important traditions, and Senso-ji is one of the top destinations in Tokyo for it. In the first three days of January, the temple receives around 2.8 million visitors. Yes, it is crowded beyond anything you can imagine. The queue to reach the main hall can stretch all the way back to Kaminarimon. But the atmosphere is electric with hope and renewal. People come dressed in kimono, buy lucky charms (omamori) for the coming year, eat festival food from the dozens of temporary stalls, and pray for health, happiness, and prosperity. If you are in Tokyo over New Year, hatsumode at Senso-ji is an experience you will never forget. Just dress warmly and be prepared to move very slowly.
             </p>
 
+            {/* Section: Combine With */}
+            <h2 className="heading-section text-foreground mt-12 mb-6">
+              Combine Asakusa With
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Asakusa's location in eastern Tokyo makes it a natural anchor point for several other great destinations. A few combinations I recommend regularly:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Tokyo Skytree.</strong> A ten-minute walk across the Sumida River. The observation decks offer panoramic views of the entire city, and the Solamachi shopping complex at its base has excellent restaurants, a planetarium, and an aquarium. Walk there via the river promenade for the best approach.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Yanaka.</strong> About twenty to thirty minutes away via Ueno. Yanaka is one of Tokyo's best-preserved old neighborhoods, with narrow lanes, independent shops, temples, and a famous sunset stairway. It pairs beautifully with Asakusa for a full day of traditional, pre-war Tokyo. Our{" "}
+                <Link to="/tours/yanaka" className="text-accent hover:underline">
+                  Yanaka Walking Tour
+                </Link>{" "}
+                covers the best of this hidden neighborhood.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Ueno.</strong> Only about ten minutes by train from Asakusa. Ueno Park is home to several world-class museums (Tokyo National Museum, National Museum of Western Art), a zoo, temples, and the lively Ameyoko market street. A morning in Asakusa followed by an afternoon in Ueno makes an excellent full-day itinerary through Tokyo's historic east side.
+              </li>
+            </ul>
+
             {/* FAQ Section */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
               Frequently Asked Questions About Asakusa
@@ -259,6 +300,22 @@ const AsakusaGuideNew = () => {
                     guided tours
                   </Link>{" "}
                   are designed to give you exactly that.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-medium text-foreground mb-3">
+                  Weekday or weekend — does it matter?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  It matters a lot. Nakamise-dori on a Saturday afternoon can be several times more crowded than on a Tuesday morning. If you have any flexibility, visit on a Wednesday or Thursday, which tend to be the quietest days. If you can only come on a weekend, arrive as early as possible and start with the temple grounds before the shops open at 10am.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-medium text-foreground mb-3">
+                  Should I skip Asakusa if it is raining?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Do not skip it. Rainy days mean significantly fewer tourists, and Senso-ji takes on a moody, atmospheric beauty when it is wet. The stone pathways reflect the lanterns, the incense smoke hangs low in the humid air, and you often have the quieter corners of the temple grounds almost to yourself. The covered sections of Nakamise-dori and the nearby shotengai arcades keep you dry. If the rain gets heavy, duck into one of the traditional kissaten (old-style coffee shops) on the west side of the temple for a slow cup of hand-dripped coffee.
                 </p>
               </div>
             </div>
@@ -362,6 +419,22 @@ const AsakusaGuideNew = () => {
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "You can enjoy Asakusa independently, but a licensed local guide adds layers of context: the history behind specific carvings, introductions to artisans, real-time translation at food stalls, and stories that only come from years of working in the neighborhood.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Weekday or weekend — does it matter?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It matters a lot. Nakamise-dori on a Saturday afternoon can be several times more crowded than on a Tuesday morning. Wednesday and Thursday tend to be the quietest days. If you can only visit on a weekend, arrive before the shops open at 10am.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Should I skip Asakusa if it is raining?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Do not skip it. Rainy days mean significantly fewer tourists, and Senso-ji takes on a moody, atmospheric beauty when it is wet. Covered Nakamise-dori sections and nearby shotengai arcades keep you dry, and traditional kissaten (old-style coffee shops) on the west side of the temple are perfect for a heavy-rain break.",
                 },
               },
             ],

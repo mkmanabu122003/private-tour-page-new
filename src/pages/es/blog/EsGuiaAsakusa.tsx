@@ -14,9 +14,9 @@ const EsGuiaAsakusa = () => {
         description="Lista de un guía oficial de Tokio con los mejores planes en Asakusa — del Templo Senso-ji a callejones secretos. Qué ver, qué evitar y mejores horarios."
         canonicalPath="/es/blog/guia-asakusa"
         hreflang={[
-          { lang: "en", path: "/blog/asakusa-guide-what-to-see" },
+          { lang: "en", path: "/blog/asakusa-guide" },
           { lang: "es", path: "/es/blog/guia-asakusa" },
-          { lang: "x-default", path: "/blog/asakusa-guide-what-to-see" },
+          { lang: "x-default", path: "/blog/asakusa-guide" },
         ]}
       />
 

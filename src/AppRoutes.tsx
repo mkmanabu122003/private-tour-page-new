@@ -15,7 +15,6 @@ import BlogIndex from "./pages/blog/BlogIndex";
 import Tokyo3DayItinerary from "./pages/blog/Tokyo3DayItinerary";
 import IsItWorthHiringGuide from "./pages/blog/IsItWorthHiringGuide";
 import DayTripComparison from "./pages/blog/DayTripComparison";
-import AsakusaGuide from "./pages/blog/AsakusaGuide";
 import ShibuyaHarajukuGuide from "./pages/blog/ShibuyaHarajukuGuide";
 import ShinjukuGuide from "./pages/blog/ShinjukuGuide";
 import TsukijiGuide from "./pages/blog/TsukijiGuide";
@@ -142,7 +141,6 @@ const AppRoutes = () => (
         <Route path="/blog/tokyo-3-day-itinerary" element={<Tokyo3DayItinerary />} />
         <Route path="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" element={<IsItWorthHiringGuide />} />
         <Route path="/blog/kamakura-vs-hakone-vs-nikko-day-trip" element={<DayTripComparison />} />
-        <Route path="/blog/asakusa-guide-what-to-see" element={<AsakusaGuide />} />
         <Route path="/blog/shibuya-harajuku-guide" element={<ShibuyaHarajukuGuide />} />
         <Route path="/blog/shinjuku-guide" element={<ShinjukuGuide />} />
         <Route path="/blog/tsukiji-guide-food-lover" element={<TsukijiGuide />} />

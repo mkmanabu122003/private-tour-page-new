@@ -104,7 +104,7 @@ export const neighborhoodFinderConfig: DiagnosticConfig = {
       tourPath: "/tours/asakusa",
       tourLabel: "Walk Asakusa with me",
       readMoreLabel: "Read the full Asakusa guide",
-      readMorePath: "/blog/asakusa-guide-what-to-see",
+      readMorePath: "/blog/asakusa-guide",
       contactQuery: "asakusa",
     },
     yanaka: {

@@ -107,6 +107,13 @@
   status = 301
   force = true
 
+# Blog article consolidation: asakusa-guide-what-to-see → asakusa-guide
+[[redirects]]
+  from = "/blog/asakusa-guide-what-to-see"
+  to = "/blog/asakusa-guide"
+  status = 301
+  force = true
+
 # SPA catch-all (must be last)
 [[redirects]]
   from = "/*"
