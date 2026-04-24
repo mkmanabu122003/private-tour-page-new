@@ -1,0 +1,32 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "MOBILE"
+      ],
+      "clicks": 165,
+      "impressions": 16088,
+      "ctr": 0.010256091496767776,
+      "position": 5.2115862754848337
+    },
+    {
+      "keys": [
+        "DESKTOP"
+      ],
+      "clicks": 127,
+      "impressions": 117360,
+      "ctr": 0.0010821404226312203,
+      "position": 6.380316973415133
+    },
+    {
+      "keys": [
+        "TABLET"
+      ],
+      "clicks": 4,
+      "impressions": 245,
+      "ctr": 0.0163265306122449,
+      "position": 4.5306122448979593
+    }
+  ],
+  "responseAggregationType": "byProperty"
+}
