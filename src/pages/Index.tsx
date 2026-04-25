@@ -316,27 +316,43 @@ const Index = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="heading-section text-foreground">Tours in Photos</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
-              { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
-              { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
-              { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie with guests by the Sumida River near Asakusa with Asahi Beer Tower in the background", caption: "Exploring Asakusa with guests" },
-            ].map((photo) => (
-              <div key={photo.src} className="flex flex-col">
-                <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    width={600}
-                    height={450}
-                  />
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">{photo.caption}</p>
-              </div>
-            ))}
+
+          <div className="relative px-12">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[
+                  { src: "/images/tour-photos/sumida-river-group-selfie.webp", alt: "Manabu and tour guests pose for a selfie along the Sumida River in Tokyo", caption: "Riverside walk with guests" },
+                  { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
+                  { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
+                  { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
+                  { src: "/images/tour-photos/asakusa-guest-selfie.webp", alt: "Selfie with guests by the Sumida River near Asakusa with Asahi Beer Tower in the background", caption: "Exploring Asakusa with guests" },
+                ].map((photo) => (
+                  <CarouselItem key={photo.src} className="md:basis-1/2 lg:basis-1/3">
+                    <figure className="flex flex-col">
+                      <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                        <img
+                          src={photo.src}
+                          alt={photo.alt}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          width={600}
+                          height={450}
+                        />
+                      </div>
+                      <figcaption className="mt-2 text-sm text-muted-foreground">{photo.caption}</figcaption>
+                    </figure>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>

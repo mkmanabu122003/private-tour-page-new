@@ -199,18 +199,31 @@ const About = () => {
       {/* Guest Photo */}
       <section className="py-12">
         <div className="container-section">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             <figure>
               <img
                 src="/images/tour-photos/asakusa-guest-selfie.webp"
                 alt="Manabu with tour guests by the Sumida River in Asakusa"
-                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                className="w-full h-[300px] md:h-[360px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 With guests along the Sumida River in Asakusa — every tour is a new conversation
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/images/tour-photos/sumida-river-group-selfie.webp"
+                alt="Manabu and tour guests on a private walking tour along the Sumida River in Tokyo"
+                className="w-full h-[300px] md:h-[360px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={600}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                A multi-generational family group exploring the riverside on a private tour
               </figcaption>
             </figure>
           </div>
