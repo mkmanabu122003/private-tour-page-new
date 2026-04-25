@@ -442,6 +442,67 @@ const NaritaVsHaneda = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Which Tokyo airport is better for low-cost carriers (LCCs)?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Narita by a wide margin. Jetstar Japan, Peach, ZIPAIR, AirAsia, and Scoot all operate out of Narita Terminal 3. Haneda has limited LCC service.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I fly into Haneda and out of Narita?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. A popular combination is Haneda in (smooth arrival) and Narita out (cheaper LCC return). Airlines don't penalize mixed bookings — it's purely a matter of total flight cost.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the fastest way from Narita to central Tokyo in 2026?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Keisei Skyliner reaches Nippori in 36 minutes and Ueno in 41 minutes for ¥2,470, with departures every 20 minutes. From Nippori, Yamanote Line connects to all central stations within 25 minutes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the cheapest way from Haneda to Shinjuku?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Airport Limousine Bus at ¥1,400 one way, 45 minutes, every 20 minutes — delivering you directly to Shinjuku Station West Exit. Monorail to Hamamatsucho is ¥519 but requires a Yamanote Line transfer.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can I cut Japan immigration wait time from 48 minutes to under 5?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Use Visit Japan Web (vjw-lp.digital.go.jp) before your flight to complete immigration and customs declarations online. You'll get a QR code that routes you through an express lane processing in under 5 minutes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is Haneda Airport open 24 hours?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Terminal 3 (international) stays open 24 hours for transit passengers and arrivals. Most shops close around 22:00-23:00, but convenience stores and seating areas remain open. First Cabin Haneda in Terminal 1 offers capsule-hotel accommodation.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

@@ -349,6 +349,60 @@ const EsQueComerEnJapon = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            inLanguage: "es",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "¿Cuál es el plato japonés más popular?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Entre los japoneses, el curry japonés y el ramen compiten por el primer puesto. Para los viajeros, el ramen suele ser el que más impacta. El tonkatsu es el plato que más sonrisas genera en los tours.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuánto cuesta comer al día en Japón?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Un presupuesto cómodo es de 3.000-5.000 yenes al día (20-35 euros) en restaurantes locales y konbini. Desayuno konbini 300-500 yenes, almuerzo ramen 800-1.500 yenes, cena izakaya 1.500-3.000 yenes. Sushi omakase: 8.000-12.000 yenes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Puedo ser vegetariano en Japón?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sí, pero requiere planificación. La cocina japonesa usa dashi (caldo de bonito) en casi todo. En Tokio y Kioto hay restaurantes vegetarianos excelentes, templos sirven shojin ryori, y cada vez más restaurantes ofrecen opciones sin carne. Lleva una tarjeta en japonés con tus restricciones.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cómo pido comida en Japón sin hablar japonés?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Muchos restaurantes tienen máquinas expendedoras de tickets con fotos. Los restaurantes con carta suelen tener fotos o réplicas de plástico. Google Translate con cámara funciona bien con menús japoneses.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿La comida japonesa es picante?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "En general, no. La gastronomía japonesa se basa en el umami, sal, dulzura y acidez. El wasabi tiene un picor nasal momentáneo, y el shichimi togarashi añade calor suave. Comparada con la coreana, tailandesa o mexicana, es muy poco picante.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

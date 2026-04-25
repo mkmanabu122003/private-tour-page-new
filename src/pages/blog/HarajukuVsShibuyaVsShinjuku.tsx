@@ -455,6 +455,59 @@ const HarajukuVsShibuyaVsShinjuku = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Which Tokyo neighborhood should I stay in — Harajuku, Shibuya, or Shinjuku?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Shinjuku wins on convenience — Japan's busiest station with direct airport and Fuji access, and restaurants that stay open latest. Shibuya is a close second for nightlife access. Harajuku is too quiet after 8 PM to base a trip from.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I walk between Harajuku, Shibuya, and Shinjuku?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Partly. Harajuku to Shibuya via Cat Street is ~25 minutes and worth doing. Shinjuku to Harajuku on foot is ~25 minutes through Yoyogi Park. Most visitors take the Yamanote Line for the Shinjuku leg.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "When's the best time for Shibuya Crossing photos?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Friday or Saturday night, 7:00-10:00 PM for maximum crowd density and neon. Rainy nights are underrated. For safer daylight shots, weekday midday works; the second floor of Tsutaya Starbucks is the classic angle.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is Kabukicho safe at night?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Generally yes on main streets and in Golden Gai. Ignore touts offering to lead you to 'cheap' bars — that's the primary scam. Stick to places with visible English menus or published prices.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How much should I budget for Harajuku, Shibuya, and Shinjuku?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Harajuku: ¥2,000-3,000 for a crêpe, Takeshita browse, and Meiji Shrine. Shibuya with Shibuya Sky and a meal: ¥6,000-8,000. Shinjuku with Tocho (free), Shinjuku Gyoen (¥500), depachika lunch, and one Golden Gai bar: ¥4,000-6,000.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

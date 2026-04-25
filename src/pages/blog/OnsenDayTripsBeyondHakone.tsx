@@ -444,6 +444,59 @@ const OnsenDayTripsBeyondHakone = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Is any Japanese onsen fully tattoo-friendly?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No single onsen town is 100% tattoo-friendly, but policies are shifting yearly. Safest approach: book a ryokan with private in-room baths (kashikiri-buro). Ikaho, Atami, and newer Kusatsu ryokan increasingly accept tattooed guests.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I do an onsen trip in the morning and Tokyo sightseeing in the afternoon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For Tokyo city onsen (Thermae-Yu, Spa LaQua) — yes, easily. For Atami or Chichibu — yes but tight. For Hakone, Ikaho, or Kusatsu — no, the commute plus soak eats the whole day.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do I need a swimsuit at Japanese onsen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Not for traditional onsen. Japanese onsen are bathed in nude, gender-separated, with a small modesty towel (rent for ¥100-300). Swimsuits are considered unsanitary at traditional facilities. Exception: mixed-gender modern water parks require them.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What should I bring to an onsen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A small hand-towel-sized modesty towel and a larger bathing towel (most facilities rent both). A change of clothes, hair ties for long hair, and no jewelry (metal corrodes in sulfur water). Photography is strictly forbidden in bath areas.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is Hakone still the best default Tokyo onsen day trip?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For most first-time Tokyo visitors, yes. Hakone's combination of Mt. Fuji views, onsen variety, and the Hakone Free Pass transportation is hard to beat. The alternatives in this article suit repeat visitors, tattoo concerns, shorter schedules, or quieter preferences.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

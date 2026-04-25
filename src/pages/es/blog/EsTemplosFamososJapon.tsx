@@ -351,6 +351,60 @@ const EsTemplosFamososJapon = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            inLanguage: "es",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "¿Cuánto cuesta entrar a los templos y santuarios de Japón?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Los santuarios sintoístas suelen ser gratuitos. Los templos budistas cobran entre 300 y 600 yenes. Senso-ji es gratuito, Kinkaku-ji 500 yenes, Kiyomizu-dera 400 yenes, Todai-ji 600 yenes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿A qué hora abren los templos y santuarios?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "La mayoría abren entre las 6:00 y las 9:00 de la mañana y cierran entre las 16:30 y 17:00. Fushimi Inari está abierto 24 horas. Llegar a primera hora evita multitudes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Puedo hacer fotos en los templos japoneses?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "En los recintos exteriores casi siempre sí; en los interiores de salones principales generalmente no. Busca carteles con cámara tachada. No uses flash, no fotografíes a personas rezando sin permiso.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Necesito cubrirme para entrar a templos en Japón?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A diferencia de iglesias o mezquitas, no hay código de vestimenta estricto. Evita ropa muy reveladora o camisetas con mensajes ofensivos. En algunos templos hay que quitarse los zapatos: lleva calcetines limpios.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuál es el templo más importante de Japón?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Depende del criterio. Históricamente, Todai-ji en Nara. Por devoción popular, Senso-ji en Tokio. En sintoísmo, el Gran Santuario de Ise. Para el viajero, cada uno ofrece una experiencia distinta.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

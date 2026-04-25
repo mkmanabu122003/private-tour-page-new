@@ -343,6 +343,60 @@ const EsMonteFujiSeVeDesdeTokio = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            inLanguage: "es",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "¿Se ve el Monte Fuji desde Tokio todo el año?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Técnicamente sí, pero depende del clima. En invierno (noviembre-febrero) se ve entre 40-60% de los días. En verano (junio-agosto), solo 10-20%. La humedad es la clave: cuanto más seco esté el aire, más fácil verlo.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuál es el mejor mirador gratuito del Monte Fuji en Tokio en 2026?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "El paseo marítimo de Odaiba al atardecer, junto al Rainbow Bridge. El Bunkyo Civic Center solía ser la respuesta, pero su observatorio está cerrado por obras hasta diciembre de 2026.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Se ve el Monte Fuji desde el hotel?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Depende del hotel. Algunos en Shinjuku con orientación oeste y pisos altos (Park Hyatt Tokyo, Hilton Shinjuku) ofrecen vistas al Fuji en días claros. Pide específicamente una habitación con 'Fuji view' al reservar.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuántos kilómetros hay entre Tokio y el Monte Fuji?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Aproximadamente 100 kilómetros en línea recta desde el centro de Tokio hasta la cima. En coche son unos 130 km y entre 1,5 y 2 horas según tráfico y destino.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Hay tours para ver el Monte Fuji desde Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sí. Los tours privados por Tokio incluyen miradores con vistas al Fuji cuando las condiciones lo permiten. También hay excursiones de día completo a la zona del Monte Fuji y los Cinco Lagos.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

@@ -398,6 +398,59 @@ const MountFujiFromTokyo = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Can you see Mt. Fuji from Tokyo all year round?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Technically yes, but seasonal odds vary sharply. November-February: 40-60% of days. March-April: ~30%. May-September: 10-20%. October: 25-35%. Dry winter air produces the clearest views.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the best free Fuji viewpoint in Tokyo in 2026?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Odaiba waterfront at sunset — specifically the promenade next to Rainbow Bridge. Bunkyo Civic Center's free 25th-floor observatory was a popular pick but is closed for renovation until December 2026.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I see Mt. Fuji from my hotel?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Possibly, depending on the hotel and room. High-floor rooms in Shinjuku hotels with west-facing windows (Park Hyatt Tokyo and Hilton Tokyo are known examples) offer Fuji views on clear days. Request a 'Fuji view room' at booking.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How far is Tokyo from Mt. Fuji?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Roughly 100 km in a straight line from central Tokyo to the summit. By road it's about 130 km and 90 minutes to 2 hours depending on traffic and destination (Kawaguchiko or Hakone).",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do private Tokyo tours include Mt. Fuji viewpoints?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Private Tokyo tours can include Fuji viewpoints when conditions allow, and pivot to alternatives when they don't. Full-day Hakone tours combine Fuji views with onsen and Lake Ashi.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };

@@ -333,6 +333,60 @@ const EsAsakusaTokioGuia = () => {
           }),
         }}
       />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            inLanguage: "es",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "¿Cuánto tiempo necesito en Asakusa?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Para un recorrido completo con Senso-ji, calles laterales, paseo por el río y una comida, calcula entre 3 y 4 horas. Solo el templo y Nakamise: una hora. Con Hoppy-dori por la tarde: medio día.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuándo es mejor ir a Asakusa?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Entre las 7 y las 9 AM de un día entre semana. El barrio está tranquilo y los templos prácticamente vacíos. Si no puedes madrugar, evita al menos los fines de semana entre las 11 AM y las 3 PM.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Es gratis entrar al Senso-ji?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sí, completamente gratis. El recinto está abierto las 24 horas. El salón principal tiene horario limitado (de 6 AM a 5 PM aproximadamente), pero no cobra entrada.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Puedo combinar Asakusa con otros barrios?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Asakusa combina perfectamente con Tokyo Skytree (10 min a pie), Ueno (10 min en metro) o Yanaka (20 min en tren). Una mañana temprana en Asakusa seguida de una tarde en cualquiera de estos hace un día completo excelente.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Merece la pena un tour guiado en Asakusa?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Si solo quieres ver el templo y fotos, puedes hacerlo por tu cuenta. Si quieres entender la historia, los rincones que no aparecen en guías y la mejor comida del barrio, un guía local marca la diferencia.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </Layout>
   );
 };
