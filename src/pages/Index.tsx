@@ -54,7 +54,7 @@ const tours = [
     duration: "3 hours",
     price: "¥45,000",
     difficulty: "Easy",
-    image: "/images/tours/tsukiji-market-food-tokyo.webp",
+    image: "/images/tours/tsukiji-outer-market.webp",
   },
   {
     id: "imperial-palace",

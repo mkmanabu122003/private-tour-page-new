@@ -228,9 +228,10 @@ const tourData = {
     startTime: "9:00 AM or 1:00 PM",
     meetingPoint: "Tsukiji Market Station, Exit A1",
     images: [
-      { src: "/images/tours/tsukiji-outer-market.webp", alt: "Tsukiji Outer Market - Tokyo private food tour", position: "center" },
-      { src: "/images/tours/tsukiji-street-food.webp", alt: "Fresh seafood skewers at Tsukiji Market Tokyo", position: "center" },
-      { src: "/images/tours/ginza-shopping-district.webp", alt: "Ginza luxury shopping district - combine with Tsukiji tour", position: "center" },
+      { src: "/images/blog/tokyo-sushi-nigiri-platter.webp", alt: "Assorted nigiri sushi platter at a Tokyo sushi counter — Tsukiji & Ginza tour highlight", position: "center" },
+      { src: "/images/tours/tsukiji-outer-market.webp", alt: "Tsukiji Outer Market grilled skewers display - private food tour", position: "center" },
+      { src: "/images/tours/tsukiji-street-food.webp", alt: "Tsukiji's iconic golden tamagoyaki on a stick", position: "center" },
+      { src: "/images/tours/ginza-shopping-district.webp", alt: "Kabukiza theater facade in Ginza — upscale district paired with Tsukiji", position: "center" },
     ],
     highlights: [
       "Tsukiji Outer Market - Fresh seafood and street food",
