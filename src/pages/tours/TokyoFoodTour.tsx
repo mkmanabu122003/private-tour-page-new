@@ -164,20 +164,31 @@ const TokyoFoodTour = () => {
       />
 
       {/* Hero Section */}
-      {/* Hero Image */}
+      {/* Hero Image — clickable to capture dead-click intent */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/tokyo-food-tour-hero.webp"
-          alt="Private Tokyo food tour - taste authentic Japanese cuisine"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <button
+          type="button"
+          onClick={() => {
+            document
+              .getElementById("booking-cta")
+              ?.scrollIntoView({ behavior: "smooth", block: "center" });
+          }}
+          aria-label="Click to see pricing and book this food tour"
+          className="block w-full h-full cursor-pointer"
+        >
+          <img
+            src="/images/tours/tokyo-food-tour-hero.webp"
+            alt="Private Tokyo food tour - taste authentic Japanese cuisine"
+            className="w-full h-full object-cover"
+            fetchpriority="high"
+            width={1600}
+            height={900}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        </button>
       </section>
 
-      <section className="pt-16 pb-12 bg-secondary/30">
+      <section id="booking-cta" className="pt-16 pb-12 bg-secondary/30 scroll-mt-20">
         <div className="container-section">
           <div className="max-w-2xl">
             <p className="text-label text-accent mb-3">Food Tours</p>

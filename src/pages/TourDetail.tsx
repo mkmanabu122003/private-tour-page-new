@@ -688,11 +688,23 @@ const TourDetail = () => {
 
       {/* Hero Carousel with Thumbnails */}
       <section className="relative h-[50vh] md:h-[60vh] min-h-[400px] md:min-h-[500px]">
-        {/* Main Image */}
+        {/* Main Image — clicking scrolls to the inline booking CTA, capturing
+            the dead-click intent surfaced in Clarity (PC dead click 50% on
+            /tours/tsukiji-ginza in the 2026-04-26 window). */}
         <div className="overflow-hidden h-full" ref={emblaRef}>
           <div className="flex h-full">
             {tour.images.map((image, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+              <button
+                key={index}
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("booking-cta")
+                    ?.scrollIntoView({ behavior: "smooth", block: "center" });
+                }}
+                className="flex-[0_0_100%] min-w-0 h-full block cursor-pointer text-left"
+                aria-label={`${image.alt} — click for pricing and to book`}
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
@@ -703,7 +715,7 @@ const TourDetail = () => {
                   width={1600}
                   height={900}
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -942,7 +954,7 @@ const TourDetail = () => {
       </section>
 
       {/* Inline Booking CTA */}
-      <section className="py-12 bg-accent/5 border-y border-accent/10">
+      <section id="booking-cta" className="py-12 bg-accent/5 border-y border-accent/10 scroll-mt-20">
         <div className="container-section text-center">
           <p className="text-lg sm:text-xl font-semibold text-foreground">
             Ready to book? Secure your private tour →

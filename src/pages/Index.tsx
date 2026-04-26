@@ -165,7 +165,29 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
-        <div className="absolute inset-0">
+        {/* Background image — clicking the visible area (around the headline)
+            scrolls to Featured Tours, capturing dead-click intent observed in
+            Clarity (PC dead click 17% in the 2026-04-26 window). The CTA
+            buttons sit in a sibling <div> above this and remain unaffected. */}
+        <div
+          className="absolute inset-0 cursor-pointer"
+          onClick={() => {
+            document
+              .getElementById("featured-tours")
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="See featured tours"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              document
+                .getElementById("featured-tours")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }}
+        >
           <img
             src={heroGroupPhoto}
             alt="Group photo with guests during a private Tokyo walking tour"
@@ -229,7 +251,7 @@ const Index = () => {
       </section>
 
       {/* Featured Tours */}
-      <section className="py-20 md:py-28 bg-secondary/30">
+      <section id="featured-tours" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
         <div className="container-section">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-label text-accent mb-4">Explore Tokyo</p>
