@@ -83,6 +83,55 @@ const TsukijiMarketGuide = () => {
               </p>
             </div>
 
+            {/* Table of Contents — addresses observed scroll dropoff and gives
+                clickable structure to the page (Clarity heatmap, 2026-04-26
+                showed users clicking H3 headings expecting navigation). */}
+            <div className="bg-secondary/50 border border-border rounded-lg p-5 mb-8">
+              <p className="font-semibold text-foreground mb-3">Jump to a section</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                <li>
+                  <a href="#what-happened" className="text-foreground hover:text-accent hover:underline">
+                    📜 What Happened to Tsukiji
+                  </a>
+                </li>
+                <li>
+                  <a href="#outer-market" className="text-foreground hover:text-accent hover:underline">
+                    🏬 What's Still There: The Outer Market
+                  </a>
+                </li>
+                <li>
+                  <a href="#tamagoyaki" className="text-foreground hover:text-accent hover:underline">
+                    🥚 Tamagoyaki: The Icon
+                  </a>
+                </li>
+                <li>
+                  <a href="#sushi" className="text-foreground hover:text-accent hover:underline">
+                    🍣 Fresh Sushi: Standing Up
+                  </a>
+                </li>
+                <li>
+                  <a href="#kaisendon" className="text-foreground hover:text-accent hover:underline">
+                    🍚 Seafood Rice Bowls (Kaisendon)
+                  </a>
+                </li>
+                <li>
+                  <a href="#pickles" className="text-foreground hover:text-accent hover:underline">
+                    🥒 Pickles & Souvenirs
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-to-get-there" className="text-foreground hover:text-accent hover:underline">
+                    🚇 How to Get There
+                  </a>
+                </li>
+                <li>
+                  <a href="#tsukiji-vs-toyosu" className="text-foreground hover:text-accent hover:underline">
+                    ⚖️ Tsukiji vs. Toyosu
+                  </a>
+                </li>
+              </ul>
+            </div>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "Isn't Tsukiji closed?" I hear this question at least once a week from visitors planning their Tokyo itinerary. And I understand the confusion. The headlines from 2018 were everywhere: Tsukiji Market closes, the tuna auctions move to Toyosu, an era ends. But here's what those headlines got wrong, or at least left out. Only the inner wholesale market moved. The outer market, the part that matters most to visitors, never closed. It's still here, still thriving, and still one of the best food experiences in Tokyo.
@@ -95,7 +144,7 @@ const TsukijiMarketGuide = () => {
             </p>
 
             {/* Section 1: What Happened */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2 id="what-happened" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               What Happened to Tsukiji (The Quick Version)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -112,7 +161,7 @@ const TsukijiMarketGuide = () => {
             </p>
 
             {/* Section 2: The Outer Market */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2 id="outer-market" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               What's Still There: The Outer Market
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -146,11 +195,14 @@ const TsukijiMarketGuide = () => {
               This is the part of my tsukiji guide where I get to share what I actually eat when I'm here, not as a guide performing for clients, but as someone who genuinely loves this market and has strong opinions about its food. Come hungry. Seriously. Skip breakfast at the hotel. You'll want the stomach space.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 id="tamagoyaki" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
               Tamagoyaki: The Icon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If Tsukiji has a signature food, it's tamagoyaki, the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick costs around 100 to 200 yen, and watching the cook build it layer by layer (pouring batter, rolling, pouring again) is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.
+              If Tsukiji has a signature food, it's tamagoyaki, the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick costs around 100 to 200 yen, and watching the cook build it layer by layer (pouring batter, rolling, pouring again) is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.{" "}
+              <Link to="/tours/tsukiji-ginza" className="text-accent hover:underline font-medium">
+                Try Yamachou's tamagoyaki on the Tsukiji + Ginza tour →
+              </Link>
             </p>
             <figure className="my-8">
               <img
@@ -166,7 +218,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 id="sushi" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
               Fresh Sushi: Standing Up, As It Should Be
             </h3>
             <figure className="my-8">
@@ -203,7 +255,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 id="kaisendon" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
               Seafood Rice Bowls (Kaisendon)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -224,7 +276,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3 id="pickles" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
               Pickles and Dried Goods: The Souvenirs Worth Buying
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -252,7 +304,7 @@ const TsukijiMarketGuide = () => {
             </GuideInsiderNote>
 
             {/* Section 4: Getting There */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2 id="how-to-get-there" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               How to Get There and When to Arrive
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -276,7 +328,7 @@ const TsukijiMarketGuide = () => {
             </p>
 
             {/* Section 5: Tsukiji vs Toyosu */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2 id="tsukiji-vs-toyosu" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               Tsukiji vs. Toyosu: Should You Visit Both?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
