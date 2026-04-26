@@ -1,4 +1,4 @@
-import { Check, X, Users, Route, Clock, Shield, UtensilsCrossed, MessageSquare, CalendarCheck, Headphones } from "lucide-react";
+import { Check, X } from "lucide-react";
 
 interface ValueComparisonProps {
   tourPrice: number;
@@ -6,7 +6,6 @@ interface ValueComparisonProps {
 }
 
 interface ComparisonRowData {
-  icon: React.ReactNode;
   label: string;
   group: string;
   priv: string;
@@ -15,28 +14,26 @@ interface ComparisonRowData {
   uncertain?: boolean;
 }
 
-const iconCls = "w-[18px] h-[18px] text-muted-foreground/60";
-
 const rowsEn: ComparisonRowData[] = [
-  { icon: <Users className={iconCls} strokeWidth={1.5} />, label: "Group size", group: "10–20 strangers", priv: "Just your group (1–6)" },
-  { icon: <Route className={iconCls} strokeWidth={1.5} />, label: "Route", group: "Fixed itinerary", priv: "Fully customized to your interests" },
-  { icon: <Clock className={iconCls} strokeWidth={1.5} />, label: "Pace", group: "Rushed to stay on schedule", priv: "Your pace — stop whenever you like" },
-  { icon: <Shield className={iconCls} strokeWidth={1.5} />, label: "Guide credentials", group: "Varies", priv: "National Government Licensed Guide", uncertain: true },
-  { icon: <UtensilsCrossed className={iconCls} strokeWidth={1.5} />, label: "Dietary needs", group: "Not accommodated", priv: "Fully customized" },
-  { icon: <MessageSquare className={iconCls} strokeWidth={1.5} />, label: "Pre-tour planning", group: "None", priv: "Personal itinerary by email" },
-  { icon: <CalendarCheck className={iconCls} strokeWidth={1.5} />, label: "Scheduling", group: "Fixed departure times", priv: "Any date, any start time" },
-  { icon: <Headphones className={iconCls} strokeWidth={1.5} />, label: "After-tour support", group: "None", priv: "Restaurant tips & help during your stay" },
+  { label: "Group size", group: "10–20 strangers", priv: "Just your group (1–6)" },
+  { label: "Route", group: "Fixed itinerary", priv: "Fully customized to your interests" },
+  { label: "Pace", group: "Rushed to stay on schedule", priv: "Your pace — stop whenever you like" },
+  { label: "Guide credentials", group: "Varies", priv: "National Government Licensed Guide", uncertain: true },
+  { label: "Dietary needs", group: "Not accommodated", priv: "Fully customized" },
+  { label: "Pre-tour planning", group: "None", priv: "Personal itinerary by email" },
+  { label: "Scheduling", group: "Fixed departure times", priv: "Any date, any start time" },
+  { label: "After-tour support", group: "None", priv: "Restaurant tips & help during your stay" },
 ];
 
 const rowsEs: ComparisonRowData[] = [
-  { icon: <Users className={iconCls} strokeWidth={1.5} />, label: "Grupo", group: "10–20 desconocidos", priv: "Solo tu grupo (1–6)" },
-  { icon: <Route className={iconCls} strokeWidth={1.5} />, label: "Ruta", group: "Itinerario fijo", priv: "Totalmente personalizada" },
-  { icon: <Clock className={iconCls} strokeWidth={1.5} />, label: "Ritmo", group: "Apresurado", priv: "A tu ritmo" },
-  { icon: <Shield className={iconCls} strokeWidth={1.5} />, label: "Credencial del guía", group: "Variable", priv: "Guía con Licencia Nacional", uncertain: true },
-  { icon: <UtensilsCrossed className={iconCls} strokeWidth={1.5} />, label: "Dieta", group: "Sin opciones", priv: "Totalmente adaptable" },
-  { icon: <MessageSquare className={iconCls} strokeWidth={1.5} />, label: "Planificación previa", group: "Ninguna", priv: "Itinerario personal por email" },
-  { icon: <CalendarCheck className={iconCls} strokeWidth={1.5} />, label: "Horario", group: "Horas fijas de salida", priv: "Cualquier día y hora" },
-  { icon: <Headphones className={iconCls} strokeWidth={1.5} />, label: "Soporte post-tour", group: "Ninguno", priv: "Recomendaciones durante tu estancia" },
+  { label: "Grupo", group: "10–20 desconocidos", priv: "Solo tu grupo (1–6)" },
+  { label: "Ruta", group: "Itinerario fijo", priv: "Totalmente personalizada" },
+  { label: "Ritmo", group: "Apresurado", priv: "A tu ritmo" },
+  { label: "Credencial del guía", group: "Variable", priv: "Guía con Licencia Nacional", uncertain: true },
+  { label: "Dieta", group: "Sin opciones", priv: "Totalmente adaptable" },
+  { label: "Planificación previa", group: "Ninguna", priv: "Itinerario personal por email" },
+  { label: "Horario", group: "Horas fijas de salida", priv: "Cualquier día y hora" },
+  { label: "Soporte post-tour", group: "Ninguno", priv: "Recomendaciones durante tu estancia" },
 ];
 
 export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) => {
@@ -56,48 +53,21 @@ export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) =
           </p>
         </div>
 
-        {/* Experience Comparison — Desktop table (md+) */}
-        <div className="hidden md:block max-w-4xl mx-auto mb-12">
-          <div className="relative pb-6">
-            {/* Private Tour column card backdrop */}
-            <div
-              aria-hidden="true"
-              className="absolute right-0 top-0 bottom-6 w-[44%] bg-card shadow-lg rounded-lg border-t-2 border-accent pointer-events-none"
-            />
-            <table className="w-full border-collapse relative">
-              <colgroup>
-                <col className="w-[22%]" />
-                <col className="w-[34%]" />
-                <col className="w-[44%]" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th className="py-5 px-4"></th>
-                  <th className="py-5 px-4 text-left text-sm font-normal text-muted-foreground/80">
-                    Typical Group Tour
-                  </th>
-                  <th className="py-5 px-6 text-left text-base font-semibold text-accent">
-                    Private Tour
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {rowsEn.map((r) => (
-                  <ComparisonRow key={r.label} {...r} />
-                ))}
-              </tbody>
-            </table>
-          </div>
+        <div className="max-w-4xl mx-auto mb-12 grid md:grid-cols-2 gap-5 md:gap-6 items-start">
+          <ComparisonCard
+            heading="Typical Group Tour"
+            rows={rowsEn}
+            valueOf={(r) => r.group}
+            tone="negative"
+          />
+          <ComparisonCard
+            heading="Private Tour"
+            rows={rowsEn}
+            valueOf={(r) => r.priv}
+            tone="positive"
+          />
         </div>
 
-        {/* Experience Comparison — Mobile card stack (<md) */}
-        <div className="md:hidden max-w-md mx-auto mb-12 space-y-4">
-          {rowsEn.map((r) => (
-            <ComparisonCard key={r.label} row={r} groupLabel="Typical Group Tour" privLabel="Private Tour" />
-          ))}
-        </div>
-
-        {/* Per-Person Price Breakdown */}
         <div className="max-w-xl mx-auto">
           <h3 className="text-lg font-semibold text-foreground text-center mb-6">
             {tourName}: {perPerson(1)} for your entire group
@@ -133,67 +103,81 @@ export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) =
   );
 };
 
-function ComparisonRow({ icon, label, group, priv, uncertain }: ComparisonRowData) {
-  return (
-    <tr className="border-b border-border/40 last:border-b-0">
-      <td className="py-5 px-4 text-muted-foreground align-top">
-        <span className="flex items-center gap-2">
-          {icon} {label}
-        </span>
-      </td>
-      <td
-        className={
-          "py-5 px-4 text-left align-top " +
-          (uncertain ? "italic text-muted-foreground/60" : "text-muted-foreground/80")
-        }
-      >
-        {group}
-      </td>
-      <td className="py-5 px-6 text-left align-top">
-        <span className="text-foreground font-medium">{priv}</span>
-      </td>
-    </tr>
-  );
+interface ComparisonCardProps {
+  heading: string;
+  rows: ComparisonRowData[];
+  valueOf: (r: ComparisonRowData) => string;
+  tone: "positive" | "negative";
 }
 
-function ComparisonCard({
-  row,
-  groupLabel,
-  privLabel,
-}: {
-  row: ComparisonRowData;
-  groupLabel: string;
-  privLabel: string;
-}) {
-  const { icon, label, group, priv, uncertain } = row;
+function ComparisonCard({ heading, rows, valueOf, tone }: ComparisonCardProps) {
+  const isPositive = tone === "positive";
   return (
-    <div className="bg-card rounded-lg shadow-sm border border-border/40 overflow-hidden">
-      <div className="px-4 py-3 border-b border-border/40 flex items-center gap-2 text-sm font-medium text-foreground">
-        {icon} {label}
-      </div>
-      <div className="grid grid-cols-2">
-        <div className="px-4 py-4 border-r border-border/40">
-          <p className="text-[11px] uppercase tracking-widest text-muted-foreground/70 mb-1">
-            {groupLabel}
-          </p>
-          <p
-            className={
-              "text-sm leading-snug " +
-              (uncertain ? "italic text-muted-foreground/60" : "text-muted-foreground/80")
-            }
-          >
-            {group}
-          </p>
-        </div>
-        <div className="px-4 py-4 bg-accent/5 border-t-2 border-accent -mt-[2px]">
-          <p className="text-[11px] uppercase tracking-widest text-accent font-semibold mb-1">
-            {privLabel}
-          </p>
-          <p className="text-sm leading-snug text-foreground font-medium">
-            {priv}
-          </p>
-        </div>
-      </div>
+    <div
+      className={
+        isPositive
+          ? "relative bg-card rounded-lg px-5 py-6 md:px-6 md:py-7 border-t-[3px] border-accent shadow-[0_8px_24px_-8px_rgba(0,0,0,0.18)] ring-1 ring-accent/20"
+          : "bg-muted/40 rounded-lg px-5 py-6 md:px-6 md:py-7 border border-border"
+      }
+    >
+      {isPositive && (
+        <span className="absolute -top-3 right-5 text-[10px] tracking-widest font-semibold uppercase text-accent-foreground bg-accent px-2.5 py-1 rounded-sm">
+          Recommended
+        </span>
+      )}
+      <h3
+        className={
+          isPositive
+            ? "text-base md:text-lg font-semibold text-accent mb-5"
+            : "text-base md:text-lg font-medium text-muted-foreground mb-5"
+        }
+      >
+        {heading}
+      </h3>
+      <ul className="space-y-3">
+        {rows.map((r) => {
+          const value = valueOf(r);
+          return (
+            <li
+              key={r.label}
+              className="flex items-start gap-2 md:gap-2.5 text-[13px] leading-snug whitespace-nowrap"
+            >
+              {isPositive ? (
+                <Check
+                  className="w-[16px] h-[16px] mt-0.5 text-accent shrink-0"
+                  strokeWidth={3}
+                  aria-hidden="true"
+                />
+              ) : (
+                <X
+                  className="w-[16px] h-[16px] mt-0.5 text-rose-500 shrink-0"
+                  strokeWidth={3}
+                  aria-hidden="true"
+                />
+              )}
+              <span
+                className={
+                  "min-w-0 flex-1 " +
+                  (isPositive ? "text-foreground" : "text-muted-foreground")
+                }
+              >
+                <span
+                  className={
+                    isPositive
+                      ? "font-semibold"
+                      : "font-semibold text-foreground/80"
+                  }
+                >
+                  {r.label}:
+                </span>{" "}
+                <span className={!isPositive && r.uncertain ? "italic" : ""}>
+                  {value}
+                </span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
@@ -215,44 +199,19 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
           </p>
         </div>
 
-        {/* Desktop table (md+) */}
-        <div className="hidden md:block max-w-4xl mx-auto mb-12">
-          <div className="relative pb-6">
-            <div
-              aria-hidden="true"
-              className="absolute right-0 top-0 bottom-6 w-[44%] bg-card shadow-lg rounded-lg border-t-2 border-accent pointer-events-none"
-            />
-            <table className="w-full border-collapse relative">
-              <colgroup>
-                <col className="w-[22%]" />
-                <col className="w-[34%]" />
-                <col className="w-[44%]" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th className="py-5 px-4"></th>
-                  <th className="py-5 px-4 text-left text-sm font-normal text-muted-foreground/80">
-                    Tour en Grupo
-                  </th>
-                  <th className="py-5 px-6 text-left text-base font-semibold text-accent">
-                    Tour Privado
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {rowsEs.map((r) => (
-                  <ComparisonRow key={r.label} {...r} />
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Mobile card stack (<md) */}
-        <div className="md:hidden max-w-md mx-auto mb-12 space-y-4">
-          {rowsEs.map((r) => (
-            <ComparisonCard key={r.label} row={r} groupLabel="Tour en Grupo" privLabel="Tour Privado" />
-          ))}
+        <div className="max-w-4xl mx-auto mb-12 grid md:grid-cols-2 gap-5 md:gap-6 items-start">
+          <ComparisonCard
+            heading="Tour en Grupo"
+            rows={rowsEs}
+            valueOf={(r) => r.group}
+            tone="negative"
+          />
+          <ComparisonCard
+            heading="Tour Privado"
+            rows={rowsEs}
+            valueOf={(r) => r.priv}
+            tone="positive"
+          />
         </div>
 
         <div className="max-w-xl mx-auto">
