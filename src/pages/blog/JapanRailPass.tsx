@@ -63,6 +63,41 @@ const JapanRailPass = () => {
               answer="JR Pass prices have not changed in 2026 — the last increase was October 2023 (+70%, to ¥50,000 for a 7-day Ordinary pass). No 2026 hike is scheduled as of April 2026."
               hook="But here's what matters more than the price itself: after the 2023 hike, the Pass only saves money on specific itineraries. I ran the numbers for the 12 most common routes below — and 7 of them now lose you money compared to buying individual Shinkansen tickets."
             />
+
+            {/* Quick Verdict — addresses the 20-30% scroll dropoff observed in Clarity */}
+            <div className="bg-secondary/50 border border-border rounded-lg p-5 my-8">
+              <p className="font-semibold text-foreground mb-3">Quick Verdict by Itinerary (Click for the math)</p>
+              <ul className="space-y-2 text-sm">
+                <li className="text-muted-foreground">
+                  <span className="text-green-700 dark:text-green-400 font-semibold">✅ Worth it:</span>{" "}
+                  <a href="#classic-route" className="text-foreground hover:text-accent hover:underline">Tokyo → Kyoto → Osaka → Hiroshima</a>{" "}
+                  <span className="text-xs">(¥44,180+ in tickets vs ¥50,000 pass)</span>
+                </li>
+                <li className="text-muted-foreground">
+                  <span className="text-green-700 dark:text-green-400 font-semibold">✅ Worth it:</span>{" "}
+                  <a href="#extended-route" className="text-foreground hover:text-accent hover:underline">3+ Shinkansen legs with side trips</a>
+                </li>
+                <li className="text-muted-foreground">
+                  <span className="text-amber-700 dark:text-amber-400 font-semibold">⚠️ Borderline:</span>{" "}
+                  <a href="#multi-city-route" className="text-foreground hover:text-accent hover:underline">Tokyo → Kanazawa → Kyoto</a>{" "}
+                  <span className="text-xs">(~¥40,700 vs ¥50,000 — calculate your specific rides)</span>
+                </li>
+                <li className="text-muted-foreground">
+                  <span className="text-red-700 dark:text-red-400 font-semibold">❌ Not worth it:</span>{" "}
+                  <a href="#not-worth" className="text-foreground hover:text-accent hover:underline">Simple Tokyo–Kyoto round trip</a>{" "}
+                  <span className="text-xs">(¥27,940 in tickets — pass loses ¥22,000)</span>
+                </li>
+                <li className="text-muted-foreground">
+                  <span className="text-red-700 dark:text-red-400 font-semibold">❌ Not worth it:</span>{" "}
+                  <a href="#not-worth" className="text-foreground hover:text-accent hover:underline">Tokyo-only trips</a>
+                  ,{" "}
+                  <a href="#not-worth" className="text-foreground hover:text-accent hover:underline">3-4 day stays</a>
+                  ,{" "}
+                  <a href="#not-worth" className="text-foreground hover:text-accent hover:underline">heavy non-JR-line use (Hakone/Nikko)</a>
+                </li>
+              </ul>
+            </div>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "Should I get the Japan Rail Pass?" is the second most common question I get from clients, right after "when should I visit?" And unlike the timing question, this one has a definitive mathematical answer, if you're willing to sit down with the actual numbers.
             </p>
@@ -119,41 +154,56 @@ const JapanRailPass = () => {
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">7-day Ordinary</td>
                     <td className="py-3 pr-4">¥29,650</td>
-                    <td className="py-3 pr-4">¥50,000</td>
+                    <td className="py-3 pr-4">
+                      <a href="#when-worth" className="text-foreground hover:text-accent hover:underline">¥50,000</a>
+                    </td>
                     <td className="py-3">+69%</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">14-day Ordinary</td>
                     <td className="py-3 pr-4">¥47,250</td>
-                    <td className="py-3 pr-4">¥80,000</td>
+                    <td className="py-3 pr-4">
+                      <a href="#when-worth" className="text-foreground hover:text-accent hover:underline">¥80,000</a>
+                    </td>
                     <td className="py-3">+69%</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">21-day Ordinary</td>
                     <td className="py-3 pr-4">¥60,450</td>
-                    <td className="py-3 pr-4">¥100,000</td>
+                    <td className="py-3 pr-4">
+                      <a href="#when-worth" className="text-foreground hover:text-accent hover:underline">¥100,000</a>
+                    </td>
                     <td className="py-3">+65%</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">7-day Green Car</td>
                     <td className="py-3 pr-4">¥39,600</td>
-                    <td className="py-3 pr-4">¥70,000</td>
+                    <td className="py-3 pr-4">
+                      <a href="#when-worth" className="text-foreground hover:text-accent hover:underline">¥70,000</a>
+                    </td>
                     <td className="py-3">+77%</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">14-day Green Car</td>
                     <td className="py-3 pr-4">¥64,120</td>
-                    <td className="py-3 pr-4">¥110,000</td>
+                    <td className="py-3 pr-4">
+                      <a href="#when-worth" className="text-foreground hover:text-accent hover:underline">¥110,000</a>
+                    </td>
                     <td className="py-3">+72%</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4">21-day Green Car</td>
                     <td className="py-3 pr-4">¥83,390</td>
-                    <td className="py-3 pr-4">¥140,000</td>
+                    <td className="py-3 pr-4">
+                      <a href="#when-worth" className="text-foreground hover:text-accent hover:underline">¥140,000</a>
+                    </td>
                     <td className="py-3">+68%</td>
                   </tr>
                 </tbody>
               </table>
+              <p className="text-xs text-muted-foreground italic mt-2">
+                💡 Click any current price to jump to "When the JR Pass IS Worth It" with example itineraries.
+              </p>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">What this means in practice:</strong> at the old price, a single Tokyo–Kyoto round trip (¥27,700) almost paid for the 7-day pass. At ¥50,000, that same round trip covers only 55% of the pass cost. You now need two or more Shinkansen legs — plus local JR rides — to break even.
@@ -172,19 +222,47 @@ const JapanRailPass = () => {
               Key prices to know (2026, one-way, reserved seat):
             </p>
             <ul className="space-y-2 mb-8">
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kyoto (Hikari):</strong> ¥13,970</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Osaka (Hikari):</strong> ¥14,400</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Hiroshima (Hikari + Sakura):</strong> ¥18,910</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Kyoto → Hiroshima (Sakura):</strong> ¥11,300</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kanazawa (Hakutaka):</strong> ¥14,180</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Nikko (JR + Tobu):</strong> ~¥2,800 (JR portion only)</li>
-              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tokyo → Kamakura (JR):</strong> ¥1,040</li>
+              <li className="text-muted-foreground leading-relaxed">
+                <a href="#classic-route" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Tokyo → Kyoto (Hikari):</strong> ¥13,970
+                </a>
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <a href="#classic-route" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Tokyo → Osaka (Hikari):</strong> ¥14,400
+                </a>
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <a href="#classic-route" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Tokyo → Hiroshima (Hikari + Sakura):</strong> ¥18,910
+                </a>
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <a href="#classic-route" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Kyoto → Hiroshima (Sakura):</strong> ¥11,300
+                </a>
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <a href="#multi-city-route" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Tokyo → Kanazawa (Hakutaka):</strong> ¥14,180
+                </a>
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <Link to="/blog/nikko-day-trip-guide-vs-solo" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Tokyo → Nikko (JR + Tobu):</strong> ~¥2,800 (JR portion only)
+                </Link>
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <Link to="/blog/kamakura-day-trip-guide-vs-solo" className="hover:text-accent hover:underline">
+                  <strong className="text-foreground">Tokyo → Kamakura (JR):</strong> ¥1,040
+                </Link>
+              </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Remember: the JR Pass covers the Hikari and Kodama Shinkansen. For the Nozomi or Mizuho (the fastest trains), you'll need to purchase a supplementary ticket (about ¥4,960 for Tokyo–Kyoto). In practice, the Hikari gets you to Kyoto in about 2 hours 20 minutes vs. the Nozomi's 2 hours 15 minutes — barely any difference, so most travelers simply take the Hikari.
             </p>
 
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2 id="when-worth" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               When the JR Pass IS Worth It (With Example Itineraries)
             </h2>
             <figure className="my-8">
@@ -200,7 +278,7 @@ const JapanRailPass = () => {
                 The iconic senbon torii at Fushimi Inari, Kyoto — one of the top reasons travelers take the Shinkansen from Tokyo
               </figcaption>
             </figure>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Classic Route: Tokyo → Kyoto → Osaka → Hiroshima → Tokyo</h3>
+            <h3 id="classic-route" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">Classic Route: Tokyo → Kyoto → Osaka → Hiroshima → Tokyo</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Individual ticket costs: Tokyo→Kyoto (¥13,970) + Kyoto→Hiroshima (¥11,300) + Hiroshima→Tokyo (¥18,910) = <strong className="text-foreground">¥44,180</strong>. Add local JR rides in each city and the total easily exceeds the ¥50,000 pass price. <strong className="text-foreground">Verdict: worth it.</strong>
             </p>
@@ -218,19 +296,19 @@ const JapanRailPass = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Multi-City: Tokyo → Kanazawa → Kyoto → Tokyo</h3>
+            <h3 id="multi-city-route" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">Multi-City: Tokyo → Kanazawa → Kyoto → Tokyo</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo→Kanazawa (¥14,180) + Kanazawa→Kyoto (¥7,720) + Kyoto→Tokyo (¥13,970) = <strong className="text-foreground">¥35,870</strong> in Shinkansen alone. Add Tokyo-area JR rides (Kamakura day trip: ¥2,080 round-trip, airport Narita Express: ¥3,070–3,250) and you're at ¥40,700+. Getting close to ¥50,000 but may not exceed it. <strong className="text-foreground">Verdict: borderline. Calculate your specific JR rides carefully.</strong>
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Extended: Tokyo → Kyoto → Osaka → Kanazawa → Tokyo (+ day trips)</h3>
+            <h3 id="extended-route" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">Extended: Tokyo → Kyoto → Osaka → Kanazawa → Tokyo (+ day trips)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Any itinerary with three or more Shinkansen legs plus local JR rides will almost certainly exceed ¥50,000. If you're doing the "Golden Route" with side trips, the 7-day pass pays for itself. <strong className="text-foreground">Verdict: definitely worth it.</strong>
             </p>
 
             <InlineCTA message="Need help planning your Japan logistics?" href="/contact" />
 
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2 id="not-worth" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               When the JR Pass Is NOT Worth It
             </h2>
             <ul className="space-y-4 mb-8">
