@@ -18,8 +18,8 @@ const SushiGuideTokyo = () => {
       {/* Hero Image */}
       <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
         <img
-          src="/images/blog/tsukiji-fresh-sushi.webp"
-          alt="Fresh sushi in Tokyo, a guide to the best sushi experience"
+          src="/images/blog/tokyo-sushi-nigiri-platter.webp"
+          alt="Assorted nigiri sushi platter — tamago, maguro, salmon, ebi, hotate, anago — at a Tokyo sushi counter"
           className="w-full h-full object-cover"
           loading="eager"
           fetchpriority="high"

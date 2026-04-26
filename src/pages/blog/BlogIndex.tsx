@@ -299,7 +299,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
-    image: "/images/blog/tsukiji-fresh-sushi.webp",
+    image: "/images/blog/tokyo-sushi-nigiri-platter.webp",
   },
   {
     slug: "vegetarian-food-tour-tokyo",
