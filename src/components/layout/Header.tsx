@@ -36,18 +36,56 @@ const esDayTrips = [
   { name: "Excursión a Nikko", href: "/es/tours/nikko-day-trip" },
 ];
 
+// Blog dropdown — winners pinned + anchor links into BlogIndex categories.
+// Mirror BlogIndex.tsx CATEGORY_META anchors so links jump to the right section.
+const blogPopular = [
+  { name: "Day Trip Comparison", href: "/blog/kamakura-vs-hakone-vs-nikko-day-trip" },
+  { name: "Is a Private Guide Worth It?", href: "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" },
+  { name: "Guide Cost (2026)", href: "/blog/tokyo-private-tour-guide-cost" },
+];
+
+const blogCategories = [
+  { name: "Decision Helpers", href: "/blog#decision-helpers" },
+  { name: "Day Trips from Tokyo", href: "/blog#day-trips" },
+  { name: "Tokyo Neighborhoods", href: "/blog#tokyo-neighborhoods" },
+  { name: "Food & Drink", href: "/blog#food-and-drink" },
+  { name: "Plan Your Trip", href: "/blog#plan-your-trip" },
+];
+
+const esBlogPopular = [
+  { name: "Comparativa de Excursiones", href: "/es/blog/comparativa-excursiones" },
+  { name: "¿Vale la Pena un Guía Privado?", href: "/es/blog/vale-la-pena-guia-privado-tokio" },
+  { name: "Cuánto Cuesta un Guía (2026)", href: "/es/blog/cuanto-cuesta-guia-privado-tokio" },
+];
+
+const esBlogCategories = [
+  { name: "Guías Útiles", href: "/es/blog#para-decidir" },
+  { name: "Guías de Excursiones", href: "/es/blog#excursiones" },
+  { name: "Guías de Barrios de Tokio", href: "/es/blog#barrios-tokio" },
+  { name: "Gastronomía Japonesa", href: "/es/blog#gastronomia" },
+  { name: "Cultura Japonesa", href: "/es/blog#cultura" },
+  { name: "Planifica tu Viaje", href: "/es/blog#planifica-viaje" },
+];
+
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [toursDropdownOpen, setToursDropdownOpen] = useState(false);
   const [mobilToursOpen, setMobileToursOpen] = useState(false);
+  const [blogDropdownOpen, setBlogDropdownOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const blogDropdownRef = useRef<HTMLDivElement>(null);
   const isEs = location.pathname.startsWith("/es");
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (dropdownRef.current && !dropdownRef.current.contains(target)) {
         setToursDropdownOpen(false);
+      }
+      if (blogDropdownRef.current && !blogDropdownRef.current.contains(target)) {
+        setBlogDropdownOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -58,6 +96,8 @@ export const Header = () => {
     setMobileMenuOpen(false);
     setToursDropdownOpen(false);
     setMobileToursOpen(false);
+    setBlogDropdownOpen(false);
+    setMobileBlogOpen(false);
   }, [location.pathname]);
 
   if (isEs) {
@@ -141,16 +181,57 @@ export const Header = () => {
                 )}
               </div>
 
-              <Link
-                to="/es/blog"
-                className={`text-sm font-medium transition-colors link-underline ${
-                  location.pathname.startsWith("/es/blog")
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                Blog
-              </Link>
+              {/* Blog Dropdown */}
+              <div className="relative" ref={blogDropdownRef}>
+                <button
+                  onClick={() => setBlogDropdownOpen(!blogDropdownOpen)}
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors link-underline ${
+                    location.pathname.startsWith("/es/blog")
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Blog
+                  <ChevronDown className={`w-4 h-4 transition-transform ${blogDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {blogDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-[var(--shadow-medium)] py-2 animate-fade-in z-50">
+                    <Link
+                      to="/es/blog"
+                      className="block px-4 py-2 text-sm text-foreground font-medium hover:bg-secondary/50 transition-colors"
+                    >
+                      Todos los Artículos
+                    </Link>
+                    <div className="border-t border-border my-1" />
+                    <p className="px-4 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                      Lo Más Leído
+                    </p>
+                    {esBlogPopular.map((post) => (
+                      <Link
+                        key={post.href}
+                        to={post.href}
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+                      >
+                        {post.name}
+                      </Link>
+                    ))}
+                    <div className="border-t border-border my-1" />
+                    <p className="px-4 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                      Explorar por Tema
+                    </p>
+                    {esBlogCategories.map((cat) => (
+                      <Link
+                        key={cat.href}
+                        to={cat.href}
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+                      >
+                        {cat.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               <Link
                 to="/es/faq"
@@ -275,15 +356,52 @@ export const Header = () => {
                   </div>
                 )}
 
-                <Link
-                  to="/es/blog"
-                  className={`text-base font-medium py-2 ${
+                <button
+                  onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
+                  className={`flex items-center justify-between text-base font-medium py-2 ${
                     location.pathname.startsWith("/es/blog") ? "text-foreground" : "text-muted-foreground"
                   }`}
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Blog
-                </Link>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileBlogOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobileBlogOpen && (
+                  <div className="pl-4 space-y-1 animate-fade-in">
+                    <Link
+                      to="/es/blog"
+                      className="block py-1.5 text-sm text-foreground font-medium"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Todos los Artículos
+                    </Link>
+                    <p className="py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                      Lo Más Leído
+                    </p>
+                    {esBlogPopular.map((post) => (
+                      <Link
+                        key={post.href}
+                        to={post.href}
+                        className="block py-1.5 text-sm text-muted-foreground"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {post.name}
+                      </Link>
+                    ))}
+                    <p className="py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                      Explorar por Tema
+                    </p>
+                    {esBlogCategories.map((cat) => (
+                      <Link
+                        key={cat.href}
+                        to={cat.href}
+                        className="block py-1.5 text-sm text-muted-foreground"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {cat.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
 
                 <Link
                   to="/es/faq"
@@ -435,16 +553,57 @@ export const Header = () => {
               )}
             </div>
 
-            <Link
-              to="/blog"
-              className={`text-sm font-medium transition-colors link-underline ${
-                location.pathname.startsWith("/blog")
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Blog
-            </Link>
+            {/* Blog Dropdown */}
+            <div className="relative" ref={blogDropdownRef}>
+              <button
+                onClick={() => setBlogDropdownOpen(!blogDropdownOpen)}
+                className={`flex items-center gap-1 text-sm font-medium transition-colors link-underline ${
+                  location.pathname.startsWith("/blog")
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Blog
+                <ChevronDown className={`w-4 h-4 transition-transform ${blogDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {blogDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-background border border-border rounded-lg shadow-[var(--shadow-medium)] py-2 animate-fade-in z-50">
+                  <Link
+                    to="/blog"
+                    className="block px-4 py-2 text-sm text-foreground font-medium hover:bg-secondary/50 transition-colors"
+                  >
+                    All Articles
+                  </Link>
+                  <div className="border-t border-border my-1" />
+                  <p className="px-4 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                    Most Read
+                  </p>
+                  {blogPopular.map((post) => (
+                    <Link
+                      key={post.href}
+                      to={post.href}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+                    >
+                      {post.name}
+                    </Link>
+                  ))}
+                  <div className="border-t border-border my-1" />
+                  <p className="px-4 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                    Browse by Topic
+                  </p>
+                  {blogCategories.map((cat) => (
+                    <Link
+                      key={cat.href}
+                      to={cat.href}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+                    >
+                      {cat.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               to="/faq"
@@ -583,15 +742,52 @@ export const Header = () => {
                 </div>
               )}
 
-              <Link
-                to="/blog"
-                className={`text-base font-medium py-2 ${
+              <button
+                onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
+                className={`flex items-center justify-between text-base font-medium py-2 ${
                   location.pathname.startsWith("/blog") ? "text-foreground" : "text-muted-foreground"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
-              </Link>
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileBlogOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileBlogOpen && (
+                <div className="pl-4 space-y-1 animate-fade-in">
+                  <Link
+                    to="/blog"
+                    className="block py-1.5 text-sm text-foreground font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    All Articles
+                  </Link>
+                  <p className="py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                    Most Read
+                  </p>
+                  {blogPopular.map((post) => (
+                    <Link
+                      key={post.href}
+                      to={post.href}
+                      className="block py-1.5 text-sm text-muted-foreground"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {post.name}
+                    </Link>
+                  ))}
+                  <p className="py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                    Browse by Topic
+                  </p>
+                  {blogCategories.map((cat) => (
+                    <Link
+                      key={cat.href}
+                      to={cat.href}
+                      className="block py-1.5 text-sm text-muted-foreground"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {cat.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
 
               <Link
                 to="/faq"

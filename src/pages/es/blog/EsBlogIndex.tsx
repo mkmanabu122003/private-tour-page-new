@@ -1,6 +1,7 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, ArrowUp, Calendar, Sparkles, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 
@@ -299,7 +300,7 @@ const blogPosts: BlogPost[] = [
       "Un guía oficial de Tokio te revela los callejones de izakayas, las costumbres para pedir y los bares ocultos que no encontrarías solo. Golden Gai, Omoide Yokocho, Yurakucho y más.",
     date: "13 de abril de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Comida y Vida Nocturna",
+    category: "Gastronomía Japonesa",
     image: "/images/tours/night-tour-omoide-yokocho.webp",
   },
   // Gastronomía Japonesa (new)
@@ -325,17 +326,130 @@ const blogPosts: BlogPost[] = [
   },
 ];
 
+// Orden = etapa del embudo. Decisión primero (mayor CV según inventario),
+// planificación general al final.
 const categories = [
-  "Guías de Barrios de Tokio",
-  "Guías de Excursiones",
-  "Planifica tu Viaje",
-  "Cultura Japonesa",
-  "Gastronomía Japonesa",
-  "Comida y Vida Nocturna",
   "Guías Útiles",
+  "Guías de Excursiones",
+  "Guías de Barrios de Tokio",
+  "Gastronomía Japonesa",
+  "Cultura Japonesa",
+  "Planifica tu Viaje",
+] as const;
+
+type CategoryName = (typeof categories)[number];
+
+const CATEGORY_META: Record<CategoryName, { anchor: string; description: string }> = {
+  "Guías Útiles": {
+    anchor: "para-decidir",
+    description:
+      "¿Vale la pena un guía? ¿Cuánto cuesta? Respuestas honestas de un guía oficial antes de reservar.",
+  },
+  "Guías de Excursiones": {
+    anchor: "excursiones",
+    description:
+      "Kamakura, Hakone, Nikko y más — compara excursiones desde Tokio y elige la que vale tu día.",
+  },
+  "Guías de Barrios de Tokio": {
+    anchor: "barrios-tokio",
+    description:
+      "Guías de Asakusa, Shibuya, Yanaka, Shinjuku y otros barrios, escritas por un guía que recorre estas calles a diario.",
+  },
+  "Gastronomía Japonesa": {
+    anchor: "gastronomia",
+    description:
+      "Dónde come y bebe un local de Tokio — sushi, ramen, izakayas y los mercados que vale la pena conocer.",
+  },
+  "Cultura Japonesa": {
+    anchor: "cultura",
+    description:
+      "Etiqueta en templos, propinas y todo lo que conviene saber antes de pisar Japón.",
+  },
+  "Planifica tu Viaje": {
+    anchor: "planifica-viaje",
+    description:
+      "Itinerarios, mejor época, JR Pass, presupuesto — la capa práctica de planificar Tokio.",
+  },
+};
+
+// Slugs de los artículos fijados en "Lo Más Leído" — basados en datos de conversión
+// (ver docs/seo/2026-04_inventory.md §3.1, equivalentes ES de los winners EN).
+const popularSlugs = [
+  "comparativa-excursiones",
+  "vale-la-pena-guia-privado-tokio",
+  "cuanto-cuesta-guia-privado-tokio",
 ];
 
+const BASE_URL = "https://tanuki-tabi-travel.com";
+
+interface PostCardProps {
+  post: BlogPost;
+  showPopularBadge?: boolean;
+}
+
+const PostCard = ({ post, showPopularBadge }: PostCardProps) => (
+  <Link
+    to={`/es/blog/${post.slug}`}
+    className="group relative bg-card border border-border rounded-lg overflow-hidden hover:shadow-[var(--shadow-medium)] hover:-translate-y-1 transition-all duration-300"
+  >
+    <div className="aspect-[16/9] overflow-hidden relative">
+      <img
+        src={post.image}
+        alt={post.title}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+        width={600}
+        height={338}
+      />
+      {showPopularBadge && (
+        <span className="absolute top-3 left-3 inline-flex items-center gap-1 bg-highlight text-highlight-foreground text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 rounded-full shadow-sm">
+          <Sparkles className="w-3 h-3" />
+          Más Leído
+        </span>
+      )}
+    </div>
+    <div className="p-6">
+      <p className="text-label text-accent mb-2">{post.category}</p>
+      <h3 className="text-xl font-medium text-foreground group-hover:text-accent transition-colors mb-3">
+        {post.title}
+      </h3>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+        {post.description}
+      </p>
+      <div className="flex items-center gap-4 text-xs text-muted-foreground">
+        <span className="flex items-center gap-1">
+          <User className="w-3 h-3" />
+          {post.author}
+        </span>
+        <span className="flex items-center gap-1">
+          <Calendar className="w-3 h-3" />
+          {post.date}
+        </span>
+      </div>
+      <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
+        <span>Leer Artículo</span>
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      </div>
+    </div>
+  </Link>
+);
+
 const EsBlogIndex = () => {
+  const popularPosts = popularSlugs
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is BlogPost => Boolean(p));
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: blogPosts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${BASE_URL}/es/blog/${post.slug}`,
+      name: post.title,
+    })),
+  };
+
   return (
     <Layout>
       <SEO
@@ -348,9 +462,12 @@ const EsBlogIndex = () => {
           { lang: "x-default", path: "/blog" },
         ]}
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(itemListSchema)}</script>
+      </Helmet>
 
       {/* Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
+      <section id="top" className="pt-16 pb-12 bg-secondary/30">
         <div className="container-section">
           <div className="max-w-2xl">
             <p className="text-label text-accent mb-3">De Tu Guía</p>
@@ -363,6 +480,53 @@ const EsBlogIndex = () => {
         </div>
       </section>
 
+      {/* Lo Más Leído — winners destacados */}
+      {popularPosts.length > 0 && (
+        <section className="py-12 bg-accent/5 border-b border-border/40">
+          <div className="container-section">
+            <div className="flex items-center gap-3 mb-6">
+              <Sparkles className="w-5 h-5 text-accent" />
+              <h2 className="text-xl font-semibold tracking-tight text-foreground">
+                Empieza Aquí — Lo Más Leído
+              </h2>
+            </div>
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
+              Los tres artículos que más mencionan los viajeros cuando contactan sobre un tour privado.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {popularPosts.map((post) => (
+                <PostCard key={post.slug} post={post} showPopularBadge />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Explorar por Tema — anchor pills */}
+      <section className="py-8 border-b border-border/40">
+        <div className="container-section">
+          <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+            Explorar por Tema
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => {
+              const meta = CATEGORY_META[category];
+              const count = blogPosts.filter((p) => p.category === category).length;
+              return (
+                <a
+                  key={category}
+                  href={`#${meta.anchor}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-foreground bg-secondary/60 hover:bg-secondary border border-border/60 rounded-full transition-colors"
+                >
+                  {category}
+                  <span className="text-xs text-muted-foreground">({count})</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Blog Posts by Category */}
       <section className="py-16">
         <div className="container-section">
@@ -371,55 +535,33 @@ const EsBlogIndex = () => {
               (post) => post.category === category
             );
             if (postsInCategory.length === 0) return null;
+            const meta = CATEGORY_META[category];
             return (
-              <div key={category} className="mb-16 last:mb-0">
-                <h2 className="heading-section text-foreground mb-8">
-                  {category}
-                </h2>
+              <div key={category} id={meta.anchor} className="mb-16 last:mb-0 scroll-mt-24">
+                <div className="mb-8 max-w-3xl">
+                  <h2 className="heading-section text-foreground">
+                    {category}{" "}
+                    <span className="text-muted-foreground font-normal text-base align-middle">
+                      ({postsInCategory.length})
+                    </span>
+                  </h2>
+                  <p className="mt-3 text-muted-foreground leading-relaxed">
+                    {meta.description}
+                  </p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {postsInCategory.map((post) => (
-                    <Link
-                      key={post.slug}
-                      to={`/es/blog/${post.slug}`}
-                      className="group bg-card border border-border rounded-lg overflow-hidden hover:shadow-[var(--shadow-medium)] hover:-translate-y-1 transition-all duration-300"
-                    >
-                      <div className="aspect-[16/9] overflow-hidden">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                          width={600}
-                          height={338}
-                        />
-                      </div>
-                      <div className="p-6">
-                        <p className="text-label text-accent mb-2">
-                          {post.category}
-                        </p>
-                        <h3 className="text-xl font-medium text-foreground group-hover:text-accent transition-colors mb-3">
-                          {post.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                          {post.description}
-                        </p>
-                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <User className="w-3 h-3" />
-                            {post.author}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
-                            {post.date}
-                          </span>
-                        </div>
-                        <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
-                          <span>Leer Artículo</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </Link>
+                    <PostCard key={post.slug} post={post} />
                   ))}
+                </div>
+                <div className="mt-8 text-right">
+                  <a
+                    href="#top"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    <ArrowUp className="w-3 h-3" />
+                    Volver arriba
+                  </a>
                 </div>
               </div>
             );
