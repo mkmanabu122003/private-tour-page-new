@@ -340,7 +340,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
-    image: "/images/tour-photos/tour-photo-1.webp",
+    image: "/images/tour-photos/photo2.webp",
   },
   {
     slug: "first-time-tokyo-local-guide",
@@ -350,7 +350,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
-    image: "/images/tour-photos/tour-photo-3.webp",
+    image: "/images/tour-photos/asakusa-guest-selfie.webp",
   },
   // New Day Trip Guides
   {
@@ -391,7 +391,7 @@ const blogPosts: BlogPost[] = [
     date: "April 20, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Helpful Guides",
-    image: "/images/tour-photos/tour-photo-1.webp",
+    image: "/images/tour-photos/sumida-river-group-selfie.webp",
   },
   // New Planning
   {
