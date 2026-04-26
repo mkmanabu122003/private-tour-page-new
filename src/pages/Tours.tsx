@@ -83,7 +83,7 @@ const experienceTours = [
     duration: "3-4 hours",
     price: "Contact for quote",
     difficulty: "Easy",
-    image: shibuyaCrossing,
+    image: "/images/tours/night-tour-golden-gai.webp",
   },
 ];
 
