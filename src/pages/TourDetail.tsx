@@ -314,7 +314,7 @@ const tourData = {
     subtitle: "Your perfect Tokyo experience",
     description: "Tell me your interests, and I'll create a personalized itinerary just for you. Whether you're passionate about food, history, anime, photography, or something completely unique, let's design your dream Tokyo day together.",
     duration: "Flexible (3-8 hours)",
-    price: "From ¥10,000~/hour",
+    price: "Tailored to your trip",
     difficulty: "Customizable",
     groupSize: "1-6 people",
     startTime: "Flexible",

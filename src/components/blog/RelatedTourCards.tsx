@@ -51,7 +51,7 @@ const tourCatalog: Record<string, TourInfo> = {
     id: "custom",
     title: "Custom Private Tour",
     duration: "Flexible",
-    price: "From ¥10,000~/hr",
+    price: "Tailored to your trip",
     link: "/tours/custom",
   },
   "tokyo-food-tour": {
@@ -131,7 +131,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     id: "custom",
     title: "Tour Personalizado",
     duration: "Flexible",
-    price: "Desde ¥10,000~/hr",
+    price: "A medida de tu viaje",
     link: "/es/tours/custom",
   },
   "tokyo-food-tour": {

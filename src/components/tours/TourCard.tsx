@@ -56,7 +56,9 @@ export const TourCard = ({
 
         <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
           <div>
-            <span className="text-xs text-muted-foreground">From</span>
+            {price.includes("¥") && (
+              <span className="text-xs text-muted-foreground">From</span>
+            )}
             <p className="text-lg font-semibold text-foreground">{price}</p>
           </div>
           <div className="flex items-center gap-2 text-accent font-medium text-sm group-hover:gap-3 transition-all">

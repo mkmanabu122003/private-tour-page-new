@@ -60,7 +60,7 @@ const tokyoTours = [
     title: "Custom Private Tour",
     description: "Create your perfect Tokyo experience. Share your interests (food, history, photography, anime) and I'll design a personalized itinerary just for you.",
     duration: "Flexible",
-    price: "From ¥10,000~/hour",
+    price: "Tailored to your trip",
     difficulty: "Customizable",
     image: hamarikyu,
   },

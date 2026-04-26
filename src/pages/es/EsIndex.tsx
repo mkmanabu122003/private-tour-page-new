@@ -100,7 +100,7 @@ const tours = [
     title: "Tour Privado Personalizado",
     description: "Crea tu experiencia perfecta en Tokio. Cuéntame tus intereses y diseñaré un itinerario personalizado solo para ti.",
     duration: "Flexible",
-    price: "Desde ¥10,000~/hora",
+    price: "A medida de tu viaje",
     difficulty: "Personalizable",
     // TODO: replace with custom tour image (e.g. a map, planning scene, or collage)
     image: "/images/tour-photos/group-photo.webp",
