@@ -43,7 +43,7 @@ const blogPosts: BlogPost[] = [
     date: "April 23, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Area Guides",
-    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
+    image: "/images/tours/harajuku-takeshita-street.webp",
   },
   // Day Trip Guides
   {
@@ -268,7 +268,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Planning Your Trip",
-    image: "/images/tours/asakusa-kaminarimon-gate.webp",
+    image: "/images/blog/ryokan-nakai-kimono-greeting.webp",
   },
   // Food Guides
   {
@@ -413,7 +413,7 @@ const blogPosts: BlogPost[] = [
     date: "March 31, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
-    image: "/images/blog/tsukiji-market-seafood-stalls.webp",
+    image: "/images/blog/toyosu-senkyaku-banrai.webp",
   },
   {
     slug: "tsukiji-to-ginza-food-walk",
@@ -423,7 +423,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Food Guides",
-    image: "/images/blog/tsukiji-food-guide-hero.webp",
+    image: "/images/blog/ginza-backstreet-buildings.webp",
   },
 ];
 
