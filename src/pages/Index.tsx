@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BadgeCheck, Footprints, Key, Star, MessageSquare, MapPin, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Star, MessageSquare, MapPin, CheckCircle2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { trackBookNowClick } from "@/lib/ga4";
@@ -104,33 +104,6 @@ const tours = [
   },
 ];
 
-const trustSignals = [
-  {
-    icon: BadgeCheck,
-    stat: "Licensed",
-    label: "Government Certified",
-    description: "National Guide Interpreter (全国通訳案内士)",
-  },
-  {
-    icon: Footprints,
-    stat: "500+",
-    label: "Tours Completed",
-    description: "Since 2018, guests from 40+ countries",
-  },
-  {
-    icon: Star,
-    stat: "4.86★",
-    label: "Average Rating",
-    description: "From verified guest reviews",
-  },
-  {
-    icon: Key,
-    stat: "100%",
-    label: "Private Tours",
-    description: "Just your group. No strangers.",
-  },
-];
-
 const testimonials = [
   {
     text: "We did 3 tours in Tokyo and Manabu's was by far the most informative and engaging. He was very clear in his delivery and offered interesting cultural insights as sidebars to each venue we visited. Highly recommended!",
@@ -206,7 +179,7 @@ const Index = () => {
               <span className="text-accent">with a Licensed Local Guide</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              500+ tours completed. 4.86★ average rating. Government-licensed guide.
+              500+ tours completed. 4.86★ average rating. Government-licensed guide. Just your group, never strangers.
             </p>
             <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
               Every tour starts with a simple question: What excites you most about
@@ -228,25 +201,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trust Signals */}
-      <section className="py-16 md:py-20 bg-card border-b border-border">
+      {/* Testimonials — moved up from below Featured Tours so credibility
+          via real guest words reaches users before the 30% scroll dropoff
+          observed in Clarity. Replaces the Trust Signals stat row, whose
+          content was already covered by the hero subtitle. */}
+      <section className="py-20 md:py-28 bg-card border-b border-border">
         <div className="container-section">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            {trustSignals.map((signal) => (
-              <div key={signal.label} className="text-center">
-                <signal.icon className="w-6 h-6 text-accent mx-auto mb-4" strokeWidth={1.75} />
-                <div className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-                  {signal.stat}
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-label text-accent mb-4">Guest Reviews</p>
+            <div className="w-10 h-px bg-accent mx-auto mb-6" />
+            <h2 className="heading-section text-foreground">What Travelers Say</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <blockquote
+                key={testimonial.author}
+                className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
+              >
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-gold text-gold"
+                    />
+                  ))}
                 </div>
-                <div className="mt-2 text-sm font-medium text-foreground/80 tracking-wide uppercase">
-                  {signal.label}
-                </div>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  {signal.description}
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  "{testimonial.text}"
                 </p>
-              </div>
+                <footer className="pt-4 border-t border-border">
+                  <cite className="not-italic font-medium text-foreground text-sm">
+                    - {testimonial.author}
+                  </cite>
+                </footer>
+              </blockquote>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            500+ five-star reviews from travelers worldwide
+          </p>
         </div>
       </section>
 
@@ -288,47 +283,6 @@ const Index = () => {
               <ArrowRight className="btn-arrow" />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-4">Guest Reviews</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">What Travelers Say</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <blockquote
-                key={testimonial.author}
-                className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
-              >
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-gold text-gold"
-                    />
-                  ))}
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  "{testimonial.text}"
-                </p>
-                <footer className="pt-4 border-t border-border">
-                  <cite className="not-italic font-medium text-foreground text-sm">
-                    - {testimonial.author}
-                  </cite>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-
-          <p className="mt-8 text-center text-sm text-muted-foreground">
-            500+ five-star reviews from travelers worldwide
-          </p>
         </div>
       </section>
 
