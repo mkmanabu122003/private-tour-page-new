@@ -283,6 +283,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tour-photos/group-photo.webp",
   },
   {
+    slug: "tour-gratis-vs-guia-privado-tokio",
+    title: "Tour Gratis vs Guía Privado en Tokio: Las Cuentas Reales (2026)",
+    description:
+      "Los tours gratis en Tokio esperan ¥1.000–2.000 de propina por persona. Un guía privado con licencia cuesta ¥45.000 por grupo. Cuándo elegir cada uno.",
+    date: "30 de abril de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/sumida-river-group-selfie.webp",
+  },
+  {
     slug: "primera-vez-tokio-guia-local",
     title: "Primera Vez en Tokio: Lo Que Cambia Tener un Guía Local",
     description:

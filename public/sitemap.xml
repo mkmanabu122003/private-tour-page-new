@@ -258,6 +258,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tanuki-tabi-travel.com/blog/free-walking-tour-vs-private-tokyo</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tanuki-tabi-travel.com/blog/tokyo-with-kids-family-tour</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -575,6 +581,12 @@
   <url>
     <loc>https://tanuki-tabi-travel.com/es/blog/cuanto-cuesta-guia-privado-tokio</loc>
     <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/blog/tour-gratis-vs-guia-privado-tokio</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

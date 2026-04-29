@@ -334,6 +334,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tour-photos/tour-photo-2.webp",
   },
   {
+    slug: "free-walking-tour-vs-private-tokyo",
+    title: "Free Walking Tour vs Private Guide in Tokyo: The Honest Math (2026)",
+    description:
+      "Free Tokyo walking tours expect ¥1,000–2,000 in tips per person. A licensed private guide is ¥45,000 per group. A guide explains when each is the right call.",
+    date: "April 30, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Decision Helpers",
+    image: "/images/tour-photos/sumida-river-group-selfie.webp",
+  },
+  {
     slug: "what-to-expect-private-tour",
     title: "What to Expect on a Private Tour in Tokyo (From Your Guide)",
     description:

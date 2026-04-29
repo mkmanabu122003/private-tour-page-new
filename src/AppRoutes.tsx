@@ -40,6 +40,7 @@ import YanakaWalkingTourGuide from "./pages/blog/YanakaWalkingTourGuide";
 import YokohamaDayTrip from "./pages/blog/YokohamaDayTrip";
 import VegetarianFoodTourTokyo from "./pages/blog/VegetarianFoodTourTokyo";
 import TokyoPrivateTourGuideCost from "./pages/blog/TokyoPrivateTourGuideCost";
+import FreeWalkingTourVsPrivate from "./pages/blog/FreeWalkingTourVsPrivate";
 import TokyoWithKidsFamilyTour from "./pages/blog/TokyoWithKidsFamilyTour";
 import WhatToExpectPrivateTour from "./pages/blog/WhatToExpectPrivateTour";
 import HakoneDayTripGuideVsSolo from "./pages/blog/HakoneDayTripGuideVsSolo";
@@ -97,6 +98,7 @@ import EsAsakusaTokioGuia from "./pages/es/blog/EsAsakusaTokioGuia";
 import EsTsukiji2026 from "./pages/es/blog/EsTsukiji2026";
 import EsShitamachiTokio from "./pages/es/blog/EsShitamachiTokio";
 import EsCuantoCuestaGuiaPrivadoTokio from "./pages/es/blog/EsCuantoCuestaGuiaPrivadoTokio";
+import EsTourGratisVsGuiaPrivadoTokio from "./pages/es/blog/EsTourGratisVsGuiaPrivadoTokio";
 import EsValeLaPenaGuiaPrivadoTokio from "./pages/es/blog/EsValeLaPenaGuiaPrivadoTokio";
 import EsPrimeraVezTokioGuiaLocal from "./pages/es/blog/EsPrimeraVezTokioGuiaLocal";
 import EsTourGastronomicoTokio from "./pages/es/blog/EsTourGastronomicoTokio";
@@ -164,6 +166,7 @@ const AppRoutes = () => (
         <Route path="/blog/yokohama-day-trip-from-tokyo" element={<YokohamaDayTrip />} />
         <Route path="/blog/vegetarian-food-tour-tokyo" element={<VegetarianFoodTourTokyo />} />
         <Route path="/blog/tokyo-private-tour-guide-cost" element={<TokyoPrivateTourGuideCost />} />
+        <Route path="/blog/free-walking-tour-vs-private-tokyo" element={<FreeWalkingTourVsPrivate />} />
         <Route path="/blog/tokyo-with-kids-family-tour" element={<TokyoWithKidsFamilyTour />} />
         <Route path="/blog/what-to-expect-private-tour-tokyo" element={<WhatToExpectPrivateTour />} />
         <Route path="/blog/hakone-day-trip-guide-vs-solo" element={<HakoneDayTripGuideVsSolo />} />
@@ -222,6 +225,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/tsukiji-2026" element={<EsTsukiji2026 />} />
         <Route path="/es/blog/shitamachi-tokio" element={<EsShitamachiTokio />} />
         <Route path="/es/blog/cuanto-cuesta-guia-privado-tokio" element={<EsCuantoCuestaGuiaPrivadoTokio />} />
+        <Route path="/es/blog/tour-gratis-vs-guia-privado-tokio" element={<EsTourGratisVsGuiaPrivadoTokio />} />
         <Route path="/es/blog/vale-la-pena-guia-privado-tokio" element={<EsValeLaPenaGuiaPrivadoTokio />} />
         <Route path="/es/blog/primera-vez-tokio-guia-local" element={<EsPrimeraVezTokioGuiaLocal />} />
         <Route path="/es/blog/tour-gastronomico-tokio" element={<EsTourGastronomicoTokio />} />
