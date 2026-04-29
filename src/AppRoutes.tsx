@@ -17,7 +17,6 @@ import IsItWorthHiringGuide from "./pages/blog/IsItWorthHiringGuide";
 import DayTripComparison from "./pages/blog/DayTripComparison";
 import ShibuyaHarajukuGuide from "./pages/blog/ShibuyaHarajukuGuide";
 import ShinjukuGuide from "./pages/blog/ShinjukuGuide";
-import TsukijiGuide from "./pages/blog/TsukijiGuide";
 import BestTimeToVisit from "./pages/blog/BestTimeToVisit";
 import TempleEtiquette from "./pages/blog/TempleEtiquette";
 import AsakusaGuideNew from "./pages/blog/AsakusaGuideNew";
@@ -143,7 +142,6 @@ const AppRoutes = () => (
         <Route path="/blog/kamakura-vs-hakone-vs-nikko-day-trip" element={<DayTripComparison />} />
         <Route path="/blog/shibuya-harajuku-guide" element={<ShibuyaHarajukuGuide />} />
         <Route path="/blog/shinjuku-guide" element={<ShinjukuGuide />} />
-        <Route path="/blog/tsukiji-guide-food-lover" element={<TsukijiGuide />} />
         <Route path="/blog/best-time-to-visit-tokyo" element={<BestTimeToVisit />} />
         <Route path="/blog/japan-temple-shrine-etiquette" element={<TempleEtiquette />} />
         <Route path="/blog/asakusa-guide" element={<AsakusaGuideNew />} />

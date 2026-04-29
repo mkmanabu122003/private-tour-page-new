@@ -140,7 +140,7 @@ export const neighborhoodFinderConfig: DiagnosticConfig = {
       tourPath: "/tours/tsukiji-ginza",
       tourLabel: "Walk Tsukiji with me",
       readMoreLabel: "Read the full Tsukiji guide",
-      readMorePath: "/blog/tsukiji-guide-food-lover",
+      readMorePath: "/blog/tsukiji-market-guide",
       contactQuery: "tsukiji-ginza",
     },
     imperial: {

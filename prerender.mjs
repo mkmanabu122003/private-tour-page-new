@@ -30,7 +30,6 @@ const routes = [
   "/blog/asakusa-guide-what-to-see",
   "/blog/shibuya-harajuku-guide",
   "/blog/shinjuku-guide",
-  "/blog/tsukiji-guide-food-lover",
   "/blog/tokyo-izakaya-guide",
   "/blog/best-time-to-visit-tokyo",
   "/blog/japan-temple-shrine-etiquette",

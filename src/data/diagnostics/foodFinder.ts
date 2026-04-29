@@ -111,7 +111,7 @@ export const foodFinderConfig: DiagnosticConfig = {
       tourPath: "/tours/tsukiji-ginza",
       tourLabel: "Walk Tsukiji with me",
       readMoreLabel: "Read the Tsukiji Guide",
-      readMorePath: "/blog/tsukiji-guide-food-lover",
+      readMorePath: "/blog/tsukiji-market-guide",
       contactQuery: "tsukiji-ginza",
     },
     izakaya: {

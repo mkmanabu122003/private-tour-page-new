@@ -70,6 +70,12 @@
   to = "/tours"
   status = 301
 
+# Cannibalization fix: old Tsukiji food-lover guide → new Tsukiji Market guide
+[[redirects]]
+  from = "/blog/tsukiji-guide-food-lover"
+  to = "/blog/tsukiji-market-guide"
+  status = 301
+
 # 404: removed pages with no replacement
 [[redirects]]
   from = "/policies"

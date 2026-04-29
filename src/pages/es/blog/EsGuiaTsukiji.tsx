@@ -16,9 +16,9 @@ const EsGuiaTsukiji = () => {
         description="Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia."
         canonicalPath="/es/blog/guia-tsukiji"
         hreflang={[
-          { lang: "en", path: "/blog/tsukiji-guide-food-lover" },
+          { lang: "en", path: "/blog/tsukiji-market-guide" },
           { lang: "es", path: "/es/blog/guia-tsukiji" },
-          { lang: "x-default", path: "/blog/tsukiji-guide-food-lover" },
+          { lang: "x-default", path: "/blog/tsukiji-market-guide" },
         ]}
       />
 
