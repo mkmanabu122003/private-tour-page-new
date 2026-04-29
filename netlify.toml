@@ -76,6 +76,12 @@
   to = "/blog/tsukiji-market-guide"
   status = 301
 
+# Cannibalization fix (ES): underperforming new article → established winner
+[[redirects]]
+  from = "/es/blog/mercado-tsukiji-tokio"
+  to = "/es/blog/guia-tsukiji"
+  status = 301
+
 # 404: removed pages with no replacement
 [[redirects]]
   from = "/policies"

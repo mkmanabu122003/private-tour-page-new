@@ -80,7 +80,7 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Para una mirada más detallada al mercado en sí, consulta mi{" "}
-              <Link to="/es/blog/mercado-tsukiji-tokio" className="text-accent hover:underline">
+              <Link to="/es/blog/guia-tsukiji" className="text-accent hover:underline">
                 guía del mercado de Tsukiji
               </Link>
               .

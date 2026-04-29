@@ -208,7 +208,7 @@ const EsTourGastronomicoTokio = () => {
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El mercado exterior sigue siendo el epicentro de la comida callejera en Tokio. Marisco fresco, tamagoyaki (tortilla japonesa), daifuku (mochi relleno), fruta de temporada. Lee nuestra{" "}
-              <Link to="/es/blog/mercado-tsukiji-tokio" className="text-accent hover:underline">
+              <Link to="/es/blog/guia-tsukiji" className="text-accent hover:underline">
                 guía del mercado de Tsukiji
               </Link>
               {" "}para más detalles.

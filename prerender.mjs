@@ -96,7 +96,6 @@ const routes = [
   "/es/blog/monte-fuji-desde-tokio",
   "/es/blog/propinas-en-japon",
   "/es/blog/que-se-come-en-japon",
-  "/es/blog/mercado-tsukiji-tokio",
   "/es/blog/comida-callejera-tokio",
   "/es/blog/que-comer-en-japon",
   "/es/blog/japan-rail-pass-vale-la-pena",

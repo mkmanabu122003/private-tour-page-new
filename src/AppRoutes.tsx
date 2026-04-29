@@ -83,7 +83,6 @@ import EsComparativaExcursiones from "./pages/es/blog/EsComparativaExcursiones";
 
 import EsPropinasenJapon from "./pages/es/blog/EsPropinasenJapon";
 import EsQueSecomeEnJapon from "./pages/es/blog/EsQueSecomeEnJapon";
-import EsMercadoTsukijiTokio from "./pages/es/blog/EsMercadoTsukijiTokio";
 import EsComidaCallejeraTokio from "./pages/es/blog/EsComidaCallejeraTokio";
 import EsQueComerEnJapon from "./pages/es/blog/EsQueComerEnJapon";
 import EsJapanRailPass from "./pages/es/blog/EsJapanRailPass";
@@ -209,7 +208,6 @@ const AppRoutes = () => (
 
         <Route path="/es/blog/propinas-en-japon" element={<EsPropinasenJapon />} />
         <Route path="/es/blog/que-se-come-en-japon" element={<EsQueSecomeEnJapon />} />
-        <Route path="/es/blog/mercado-tsukiji-tokio" element={<EsMercadoTsukijiTokio />} />
         <Route path="/es/blog/comida-callejera-tokio" element={<EsComidaCallejeraTokio />} />
         <Route path="/es/blog/que-comer-en-japon" element={<EsQueComerEnJapon />} />
         <Route path="/es/blog/japan-rail-pass-vale-la-pena" element={<EsJapanRailPass />} />

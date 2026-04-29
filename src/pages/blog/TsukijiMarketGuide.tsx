@@ -17,7 +17,7 @@ const TsukijiMarketGuide = () => {
         canonicalPath="/blog/tsukiji-market-guide"
         hreflang={[
           { lang: "en", path: "/blog/tsukiji-market-guide" },
-          { lang: "es", path: "/es/blog/mercado-tsukiji-tokio" },
+          { lang: "es", path: "/es/blog/guia-tsukiji" },
           { lang: "x-default", path: "/blog/tsukiji-market-guide" },
         ]}
         breadcrumbs={[

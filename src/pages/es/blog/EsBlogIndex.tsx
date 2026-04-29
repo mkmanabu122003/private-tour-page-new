@@ -48,10 +48,10 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/shinjuku-guide-hero.webp",
   },
   {
-    slug: "mercado-tsukiji-tokio",
-    title: "Mercado de Tsukiji en Tokio: Qué Queda y Qué Vale la Pena Ver en 2026",
+    slug: "guia-tsukiji",
+    title: "Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)",
     description:
-      "El mercado interior de Tsukiji cerró en 2018. ¿Qué hay ahora? Un guía oficial explica qué sigue abierto, qué comer y por qué aún vale la visita.",
+      "Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia.",
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Barrios de Tokio",
