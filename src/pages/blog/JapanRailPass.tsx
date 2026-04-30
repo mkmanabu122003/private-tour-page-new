@@ -10,8 +10,8 @@ const JapanRailPass = () => {
   return (
     <Layout>
       <SEO
-        title="Is the JR Pass Worth It in 2026? Route-by-Route Breakdown"
-        description="After the 70% price hike, the JR Pass only saves money on specific routes. See exact fare comparisons for Tokyo-Kyoto, Tokyo-Osaka, and regional passes that beat it. Updated April 2026."
+        title="JR Pass Price 2026 (¥50,000 for 7 Days): Worth It?"
+        description="JR Pass 2026 prices: ¥50,000 (7-day), ¥80,000 (14-day), ¥100,000 (21-day). After the 70% hike, only worth it on specific routes. Real fare math by a Tokyo guide."
         canonicalPath="/blog/japan-rail-pass-worth-it"
         breadcrumbs={[
           { name: "Home", path: "/" },

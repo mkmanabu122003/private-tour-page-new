@@ -174,9 +174,14 @@ const DayTripComparison = () => {
               Most tourists follow the same route (Station → Hachimangu → Great Buddha → Station), but Kamakura's real magic is in the smaller temples tucked into the surrounding hills. Zuisen-ji Temple has a stunning rock garden that receives a fraction of the visitors. The hiking trails between temples offer ocean views and forest walks. And in June, Kamakura transforms into a hydrangea paradise. Meigetsu-in Temple's blue hydrangea garden is one of the most photographed spots in Japan.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <Link to="/tours/kamakura-day-trip" className="text-accent hover:underline font-medium">
-                View our Kamakura Day Trip tour details →
+              For a deeper dive on Kamakura specifically, see my{" "}
+              <Link to="/blog/kamakura-day-trip-from-tokyo" className="text-accent hover:underline font-medium">
+                full Kamakura day trip from Tokyo guide
               </Link>
+              {" "}— with route, timing, and the temples most visitors miss. Or{" "}
+              <Link to="/tours/kamakura-day-trip" className="text-accent hover:underline font-medium">
+                view the Kamakura Day Trip tour details
+              </Link>.
             </p>
 
             {/* Hakone */}
@@ -223,9 +228,14 @@ const DayTripComparison = () => {
               The transport system is also genuinely complex. The Hakone Free Pass is the most economical option, but figuring out the right combination of transportation, timing, and routing on your own takes significant planning. A guide eliminates this cognitive load entirely.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <Link to="/tours/hakone-day-trip" className="text-accent hover:underline font-medium">
-                View our Hakone Day Trip tour details →
+              For Hakone-specific planning (transport pass math, guided vs solo, weather strategy), see my{" "}
+              <Link to="/blog/hakone-day-trip-guide-vs-solo" className="text-accent hover:underline font-medium">
+                Hakone day trip guide
               </Link>
+              . Or{" "}
+              <Link to="/tours/hakone-day-trip" className="text-accent hover:underline font-medium">
+                view the Hakone Day Trip tour details
+              </Link>.
             </p>
 
             {/* Nikko */}
@@ -259,9 +269,14 @@ const DayTripComparison = () => {
               A guide is particularly valuable at Nikko because Toshogu's carvings are a visual encyclopedia that requires explanation to appreciate. Without context, you'll see "pretty decorations." With a guide, you'll understand the political messages, Buddhist symbolism, and Confucian philosophy embedded in every panel. It's the difference between looking at the Sistine Chapel and understanding what Michelangelo was trying to say.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <Link to="/tours/nikko-day-trip" className="text-accent hover:underline font-medium">
-                View our Nikko Day Trip tour details →
+              For full Nikko logistics (Tobu vs JR, ¥12,000 solo budget vs guided), see my{" "}
+              <Link to="/blog/nikko-day-trip-from-tokyo" className="text-accent hover:underline font-medium">
+                Nikko day trip from Tokyo guide
               </Link>
+              . Or{" "}
+              <Link to="/tours/nikko-day-trip" className="text-accent hover:underline font-medium">
+                view the Nikko Day Trip tour details
+              </Link>.
             </p>
 
             {/* Can I Do Two? */}

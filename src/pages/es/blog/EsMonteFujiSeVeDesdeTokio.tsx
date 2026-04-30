@@ -255,6 +255,33 @@ const EsMonteFujiSeVeDesdeTokio = () => {
 
               <div>
                 <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿Cuántos días al año se ve el Monte Fuji desde Tokio?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Aproximadamente <strong>100 a 130 días al año</strong> en condiciones razonables. La distribución es muy desigual: la mayoría caen entre noviembre y marzo (más de 15 días claros al mes), mientras que en julio y agosto a veces no se ve ni una sola vez en todo el mes. Si tu viaje es en verano, no cuentes con verlo desde la ciudad — planea una excursión a Hakone o los Cinco Lagos del Fuji para asegurarlo.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿En qué meses se ve mejor el Monte Fuji desde Tokio?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong>Diciembre, enero y febrero</strong> son los mejores meses, con visibilidad del 50-60% de los días. Noviembre y marzo también son buenos (40-50%). Abril y mayo bajan al 25-35%. De junio a septiembre la visibilidad cae al 10-20%, con muchos días seguidos sin Fuji visible debido a la humedad y las nubes de la temporada de lluvias y el verano. Octubre repunta a alrededor del 35%.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
+                  ¿Cómo saber si se ve el Monte Fuji hoy?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Tres señales rápidas la mañana del día: (1) cielo despejado al amanecer (no nublado), (2) baja humedad — consulta la app del tiempo, por debajo del 50% es buena señal, (3) viento del norte o noroeste (limpia el aire de Tokio). Para confirmación visual, las webcams en directo de la región del Fuji (busca "Fuji webcam live") muestran las condiciones actuales. La mejor hora suele ser justo después del amanecer y antes del atardecer, cuando el aire está más limpio.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium text-foreground mb-2">
                   ¿Cuál es el mejor mirador gratuito en 2026?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -359,6 +386,30 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Técnicamente sí, pero depende del clima. En invierno (noviembre-febrero) se ve entre 40-60% de los días. En verano (junio-agosto), solo 10-20%. La humedad es la clave: cuanto más seco esté el aire, más fácil verlo.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuántos días al año se ve el Monte Fuji desde Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Aproximadamente 100 a 130 días al año en condiciones razonables. La mayoría caen entre noviembre y marzo (más de 15 días claros al mes), mientras que en julio y agosto a veces no se ve ni una sola vez en todo el mes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿En qué meses se ve mejor el Monte Fuji desde Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Diciembre, enero y febrero son los mejores meses, con visibilidad del 50-60% de los días. Noviembre y marzo también son buenos (40-50%). Abril y mayo bajan al 25-35%. De junio a septiembre la visibilidad cae al 10-20%.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cómo saber si se ve el Monte Fuji hoy?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tres señales rápidas: (1) cielo despejado al amanecer, (2) baja humedad (por debajo del 50%), (3) viento del norte o noroeste que limpia el aire. Las webcams en directo de la región del Fuji muestran las condiciones actuales antes de salir.",
                 },
               },
               {
