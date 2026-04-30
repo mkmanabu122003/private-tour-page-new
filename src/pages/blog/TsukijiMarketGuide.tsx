@@ -83,6 +83,16 @@ const TsukijiMarketGuide = () => {
               </p>
             </div>
 
+            {/* Soft top-of-article CTA — catches readers who got their answer
+                from the Quick Answer box and would otherwise bounce (87 sessions
+                / 0 engaged in GA4 28d, 2026-04-26 snapshot). */}
+            <p className="text-sm text-muted-foreground italic text-center mb-8">
+              Visiting Tokyo soon?{" "}
+              <Link to="/tours/tsukiji-ginza" className="text-accent hover:underline font-medium not-italic">
+                See how I walk this market with guests →
+              </Link>
+            </p>
+
             {/* Table of Contents — addresses observed scroll dropoff and gives
                 clickable structure to the page (Clarity heatmap, 2026-04-26
                 showed users clicking H3 headings expecting navigation). */}
@@ -90,43 +100,48 @@ const TsukijiMarketGuide = () => {
               <p className="font-semibold text-foreground mb-3">Jump to a section</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
                 <li>
+                  <a href="#hours" className="text-foreground hover:text-accent hover:underline">
+                    Tsukiji Market Hours
+                  </a>
+                </li>
+                <li>
                   <a href="#what-happened" className="text-foreground hover:text-accent hover:underline">
-                    📜 What Happened to Tsukiji
+                    What Happened to Tsukiji
                   </a>
                 </li>
                 <li>
                   <a href="#outer-market" className="text-foreground hover:text-accent hover:underline">
-                    🏬 What's Still There: The Outer Market
+                    What's Still There: The Outer Market
                   </a>
                 </li>
                 <li>
                   <a href="#tamagoyaki" className="text-foreground hover:text-accent hover:underline">
-                    🥚 Tamagoyaki: The Icon
+                    Tamagoyaki: The Icon
                   </a>
                 </li>
                 <li>
                   <a href="#sushi" className="text-foreground hover:text-accent hover:underline">
-                    🍣 Fresh Sushi: Standing Up
+                    Fresh Sushi: Standing Up
                   </a>
                 </li>
                 <li>
                   <a href="#kaisendon" className="text-foreground hover:text-accent hover:underline">
-                    🍚 Seafood Rice Bowls (Kaisendon)
+                    Seafood Rice Bowls (Kaisendon)
                   </a>
                 </li>
                 <li>
                   <a href="#pickles" className="text-foreground hover:text-accent hover:underline">
-                    🥒 Pickles & Souvenirs
+                    Pickles & Souvenirs
                   </a>
                 </li>
                 <li>
                   <a href="#how-to-get-there" className="text-foreground hover:text-accent hover:underline">
-                    🚇 How to Get There
+                    How to Get There
                   </a>
                 </li>
                 <li>
                   <a href="#tsukiji-vs-toyosu" className="text-foreground hover:text-accent hover:underline">
-                    ⚖️ Tsukiji vs. Toyosu
+                    Tsukiji vs. Toyosu
                   </a>
                 </li>
               </ul>
@@ -137,10 +152,86 @@ const TsukijiMarketGuide = () => {
               "Isn't Tsukiji closed?" I hear this question at least once a week from visitors planning their Tokyo itinerary. And I understand the confusion. The headlines from 2018 were everywhere: Tsukiji Market closes, the tuna auctions move to Toyosu, an era ends. But here's what those headlines got wrong, or at least left out. Only the inner wholesale market moved. The outer market, the part that matters most to visitors, never closed. It's still here, still thriving, and still one of the best food experiences in Tokyo.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm Manabu, a nationally licensed tour guide, and I walk through Tsukiji's outer market several times each week with guests from around the world. This tsukiji guide is everything I wish visitors knew before arriving: what actually happened to the market, what's still worth seeing, what to eat, and how to time your visit so you get the best experience possible. Whether you're a serious food lover or simply curious about one of Tokyo's most storied neighborhoods, this tsukiji guide will help you make the most of your morning.
+              I'm Manabu — a nationally licensed guide who walks through Tsukiji's outer market several times a week with guests from all over. This is everything I wish visitors knew before showing up: what actually happened in 2018, what's still here, what to eat, and how to time it so you don't end up at shuttered stalls.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Let me walk you through it the same way I walk my tour guests through the market: honestly, with no hype, and with the kind of detail you can only get from someone who's been doing this for years.
+              No hype, no "must-eat" listicles. Just the same walkthrough I give my own clients.
+            </p>
+
+            {/* Section: Tsukiji Market Hours — exact-match for top GSC queries */}
+            <h2 id="hours" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
+              Tsukiji Outer Market Hours (2026)
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Tsukiji Outer Market doesn't have a single official opening time — each shop sets its own. But the practical rhythm has been consistent for decades, and these are the hours I tell my own clients to plan around.
+            </p>
+
+            <div className="overflow-x-auto my-6">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-secondary/40">
+                    <th className="text-left p-3 font-medium text-foreground">Day</th>
+                    <th className="text-left p-3 font-medium text-foreground">Most shops</th>
+                    <th className="text-left p-3 font-medium text-foreground">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Monday</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Open</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Tuesday</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Open (best day)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Wednesday</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Open most weeks; closed on select dates (see calendar)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Thursday</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Open (best day)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Friday</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Open (best day)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Saturday</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Open but very crowded after 9 AM</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 text-foreground"><strong>Sunday</strong></td>
+                    <td className="p-3 text-muted-foreground"><strong>Closed</strong></td>
+                    <td className="p-3 text-muted-foreground">Most shops closed; a few cafes open</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">The hour-by-hour reality:</strong>
+            </p>
+            <ul className="list-disc pl-6 space-y-1 text-muted-foreground mb-4">
+              <li><strong>5:00–7:00 AM</strong> — vendors setting up; only a handful of grilled-food stalls open</li>
+              <li><strong>7:00–11:00 AM</strong> — the sweet spot. Everything is open, fully stocked, and not yet packed</li>
+              <li><strong>11:00 AM–1:00 PM</strong> — lunch crowds peak; ~30% of stalls start packing up</li>
+              <li><strong>1:00–2:00 PM</strong> — most food stalls closing; sit-down restaurants still open</li>
+              <li><strong>After 2:00 PM</strong> — the market is effectively shut down. Don't bother arriving this late.</li>
+            </ul>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">When Tsukiji Market is closed:</strong> Sundays (every week) and a handful of Wednesdays each year that follow the Tokyo Central Wholesale Market holiday calendar. New Year's (Dec 30 – Jan 4) is also closed. Always cross-check with the{" "}
+              <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                official market calendar
+              </a>
+              {" "}before your trip — closure dates around Japanese national holidays vary year to year.
             </p>
 
             {/* Section 1: What Happened */}
@@ -186,6 +277,12 @@ const TsukijiMarketGuide = () => {
                 The outer market's narrow lanes, over 400 shops packed into a few walkable blocks
               </figcaption>
             </figure>
+
+            <InlineCTA
+              message="400 shops in a few blocks is a lot to navigate alone — want help?"
+              linkText="See the Tsukiji + Ginza tour →"
+              href="/tours/tsukiji-ginza"
+            />
 
             {/* Section 3: What to Eat */}
             <h2 className="heading-section text-foreground mt-12 mb-6">
@@ -327,6 +424,12 @@ const TsukijiMarketGuide = () => {
               has neighborhood-specific recommendations that work well as a Tsukiji follow-up.
             </p>
 
+            <InlineCTA
+              message="Skip the timing math and route planning."
+              linkText="Book a guided Tsukiji + Ginza walk →"
+              href="/tours/tsukiji-ginza"
+            />
+
             {/* Section 5: Tsukiji vs Toyosu */}
             <h2 id="tsukiji-vs-toyosu" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
               Tsukiji vs. Toyosu: Should You Visit Both?
@@ -383,6 +486,18 @@ const TsukijiMarketGuide = () => {
                   </p>
                 </div>
                 <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">What time does Tsukiji Outer Market open and close?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most shops at Tsukiji Outer Market open around 5:00 AM and close by 2:00 PM, though each shop sets its own hours. The peak window for visitors is 7:00–11:00 AM, when everything is open and stocked. After 2:00 PM the market is effectively shut down for the day.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji Outer Market open on Sundays?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. Tsukiji Outer Market is closed every Sunday — most shops, food stalls, and restaurants are shut. A handful of cafes near the market may open, but it's not worth a visit. Plan for Tuesday, Thursday, or Friday morning instead.
+                  </p>
+                </div>
+                <div>
                   <h3 className="text-lg font-medium text-foreground mb-2">What time should I arrive at Tsukiji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Aim for 8:00 AM. The stalls are fully stocked, the grills are hot, and the crowds are still manageable. Between 9 and 10 AM is acceptable but busier. Most stalls begin closing by 1 to 2 PM, so this is strictly a morning destination.
@@ -432,6 +547,8 @@ const TsukijiMarketGuide = () => {
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
           { "@type": "Question", name: "Is Tsukiji Outer Market still open after the Toyosu move?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but Tsukiji Outer Market with over 400 shops, restaurants, and food stalls remains open and thriving in 2026." }},
+          { "@type": "Question", name: "What time does Tsukiji Outer Market open and close?", acceptedAnswer: { "@type": "Answer", text: "Most shops at Tsukiji Outer Market open around 5:00 AM and close by 2:00 PM. The peak window for visitors is 7:00-11:00 AM, when everything is open and stocked. After 2:00 PM the market is effectively shut down for the day." }},
+          { "@type": "Question", name: "Is Tsukiji Outer Market open on Sundays?", acceptedAnswer: { "@type": "Answer", text: "No. Tsukiji Outer Market is closed every Sunday — most shops, food stalls, and restaurants are shut. Plan for Tuesday, Thursday, or Friday morning instead." }},
           { "@type": "Question", name: "What time should I arrive at Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Aim for 8:00 AM. Stalls are fully stocked, grills are hot, and crowds are manageable. Most stalls close by 1-2 PM." }},
           { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best. Check the official market calendar." }},
           { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},
