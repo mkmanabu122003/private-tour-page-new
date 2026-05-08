@@ -62,14 +62,10 @@ const EsComparativaExcursiones = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Aquí tienes una comparación honesta y detallada para ayudarte a decidir. Y si después de leer esto sigues sin poder elegir, para eso están los itinerarios personalizados.
             </p>
-          </article>
 
-          {/* Interactive Diagnostic Tool — opens in modal */}
-          <div className="max-w-3xl mx-auto">
+            {/* Interactive Diagnostic Tool — opens in modal */}
             <DiagnosticTrigger config={dayTripFinderConfigEs} />
-          </div>
 
-          <article className="max-w-3xl mx-auto prose-editorial">
             {/* Quick Comparison Table */}
             <div className="section-eyebrow"><span>Section 01 · Comparación Rápida</span></div>
             <h2 id="section-01-comparación-rápida" className="scroll-mt-20">
