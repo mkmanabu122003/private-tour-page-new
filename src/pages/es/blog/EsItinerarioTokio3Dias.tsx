@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsItinerarioTokio3Dias = () => {
   return (
@@ -20,53 +22,34 @@ const EsItinerarioTokio3Dias = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/shibuya-crossing-tokyo.webp"
-          alt="Cruce de Shibuya, itinerario de 3 días por Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Itinerarios</p>
-            <h1 className="heading-display text-foreground">
-              El Itinerario Perfecto de 3 Días en Tokio, De un Guía Local
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/shibuya-crossing-tokyo.webp"
+        imageAlt="Cruce de Shibuya, itinerario de 3 días por Tokio"
+        eyebrow="Itinerarios"
+        title="El Itinerario Perfecto de 3 Días en Tokio, De un Guía Local"
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Día 1: Este de Tokio,…", href: "#section-01-día-1-este-de-tokio-historia-y-tradición" },
+          { num: "02", label: "Día 2: Oeste de Tokio,…", href: "#section-02-día-2-oeste-de-tokio-cultura-moderna-y-energía" },
+          { num: "03", label: "Día 3: Elige Tu Aventura", href: "#section-03-día-3-elige-tu-aventura" },
+          { num: "04", label: "Consejos Prácticos para Tu…", href: "#section-04-consejos-prácticos-para-tu-visita-a-tokio" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Después de guiar más de 500 tours en Tokio, he visto qué funciona y qué no para los visitantes primerizos. Algunos viajeros intentan meter todo en un solo día y terminan agotados. Otros se pierden joyas ocultas porque se limitan a las atracciones más obvias. Este itinerario de 3 días equilibra los lugares imprescindibles con experiencias locales que la mayoría de turistas se pierde. Siéntete libre de mezclar y combinar, cada viajero es diferente, y el mejor itinerario es el que te entusiasma.
@@ -76,11 +59,12 @@ const EsItinerarioTokio3Dias = () => {
             </p>
 
             {/* Día 1 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Día 1: Este de Tokio, Historia y Tradición</span></div>
+            <h2 id="section-01-día-1-este-de-tokio-historia-y-tradición" className="scroll-mt-20">
               Día 1: Este de Tokio, Historia y Tradición
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mañana: Asakusa, Donde Vive el Viejo Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -104,7 +88,7 @@ const EsItinerarioTokio3Dias = () => {
               cubre todo, desde rituales del templo hasta los mejores puestos de comida callejera.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Media Mañana: Paseo hasta Tokyo Skytree por el Parque Sumida
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -127,14 +111,14 @@ const EsItinerarioTokio3Dias = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Almuerzo: Sabores Locales Cerca de Asakusa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Para el almuerzo, recomiendo probar uno de los restaurantes tradicionales de soba (fideos de trigo sarraceno) o un local de tempura en Asakusa. Asakusa ha sido famosa por la tempura desde el período Edo, y todavía hay restaurantes familiares aquí que llevan perfeccionando su arte más de un siglo. Si eres aventurero, prueba el monjayaki, la versión tokiota del okonomiyaki de Osaka, más desordenado pero delicioso.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tarde: Yanaka, El Nostálgico Casco Antiguo de Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,7 +135,7 @@ const EsItinerarioTokio3Dias = () => {
               descubre historias y rincones que no encontrarás en ninguna guía.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Noche: Zona de Ueno, Mercado Ameyoko
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -161,11 +145,12 @@ const EsItinerarioTokio3Dias = () => {
             <InlineCTAEs />
 
             {/* Día 2 */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Día 2: Oeste de Tokio, Cultura Moderna y Energía</span></div>
+            <h2 id="section-02-día-2-oeste-de-tokio-cultura-moderna-y-energía" className="scroll-mt-20">
               Día 2: Oeste de Tokio, Cultura Moderna y Energía
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mañana: Santuario Meiji, Paz en la Ciudad
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -175,7 +160,7 @@ const EsItinerarioTokio3Dias = () => {
               Estate atento a las ceremonias de boda si visitas los fines de semana: podrías presenciar una procesión nupcial sintoísta tradicional. El santuario también tiene un hermoso jardín de iris (mejor en junio) y una exhibición de barriles de sake que cuenta la historia de la relación de Japón con el vino y los licores.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Media Mañana: Harajuku, Explosión de Cultura Juvenil
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -196,14 +181,14 @@ const EsItinerarioTokio3Dias = () => {
               cubre esta zona en profundidad, desde tiendas vintage ocultas hasta las historias detrás de las obras maestras arquitectónicas de Omotesando.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Almuerzo: Zona de Shibuya
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dirígete a Shibuya para almorzar. Evita las cadenas de restaurantes y busca locales auténticos en las calles traseras. Recomiendo probar un buen restaurante de ramen (la espera merece la pena) o un restaurante de curry japonés. Shibuya tiene algunos de los mejores de la ciudad. Si quieres algo rápido y quintaesencialmente japonés, prueba un gyudon (cuenco de ternera) en un restaurante de barra: rápido, contundente y delicioso.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tarde: Cruce de Shibuya y Más Allá
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -213,7 +198,7 @@ const EsItinerarioTokio3Dias = () => {
               Si te queda energía, pasea por los barrios más tranquilos detrás de las calles principales. Tomigaya y Kamiyamacho son favoritos de los locales con excelentes cafeterías, librerías independientes y pequeños restaurantes que la mayoría de turistas nunca descubre.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Noche: Vida Nocturna en Shinjuku
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -228,16 +213,17 @@ const EsItinerarioTokio3Dias = () => {
             </p>
 
             {/* Día 3 */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Día 3: Elige Tu Aventura</span></div>
+            <h2 id="section-03-día-3-elige-tu-aventura" className="scroll-mt-20">
               Día 3: Elige Tu Aventura
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Opción A: Centro de Tokio, Gastronomía, Jardines e Historia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Mañana, Mercado Exterior de Tsukiji:</strong> Aunque el mercado mayorista interior se trasladó a Toyosu, el Mercado Exterior de Tsukiji sigue siendo el mejor destino gastronómico de Tokio. Llega entre las 8 y las 9 AM para las ofertas más frescas: sushi para desayunar (sí, es algo habitual aquí), tamagoyaki (tortilla japonesa), ostras frescas y brochetas de wagyu. Tómate tu tiempo y picotea, es la mejor forma de vivir el mercado. Consulta nuestra{" "}
-              <Link to="/es/blog/guia-tsukiji-amantes-gastronomia" className="text-accent hover:underline">
+              <Link to="/es/blog/guia-tsukiji" className="text-accent hover:underline">
                 guía de Tsukiji para amantes de la gastronomía
               </Link>{" "}
               para saber qué comer y qué evitar.
@@ -263,7 +249,7 @@ const EsItinerarioTokio3Dias = () => {
               <strong className="text-foreground">Noche, Ginza:</strong> Termina tu estancia en Tokio en Ginza, el elegante distrito comercial. Aunque no vayas de compras, los pisos de alimentación de los grandes almacenes (depachika) en los sótanos merecen una visita: son paraísos culinarios de dulces japoneses bellamente empaquetados, cajas bento y delicias gourmet. Perfecto para comprar recuerdos comestibles.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Opción B: Excursión de un Día desde Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -291,17 +277,18 @@ const EsItinerarioTokio3Dias = () => {
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
               ¿No puedes decidirte? Lee nuestra comparación detallada:{" "}
-              <Link to="/es/blog/kamakura-vs-hakone-vs-nikko-excursion" className="text-accent hover:underline">
+              <Link to="/es/blog/comparativa-excursiones" className="text-accent hover:underline">
                 Kamakura vs Hakone vs Nikko: ¿Qué Excursión de un Día Elegir?
               </Link>
             </p>
 
             {/* Consejos Prácticos */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Consejos Prácticos para Tu Visita a Tokio</span></div>
+            <h2 id="section-04-consejos-prácticos-para-tu-visita-a-tokio" className="scroll-mt-20">
               Consejos Prácticos para Tu Visita a Tokio
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo Moverse
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -311,7 +298,7 @@ const EsItinerarioTokio3Dias = () => {
               No te dejes intimidar por el sistema de trenes: en realidad es muy intuitivo una vez que entiendes que diferentes compañías operan diferentes líneas. Los carteles están en inglés, las estaciones se anuncian en inglés y los trenes casi siempre son puntuales. Durante las horas punta (7:30-9 AM), evita las líneas más concurridas si es posible, o viaja en dirección contraria al flujo de commuters.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cuándo Visitar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -325,19 +312,19 @@ const EsItinerarioTokio3Dias = () => {
               .
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cuestiones de Dinero
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japón sigue dependiendo más del efectivo que muchos países, especialmente en pequeños restaurantes, templos y mercados. Lleva al menos entre 10.000 y 20.000 yenes en efectivo. Los cajeros automáticos de 7-Eleven y de Correos aceptan tarjetas internacionales de forma fiable. Las tarjetas de crédito se aceptan cada vez más en los establecimientos grandes, pero no dependas exclusivamente de ellas. Tu tarjeta IC (Suica/Pasmo) es el método de pago más cómodo para pequeñas compras.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Etiqueta en Templos y Santuarios
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En los santuarios: haz una ligera reverencia antes de pasar por el torii, camina por los lados (el camino central es para la divinidad), purifícate las manos en la pila de agua, y haz reverencia-aplauso-reverencia al rezar. En los templos: quítate los zapatos al entrar en los edificios, no señales las estatuas y habla en voz baja. Tu guía te explicará todas las costumbres en detalle, pero estos conceptos básicos te ayudarán a sentirte seguro. Para la guía paso a paso completa, lee nuestra{" "}
-              <Link to="/es/blog/etiqueta-templos-santuarios-japon" className="text-accent hover:underline">
+              <Link to="/es/blog/etiqueta-templos-santuarios" className="text-accent hover:underline">
                 guía de Etiqueta en Templos y Santuarios
               </Link>
               .
@@ -348,7 +335,7 @@ const EsItinerarioTokio3Dias = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres que un guía local dé vida a este itinerario?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -363,7 +350,11 @@ const EsItinerarioTokio3Dias = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -395,7 +386,9 @@ const EsItinerarioTokio3Dias = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

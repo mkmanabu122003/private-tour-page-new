@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 import { QuickAnswerEs } from "@/components/blog/QuickAnswer";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsJapanRailPass = () => {
   return (
@@ -19,53 +21,36 @@ const EsJapanRailPass = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/hakone-lake-ashi-fuji.webp"
-          alt="Lago Ashi y Monte Fuji: excursión con Japan Rail Pass"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planifica tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              ¿Vale la Pena el JR Pass en 2026? Comparativa Ruta por Ruta con Números Reales
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/hakone-lake-ashi-fuji.webp"
+        imageAlt="Lago Ashi y Monte Fuji: excursión con Japan Rail Pass"
+        eyebrow="Planifica tu Viaje"
+        title="¿Vale la Pena el JR Pass en 2026? Comparativa Ruta por Ruta con Números Reales"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Por qué la mayoría de los…", href: "#section-01-por-qué-la-mayoría-de-los-viajeros-se" },
+          { num: "02", label: "Cuánto cuesta el Japan Rail…", href: "#section-02-cuánto-cuesta-el-japan-rail-pass-en-2026" },
+          { num: "03", label: "Para quién SÍ vale la pena", href: "#section-03-para-quién-sí-vale-la-pena" },
+          { num: "04", label: "Para quién NO vale la pena", href: "#section-04-para-quién-no-vale-la-pena" },
+          { num: "05", label: "Alternativas al JR Pass que…", href: "#section-05-alternativas-al-jr-pass-que-casi-nadie-conoce" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" },
+          { num: "07", label: "Explora Tokio con un Guía…", href: "#section-07-explora-tokio-con-un-guía-local" }
+            ]} />
+
+            <article>
+
             <QuickAnswerEs
               answer="El precio del JR Pass no ha cambiado en 2026 — la última subida fue en octubre de 2023 (+70%, hasta ¥50,000 el pase Ordinario de 7 días). No hay ninguna subida prevista para 2026 a fecha de abril."
               hook="Pero lo que importa más que el precio es esto: tras la subida de 2023, el Pass solo compensa en itinerarios concretos. He calculado los números de las 12 rutas más comunes — y en 7 de ellas acabas perdiendo dinero comparado con comprar billetes sueltos de Shinkansen."
@@ -79,18 +64,19 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Por qué la mayoría se equivoca */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Por qué la mayoría de los viajeros se</span></div>
+            <h2 id="section-01-por-qué-la-mayoría-de-los-viajeros-se" className="scroll-mt-20">
               Por qué la mayoría de los viajeros se equivocan con el JR Pass
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El error del "por si acaso"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El error más común que veo es comprar el Japan Rail Pass de 7 días "por si acaso lo necesito". Antes de la subida de precios, esto tenía cierto sentido: el pase era tan barato que casi cualquier combinación de trenes lo amortizaba. Pero en 2026, con un pase de 7 días que cuesta 50.000 yenes (aproximadamente 310 euros), esa lógica ya no funciona. Necesitas hacer al menos dos o tres trayectos largos en shinkansen para que los números cuadren. Si tu plan es quedarte principalmente en Tokio con una excursión a Hakone o Kamakura, el JR Pass es tirar el dinero.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que cambió en 2023 (la subida de precio)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -111,11 +97,12 @@ const EsJapanRailPass = () => {
             </figure>
 
             {/* Cuánto cuesta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Cuánto cuesta el Japan Rail Pass en 2026</span></div>
+            <h2 id="section-02-cuánto-cuesta-el-japan-rail-pass-en-2026" className="scroll-mt-20">
               Cuánto cuesta el Japan Rail Pass en 2026
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Precios actualizados (7, 14 y 21 días)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -153,14 +140,14 @@ const EsJapanRailPass = () => {
               Los niños de 6 a 11 años pagan la mitad. Los menores de 6 años viajan gratis si van acompañados de un adulto con pase.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ordinario vs. Green Car
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
               El pase Green Car equivale a la primera clase. Los asientos son más amplios, hay más espacio para las piernas y los vagones van menos llenos. ¿Mi opinión honesta? Para la mayoría de los viajeros, el pase ordinario es más que suficiente. Los asientos de clase ordinaria en el shinkansen japonés son ya bastante cómodos (mucho más que cualquier tren europeo en segunda clase). Solo recomiendo el Green Car si tienes algún problema de movilidad, necesitas trabajar durante el trayecto con más espacio, o simplemente quieres darte un lujo. La diferencia de precio es considerable y rara vez justifica la mejora.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Comparativa: precios antes y después de la subida de 2023
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -221,7 +208,8 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Para quién SÍ vale la pena */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Para quién SÍ vale la pena</span></div>
+            <h2 id="section-03-para-quién-sí-vale-la-pena" className="scroll-mt-20">
               Para quién SÍ vale la pena (con cálculos reales)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -241,7 +229,7 @@ const EsJapanRailPass = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Itinerario Tokio-Kioto-Osaka-Hiroshima
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -261,14 +249,14 @@ const EsJapanRailPass = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Itinerario Tokio-Kioto-Kanazawa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Otro itinerario donde el japan rail pass vale la pena. Tokio a Kioto en Hikari: 13.850 yenes. Kioto a Kanazawa (Thunderbird hasta Tsuruga + shinkansen Tsurugi): unos 7.720 yenes. Kanazawa a Tokio en el shinkansen Hokuriku: unos 14.180 yenes. Total de billetes individuales: aproximadamente 35.750 yenes solo ida. Si haces estos trayectos de ida y vuelta, o añades alguna excursión (por ejemplo, a Nara desde Kioto, cubierta por el pase), te acercas o superas los 50.000 yenes del pase.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los números reales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -324,11 +312,12 @@ const EsJapanRailPass = () => {
             <InlineCTAEs />
 
             {/* Para quién NO vale la pena */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Para quién NO vale la pena</span></div>
+            <h2 id="section-04-para-quién-no-vale-la-pena" className="scroll-mt-20">
               Para quién NO vale la pena
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Si solo visitas Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -342,14 +331,14 @@ const EsJapanRailPass = () => {
               </Link>.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Si tu itinerario es Tokio + una excursión
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Muchos viajeros pasan la mayor parte de su tiempo en Tokio y hacen una excursión de un día a Kamakura, Nikko o Hakone. En ninguno de estos casos necesitas el JR Pass. Tokio-Kamakura ida y vuelta en tren JR cuesta unos 2.080 yenes. Tokio-Nikko ida y vuelta con el Tobu Railway (que no es JR) sale por unos 5.200 yenes con el pase turístico de Tobu (consulta nuestra <Link to="/es/blog/excursion-nikko-desde-tokio" className="text-accent hover:underline">guía de excursión a Nikko</Link> para más detalles). Y para Hakone, el Hakone Free Pass de Odakyu (que tampoco es JR) cubre todo el transporte en la zona por 7.100 yenes. Comparar estos precios con los 50.000 yenes del JR Pass habla por sí solo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Si viajas en avión entre ciudades
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -357,7 +346,8 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Alternativas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Alternativas al JR Pass que casi nadie conoce</span></div>
+            <h2 id="section-05-alternativas-al-jr-pass-que-casi-nadie-conoce" className="scroll-mt-20">
               Alternativas al JR Pass que casi nadie conoce
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -377,21 +367,21 @@ const EsJapanRailPass = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Suica/Pasmo (tarjetas IC)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Las tarjetas IC recargables (Suica de JR East o Pasmo de las compañías de metro) son imprescindibles para cualquier viaje a Japón, tengas o no el JR Pass. Funcionan en prácticamente todo el transporte público de Tokio, Osaka, Kioto y la mayoría de ciudades importantes: metro, autobuses, trenes locales e incluso tiendas de conveniencia. Puedes cargarlas con el importe que necesites y simplemente tocar al pasar. Para estancias centradas en una ciudad, son todo lo que necesitas. Desde 2023, la versión física tiene disponibilidad limitada, pero puedes usar la versión digital en tu móvil con Apple Pay o Google Pay.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Pases regionales (Kansai, Hokkaido, etc.)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground"><a href="https://www.westjr.co.jp/global/en/ticket/pass/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR Kansai Area Pass</a></strong> (1-4 días, desde 2.800 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Billetes de shinkansen individuales con descuento
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -399,13 +389,14 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre el Japan Rail Pass
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Dónde se compra el Japan Rail Pass?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -416,7 +407,7 @@ const EsJapanRailPass = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Se puede usar en el metro de Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -425,7 +416,7 @@ const EsJapanRailPass = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Incluye el shinkansen Nozomi?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -434,7 +425,7 @@ const EsJapanRailPass = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Se puede reservar asiento con el JR Pass?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -443,7 +434,7 @@ const EsJapanRailPass = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuántos días antes debo comprarlo?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -451,7 +442,7 @@ const EsJapanRailPass = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Ha vuelto a subir el precio del JR Pass en 2026?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -459,7 +450,7 @@ const EsJapanRailPass = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Merece la pena el JR Pass tras la subida de precios de 2023?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -482,7 +473,8 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Explorar Tokio con guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Explora Tokio con un Guía Local</span></div>
+            <h2 id="section-07-explora-tokio-con-un-guía-local" className="scroll-mt-20">
               Explora Tokio con un Guía Local
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -501,7 +493,7 @@ const EsJapanRailPass = () => {
             </ul>
 
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Necesitas ayuda para planificar tu transporte en Japón?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -516,7 +508,11 @@ const EsJapanRailPass = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -549,7 +545,9 @@ const EsJapanRailPass = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

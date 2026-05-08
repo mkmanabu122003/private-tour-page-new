@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Table Header — Variation Options</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --ink-soft: #2b2823;
+        --muted: #4f4a43;
+        --muted-2: #6a655c;
+        --soft: #eeeae0;
+        --line: #dcd4c2;
+        --line-2: #c4bba6;
+        --gold: #c9a84c;
+        --gold-soft: #f4e5b6;
+        --gold-deep: #a88930;
+        --clay: #9c563f;
+        --card: #fffdf8;
+        --green: #5a7a3a;
+        --green-soft: #e7eed7;
+        --green-deep: #3d5526;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-variant-numeric: lining-nums tabular-nums;
+      }
+      .toolbar {
+        position: sticky; top: 0; z-index: 10;
+        background: #1d1a14; color: #f8f7f1;
+        padding: 14px 24px;
+        display: flex; align-items: center; gap: 24px;
+        font-size: 13px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .toolbar .title { font-weight: 700; letter-spacing: .04em; }
+      .toolbar .meta { color: #c9c2b0; }
+
+      .stack { max-width: 1000px; margin: 0 auto; padding: 32px 32px 80px; }
+      .opt {
+        background: var(--paper);
+        padding: 32px 36px 40px;
+        border-radius: 10px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      }
+      .opt-tag {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 4px;
+      }
+      .opt-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0 0 8px;
+      }
+      .opt-desc {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0 0 22px;
+        max-width: 720px;
+        line-height: 1.55;
+      }
+
+      /* ===== Common base (body cells shared with current C3) ===== */
+      table.t {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table.t tbody td {
+        padding: 16px 14px;
+        font-size: 15px;
+        color: var(--ink-soft);
+        line-height: 1.4;
+        vertical-align: middle;
+        border-bottom: 1px solid var(--line);
+      }
+      table.t tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+      table.t tbody td.scenario {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px; font-weight: 600; color: var(--ink);
+        line-height: 1.25;
+      }
+      table.t tbody td.scenario .tag {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 11px; font-weight: 600; color: var(--muted-2);
+        text-transform: uppercase; letter-spacing: 0.10em;
+        margin-top: 2px;
+      }
+      table.t .bar-cell {
+        position: relative; font-weight: 700; color: var(--ink);
+        font-size: 15px; min-width: 160px;
+      }
+      table.t .bar-cell .meta {
+        font-family: Inter, sans-serif; font-size: 11px; font-weight: 500;
+        color: var(--muted-2); margin-left: 6px;
+      }
+      table.t .bar {
+        display: block; height: 6px;
+        background: rgba(199, 168, 76, 0.22);
+        border-radius: 3px; margin-top: 8px; position: relative; overflow: hidden;
+      }
+      table.t .bar > i {
+        position: absolute; left: 0; top: 0; bottom: 0;
+        background: var(--gold); border-radius: 3px;
+      }
+      table.t .bar-cell.win { color: var(--green-deep); }
+      table.t .bar-cell.win .bar > i { background: var(--green); }
+      table.t .savings { font-weight: 700; color: var(--gold-deep); font-size: 16px; }
+      table.t .muted-cell { color: var(--muted-2); }
+
+      /* ============ CURRENT (Now in code) ============ */
+      .now thead th {
+        text-align: left;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink);
+        padding: 18px 14px 14px;
+        line-height: 1.2;
+        border-top: 2px solid var(--ink);
+        border-bottom: 2px solid var(--ink);
+        background: rgba(199, 168, 76, .06);
+      }
+      .now thead th .sub {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
+        font-weight: 700; color: var(--gold-deep); margin-top: 5px;
+      }
+
+      /* ============ T1 — Quiet single rule ============ */
+      .t1 thead th {
+        text-align: left;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ink);
+        padding: 6px 14px 12px;
+        line-height: 1.15;
+        border-bottom: 1px solid var(--line);
+      }
+      .t1 thead th .sub {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em;
+        font-weight: 600; color: var(--muted-2); margin-top: 4px;
+      }
+      .t1-cap {
+        display: flex; align-items: center; gap: 12px;
+        margin-bottom: 6px;
+      }
+      .t1-cap::before {
+        content: ""; width: 40px; height: 2px; background: var(--gold);
+      }
+      .t1-cap span {
+        font-family: Inter, sans-serif;
+        font-size: 11px; text-transform: uppercase; letter-spacing: 0.20em;
+        font-weight: 700; color: var(--gold);
+      }
+
+      /* ============ T2 — Caption-led + eyebrow column labels ============ */
+      .t2-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--ink);
+        margin: 0 0 4px;
+      }
+      .t2-sub {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 14px;
+      }
+      .t2 thead th {
+        text-align: left;
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--muted-2);
+        padding: 12px 14px;
+        border-top: 2px solid var(--ink);
+        border-bottom: 1px solid var(--line);
+      }
+      .t2 thead th.win-col {
+        color: var(--green-deep);
+      }
+      .t2 thead th.savings-col {
+        color: var(--gold-deep);
+      }
+
+      /* ============ T3 — Inverse / dark band ============ */
+      .t3 thead th {
+        text-align: left;
+        background: #1d1a14;
+        color: #f4e5b6;
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+        padding: 14px 14px 12px;
+        line-height: 1.3;
+      }
+      .t3 thead th .sub {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 500;
+        color: rgba(244, 229, 182, .65);
+        margin-top: 3px;
+      }
+      .t3 thead th:first-child { border-top-left-radius: 4px; }
+      .t3 thead th:last-child { border-top-right-radius: 4px; background: var(--gold-deep); color: #fffdf8; }
+      .t3 thead th:last-child .sub { color: rgba(255, 253, 248, .85); }
+
+      /* ============ T4 — Italic serif with double rule ============ */
+      .t4 thead th {
+        text-align: left;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--ink);
+        padding: 14px 14px 14px;
+        line-height: 1.15;
+        position: relative;
+      }
+      .t4 thead {
+        position: relative;
+      }
+      .t4 thead th {
+        border-top: 3px double var(--ink);
+        border-bottom: 1px solid var(--ink);
+      }
+      .t4 thead th .sub {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em;
+        font-weight: 700; color: var(--muted-2); margin-top: 4px;
+      }
+
+      /* ============ T5 — Two-line: serif name + dot rule + eyebrow tag ============ */
+      .t5 thead th {
+        text-align: left;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--ink);
+        padding: 12px 14px 0;
+        line-height: 1.1;
+        border-bottom: none;
+      }
+      .t5 thead .sub-row th {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--gold);
+        padding: 4px 14px 12px;
+        border-bottom: 2px solid var(--ink);
+        font-style: normal;
+      }
+      .t5 thead tr.main-row th { border-top: 1px solid var(--line); }
+      .t5 thead tr.main-row th:first-child { padding-top: 14px; }
+
+      /* ============ Common bottom legend ============ */
+      .legend {
+        display: flex; gap: 14px; flex-wrap: wrap;
+        margin-top: 14px; font-size: 12px; color: var(--muted-2);
+      }
+      .legend .dot {
+        display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+        vertical-align: middle; margin-right: 6px;
+      }
+      .legend .dot.gold { background: var(--gold); }
+      .legend .dot.green { background: var(--green); }
+
+      .lead { font-size: 15px; color: var(--muted); margin: 0 0 14px; line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">TABLE HEADER — DESIGN OPTIONS</span>
+      <span class="meta">C3 bar-chart variant · header treatments</span>
+    </div>
+
+    <div class="stack">
+
+      <!-- ============ NOW (current) ============ -->
+      <section class="opt">
+        <div class="opt-tag">Now · 現状（コード）</div>
+        <h2 class="opt-name">Cormorant 20px + 上下黒太線 + ゴールド地</h2>
+        <p class="opt-desc">本文との切り替えは出るが、ヘッダーの上下太線2本＋ゴールド地＋本体テーブルの下罫線 で区切りが多く、若干賑やか。</p>
+        <table class="t now">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="scenario">Train<span class="tag">Cheapest</span></td><td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width:21%"></i></span></td><td class="savings">¥7,800</td></tr>
+            <tr><td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td><td class="bar-cell">¥12,800<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥5,600<span class="bar"><i style="width:44%"></i></span></td><td class="savings">¥7,200</td></tr>
+            <tr><td class="scenario">Taxi<span class="tag">One-way</span></td><td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width:28%"></i></span></td><td class="savings">¥19,000–22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ T1 — Quiet ============ -->
+      <section class="opt">
+        <div class="opt-tag">T1 · 静か</div>
+        <h2 class="opt-name">Eyebrow ラベル + Cormorant 22px + 下1pxのみ</h2>
+        <p class="opt-desc">テーブルの上に小さなゴールド ledger ラベルを置き、ヘッダー本体は Cormorant 22px シンプルに。色を増やさず、装飾は eyebrow ラベル + 単一の下罫線のみ。本文の流れの中でヘッダーが「もう一段上のレイヤー」として読める。</p>
+        <div class="t1-cap"><span>Round-trip cost · 2 people</span></div>
+        <table class="t t1">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="scenario">Train<span class="tag">Cheapest</span></td><td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width:21%"></i></span></td><td class="savings">¥7,800</td></tr>
+            <tr><td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td><td class="bar-cell">¥12,800<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥5,600<span class="bar"><i style="width:44%"></i></span></td><td class="savings">¥7,200</td></tr>
+            <tr><td class="scenario">Taxi<span class="tag">One-way</span></td><td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width:28%"></i></span></td><td class="savings">¥19,000–22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ T2 — Caption-led ============ -->
+      <section class="opt">
+        <div class="opt-tag">T2 · 推し</div>
+        <h2 class="opt-name">Caption + Eyebrow Column Labels — 雑誌の図表風</h2>
+        <p class="opt-desc">テーブル本体の上に Cormorant の "図表タイトル" を置き、列ヘッダーは Inter uppercase の小さな eyebrow ラベルに格下げ。Plan A の section-eyebrow と同じパターンなので、サイト全体の意匠と整合する。記事内の他の見出し（h2/h3）と階層がずれない。</p>
+        <h3 class="t2-title" style="font-size:22px; margin:0 0 4px">Round-trip cost: Narita vs Haneda</h3>
+        <div class="t2-sub">2 people · round trip · ¥ JPY</div>
+        <table class="t t2">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Narita</th>
+              <th class="win-col">Haneda</th>
+              <th class="savings-col">Savings (Haneda)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="scenario">Train<span class="tag">Cheapest</span></td><td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width:21%"></i></span></td><td class="savings">¥7,800</td></tr>
+            <tr><td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td><td class="bar-cell">¥12,800<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥5,600<span class="bar"><i style="width:44%"></i></span></td><td class="savings">¥7,200</td></tr>
+            <tr><td class="scenario">Taxi<span class="tag">One-way</span></td><td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width:28%"></i></span></td><td class="savings">¥19,000–22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ T3 — Dark band ============ -->
+      <section class="opt">
+        <div class="opt-tag">T3 · 強い</div>
+        <h2 class="opt-name">Dark Masthead — 黒地ゴールド文字＋ savings はゴールド地</h2>
+        <p class="opt-desc">ヘッダー帯を黒地、Inter uppercase で完全に "別レイヤー化"。最右列 (Savings) はゴールド地で結論列を強調。インパクト最大。Plan A の Quick Decision ボックスや Section eyebrow と色トーンを共有。</p>
+        <table class="t t3">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita <span class="sub">total cost</span></th>
+              <th>Haneda <span class="sub">total cost</span></th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="scenario">Train<span class="tag">Cheapest</span></td><td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width:21%"></i></span></td><td class="savings">¥7,800</td></tr>
+            <tr><td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td><td class="bar-cell">¥12,800<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥5,600<span class="bar"><i style="width:44%"></i></span></td><td class="savings">¥7,200</td></tr>
+            <tr><td class="scenario">Taxi<span class="tag">One-way</span></td><td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width:28%"></i></span></td><td class="savings">¥19,000–22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ T4 — Italic with double rule ============ -->
+      <section class="opt">
+        <div class="opt-tag">T4 · 古典</div>
+        <h2 class="opt-name">Italic Serif + Double Rule — 古典的な書籍表組</h2>
+        <p class="opt-desc">Cormorant 22px italic で書籍 / 学術論文の表組のような重厚さ。上は double rule (3px)、下は single 1px。装飾は黒系のみ、色を増やさない。Editorial Trust と最も整合し、長期記事化したときに古びない。</p>
+        <table class="t t4">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="scenario">Train<span class="tag">Cheapest</span></td><td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width:21%"></i></span></td><td class="savings">¥7,800</td></tr>
+            <tr><td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td><td class="bar-cell">¥12,800<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥5,600<span class="bar"><i style="width:44%"></i></span></td><td class="savings">¥7,200</td></tr>
+            <tr><td class="scenario">Taxi<span class="tag">One-way</span></td><td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width:28%"></i></span></td><td class="savings">¥19,000–22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ T5 — Two-line stacked ============ -->
+      <section class="opt">
+        <div class="opt-tag">T5 · 多層</div>
+        <h2 class="opt-name">Stacked Header — 主名 + サブラベルを別行に分離</h2>
+        <p class="opt-desc">ヘッダーを2段に分割。上段は Cormorant 24px の主名（Narita / Haneda）、下段は Inter uppercase ゴールドのサブラベル。情報量は多いが、列の意味と単位が明確に分離される。</p>
+        <table class="t t5">
+          <thead>
+            <tr class="main-row">
+              <th>Scenario</th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Savings</th>
+            </tr>
+            <tr class="sub-row">
+              <th>2 people · round trip</th>
+              <th>total cost ¥</th>
+              <th>total cost ¥</th>
+              <th>picking Haneda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="scenario">Train<span class="tag">Cheapest</span></td><td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width:21%"></i></span></td><td class="savings">¥7,800</td></tr>
+            <tr><td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td><td class="bar-cell">¥12,800<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥5,600<span class="bar"><i style="width:44%"></i></span></td><td class="savings">¥7,200</td></tr>
+            <tr><td class="scenario">Taxi<span class="tag">One-way</span></td><td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width:100%"></i></span></td><td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width:28%"></i></span></td><td class="savings">¥19,000–22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ Decision helper ============ -->
+      <section class="opt" style="background: #1d1a14; color: #f4e5b6;">
+        <div class="opt-tag" style="color: var(--gold)">使い分け</div>
+        <h2 class="opt-name" style="color: #f4e5b6">どれが向いているか</h2>
+        <table style="width:100%; color:#e0d8c0; font-size:14px; border-collapse:collapse; margin-top:8px;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">案</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">向き</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">注意</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">T1 · Quiet</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">本文の流れを止めず、装飾なしで読ませたい。サイト全記事で使う標準。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">「目立たせる」が目的なら一段弱い。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">T2 · Caption-led</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">図表自体に "タイトル" を持たせる。section-eyebrow と一貫した語り方。<strong style="color:var(--gold)">推し</strong></td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">列ヘッダーは小さくなるので、列が多い表ではやや弱い。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">T3 · Dark masthead</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">記事の主役モジュールにしたい。一目で目立たせる。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">サイト全体の暖色トーンの中で黒帯は強く、多用するとヘビー。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">T4 · Italic + double rule</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">古典書籍 / 学術寄り。Manabu の "個人運営の編集物" 路線と整合。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">italic は読みにくい人もいる。実用ガイド色は弱まる。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">T5 · Stacked</td>
+              <td style="padding:14px 12px; vertical-align:top; line-height:1.55;">列名と単位を同時に強く見せたい時。複雑なテーブルに強い。</td>
+              <td style="padding:14px 12px; vertical-align:top; line-height:1.55;">行が増える分、テーブル全体が縦長に。情報量過多気味。</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </body>
+</html>

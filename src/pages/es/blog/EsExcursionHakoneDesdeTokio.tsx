@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsExcursionHakoneDesdeTokio = () => {
   return (
@@ -24,59 +26,37 @@ const EsExcursionHakoneDesdeTokio = () => {
         ]}
       />
 
-      {/* Imagen Principal */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/hakone-lake-ashi-fuji.webp"
-          alt="Lago Ashi con vistas al Monte Fuji en Hakone"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Excursiones de un Día</p>
-            <h1 className="heading-display text-foreground">
-              Excursión a Hakone desde Tokio: ¿necesitas guía o puedes ir solo? (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía intérprete con licencia nacional del gobierno japonés (全国通訳案内士), que dirige excursiones regulares a Hakone desde Tokio.
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/hakone-lake-ashi-fuji.webp"
+        imageAlt="Lago Ashi con vistas al Monte Fuji en Hakone"
+        eyebrow="Excursiones de un Día"
+        title="Excursión a Hakone desde Tokio: ¿necesitas guía o puedes ir solo? (2026)"
+        subtitle="Escrito por Manabu, guía intérprete con licencia nacional del gobierno japonés (全国通訳案内士), que dirige excursiones regulares a Hakone desde Tokio."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "El circuito de Hakone…", href: "#section-01-el-circuito-de-hakone-explicado" },
+          { num: "02", label: "Ir por tu cuenta", href: "#section-02-ir-por-tu-cuenta" },
+          { num: "03", label: "Lo que aporta un guía", href: "#section-03-lo-que-aporta-un-guía" },
+          { num: "04", label: "Cuándo no necesitas un guía", href: "#section-04-cuándo-no-necesitas-un-guía" },
+          { num: "05", label: "Cuándo un guía lo cambia todo", href: "#section-05-cuándo-un-guía-lo-cambia-todo" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Hakone es la excursión de un día desde Tokio más popular, y con razón: aguas termales volcánicas, el lago Ashi con vistas al Monte Fuji, cinco medios de transporte diferentes en un único circuito y algunos de los mejores onsen de toda la región de Kanto. El Hakone Free Pass hace que parezca fácil hacerlo por tu cuenta.
@@ -93,7 +73,8 @@ const EsExcursionHakoneDesdeTokio = () => {
             </p>
 
             {/* El Circuito de Hakone */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · El circuito de Hakone explicado</span></div>
+            <h2 id="section-01-el-circuito-de-hakone-explicado" className="scroll-mt-20">
               El circuito de Hakone explicado
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -124,11 +105,12 @@ const EsExcursionHakoneDesdeTokio = () => {
             </p>
 
             {/* Ir por tu cuenta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Ir por tu cuenta</span></div>
+            <h2 id="section-02-ir-por-tu-cuenta" className="scroll-mt-20">
               Ir por tu cuenta: qué funciona y qué no
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que funciona
             </h3>
             <ul className="space-y-3 mb-6">
@@ -143,7 +125,7 @@ const EsExcursionHakoneDesdeTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Dónde se complica ir solo
             </h3>
             <ul className="space-y-3 mb-8">
@@ -171,7 +153,8 @@ const EsExcursionHakoneDesdeTokio = () => {
             />
 
             {/* Lo que aporta un guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Lo que aporta un guía</span></div>
+            <h2 id="section-03-lo-que-aporta-un-guía" className="scroll-mt-20">
               Lo que aporta un guía
             </h2>
             <ul className="space-y-4 mb-8">
@@ -193,7 +176,8 @@ const EsExcursionHakoneDesdeTokio = () => {
             </ul>
 
             {/* Cuándo no necesitas guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cuándo no necesitas un guía</span></div>
+            <h2 id="section-04-cuándo-no-necesitas-un-guía" className="scroll-mt-20">
               Cuándo no necesitas un guía
             </h2>
             <ul className="space-y-3 mb-8">
@@ -216,7 +200,8 @@ const EsExcursionHakoneDesdeTokio = () => {
             </ul>
 
             {/* Cuándo un guía lo cambia todo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cuándo un guía lo cambia todo</span></div>
+            <h2 id="section-05-cuándo-un-guía-lo-cambia-todo" className="scroll-mt-20">
               Cuándo un guía lo cambia todo
             </h2>
             <ul className="space-y-3 mb-8">
@@ -244,25 +229,26 @@ const EsExcursionHakoneDesdeTokio = () => {
             />
 
             {/* Preguntas frecuentes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre la excursión a Hakone desde Tokio
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Se puede hacer la excursión a Hakone en un día desde Tokio?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí, la mayoría de visitantes lo hacen en un día. Necesitas entre 7 y 8 horas contando el trayecto desde Tokio. Lo importante es salir temprano (idealmente antes de las 8:00 desde Shinjuku) para tener margen suficiente y no ir con prisas en las últimas conexiones.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cuánto cuesta ir a Hakone por tu cuenta?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Hakone Free Pass cuesta ¥7,100 (2 días) e incluye transporte de ida y vuelta desde Shinjuku más todos los transportes del circuito. Si quieres ir en Romancecar, añade ¥1,200 por trayecto. Sumando comida y alguna entrada, calcula entre ¥10,000 y ¥12,000 por persona para el día. Es una de las excursiones con mejor relación calidad-precio desde Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Vale la pena contratar un guía para Hakone?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -273,21 +259,21 @@ const EsExcursionHakoneDesdeTokio = () => {
               {" "}cuesta ¥70,000 para el grupo (no por persona), lo que para 3-4 viajeros resulta muy asequible. Si ya conoces Japón y te sientes cómodo navegando el transporte público, puedes hacerlo perfectamente solo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Qué pasa si el teleférico de Hakone está cerrado?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Cuando el teleférico cierra por actividad volcánica, hay un autobús sustitutivo que conecta Sounzan con Togendai. El circuito sigue siendo posible, pero pierdes la experiencia aérea sobre Owakudani y los tiempos cambian. Un guía conoce la alternativa y ajusta el itinerario para que no pierdas tiempo. Si vas solo, necesitarás improvisar sobre la marcha y puede haber confusiones con los horarios del bus.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cuál es la mejor época para visitar Hakone?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Cada estación tiene su encanto. La primavera (abril-mayo) y el otoño (noviembre) son las épocas más populares, con los cerezos en flor y el koyo respectivamente. El verano es caluroso pero Hakone está en la montaña y las temperaturas son más agradables que en Tokio. El invierno ofrece los días más despejados para ver el Monte Fuji, pero algunas atracciones pueden tener horarios reducidos. Si tu prioridad es ver el Fuji, los meses de invierno (diciembre-febrero) suelen tener los cielos más limpios.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Hakone o Kamakura para una excursión de un día?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -300,7 +286,7 @@ const EsExcursionHakoneDesdeTokio = () => {
 
             {/* CTA final */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Estás planificando una excursión a Hakone?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -323,7 +309,11 @@ const EsExcursionHakoneDesdeTokio = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -421,7 +411,9 @@ const EsExcursionHakoneDesdeTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

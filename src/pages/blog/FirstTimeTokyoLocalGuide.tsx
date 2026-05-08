@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const FirstTimeTokyoLocalGuide = () => {
@@ -18,56 +20,35 @@ const FirstTimeTokyoLocalGuide = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/asakusa-backstreet-local.webp"
-          alt="Exploring Tokyo backstreets with a local guide"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Travel Tips</p>
-            <h1 className="heading-display text-foreground">
-              First Time in Tokyo? Here's What a Local Guide Actually Does
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 14, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士), born in Kanazawa, raised in Kyoto, now based in Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/asakusa-backstreet-local.webp"
+        imageAlt="Exploring Tokyo backstreets with a local guide"
+        eyebrow="Travel Tips"
+        title="First Time in Tokyo? Here's What a Local Guide Actually Does"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士), born in Kanazawa, raised in Kyoto, now based in Tokyo."
+        date="March 14, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "A Real Day", href: "#section-01-a-real-day" },
+          { num: "02", label: "The Hidden Value", href: "#section-02-the-hidden-value" },
+          { num: "03", label: "When You Don't Need a Guide", href: "#section-03-when-you-dont-need-a-guide" },
+          { num: "04", label: "When a Guide Changes…", href: "#section-04-when-a-guide-changes-everything" },
+          { num: "05", label: "A Personal Note", href: "#section-05-a-personal-note" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               The most common question I get isn't about temples or sushi. It's: "What do you actually DO on a tour?"
@@ -80,14 +61,15 @@ const FirstTimeTokyoLocalGuide = () => {
             </p>
 
             {/* A Real Day */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · A Real Day</span></div>
+            <h2 id="section-01-a-real-day" className="scroll-mt-20">
               A Real Day: Tsukiji to Ginza to Asakusa
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               To show you the difference, I'll walk through the same route with and without a guide. Imagine it's your first day in Tokyo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Morning: Tsukiji Market (9:00 - 11:00 AM)
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-4">
@@ -103,7 +85,7 @@ const FirstTimeTokyoLocalGuide = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Midday: Ginza Backstreets (11:30 AM - 1:30 PM)
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-4">
@@ -119,7 +101,7 @@ const FirstTimeTokyoLocalGuide = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Afternoon: Asakusa (2:00 - 4:30 PM)
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-4">
@@ -136,11 +118,12 @@ const FirstTimeTokyoLocalGuide = () => {
             </div>
 
             {/* The Hidden Value */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The Hidden Value</span></div>
+            <h2 id="section-02-the-hidden-value" className="scroll-mt-20">
               The Hidden Value
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Navigation Beyond Google Maps
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -148,21 +131,21 @@ const FirstTimeTokyoLocalGuide = () => {
               Tokyo has 13 subway lines, plus JR lines, private railways, and multiple bus networks. Google Maps gets you from A to B, but it doesn't tell you which exit of a 15-exit station saves you 5 minutes of walking, or that the platform on the other side puts you closer to the transfer. A guide knows these shortcuts because they use them every day.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Restaurant Access
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Many of Tokyo's best restaurants don't have English menus. Some don't even have a visible sign from the street. A guide takes you to places you wouldn't enter alone, orders for you when needed, and explains what you're eating and why it's special.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cultural Context
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japan has layers of meaning that aren't visible at first glance. Why are there two different types of rope at shrines? Why do some restaurants not accept reservations? Why is that seemingly ordinary building actually a national treasure? A guide gives you the cultural operating system that makes everything click.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Real-Time Adjustments
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -170,7 +153,8 @@ const FirstTimeTokyoLocalGuide = () => {
             </p>
 
             {/* When You Don't Need a Guide */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · When You Don't Need a Guide</span></div>
+            <h2 id="section-03-when-you-dont-need-a-guide" className="scroll-mt-20">
               When You Don't Need a Guide
             </h2>
             <ul className="space-y-3 mb-8">
@@ -189,7 +173,8 @@ const FirstTimeTokyoLocalGuide = () => {
             </ul>
 
             {/* When a Guide Changes Everything */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · When a Guide Changes Everything</span></div>
+            <h2 id="section-04-when-a-guide-changes-everything" className="scroll-mt-20">
               When a Guide Changes Everything
             </h2>
             <ul className="space-y-3 mb-8">
@@ -208,7 +193,8 @@ const FirstTimeTokyoLocalGuide = () => {
             </ul>
 
             {/* Personal Note */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · A Personal Note</span></div>
+            <h2 id="section-05-a-personal-note" className="scroll-mt-20">
               A Personal Note
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -220,7 +206,7 @@ const FirstTimeTokyoLocalGuide = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Planning Your First Tokyo Trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -238,7 +224,11 @@ const FirstTimeTokyoLocalGuide = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -293,7 +283,9 @@ const FirstTimeTokyoLocalGuide = () => {
       1. Fujin/Raijin guardian statues at Kaminarimon — confirm correct identification
       2. Bio (Kanazawa born, Kyoto raised) — confirm consistent with About page
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

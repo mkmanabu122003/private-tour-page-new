@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
@@ -66,10 +67,8 @@ const TokyoNightTour = () => {
         canonicalPath="/tours/tokyo-night-tour"
       />
 
-      {/* Hero Section */}
-
-      {/* Hero Image — clickable to capture dead-click intent */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+      {/* Hero — image with overlaid title (BlogArticleHero pattern) */}
+      <section className="relative w-full h-[540px] md:h-[620px] lg:h-[660px] overflow-hidden">
         <button
           type="button"
           onClick={() => {
@@ -78,7 +77,7 @@ const TokyoNightTour = () => {
               ?.scrollIntoView({ behavior: "smooth", block: "center" });
           }}
           aria-label="Click to see pricing and book this night tour"
-          className="block w-full h-full cursor-pointer"
+          className="absolute inset-0 w-full h-full cursor-pointer"
         >
           <img
             src="/images/tours/tokyo-night-tour-hero.webp"
@@ -88,34 +87,64 @@ const TokyoNightTour = () => {
             width={1600}
             height={900}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </button>
-      </section>
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15 pointer-events-none"
+          aria-hidden="true"
+        />
 
-      <section id="booking-cta" className="pt-16 pb-12 bg-secondary/30 scroll-mt-20">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <p className="text-label text-accent mb-3">Evening Tour</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo Private Night Tour
-            </h1>
-            <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-              Tokyo transforms after dark. Let a local show you why.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              When the sun sets, a different city emerges. Neon signs ignite
-              narrow alleyways, izakaya lanterns flicker to life, and millions of
-              Tokyoites pour into the streets for the night. This is the Tokyo
-              most visitors miss, and it's the Tokyo you'll remember forever.
-            </p>
-            <div className="mt-8">
-              <Link to="/contact" className="btn-accent">
-                Book Your Night Tour
-              </Link>
+        {/* Floating back link (top) */}
+        <div className="absolute top-6 left-0 right-0 z-10">
+          <div className="container-section">
+            <Link
+              to="/tours"
+              className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors backdrop-blur-sm bg-black/25 px-3 py-1.5 rounded-md"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Tours
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom-aligned hero text overlay */}
+        <div className="absolute inset-x-0 bottom-0 pb-14 md:pb-16 z-10 pointer-events-none">
+          <div className="container-section">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent mb-4">
+                Evening Tour · Private &amp; Tailored
+              </p>
+              <h1
+                className="text-white font-semibold leading-[1.05] tracking-tight text-4xl md:text-5xl lg:text-6xl"
+                style={{ textShadow: "0 2px 32px rgba(0,0,0,0.45)" }}
+              >
+                Tokyo Private Night Tour
+              </h1>
+              <p className="mt-6 text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
+                Tokyo transforms after dark. Let a local show you why.
+              </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Inline Booking CTA */}
+      <section id="booking-cta" className="py-12 bg-accent/5 border-y border-accent/10 scroll-mt-20">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            Ready to explore Tokyo at night? →
+          </p>
+          <Link to="/contact" className="btn-accent-lg mt-6">
+            Book Your Night Tour
+            <ArrowRight className="btn-arrow" />
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Licensed guide · Private tour · Golden Gai · Omoide Yokocho · Izakaya
+          </p>
+        </div>
+      </section>
+
+      {/* Body — blog-style typography */}
+      <div className="prose-editorial">
 
       {/* Why Tokyo at Night? */}
       <section className="py-16">
@@ -330,6 +359,8 @@ const TokyoNightTour = () => {
         </div>
       </section>
 
+      </div>{/* /prose-editorial */}
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container-section">
@@ -346,7 +377,7 @@ const TokyoNightTour = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="btn-accent bg-background text-foreground hover:bg-background/90"
+                className="btn-accent-on-dark"
               >
                 Plan Your Night Tour
               </Link>

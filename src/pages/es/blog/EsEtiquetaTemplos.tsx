@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsEtiquetaTemplos = () => {
   return (
@@ -20,56 +22,39 @@ const EsEtiquetaTemplos = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/senso-ji-temple-tokyo.webp"
-          alt="Templo Senso-ji en Tokio, etiqueta en templos japoneses"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planifica tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              Cómo Rezar en un Santuario y Templo Japonés: La Forma Correcta (De un Guía Oficial)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía Turístico con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours por los templos y santuarios de Tokio.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/senso-ji-temple-tokyo.webp"
+        imageAlt="Templo Senso-ji en Tokio, etiqueta en templos japoneses"
+        eyebrow="Planifica tu Viaje"
+        title="Cómo Rezar en un Santuario y Templo Japonés: La Forma Correcta (De un Guía Oficial)"
+        subtitle="Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) con más de 500 tours por los templos y santuarios de Tokio."
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Templo vs Santuario", href: "#section-01-templo-vs-santuario" },
+          { num: "02", label: "En un Santuario", href: "#section-02-en-un-santuario" },
+          { num: "03", label: "En un Templo", href: "#section-03-en-un-templo" },
+          { num: "04", label: "Etiqueta General para…", href: "#section-04-etiqueta-general-para-templos-y-santuarios" },
+          { num: "05", label: "Templos y Santuarios…", href: "#section-05-templos-y-santuarios-famosos-para-visitar" },
+          { num: "06", label: "Los Errores Más Comunes que…", href: "#section-06-los-errores-más-comunes-que-cometen-los-turistas" },
+          { num: "07", label: "Diferencias entre Templos…", href: "#section-07-diferencias-entre-templos-budistas-y" },
+          { num: "08", label: "Templo Senso-ji", href: "#section-08-templo-senso-ji" },
+          { num: "09", label: "FAQ", href: "#section-09-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Una de las preguntas más frecuentes que escucho en mis tours es: "¿Lo estoy haciendo bien?" Ya sea frente a un santuario preguntándose cuántas veces aplaudir, o dudando en la entrada de un templo sin saber si hacer una reverencia, los visitantes suelen preocuparse por cometer errores en los lugares sagrados de Japón. Entiendo perfectamente esa sensación; nadie quiere ofender sin querer.
@@ -82,7 +67,8 @@ const EsEtiquetaTemplos = () => {
             </p>
 
             {/* Temple vs Shrine */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Templo vs Santuario</span></div>
+            <h2 id="section-01-templo-vs-santuario" className="scroll-mt-20">
               Templo vs Santuario: ¿Cuál es la Diferencia?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -106,14 +92,15 @@ const EsEtiquetaTemplos = () => {
             </p>
 
             {/* Shrine Step-by-Step */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · En un Santuario</span></div>
+            <h2 id="section-02-en-un-santuario" className="scroll-mt-20">
               En un Santuario: Paso a Paso
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los santuarios sintoístas siguen una secuencia específica de rituales que ha permanecido prácticamente igual durante siglos. Aquí tienes el proceso completo desde el momento en que llegas hasta el momento en que te vas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Entrar por la Puerta Torii
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -133,7 +120,7 @@ const EsEtiquetaTemplos = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Temizu: La Purificación de Manos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -173,7 +160,7 @@ const EsEtiquetaTemplos = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Oración: Ni-hai, Ni-hakushu, Ichi-hai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -203,7 +190,7 @@ const EsEtiquetaTemplos = () => {
               La frase para recordar es <strong className="text-foreground">ni-hai, ni-hakushu, ichi-hai</strong>: dos reverencias, dos aplausos, una reverencia. Un pequeño número de santuarios tienen sus propias variaciones (Izumo Taisha usa cuatro aplausos en lugar de dos), pero 2-2-1 es lo correcto en la gran mayoría de los santuarios de todo Japón.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Omikuji y Ema
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -216,7 +203,8 @@ const EsEtiquetaTemplos = () => {
             <InlineCTAEs />
 
             {/* Temple Step-by-Step */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · En un Templo</span></div>
+            <h2 id="section-03-en-un-templo" className="scroll-mt-20">
               En un Templo: Paso a Paso
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -236,7 +224,7 @@ const EsEtiquetaTemplos = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Incienso: Purificación con Humo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -246,7 +234,7 @@ const EsEtiquetaTemplos = () => {
               Una nota importante: al encender el incienso, si la llama no se apaga sola, <strong className="text-foreground">agita la varilla suavemente para extinguir la llama</strong> en lugar de soplarla. En la tradición budista japonesa, soplar con la boca se considera impuro porque el aliento lleva las "impurezas" del cuerpo. Es un detalle pequeño, pero los locales lo notan y lo aprecian.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Oración: Silenciosa y Respetuosa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -256,14 +244,14 @@ const EsEtiquetaTemplos = () => {
               Algunos templos, particularmente los de la tradición Zen, también pueden tener áreas específicas de meditación sentada donde puedes sentarte tranquilamente durante unos minutos. Si se ofrecen sesiones de meditación, son una manera maravillosa de experimentar la práctica budista directamente, pero siempre sigue las instrucciones del personal del templo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Quitarse los Zapatos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Muchos templos requieren que te <strong className="text-foreground">quites los zapatos</strong> antes de entrar en las áreas interiores, particularmente los salones principales, las salas de tatami y las zonas de contemplación del jardín. Busca filas de zapatos cerca de la entrada o un zapatero; son señales claras de que debes quitarte los tuyos. La mayoría de los templos proporcionan bolsas de plástico para llevar tus zapatos o disponen de taquillas. Llevar calcetines limpios y sin agujeros es un consejo práctico que te ahorrará posibles momentos de vergüenza. En los meses más fríos, los suelos de los templos pueden ser bastante fríos, así que unos calcetines abrigados son un verdadero confort.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Normas de Fotografía
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -284,35 +272,36 @@ const EsEtiquetaTemplos = () => {
             </figure>
 
             {/* General Etiquette */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Etiqueta General para Templos y Santuarios</span></div>
+            <h2 id="section-04-etiqueta-general-para-templos-y-santuarios" className="scroll-mt-20">
               Etiqueta General para Templos y Santuarios
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Más allá de los rituales específicos de cada tipo de lugar sagrado, hay varias normas universales de comportamiento que se aplican vayas donde vayas. Estos son los fundamentos que te permitirán visitar cualquier templo o santuario en Japón con confianza.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Código de Vestimenta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japón no impone códigos de vestimenta estrictos en la mayoría de los templos y santuarios como lo hacen algunos sitios religiosos en otros países. No te rechazarán por llevar pantalones cortos o una camiseta de tirantes. Dicho esto, <strong className="text-foreground">cubrir los hombros y las rodillas se considera respetuoso</strong> en los sitios principales, especialmente si planeas entrar en los salones interiores o asistir a una ceremonia. La ropa casual y cómoda está perfectamente bien; solo evita cualquier cosa que pueda considerarse demasiado reveladora o irrespetuosa. Los sombreros deben quitarse al entrar en áreas interiores y durante la oración.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ruido y Comportamiento
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Mantén la voz baja.</strong> Los templos y santuarios son lugares de culto, no atracciones turísticas, aunque millones de turistas los visiten. Muchos visitantes japoneses vienen a rezar con sinceridad, y una conversación en voz alta puede interrumpir su experiencia. No necesitas susurrar, pero sé consciente de tu volumen, especialmente dentro de los salones y cerca de las áreas de oración. Pon el teléfono en silencio. Si viajas con niños, anímales con amabilidad a usar un tono de voz bajo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ofrendas y Dinero
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Como se mencionó antes, <strong className="text-foreground">las monedas de ¥5 se consideran la ofrenda de mejor suerte</strong> porque "go-en" suena como la palabra japonesa para "buena conexión" o "buena fortuna." Algunas personas ofrecen ¥50 (para más suerte) o ¥25 ("doble buena fortuna"). Evita las monedas de ¥10 si eres supersticioso, ya que "to-en" puede sonar como "conexión lejana," implicando desconexión. En la práctica, cualquier cantidad es perfectamente aceptable y apreciada. Solo asegúrate de tener monedas pequeñas preparadas antes de acercarte a la caja de ofrendas, ya que rebuscar en la cartera frente al área de oración retiene la fila.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cosas que Evitar
             </h3>
             <ul className="space-y-4 mb-8">
@@ -334,7 +323,8 @@ const EsEtiquetaTemplos = () => {
             </ul>
 
             {/* Famous Temples & Shrines */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Templos y Santuarios Famosos para Visitar</span></div>
+            <h2 id="section-05-templos-y-santuarios-famosos-para-visitar" className="scroll-mt-20">
               Templos y Santuarios Famosos para Visitar
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -372,7 +362,8 @@ const EsEtiquetaTemplos = () => {
             </ul>
 
             {/* Common Mistakes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Los Errores Más Comunes que Cometen los Turistas</span></div>
+            <h2 id="section-06-los-errores-más-comunes-que-cometen-los-turistas" className="scroll-mt-20">
               Los Errores Más Comunes que Cometen los Turistas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -397,13 +388,14 @@ const EsEtiquetaTemplos = () => {
             </ul>
 
             {/* Detailed Differences */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Diferencias entre Templos Budistas y</span></div>
+            <h2 id="section-07-diferencias-entre-templos-budistas-y" className="scroll-mt-20">
               Diferencias entre Templos Budistas y Santuarios Sintoístas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Aunque ya cubrí lo básico anteriormente, muchos visitantes en mis tours me piden más detalles sobre cómo distinguir templos de santuarios, y por qué los métodos de oración son diferentes. Aquí tienes una comparación más completa, la misma que comparto con mis invitados durante los recorridos.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Identificación Visual
             </h3>
             <ul className="space-y-4 mb-8">
@@ -420,7 +412,7 @@ const EsEtiquetaTemplos = () => {
                 <strong className="text-foreground">Las pagodas y estatuas de Buda</strong> indican un templo. Aunque algunos santuarios tienen estructuras en forma de torre, la clásica pagoda de varios pisos es un elemento arquitectónico budista.
               </li>
             </ul>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Métodos de Oración Comparados
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -439,7 +431,8 @@ const EsEtiquetaTemplos = () => {
             </p>
 
             {/* Senso-ji 30 Million */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Templo Senso-ji</span></div>
+            <h2 id="section-08-templo-senso-ji" className="scroll-mt-20">
               Templo Senso-ji: Lo que Realmente Significa la Cifra de 30 Millones de Visitantes Anuales
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -451,7 +444,7 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               ¿Qué significa esto en la práctica? En una tarde ajetreada de fin de semana, la calle de acceso Nakamise-dori puede sentirse realmente abarrotada, con multitudes hombro con hombro desde Kaminarimon hasta el salón principal. Sin embargo, la experiencia varía drásticamente según la hora y el día en que visites.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mejores Horarios para Visitar Senso-ji (Consejos de Manabu)
             </h3>
             <ul className="space-y-4 mb-8">
@@ -478,7 +471,7 @@ const EsEtiquetaTemplos = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres visitar los templos y santuarios de Tokio con un guía experto?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -496,12 +489,13 @@ const EsEtiquetaTemplos = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 09 · FAQ</span></div>
+              <h2 id="section-09-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Se pueden visitar templos y santuarios gratis?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -509,7 +503,7 @@ const EsEtiquetaTemplos = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Qué debo vestir para visitar un templo o santuario en Japón?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -517,7 +511,7 @@ const EsEtiquetaTemplos = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Es irrespetuoso tomar fotos en los templos?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -525,7 +519,7 @@ const EsEtiquetaTemplos = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cuál es la forma correcta de rezar en un santuario japonés?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -534,7 +528,11 @@ const EsEtiquetaTemplos = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -614,7 +612,9 @@ const EsEtiquetaTemplos = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

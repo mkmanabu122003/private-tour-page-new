@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const TokyoWithKidsFamilyTour = () => {
@@ -19,56 +21,36 @@ const TokyoWithKidsFamilyTour = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/senso-ji-temple-tokyo.webp"
-          alt="Family-friendly Senso-ji temple area in Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo With Kids: Why Families Are Booking Private Guides (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 14, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who regularly guides families with children of all ages through Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/senso-ji-temple-tokyo.webp"
+        imageAlt="Family-friendly Senso-ji temple area in Tokyo"
+        eyebrow="Planning Your Trip"
+        title="Tokyo With Kids: Why Families Are Booking Private Guides (2026)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who regularly guides families with children of all ages through Tokyo."
+        date="March 14, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "The Real Challenges", href: "#section-01-the-real-challenges" },
+          { num: "02", label: "Best Tokyo Spots for Families", href: "#section-02-best-tokyo-spots-for-families" },
+          { num: "03", label: "What a Family Guide Does…", href: "#section-03-what-a-family-guide-does-differently" },
+          { num: "04", label: "Sample 3-Day Family Itinerary", href: "#section-04-sample-3-day-family-itinerary" },
+          { num: "05", label: "What It Costs for Families", href: "#section-05-what-it-costs-for-families" },
+          { num: "06", label: "Every Family Is Different", href: "#section-06-every-family-is-different" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Tokyo is one of the best cities in the world for families. It's safe, clean, and full of things that fascinate kids of every age. But let's be realistic: it's also a city of 14 million people with a train system that has 13 different subway lines, restaurants where nobody speaks English, and cultural sites where "please be quiet" is the unwritten rule.
@@ -82,11 +64,12 @@ const TokyoWithKidsFamilyTour = () => {
             </p>
 
             {/* The Challenges */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · The Real Challenges</span></div>
+            <h2 id="section-01-the-real-challenges" className="scroll-mt-20">
               The Real Challenges (And How to Solve Them)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Trains and Strollers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -97,7 +80,7 @@ const TokyoWithKidsFamilyTour = () => {
               The solution: avoid rush hours completely, know which stations have elevators (I have this mapped for every route I plan), and consider using a lightweight carrier instead of a stroller for some days. The Yamanote Line stations are generally well-equipped, but smaller stations on the Metro can be hit-or-miss.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Food for Picky Eaters
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -108,14 +91,14 @@ const TokyoWithKidsFamilyTour = () => {
               {/* <!-- VERIFIED: Saizeriya (~206 stores in Tokyo) and Coco Ichibanya (2,000+ nationwide) both confirmed operating. Checked: 2026-03-14 --> */}
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Temple and Shrine Fatigue
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kids have a limited tolerance for "another old building." The trick is spacing temples between activities they find exciting, and making the temple visits interactive. I tell kids about the guardian statues (who are they protecting the temple from?), let them ring the bell and clap at shrines, and challenge them to find specific symbols carved into the buildings. A temple visit that would bore a 7-year-old in 5 minutes becomes a 30-minute treasure hunt.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Timing and Pacing
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -123,11 +106,12 @@ const TokyoWithKidsFamilyTour = () => {
             </p>
 
             {/* Best Tokyo Spots for Families */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Best Tokyo Spots for Families</span></div>
+            <h2 id="section-02-best-tokyo-spots-for-families" className="scroll-mt-20">
               Best Tokyo Spots for Families
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               TeamLab Borderless (Azabudai Hills)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -135,7 +119,7 @@ const TokyoWithKidsFamilyTour = () => {
               The immersive digital art museum that mesmerizes kids and adults equally. Children can run through rooms of projected waterfalls, draw creatures that come to life on the walls, and interact with light installations. Allow 2-3 hours. Book tickets online in advance as it sells out regularly.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ueno Area (Zoo, Museums, Park)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -143,7 +127,7 @@ const TokyoWithKidsFamilyTour = () => {
               Ueno is a full family day in one area. The zoo (¥600 for adults, one of the oldest in Japan), the National Museum of Nature and Science (dinosaurs, interactive exhibits), Ueno Park for running around, and Ameyoko market for street food snacks. Everything is within walking distance, which means no stressful train transfers between activities.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Odaiba
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,7 +135,7 @@ const TokyoWithKidsFamilyTour = () => {
               The waterfront area with the life-size Gundam statue, shopping malls, a small beach, and the Yurikamome monorail ride over Rainbow Bridge (itself an attraction for kids). TeamLab Planets in nearby Toyosu is another option for immersive digital art (open until 2027). Good for a half-day when everyone needs a break from temples and traditional culture.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Asakusa (The Kid-Friendly Route)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -161,14 +145,14 @@ const TokyoWithKidsFamilyTour = () => {
               {" "}works well with kids if you plan it right. The Nakamise shopping street has snacks and small toys. Senso-ji Temple has the incense ritual (kids love wafting smoke over themselves "for good health"). The backstreets have taiyaki shops, traditional candy stores, and rickshaw rides. I time family visits for late morning when the initial crowds thin out.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Akihabara (For Older Kids)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kids aged 8+ who are into gaming, anime, or technology will be in paradise. Retro game arcades, multi-floor toy stores, and capsule machine alleys. This is a reward destination that keeps older kids motivated through the cultural sites earlier in the trip.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Parks Tourists Don't Know About
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -176,7 +160,8 @@ const TokyoWithKidsFamilyTour = () => {
             </p>
 
             {/* What a Family Guide Does Differently */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What a Family Guide Does Differently</span></div>
+            <h2 id="section-03-what-a-family-guide-does-differently" className="scroll-mt-20">
               What a Family Guide Does Differently
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -202,14 +187,15 @@ const TokyoWithKidsFamilyTour = () => {
             </ul>
 
             {/* Sample 3-Day Family Itinerary */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Sample 3-Day Family Itinerary</span></div>
+            <h2 id="section-04-sample-3-day-family-itinerary" className="scroll-mt-20">
               Sample 3-Day Family Itinerary (Ages 4-10)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is a realistic plan, not a fantasy "see everything" list. It includes rest time, snack stops, and assumes kids will be tired by mid-afternoon.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Day 1: Asakusa and Ueno (Best Day for a Guide)
             </h3>
             <ul className="space-y-2 mb-4">
@@ -237,7 +223,7 @@ const TokyoWithKidsFamilyTour = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Day 2: Shibuya, Harajuku, and Meiji Shrine (Self-Guided Works)
             </h3>
             <ul className="space-y-2 mb-4">
@@ -258,7 +244,7 @@ const TokyoWithKidsFamilyTour = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Day 3: Choose Your Adventure
             </h3>
             <ul className="space-y-2 mb-8">
@@ -282,7 +268,8 @@ const TokyoWithKidsFamilyTour = () => {
             </p>
 
             {/* Pricing for Families */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · What It Costs for Families</span></div>
+            <h2 id="section-05-what-it-costs-for-families" className="scroll-mt-20">
               What It Costs for Families
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -311,7 +298,8 @@ const TokyoWithKidsFamilyTour = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · Every Family Is Different</span></div>
+              <h2 id="section-06-every-family-is-different" className="scroll-mt-20">
                 Every Family Is Different
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -325,7 +313,11 @@ const TokyoWithKidsFamilyTour = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -384,7 +376,9 @@ const TokyoWithKidsFamilyTour = () => {
       1. Restaurant high chair/private room claims — based on personal knowledge
       2. TeamLab Borderless ticket booking process — confirm current system
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

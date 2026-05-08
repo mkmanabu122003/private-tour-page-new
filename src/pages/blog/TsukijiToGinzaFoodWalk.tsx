@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const TsukijiToGinzaFoodWalk = () => {
@@ -21,56 +23,38 @@ const TsukijiToGinzaFoodWalk = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/tsukiji-food-guide-hero.webp"
-          alt="Fresh food at Tsukiji outer market in Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Food &amp; Culture</p>
-            <h1 className="heading-display text-foreground">
-              Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 14, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who walks this route with friends when he has a free afternoon.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/tsukiji-food-guide-hero.webp"
+        imageAlt="Fresh food at Tsukiji outer market in Tokyo"
+        eyebrow="Food &amp; Culture"
+        title="Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who walks this route with friends when he has a free afternoon."
+        date="March 14, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Stop 1", href: "#section-01-stop-1" },
+          { num: "02", label: "Stop 2", href: "#section-02-stop-2" },
+          { num: "03", label: "Optional Detour: Hamarikyu…", href: "#section-03-optional-detour-hamarikyu-gardens-add-60" },
+          { num: "04", label: "Stop 3", href: "#section-04-stop-3" },
+          { num: "05", label: "Stop 4", href: "#section-05-stop-4" },
+          { num: "06", label: "Stop 5: Shinbashi", href: "#section-06-stop-5-shinbashi" },
+          { num: "07", label: "Solo vs. With a Guide", href: "#section-07-solo-vs-with-a-guide" },
+          { num: "08", label: "Practical Info", href: "#section-08-practical-info" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               This is the route I walk with friends when we have a free afternoon and want to eat well without thinking too hard about it. It starts at the fish market, ends under the train tracks in Yurakucho with a cold beer, and covers about 3 kilometers of some of the best eating in Tokyo.
@@ -78,16 +62,24 @@ const TsukijiToGinzaFoodWalk = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               You can do this walk entirely on your own using this article as a guide. I'm not holding anything back. But I'll also tell you where having a guide (like me) adds something you can't replicate alone.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               For a deeper look at the market itself, check my{" "}
               <Link to="/blog/tsukiji-market-guide" className="text-accent hover:underline">
                 Tsukiji Market guide
               </Link>
               .
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Going the <em>other</em> way? See my{" "}
+              <Link to="/blog/ginza-to-tsukiji-walking-route" className="text-accent hover:underline">
+                Ginza to Tsukiji walking guide
+              </Link>
+              {" "}for the morning route from Ginza hotels to the market.
+            </p>
 
             {/* Stop 1: Tsukiji Outer Market */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Stop 1</span></div>
+            <h2 id="section-01-stop-1" className="scroll-mt-20">
               Stop 1: Tsukiji Outer Market (9:00 - 10:30 AM)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -118,7 +110,8 @@ const TsukijiToGinzaFoodWalk = () => {
             </p>
 
             {/* Stop 2: Tsukiji Honganji Area */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Stop 2</span></div>
+            <h2 id="section-02-stop-2" className="scroll-mt-20">
               Stop 2: Tsukiji Honganji Temple Area (10:30 - 11:00 AM)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -143,7 +136,8 @@ const TsukijiToGinzaFoodWalk = () => {
             </figure>
 
             {/* Optional Detour: Hamarikyu Gardens */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Optional Detour: Hamarikyu Gardens (Add 60</span></div>
+            <h2 id="section-03-optional-detour-hamarikyu-gardens-add-60" className="scroll-mt-20">
               Optional Detour: Hamarikyu Gardens (Add 60–90 min)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -186,7 +180,8 @@ const TsukijiToGinzaFoodWalk = () => {
             </ul>
 
             {/* Stop 3: Walk to Ginza Backstreets */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Stop 3</span></div>
+            <h2 id="section-04-stop-3" className="scroll-mt-20">
               Stop 3: The Walk to Ginza's Backstreets (11:00 - 12:00 PM)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -213,8 +208,8 @@ const TsukijiToGinzaFoodWalk = () => {
                 Under the tracks: tiny izakaya glow beneath the elevated JR line between Yurakucho and Shinbashi
               </figcaption>
             </figure>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Stop 4</span></div>
+            <h2 id="section-05-stop-4" className="scroll-mt-20">
               Stop 4: Yurakucho Izakaya Alley (4:00 PM onward)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -231,7 +226,8 @@ const TsukijiToGinzaFoodWalk = () => {
             </p>
 
             {/* Stop 5: Shinbashi Extension */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Stop 5: Shinbashi</span></div>
+            <h2 id="section-06-stop-5-shinbashi" className="scroll-mt-20">
               Stop 5: Shinbashi — The Deeper End (5:30 PM onward)
             </h2>
             <figure className="my-8">
@@ -278,7 +274,8 @@ const TsukijiToGinzaFoodWalk = () => {
             </p>
 
             {/* Solo vs With a Guide */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Solo vs. With a Guide</span></div>
+            <h2 id="section-07-solo-vs-with-a-guide" className="scroll-mt-20">
               Solo vs. With a Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -303,7 +300,8 @@ const TsukijiToGinzaFoodWalk = () => {
             </ul>
 
             {/* Practical Info */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Practical Info</span></div>
+            <h2 id="section-08-practical-info" className="scroll-mt-20">
               Practical Info
             </h2>
             <ul className="space-y-3 mb-8">
@@ -327,7 +325,7 @@ const TsukijiToGinzaFoodWalk = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want the Guided Version?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -345,7 +343,11 @@ const TsukijiToGinzaFoodWalk = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -413,7 +415,9 @@ const TsukijiToGinzaFoodWalk = () => {
       3. Yakitori pricing (¥100-300 per skewer) — verify current Yurakucho prices
       4. Route matches actual food tour — confirm consistency
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

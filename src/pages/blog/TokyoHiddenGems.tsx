@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const TokyoHiddenGems = () => {
   return (
@@ -18,56 +20,37 @@ const TokyoHiddenGems = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-hidden-shrine.webp"
-          alt="Hidden shrine in Tokyo, one of the city's lesser-known gems"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo Hidden Gems &amp; Off the Beaten Path: A Licensed Guide's Map (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 7, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-hidden-shrine.webp"
+        imageAlt="Hidden shrine in Tokyo, one of the city's lesser-known gems"
+        eyebrow="Tokyo Area Guides"
+        title="Tokyo Hidden Gems &amp; Off the Beaten Path: A Licensed Guide's Map (2026)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Why \"Hidden Gems\" Lists Are…", href: "#section-01-why-hidden-gems-lists-are-usually-wrong" },
+          { num: "02", label: "Yanaka", href: "#section-02-yanaka" },
+          { num: "03", label: "Kagurazaka", href: "#section-03-kagurazaka" },
+          { num: "04", label: "Nezu Shrine", href: "#section-04-nezu-shrine" },
+          { num: "05", label: "Shinbashi Under the Tracks", href: "#section-05-shinbashi-under-the-tracks" },
+          { num: "06", label: "How to Find Your Own Hidden…", href: "#section-06-how-to-find-your-own-hidden-gems" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               I'll be honest: I almost didn't write this article. The phrase "Tokyo hidden gems" makes me wince a little, because 90% of the lists you'll find online aren't hidden at all. They're just popular spots repackaged with clickbait headlines. Robot Restaurant? That's in every guidebook. TeamLab? There's a two-hour queue.
@@ -80,7 +63,8 @@ const TokyoHiddenGems = () => {
             </p>
 
             {/* H2: Why "hidden gems" lists are usually wrong */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Why "Hidden Gems" Lists Are Usually Wrong</span></div>
+            <h2 id="section-01-why-hidden-gems-lists-are-usually-wrong" className="scroll-mt-20">
               Why "Hidden Gems" Lists Are Usually Wrong
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -94,7 +78,8 @@ const TokyoHiddenGems = () => {
             </p>
 
             {/* H2: Yanaka */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Yanaka</span></div>
+            <h2 id="section-02-yanaka" className="scroll-mt-20">
               Yanaka: The Neighborhood That Survived the War
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -115,7 +100,8 @@ const TokyoHiddenGems = () => {
             </p>
 
             {/* H2: Kagurazaka */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Kagurazaka</span></div>
+            <h2 id="section-03-kagurazaka" className="scroll-mt-20">
               Kagurazaka: Tokyo's Old French Quarter with a Japanese Soul
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -129,7 +115,8 @@ const TokyoHiddenGems = () => {
             </p>
 
             {/* H2: Nezu Shrine */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Nezu Shrine</span></div>
+            <h2 id="section-04-nezu-shrine" className="scroll-mt-20">
               Nezu Shrine: Fushimi Inari Without the Crowds
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -150,7 +137,8 @@ const TokyoHiddenGems = () => {
             </p>
 
             {/* H2: Shinbashi */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Shinbashi Under the Tracks</span></div>
+            <h2 id="section-05-shinbashi-under-the-tracks" className="scroll-mt-20">
               Shinbashi Under the Tracks: Where Tokyo Actually Unwinds
             </h2>
             <figure className="my-8">
@@ -224,31 +212,32 @@ const TokyoHiddenGems = () => {
             </figure>
 
             {/* H2: How to find your own hidden gems */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · How to Find Your Own Hidden Gems</span></div>
+            <h2 id="section-06-how-to-find-your-own-hidden-gems" className="scroll-mt-20">
               How to Find Your Own Hidden Gems (The Method I Use)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               After 500+ tours, I've developed a method for discovering places that consistently reward exploration. Here's the system I use, and it works for any visitor willing to slow down and pay attention.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Follow the Rivers and Canals
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo was built on water. The Sumida River and dozens of smaller canals shaped the city's geography, and the neighborhoods along them retain a character that inland areas have lost. Walk along any canal path in Tokyo and within fifteen minutes you'll find something unexpected: a tiny shrine squeezed between two buildings, a family-run shop that's been in the same spot for four generations, or a view of Tokyo that looks nothing like the neon postcards.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Visit Temples and Shrines on Weekday Mornings
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo has over 4,500 temples and shrines. The famous ones (Senso-ji, Meiji Jingu) get all the visitors. But the neighborhood temples, the ones with no English signage and no gift shops, are where you'll see Japanese religious practice as it actually exists: quiet, personal, woven into daily life. Walk into any residential neighborhood before 8 AM and you'll hear the sound of Buddhist prayers from open temple doors. That's not a performance. It's a Tuesday morning.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Look for the Oldest Shop on Any Street
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japan has more businesses over 100 years old than any other country, over 33,000 of them. In any Tokyo shopping street, look for the shop with the most weathered signboard, the most traditional facade, or the simplest product range. That shop is probably telling a story about the neighborhood's history. The senbei (rice cracker) shop in Asakusa that's been roasting crackers over charcoal since the Meiji era isn't just selling snacks. It's maintaining a craft tradition that most countries have abandoned.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ask a Local (But Ask the Right Question)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -257,7 +246,7 @@ const TokyoHiddenGems = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a guide who knows where to look?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -275,12 +264,13 @@ const TokyoHiddenGems = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Are Tokyo's hidden gems safe to visit alone?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -288,7 +278,7 @@ const TokyoHiddenGems = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     How do I get to these places without speaking Japanese?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -296,7 +286,7 @@ const TokyoHiddenGems = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     What's the best time to visit these spots?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -304,7 +294,7 @@ const TokyoHiddenGems = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Can I combine these spots in one day?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -312,7 +302,7 @@ const TokyoHiddenGems = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Is Shinbashi safe at night?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -320,7 +310,7 @@ const TokyoHiddenGems = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Can I eat at Shinbashi izakaya without speaking Japanese?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -331,7 +321,11 @@ const TokyoHiddenGems = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -427,7 +421,9 @@ const TokyoHiddenGems = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

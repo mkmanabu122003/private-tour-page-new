@@ -7,6 +7,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaTsukiji = () => {
   return (
@@ -22,51 +24,34 @@ const EsGuiaTsukiji = () => {
         ]}
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/tours/food-tour-tsukiji.webp"
-          alt="Guía del mercado de Tsukiji para amantes de la gastronomía"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/food-tour-tsukiji.webp"
+        imageAlt="Guía del mercado de Tsukiji para amantes de la gastronomía"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)"
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Tsukiji vs Toyosu", href: "#section-01-tsukiji-vs-toyosu" },
+          { num: "02", label: "Qué Comer en Tsukiji", href: "#section-02-qué-comer-en-tsukiji" },
+          { num: "03", label: "Cuándo Ir", href: "#section-03-cuándo-ir" },
+          { num: "04", label: "Combínalo con Ginza para la…", href: "#section-04-combínalo-con-ginza-para-la-media-jornada-perfecta" },
+          { num: "05", label: "Mercado de Toyosu", href: "#section-05-mercado-de-toyosu" }
+            ]} />
+
+            <article>
+
             {/* Featured Snippet / Summary Box */}
             <div className="bg-accent/5 border border-accent/20 rounded-lg p-6 mb-10">
               <p className="text-foreground font-medium mb-2">Resumen rápido — Mercado Exterior de Tsukiji en 2026</p>
@@ -91,7 +76,8 @@ const EsGuiaTsukiji = () => {
             </p>
 
             {/* Tsukiji vs Toyosu */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Tsukiji vs Toyosu</span></div>
+            <h2 id="section-01-tsukiji-vs-toyosu" className="scroll-mt-20">
               Tsukiji vs Toyosu: ¿Cuál Deberías Visitar?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -114,14 +100,15 @@ const EsGuiaTsukiji = () => {
             </p>
 
             {/* Qué Comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Qué Comer en Tsukiji</span></div>
+            <h2 id="section-02-qué-comer-en-tsukiji" className="scroll-mt-20">
               Qué Comer en Tsukiji
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Con cientos de puestos compitiendo por tu atención (y tu apetito), saber qué priorizar marca la diferencia entre una buena visita y una extraordinaria. Aquí está lo que recomiendo a cada invitado, junto con los detalles de conocedor que te ayudarán a elegir sabiamente.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sushi Fresco: De Pie vs Sentado
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -144,7 +131,7 @@ const EsGuiaTsukiji = () => {
               Los restaurantes con asiento ofrecen una experiencia más relajada con selecciones de mayor nivel. Espera pagar de 3.000 a 6.000 yenes por un set omakase (a elección del chef). Algunos de estos restaurantes, como Sushi Dai y Daiwa Sushi, se hicieron famosos mundialmente y pueden tener colas de dos horas o más. Honestamente, la diferencia de calidad entre los locales famosos y las barras menos conocidas es marginal; estás pagando por el nombre, no por el pescado. Compartiré qué puestos específicos recomiendo durante nuestro tour a pie.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tamagoyaki (Tortilla Japonesa de Huevo)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -164,35 +151,35 @@ const EsGuiaTsukiji = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Brochetas de Marisco a la Parrilla
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Caminando por los callejones exteriores de Tsukiji, encontrarás puesto tras puesto de marisco a la parrilla en brochetas: vieiras, calamar, patas de cangrejo real, gambas y pescado de temporada. Los mejores puestos asan por encargo, así que el marisco está ardiendo y ligeramente carbonizado por fuera mientras permanece tierno y jugoso por dentro. Busca puestos donde puedas ver el producto crudo real antes de que llegue a la parrilla, señal de frescura y confianza. Las <strong className="text-foreground">vieiras gigantes de Hokkaido</strong> (hotate) son un destacado, normalmente asadas con un toque de salsa de soja y mantequilla. A alrededor de 500 a 800 yenes por brocheta, no son el snack más barato, pero el tamaño y la calidad los hacen absolutamente merecedores.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Uni (Erizo de Mar)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si nunca has probado el uni fresco, Tsukiji es el lugar para tener tu primera experiencia. La diferencia entre un buen uni y un uni mediocre es enorme. El uni fresco y de alta calidad debería saber dulce y salino, como el océano destilado en un bocado cremoso y con textura de flan. El mal uni sabe metálico y amargo. Así es como se elige el bueno: <strong className="text-foreground">busca uni de color naranja brillante o amarillo dorado</strong>, con lóbulos firmes y definidos que mantengan su forma. Evita cualquier cosa que parezca blanda, acuosa o amarronada. Muchos puestos venden cajas individuales de uni donde puedes inspeccionar el producto antes de comprar. Espera pagar de 500 a 1.500 yenes dependiendo del grado y el origen. El uni de Hokkaido se considera generalmente el más fino, pero el de Sanriku (de la costa noreste) también es excelente y a menudo menos caro.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ternera Wagyu en Brocheta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tsukiji no es solo marisco. Varios puestos se especializan en brochetas de ternera wagyu a la parrilla, y la calidad puede ser excepcional. Los mejores vendedores usan wagyu de grado A4 o A5, la misma calidad que se sirve en restaurantes de yakiniku de alta gama, asada sobre carbón y sazonada simplemente con sal o un ligero glaseado de soja. Una sola brocheta normalmente cuesta de 800 a 1.500 yenes dependiendo del corte y el grado. El marmolado se derrite en tu lengua de una manera que la ternera normal simplemente no puede replicar. Es un capricho, pero esto es Tsukiji, y el capricho es el objetivo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Postres de Matcha
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Después de toda esa comida salada, querrás algo dulce, y Tsukiji también cumple aquí. Varias tiendas se especializan en helado soft de matcha, daifuku de matcha (mochi relleno de pasta de judías rojas dulces y crema de matcha) y tiramisú de matcha. Matsueda es uno de mis favoritos; su helado soft de matcha usa matcha Uji de alta calidad de Kioto, y el sabor es intenso, ligeramente amargo y profundamente aromático. Un cono cuesta alrededor de 400 a 500 yenes. También hay excelentes dorayaki (sándwiches de tortita con relleno de judías rojas) y mochi de frutas frescas si el matcha no es lo tuyo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Qué Evitar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -202,7 +189,8 @@ const EsGuiaTsukiji = () => {
             <InlineCTAEs href="/es/tours/tsukiji-ginza" />
 
             {/* Cuándo Ir */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Cuándo Ir</span></div>
+            <h2 id="section-03-cuándo-ir" className="scroll-mt-20">
               Cuándo Ir
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -230,7 +218,8 @@ const EsGuiaTsukiji = () => {
             </figure>
 
             {/* Combinar con Ginza */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Combínalo con Ginza para la Media Jornada Perfecta</span></div>
+            <h2 id="section-04-combínalo-con-ginza-para-la-media-jornada-perfect" className="scroll-mt-20">
               Combínalo con Ginza para la Media Jornada Perfecta
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -248,7 +237,8 @@ const EsGuiaTsukiji = () => {
             </p>
 
             {/* Resumen Rápido de Toyosu */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Mercado de Toyosu</span></div>
+            <h2 id="section-05-mercado-de-toyosu" className="scroll-mt-20">
               Mercado de Toyosu: Resumen Rápido
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -263,7 +253,7 @@ const EsGuiaTsukiji = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres que un experto gastronómico local te guíe por los mejores puestos de Tsukiji?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -278,7 +268,11 @@ const EsGuiaTsukiji = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -312,7 +306,9 @@ const EsGuiaTsukiji = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

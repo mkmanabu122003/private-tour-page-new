@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsTsukijiVsToyosu = () => {
   return (
@@ -26,51 +28,36 @@ const EsTsukijiVsToyosu = () => {
         ]}
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías Gastronómicas</p>
-            <h1 className="heading-display text-foreground">
-              Tsukiji vs Toyosu: ¿Qué Mercado de Pescado de Tokio Deberías Visitar?
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                31 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/tsukiji-market-seafood-stalls.webp"
-          alt="Tsukiji vs Toyosu — comparativa de los dos mercados de pescado de Tokio"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/tsukiji-market-seafood-stalls.webp"
+        imageAlt="Tsukiji vs Toyosu — comparativa de los dos mercados de pescado de Tokio"
+        eyebrow="Guías Gastronómicas"
+        title="Tsukiji vs Toyosu: ¿Qué Mercado de Pescado de Tokio Deberías Visitar?"
+        date="31 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "La confusión", href: "#section-01-la-confusión" },
+          { num: "02", label: "Comparativa lado a lado", href: "#section-02-comparativa-lado-a-lado" },
+          { num: "03", label: "Mercado Exterior de Tsukiji", href: "#section-03-mercado-exterior-de-tsukiji" },
+          { num: "04", label: "Mercado de Pescado de Toyosu", href: "#section-04-mercado-de-pescado-de-toyosu" },
+          { num: "05", label: "¿Se pueden visitar los dos…", href: "#section-05-se-pueden-visitar-los-dos-en-un-día" },
+          { num: "06", label: "Mi recomendación honesta", href: "#section-06-mi-recomendación-honesta" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Quick Answer Box */}
             <div className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg mb-8">
               <p className="font-semibold text-foreground mb-2">Respuesta rápida</p>
@@ -94,7 +81,8 @@ const EsTsukijiVsToyosu = () => {
             </p>
 
             {/* Section 1: The Confusion */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · La confusión</span></div>
+            <h2 id="section-01-la-confusión" className="scroll-mt-20">
               La confusión: ¿Qué se trasladó realmente en 2018?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -114,7 +102,8 @@ const EsTsukijiVsToyosu = () => {
             </p>
 
             {/* Section 2: Comparison Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Comparativa lado a lado</span></div>
+            <h2 id="section-02-comparativa-lado-a-lado" className="scroll-mt-20">
               Comparativa lado a lado
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -192,7 +181,8 @@ const EsTsukijiVsToyosu = () => {
             </div>
 
             {/* Section 3: Tsukiji */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Mercado Exterior de Tsukiji</span></div>
+            <h2 id="section-03-mercado-exterior-de-tsukiji" className="scroll-mt-20">
               Mercado Exterior de Tsukiji: Qué esperar
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -242,7 +232,8 @@ const EsTsukijiVsToyosu = () => {
             />
 
             {/* Section 4: Toyosu */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Mercado de Pescado de Toyosu</span></div>
+            <h2 id="section-04-mercado-de-pescado-de-toyosu" className="scroll-mt-20">
               Mercado de Pescado de Toyosu: Qué esperar
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -265,7 +256,8 @@ const EsTsukijiVsToyosu = () => {
             </p>
 
             {/* Section 5: Both in One Day */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · ¿Se pueden visitar los dos en un día?</span></div>
+            <h2 id="section-05-se-pueden-visitar-los-dos-en-un-día" className="scroll-mt-20">
               ¿Se pueden visitar los dos en un día?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -296,7 +288,8 @@ const EsTsukijiVsToyosu = () => {
             </p>
 
             {/* Section 6: My Recommendation */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Mi recomendación honesta</span></div>
+            <h2 id="section-06-mi-recomendación-honesta" className="scroll-mt-20">
               Mi recomendación honesta
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -326,7 +319,7 @@ const EsTsukijiVsToyosu = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres vivir los mercados de pescado de Tokio con un guía local?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -351,40 +344,41 @@ const EsTsukijiVsToyosu = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Preguntas Frecuentes</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿El mercado de Tsukiji está cerrado?</h3>
+                  <h3>¿El mercado de Tsukiji está cerrado?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Solo parcialmente. El mercado mayorista interior (subastas de atún, vendedores al por mayor) se trasladó a Toyosu en octubre de 2018. Pero el mercado exterior — con más de 460 tiendas, restaurantes y puestos de comida — nunca cerró. Sigue siendo uno de los mejores destinos gastronómicos de Tokio y está completamente abierto en 2026. El mercado exterior es la parte que la mayoría de los turistas visitaban y disfrutaban, y sigue exactamente donde siempre estuvo.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿La subasta de atún está en Tsukiji o en Toyosu?</h3>
+                  <h3>¿La subasta de atún está en Tsukiji o en Toyosu?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La subasta de atún está en el Mercado de Pescado de Toyosu. Se trasladó allí desde Tsukiji en 2018. Para ver la subasta, necesitas ganar una lotería mensual: solicitas online aproximadamente un mes antes. Solo se admiten unas 100 personas por día de subasta, y la visita se realiza desde detrás de un cristal en una plataforma elevada a partir de las 5:30 de la mañana.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Qué mercado tiene mejor sushi?</h3>
+                  <h3>¿Qué mercado tiene mejor sushi?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Ambos mercados sirven sushi excelente, pero las experiencias son muy diferentes. Tsukiji ofrece más variedad y mejor relación calidad-precio: las barras de sushi de pie sirven pescado excepcional a precios razonables (8-10 piezas por unos ¥2.000 a ¥3.000), además puedes picotear otros mariscos de los puestos. Toyosu tiene unos 40 restaurantes con mesa con precios más altos (comidas de ¥2.000 a ¥5.000+) y colas más largas. Para la mayoría de los visitantes, la escena del sushi en Tsukiji es más accesible y más divertida.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Necesito reservar con antelación para alguno de los mercados?</h3>
+                  <h3>¿Necesito reservar con antelación para alguno de los mercados?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Tsukiji no requiere reserva alguna: simplemente preséntate un día que el mercado esté abierto (cierra los domingos y algunos miércoles). La subasta de atún de Toyosu requiere ganar una lotería mensual, solicitada online aproximadamente un mes antes. La planta de restaurantes y los pasillos de visitantes de Toyosu están abiertos sin reserva, pero los restaurantes populares tienen largas colas. Para la mejor experiencia en Tsukiji, recomiendo llegar a las 8:00 de la mañana un día entre semana.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Tsukiji sigue abierto en 2026?</h3>
+                  <h3>¿Tsukiji sigue abierto en 2026?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Sí, absolutamente. El mercado exterior de Tsukiji con sus más de 460 puestos de comida, restaurantes y tiendas sigue abierto y en plena actividad en 2026. Lo que se trasladó a Toyosu en 2018 fue únicamente el mercado mayorista interior. La parte que los turistas visitan y disfrutan — la comida callejera, el sushi, los cuchillos — nunca se movió.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuánto cuesta un tour privado por el mercado de pescado de Tokio?</h3>
+                  <h3>¿Cuánto cuesta un tour privado por el mercado de pescado de Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Nuestro tour gastronómico privado por Tokio, que incluye Tsukiji como parada principal, cuesta ¥45.000 por grupo (no por persona), lo que lo convierte en una opción muy asequible para parejas, familias o grupos pequeños. El tour incluye orientación personalizada del mercado, recomendaciones de comida adaptadas a tus gustos y explicaciones culturales que no encontrarás en ninguna guía escrita.
                   </p>
@@ -395,7 +389,11 @@ const EsTsukijiVsToyosu = () => {
             <p className="text-sm text-muted-foreground mt-12">
               Última actualización: abril 2026
             </p>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -427,7 +425,9 @@ const EsTsukijiVsToyosu = () => {
           { "@type": "Question", name: "¿Cuánto cuesta un tour privado por el mercado de pescado de Tokio?", acceptedAnswer: { "@type": "Answer", text: "Nuestro tour gastronómico privado por Tokio, que incluye Tsukiji, cuesta ¥45.000 por grupo (no por persona), ideal para parejas, familias o grupos pequeños." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

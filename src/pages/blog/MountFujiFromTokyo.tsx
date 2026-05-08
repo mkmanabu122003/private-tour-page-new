@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const MountFujiFromTokyo = () => {
   return (
@@ -26,57 +28,36 @@ const MountFujiFromTokyo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/hakone-pirate-ship-ashi.webp"
-          alt="Mt. Fuji seen from Lake Ashi in Hakone — the classic view south of Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              Can You See Mt. Fuji from Tokyo? A Licensed Guide's 2026 Answer
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 23, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has spent years scanning Tokyo's skyline for Fuji-san on the way to work.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Last updated: April 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/hakone-pirate-ship-ashi.webp"
+        imageAlt="Mt. Fuji seen from Lake Ashi in Hakone — the classic view south of Tokyo"
+        eyebrow="Planning Your Trip"
+        title="Can You See Mt. Fuji from Tokyo? A Licensed Guide's 2026 Answer"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has spent years scanning Tokyo's skyline for Fuji-san on the way to work."
+        date="April 23, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "The Short Answer", href: "#section-01-the-short-answer" },
+          { num: "02", label: "Month-by-Month", href: "#section-02-month-by-month" },
+          { num: "03", label: "5 Best Mt. Fuji Viewpoints…", href: "#section-03-5-best-mt-fuji-viewpoints-in-tokyo" },
+          { num: "04", label: "The Best Time of Day", href: "#section-04-the-best-time-of-day" },
+          { num: "05", label: "Why Japanese People Are…", href: "#section-05-why-japanese-people-are-obsessed-with-fuji-san" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Yes, you can see Mt. Fuji from Tokyo — on roughly 40-60% of winter days (November through February), dropping to 10-20% in summer (May through September). The 100 km distance isn't the problem; humidity is. On the right morning, from the right viewpoint, Fuji-san looks close enough to reach out and touch from a tower in central Tokyo."
               hook="Below: 5 viewpoints that actually work in 2026 (one beloved free spot is closed for renovation until December — I'll flag it so you don't waste a trip), the one piece of weather science that changes everything about timing, and the ¥4,000 rule that surprised climbers this year."
@@ -99,14 +80,15 @@ const MountFujiFromTokyo = () => {
             />
 
             {/* Quick Answer Expanded */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · The Short Answer</span></div>
+            <h2 id="section-01-the-short-answer" className="scroll-mt-20">
               The Short Answer: Yes, But It Depends on the Day
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Mt. Fuji sits about 100 kilometers southwest of central Tokyo. It's the tallest mountain in Japan at 3,776 meters, and its near-perfect conical shape makes it visible from remarkable distances — whenever the air cooperates. The obstacle isn't distance. The obstacle is what sits between you and the mountain: humidity, urban haze, clouds, and seasonal pollen. Yes, Mt. Fuji is visible from Tokyo — just not every day of the year.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Why some days the view vanishes
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -114,7 +96,8 @@ const MountFujiFromTokyo = () => {
             </p>
 
             {/* Monthly Visibility */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Month-by-Month</span></div>
+            <h2 id="section-02-month-by-month" className="scroll-mt-20">
               Month-by-Month: When Fuji Is Actually Visible
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -131,42 +114,43 @@ const MountFujiFromTokyo = () => {
             </p>
 
             {/* Viewpoints */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · 5 Best Mt. Fuji Viewpoints in Tokyo</span></div>
+            <h2 id="section-03-5-best-mt-fuji-viewpoints-in-tokyo" className="scroll-mt-20">
               5 Best Mt. Fuji Viewpoints in Tokyo (2026 Update)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Not all viewpoints are equal. Some are famous but underwhelming. Others are the kind of quiet spots that locals keep to themselves. After years of climbing towers and testing decks on clear and hazy days, these are the ones I still recommend in 2026 — with a warning at the end about one famous free spot you should skip this year.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               1. Tokyo Skytree (the iconic view)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               At 634 meters, Tokyo Skytree is the tallest structure in the city and, logically, one of the best places to see Mt. Fuji from Tokyo. From the Tembo Deck at 350 meters — or higher still on the Tembo Galleria at 450 meters — Fuji appears southwest as an unmistakable silhouette. On a clear winter morning, the view is genuinely stunning. Price-wise: weekday advance online tickets are around ¥2,100 for Tembo Deck and about ¥3,400 for the combo ticket that includes Tembo Galleria. Weekends add ¥300, and same-day counter prices are higher. My advice: book online for a weekday opening slot. That's when the crowds are thinnest and the morning air is clearest.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               2. Shibuya Sky (newer, 360°, sunset magic)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shibuya Sky, on the roof of Shibuya Scramble Square at 229 meters, is the newer contender and has quickly become one of my favorite viewpoints. Fuji is to the west, so late afternoon sessions catch it backlit — and on a clear day, the golden-hour silhouette over Tokyo's skyline is genuinely hard to beat. Adult tickets are ¥3,000 before 3:00 PM and ¥3,700 after. One warning: sunset slots sell out fast — often within minutes of being released. Book ahead on the official site, and if sunset is taken, a midday slot still delivers Fuji on a clear day (better visibility, less crowd).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               3. Tokyo Tower (the retro angle)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo Tower is shorter than Skytree (333 meters total, with the Main Deck at 150 meters), but it sits further south and gives you a different angle on Fuji. The Main Deck frames the mountain between the towers of Minato — a more intimate, less crowded view than Skytree. There's something nostalgic about it: the red-and-white steel tower, inspired by the Eiffel Tower, has been here since 1958, and generations of Tokyoites grew up watching Fuji from this exact platform. That tradition is still alive.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               4. Roppongi Hills Mori Tower (Tokyo City View)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The 52nd-floor indoor observation deck at Mori Tower is often overlooked, and that's partly why I like it. The west-facing windows line up with Fuji, and the deck rarely fills up the way Skytree or Shibuya Sky do. Combine it with the adjacent Mori Art Museum on a rainy afternoon, then come back to the windows at golden hour.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               5. Odaiba & Rainbow Bridge at sunset (free)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -180,7 +164,7 @@ const MountFujiFromTokyo = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Bonus: The Shinkansen window trick
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -188,28 +172,29 @@ const MountFujiFromTokyo = () => {
             </p>
 
             {/* Best Time of Day */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · The Best Time of Day</span></div>
+            <h2 id="section-04-the-best-time-of-day" className="scroll-mt-20">
               The Best Time of Day (Sunrise Beats Sunset)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Time of day matters nearly as much as season. The atmosphere shifts across the day, and that directly affects your odds.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sunrise: the highest-probability window
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Early morning is, by a meaningful margin, the best time to see Fuji. The air is coolest, humidity hasn't accumulated, and the city hasn't generated its daily load of heat and pollutants. Get to a viewpoint before sunrise and your odds are at their highest. Tokyo's winter sunrise is around 6:30 AM, so you don't need to be extreme about it. Seeing the snowcap catch pink and gold light while the city is still asleep is the image most people remember forever.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sunset: Fuji as silhouette
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sunset works too, though visibility is usually lower than morning. The payoff is aesthetic: on a clear evening, Fuji appears as a dark cone against a glowing sky. You lose the snow detail and the texture of the slopes, but the shape is unforgettable. Odaiba and the Tokyo Gate Bridge area are the standout sunset viewpoints.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Rain and typhoons
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -217,21 +202,22 @@ const MountFujiFromTokyo = () => {
             </p>
 
             {/* Culture */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Why Japanese People Are Obsessed with Fuji-san</span></div>
+            <h2 id="section-05-why-japanese-people-are-obsessed-with-fuji-san" className="scroll-mt-20">
               Why Japanese People Are Obsessed with Fuji-san
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For Japanese people, Mt. Fuji is not just a mountain. It's a national symbol, an object of spiritual devotion, and a bottomless source of artistic inspiration. Understanding a little of why it matters changes how you experience seeing it.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Hokusai's Thirty-Six Views
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               In the 1830s, ukiyo-e artist Katsushika Hokusai published <em>Thirty-Six Views of Mount Fuji</em>, a series of woodblock prints showing Fuji from different locations and seasons. The most famous, <em>The Great Wave off Kanagawa</em>, puts a giant wave in the foreground with a tiny Fuji in the distance. What most visitors don't realize is that many of those 36 views were painted from places in or near what is now Tokyo (then called Edo). Hokusai knew, nearly 200 years ago, that Mt. Fuji was visible from the capital and that the sight was worth immortalizing. If you're interested in the art, the Sumida Hokusai Museum near Skytree has excellent reproductions.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The emotional layer
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -248,28 +234,28 @@ const MountFujiFromTokyo = () => {
             </GuideInsiderNote>
 
             {/* Day Trip Options */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               Want to Get Closer? Day Trips from Tokyo to Mt. Fuji
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If seeing Fuji as a distant silhouette isn't enough, you can visit the base in a day trip. The Fuji Five Lakes area (Kawaguchiko) is under two hours from Shinjuku, and Hakone — with arguably the best combined Fuji-and-onsen experience — is about 90 minutes south.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               By train (fastest direct option)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The <strong>Fuji Excursion limited express</strong> runs from Shinjuku directly to Kawaguchiko in 1 hour 50 minutes. One-way fare is ¥4,130, with four round-trips a day plus seasonal extras. Every seat is reserved — there are no unreserved cars — so book in advance, especially on weekends and in cherry blossom or autumn leaf season. If you're traveling with a Japan Rail Pass, you can cover the JR section to Otsuki with the pass and pay only the Fujikyu Railway section (around ¥1,170) on top.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               By highway bus (cheapest)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Highway buses leave from Busta Shinjuku (above the station's New South Exit) and reach Kawaguchiko in about 1 hour 45 minutes for around ¥2,200 — roughly half the train fare. Traffic can stretch weekend trips, but it's still the best-value option.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Climbing Fuji in 2026: what changed
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -286,13 +272,14 @@ const MountFujiFromTokyo = () => {
             />
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Frequently Asked Questions
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Can you see Mt. Fuji from Tokyo all year round?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -301,7 +288,7 @@ const MountFujiFromTokyo = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   What's the best free Fuji viewpoint in Tokyo right now?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -310,7 +297,7 @@ const MountFujiFromTokyo = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Can I see Mt. Fuji from my hotel?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -319,7 +306,7 @@ const MountFujiFromTokyo = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   How far is Tokyo from Mt. Fuji?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -328,7 +315,7 @@ const MountFujiFromTokyo = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Do private Tokyo tours include Mt. Fuji viewpoints?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -351,7 +338,7 @@ const MountFujiFromTokyo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want to see Mt. Fuji with a guide who reads the weather before you arrive?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -366,7 +353,11 @@ const MountFujiFromTokyo = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -451,7 +442,9 @@ const MountFujiFromTokyo = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

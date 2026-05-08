@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const HakoneDayTripGuideVsSolo = () => {
@@ -19,56 +21,35 @@ const HakoneDayTripGuideVsSolo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/hakone-lake-ashi-fuji.webp"
-          alt="Lake Ashi with Mt. Fuji view in Hakone"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trips</p>
-            <h1 className="heading-display text-foreground">
-              Hakone Day Trip: Do You Need a Guide or Can You Go Alone? (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 14, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads regular day trips to Hakone from Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/hakone-lake-ashi-fuji.webp"
+        imageAlt="Lake Ashi with Mt. Fuji view in Hakone"
+        eyebrow="Day Trips"
+        title="Hakone Day Trip: Do You Need a Guide or Can You Go Alone? (2026)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads regular day trips to Hakone from Tokyo."
+        date="March 14, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "The Hakone Loop Explained", href: "#section-01-the-hakone-loop-explained" },
+          { num: "02", label: "Going Solo", href: "#section-02-going-solo" },
+          { num: "03", label: "What a Guide Adds", href: "#section-03-what-a-guide-adds" },
+          { num: "04", label: "When You Don't Need a Guide", href: "#section-04-when-you-dont-need-a-guide" },
+          { num: "05", label: "When a Guide Changes…", href: "#section-05-when-a-guide-changes-everything" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Hakone is the most popular day trip from Tokyo, and for good reason: volcanic hot springs, Lake Ashi with Mt. Fuji views, five different transportation types in a single loop, and some of the best onsen in the Kanto region. The Hakone Free Pass makes it seem easy to do solo.
@@ -85,7 +66,8 @@ const HakoneDayTripGuideVsSolo = () => {
             </p>
 
             {/* The Hakone Loop Explained */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · The Hakone Loop Explained</span></div>
+            <h2 id="section-01-the-hakone-loop-explained" className="scroll-mt-20">
               The Hakone Loop Explained
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -119,11 +101,12 @@ const HakoneDayTripGuideVsSolo = () => {
             </p>
 
             {/* Going Solo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Going Solo</span></div>
+            <h2 id="section-02-going-solo" className="scroll-mt-20">
               Going Solo: What Works and What Doesn't
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What Works
             </h3>
             <ul className="space-y-3 mb-6">
@@ -141,7 +124,7 @@ const HakoneDayTripGuideVsSolo = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Where Solo Gets Tricky
             </h3>
             <ul className="space-y-3 mb-8">
@@ -164,7 +147,8 @@ const HakoneDayTripGuideVsSolo = () => {
             </ul>
 
             {/* What a Guide Adds */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What a Guide Adds</span></div>
+            <h2 id="section-03-what-a-guide-adds" className="scroll-mt-20">
               What a Guide Adds
             </h2>
             <ul className="space-y-4 mb-8">
@@ -186,7 +170,8 @@ const HakoneDayTripGuideVsSolo = () => {
             </ul>
 
             {/* When You Don't Need a Guide */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · When You Don't Need a Guide</span></div>
+            <h2 id="section-04-when-you-dont-need-a-guide" className="scroll-mt-20">
               When You Don't Need a Guide
             </h2>
             <ul className="space-y-3 mb-8">
@@ -209,7 +194,8 @@ const HakoneDayTripGuideVsSolo = () => {
             </ul>
 
             {/* When a Guide Changes Everything */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · When a Guide Changes Everything</span></div>
+            <h2 id="section-05-when-a-guide-changes-everything" className="scroll-mt-20">
               When a Guide Changes Everything
             </h2>
             <ul className="space-y-3 mb-8">
@@ -232,7 +218,7 @@ const HakoneDayTripGuideVsSolo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Planning a Hakone Day Trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -250,7 +236,11 @@ const HakoneDayTripGuideVsSolo = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -312,7 +302,9 @@ const HakoneDayTripGuideVsSolo = () => {
       1. Ropeway current operating status — confirm not closed for volcanic activity
       2. Walking times between connections — confirm realistic
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

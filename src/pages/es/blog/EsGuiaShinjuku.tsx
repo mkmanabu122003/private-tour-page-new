@@ -7,6 +7,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaShinjuku = () => {
   return (
@@ -22,56 +24,42 @@ const EsGuiaShinjuku = () => {
         ]}
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Guía de Shinjuku</li>
-              </ol>
-            </nav>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Guía de Shinjuku: El Corazón Iluminado de Neón de Tokio
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional residente en Tokio, que ha recorrido las calles de Shinjuku con cientos de visitantes internacionales.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/shinjuku-guide-hero.webp"
-          alt="Guía de Shinjuku - navegando el corazón iluminado de neón de Tokio"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/shinjuku-guide-hero.webp"
+        imageAlt="Guía de Shinjuku - navegando el corazón iluminado de neón de Tokio"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Guía de Shinjuku: El Corazón Iluminado de Neón de Tokio"
+        subtitle="Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional residente en Tokio, que ha recorrido las calles de Shinjuku con cientos de visitantes internacionales."
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Orientarse", href: "#section-01-orientarse" },
+          { num: "02", label: "Golden Gai", href: "#section-02-golden-gai" },
+          { num: "03", label: "Omoide Yokocho", href: "#section-03-omoide-yokocho" },
+          { num: "04", label: "Shinjuku Gyoen", href: "#section-04-shinjuku-gyoen" },
+          { num: "05", label: "Kabukicho", href: "#section-05-kabukicho" },
+          { num: "06", label: "Dónde Comer en Shinjuku", href: "#section-06-dónde-comer-en-shinjuku" },
+          { num: "07", label: "Consejos Prácticos para…", href: "#section-07-consejos-prácticos-para-visitar-shinjuku" },
+          { num: "08", label: "Shinjuku según la Hora del Día", href: "#section-08-shinjuku-según-la-hora-del-día" },
+          { num: "09", label: "Lugares Ocultos de Shinjuku…", href: "#section-09-lugares-ocultos-de-shinjuku-que-la-mayoría" },
+          { num: "10", label: "Shinjuku vs. Shibuya", href: "#section-10-shinjuku-vs-shibuya" },
+          { num: "11", label: "Moverse por Shinjuku", href: "#section-11-moverse-por-shinjuku" },
+          { num: "12", label: "FAQ", href: "#section-12-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               La estación de Shinjuku gestiona 3,5 millones de pasajeros al día, lo que la convierte en el centro de transporte más transitado del planeta. Si llegas sin un plan, puede resultar genuinamente abrumador. La estación por sí sola tiene más de 200 salidas, y las calles de la superficie son un asalto sensorial de carteles de neón, viajeros apresurados y anuncios por altavoz compitiendo entre sí. Pero una vez que aprendes cómo está distribuido Shinjuku y entiendes lo que ofrece cada rincón del distrito, este barrio se transforma de un obstáculo caótico en una de las zonas más gratificantes de Tokio para explorar. Llevo años guiando visitantes por Shinjuku, y sigue siendo mi distrito favorito para mostrar a la gente por la noche. Simplemente no hay otro lugar en el mundo como este.
@@ -81,7 +69,8 @@ const EsGuiaShinjuku = () => {
             </p>
 
             {/* Orientarse */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Orientarse</span></div>
+            <h2 id="section-01-orientarse" className="scroll-mt-20">
               Orientarse: Los Dos Lados de Shinjuku
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -111,7 +100,8 @@ const EsGuiaShinjuku = () => {
             </figure>
 
             {/* Golden Gai */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Golden Gai</span></div>
+            <h2 id="section-02-golden-gai" className="scroll-mt-20">
               Golden Gai: El Distrito de Bares Más Íntimo del Mundo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -144,7 +134,8 @@ const EsGuiaShinjuku = () => {
             <InlineCTAEs />
 
             {/* Omoide Yokocho */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Omoide Yokocho</span></div>
+            <h2 id="section-03-omoide-yokocho" className="scroll-mt-20">
               Omoide Yokocho (Callejón de los Recuerdos)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -172,7 +163,8 @@ const EsGuiaShinjuku = () => {
             </figure>
 
             {/* Shinjuku Gyoen */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Shinjuku Gyoen</span></div>
+            <h2 id="section-04-shinjuku-gyoen" className="scroll-mt-20">
               Shinjuku Gyoen: Un Oasis Inesperado
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -186,7 +178,8 @@ const EsGuiaShinjuku = () => {
             </p>
 
             {/* Kabukicho */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Kabukicho</span></div>
+            <h2 id="section-05-kabukicho" className="scroll-mt-20">
               Kabukicho: La Capital del Entretenimiento de Tokio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -201,14 +194,15 @@ const EsGuiaShinjuku = () => {
             </p>
 
             {/* Dónde Comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Dónde Comer en Shinjuku</span></div>
+            <h2 id="section-06-dónde-comer-en-shinjuku" className="scroll-mt-20">
               Dónde Comer en Shinjuku
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shinjuku tiene miles de restaurantes, lo que hace que elegir uno sea tanto emocionante como paralizante. Aquí van mis mejores recomendaciones por categoría para ayudarte a decidir.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mercados Gastronómicos en Sótanos de Grandes Almacenes (Depachika)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -216,21 +210,21 @@ const EsGuiaShinjuku = () => {
               <strong className="text-foreground">depachika</strong>, ofrecen una gama extraordinaria de comida preparada, cajas de bento, wagashi (dulces tradicionales), productos frescos y delicias gourmet, todo presentado con el tipo de cuidado y arte que te hace sentir culpable al comerlo. El sótano de Isetan en particular es legendario entre los amantes de la gastronomía. Los precios son razonables para la calidad: una caja de bento bellamente elaborada cuesta ¥800-1.500, y puedes armar un pícnic increíble para Shinjuku Gyoen sin gastar mucho. Visita alrededor de las 6-7 PM para artículos con descuento cuando los puestos rebajan la comida no vendida antes del cierre.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ramen y Fideos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shinjuku es territorio de ramen. En lugar de ir directamente a las conocidas "calles del ramen" que pueden tener esperas de una hora y están muy orientadas a turistas, busca locales independientes en las calles laterales al este de la estación. Fuunji, ubicado cerca de la salida sur, es famoso por sus tsukemen (fideos para mojar) concentrados y siempre tiene cola, pero avanza rápido y el bol vale la pena la espera. Para un ramen shoyu (salsa de soja) más tradicional al estilo de Tokio, los locales en los callejones detrás de la salida este ofrecen lo auténtico a precios honestos, normalmente ¥900-1.200 por bol.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Opciones para la Noche
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una de las mayores fortalezas de Shinjuku es que nunca cierra del todo. Después de medianoche, cuando los trenes dejan de funcionar y las multitudes se reducen ligeramente, la escena gastronómica nocturna de Shinjuku cobra vida para un público diferente: bartenders terminando sus turnos, trabajadores nocturnos y noctámbulos que saben que parte de la mejor comida aparece después del anochecer. Los izakayas (restaurantes tipo pub japoneses) por todo el este de Shinjuku sirven comida hasta las 2-3 AM o más tarde. Las cadenas 24 horas de gyudon (bol de ternera) como Matsuya y Yoshinoya son fiables, baratas y sorprendentemente satisfactorias a las 3 AM. Para algo más especial, busca barras de sushi nocturnas y tiendas de ramen que atienden al público de después de la bebida. La calidad es a menudo excelente porque la clientela es exigente.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Consejos de Presupuesto
             </h3>
             <ul className="space-y-4 mb-8">
@@ -250,7 +244,8 @@ const EsGuiaShinjuku = () => {
             </ul>
 
             {/* Consejos Prácticos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Consejos Prácticos para Visitar Shinjuku</span></div>
+            <h2 id="section-07-consejos-prácticos-para-visitar-shinjuku" className="scroll-mt-20">
               Consejos Prácticos para Visitar Shinjuku
             </h2>
             <ul className="space-y-4 mb-8">
@@ -269,31 +264,32 @@ const EsGuiaShinjuku = () => {
             </ul>
 
             {/* Shinjuku según la Hora del Día */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Shinjuku según la Hora del Día</span></div>
+            <h2 id="section-08-shinjuku-según-la-hora-del-día" className="scroll-mt-20">
               Shinjuku según la Hora del Día: La Agenda de un Local
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una de las preguntas que más me hacen los viajeros en mis tours es: "¿Cuándo debería visitar Shinjuku?" La respuesta depende completamente de lo que quieras experimentar. Así planificaría yo un día completo si fuera mi primera vez.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mañana (7:00–9:00): Paseo Matutino por Shinjuku Gyoen
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Empieza el día con la calma que precede a la tormenta. Shinjuku Gyoen abre a las 9 AM (pero los alrededores son tranquilos y agradables para un paseo temprano). Llega justo cuando abran las puertas para disfrutar de los jardines en casi total soledad. El contraste con el caos que experimentarás más tarde hace que este momento sea especialmente gratificante. La luz de la mañana a través del jardín japonés es perfecta para la fotografía, y tendrás las amplias praderas prácticamente para ti solo.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mediodía (12:00–14:00): Estrategia de Almuerzo en Depachika
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Dirígete al sótano de los grandes almacenes Isetan o Takashimaya para vivir la experiencia depachika. El truco está en el horario: llega justo antes de la avalancha del almuerzo (sobre las 11:30) o un poco después (13:30) para encontrar la mejor selección sin aglomeraciones. Arma una caja de bento con acompañamientos por una fracción de lo que costaría en un restaurante. Si hace buen tiempo, lleva tu botín del depachika de vuelta a Shinjuku Gyoen para un pícnic. Es exactamente lo que hacen muchos oficinistas tokiotas, y es una de las experiencias de almuerzo más placenteras de la ciudad.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tarde (17:00–19:00): Omoide Yokocho a la Hora Dorada
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Esta es la ventana mágica para Omoide Yokocho. Los puestos de yakitori empiezan a encender las brasas, los oficinistas comienzan a llegar tras la jornada laboral, y el sol poniente baña todo con esa luz cálida perfecta que se filtra entre el humo y el vapor. Siéntate en un taburete en uno de los puestos abiertos, pide una cerveza y unas brochetas, y contempla la transición del día a la noche. La atmósfera a esta hora no tiene igual, animada pero aún no agobiante, auténtica y llena de carácter.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Noche (19:00 en adelante): Kabukicho y Golden Gai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -301,7 +297,8 @@ const EsGuiaShinjuku = () => {
             </p>
 
             {/* Lugares Ocultos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 09 · Lugares Ocultos de Shinjuku que la Mayoría</span></div>
+            <h2 id="section-09-lugares-ocultos-de-shinjuku-que-la-mayoría" className="scroll-mt-20">
               Lugares Ocultos de Shinjuku que la Mayoría de los Turistas se Pierden
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -326,7 +323,8 @@ const EsGuiaShinjuku = () => {
             </ul>
 
             {/* Shinjuku vs. Shibuya */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 10 · Shinjuku vs. Shibuya</span></div>
+            <h2 id="section-10-shinjuku-vs-shibuya" className="scroll-mt-20">
               Shinjuku vs. Shibuya: ¿Cuál Deberías Visitar?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -355,13 +353,14 @@ const EsGuiaShinjuku = () => {
             </p>
 
             {/* Guía de Supervivencia de la Estación */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 11 · Moverse por Shinjuku</span></div>
+            <h2 id="section-11-moverse-por-shinjuku" className="scroll-mt-20">
               Moverse por Shinjuku: Guía de Supervivencia de la Estación
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La estación de Shinjuku es oficialmente la estación de tren más transitada del mundo, con más de 3,5 millones de pasajeros diarios. Está servida por JR East, Odakyu, Keio, Tokyo Metro y Toei Subway, con más de 200 salidas conectadas a un laberinto subterráneo de pasillos comerciales. Incluso los tokiotas se pierden aquí a veces. Así es como puedes navegarla como un profesional.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Las Cuatro Salidas Clave
             </h3>
             <ul className="space-y-4 mb-8">
@@ -378,7 +377,7 @@ const EsGuiaShinjuku = () => {
                 <strong className="text-foreground">Nueva Salida Sur (新南口 / Shin-minami-guchi):</strong> Úsala para la Terminal de Autobuses de Shinjuku (Busta Shinjuku), que gestiona autobuses de larga distancia a destinos por todo Japón. También es útil para acceder a la zona de Shinjuku Gyoen desde un ángulo ligeramente diferente.
               </li>
             </ul>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Consejos de Supervivencia para la Estación
             </h3>
             <ul className="space-y-4 mb-8">
@@ -398,7 +397,7 @@ const EsGuiaShinjuku = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres explorar Shinjuku con un guía experto que conoce cada rincón oculto?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -416,12 +415,13 @@ const EsGuiaShinjuku = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 12 · FAQ</span></div>
+              <h2 id="section-12-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Es seguro Shinjuku por la noche?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -429,7 +429,7 @@ const EsGuiaShinjuku = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cuánto tiempo debería pasar en Shinjuku?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -437,7 +437,7 @@ const EsGuiaShinjuku = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Por qué es más conocido Shinjuku?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -445,7 +445,7 @@ const EsGuiaShinjuku = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Es seguro Kabukicho para los turistas?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -454,7 +454,11 @@ const EsGuiaShinjuku = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -537,7 +541,9 @@ const EsGuiaShinjuku = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

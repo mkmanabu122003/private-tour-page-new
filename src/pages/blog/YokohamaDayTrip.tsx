@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const YokohamaDayTrip = () => {
   return (
@@ -24,44 +26,36 @@ const YokohamaDayTrip = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/yokohama-minatomirai-hero.webp"
-          alt="Yokohama Minato Mirai skyline at dusk with Landmark Tower and Cosmo World ferris wheel"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trip Guides</p>
-            <h1 className="heading-display text-foreground">
-              Yokohama Day Trip from Tokyo: What's Actually Worth the Journey
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided countless visitors through Yokohama's international port history and hidden neighborhoods.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/yokohama-minatomirai-hero.webp"
+        imageAlt="Yokohama Minato Mirai skyline at dusk with Landmark Tower and Cosmo World ferris wheel"
+        eyebrow="Day Trip Guides"
+        title="Yokohama Day Trip from Tokyo: What's Actually Worth the Journey"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided countless visitors through Yokohama's international port history and hidden neighborhoods."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What Yokohama Is", href: "#section-01-what-yokohama-is" },
+          { num: "02", label: "What to See", href: "#section-02-what-to-see" },
+          { num: "03", label: "How Long Do You Actually Need?", href: "#section-03-how-long-do-you-actually-need" },
+          { num: "04", label: "Yokohama vs. Kamakura vs.…", href: "#section-04-yokohama-vs-kamakura-vs-kawagoe" },
+          { num: "05", label: "How to Combine Yokohama…", href: "#section-05-how-to-combine-yokohama-with-other-destinations" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Yes, Yokohama is worth visiting — it's only 30 minutes from Tokyo and feels like a completely different city. Best combined with a half-day: morning in Yokohama, afternoon in Kamakura."
               hook="But most visitors waste time on the wrong attractions. Here's exactly what's worth seeing and what to skip, from a guide who takes clients there regularly."
@@ -75,8 +69,8 @@ const YokohamaDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's my honest guide to planning a yokohama day trip from tokyo: what's genuinely worth seeing, how long you need, and whether it makes more sense to combine it with another destination.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What Yokohama Is</span></div>
+            <h2 id="section-01-what-yokohama-is" className="scroll-mt-20">
               What Yokohama Is (And Why It's Different from Tokyo)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -91,12 +85,12 @@ const YokohamaDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Today, Yokohama is Japan's second-largest city by population (over 3.7 million people) with a thriving port, a gleaming waterfront, and a sense of cosmopolitan confidence that comes from being the place where Japan first learned to engage with the wider world.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · What to See</span></div>
+            <h2 id="section-02-what-to-see" className="scroll-mt-20">
               What to See: Chinatown, the Waterfront, Sankeien Garden
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Yokohama Chinatown</h3>
+            <h3>Yokohama Chinatown</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Yokohama Chinatown is the largest Chinatown in Japan, and one of the largest in the world. Over 500 shops and restaurants fill a compact grid of streets framed by ornate gates (paifang) at each cardinal entrance. It's been here since the 1860s, when Chinese merchants arrived alongside Western traders, and it has evolved continuously ever since.
             </p>
@@ -104,7 +98,7 @@ const YokohamaDayTrip = () => {
               What I tell my clients: come hungry. The street food alone is worth the visit. Steamed buns (nikuman) the size of your fist, freshly fried sesame balls, xiaolongbao with scalding-hot soup inside, roasted chestnuts in winter. But beyond the food, take time to visit Kanteibyo, the ornate Guan Di temple at the heart of Chinatown. It's dedicated to Guan Yu, the Chinese deity of prosperity and loyalty, and its elaborate decoration rivals anything you'll see in a Chinese city. Most visitors walk right past it on the way to their next dumpling. Don't make that mistake.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Minato Mirai and the Waterfront</h3>
+            <h3>Minato Mirai and the Waterfront</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Minato Mirai (literally "Port of the Future") is Yokohama's modern waterfront district. It's anchored by the Landmark Tower, the Cup Noodles Museum, the Cosmo World Ferris wheel, and a row of beautifully restored red-brick warehouses (Akarenga) from the early 1900s that now house shops and cafes. The waterfront promenade connecting these landmarks is one of the best urban walks in the greater Tokyo area, especially around sunset, when the bay reflects the lights of the harbor.
             </p>
@@ -112,15 +106,15 @@ const YokohamaDayTrip = () => {
               I particularly recommend the Cup Noodles Museum for families or anyone curious about Japanese pop culture innovation. It's genuinely entertaining (you design your own custom cup noodle with hand-picked toppings), and it tells the surprisingly compelling story of Momofuku Ando, who invented instant ramen in 1958 and quite literally changed how the world eats. Allow about 90 minutes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Sankeien Garden</h3>
+            <h3>Sankeien Garden</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the Yokohama attraction that most day-trippers skip, and the one I think they shouldn't. Sankeien is a traditional Japanese landscape garden built in 1906 by Tomitaro Hara, a wealthy silk trader. What makes it exceptional isn't just its design (which is beautiful) but the historic buildings Hara collected and relocated here from across Japan: a three-story pagoda from Kyoto originally built in 1457, a farmhouse from the Gifu mountains, tea houses from Kamakura, a lord's residence from Wakayama. Walking through Sankeien is like visiting six different regions of Japan in one garden.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The catch? Sankeien is about 20 minutes by bus from central Yokohama, which puts some visitors off. But if you have a full day for your yokohama day trip from tokyo, I strongly recommend making the detour. In spring (cherry blossoms) or autumn (foliage), it's one of the most peaceful and photogenic spots in the entire Kanto region.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · How Long Do You Actually Need?</span></div>
+            <h2 id="section-03-how-long-do-you-actually-need" className="scroll-mt-20">
               How Long Do You Actually Need?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -140,8 +134,8 @@ const YokohamaDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Personally, when I guide a yokohama day trip from tokyo, I prefer the full-day option. Yokohama rewards slower exploration: wandering through Chinatown's side streets, sitting on the waterfront with a coffee, and spending a quiet hour in Sankeien. Rushing through it defeats the purpose.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Yokohama vs. Kamakura vs. Kawagoe</span></div>
+            <h2 id="section-04-yokohama-vs-kamakura-vs-kawagoe" className="scroll-mt-20">
               Yokohama vs. Kamakura vs. Kawagoe: Which to Choose?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -163,8 +157,8 @@ const YokohamaDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               There's no wrong answer here. I've guided clients to all three and seen each one become someone's favorite day of their trip. The key is matching the destination to what excites you, not just checking off the most popular option.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · How to Combine Yokohama with Other Destinations</span></div>
+            <h2 id="section-05-how-to-combine-yokohama-with-other-destinations" className="scroll-mt-20">
               How to Combine Yokohama with Other Destinations
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -196,7 +190,7 @@ const YokohamaDayTrip = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a guided Yokohama day trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -210,41 +204,46 @@ const YokohamaDayTrip = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is a yokohama day trip from tokyo worth it?</h3>
+                  <h3>Is a yokohama day trip from tokyo worth it?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes, especially if you're interested in food, international history, or want an easy trip that doesn't require an early start. Yokohama is only 30 minutes from Tokyo and offers a noticeably different atmosphere. Chinatown alone is unlike anything in Tokyo. For a full cultural experience including Sankeien Garden, plan a full day. For highlights only, a half day works well.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How do I get from Tokyo to Yokohama?</h3>
+                  <h3>How do I get from Tokyo to Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Multiple options, all fast: JR Tokaido Line from Tokyo Station (25 minutes, covered by JR Pass), JR Yokosuka Line from Shinagawa (25 minutes), or Tokyu Toyoko Line from Shibuya (30 minutes, not covered by JR Pass but very convenient for Shibuya-area hotels). The Minatomirai Line extension takes you directly to the waterfront area without changing trains.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can I visit Yokohama and Kamakura in the same day?</h3>
+                  <h3>Can I visit Yokohama and Kamakura in the same day?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes, and they pair well because they're on the same train line. Spend the morning in Yokohama (Chinatown, waterfront) and the afternoon in Kamakura (temples, Great Buddha), or vice versa. It's a full 8-9 hour day, but very doable. The train between them takes only 25 minutes.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How long do you need in Yokohama?</h3>
+                  <h3>How long do you need in Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     3-4 hours for the main attractions (Chinatown, waterfront, Ramen Museum). A full day if you add the Cup Noodles Museum, Sankeien Garden, or combine with Kamakura.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What's the best food to try in Yokohama?</h3>
+                  <h3>What's the best food to try in Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yokohama Chinatown is the main draw: nikuman (steamed pork buns), xiaolongbao (soup dumplings), Peking duck, and mango pudding. Outside Chinatown, try Yokohama's local ramen style, Iekei ramen, a rich tonkotsu-soy blend that's thicker and more robust than Tokyo-style ramen. For something unique, the Shin-Yokohama Ramen Museum has eight ramen shops under one roof, each representing a different regional style.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -269,7 +268,9 @@ const YokohamaDayTrip = () => {
           { "@type": "Question", name: "What's the best food to try in Yokohama?", acceptedAnswer: { "@type": "Answer", text: "Chinatown staples: nikuman, xiaolongbao, Peking duck. Outside Chinatown: Iekei ramen (Yokohama's local style). The Shin-Yokohama Ramen Museum has eight regional ramen shops under one roof." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

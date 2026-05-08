@@ -255,8 +255,8 @@ const EsCustom = () => {
             Cuéntanos tus intereses y crearemos un itinerario único solo para ti.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" className="btn-accent" data-cta="book-now-tour-footer" onClick={() => trackBookNowClick("Contactar", "tour-footer")}>Contactar</Link>
-            <Link to="/es" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">Ver Tours Disponibles</Link>
+            <Link to="/es/contact" className="btn-accent-on-dark" data-cta="book-now-tour-footer" onClick={() => trackBookNowClick("Contactar", "tour-footer")}>Contactar</Link>
+            <Link to="/es" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">Ver Tours Disponibles</Link>
           </div>
         </div>
       </section>

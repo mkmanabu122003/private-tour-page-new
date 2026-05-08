@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CTA Pill — Color Variants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --clay: #9c563f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, sans-serif;
+    padding: 60px 0 80px;
+  }
+
+  .page-head {
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+
+  .variant {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+  .nav-context {
+    background: rgba(248,247,241,.96);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-context .brand {
+    font-family: Georgia, serif;
+    letter-spacing: .18em;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .nav-context .navlinks {
+    display: flex; gap: 28px; align-items: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .hero-context {
+    height: 180px;
+    background:
+      linear-gradient(95deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.42) 70%, rgba(0,0,0,0.18) 100%),
+      url("../public/images/tour-photos/group-photo.webp") center/cover, #2b2823;
+    padding: 32px;
+    display: flex; flex-direction: column; justify-content: end;
+    color: #fff;
+  }
+  .hero-context p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 16px;
+    color: rgba(255,255,255,.92);
+    text-shadow: 0 1px 14px rgba(0,0,0,.45);
+  }
+  .size-row {
+    padding: 24px 28px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+  }
+  .size-row .size-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    width: 120px;
+  }
+  .variant-foot {
+    padding: 16px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+  .swatch {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border: 1px solid rgba(0,0,0,.08);
+  }
+
+  /* ===== PILL BASE (D6 shape) ===== */
+  .pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    transition: all .25s ease;
+    cursor: pointer;
+    border: none;
+    line-height: 1;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .pill-sm { padding: 11px 22px; font-size: 13px; }
+  .pill-md { padding: 13px 26px; font-size: 14px; }
+  .pill-lg { padding: 17px 34px; font-size: 16px; }
+  .pill .arrow { transition: transform .25s ease; }
+  .pill:hover .arrow { transform: translateX(3px); }
+
+  /* ===== A · INK BLACK (baseline) ===== */
+  .pill-A {
+    background: #171717;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(23,23,23,.20);
+  }
+  .pill-A:hover {
+    box-shadow: 0 8px 28px rgba(23,23,23,.32), 0 0 0 4px rgba(201,168,76,.15);
+    transform: translateY(-1px);
+  }
+
+  /* ===== B · SUMI (warm black, hint of brown) ===== */
+  .pill-B {
+    background: #1f1814;
+    color: #f5f1e8;
+    box-shadow: 0 4px 16px rgba(31,24,20,.22);
+  }
+  .pill-B:hover {
+    background: #2b2823;
+    box-shadow: 0 8px 28px rgba(31,24,20,.34), 0 0 0 4px rgba(201,168,76,.14);
+    transform: translateY(-1px);
+  }
+
+  /* ===== C · INDIGO 藍 (Japanese deep blue) ===== */
+  .pill-C {
+    background: #1a3a5c;
+    color: #f0e9d6;
+    box-shadow: 0 4px 16px rgba(26,58,92,.28);
+  }
+  .pill-C:hover {
+    background: #234a72;
+    box-shadow: 0 8px 28px rgba(26,58,92,.40), 0 0 0 4px rgba(201,168,76,.15);
+    transform: translateY(-1px);
+  }
+
+  /* ===== D · BURGUNDY (wine luxury) ===== */
+  .pill-D {
+    background: #5e2a2a;
+    color: #f5e8d8;
+    box-shadow: 0 4px 16px rgba(94,42,42,.28);
+  }
+  .pill-D:hover {
+    background: #732f2f;
+    box-shadow: 0 8px 28px rgba(94,42,42,.40), 0 0 0 4px rgba(201,168,76,.15);
+    transform: translateY(-1px);
+  }
+
+  /* ===== E · FOREST JADE (nature/calm) ===== */
+  .pill-E {
+    background: #2d4a3e;
+    color: #f0e9d6;
+    box-shadow: 0 4px 16px rgba(45,74,62,.28);
+  }
+  .pill-E:hover {
+    background: #3d6354;
+    box-shadow: 0 8px 28px rgba(45,74,62,.40), 0 0 0 4px rgba(201,168,76,.15);
+    transform: translateY(-1px);
+  }
+
+  /* ===== F · CLAY (Plan A native) ===== */
+  .pill-F {
+    background: #9c563f;
+    color: #fff7e8;
+    box-shadow: 0 4px 16px rgba(156,86,63,.28);
+  }
+  .pill-F:hover {
+    background: #b56849;
+    box-shadow: 0 8px 28px rgba(156,86,63,.40), 0 0 0 4px rgba(201,168,76,.18);
+    transform: translateY(-1px);
+  }
+
+  /* ===== G · COFFEE BROWN (espresso/leather) ===== */
+  .pill-G {
+    background: #3e2a1f;
+    color: #f5ecd4;
+    box-shadow: 0 4px 16px rgba(62,42,31,.28);
+  }
+  .pill-G:hover {
+    background: #4d3527;
+    box-shadow: 0 8px 28px rgba(62,42,31,.40), 0 0 0 4px rgba(201,168,76,.15);
+    transform: translateY(-1px);
+  }
+
+  /* ===== H · INVERTED CREAM (light pill, ink text) ===== */
+  .pill-H {
+    background: #fffdf8;
+    color: #171717;
+    border: 1.5px solid #171717;
+    box-shadow: 0 4px 16px rgba(23,23,23,.10);
+  }
+  .pill-H:hover {
+    background: #171717;
+    color: #fffdf8;
+    border-color: #171717;
+    box-shadow: 0 8px 28px rgba(23,23,23,.30), 0 0 0 4px rgba(201,168,76,.18);
+    transform: translateY(-1px);
+  }
+
+  /* Recommendation tag */
+  .rec {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--clay);
+    background: rgba(156,86,63,.12);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>CTA pill — color variants</h1>
+  <p>
+    D6 の pill 形（完全 rounded + soft shadow + hover で gold halo）を保持して、
+    背景色だけ変えた8案を比較。文字色・hover ring color も色合いに合わせて微調整。
+  </p>
+</div>
+
+<!-- ============ A · INK BLACK ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">A · Ink Black <span class="swatch" style="background:#171717"></span></span>
+    <span class="variant-name">baseline · 純黒 · 最も汎用</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-A pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-A pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-A pill-sm">Request a Tour</button>
+    <button class="pill pill-A pill-md">Request a Tour</button>
+    <button class="pill pill-A pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#171717</strong> · 純粋 ink black + 白文字。Aman / Hermès / Mr&Mrs Smith 標準。<em>luxury 標準色、ハズレなし</em>。やや冷たい印象。
+  </div>
+</div>
+
+<!-- ============ B · SUMI (warm black) ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">B · Sumi 墨 <span class="swatch" style="background:#1f1814"></span></span>
+    <span class="variant-name">warm black · 茶色のヒント · paper bg と相性良い</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-B pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-B pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-B pill-sm">Request a Tour</button>
+    <button class="pill pill-B pill-md">Request a Tour</button>
+    <button class="pill pill-B pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#1f1814</strong> · 純黒に茶色を混ぜた warm black + 暖かい cream 文字 <code>#f5f1e8</code>。
+    <em>paper bg #f8f7f1 と質感が一致</em>、純黒よりも site palette との温度感統一。<span class="rec">推奨候補</span>
+  </div>
+</div>
+
+<!-- ============ C · INDIGO ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">C · Indigo 藍 <span class="swatch" style="background:#1a3a5c"></span></span>
+    <span class="variant-name">日本の藍染 · culture cue · 静かな深さ</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-C pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-C pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-C pill-sm">Request a Tour</button>
+    <button class="pill pill-C pill-md">Request a Tour</button>
+    <button class="pill pill-C pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#1a3a5c</strong> · 日本の藍染（indigo）色。culture cue があり、黒よりも個性的。
+    <em>"Japanese craft luxury"</em> idiom（Issey Miyake / Junya Watanabe 系）。Hero 写真の night sky と調和。
+  </div>
+</div>
+
+<!-- ============ D · BURGUNDY ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D · Burgundy <span class="swatch" style="background:#5e2a2a"></span></span>
+    <span class="variant-name">ワイン luxury · 重厚 · "boutique hotel" idiom</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-D pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-D pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-D pill-sm">Request a Tour</button>
+    <button class="pill pill-D pill-md">Request a Tour</button>
+    <button class="pill pill-D pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#5e2a2a</strong> · 深い赤茶（burgundy / oxblood）。Belmond / boutique hotel idiom。
+    <em>重厚で高級感</em>、warm。site palette には新規追加だが clay #9c563f との家族関係あり。
+  </div>
+</div>
+
+<!-- ============ E · FOREST JADE ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">E · Forest Jade <span class="swatch" style="background:#2d4a3e"></span></span>
+    <span class="variant-name">深緑 · Aman Kyoto 杉 · 2026 calm luxury トレンド</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-E pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-E pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-E pill-sm">Request a Tour</button>
+    <button class="pill pill-E pill-md">Request a Tour</button>
+    <button class="pill pill-E pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#2d4a3e</strong> · 深い jade green。Aman Kyoto 杉・上野公園・京都苔。<em>2026 luxury calm trend</em>、自然連想。
+    fresh で他競合とくっきり差別化。Cormorant editorial と quiet luxury 路線で相性◎。
+  </div>
+</div>
+
+<!-- ============ F · CLAY (Plan A native) ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">F · Clay 土色 <span class="swatch" style="background:#9c563f"></span></span>
+    <span class="variant-name">Plan A 既存 #9c563f を CTA color に昇格</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-F pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-F pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-F pill-sm">Request a Tour</button>
+    <button class="pill pill-F pill-md">Request a Tour</button>
+    <button class="pill pill-F pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#9c563f</strong> · Plan A 既存 clay color（"Manabu's take" ラベル色）を CTA に。<em>warm / personal</em>、温度感最高。
+    既存パレット内で完結する点が strong：site palette を破壊せず、clay を <em>"primary action"</em> に格上げするだけ。
+  </div>
+</div>
+
+<!-- ============ G · COFFEE / LEATHER ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">G · Coffee Leather <span class="swatch" style="background:#3e2a1f"></span></span>
+    <span class="variant-name">深い茶色 · espresso / leather · 男性的 luxury</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-G pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-G pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-G pill-sm">Request a Tour</button>
+    <button class="pill pill-G pill-md">Request a Tour</button>
+    <button class="pill pill-G pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#3e2a1f</strong> · 深い茶（espresso / dark leather）。<em>boutique whiskey bar / leather goods</em> idiom。
+    純黒よりも warm、burgundy よりも品があり、site palette との親和性高い。
+  </div>
+</div>
+
+<!-- ============ H · INVERTED CREAM ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">H · Inverted Cream <span class="swatch" style="background:#fffdf8;border:1px solid #171717"></span></span>
+    <span class="variant-name">cream 地 + ink border + ink 文字 · Hover で完全反転</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="pill pill-H pill-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="pill pill-H pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="pill pill-H pill-sm">Request a Tour</button>
+    <button class="pill pill-H pill-md">Request a Tour</button>
+    <button class="pill pill-H pill-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>#fffdf8</strong> + 1.5px ink border + ink 文字。Hero 上で <em>"白く浮き上がる"</em> 最強コントラスト。
+    light theme idiom（Notion / Linear secondary CTA）。CV 強度はやや軽め、editorial restraint 系。
+  </div>
+</div>
+
+<!-- ============ DECISION ============ -->
+<div style="max-width: 1280px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">推奨</h2>
+  <p style="margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.7;">
+    <strong>1位：<span class="rec">B · Sumi 墨 #1f1814</span></strong> — 純黒の冷たさを避け、site の paper bg と温度感を一致させる。warm black の最も繊細な表現。<br>
+    <strong>2位：<span class="rec">F · Clay #9c563f</span></strong> — 既存 Plan A の clay を昇格。site palette を増やさず差別化最大。warm/personal 路線。<br>
+    <strong>3位：<span class="rec">E · Forest Jade #2d4a3e</span></strong> — fresh + 2026 トレンド。site palette に jade を追加する覚悟があれば最強。<br>
+    <strong>安全策：A · Ink Black #171717</strong> — luxury 標準。失敗しないが個性も出にくい。
+  </p>
+  <p style="margin: 0; color: var(--muted-2); font-size: 13px;">
+    A〜H、決まったら本番に反映します。組み合わせ（例：F の clay 色 + B の warm 文字色）も可能。
+  </p>
+</div>
+
+</body>
+</html>

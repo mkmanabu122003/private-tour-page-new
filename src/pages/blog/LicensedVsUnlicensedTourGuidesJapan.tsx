@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const LicensedVsUnlicensedTourGuidesJapan = () => {
   return (
@@ -24,57 +26,38 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/tour-photo-1.webp"
-          alt="A licensed tour guide leading a private tour in Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Helpful Guides</p>
-            <h1 className="heading-display text-foreground">
-              Licensed vs Unlicensed Tour Guides in Japan: The One Thing Most Travelers Don't Know (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 20, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) registered in Tokyo.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Last updated: April 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/tour-photo-1.webp"
+        imageAlt="A licensed tour guide leading a private tour in Tokyo"
+        eyebrow="Helpful Guides"
+        title="Licensed vs Unlicensed Tour Guides in Japan: The One Thing Most Travelers Don't Know (2026)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) registered in Tokyo."
+        date="April 20, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What is the official tour…", href: "#section-01-what-is-the-official-tour-guide-license-in-japan" },
+          { num: "02", label: "What changed in 2018", href: "#section-02-what-changed-in-2018" },
+          { num: "03", label: "Licensed vs unlicensed guide", href: "#section-03-licensed-vs-unlicensed-guide" },
+          { num: "04", label: "A note on volunteer guides", href: "#section-04-a-note-on-volunteer-guides" },
+          { num: "05", label: "Why should this matter to…", href: "#section-05-why-should-this-matter-to-you-as-a-traveler" },
+          { num: "06", label: "How to verify whether a…", href: "#section-06-how-to-verify-whether-a-guide-is-licensed" },
+          { num: "07", label: "My own experience getting…", href: "#section-07-my-own-experience-getting-the-license" },
+          { num: "08", label: "FAQ", href: "#section-08-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Japan has a single national license for tour guides — 全国通訳案内士 (National Government Licensed Guide Interpreter) — run by the government with a ~10% pass rate. Since January 2018 the license is no longer legally required to guide paid tours, but only licensed guides may call themselves 'licensed / government-certified / national' guides under the law, and the verified breadth of knowledge behind the license is real."
               hook="Here's what the license actually covers, what changed in 2018, and the specific situations where choosing a licensed guide changes your day — plus the 3 direct questions that instantly tell you whether a guide is licensed or just describing themselves as one."
@@ -88,14 +71,15 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* What the license is */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What is the official tour guide license in Japan?</span></div>
+            <h2 id="section-01-what-is-the-official-tour-guide-license-in-japan" className="scroll-mt-20">
               What is the official tour guide license in Japan?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The license is formally called <strong className="text-foreground">全国通訳案内士 (Zenkoku Tsūyaku Annai-shi)</strong> — "National Government Licensed Guide Interpreter" in the official English translation used by the Japan National Tourism Organization (JNTO) and the Japan Tourism Agency. That "Zenkoku" (national) prefix was added with the 2018 legal reform; before that it was simply Tsūyaku Annai-shi. It is the only nationally recognized credential for tour guides in Japan.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The national exam
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -105,14 +89,14 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
               The oral stage is a live interview where examiners assess your ability to explain aspects of Japanese culture to foreign visitors clearly, accurately, and naturally. It's not enough to know the facts — you have to be able to communicate them in a way a traveler will actually understand and enjoy.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What it takes to pass (real numbers)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               According to the JNTO's official figures for the 2024 exam, the overall pass rate was <strong className="text-foreground">10.0%</strong> — Spanish 12.1%, English approximately 10.0%. For some languages it has dipped below 10%. Serious preparation typically takes between one and three years of dedicated study. It is not something you pass casually. Most candidates are Japanese nationals with excellent foreign-language ability, foreigners with years of residency in Japan, or both. Many sit the exam multiple times before passing.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               How many licensed guides are there in Japan?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -120,7 +104,8 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* What changed in 2018 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · What changed in 2018</span></div>
+            <h2 id="section-02-what-changed-in-2018" className="scroll-mt-20">
               What changed in 2018 (and what it means for you)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -131,25 +116,26 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* Licensed vs unlicensed */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Licensed vs unlicensed guide</span></div>
+            <h2 id="section-03-licensed-vs-unlicensed-guide" className="scroll-mt-20">
               Licensed vs unlicensed guide: the real differences
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Government-verified knowledge
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A licensed guide has demonstrated, in front of government examiners, a broad and verified knowledge of the country's history, geography, culture, and laws. This is not an opinion; it is a documented and registered fact. When I explain the difference between a Shinto shrine and a Buddhist temple, or why a tea ceremony is structured the way it is, or how the han system worked during the Edo period, I'm not repeating what I read on Wikipedia the night before. It's knowledge that has been assessed and certified.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Legal accountability and insurance
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Licensed guides are registered with the prefectural authorities where they operate. That means there's a framework for accountability: if something goes wrong, there's a record, there's an entity to turn to. Many licensed guides also carry professional liability insurance. An unlicensed guide operating informally has none of these protections, for themselves or for you.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What a licensed guide can do that an unlicensed one often can't
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -157,7 +143,8 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* What about SGG volunteers */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · A note on volunteer guides</span></div>
+            <h2 id="section-04-a-note-on-volunteer-guides" className="scroll-mt-20">
               A note on volunteer guides (SGG clubs)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -168,18 +155,19 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* Why it should matter */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Why should this matter to you as a traveler?</span></div>
+            <h2 id="section-05-why-should-this-matter-to-you-as-a-traveler" className="scroll-mt-20">
               Why should this matter to you as a traveler?
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The difference in the tour experience
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The most tangible difference is depth. An unlicensed guide can take you from point A to point B and tell you basic facts. A licensed guide can answer your unexpected questions, connect what you're seeing to a broader historical context, and adapt to your interests in real time. If mid-tour in Asakusa you ask me about the relationship between Buddhism and Shinto in Japan, I can give you a nuanced twenty-minute explanation — not because I memorized an answer, but because I understand the subject at the depth the exam required.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Real moments: what my clients didn't expect
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -189,7 +177,7 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
               Another family from Mexico booked me for a Tsukiji food tour. Their 8-year-old daughter was allergic to shellfish. Instead of canceling or improvising, I rerouted the whole tour around grilled meat, tamagoyaki, seasonal fruit, and traditional sweets — keeping her safely fed while the rest of the family could still enjoy seafood at separate stalls. Handling situations like this is part of what training and experience give you.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Safety and trust
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -197,25 +185,26 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* How to verify */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · How to verify whether a guide is licensed</span></div>
+            <h2 id="section-06-how-to-verify-whether-a-guide-is-licensed" className="scroll-mt-20">
               How to verify whether a guide is licensed
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The official badge
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Every licensed guide is issued a government badge with a unique registration number and is expected to have it available during tours. If you don't see one, ask. A legitimate licensed guide won't have a problem showing it — most are proud to.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The government registry
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Licensed guides are registered in the databases of the prefectures where they operate. You can verify a guide's registration by contacting the prefecture's tourism office. JNTO also maintains directories of registered guides. It's not a complicated process, and any licensed guide should help you verify if you ask.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The 3 questions that instantly reveal the answer
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -237,25 +226,26 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* My experience */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · My own experience getting the license</span></div>
+            <h2 id="section-07-my-own-experience-getting-the-license" className="scroll-mt-20">
               My own experience getting the license
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Why I decided to take the exam
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I had been guiding informally for years when I realized I wanted to do this seriously — as a profession, not a side activity. And if I was going to ask someone to trust their experience in Japan to my hands, I felt I should back that trust with something more than my word. I wanted to be able to say "I hold the national license" and have that mean something verifiable. Not every guide thinks this way, and I respect the different perspectives, but for me it mattered.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The hardest part of the process
               </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Without question, the Japanese history section. Not from lack of interest — I love the subject — but because of the depth and breadth the exam requires. You have to know everything from the details of the 7th-century Taika Reforms to postwar economic policy, the different schools of Buddhism that developed in Japan and how they influenced architecture, art, and daily life in each period. I studied for two years with a fairly disciplined method: three hours on weekday evenings plus weekends. There were moments I thought about quitting, especially after failing on my first attempt.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What changed after I got it
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -263,7 +253,7 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
             </p>
 
             {/* Related */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               Already decided you want a guide?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -280,7 +270,7 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Looking for a licensed English-speaking guide in Japan?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -298,28 +288,29 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 08 · FAQ</span></div>
+              <h2 id="section-08-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is a license legally required to be a tour guide in Japan?</h3>
+                  <h3>Is a license legally required to be a tour guide in Japan?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Since January 2018, no. Before that date, the Tsūyaku Annai-shi license was legally required to guide foreign tourists for a fee. The law was reformed to expand the supply of guides in response to tourism growth. However, the license still exists as the highest credential and remains the only nationally recognized credential issued by the Japanese government.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How many languages does a licensed guide speak?</h3>
+                  <h3>How many languages does a licensed guide speak?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     The license is obtained for a specific language, but many guides test in more than one. The exam is available in ten languages, including English, Spanish, French, Chinese, Korean, and Portuguese. I'm licensed in both English and Spanish.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Does a licensed guide cost more?</h3>
+                  <h3>Does a licensed guide cost more?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Generally yes, but the difference is smaller than you might think. A licensed guide typically charges 10–30% more than an unlicensed guide for a comparable tour. The difference is justified by depth of knowledge, professional training, insurance, and peace of mind. It's like the difference between a business hotel and a boutique hotel — both give you a bed, but the experience is different.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How do I find a licensed English-speaking guide in Japan?</h3>
+                  <h3>How do I find a licensed English-speaking guide in Japan?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     The most direct options are consulting the JNTO directory, or contacting tour operators that specifically state they work with licensed guides. If you're reading this, you've already found one. You can see our{" "}
                     <Link to="/tours" className="text-accent hover:underline">
@@ -329,7 +320,7 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can I travel Japan without a guide?</h3>
+                  <h3>Can I travel Japan without a guide?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Absolutely. Japan is one of the easiest and safest countries to travel independently. Public transport is excellent, signage increasingly accommodates multiple languages, and people are extraordinarily helpful. A guide is not a necessity — it's a choice that enriches the experience. The question is not whether you can travel without a guide, but whether you want to understand Japan at a level deeper than an audio guide or app can offer. If the answer is yes, a{" "}
                     <Link to="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" className="text-accent hover:underline">
@@ -341,7 +332,11 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -444,7 +439,9 @@ const LicensedVsUnlicensedTourGuidesJapan = () => {
         - No unified individual "approved guide" mark exists beyond the government
           badge; article mentions the badge only.
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

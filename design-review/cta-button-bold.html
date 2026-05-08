@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CTA Button — Bold Different Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --clay: #9c563f;
+    --sakura: #d65a7e;       /* Sakura pink — fresh, distinct */
+    --indigo: #1a3a5c;       /* Japanese indigo (藍) — alternative */
+    --tangerine: #d97849;    /* Warm orange — Tokyo neon energy */
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, sans-serif;
+    padding: 60px 0 80px;
+  }
+
+  .page-head {
+    max-width: 1280px;
+    margin: 0 auto 48px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+
+  /* Variant card */
+  .variant {
+    max-width: 1280px;
+    margin: 0 auto 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+  .nav-context {
+    background: rgba(248,247,241,.96);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-context .brand {
+    font-family: Georgia, serif;
+    letter-spacing: .18em;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .nav-context .navlinks {
+    display: flex; gap: 28px; align-items: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .hero-context {
+    height: 200px;
+    background:
+      linear-gradient(95deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.42) 70%, rgba(0,0,0,0.18) 100%),
+      url("../public/images/tour-photos/group-photo.webp") center/cover, #2b2823;
+    padding: 32px;
+    display: flex; flex-direction: column; justify-content: end;
+    color: #fff;
+  }
+  .hero-context p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 16px;
+    color: rgba(255,255,255,.92);
+    text-shadow: 0 1px 14px rgba(0,0,0,.45);
+  }
+  .size-row {
+    padding: 24px 28px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+  }
+  .size-row .size-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    width: 120px;
+  }
+  .variant-foot {
+    padding: 18px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+
+  /* Button base */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    transition: all .25s ease;
+    cursor: pointer;
+    border: none;
+    line-height: 1;
+    position: relative;
+  }
+  .btn:hover .arrow { transform: translateX(3px); }
+  .arrow { transition: transform .25s ease; }
+
+  /* ============ 1. AVATAR + NAME (personal brand) ============ */
+  .btn-avatar {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 999px;
+    padding: 6px 18px 6px 6px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 14px rgba(23,23,23,.20);
+  }
+  .btn-avatar.btn-sm { padding: 4px 14px 4px 4px; font-size: 12.5px; }
+  .btn-avatar.btn-md { padding: 6px 20px 6px 6px; font-size: 14px; }
+  .btn-avatar.btn-lg { padding: 8px 24px 8px 8px; font-size: 16px; }
+  .btn-avatar:hover {
+    background: #2b2823;
+    box-shadow: 0 8px 22px rgba(23,23,23,.32);
+    transform: translateY(-1px);
+  }
+  .btn-avatar .avatar {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d4a563, #8a6234);
+    background-image: url("../public/images/tour-photos/asakusa-guest-selfie.webp");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--gold);
+    flex: 0 0 28px;
+  }
+  .btn-avatar.btn-sm .avatar { width: 22px; height: 22px; flex: 0 0 22px; border-width: 1.5px; }
+  .btn-avatar.btn-lg .avatar { width: 36px; height: 36px; flex: 0 0 36px; }
+
+  /* ============ 2. SAKURA PINK (bold brand color) ============ */
+  .btn-sakura {
+    background: var(--sakura);
+    color: #fff;
+    border-radius: 4px;
+    padding: 13px 26px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 14px rgba(214,90,126,.25), inset 0 1px 0 rgba(255,255,255,.18);
+  }
+  .btn-sakura.btn-sm { padding: 11px 20px; font-size: 13px; }
+  .btn-sakura.btn-md { padding: 13px 26px; font-size: 14px; }
+  .btn-sakura.btn-lg { padding: 17px 32px; font-size: 16px; }
+  .btn-sakura:hover {
+    background: #c64e72;
+    box-shadow: 0 10px 24px rgba(214,90,126,.35), inset 0 1px 0 rgba(255,255,255,.25);
+    transform: translateY(-1px);
+  }
+
+  /* ============ 3. GLASSMORPHISM (modern translucent) ============ */
+  .btn-glass {
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 24px rgba(255,255,255,.10), inset 0 1px 0 rgba(255,255,255,.30);
+  }
+  .btn-glass.btn-sm { padding: 11px 20px; font-size: 13px; }
+  .btn-glass.btn-md { padding: 13px 26px; font-size: 14px; }
+  .btn-glass.btn-lg { padding: 17px 32px; font-size: 16px; }
+  /* On nav (light bg) — adapt */
+  .nav-context .btn-glass {
+    background: rgba(23,23,23,.85);
+    color: #fff;
+    border: 1px solid rgba(23,23,23,1);
+    backdrop-filter: blur(8px);
+  }
+  .btn-glass:hover {
+    background: rgba(255,255,255,.28);
+    border-color: rgba(255,255,255,.6);
+    transform: translateY(-1px);
+  }
+  .nav-context .btn-glass:hover { background: var(--ink); }
+  .size-row .btn-glass {
+    background: rgba(23,23,23,.85);
+    color: #fff;
+    border: 1px solid var(--ink);
+  }
+
+  /* ============ 4. HAND-DRAWN / SCRIPT (artisan friend) ============ */
+  .btn-script {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 4px;
+    padding: 14px 24px 12px;
+    font-family: "Caveat", cursive;
+    font-weight: 600;
+    font-size: 22px !important;
+    letter-spacing: 0.02em;
+    box-shadow: 4px 4px 0 var(--gold);
+    transform: rotate(-1deg);
+    line-height: 1;
+  }
+  .btn-script.btn-sm { padding: 10px 18px 8px; font-size: 18px !important; box-shadow: 3px 3px 0 var(--gold); }
+  .btn-script.btn-md { padding: 12px 22px 10px; font-size: 20px !important; }
+  .btn-script.btn-lg { padding: 16px 28px 14px; font-size: 26px !important; box-shadow: 5px 5px 0 var(--gold); }
+  .btn-script:hover {
+    transform: rotate(-1deg) translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--gold);
+  }
+
+  /* ============ 5. SPLIT TWO-TONE (modern asymmetric) ============ */
+  .btn-split {
+    background: linear-gradient(to right, var(--ink) 0%, var(--ink) 70%, var(--clay) 70%, var(--clay) 100%);
+    color: #fff;
+    border-radius: 0;
+    padding: 13px 0 13px 26px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    overflow: hidden;
+  }
+  .btn-split.btn-sm { padding: 11px 0 11px 20px; font-size: 13px; }
+  .btn-split.btn-md { padding: 13px 0 13px 26px; font-size: 14px; }
+  .btn-split.btn-lg { padding: 17px 0 17px 32px; font-size: 16px; }
+  .btn-split .arrow-pill {
+    margin-left: 16px;
+    background: var(--clay);
+    padding: 13px 20px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .btn-split.btn-sm .arrow-pill { padding: 11px 16px; }
+  .btn-split.btn-lg .arrow-pill { padding: 17px 26px; }
+  .btn-split:hover {
+    background: linear-gradient(to right, var(--ink) 0%, var(--ink) 100%, var(--clay) 100%, var(--clay) 100%);
+    transform: translateY(-1px);
+  }
+  .btn-split:hover .arrow-pill { background: #b56849; }
+
+  /* ============ 6. PILL WITH SHADOW (modern clean) ============ */
+  .btn-pill {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 16px rgba(23,23,23,.20), 0 0 0 0 rgba(201,168,76,0);
+  }
+  .btn-pill.btn-sm { padding: 11px 22px; font-size: 13px; }
+  .btn-pill.btn-md { padding: 13px 26px; font-size: 14px; }
+  .btn-pill.btn-lg { padding: 17px 34px; font-size: 16px; }
+  .btn-pill:hover {
+    box-shadow: 0 8px 28px rgba(23,23,23,.32), 0 0 0 4px rgba(201,168,76,.15);
+    transform: translateY(-1px);
+  }
+
+  /* Recommendation tag */
+  .rec {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--clay);
+    background: rgba(156,86,63,.12);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>CTA button — bold fresh directions</h1>
+  <p>
+    前案（gold/black/clay/jade/stationery/text-link）はすべて luxury idiom 系でした。
+    今回は <strong>フレームを変えて全く別の軸</strong> から6方向：personal avatar / brand color / glassmorphism / hand-drawn / split asymmetric / modern pill。
+  </p>
+</div>
+
+<!-- ============ 1. AVATAR + NAME ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D1 · Avatar + Name</span>
+    <span class="variant-name">"Talk to Manabu" · Manabu の顔写真を pill 左に内蔵</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-avatar btn-sm"><span class="avatar"></span> Talk to Manabu</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-avatar btn-lg"><span class="avatar"></span> Talk to Manabu →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-avatar btn-sm"><span class="avatar"></span> Talk to Manabu</button>
+    <button class="btn btn-avatar btn-md"><span class="avatar"></span> Talk to Manabu</button>
+    <button class="btn btn-avatar btn-lg"><span class="avatar"></span> Talk to Manabu →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>特徴：</strong>Manabu の顔写真（pill の左端）+ "Talk to Manabu" 文言。<em>"会社じゃなくて、人と話せる"</em> を視覚的に証明。<br>
+    <strong>差別化：</strong>競合のほとんどが「会社や agency」を匂わせる中、avatar 入り CTA は <em>個人ブランドだけが使える独自武器</em>。Substack ニュースレターや Notion などの SaaS で実績ある patternだが、個人 tour ガイドではほぼ前例なし。
+  </div>
+</div>
+
+<!-- ============ 2. SAKURA PINK ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D2 · Sakura Pink</span>
+    <span class="variant-name">distinctive brand color #d65a7e · 桜・親しみ・energy</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-sakura btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-sakura btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-sakura btn-sm">Request a Tour</button>
+    <button class="btn btn-sakura btn-md">Request a Tour</button>
+    <button class="btn btn-sakura btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>特徴：</strong>Sakura pink <code>#d65a7e</code>（彩度高めのブランドアクセント）+ 白文字。Black Tomato magenta / Audley red の精神。<br>
+    <strong>差別化：</strong>桜の連想 + 日本旅行ブランドとして覚えやすい色。Gold/Black 競合からくっきり浮く。<em>brand identity 最強</em>。<br>
+    <strong>注意：</strong>"派手すぎる" 感もあるので tone-down 版 (#bd5071 等) の検討余地あり。
+  </div>
+</div>
+
+<!-- ============ 3. GLASSMORPHISM ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D3 · Glassmorphism</span>
+    <span class="variant-name">2024-2026 modern · 半透明 + backdrop blur · Apple / Stripe</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-glass btn-sm">Request a Tour →</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-glass btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes (light bg)</span>
+    <button class="btn btn-glass btn-sm">Request a Tour →</button>
+    <button class="btn btn-glass btn-md">Request a Tour →</button>
+    <button class="btn btn-glass btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>特徴：</strong>Hero では <em>frosted glass</em>（写真がうっすら透けて見える）、light bg では ink solid に <em>auto-adapt</em>。pill 形 + tracking 0.04em。<br>
+    <strong>差別化：</strong>2026 modern web design idiom（Apple Vision Pro / Linear / Stripe）。<em>"進歩的なテック感"</em> を出したい場合に有効。<br>
+    <strong>注意：</strong>Cormorant editorial との文脈ミスマッチ可能性。Plan A 路線とは方向性が違う。
+  </div>
+</div>
+
+<!-- ============ 4. HAND-DRAWN SCRIPT ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D4 · Hand-drawn Script</span>
+    <span class="variant-name">Caveat 手書き + 黒地 + gold 影 · "親しみ" を本気で出す</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-script btn-sm">Talk to Manabu</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-script btn-lg">Talk to Manabu →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-script btn-sm">Talk to Manabu</button>
+    <button class="btn btn-script btn-md">Talk to Manabu</button>
+    <button class="btn btn-script btn-lg">Talk to Manabu →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>特徴：</strong>Caveat（手書き script）+ 黒地 + 1° 微小回転 + gold offset shadow。"会社の予約" ではなく <em>"友達への手紙"</em> 風。<br>
+    <strong>差別化：</strong>Substack / Mail Chimp / boutique boutique 系で見る idiom。luxury hospitality では稀。Manabu の "conversation, not lecture" 哲学とブランド一致最強。<br>
+    <strong>注意：</strong>"カジュアル過ぎる" 印象のリスク。Cormorant editorial と若干分裂感。
+  </div>
+</div>
+
+<!-- ============ 5. SPLIT TWO-TONE ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D5 · Split Two-tone</span>
+    <span class="variant-name">非対称 · 黒 70% + clay 30% · arrow pill が右に飛び出す</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-split btn-sm">Request a Tour <span class="arrow-pill">→</span></button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-split btn-lg">Request Your Private Tour <span class="arrow-pill">→</span></button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-split btn-sm">Request a Tour <span class="arrow-pill">→</span></button>
+    <button class="btn btn-split btn-md">Request a Tour <span class="arrow-pill">→</span></button>
+    <button class="btn btn-split btn-lg">Request Your Private Tour <span class="arrow-pill">→</span></button>
+  </div>
+  <div class="variant-foot">
+    <strong>特徴：</strong>左 70% ink black（メインテキスト）+ 右 30% clay（arrow pill が突き出す形）。non-rounded 直線的。<br>
+    <strong>差別化：</strong>SaaS / startup の modern bold idiom（Linear / Notion）。Plan A clay color を CTA で活かしつつ、強い視覚 hook。<br>
+    <strong>注意：</strong>editorial 路線とは違う方向。"agency" 的な印象が出る可能性。
+  </div>
+</div>
+
+<!-- ============ 6. MODERN PILL ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D6 · Modern Pill + Gold ring on hover</span>
+    <span class="variant-name">黒地 + 完全 rounded · hover で gold halo ring</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-pill btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-pill btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes (hover で gold ring)</span>
+    <button class="btn btn-pill btn-sm">Request a Tour</button>
+    <button class="btn btn-pill btn-md">Request a Tour</button>
+    <button class="btn btn-pill btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="variant-foot">
+    <strong>特徴：</strong>黒地 + 完全 rounded pill + soft shadow。<em>hover で 4px の gold halo ring が外側に広がる</em>。<br>
+    <strong>差別化：</strong>Stripe / Vercel / Linear 系の modern web design 標準。gold は hover 時だけ控えめ accent として使用、Plan A との一貫性も保てる。<br>
+    <strong>判断：</strong>luxury hospitality と modern web の <em>中間</em>。最もハズレなく、CV 強度高い。
+  </div>
+</div>
+
+<!-- ============ DECISION ============ -->
+<div style="max-width: 1280px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">どの方向で進めるか</h2>
+  <p style="margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.65;">
+    今回はフレームを変えた6つ。それぞれが <em>違うブランド positioning</em> を出します：
+  </p>
+  <ul style="color: var(--muted); font-size: 14px; line-height: 1.7; padding-left: 22px;">
+    <li><strong>D1 · Avatar</strong> — <span class="rec">個人ブランド最強の選択</span>。"会社じゃなくて Manabu と話せる" を視覚化。差別化最大。</li>
+    <li><strong>D2 · Sakura Pink</strong> — 桜 = 日本旅行ブランドの記憶定着強度高い。派手寄り。</li>
+    <li><strong>D3 · Glassmorphism</strong> — 2026 modern。Cormorant editorial と方向性ずれるリスク。</li>
+    <li><strong>D4 · Script</strong> — 手書き = 友達への手紙。Manabu の "conversation" 哲学と一致。Caveat 抵抗があるなら不採用。</li>
+    <li><strong>D5 · Split</strong> — SaaS modern。CV 強度高いが editorial 路線と分裂。</li>
+    <li><strong>D6 · Modern Pill</strong> — 安全策。黒地 + 完全 rounded + hover gold ring。luxury と modern の中間。</li>
+  </ul>
+  <p style="margin: 16px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65;">
+    シニア推奨：<span class="rec">D1（Avatar）</span> または <span class="rec">D6（Modern Pill）</span>。
+    D1 は <em>"個人ブランドだけが使える武器"</em>、D6 は <em>"ハズレなしの safe choice"</em>。
+  </p>
+</div>
+
+</body>
+</html>

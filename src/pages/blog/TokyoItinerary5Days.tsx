@@ -6,6 +6,8 @@ import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { TouristTrip } from "@/components/StructuredData/TouristTrip";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const TokyoItinerary5Days = () => {
   return (
@@ -21,44 +23,37 @@ const TokyoItinerary5Days = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/shibuya-scramble-crossing.webp"
-          alt="Shibuya Scramble Crossing, iconic Tokyo landmark for your 5-day itinerary"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo Itinerary 5 Days: What I'd Actually Plan as a Licensed Guide
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours. This is the itinerary I give my private clients.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/shibuya-scramble-crossing.webp"
+        imageAlt="Shibuya Scramble Crossing, iconic Tokyo landmark for your 5-day itinerary"
+        eyebrow="Planning Your Trip"
+        title="Tokyo Itinerary 5 Days: What I'd Actually Plan as a Licensed Guide"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours. This is the itinerary I give my private clients."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Before You Plan", href: "#section-01-before-you-plan" },
+          { num: "02", label: "Day 1: Arrive and Orient", href: "#section-02-day-1-arrive-and-orient" },
+          { num: "03", label: "Day 2: Old Tokyo and the…", href: "#section-03-day-2-old-tokyo-and-the-neighborhoods" },
+          { num: "04", label: "Day 3: Modern Tokyo and…", href: "#section-04-day-3-modern-tokyo-and-what-it-means" },
+          { num: "05", label: "Day 4: Day Trip", href: "#section-05-day-4-day-trip" },
+          { num: "06", label: "Day 5: Slow Morning, Last…", href: "#section-06-day-5-slow-morning-last-wanders-departure" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="5 days in Tokyo: Day 1 — Asakusa & Ueno (traditional). Day 2 — Tsukiji & Ginza (food & shopping). Day 3 — Shibuya & Harajuku (pop culture). Day 4 — Day trip (Kamakura, Hakone, or Nikko). Day 5 — Hidden gems & local neighborhoods."
               hook="But the biggest mistake in online itineraries is trying to cover too much. A local guide who plans 500+ trips explains the 'depth beats breadth' approach below."
@@ -69,8 +64,8 @@ const TokyoItinerary5Days = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's the Tokyo itinerary for 5 days that I actually give my clients. It's designed around a principle I've learned from guiding: depth beats breadth. You'll see fewer neighborhoods but understand them. You'll eat fewer restaurants but remember each one. And you'll leave Tokyo feeling like you know the city, not just its photo spots.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Before You Plan</span></div>
+            <h2 id="section-01-before-you-plan" className="scroll-mt-20">
               Before You Plan: The Mistake Most Visitors Make
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -79,8 +74,8 @@ const TokyoItinerary5Days = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               My approach: organize each day by geography. Stay in one area for the morning, one connected area for the afternoon. Walk between sites when possible. Save train rides for the transition between morning and afternoon, and for getting home in the evening. This simple structure cuts transit time in half and doubles your actual experience time.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Day 1: Arrive and Orient</span></div>
+            <h2 id="section-02-day-1-arrive-and-orient" className="scroll-mt-20">
               Day 1: Arrive and Orient (Asakusa, Ueno)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -96,8 +91,8 @@ const TokyoItinerary5Days = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">What to skip:</strong> Ameyoko Market near Ueno is often recommended, but it's a chaotic discount shopping street that's more stressful than interesting for first-day visitors. Come back on Day 4 or 5 if you're curious.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Day 2: Old Tokyo and the Neighborhoods</span></div>
+            <h2 id="section-03-day-2-old-tokyo-and-the-neighborhoods" className="scroll-mt-20">
               Day 2: Old Tokyo and the Neighborhoods Tourists Miss
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -112,8 +107,8 @@ const TokyoItinerary5Days = () => {
             </div>
 
             <InlineCTA message="Want a local guide to show you the real Tokyo?" href="/contact" />
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Day 3: Modern Tokyo and What It Means</span></div>
+            <h2 id="section-04-day-3-modern-tokyo-and-what-it-means" className="scroll-mt-20">
               Day 3: Modern Tokyo and What It Means
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -129,8 +124,8 @@ const TokyoItinerary5Days = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">What to skip:</strong> Shibuya Sky observation deck, overpriced for a view you can get from many hotel lobbies. The Metropolitan Government Building in Shinjuku is free and equally good.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Day 4: Day Trip</span></div>
+            <h2 id="section-05-day-4-day-trip" className="scroll-mt-20">
               Day 4: Day Trip (Kamakura or Nikko)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,8 +146,8 @@ const TokyoItinerary5Days = () => {
               <p className="text-sm text-foreground font-medium mb-1">Guide's tip:</p>
               <p className="text-sm text-muted-foreground">If you're choosing between Kamakura and Nikko, think about what excites you more: Kamakura is relaxed, green, and walkable. Nikko is dramatic, ornate, and slightly more demanding logistically. Both are excellent. Check my day trip guides for details.</p>
             </div>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Day 5: Slow Morning, Last Wanders, Departure</span></div>
+            <h2 id="section-06-day-5-slow-morning-last-wanders-departure" className="scroll-mt-20">
               Day 5: Slow Morning, Last Wanders, Departure
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -171,7 +166,7 @@ const TokyoItinerary5Days = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want this itinerary brought to life by a local guide?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -185,35 +180,40 @@ const TokyoItinerary5Days = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is 5 days enough for Tokyo?</h3>
+                  <h3>Is 5 days enough for Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Five days is a solid amount of time for a first visit. You'll see the major neighborhoods, do a day trip, and have enough time to explore at a comfortable pace. If you can extend to 7 days, you'll be able to add a second day trip and revisit favorites. But 5 days, well-planned, covers the essentials without feeling rushed.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How much should I budget per day in Tokyo?</h3>
+                  <h3>How much should I budget per day in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     A comfortable mid-range budget is ¥15,000–20,000 per person per day (excluding hotel), covering transportation (¥1,000–1,500), meals (¥5,000–8,000), attractions (¥1,000–3,000), and miscellaneous expenses. Budget travelers can manage on ¥8,000–10,000 per day. Luxury travelers should budget ¥30,000+.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Do I need a guide for every day of a 5-day Tokyo itinerary?</h3>
+                  <h3>Do I need a guide for every day of a 5-day Tokyo itinerary?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No. Most of my clients book a guide for 1–2 days and explore independently the rest of the time. I'd recommend a guide for Day 1 (Asakusa context) and Day 4 (day trip logistics). Days 2, 3, and 5 are very doable on your own, especially if you've had a guided foundation on Day 1.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Where should I stay for a 5-day Tokyo trip?</h3>
+                  <h3>Where should I stay for a 5-day Tokyo trip?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Asakusa is my top recommendation: central to many attractions on this itinerary, close to subway lines, great local restaurants, and significantly cheaper than Shibuya or Shinjuku. Ueno is a solid second choice with excellent museum access. Shinjuku is best if you prioritize nightlife and restaurant variety.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -292,7 +292,9 @@ const TokyoItinerary5Days = () => {
           { "@type": "HowToStep", "name": "Day 5: Hidden Gems", "text": "Imperial Palace East Gardens in the morning, then explore a local neighborhood like Shimokitazawa, Yanaka, or Koenji." }
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

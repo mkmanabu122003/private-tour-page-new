@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const NikkoDayTripGuideVsSolo = () => {
   return (
@@ -24,57 +26,37 @@ const NikkoDayTripGuideVsSolo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/nikko-toshogu-hero.webp"
-          alt="The ornate Yomeimon Gate at Nikko Tosho-gu Shrine surrounded by cedar trees"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trips</p>
-            <h1 className="heading-display text-foreground">
-              Nikko Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 20, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who regularly leads day trips from Tokyo to Nikko.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Last updated: April 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/nikko-toshogu-hero.webp"
+        imageAlt="The ornate Yomeimon Gate at Nikko Tosho-gu Shrine surrounded by cedar trees"
+        eyebrow="Day Trips"
+        title="Nikko Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who regularly leads day trips from Tokyo to Nikko."
+        date="April 20, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What's in Nikko", href: "#section-01-whats-in-nikko" },
+          { num: "02", label: "Solo vs Guided", href: "#section-02-solo-vs-guided" },
+          { num: "03", label: "The Solo Route", href: "#section-03-the-solo-route" },
+          { num: "04", label: "The Guided Route", href: "#section-04-the-guided-route" },
+          { num: "05", label: "Which One You Should Choose", href: "#section-05-which-one-you-should-choose" },
+          { num: "06", label: "A Note on Winter", href: "#section-06-a-note-on-winter" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Solo works if you have 8+ hours, basic navigation confidence, and only want the shrines (Toshogu, Futarasan, Rinno-ji). Guided pays for itself if you want to combine the shrines with Lake Chuzenji and Kegon Falls in one day, or if you're visiting November through April when weather on the Irohazaka mountain road gets unpredictable."
               hook="Cost-wise, solo runs around ¥12,000 per person by public transit; guided is ¥80,000 for the whole tour (up to 4 people). Here's the real breakdown — plus the 3 mistakes solo visitors make that cost them the best 2 hours of the day."
@@ -91,7 +73,8 @@ const NikkoDayTripGuideVsSolo = () => {
             </p>
 
             {/* What Nikko Actually Contains */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What's in Nikko</span></div>
+            <h2 id="section-01-whats-in-nikko" className="scroll-mt-20">
               What's in Nikko: The Two Halves
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -105,7 +88,8 @@ const NikkoDayTripGuideVsSolo = () => {
             </p>
 
             {/* Side-by-side comparison */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Solo vs Guided</span></div>
+            <h2 id="section-02-solo-vs-guided" className="scroll-mt-20">
               Solo vs Guided: At a Glance
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -163,10 +147,11 @@ const NikkoDayTripGuideVsSolo = () => {
             </div>
 
             {/* The Solo Route */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · The Solo Route</span></div>
+            <h2 id="section-03-the-solo-route" className="scroll-mt-20">
               The Solo Route (Public Transit from Tokyo)
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Getting there
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -184,7 +169,7 @@ const NikkoDayTripGuideVsSolo = () => {
               If you're not on a JR Pass, the Tobu option almost always wins on price, time, and comfort.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Getting around once you're there
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -197,7 +182,7 @@ const NikkoDayTripGuideVsSolo = () => {
               Prices and headways can shift season to season — check Tobu Bus Nikko's current rates and timetable the week you travel.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cost breakdown (1 person, no rail pass)
             </h3>
             <div className="overflow-x-auto mb-8">
@@ -231,7 +216,7 @@ const NikkoDayTripGuideVsSolo = () => {
               </table>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The 3 mistakes solo visitors make
             </h3>
             <ol className="space-y-3 mb-8 list-decimal list-inside">
@@ -247,7 +232,8 @@ const NikkoDayTripGuideVsSolo = () => {
             </ol>
 
             {/* The Guided Route */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · The Guided Route</span></div>
+            <h2 id="section-04-the-guided-route" className="scroll-mt-20">
               The Guided Route (What You're Actually Paying For)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -284,7 +270,8 @@ const NikkoDayTripGuideVsSolo = () => {
             </ul>
 
             {/* Decision framework */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Which One You Should Choose</span></div>
+            <h2 id="section-05-which-one-you-should-choose" className="scroll-mt-20">
               Which One You Should Choose
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -325,7 +312,8 @@ const NikkoDayTripGuideVsSolo = () => {
             </div>
 
             {/* Seasonal note */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · A Note on Winter</span></div>
+            <h2 id="section-06-a-note-on-winter" className="scroll-mt-20">
               A Note on Winter
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -336,7 +324,7 @@ const NikkoDayTripGuideVsSolo = () => {
             </p>
 
             {/* Related decision content */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               Still Choosing Between Day Trips?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -353,7 +341,7 @@ const NikkoDayTripGuideVsSolo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Planning a Nikko Day Trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -373,34 +361,35 @@ const NikkoDayTripGuideVsSolo = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can you do Nikko as a day trip from Tokyo?</h3>
+                  <h3>Can you do Nikko as a day trip from Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes. Nikko is about 1 hour 50 minutes from Asakusa by Tobu Limited Express, or roughly 2 hours via the JR Tohoku Shinkansen and JR Nikko Line. A full day gives you time for the UNESCO shrines and, if you start early, Lake Chuzenji as well.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is the Japan Rail Pass worth it for Nikko?</h3>
+                  <h3>Is the Japan Rail Pass worth it for Nikko?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     The JR route (Tokyo → Utsunomiya → JR Nikko) is fully covered by the JR Pass, but it's about 10 minutes slower and deposits you a bit further from the shrines than the Tobu route. If you already have a JR Pass, use it. If you don't, the Tobu route from Asakusa is usually cheaper and faster.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Do I need to book Nikko in advance?</h3>
+                  <h3>Do I need to book Nikko in advance?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Nothing requires advance booking to visit the shrines. You can buy train and bus tickets the morning of travel. For the Tobu Spacia X reserved seats, booking a few days ahead is recommended during cherry blossom, autumn leaves, and Golden Week periods.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Nikko worth visiting in winter?</h3>
+                  <h3>Is Nikko worth visiting in winter?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     The shrines are spectacular in winter, especially after fresh snow. Lake Chuzenji is less reliable — the Irohazaka road can be affected by snow, and chain regulations may slow or disrupt bus service. If you're going for the shrines only, winter is a great, less-crowded time to visit. If you want Lake Chuzenji too, a guided trip handles the road conditions more smoothly.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How long do you need in Nikko?</h3>
+                  <h3>How long do you need in Nikko?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     The UNESCO shrines (Toshogu, Futarasan, Rinno-ji) take 3–4 hours at a reasonable pace. Adding Lake Chuzenji and Kegon Falls extends that by about 4 hours including the bus up and down the Irohazaka road. A full day trip from Tokyo lands at 10–12 hours door-to-door solo, or 9–10 hours guided with direct transport.
                   </p>
@@ -408,7 +397,11 @@ const NikkoDayTripGuideVsSolo = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -507,7 +500,9 @@ const NikkoDayTripGuideVsSolo = () => {
         - Edo Wonderland intentionally excluded (not a typical same-day pairing with the shrines)
         - Spacia X seat-class differentials intentionally excluded (standard seat only)
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

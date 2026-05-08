@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsTemplosFamososJapon = () => {
   return (
@@ -17,53 +19,35 @@ const EsTemplosFamososJapon = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-sensoji-pagoda.webp"
-          alt="Pagoda de Senso-ji, templos famosos de Japón"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Cultura Japonesa</p>
-            <h1 className="heading-display text-foreground">
-              Los Templos Más Famosos de Japón: Guía para Entenderlos de Verdad
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-sensoji-pagoda.webp"
+        imageAlt="Pagoda de Senso-ji, templos famosos de Japón"
+        eyebrow="Cultura Japonesa"
+        title="Los Templos Más Famosos de Japón: Guía para Entenderlos de Verdad"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Templo vs. Santuario", href: "#section-01-templo-vs-santuario" },
+          { num: "02", label: "Los 5 Templos Más Famosos…", href: "#section-02-los-5-templos-más-famosos-de-japón" },
+          { num: "03", label: "Los 5 Santuarios que Debes…", href: "#section-03-los-5-santuarios-que-debes-conocer" },
+          { num: "04", label: "Cómo Comportarse en Templos…", href: "#section-04-cómo-comportarse-en-templos-y-santuarios" },
+          { num: "05", label: "Mi Recomendación", href: "#section-05-mi-recomendación" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Cada vez que acompaño a un grupo por Kioto o Tokio, alguien me pregunta: "Manabu, ¿esto es un templo o un santuario?" Y no es una pregunta tonta. Al contrario, es probablemente la pregunta más importante que puedes hacerte antes de visitar los <strong className="text-foreground">templos famosos de Japón</strong>. Porque si no entiendes la diferencia, todo lo que veas (las puertas, los rituales, las estatuas) se convierte en un decorado bonito pero vacío.
@@ -76,14 +60,15 @@ const EsTemplosFamososJapon = () => {
             </p>
 
             {/* Templo vs. Santuario */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Templo vs. Santuario</span></div>
+            <h2 id="section-01-templo-vs-santuario" className="scroll-mt-20">
               Templo vs. Santuario: la Diferencia que Casi Nadie Entiende
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Antes de hablar de lugares concretos, necesitas entender esta distinción fundamental. No es un detalle técnico para eruditos: es la clave para que todo lo que veas en tu viaje tenga sentido.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Templos Budistas (tera/ji): Qué Son
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -93,7 +78,7 @@ const EsTemplosFamososJapon = () => {
               Los templos suelen tener una puerta principal llamada <em>sanmon</em> (puerta de la montaña), a menudo custodiada por estatuas de guardianes feroces. Dentro encontrarás el <em>hondo</em> (salón principal), quemadores de incienso, campanas de bronce, y a veces cementerios adyacentes. Si ves una pagoda, estás en un templo. Si hueles incienso, estás en un templo. Si ves monjes con la cabeza rapada, estás en un templo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Santuarios Sintoístas (jinja): Qué Son
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -103,7 +88,7 @@ const EsTemplosFamososJapon = () => {
               Los santuarios se reconocen por la puerta <em>torii</em>, esa estructura en forma de letra griega pi (normalmente roja o naranja) que marca la frontera entre el mundo profano y el sagrado. Dentro del santuario hay un salón principal que alberga un objeto sagrado (un espejo, una espada o una joya) que representa al kami, pero que nunca se muestra al público. En los santuarios no hay monjes sino sacerdotes (<em>kannushi</em>), a menudo vestidos de blanco, y las sacerdotisas (<em>miko</em>) con sus hakama rojas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo Distinguirlos a Simple Vista (torii vs. mon)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -111,42 +96,43 @@ const EsTemplosFamososJapon = () => {
             </p>
 
             {/* Los 5 templos más famosos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Los 5 Templos Más Famosos de Japón</span></div>
+            <h2 id="section-02-los-5-templos-más-famosos-de-japón" className="scroll-mt-20">
               Los 5 Templos Más Famosos de Japón
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Estos son los templos budistas que considero imprescindibles, tanto por su belleza como por lo que representan históricamente. Son algunos de los templos famosos de Japón que mis invitados nunca olvidan.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Senso-ji (Tokio): El Más Visitado
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Senso-ji es el templo más antiguo de Tokio, fundado en el año 645. Está en Asakusa, y recibe unos 30 millones de visitantes al año. La entrada se hace a través de Kaminarimon, la "Puerta del Trueno", con su enorme farol rojo que probablemente ya hayas visto en fotos. Después cruzas Nakamise-dori, una calle comercial de 250 metros con tiendas de recuerdos y dulces tradicionales, hasta llegar al salón principal. Lo que mucha gente no sabe es que Senso-ji fue completamente destruido en los bombardeos de 1945 y reconstruido en los años 50. Pero eso no le resta autenticidad: para los japoneses, reconstruir un templo es un acto de fe, no una falsificación. Mi consejo: ve al amanecer, antes de las 7 AM. Tendrás el recinto casi para ti solo, y la luz sobre los techos curvos del templo es espectacular.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Kinkaku-ji (Kioto): El Pabellón Dorado
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kinkaku-ji, el Pabellón Dorado, es probablemente la imagen más icónica de Kioto. Los dos pisos superiores están cubiertos de pan de oro real, y el reflejo en el estanque que lo rodea es, sencillamente, una de las vistas más bellas que he visto en mis años como guía. Originalmente fue la villa de retiro de un shogún del siglo XIV que, al morir, pidió que se convirtiera en templo zen. También fue incendiado, en este caso por un monje perturbado en 1950, un suceso que Mishima Yukio inmortalizó en su novela "El pabellón de oro". La versión actual es de 1955. Lo que recomiendo a mis invitados: no te limites a la foto del estanque. Recorre el jardín completo, fíjate en los pinos japoneses cuidadosamente podados y en la casa de té al fondo, donde puedes tomar matcha con vistas al recinto.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Todai-ji (Nara): El Buda Gigante
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Todai-ji alberga el Daibutsu, un Buda de bronce de 15 metros de altura que pesa 500 toneladas. Es la estatua de Buda en bronce más grande del mundo, dentro del edificio de madera más grande del mundo (aunque la estructura actual, del siglo XVIII, es un 30% más pequeña que la original). Cuando entras al salón y ves al Buda por primera vez, la escala es genuinamente sobrecogedora. Es de esos momentos en los que ninguna foto prepara para la realidad. Nara está a 45 minutos en tren desde Kioto, y la visita se combina perfectamente con un paseo por el Parque de Nara, donde más de mil ciervos caminan libres entre los visitantes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Kiyomizu-dera (Kioto): La Terraza Sobre el Bosque
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kiyomizu-dera es famoso por su terraza de madera que sobresale 13 metros sobre la ladera de una montaña cubierta de árboles. La estructura se sostiene sin un solo clavo: toda la terraza descansa sobre 139 pilares de madera ensamblados a presión, una hazaña de ingeniería del siglo VIII. En otoño, cuando los arces se tiñen de rojo y naranja, las vistas desde la terraza son de las más espectaculares de todo Japón. En primavera, los cerezos en flor crean un efecto similar. El nombre Kiyomizu significa "agua pura" y hace referencia a la cascada Otowa que nace en el recinto, donde los visitantes beben agua con unos cazos largos para recibir bendiciones de salud, éxito en los estudios o suerte en el amor.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Byodo-in (Uji): El que Sale en las Monedas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -154,42 +140,43 @@ const EsTemplosFamososJapon = () => {
             </p>
 
             {/* Los 5 santuarios */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Los 5 Santuarios que Debes Conocer</span></div>
+            <h2 id="section-03-los-5-santuarios-que-debes-conocer" className="scroll-mt-20">
               Los 5 Santuarios que Debes Conocer
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Ahora pasamos al otro lado de la moneda: los santuarios sintoístas. Son igual de impresionantes que los templos famosos de Japón, pero la atmósfera es completamente diferente: más conectada con la naturaleza, más silenciosa, más misteriosa.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Fushimi Inari (Kioto): Los Mil Torii Rojos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Fushimi Inari Taisha es el santuario más fotografiado de Japón, y con razón. Miles de torii de color bermellón forman túneles que serpentean montaña arriba durante más de 4 kilómetros. Cada torii fue donado por una empresa o familia como ofrenda al kami Inari, deidad del arroz, la fertilidad y los negocios. Lo que la mayoría de los turistas no sabe es que la subida completa toma unas dos horas y que el 90% de los visitantes se da la vuelta en los primeros 20 minutos. Si sigues adelante, llegarás a zonas del sendero donde estarás prácticamente solo, rodeado de bambú y luz filtrada. Está abierto las 24 horas, y una visita nocturna, con los torii iluminados solo por pequeñas linternas, es una experiencia sobrenatural.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Meiji Jingu (Tokio): El Bosque en la Ciudad
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Meiji Jingu es un santuario dedicado al Emperador Meiji y a la Emperatriz Shoken, los artífices de la modernización de Japón a finales del siglo XIX. Lo extraordinario de Meiji Jingu no es el edificio en sí, sino el bosque que lo rodea: 70 hectáreas de árboles plantados artificialmente en 1920 por voluntarios de todo el país, que hoy forman un bosque maduro y denso en pleno centro de Tokio, a dos pasos de Shibuya y Harajuku. Cruzar el enorme torii de madera de ciprés (el más grande de Japón) y caminar por el sendero de grava entre los árboles es una de las transiciones más impactantes que puedes experimentar en Tokio: del caos urbano al silencio sagrado en cuestión de segundos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Itsukushima (Miyajima): El Torii en el Agua
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El torii flotante de Itsukushima, en la isla de Miyajima (cerca de Hiroshima), es una de las tres vistas más famosas de Japón según la tradición. Con la marea alta, el torii de 16 metros de altura parece flotar sobre el agua del mar. Con la marea baja, puedes caminar hasta su base. El santuario en sí también está construido sobre pilotes, de modo que con la marea alta parece emerger del agua como una aparición. La isla entera está considerada sagrada; históricamente no se permitían nacimientos ni muertes en ella, y los ciervos que la habitan se consideran mensajeros de los kami. La visita se combina naturalmente con Hiroshima, y es una excursión de un día que recomiendo siempre.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sengen Taisha (Monte Fuji)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Fujisan Hongu Sengen Taisha es el santuario principal dedicado al Monte Fuji, y técnicamente su jurisdicción abarca toda la cima de la montaña sagrada. Se encuentra en Fujinomiya, al sur del Fuji, y es el punto de partida espiritual de la peregrinación a la montaña más famosa de Japón. El recinto tiene una pagoda roja de cinco pisos (sí, un elemento budista dentro de un santuario sintoísta, porque durante siglos las dos religiones convivieron mezcladas) y unos cerezos que en primavera enmarcan al Monte Fuji de una forma que parece diseñada por un director de cine. Es un lugar poco visitado por los turistas internacionales, y precisamente por eso lo incluyo aquí.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Toshogu (Nikko): El Mausoleo de un Shogun
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -197,7 +184,8 @@ const EsTemplosFamososJapon = () => {
             </p>
 
             {/* Cómo comportarse */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cómo Comportarse en Templos y Santuarios</span></div>
+            <h2 id="section-04-cómo-comportarse-en-templos-y-santuarios" className="scroll-mt-20">
               Cómo Comportarse en Templos y Santuarios
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -208,21 +196,21 @@ const EsTemplosFamososJapon = () => {
               , pero aquí tienes lo esencial.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La Purificación (temizu): Como el Agua Bendita
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tanto en templos como en santuarios encontrarás una fuente de piedra con cazos de bambú o metal cerca de la entrada. Es el <em>temizuya</em>, y su función es ritual: purificarte antes de entrar al espacio sagrado. Es exactamente como la pila de agua bendita a la entrada de una iglesia católica: no es para beber, sino para limpiarte simbólicamente. El procedimiento es sencillo: tomas el cazo con la mano derecha y te lavas la mano izquierda, luego cambias de mano y te lavas la derecha, te enjuagas la boca discretamente (sin tragar) y finalmente inclinas el cazo para que el agua restante limpie el mango. Todo el proceso dura diez segundos y los japoneses lo valoran muchísimo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo Rezar Correctamente
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Aquí es donde templos y santuarios divergen por completo. En un <strong className="text-foreground">templo budista</strong>, te acercas al altar, echas una moneda en la caja de ofrendas, juntas las palmas de las manos en silencio (sin dar palmadas) e inclinas la cabeza brevemente. Es como santiguarse y rezar una oración silenciosa. En un <strong className="text-foreground">santuario sintoísta</strong>, el protocolo es diferente: echas la moneda, haces dos reverencias profundas, das dos palmadas fuertes (para llamar la atención del kami), rezas en silencio y terminas con una reverencia final. La regla mnemotécnica que uso con mis invitados: "dos-dos-uno", dos reverencias, dos palmadas, una reverencia final.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los Goshuin: Como el Sello del Camino de Santiago
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -230,7 +218,8 @@ const EsTemplosFamososJapon = () => {
             </p>
 
             {/* Recomendación según itinerario */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Mi Recomendación</span></div>
+            <h2 id="section-05-mi-recomendación" className="scroll-mt-20">
               Mi Recomendación: Cuáles Visitar Según tu Itinerario
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -251,13 +240,14 @@ const EsTemplosFamososJapon = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas Frecuentes Sobre los Templos Famosos de Japón
             </h2>
 
             <div className="space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuánto cuesta entrar a los templos y santuarios?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -266,7 +256,7 @@ const EsTemplosFamososJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿A qué hora abren los templos y santuarios?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -275,7 +265,7 @@ const EsTemplosFamososJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Puedo hacer fotos en los templos?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -284,7 +274,7 @@ const EsTemplosFamososJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Necesito cubrirme para entrar?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -293,7 +283,7 @@ const EsTemplosFamososJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuál es el templo más importante de Japón?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -304,7 +294,7 @@ const EsTemplosFamososJapon = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres visitar estos templos con un guía que te explique todo lo que estás viendo?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -319,7 +309,11 @@ const EsTemplosFamososJapon = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -405,7 +399,9 @@ const EsTemplosFamososJapon = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

@@ -40,3 +40,37 @@
 ## trailing slash
 - URLは末尾スラッシュなしに統一（/blog/xxx）
 - canonicalタグ、内部リンク、sitemapすべて統一済み
+
+## ブログ記事のデザインフォーマット（Editorial Trust）
+
+すべてのブログ記事は **Editorial Trust** タイポグラフィに統一されている。新規記事もこのフォーマットを使う。
+
+### 必須ルール
+- 記事本文全体を `<div className="prose-editorial">` でラップする
+- 各 `<h2>` の直前に番号付きの section-eyebrow を置く:
+  ```tsx
+  <div className="section-eyebrow"><span>Section 01 · Title</span></div>
+  <h2 id="section-01" className="scroll-mt-20">Section heading</h2>
+  ```
+- `<h2>` `<h3>` には typography 用のインライン className を書かない（`scroll-mt-20` と `id` のみ可）。Cormorant 24-44px のサイズと weight は `.prose-editorial` の CSS が自動で当てる
+- FAQ ブロックは `<div className="faq-block space-y-8">` でラップする（h3 が小さく整う）
+- 数字は自動で lining figures（揃え数字）でレンダリングされる
+
+### テンプレート
+新規記事を作るときは `src/components/blog/BlogArticleTemplate.tsx` をコピーして slug 名にリネームし、プレースホルダーを埋める。テンプレートには以下のオプションモジュールが含まれる:
+- `quick-decision` — Quick Decision ボックス（記事冒頭の一行回答）
+- `guide-note-callout` — Manabu のポートレート + 一言コメント
+- `choice-grid` — 二択カード（"Choose A if…" / "Choose B if…"）
+- `cost-table` + `bar-cell` — 比較表（バーチャート風）
+- `pull-quote` — 大きな serif 引用
+- `section-eyebrow` — セクション見出しの上のゴールド ledger ラベル
+- `hl-gold` — 重要箇所のゴールドハイライター（1セクションに最大2回）
+
+### スペイン語記事
+- 同じ `prose-editorial` フォーマットを使う
+- section-eyebrow ラベルはスペイン語で書く（"Sección 01 · Título"）
+- FAQ 見出しは "Preguntas Frecuentes"（faq-block ラップ必須）
+
+### 既存記事の修正
+- typography 用のインライン className（`heading-section`、`text-xl font-medium...`、`text-lg font-medium...` など）は使わない
+- 撤去スクリプトは `/tmp/heading-cleanup.sh`（一括 sed）と `/tmp/fix-section-eyebrows.mjs`（Node スクリプト）にある

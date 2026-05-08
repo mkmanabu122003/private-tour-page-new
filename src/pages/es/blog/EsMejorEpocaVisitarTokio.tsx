@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsMejorEpocaVisitarTokio = () => {
   return (
@@ -24,60 +26,43 @@ const EsMejorEpocaVisitarTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/meiji-shrine-forest.webp"
-          alt="Bosque del santuario Meiji: Tokio en todas las estaciones"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planifica Tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              La Mejor Época para Visitar Tokio: Guía Mes a Mes
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/meiji-shrine-forest.webp"
+        imageAlt="Bosque del santuario Meiji: Tokio en todas las estaciones"
+        eyebrow="Planifica Tu Viaje"
+        title="La Mejor Época para Visitar Tokio: Guía Mes a Mes"
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Resumen Rápido", href: "#section-01-resumen-rápido" },
+          { num: "02", label: "Primavera", href: "#section-02-primavera" },
+          { num: "03", label: "Verano (Junio - Agosto)", href: "#section-03-verano-junio-agosto" },
+          { num: "04", label: "Otoño (Septiembre - Noviembre)", href: "#section-04-otoño-septiembre-noviembre" },
+          { num: "05", label: "Invierno", href: "#section-05-invierno" },
+          { num: "06", label: "Mi Recomendación Personal", href: "#section-06-mi-recomendación-personal" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               No hay mala época para visitar Tokio, pero cada temporada ofrece una experiencia muy diferente. Cerezos en flor en primavera, fuegos artificiales en verano, follaje dorado en otoño e iluminaciones resplandecientes en invierno, todo pinta la ciudad con colores completamente distintos. Después de guiar tours durante todo el año durante más de una década, he visto Tokio en todos sus estados de ánimo: el calor sofocante de agosto, las mañanas frescas de noviembre, los chaparrones repentinos de primavera y las nevadas silenciosas de enero. Cada mes tiene algo especial que ofrecer, y cada mes tiene compromisos que deberías conocer. Esto es lo que le digo a cada viajero que me pregunta "¿cuándo debería ir?": un desglose detallado del clima, los eventos, los niveles de multitud y los costes para que puedas elegir el momento perfecto para tu viaje.
             </p>
 
             {/* Tabla Resumen Rápido */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Resumen Rápido</span></div>
+            <h2 id="section-01-resumen-rápido" className="scroll-mt-20">
               Resumen Rápido
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -184,7 +169,8 @@ const EsMejorEpocaVisitarTokio = () => {
             </p>
 
             {/* Primavera */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Primavera</span></div>
+            <h2 id="section-02-primavera" className="scroll-mt-20">
               Primavera (Marzo - Mayo)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -208,7 +194,8 @@ const EsMejorEpocaVisitarTokio = () => {
             </p>
 
             {/* Verano */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Verano (Junio - Agosto)</span></div>
+            <h2 id="section-03-verano-junio-agosto" className="scroll-mt-20">
               Verano (Junio - Agosto)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -225,7 +212,8 @@ const EsMejorEpocaVisitarTokio = () => {
             </p>
 
             {/* Otoño */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Otoño (Septiembre - Noviembre)</span></div>
+            <h2 id="section-04-otoño-septiembre-noviembre" className="scroll-mt-20">
               Otoño (Septiembre - Noviembre)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -253,7 +241,8 @@ const EsMejorEpocaVisitarTokio = () => {
             </p>
 
             {/* Invierno */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Invierno</span></div>
+            <h2 id="section-05-invierno" className="scroll-mt-20">
               Invierno (Diciembre - Febrero)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -277,7 +266,8 @@ const EsMejorEpocaVisitarTokio = () => {
             </p>
 
             {/* Mi Recomendación Personal */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Mi Recomendación Personal</span></div>
+            <h2 id="section-06-mi-recomendación-personal" className="scroll-mt-20">
               Mi Recomendación Personal
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -300,7 +290,7 @@ const EsMejorEpocaVisitarTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Cuando vengas, un guía local hará que Tokio sea inolvidable
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -315,7 +305,11 @@ const EsMejorEpocaVisitarTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -347,7 +341,9 @@ const EsMejorEpocaVisitarTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

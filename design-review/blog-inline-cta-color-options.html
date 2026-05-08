@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inline CTA — Color Variations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --muted: #4f4a43;
+        --muted-2: #6a655c;
+        --line: #dcd4c2;
+        --gold: #c9a84c;
+        --gold-soft: #f4e5b6;
+        --gold-deep: #a88930;
+        --clay: #9c563f;
+
+        /* New blue palette */
+        --navy:        #2c3e5c;
+        --navy-deep:   #1c2a44;
+        --navy-soft:   #e7eef5;
+        --steel:       #5a7088;
+        --steel-soft:  #eaeef3;
+        --slate:       #3d4a5c;
+        --slate-tint:  #f0f2f6;
+        --denim:       #4a6b8a;
+        --denim-soft:  #e8eef4;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-variant-numeric: lining-nums tabular-nums;
+      }
+      .toolbar {
+        position: sticky; top: 0; z-index: 10;
+        background: #1d1a14; color: #f8f7f1;
+        padding: 14px 24px;
+        display: flex; align-items: center; gap: 24px;
+        font-size: 13px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .toolbar .title { font-weight: 700; letter-spacing: .04em; }
+      .toolbar .meta { color: #c9c2b0; }
+
+      .stack { max-width: 800px; margin: 0 auto; padding: 32px 32px 80px; }
+      .opt {
+        background: var(--paper);
+        padding: 26px 32px 32px;
+        border-radius: 10px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      }
+      .opt-tag {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 4px;
+      }
+      .opt-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0 0 6px;
+      }
+      .opt-desc {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 0 0 16px;
+        line-height: 1.55;
+      }
+      .swatches {
+        display: flex; gap: 8px; flex-wrap: wrap;
+        margin: 0 0 14px; font-size: 11px; color: var(--muted-2);
+      }
+      .sw {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: rgba(0,0,0,.04);
+        padding: 4px 10px; border-radius: 999px;
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      .sw .dot {
+        width: 10px; height: 10px; border-radius: 2px;
+        border: 1px solid rgba(0,0,0,.08);
+      }
+
+      /* Mock article context */
+      .ctx {
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--muted);
+        margin: 0 0 14px;
+      }
+      .ctx-after { margin: 14px 0 0; }
+
+      /* ============ Common CTA shape ============ */
+      .cta {
+        border-radius: 0 6px 6px 0;
+        padding: 18px 22px;
+        margin: 18px 0 0;
+      }
+      .cta p {
+        margin: 0;
+        font-size: 15.5px;
+        line-height: 1.6;
+        color: var(--ink);
+      }
+      .cta strong { font-weight: 700; }
+      .cta a {
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cta a:hover { text-decoration: underline; }
+
+      /* ============ NOW (current) ============ */
+      .now {
+        background: rgba(199, 168, 76, .10);
+        border-left: 4px solid var(--gold);
+      }
+      .now a { color: var(--gold-deep); }
+
+      /* ============ V1 — Navy border + cream bg + navy link ============ */
+      .v1 {
+        background: rgba(199, 168, 76, .10); /* keep existing cream */
+        border-left: 4px solid var(--navy);
+      }
+      .v1 a { color: var(--navy); }
+
+      /* ============ V2 — Navy border + light navy bg + navy link ============ */
+      .v2 {
+        background: var(--navy-soft);
+        border-left: 4px solid var(--navy);
+      }
+      .v2 a { color: var(--navy-deep); }
+
+      /* ============ V3 — Gold border (kept) + blue bg + navy link ============ */
+      .v3 {
+        background: var(--steel-soft);
+        border-left: 4px solid var(--gold);
+      }
+      .v3 a { color: var(--navy); }
+
+      /* ============ V4 — Slate border + cool tint bg + slate link ============ */
+      .v4 {
+        background: var(--slate-tint);
+        border-left: 4px solid var(--slate);
+      }
+      .v4 a { color: var(--slate); }
+
+      /* ============ V5 — Gold + navy duo (gold rule, navy text/link) ============ */
+      .v5 {
+        background: rgba(199, 168, 76, .08);
+        border-left: 4px solid var(--gold);
+        border-bottom: 1px solid var(--navy);
+      }
+      .v5 a { color: var(--navy); border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; }
+      .v5 a:hover { text-decoration: none; color: var(--navy-deep); border-bottom-color: var(--gold-deep); }
+
+      /* ============ V6 — Denim wash + matching link ============ */
+      .v6 {
+        background: var(--denim-soft);
+        border-left: 4px solid var(--denim);
+      }
+      .v6 a { color: var(--denim); border-bottom: 1.5px solid rgba(74, 107, 138, .35); padding-bottom: 1px; }
+      .v6 a:hover { border-bottom-color: var(--denim); }
+
+      /* ============ V7 — Subtle: no bg, blue rule + blue link only ============ */
+      .v7 {
+        background: transparent;
+        border-left: 3px solid var(--navy);
+        padding: 12px 18px;
+      }
+      .v7 a { color: var(--navy); border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; }
+      .v7 a:hover { color: var(--navy-deep); }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">INLINE CTA — COLOR VARIATIONS (BLUE)</span>
+      <span class="meta">Same structure · color palette only</span>
+    </div>
+
+    <div class="stack">
+
+      <!-- NOW -->
+      <section class="opt">
+        <div class="opt-tag">Now · 現状</div>
+        <h2 class="opt-name">All-gold (border + link + bg tint)</h2>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:rgba(199,168,76,.10)"></span>bg #c9a84c · 10%</span>
+          <span class="sw"><span class="dot" style="background:#c9a84c"></span>border gold</span>
+          <span class="sw"><span class="dot" style="background:#a88930"></span>link gold-deep</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta now">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V1 -->
+      <section class="opt">
+        <div class="opt-tag">V1 · 最小変更</div>
+        <h2 class="opt-name">Navy border + Navy link（背景はそのまま）</h2>
+        <p class="opt-desc">最も保守的。ベージュ背景は据え置き、ボーダーとリンクだけ navy に。色のコントラストが上がってリンクが拾いやすくなる。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:rgba(199,168,76,.10)"></span>bg gold tint (kept)</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>border navy</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>link navy</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v1">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V2 -->
+      <section class="opt">
+        <div class="opt-tag">V2 · ブルー寄り</div>
+        <h2 class="opt-name">Navy duo — 全体を navy 系に</h2>
+        <p class="opt-desc">背景を ごく薄い navy tint に、ボーダー + リンクは navy。涼しさ・信頼感（フィンテック・ビジネスマガジン系）。暖色トーンの本文との対比でクリック導線が際立つ。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:#e7eef5"></span>bg navy-soft</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>border navy</span>
+          <span class="sw"><span class="dot" style="background:#1c2a44"></span>link navy-deep</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v2">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V3 -->
+      <section class="opt">
+        <div class="opt-tag">V3 · 推し</div>
+        <h2 class="opt-name">Gold border + Steel blue bg + Navy link</h2>
+        <p class="opt-desc">ゴールドのボーダーは残しつつ、背景を冷たい steel blue tint、リンクは navy。サイト共通のゴールドアクセント（Header、Section eyebrow）と整合しつつ、CTA だけ "違うレイヤー" として目立つ。<strong>暖色サイトに青を入れる定番手法</strong>。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:#eaeef3"></span>bg steel-soft</span>
+          <span class="sw"><span class="dot" style="background:#c9a84c"></span>border gold (kept)</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>link navy</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v3">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V4 -->
+      <section class="opt">
+        <div class="opt-tag">V4 · クール</div>
+        <h2 class="opt-name">Slate gray-blue — 上品な冷色</h2>
+        <p class="opt-desc">slate gray-blue（やや黒寄りの青）でボーダー + リンク、背景は cool tint。色味として "落ち着き" 寄り。ゴールドのアクセントを完全に消した中性パレット。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:#f0f2f6"></span>bg slate-tint</span>
+          <span class="sw"><span class="dot" style="background:#3d4a5c"></span>border slate</span>
+          <span class="sw"><span class="dot" style="background:#3d4a5c"></span>link slate</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v4">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V5 -->
+      <section class="opt">
+        <div class="opt-tag">V5 · デュオ</div>
+        <h2 class="opt-name">Gold rule + Navy text + Gold underlined link</h2>
+        <p class="opt-desc">ベージュ薄背景 + 左ゴールド + 下に細い navy ライン、リンクは navy 色 + ゴールド下線。ゴールドと navy を共存させた "編集物の章末アド" 風。意匠が最も豊か。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:rgba(199,168,76,.08)"></span>bg gold tint</span>
+          <span class="sw"><span class="dot" style="background:#c9a84c"></span>border-left gold</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>border-bottom navy</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>link navy + gold underline</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v5">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V6 -->
+      <section class="opt">
+        <div class="opt-tag">V6 · デニム</div>
+        <h2 class="opt-name">Denim wash — やわらかい青</h2>
+        <p class="opt-desc">navy より柔らかい denim ブルー、温度感のある青。ベージュサイトとの境界が刺々しくない。リンクは下線付きでクリックしやすさを担保。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:#e8eef4"></span>bg denim-soft</span>
+          <span class="sw"><span class="dot" style="background:#4a6b8a"></span>border denim</span>
+          <span class="sw"><span class="dot" style="background:#4a6b8a"></span>link denim + underline</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v6">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+      <!-- V7 -->
+      <section class="opt">
+        <div class="opt-tag">V7 · 透明</div>
+        <h2 class="opt-name">No background — Navy rule only</h2>
+        <p class="opt-desc">背景を完全に外し、navy の細いボーダーのみ + リンクのみ着色。ボックス感を消して "本文の中の引用" のように見せる。装飾極小、Plan A の Editorial Trust と最も整合。</p>
+        <div class="swatches">
+          <span class="sw"><span class="dot" style="background:transparent; border:1px solid #ccc"></span>bg none</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>border-left navy 3px</span>
+          <span class="sw"><span class="dot" style="background:#2c3e5c"></span>link navy + gold underline</span>
+        </div>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="cta v7">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+      </section>
+
+    </div>
+  </body>
+</html>

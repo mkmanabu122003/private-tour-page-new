@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const IsItWorthHiringGuide = () => {
   return (
@@ -13,56 +15,39 @@ const IsItWorthHiringGuide = () => {
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/group-photo.webp"
-          alt="Private tour group enjoying Tokyo with a licensed guide"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Travel Tips</p>
-            <h1 className="heading-display text-foreground">
-              Is It Worth Hiring a Private Guide in Tokyo? My Honest Take (I'm a Guide)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 25, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed 500+ private tours in Tokyo. This is an honest answer from someone who does this for a living.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/group-photo.webp"
+        imageAlt="Private tour group enjoying Tokyo with a licensed guide"
+        eyebrow="Travel Tips"
+        title="Is It Worth Hiring a Private Guide in Tokyo? My Honest Take (I'm a Guide)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed 500+ private tours in Tokyo. This is an honest answer from someone who does this for a living."
+        date="February 25, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "When a Guide Is Worth It", href: "#section-01-when-a-guide-is-worth-it" },
+          { num: "02", label: "When You Might Not Need a…", href: "#section-02-when-you-might-not-need-a-guide" },
+          { num: "03", label: "What a Licensed Guide…", href: "#section-03-what-a-licensed-guide-provides-that-google-cant" },
+          { num: "04", label: "How Much Does a Private…", href: "#section-04-how-much-does-a-private-guide-cost-in-tokyo" },
+          { num: "05", label: "What You Actually Get With…", href: "#section-05-what-you-actually-get-with-a-licensed-guide" },
+          { num: "06", label: "Real Guest Experiences", href: "#section-06-real-guest-experiences" },
+          { num: "07", label: "When You Don't Need a Guide", href: "#section-07-when-you-dont-need-a-guide" },
+          { num: "08", label: "How to Choose the Right…", href: "#section-08-how-to-choose-the-right-guide-in-tokyo" },
+          { num: "09", label: "FAQ", href: "#section-09-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Let me be honest upfront: Tokyo is one of the safest, most well-organized cities in the world. Signs are increasingly in English, Google Maps works perfectly, and you can absolutely explore on your own and have an amazing time.
@@ -78,11 +63,12 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* When a Guide Is Worth It */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · When a Guide Is Worth It</span></div>
+            <h2 id="section-01-when-a-guide-is-worth-it" className="scroll-mt-20">
               When a Guide Is Worth It
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               First-Time Visitors Who Want Depth, Not Just Selfies
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -99,7 +85,7 @@ const IsItWorthHiringGuide = () => {
               First-time visitors consistently tell me that the cultural context changes everything. It's the difference between "I saw a temple" and "I understood why this temple has been the spiritual heart of this neighborhood for 1,400 years."
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Travelers with Limited Time
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -109,7 +95,7 @@ const IsItWorthHiringGuide = () => {
               More importantly, a guide knows the rhythm of the city. I know which attractions to hit first to avoid crowds, when certain shops and markets are at their best, and which "must-sees" can be experienced quickly versus which ones deserve an hour of your time. This kind of real-time optimization can easily save you 2-3 hours over the course of a day.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Families with Children
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -119,7 +105,7 @@ const IsItWorthHiringGuide = () => {
               Our routes are mostly flat and pram-friendly. We regularly welcome families with children of all ages, and I've developed storytelling techniques that keep kids fascinated while still giving adults the cultural depth they're looking for.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Special Interest Travelers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -129,7 +115,7 @@ const IsItWorthHiringGuide = () => {
               This level of personalization is impossible with a group tour or an audioguide. It comes from reading the guest's reactions and having deep enough knowledge to pivot the conversation in real-time.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Day Trip Explorers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -152,28 +138,29 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* When You Might Not Need a Guide */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · When You Might Not Need a Guide</span></div>
+            <h2 id="section-02-when-you-might-not-need-a-guide" className="scroll-mt-20">
               When You Might Not Need a Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I believe in being transparent: a guide isn't right for everyone, and overselling would do a disservice to both you and me.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Repeat Visitors Who Know the Basics
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If you've been to Tokyo before and already have a feel for the train system, cultural norms, and general geography, you may not need a guide for the main attractions. That said, even repeat visitors often book a guide for specific interests: a deep-dive into a neighborhood they haven't explored, or a day trip they're unfamiliar with. But for revisiting your favorite spots? You've got this.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Independent Explorers Who Love Getting Lost
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Some of the best travel experiences come from wandering without a plan: discovering a tiny ramen shop in a back alley, stumbling into a local festival, or getting lost in a neighborhood you've never heard of. If this is your travel style, a structured guided tour might feel constraining. Tokyo is incredibly safe for wandering, even at night, and the serendipity of unplanned discovery is genuinely one of the joys of visiting Japan.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Budget-Conscious Backpackers
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -181,11 +168,12 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* What a Licensed Guide Provides */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What a Licensed Guide Provides That Google Can't</span></div>
+            <h2 id="section-03-what-a-licensed-guide-provides-that-google-cant" className="scroll-mt-20">
               What a Licensed Guide Provides That Google Can't
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Reading the Room
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -195,7 +183,7 @@ const IsItWorthHiringGuide = () => {
               This real-time adaptation is something no app, audioguide, or pre-planned itinerary can offer. It's the human element that transforms a tour from "information delivery" to "shared experience."
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The "Why" Behind What You See
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -205,7 +193,7 @@ const IsItWorthHiringGuide = () => {
               You can Google individual facts, but a guide weaves them into a narrative that builds throughout the day. By the end of a tour, you don't just know more facts about Japan. You understand the underlying logic of how Japanese culture works, which enriches the rest of your trip even after the tour ends.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Hidden Spots and Local Connections
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -215,7 +203,7 @@ const IsItWorthHiringGuide = () => {
               I also have relationships with local shopkeepers, restaurant owners, and temple priests. These connections sometimes open doors that would otherwise be closed. A quick chat in Japanese can get you into a workshop demonstration, a tasting, or a story you'd never hear otherwise.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What the National License Means
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -229,7 +217,8 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* How Much Does It Cost */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · How Much Does a Private Guide Cost in Tokyo?</span></div>
+            <h2 id="section-04-how-much-does-a-private-guide-cost-in-tokyo" className="scroll-mt-20">
               How Much Does a Private Guide Cost in Tokyo?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -269,25 +258,26 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* Licensed vs Unlicensed */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · What You Actually Get With a Licensed Guide</span></div>
+            <h2 id="section-05-what-you-actually-get-with-a-licensed-guide" className="scroll-mt-20">
               What You Actually Get With a Licensed Guide vs. an Unlicensed One
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Not all tour guides in Tokyo are the same. Japan has a specific national certification for professional guides, the <strong className="text-foreground">National Government Licensed Guide Interpreter (全国通訳案内士)</strong>, and understanding the difference matters for your experience.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What the License Requires
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The national guide license exam covers Japanese history, geography, culture, current affairs, and foreign language proficiency. The pass rate is approximately 10–20% depending on the year, making it one of the more difficult professional certifications in Japan. Licensed guides have demonstrated deep, verified knowledge, not just memorized scripts for popular tourist routes.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The Legal Background
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Until 2018, only licensed guides were legally permitted to offer paid guiding services in Japan. The law was revised to allow unlicensed guides to operate, but the license remains the only nationally recognized quality standard. When you book a licensed guide, you're booking someone who has passed rigorous government examinations. When you book an unlicensed guide, quality can vary enormously, from passionate locals with deep knowledge to people who started guiding last week.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Practical Differences You'll Notice
             </h3>
             <ul className="space-y-4 mb-8">
@@ -303,7 +293,8 @@ const IsItWorthHiringGuide = () => {
             </ul>
 
             {/* Real Guest Experiences */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Real Guest Experiences</span></div>
+            <h2 id="section-06-real-guest-experiences" className="scroll-mt-20">
               Real Guest Experiences: When a Guide Made the Difference
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -326,7 +317,8 @@ const IsItWorthHiringGuide = () => {
             </div>
 
             {/* When You Don't Need a Guide */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · When You Don't Need a Guide</span></div>
+            <h2 id="section-07-when-you-dont-need-a-guide" className="scroll-mt-20">
               When You Don't Need a Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -348,7 +340,8 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* How to Choose the Right Guide */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · How to Choose the Right Guide in Tokyo</span></div>
+            <h2 id="section-08-how-to-choose-the-right-guide-in-tokyo" className="scroll-mt-20">
               How to Choose the Right Guide in Tokyo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -382,7 +375,7 @@ const IsItWorthHiringGuide = () => {
 
             {/* CTA */}
             <section className="cta-section bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Ready to Book Your Private Tokyo Tour?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -395,12 +388,13 @@ const IsItWorthHiringGuide = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 09 · FAQ</span></div>
+              <h2 id="section-09-faq" className="scroll-mt-20">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     How much does a private tour guide cost in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -408,7 +402,7 @@ const IsItWorthHiringGuide = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Is English widely spoken in Tokyo without a guide?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -416,7 +410,7 @@ const IsItWorthHiringGuide = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     What's the difference between a private and group tour?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -424,7 +418,7 @@ const IsItWorthHiringGuide = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Can I negotiate the price with a tour guide?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -433,7 +427,11 @@ const IsItWorthHiringGuide = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -513,7 +511,9 @@ const IsItWorthHiringGuide = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

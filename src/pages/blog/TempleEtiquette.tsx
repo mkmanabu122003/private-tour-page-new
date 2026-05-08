@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const TempleEtiquette = () => {
   return (
@@ -19,56 +21,39 @@ const TempleEtiquette = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/senso-ji-temple-tokyo.webp"
-          alt="Senso-ji Temple in Tokyo, learn proper temple etiquette"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              How to Pray at a Japanese Shrine & Temple: The Right Way (From a Licensed Guide)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 25, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours of Tokyo's temples and shrines.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/senso-ji-temple-tokyo.webp"
+        imageAlt="Senso-ji Temple in Tokyo, learn proper temple etiquette"
+        eyebrow="Planning Your Trip"
+        title="How to Pray at a Japanese Shrine & Temple: The Right Way (From a Licensed Guide)"
+        subtitle="Written by Manabu, National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ tours of Tokyo's temples and shrines."
+        date="February 25, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Temple vs Shrine", href: "#section-01-temple-vs-shrine" },
+          { num: "02", label: "At a Shrine", href: "#section-02-at-a-shrine" },
+          { num: "03", label: "At a Temple", href: "#section-03-at-a-temple" },
+          { num: "04", label: "General Etiquette for Both…", href: "#section-04-general-etiquette-for-both-temples-and-shrines" },
+          { num: "05", label: "Famous Temples & Shrines to…", href: "#section-05-famous-temples-shrines-to-visit" },
+          { num: "06", label: "The Most Common Mistakes…", href: "#section-06-the-most-common-mistakes-tourists-make" },
+          { num: "07", label: "Differences Between…", href: "#section-07-differences-between-buddhist-temples-and" },
+          { num: "08", label: "Senso-ji Temple", href: "#section-08-senso-ji-temple" },
+          { num: "09", label: "FAQ", href: "#section-09-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               One of the most common questions I hear on my tours is: "Am I doing this right?" Whether it's standing at a shrine wondering how many times to clap, or hesitating at a temple entrance unsure whether to bow, visitors often worry about making mistakes at Japan's sacred sites. I completely understand the feeling. Nobody wants to accidentally offend.
@@ -81,7 +66,8 @@ const TempleEtiquette = () => {
             </p>
 
             {/* Temple vs Shrine */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Temple vs Shrine</span></div>
+            <h2 id="section-01-temple-vs-shrine" className="scroll-mt-20">
               Temple vs Shrine: What's the Difference?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -105,14 +91,15 @@ const TempleEtiquette = () => {
             </p>
 
             {/* Shrine Step-by-Step */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · At a Shrine</span></div>
+            <h2 id="section-02-at-a-shrine" className="scroll-mt-20">
               At a Shrine: Step-by-Step
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shinto shrines follow a specific sequence of rituals that has remained largely unchanged for centuries. Here's the complete process from the moment you arrive to the moment you leave.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Entering Through the Torii Gate
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -132,7 +119,7 @@ const TempleEtiquette = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Temizu: The Hand-Washing Purification
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -172,7 +159,7 @@ const TempleEtiquette = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Prayer: Ni-hai, Ni-hakushu, Ichi-hai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -202,7 +189,7 @@ const TempleEtiquette = () => {
               The phrase to remember is <strong className="text-foreground">ni-hai, ni-hakushu, ichi-hai</strong>: two bows, two claps, one bow. A small number of shrines have their own variations (Izumo Taisha uses four claps instead of two), but 2-2-1 is correct at the vast majority of shrines across Japan.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Omikuji and Ema
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -215,7 +202,8 @@ const TempleEtiquette = () => {
             <InlineCTA message="Want to learn temple etiquette from a local guide?" href="/contact" />
 
             {/* Temple Step-by-Step */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · At a Temple</span></div>
+            <h2 id="section-03-at-a-temple" className="scroll-mt-20">
               At a Temple: Step-by-Step
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -235,7 +223,7 @@ const TempleEtiquette = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Incense: Purifying with Smoke
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -245,7 +233,7 @@ const TempleEtiquette = () => {
               An important note: when lighting incense, if the flame doesn't go out on its own, <strong className="text-foreground">wave the stick gently to extinguish the flame</strong> rather than blowing on it. In Japanese Buddhist tradition, blowing with your mouth is considered impure because breath carries the "impurities" of the body. This is a small detail, but one that locals will notice and appreciate.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Prayer: Silent and Respectful
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -255,14 +243,14 @@ const TempleEtiquette = () => {
               Some temples, particularly those in the Zen tradition, may also have specific seated meditation areas where you can sit quietly for a few minutes. If meditation sessions are offered, they're a wonderful way to experience Buddhist practice directly, but always follow the instructions of the temple staff.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Removing Shoes
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Many temples require you to <strong className="text-foreground">remove your shoes</strong> before entering indoor areas, particularly main halls, tatami rooms, and garden viewing areas. Look for rows of shoes near the entrance or a shoe rack. These are clear signals to remove yours. Most temples provide plastic bags to carry your shoes or have shoe lockers available. Wearing clean, hole-free socks is a practical tip that will save you potential embarrassment. In the colder months, temple floors can be quite cold, so warm socks are a genuine comfort.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Photography Rules
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -283,35 +271,36 @@ const TempleEtiquette = () => {
             </figure>
 
             {/* General Etiquette */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · General Etiquette for Both Temples and Shrines</span></div>
+            <h2 id="section-04-general-etiquette-for-both-temples-and-shrines" className="scroll-mt-20">
               General Etiquette for Both Temples and Shrines
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Beyond the specific rituals at each type of sacred site, there are several universal rules of behavior that apply wherever you go. These are the basics that will carry you through any temple or shrine visit in Japan with confidence.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Dress Code
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japan doesn't enforce strict dress codes at most temples and shrines the way some religious sites in other countries do. You won't be turned away for wearing shorts or a tank top. That said, <strong className="text-foreground">covering your shoulders and knees is considered respectful</strong> at major sites, especially if you plan to enter inner halls or attend a ceremony. Casual and comfortable clothing is absolutely fine, just avoid anything that could be considered overly revealing or disrespectful. Hats should be removed when entering indoor areas and during prayer.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Noise and Behavior
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Keep your voice low.</strong> Temples and shrines are places of worship, not tourist attractions, even though millions of tourists visit them. Many Japanese visitors come to pray sincerely, and a loud conversation can disrupt their experience. You don't need to whisper, but be conscious of your volume, especially inside halls and near prayer areas. Put your phone on silent. If you're traveling with children, gently encourage them to use indoor voices.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Offerings and Money
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               As mentioned earlier, <strong className="text-foreground">¥5 coins are considered the luckiest offering</strong> because "go-en" sounds like the Japanese word for "good connection" or "good fortune." Some people offer ¥50 (for extra luck) or ¥25 ("double good fortune"). Avoid ¥10 coins if you're superstitious, since "to-en" can sound like "far connection," implying disconnection. In practice, any amount is perfectly acceptable and appreciated. Just be sure to have small coins ready before you approach the offering box. Fumbling with your wallet in front of the prayer area holds up the line.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Things to Avoid
             </h3>
             <ul className="space-y-4 mb-8">
@@ -333,7 +322,8 @@ const TempleEtiquette = () => {
             </ul>
 
             {/* Famous Temples & Shrines */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Famous Temples & Shrines to Visit</span></div>
+            <h2 id="section-05-famous-temples-shrines-to-visit" className="scroll-mt-20">
               Famous Temples & Shrines to Visit
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -371,7 +361,8 @@ const TempleEtiquette = () => {
             </ul>
 
             {/* Common Mistakes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · The Most Common Mistakes Tourists Make</span></div>
+            <h2 id="section-06-the-most-common-mistakes-tourists-make" className="scroll-mt-20">
               The Most Common Mistakes Tourists Make
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -396,13 +387,14 @@ const TempleEtiquette = () => {
             </ul>
 
             {/* Detailed Differences */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Differences Between Buddhist Temples and</span></div>
+            <h2 id="section-07-differences-between-buddhist-temples-and" className="scroll-mt-20">
               Differences Between Buddhist Temples and Shinto Shrines
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               While I covered the basics earlier, many visitors on my tours ask for more detail about how to tell temples and shrines apart, and why the prayer methods differ. Here's a more comprehensive comparison that I share with my guests.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Visual Identification
             </h3>
             <ul className="space-y-4 mb-8">
@@ -419,7 +411,7 @@ const TempleEtiquette = () => {
                 <strong className="text-foreground">Pagodas and Buddha statues</strong> indicate a temple. While some shrines have tower-like structures, the classic multi-tiered pagoda is a Buddhist architectural element.
               </li>
             </ul>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Prayer Methods Compared
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -438,7 +430,8 @@ const TempleEtiquette = () => {
             </p>
 
             {/* Senso-ji 30 Million */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Senso-ji Temple</span></div>
+            <h2 id="section-08-senso-ji-temple" className="scroll-mt-20">
               Senso-ji Temple: What the 30 Million Annual Visitors Figure Really Means
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -450,7 +443,7 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               What does this mean in practice? On a busy weekend afternoon, the Nakamise-dori approach can feel genuinely packed, with shoulder-to-shoulder crowds stretching from Kaminarimon all the way to the main hall. However, the experience varies dramatically depending on when you visit.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Best Times to Visit Senso-ji (Manabu's Advice)
             </h3>
             <ul className="space-y-4 mb-8">
@@ -477,7 +470,7 @@ const TempleEtiquette = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want to visit Tokyo's temples and shrines with an expert guide?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -495,12 +488,13 @@ const TempleEtiquette = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 09 · FAQ</span></div>
+              <h2 id="section-09-faq" className="scroll-mt-20">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Can I visit temples and shrines for free?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -508,7 +502,7 @@ const TempleEtiquette = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     What should I wear to a temple or shrine in Japan?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -516,7 +510,7 @@ const TempleEtiquette = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Is it disrespectful to take photos at temples?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -524,7 +518,7 @@ const TempleEtiquette = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     What is the correct way to pray at a Japanese shrine?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -533,7 +527,11 @@ const TempleEtiquette = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -642,7 +640,9 @@ const TempleEtiquette = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

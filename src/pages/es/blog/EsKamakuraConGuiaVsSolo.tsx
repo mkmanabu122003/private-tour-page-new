@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswerEs } from "@/components/blog/QuickAnswer";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsKamakuraConGuiaVsSolo = () => {
   return (
@@ -25,57 +27,37 @@ const EsKamakuraConGuiaVsSolo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/kamakura-great-buddha.webp"
-          alt="Gran Buda de Kamakura (Kotoku-in)"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Excursiones de un Día</p>
-            <h1 className="heading-display text-foreground">
-              Kamakura desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                20 de abril de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía-Intérprete con Licencia Nacional (全国通訳案内士) que lleva regularmente excursiones a Kamakura desde Tokio.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Última actualización: abril de 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/kamakura-great-buddha.webp"
+        imageAlt="Gran Buda de Kamakura (Kotoku-in)"
+        eyebrow="Excursiones de un Día"
+        title="Kamakura desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real"
+        subtitle="Escrito por Manabu, Guía-Intérprete con Licencia Nacional (全国通訳案内士) que lleva regularmente excursiones a Kamakura desde Tokio."
+        date="20 de abril de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Qué hay en Kamakura", href: "#section-01-qué-hay-en-kamakura" },
+          { num: "02", label: "Por tu cuenta vs con guía", href: "#section-02-por-tu-cuenta-vs-con-guía" },
+          { num: "03", label: "La ruta por tu cuenta", href: "#section-03-la-ruta-por-tu-cuenta" },
+          { num: "04", label: "La ruta con guía", href: "#section-04-la-ruta-con-guía" },
+          { num: "05", label: "Qué opción te conviene", href: "#section-05-qué-opción-te-conviene" },
+          { num: "06", label: "Nota sobre la temporada de…", href: "#section-06-nota-sobre-la-temporada-de-hortensias" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswerEs
               answer="Por tu cuenta gana en puro coste — unos ¥4,000 por persona para la ruta clásica (Gran Buda, Hasedera, Tsurugaoka Hachimangu) desde Tokio. Con guía son ¥70,000 por tour (hasta 4 personas) y compensa de verdad en tres situaciones: la temporada de hortensias de junio en Hasedera (cuando las entradas con hora son casi imposibles de conseguir sin japonés), combinar Kamakura con Enoshima en un solo día, o cuando quieres los templos escondidos que casi ningún viajero solo visita."
               hook="Abajo el desglose real de coste — más las 3 partes de Kamakura que casi todos los viajeros se pierden por no saber que existen, y la pieza de reserva moderna que ha vuelto junio el mes más difícil para ir solo."
@@ -92,7 +74,8 @@ const EsKamakuraConGuiaVsSolo = () => {
             </p>
 
             {/* Qué hay en Kamakura */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Qué hay en Kamakura</span></div>
+            <h2 id="section-01-qué-hay-en-kamakura" className="scroll-mt-20">
               Qué hay en Kamakura: las capas que se saltan casi todos
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -106,7 +89,8 @@ const EsKamakuraConGuiaVsSolo = () => {
             </p>
 
             {/* Tabla comparativa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Por tu cuenta vs con guía</span></div>
+            <h2 id="section-02-por-tu-cuenta-vs-con-guía" className="scroll-mt-20">
               Por tu cuenta vs con guía: de un vistazo
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -164,10 +148,11 @@ const EsKamakuraConGuiaVsSolo = () => {
             </div>
 
             {/* Ruta solo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · La ruta por tu cuenta</span></div>
+            <h2 id="section-03-la-ruta-por-tu-cuenta" className="scroll-mt-20">
               La ruta por tu cuenta (transporte público desde Tokio)
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo llegar
             </h3>
             <ul className="space-y-3 mb-6">
@@ -182,7 +167,7 @@ const EsKamakuraConGuiaVsSolo = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo moverte una vez allí
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -195,7 +180,7 @@ const EsKamakuraConGuiaVsSolo = () => {
               Para Tsurugaoka Hachimangu y los templos del este (Hokokuji, Sugimotodera) se va andando o en bus local desde la estación de Kamakura — no con el Enoden.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Entradas (2026)
             </h3>
             <div className="overflow-x-auto mb-8">
@@ -229,7 +214,7 @@ const EsKamakuraConGuiaVsSolo = () => {
               </table>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desglose de coste (1 persona, ruta clásica de 3 sitios)
             </h3>
             <div className="overflow-x-auto mb-8">
@@ -266,7 +251,7 @@ const EsKamakuraConGuiaVsSolo = () => {
               Añadiendo Hokokuji (¥400) y la entrada de hortensias (¥500 en junio) se queda en ~¥4,000–¥4,300 por persona. Comer en Kamakura suele sumar ¥1,500–¥3,000.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Las 3 cosas que casi todos los que van solos se pierden
             </h3>
             <ol className="space-y-3 mb-8 list-decimal list-inside">
@@ -282,7 +267,8 @@ const EsKamakuraConGuiaVsSolo = () => {
             </ol>
 
             {/* Ruta con guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · La ruta con guía</span></div>
+            <h2 id="section-04-la-ruta-con-guía" className="scroll-mt-20">
               La ruta con guía (qué pagas realmente)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -328,7 +314,8 @@ const EsKamakuraConGuiaVsSolo = () => {
             </p>
 
             {/* Marco de decisión */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Qué opción te conviene</span></div>
+            <h2 id="section-05-qué-opción-te-conviene" className="scroll-mt-20">
               Qué opción te conviene
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -373,7 +360,8 @@ const EsKamakuraConGuiaVsSolo = () => {
             </div>
 
             {/* Nota estacional */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Nota sobre la temporada de hortensias</span></div>
+            <h2 id="section-06-nota-sobre-la-temporada-de-hortensias" className="scroll-mt-20">
               Nota sobre la temporada de hortensias (junio)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -387,7 +375,7 @@ const EsKamakuraConGuiaVsSolo = () => {
             </p>
 
             {/* Relacionado */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               ¿Todavía dudando entre excursiones?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -404,7 +392,7 @@ const EsKamakuraConGuiaVsSolo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Planeando una excursión a Kamakura?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -424,34 +412,35 @@ const EsKamakuraConGuiaVsSolo = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Preguntas frecuentes</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Preguntas frecuentes</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede ir a Kamakura en un día desde Tokio?</h3>
+                  <h3>¿Se puede ir a Kamakura en un día desde Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Sí, y es una de las más fáciles. La JR Yokosuka Line desde Tokyo Station llega a Kamakura en unos 60 minutos, y la Shonan-Shinjuku Line desde Shinjuku es similar. Un día completo cubre con comodidad el Gran Buda, Hasedera y Tsurugaoka Hachimangu.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Compensa el pase del Enoden?</h3>
+                  <h3>¿Compensa el pase del Enoden?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Para un día clásico (Gran Buda + Hasedera + Enoshima opcional), sí — el Noriorikun de ¥800 se amortiza en dos o tres trayectos. Para solo los santuarios cercanos a la estación de Kamakura, sale más barato el billete por trayecto.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Compensa el Japan Rail Pass para Kamakura?</h3>
+                  <h3>¿Compensa el Japan Rail Pass para Kamakura?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Tanto la JR Yokosuka Line como la Shonan-Shinjuku Line están cubiertas por el JR Pass, así que si ya tienes uno, úsalo. Si no, el billete ida y vuelta cuesta ~¥1,900 — lo suficientemente barato para no justificar comprar un JR Pass solo por Kamakura.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuándo es la mejor época para visitar Kamakura?</h3>
+                  <h3>¿Cuándo es la mejor época para visitar Kamakura?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Temporada de hortensias (mediados de junio) y hojas de otoño (finales de noviembre a principios de diciembre) son los dos picos fotográficos, pero ambos traen mucho público. Para una visita más tranquila con buen tiempo, finales de abril, principios de mayo o mediados de octubre. Los días laborables de invierno son maravillosamente tranquilos si no te importa el frío.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuántos sitios se pueden ver en un día?</h3>
+                  <h3>¿Cuántos sitios se pueden ver en un día?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Solo: cómodamente 4–5 sitios. Con guía: 5–7 sitios, porque se pierde menos tiempo en orientación, esperas de bus y buscar dónde comer. Si quieres Hokokuji + los tres grandes + Enoshima en un día, con guía es notablemente menos estresante.
                   </p>
@@ -459,7 +448,11 @@ const EsKamakuraConGuiaVsSolo = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -500,7 +493,9 @@ const EsKamakuraConGuiaVsSolo = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

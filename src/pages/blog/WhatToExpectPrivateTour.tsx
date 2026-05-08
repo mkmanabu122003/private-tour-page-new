@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const WhatToExpectPrivateTour = () => {
@@ -19,56 +21,36 @@ const WhatToExpectPrivateTour = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/tour-photo-1.webp"
-          alt="Guide leading a private walking tour through Tokyo streets"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Travel Tips</p>
-            <h1 className="heading-display text-foreground">
-              What to Expect on a Private Tour in Tokyo (From Your Guide)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 14, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed hundreds of private tours in Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/tour-photo-1.webp"
+        imageAlt="Guide leading a private walking tour through Tokyo streets"
+        eyebrow="Travel Tips"
+        title="What to Expect on a Private Tour in Tokyo (From Your Guide)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has completed hundreds of private tours in Tokyo."
+        date="March 14, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Before the Tour", href: "#section-01-before-the-tour" },
+          { num: "02", label: "The Morning Of", href: "#section-02-the-morning-of" },
+          { num: "03", label: "During the Tour", href: "#section-03-during-the-tour" },
+          { num: "04", label: "The Flexibility Factor", href: "#section-04-the-flexibility-factor" },
+          { num: "05", label: "What I Don't Do", href: "#section-05-what-i-dont-do" },
+          { num: "06", label: "After the Tour", href: "#section-06-after-the-tour" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               You've decided to book a private tour in Tokyo. But what actually happens? Where do you meet? How fast do you walk? What if it rains? What if you need a bathroom break?
@@ -78,11 +60,12 @@ const WhatToExpectPrivateTour = () => {
             </p>
 
             {/* Before the Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Before the Tour</span></div>
+            <h2 id="section-01-before-the-tour" className="scroll-mt-20">
               Before the Tour
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               How Booking Works
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -92,7 +75,7 @@ const WhatToExpectPrivateTour = () => {
               Based on your answers, I suggest a tour format and build a custom itinerary. This isn't a one-size-fits-all route. If you're food-focused, we spend time in backstreet restaurants. If you're into history, we go deeper into temple districts. If you have kids, I build in play time and snack stops.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What I Plan Behind the Scenes
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -100,18 +83,19 @@ const WhatToExpectPrivateTour = () => {
             </p>
 
             {/* The Morning Of */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The Morning Of</span></div>
+            <h2 id="section-02-the-morning-of" className="scroll-mt-20">
               The Morning Of
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Where We Meet
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Usually at your hotel lobby or a nearby station. I choose meeting points that are easy to find and not overwhelming. If we're starting at a specific area like Asakusa, I'll suggest meeting at a clear landmark near the station rather than inside the station itself (train stations in Tokyo can be confusing labyrinths).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What to Bring
             </h3>
             <ul className="space-y-2 mb-4">
@@ -129,7 +113,7 @@ const WhatToExpectPrivateTour = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What NOT to Worry About
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -137,32 +121,33 @@ const WhatToExpectPrivateTour = () => {
             </p>
 
             {/* During the Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · During the Tour</span></div>
+            <h2 id="section-03-during-the-tour" className="scroll-mt-20">
               During the Tour
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The Pace
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               We go at your pace, not mine. If you want to linger at a spot, we linger. If you want to move quickly through an area, we move on. I read the room constantly. If I notice someone looking tired, I suggest a cafe break before anyone has to ask. If someone's captivated by something, I let the moment breathe.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lunch
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               On full-day tours, lunch is built into the itinerary. I don't take you to tourist-trap restaurants. I take you to places I'd eat at on my own day off. Sometimes that's a tiny ramen counter with 8 seats, sometimes it's a neighborhood soba shop, sometimes it's standing sushi where the fish was delivered that morning. I always ask about dietary restrictions in advance and have options planned.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Bathroom Breaks and Practical Stuff
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I know where every clean restroom is along our route. Tokyo's public restrooms are generally excellent (especially in department stores and train stations), but some are easier to find than others. I build natural break points into the itinerary so nobody has to awkwardly ask.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Photos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -170,28 +155,29 @@ const WhatToExpectPrivateTour = () => {
             </p>
 
             {/* Flexibility */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · The Flexibility Factor</span></div>
+            <h2 id="section-04-the-flexibility-factor" className="scroll-mt-20">
               The Flexibility Factor
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the single biggest difference between a private tour and any other kind of tour. Everything can change, and that's the point.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Rain Plans
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If it starts raining, I have backup routes for every tour that emphasize covered areas: shopping streets, department store basement food floors (depachika), covered temple corridors, and indoor markets. Some of my best tours have been on rainy days because the backup spots tend to be more local and less touristy.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Unexpected Closures
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japan has many irregular holidays, and popular spots sometimes close unexpectedly for events or maintenance. I check everything the morning of the tour, but if something is closed when we arrive, I pivot immediately. You'll never stand in front of a locked gate wondering what to do next.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Spontaneous Detours
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -212,7 +198,8 @@ const WhatToExpectPrivateTour = () => {
             </figure>
 
             {/* What I Don't Do */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · What I Don't Do</span></div>
+            <h2 id="section-05-what-i-dont-do" className="scroll-mt-20">
               What I Don't Do
             </h2>
             <ul className="space-y-4 mb-8">
@@ -231,7 +218,8 @@ const WhatToExpectPrivateTour = () => {
             </ul>
 
             {/* After the Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · After the Tour</span></div>
+            <h2 id="section-06-after-the-tour" className="scroll-mt-20">
               After the Tour
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -254,7 +242,7 @@ const WhatToExpectPrivateTour = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Ready to Plan Your Day?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -268,7 +256,11 @@ const WhatToExpectPrivateTour = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -329,7 +321,9 @@ const WhatToExpectPrivateTour = () => {
       2. Walking step count (8,000-15,000) — confirm this is accurate for typical tours
       3. Suica/Pasmo setup process — verify current availability for tourists
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

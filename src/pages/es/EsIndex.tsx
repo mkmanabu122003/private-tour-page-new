@@ -152,6 +152,41 @@ const testimonials = [
   },
 ];
 
+// Custom thin-line gold SVG icons for the "Cómo Reservar" section
+// (Plan A "Editorial Trust" idiom — Envelope / Itinerary scroll / Seal & ribbon)
+const InquireIcon = () => (
+  <svg viewBox="0 0 64 64" className="w-12 h-12 text-accent" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="10" y="18" width="44" height="30" rx="1.5" />
+    <path d="M10 19 L32 36 L54 19" />
+    <path d="M10 47 L24 32" strokeWidth="1.25" opacity="0.7" />
+    <path d="M54 47 L40 32" strokeWidth="1.25" opacity="0.7" />
+    <circle cx="46" cy="14" r="3" fill="currentColor" fillOpacity="0.55" strokeWidth="1.1" />
+  </svg>
+);
+
+const PlanIcon = () => (
+  <svg viewBox="0 0 64 64" className="w-12 h-12 text-accent" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="14" y="9" width="36" height="46" rx="1.5" />
+    <line x1="20" y1="20" x2="44" y2="20" strokeWidth="1.4" />
+    <line x1="20" y1="27" x2="44" y2="27" strokeWidth="1.4" />
+    <line x1="20" y1="34" x2="36" y2="34" strokeWidth="1.4" />
+    <line x1="20" y1="41" x2="40" y2="41" strokeWidth="1.4" />
+    <circle cx="42" cy="50" r="5.5" fill="currentColor" fillOpacity="0.55" strokeWidth="1.6" />
+    <path d="M39.2 50 L41.2 52 L45 47.5" stroke="#fffdf8" strokeWidth="1.75" />
+  </svg>
+);
+
+const ConfirmIcon = () => (
+  <svg viewBox="0 0 64 64" className="w-12 h-12 text-accent" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="32" cy="28" r="16" />
+    <circle cx="32" cy="28" r="11" strokeWidth="1" strokeDasharray="2 2" />
+    <path d="M25 28 L30 33 L40 22" strokeWidth="2" />
+    <path d="M22 42 L28 56 L32 50 L36 56 L42 42" fill="currentColor" fillOpacity="0.5" strokeWidth="1.4" />
+  </svg>
+);
+
+const highlightStyle = { background: "linear-gradient(transparent 62%, #f4e5b6 62%)" };
+
 const EsIndex = () => {
   return (
     <Layout>
@@ -182,14 +217,32 @@ const EsIndex = () => {
 
         <div className="relative container-section py-20">
           <div className="max-w-2xl">
-            <h1 className="heading-display text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <h1
+              className="heading-display text-white animate-fade-in-up"
+              style={{
+                animationDelay: "0.2s",
+                textShadow: "0 1px 2px rgba(0,0,0,0.55), 0 2px 24px rgba(0,0,0,0.45)",
+              }}
+            >
               Tours Privados a Pie por Tokio{" "}
-              <span className="text-accent">con Guía Local Certificado</span>
+              <span className="text-[#f4e5b6]">con Guía Local Certificado</span>
             </h1>
-            <p className="mt-6 text-lg text-white/90 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p
+              className="mt-6 text-lg text-white/95 leading-relaxed animate-fade-in-up"
+              style={{
+                animationDelay: "0.3s",
+                textShadow: "0 1px 14px rgba(0,0,0,0.45)",
+              }}
+            >
               Más de 500 tours completados. Valoración media de 4.86★. Guía con licencia oficial del gobierno japonés.
             </p>
-            <p className="mt-3 text-base text-white/70 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
+            <p
+              className="mt-3 text-base text-white/85 leading-relaxed animate-fade-in-up"
+              style={{
+                animationDelay: "0.35s",
+                textShadow: "0 1px 12px rgba(0,0,0,0.45)",
+              }}
+            >
               Cada tour comienza con una pregunta simple: ¿Qué es lo que más te
               emociona de Tokio? A partir de ahí, el recorrido es tuyo. No sigo un
               guión, sigo tu curiosidad.
@@ -200,7 +253,7 @@ const EsIndex = () => {
                 Reserva Tu Tour Privado
                 <ArrowRight className="btn-arrow" />
               </Link>
-              <Link to="/es/tours/custom" className="group inline-flex items-center justify-center px-8 py-4 text-base bg-transparent border-[1.5px] border-white text-white font-semibold tracking-wide rounded-md transition-all duration-300 ease-out hover:bg-white/15 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              <Link to="/es/tours/custom" className="group inline-flex items-center justify-center rounded-full bg-[#fffdf8] px-8 py-4 text-base font-semibold text-[#171717] tracking-wide shadow-[0_2px_10px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out hover:bg-[#f8f7f1] hover:shadow-[0_6px_22px_rgba(0,0,0,0.30)] hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fffdf8]">
                 Tour Personalizado
                 <ArrowRight className="btn-arrow" />
               </Link>
@@ -209,36 +262,127 @@ const EsIndex = () => {
         </div>
       </section>
 
-      {/* Trust Signals */}
-      <section className="py-16 md:py-20 bg-card border-b border-border">
+      {/* Trust Signals — thin band under hero (synced with EN layout) */}
+      <section className="border-b border-border bg-card">
         <div className="container-section">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div
+            className="grid gap-y-7 py-10 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-border"
+            aria-label="Trust signals"
+          >
             {trustSignals.map((signal) => (
-              <div key={signal.label} className="text-center">
-                <signal.icon className="w-6 h-6 text-accent mx-auto mb-4" strokeWidth={1.75} />
-                <div className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-                  {signal.stat}
+              <div
+                key={signal.label}
+                className="flex items-center gap-5 lg:px-8 first:lg:pl-0 last:lg:pr-0"
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-background border-[1.5px] border-border text-muted-foreground">
+                  <signal.icon className="h-[22px] w-[22px]" strokeWidth={1.75} aria-hidden="true" />
                 </div>
-                <div className="mt-2 text-sm font-medium text-foreground/80 tracking-wide uppercase">
-                  {signal.label}
+                <div>
+                  <p className="font-serif text-[2rem] font-semibold leading-none tracking-tight text-foreground lining-nums">
+                    {signal.stat}
+                  </p>
+                  <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+                    {signal.label}
+                  </p>
                 </div>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  {signal.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Testimonials — moved up to deliver credibility before Tours (synced with EN) */}
+      <section className="py-20 md:py-28 bg-card border-b border-border">
+        <div className="container-section">
+          <div className="mb-12 max-w-3xl">
+            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+              Opiniones
+            </p>
+            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+              Lo Que Dicen los Viajeros
+            </h2>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-stretch">
+            <blockquote className="flex h-full flex-col overflow-hidden bg-background border border-border rounded-lg shadow-[var(--shadow-card)]">
+              <div className="aspect-[16/9] overflow-hidden bg-muted">
+                <img
+                  src="/images/tour-photos/asakusa-guest-selfie.webp"
+                  alt="Manabu con huéspedes durante un tour privado a pie por Asakusa"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  width={900}
+                  height={506}
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-7 md:p-8">
+                <div className="flex gap-1 mb-5">
+                  {Array.from({ length: testimonials[0].rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-gold text-gold"
+                    />
+                  ))}
+                </div>
+                <p className="text-xl md:text-2xl font-serif leading-snug text-foreground">
+                  "{testimonials[0].text}"
+                </p>
+                <footer className="mt-auto pt-6">
+                  <div className="border-t border-border pt-5">
+                    <cite className="not-italic font-medium text-foreground text-sm">
+                      - {testimonials[0].author}
+                    </cite>
+                  </div>
+                </footer>
+              </div>
+            </blockquote>
+
+            <div className="grid gap-6">
+              {testimonials.slice(1).map((testimonial) => (
+                <blockquote
+                  key={testimonial.author}
+                  className="bg-background border border-border rounded-lg p-6"
+                >
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-gold text-gold"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-[1.65] mb-4">
+                    "{testimonial.text}"
+                  </p>
+                  <footer className="pt-4 border-t border-border">
+                    <cite className="not-italic font-medium text-foreground text-sm">
+                      - {testimonial.author}
+                    </cite>
+                  </footer>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground">
+            Más de 500 reseñas de cinco estrellas de viajeros de todo el mundo
+          </p>
+        </div>
+      </section>
+
       {/* Tours Available */}
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-4">Explora Tokio</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">Tours Disponibles en Español</h2>
-            <p className="mt-4 text-body">
+          <div className="mb-12 max-w-3xl">
+            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+              Explora Tokio
+            </p>
+            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+              Tours Disponibles en Español
+            </h2>
+            <p className="mt-5 text-[1.0625rem] md:text-[1.1875rem] leading-[1.6] text-muted-foreground max-w-2xl">
               Elige entre tours cuidadosamente diseñados o crea tu propia experiencia personalizada.
             </p>
           </div>
@@ -301,52 +445,17 @@ const EsIndex = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-label text-accent mb-4">Opiniones</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">Lo Que Dicen los Viajeros</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <blockquote
-                key={testimonial.author}
-                className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
-              >
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-gold text-gold"
-                    />
-                  ))}
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  "{testimonial.text}"
-                </p>
-                <footer className="pt-4 border-t border-border">
-                  <cite className="not-italic font-medium text-foreground text-sm">
-                    - {testimonial.author}
-                  </cite>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-
-          <p className="mt-8 text-center text-sm text-muted-foreground">
-            Más de 500 reseñas de cinco estrellas de viajeros de todo el mundo
-          </p>
-        </div>
-      </section>
-
       {/* Tour Photos */}
       <section aria-label="Fotos de tours" className="py-20 md:py-28 bg-secondary/30">
         <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="heading-section text-foreground">Tours en Fotos</h2>
+          <div className="mb-12 max-w-3xl">
+            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+              Tours Reales
+            </p>
+            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+              Tours en Fotos
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -376,47 +485,58 @@ const EsIndex = () => {
       {/* How to Book */}
       <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
         <div className="container-section">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-label text-accent mb-4">Reserva Fácil</p>
-            <div className="w-10 h-px bg-accent mx-auto mb-6" />
-            <h2 className="heading-section text-foreground">Cómo Reservar</h2>
+          <div className="mb-14 max-w-3xl">
+            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+              Reserva Fácil
+            </p>
+            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+              Cómo Reservar
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
+                <InquireIcon />
               </div>
-              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Paso 1</p>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Paso 1 · 2 min</p>
+              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
                 Envía tu Solicitud
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Cuéntame tus fechas y lo que te emociona de Tokio. Solo 2 minutos.
+              <p className="text-base text-muted-foreground leading-[1.65]">
+                Cuéntame tus fechas y lo que te emociona de Tokio.{" "}
+                <span className="font-semibold text-foreground" style={highlightStyle}>
+                  Pregunta lo que quieras — sin compromiso.
+                </span>
               </p>
             </div>
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
+                <PlanIcon />
               </div>
-              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Paso 2</p>
-              <h3 className="text-xl font-medium text-foreground mb-3">
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Paso 2 · En 24 h</p>
+              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
                 Recibe tu Plan a Medida
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Te respondo en menos de 24 horas con un itinerario personalizado y presupuesto.
+              <p className="text-base text-muted-foreground leading-[1.65]">
+                Te respondo en menos de 24 horas con un itinerario personalizado y presupuesto. Ajústalo todo lo que quieras antes de pagar.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-10 h-10 rounded-full bg-accent/10 mx-auto mb-5 flex items-center justify-center">
-                <CheckCircle2 className="w-5 h-5 text-accent" strokeWidth={1.75} />
+              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
+                <ConfirmIcon />
               </div>
-              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-2">Paso 3</p>
-              <h3 className="text-xl font-medium text-foreground mb-3">
-                Confirma y Paga
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Paso 3 · Día del Tour</p>
+              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
+                Confirma tu Día
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Asegura tu tour con el pago y nos vemos en Tokio para tu día.
+              <p className="text-base text-muted-foreground leading-[1.65]">
+                Aprueba el plan,{" "}
+                <span className="font-semibold text-foreground" style={highlightStyle}>
+                  paga solo cuando estés listo,
+                </span>{" "}
+                y nos vemos en Tokio.
               </p>
             </div>
           </div>
@@ -427,7 +547,13 @@ const EsIndex = () => {
       <section className="py-20 md:py-28">
         <div className="container-section">
           <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground text-center">¿Por qué elegir un guía japonés nativo?</h2>
+            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+              Diferencia
+            </p>
+            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+              ¿Por qué elegir un guía japonés nativo?
+            </h2>
             <div className="mt-8 text-muted-foreground leading-relaxed space-y-4">
               <p>
                 La mayoría de los guías en español en Tokio son hispanohablantes que aprendieron japonés. Manabu es al revés: japonés nativo que habla español.
@@ -445,17 +571,42 @@ const EsIndex = () => {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-label text-accent mb-4">Tu Guía</p>
-              <div className="w-10 h-px bg-accent mb-6" />
-              <h2 className="heading-section text-foreground">
+              <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+                <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+                Tu Guía
+              </p>
+              <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
                 Conoce a Manabu, Tu Guía Oficial en Tokio
               </h2>
               <p className="mt-4 text-body">
                 Soy Manabu, intérprete-guía con licencia nacional del gobierno japonés (全国通訳案内士), con más de 500 tours completados y una valoración media de 4.86 estrellas. Nacido en Kanazawa, criado en Kioto y ahora viviendo en Tokio. Conozco Japón desde dentro y en profundidad.
               </p>
               <p className="mt-4 text-body">
-                Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y adapto el tour en tiempo real. No es una clase magistral, es una conversación.
+                Mi forma de guiar es simple: en los primeros 30 minutos aprendo qué es lo que más te emociona, y{" "}
+                <span className="font-semibold text-foreground" style={highlightStyle}>
+                  adapto el tour en tiempo real.
+                </span>{" "}
+                No es una clase magistral, es una conversación.
               </p>
+
+              <div className="mt-8 flex flex-wrap gap-x-12 gap-y-5 py-5 border-y border-border">
+                <div>
+                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5 lining-nums">500+</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Tours privados</p>
+                </div>
+                <div>
+                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5 lining-nums">4.86</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">
+                    <span className="text-accent text-sm mr-1.5 align-[-1px]">★</span>
+                    Valoración media
+                  </p>
+                </div>
+                <div>
+                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5">EN · ES</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Idiomas</p>
+                </div>
+              </div>
+
               <Link to="/es/about" className="btn-outline mt-8 inline-flex">
                 Más Información
                 <ArrowRight className="btn-arrow" />
@@ -481,21 +632,32 @@ const EsIndex = () => {
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container-section text-center">
-          <h2 className="heading-section">¿Listo para Explorar Tokio?</h2>
-          <p className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
-            Cuéntame tus intereses y diseñaré un itinerario personalizado para ti.
+          <p className="inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent mb-4">
+            <span className="h-px w-8 bg-accent" aria-hidden="true" />
+            Planifica tu día en Tokio
+            <span className="h-px w-8 bg-accent" aria-hidden="true" />
+          </p>
+          <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight">¿Listo para Explorar Tokio?</h2>
+          <p className="mt-4 text-primary-foreground/75 max-w-xl mx-auto">
+            Cuéntame tus fechas e intereses — te enviaré un itinerario personalizado en menos de 24 horas.
+            Paga solo cuando el plan te encaje.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/contact" data-cta="book-now-footer" className="btn-accent" onClick={() => trackBookNowClick("Solicitar un Tour", "footer")}>
+            <Link
+              to="/es/contact"
+              data-cta="book-now-footer"
+              className="btn-accent-on-dark"
+              onClick={() => trackBookNowClick("Solicitar un Tour", "footer")}
+            >
               Solicitar un Tour
               <ArrowRight className="btn-arrow" />
             </Link>
-            <Link to="/es/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
+            <Link to="/es/tours" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
               Ver Tours
             </Link>
           </div>
-          <p className="mt-4 text-sm text-primary-foreground/50">
-            Respuesta en menos de 24 horas
+          <p className="mt-5 text-xs text-primary-foreground/55 tracking-wide">
+            Respuesta en menos de 24 horas · Sin depósito hasta que apruebes
           </p>
         </div>
       </section>

@@ -364,10 +364,10 @@ const EsAbout = () => {
             Tengo muchas ganas de compartir mis lugares favoritos y las historias que hacen de Tokio una ciudad tan especial. Creemos recuerdos juntos.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es" className="btn-accent">
+            <Link to="/es" className="btn-accent-on-dark">
               Ver Tours
             </Link>
-            <Link to="/es/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
+            <Link to="/es/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
               Reservar un Tour
             </Link>
           </div>

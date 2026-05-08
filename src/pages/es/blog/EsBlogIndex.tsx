@@ -280,7 +280,7 @@ const blogPosts: BlogPost[] = [
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías Útiles",
-    image: "/images/tour-photos/group-photo.webp",
+    image: "/images/blog/tipping-japan-hero.webp",
   },
   {
     slug: "tour-gratis-vs-guia-privado-tokio",
@@ -419,26 +419,26 @@ const PostCard = ({ post, showPopularBadge }: PostCardProps) => (
       )}
     </div>
     <div className="p-6">
-      <p className="text-label text-accent mb-2">{post.category}</p>
-      <h3 className="text-xl font-medium text-foreground group-hover:text-accent transition-colors mb-3">
+      <p className="text-label text-accent mb-3">{post.category}</p>
+      <h3 className="heading-card text-foreground group-hover:text-accent transition-colors">
         {post.title}
       </h3>
-      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+      <p className="mt-2 text-body line-clamp-3">
         {post.description}
       </p>
-      <div className="flex items-center gap-4 text-xs text-muted-foreground">
-        <span className="flex items-center gap-1">
+      <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
+        <div className="flex items-center gap-1">
           <User className="w-3 h-3" />
-          {post.author}
-        </span>
-        <span className="flex items-center gap-1">
+          <span>{post.author}</span>
+        </div>
+        <div className="flex items-center gap-1">
           <Calendar className="w-3 h-3" />
-          {post.date}
-        </span>
+          <span>{post.date}</span>
+        </div>
       </div>
-      <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
+      <div className="mt-4 pt-4 border-t border-border flex items-center gap-2 text-accent font-medium text-sm group-hover:gap-3 transition-all">
         <span>Leer Artículo</span>
-        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        <ArrowRight className="w-4 h-4" />
       </div>
     </div>
   </Link>
@@ -494,15 +494,16 @@ const EsBlogIndex = () => {
       {popularPosts.length > 0 && (
         <section className="py-12 bg-accent/5 border-b border-border/40">
           <div className="container-section">
-            <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <h2 className="text-xl font-semibold tracking-tight text-foreground">
-                Empieza Aquí — Lo Más Leído
-              </h2>
+            <div className="mb-8 max-w-2xl">
+              <p className="text-label text-accent mb-3 inline-flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" />
+                Empieza Aquí
+              </p>
+              <h2 className="heading-section text-foreground">Lo Más Leído</h2>
+              <p className="mt-4 text-body">
+                Los tres artículos que más mencionan los viajeros cuando contactan sobre un tour privado.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
-              Los tres artículos que más mencionan los viajeros cuando contactan sobre un tour privado.
-            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularPosts.map((post) => (
                 <PostCard key={post.slug} post={post} showPopularBadge />
@@ -515,9 +516,7 @@ const EsBlogIndex = () => {
       {/* Explorar por Tema — anchor pills */}
       <section className="py-8 border-b border-border/40">
         <div className="container-section">
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-            Explorar por Tema
-          </p>
+          <p className="text-label text-accent mb-3">Explorar por Tema</p>
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => {
               const meta = CATEGORY_META[category];
@@ -549,13 +548,14 @@ const EsBlogIndex = () => {
             return (
               <div key={category} id={meta.anchor} className="mb-16 last:mb-0 scroll-mt-24">
                 <div className="mb-8 max-w-3xl">
+                  <p className="text-label text-accent mb-3">Tema</p>
                   <h2 className="heading-section text-foreground">
                     {category}{" "}
                     <span className="text-muted-foreground font-normal text-base align-middle">
                       ({postsInCategory.length})
                     </span>
                   </h2>
-                  <p className="mt-3 text-muted-foreground leading-relaxed">
+                  <p className="mt-4 text-body">
                     {meta.description}
                   </p>
                 </div>
@@ -587,12 +587,12 @@ const EsBlogIndex = () => {
             Convierte estos consejos de viaje en experiencias reales con un tour privado guiado.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/es/tours" className="btn-accent">
+            <Link to="/es/tours" className="btn-accent-on-dark">
               Ver Tours
             </Link>
             <Link
               to="/es/contact"
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
+              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
             >
               Contáctanos
             </Link>

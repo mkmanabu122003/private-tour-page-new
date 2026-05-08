@@ -8,8 +8,24 @@ interface TourInfo {
   duration: string;
   price: string;
   link: string;
+  image: string;
   subtitle?: string;
 }
+
+// Shared image paths — same as Tour list page (Tours.tsx)
+const tourImages: Record<string, string> = {
+  asakusa: "/images/tours/asakusa-kaminarimon-gate.webp",
+  yanaka: "/images/blog/yanaka-ginza-shopping-street.webp",
+  "shibuya-harajuku": "/images/tours/shibuya-crossing-tokyo.webp",
+  "tsukiji-ginza": "/images/tours/tsukiji-outer-market.webp",
+  "imperial-palace": "/images/tours/imperial-palace-gardens.webp",
+  custom: "/images/tour-photos/group-photo.webp",
+  "tokyo-food-tour": "/images/tours/tokyo-food-tour-hero.webp",
+  "tokyo-night-tour": "/images/tours/tokyo-night-tour-hero.webp",
+  "kamakura-day-trip": "/images/tours/kamakura-great-buddha.webp",
+  "hakone-day-trip": "/images/tours/hakone-lake-ashi-fuji.webp",
+  "nikko-day-trip": "/images/blog/nikko-toshogu-hero.webp",
+};
 
 const tourCatalog: Record<string, TourInfo> = {
   asakusa: {
@@ -18,6 +34,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "3 hours",
     price: "From ¥45,000",
     link: "/tours/asakusa",
+    image: tourImages.asakusa,
   },
   yanaka: {
     id: "yanaka",
@@ -25,6 +42,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "4 hours",
     price: "From ¥50,000",
     link: "/tours/yanaka",
+    image: tourImages.yanaka,
   },
   "shibuya-harajuku": {
     id: "shibuya-harajuku",
@@ -32,6 +50,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "3.5 hours",
     price: "From ¥50,000",
     link: "/tours/shibuya-harajuku",
+    image: tourImages["shibuya-harajuku"],
   },
   "tsukiji-ginza": {
     id: "tsukiji-ginza",
@@ -39,6 +58,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "3 hours",
     price: "From ¥45,000",
     link: "/tours/tsukiji-ginza",
+    image: tourImages["tsukiji-ginza"],
   },
   "imperial-palace": {
     id: "imperial-palace",
@@ -46,6 +66,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "2.5 hours",
     price: "From ¥40,000",
     link: "/tours/imperial-palace",
+    image: tourImages["imperial-palace"],
   },
   custom: {
     id: "custom",
@@ -53,6 +74,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "Flexible",
     price: "Tailored to your trip",
     link: "/tours/custom",
+    image: tourImages.custom,
   },
   "tokyo-food-tour": {
     id: "tokyo-food-tour",
@@ -60,6 +82,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "3-7 hours",
     price: "Contact for quote",
     link: "/tours/tokyo-food-tour",
+    image: tourImages["tokyo-food-tour"],
   },
   "tokyo-night-tour": {
     id: "tokyo-night-tour",
@@ -67,6 +90,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "3-4 hours",
     price: "Contact for quote",
     link: "/tours/tokyo-night-tour",
+    image: tourImages["tokyo-night-tour"],
   },
   "kamakura-day-trip": {
     id: "kamakura-day-trip",
@@ -74,6 +98,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "7-8 hours",
     price: "From ¥70,000",
     link: "/tours/kamakura-day-trip",
+    image: tourImages["kamakura-day-trip"],
   },
   "hakone-day-trip": {
     id: "hakone-day-trip",
@@ -81,6 +106,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "8-10 hours",
     price: "From ¥70,000",
     link: "/tours/hakone-day-trip",
+    image: tourImages["hakone-day-trip"],
   },
   "nikko-day-trip": {
     id: "nikko-day-trip",
@@ -88,6 +114,7 @@ const tourCatalog: Record<string, TourInfo> = {
     duration: "9-10 hours",
     price: "From ¥80,000",
     link: "/tours/nikko-day-trip",
+    image: tourImages["nikko-day-trip"],
   },
 };
 
@@ -98,6 +125,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "3 horas",
     price: "Desde ¥45,000",
     link: "/es/tours/asakusa",
+    image: tourImages.asakusa,
   },
   yanaka: {
     id: "yanaka",
@@ -105,6 +133,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "4 horas",
     price: "Desde ¥50,000",
     link: "/es/tours/yanaka",
+    image: tourImages.yanaka,
   },
   "shibuya-harajuku": {
     id: "shibuya-harajuku",
@@ -112,6 +141,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "3.5 horas",
     price: "Desde ¥50,000",
     link: "/es/tours/shibuya-harajuku",
+    image: tourImages["shibuya-harajuku"],
   },
   "tsukiji-ginza": {
     id: "tsukiji-ginza",
@@ -119,6 +149,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "3 horas",
     price: "Desde ¥45,000",
     link: "/es/tours/tsukiji-ginza",
+    image: tourImages["tsukiji-ginza"],
   },
   "imperial-palace": {
     id: "imperial-palace",
@@ -126,6 +157,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "2.5 horas",
     price: "Desde ¥40,000",
     link: "/es/tours/imperial-palace",
+    image: tourImages["imperial-palace"],
   },
   custom: {
     id: "custom",
@@ -133,6 +165,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "Flexible",
     price: "A medida de tu viaje",
     link: "/es/tours/custom",
+    image: tourImages.custom,
   },
   "tokyo-food-tour": {
     id: "tokyo-food-tour",
@@ -140,6 +173,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "3-7 horas",
     price: "Consultar precio",
     link: "/es/tours/custom",
+    image: tourImages["tokyo-food-tour"],
   },
   "tokyo-night-tour": {
     id: "tokyo-night-tour",
@@ -147,6 +181,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "3-4 horas",
     price: "Consultar precio",
     link: "/es/tours/custom",
+    image: tourImages["tokyo-night-tour"],
   },
   "kamakura-day-trip": {
     id: "kamakura-day-trip",
@@ -154,6 +189,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "7-8 horas",
     price: "Desde ¥70,000",
     link: "/es/tours/kamakura-day-trip",
+    image: tourImages["kamakura-day-trip"],
   },
   "hakone-day-trip": {
     id: "hakone-day-trip",
@@ -161,6 +197,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "8-10 horas",
     price: "Desde ¥70,000",
     link: "/es/tours/hakone-day-trip",
+    image: tourImages["hakone-day-trip"],
   },
   "nikko-day-trip": {
     id: "nikko-day-trip",
@@ -168,6 +205,7 @@ const esTourCatalog: Record<string, TourInfo> = {
     duration: "9-10 horas",
     price: "Desde ¥80,000",
     link: "/es/tours/nikko-day-trip",
+    image: tourImages["nikko-day-trip"],
   },
 };
 
@@ -209,47 +247,51 @@ export const RelatedTourCards = ({
             </h2>
           </div>
 
-          <div className={`grid gap-6 ${tours.length === 1 ? "max-w-md mx-auto" : "sm:grid-cols-2"}`}>
+          <div className="grid gap-4 max-w-3xl mx-auto">
             {tours.map((tour) => (
               <div
                 key={tour.id}
-                className="bg-card border border-border rounded-lg p-6 flex flex-col shadow-[var(--shadow-card)] hover:border-accent/50 hover:shadow-[var(--shadow-medium)] transition-all"
+                className="group bg-card border border-border rounded-lg overflow-hidden grid grid-cols-[120px_1fr] sm:grid-cols-[140px_1fr_auto] gap-4 sm:gap-5 items-center p-3 sm:p-4 shadow-[var(--shadow-card)] hover:border-accent/50 hover:shadow-[var(--shadow-medium)] transition-all"
               >
-                <h3 className="text-lg font-semibold text-foreground">
-                  {tour.title}
-                </h3>
-                {customSubtitles?.[tour.id] && (
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {customSubtitles[tour.id]}
-                  </p>
-                )}
-                <div className="mt-3 flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4" />
-                    {tour.duration}
-                  </span>
-                </div>
-                <p className="mt-3 text-lg font-semibold text-foreground">
-                  {tour.price}
-                </p>
-                <div className="mt-auto pt-5">
-                  <Link
-                    to={contactPath}
-                    data-cta="book-now-blog-related"
-                    className="btn-accent-sm w-full"
-                    onClick={() => trackBookNowClick(labels.bookNow, "blog-related")}
-                  >
-                    {labels.bookNow}
-                    <ArrowRight className="btn-arrow" />
+                <Link to={tour.link} data-cta="blog-tour-card-image" className="block aspect-[4/3] overflow-hidden rounded-md bg-muted">
+                  <img
+                    src={tour.image}
+                    alt={tour.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    width={280}
+                    height={210}
+                  />
+                </Link>
+                <div className="min-w-0">
+                  <Link to={tour.link} data-cta="blog-tour-card" className="block">
+                    <h3 className="text-base font-semibold text-foreground leading-snug group-hover:text-accent transition-colors">
+                      {tour.title}
+                    </h3>
                   </Link>
-                  <Link
-                    to={tour.link}
-                    data-cta="blog-tour-card"
-                    className="block text-center mt-2 text-sm text-accent hover:underline"
-                  >
-                    {labels.viewDetails}
-                  </Link>
+                  {customSubtitles?.[tour.id] && (
+                    <p className="text-xs text-muted-foreground mt-1 line-clamp-1">
+                      {customSubtitles[tour.id]}
+                    </p>
+                  )}
+                  <div className="mt-1.5 flex items-center gap-3 text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      {tour.duration}
+                    </span>
+                    <span aria-hidden="true">·</span>
+                    <span className="font-semibold text-foreground">{tour.price}</span>
+                  </div>
                 </div>
+                <Link
+                  to={contactPath}
+                  data-cta="book-now-blog-related"
+                  className="btn-accent-sm col-span-2 sm:col-span-1 sm:whitespace-nowrap"
+                  onClick={() => trackBookNowClick(labels.bookNow, "blog-related")}
+                >
+                  {labels.bookNow}
+                  <ArrowRight className="btn-arrow" />
+                </Link>
               </div>
             ))}
           </div>

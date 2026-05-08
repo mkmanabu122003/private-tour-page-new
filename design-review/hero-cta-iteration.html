@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hero CTA — Iteration Proposals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --clay: #9c563f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, sans-serif;
+    padding: 60px 0 80px;
+  }
+
+  .page-head {
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+
+  .variant {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+
+  /* Hero context (full-size) */
+  .hero {
+    height: 480px;
+    background:
+      linear-gradient(95deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.42) 70%, rgba(0,0,0,0.18) 100%),
+      url("../public/images/tour-photos/group-photo.webp") center/cover, #2b2823;
+    padding: 56px 64px;
+    display: flex; flex-direction: column; justify-content: end;
+    color: #fff;
+  }
+  .hero h1 {
+    font-family: Inter, sans-serif;
+    font-size: 42px;
+    line-height: 1.05;
+    color: #fff;
+    margin: 0 0 16px;
+    max-width: 600px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5), 0 2px 24px rgba(0,0,0,.45);
+  }
+  .hero h1 .gold { color: #f4e5b6; }
+  .hero p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.96);
+    margin: 0 0 28px;
+    max-width: 540px;
+    text-shadow: 0 1px 14px rgba(0,0,0,.45);
+  }
+  .cta-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .variant-foot {
+    padding: 16px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+
+  /* === BUTTON BASES === */
+  .btn-primary-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px;
+    padding: 17px 32px;
+    background: #171717;
+    color: #fff;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(23,23,23,.20);
+    transition: all .25s ease;
+  }
+  .btn-primary-pill:hover {
+    background: #2b2823;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(23,23,23,.32), 0 0 0 4px rgba(201,168,76,.18);
+  }
+
+  .btn-secondary-ghost {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px;
+    padding: 17px 28px;
+    background: rgba(255,255,255,.10);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    backdrop-filter: blur(8px);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .25s ease;
+  }
+  .btn-secondary-ghost:hover {
+    background: rgba(255,255,255,.16);
+    border-color: rgba(255,255,255,.55);
+    transform: translateY(-1px);
+  }
+
+  .arrow { transition: transform .25s ease; }
+  .btn-primary-pill:hover .arrow,
+  .btn-secondary-ghost:hover .arrow,
+  .btn-primary-asym:hover .arrow,
+  .btn-text-link:hover .arrow,
+  .btn-primary-avatar:hover .arrow,
+  .btn-primary-subtitle:hover .arrow,
+  .btn-secondary-cream:hover .arrow { transform: translateX(3px); }
+
+  /* === A · ASYMMETRIC HIERARCHY === */
+  .btn-primary-asym {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 12px;
+    padding: 20px 38px;
+    background: #171717;
+    color: #fff;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(23,23,23,.30);
+    transition: all .25s ease;
+  }
+  .btn-primary-asym:hover {
+    background: #2b2823;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 32px rgba(23,23,23,.40), 0 0 0 4px rgba(201,168,76,.18);
+  }
+  .btn-text-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    padding: 12px 4px 14px;
+    border-bottom: 1.5px solid rgba(255,255,255,.5);
+    text-shadow: 0 1px 12px rgba(0,0,0,.45);
+    transition: all .25s ease;
+  }
+  .btn-text-link:hover {
+    color: var(--gold-soft);
+    border-bottom-color: var(--gold-soft);
+  }
+
+  /* === B · AVATAR PRIMARY === */
+  .btn-primary-avatar {
+    display: inline-flex; align-items: center;
+    gap: 12px;
+    padding: 6px 26px 6px 6px;
+    background: #171717;
+    color: #fff;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(23,23,23,.25);
+    transition: all .25s ease;
+  }
+  .btn-primary-avatar .avatar {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: url("../public/images/tour-photos/asakusa-guest-selfie.webp") center/cover, #c8b88a;
+    border: 2px solid var(--gold);
+    flex: 0 0 48px;
+  }
+  .btn-primary-avatar:hover {
+    background: #2b2823;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(23,23,23,.35), 0 0 0 4px rgba(201,168,76,.20);
+  }
+
+  /* === C · SUBTITLE PRIMARY === */
+  .btn-primary-subtitle {
+    display: inline-flex; flex-direction: column; align-items: center;
+    gap: 4px;
+    padding: 14px 34px 16px;
+    background: #171717;
+    color: #fff;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(23,23,23,.25);
+    transition: all .25s ease;
+    line-height: 1;
+  }
+  .btn-primary-subtitle .main {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary-subtitle .sub {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+    color: var(--gold-soft);
+    font-weight: 700;
+  }
+  .btn-primary-subtitle:hover {
+    background: #2b2823;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(23,23,23,.35), 0 0 0 4px rgba(201,168,76,.20);
+  }
+
+  /* === D · WARM CREAM SECONDARY === */
+  .btn-secondary-cream {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px;
+    padding: 17px 28px;
+    background: var(--card);
+    color: var(--ink);
+    border: 1.5px solid var(--card);
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+  }
+  .btn-secondary-cream:hover {
+    background: var(--paper);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.28);
+  }
+
+  /* === CURRENT (baseline reminder) === */
+  .current-cta-row .btn-secondary-ghost {
+    /* show current state for comparison */
+  }
+
+  .marker {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 4px 10px;
+    background: rgba(201,168,76,.20);
+    color: #fffbeb;
+    border-radius: 999px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Hero CTA — iteration</h1>
+  <p>
+    現状は primary（黒 pill）と secondary（白 ghost pill）が <strong>同じ視覚ウェイト</strong>。
+    階層を明確にし、primary をより目立たせる4方向。secondary は「副次選択肢」として明確に区別。
+  </p>
+</div>
+
+<!-- ============ CURRENT ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT</span>
+    <span class="variant-name">deployed · 同サイズ pill 2つ・階層が弱い</span>
+  </div>
+  <div class="hero">
+    <h1>Tokyo Private Walking Tours <span class="gold">with a Licensed Local Guide</span></h1>
+    <p>A private Tokyo tour shaped around your interests, pace, and questions.</p>
+    <div class="cta-row">
+      <button class="btn-primary-pill">Request Your Private Tour <span class="arrow">→</span></button>
+      <button class="btn-secondary-ghost">See Tour Options <span class="arrow">→</span></button>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue：</strong>同じ pill 形・同じサイズ・同じ font-weight。primary と secondary の <em>視覚的階層がない</em>ため、ユーザーは "どちらが推奨か" 一瞬迷う。
+  </div>
+</div>
+
+<!-- ============ A · ASYMMETRIC HIERARCHY ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">A · Asymmetric</span>
+    <span class="variant-name">primary 大 pill + secondary uppercase text-link · Aman idiom</span>
+  </div>
+  <div class="hero">
+    <h1>Tokyo Private Walking Tours <span class="gold">with a Licensed Local Guide</span></h1>
+    <p>A private Tokyo tour shaped around your interests, pace, and questions.</p>
+    <div class="cta-row">
+      <button class="btn-primary-asym">Request Your Private Tour <span class="arrow">→</span></button>
+      <a href="#" class="btn-text-link">Browse all tours <span class="arrow">→</span></a>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>primary を <code>17px / py-20</code> に拡大して影も強化／secondary を <strong>uppercase text-link with under-rule</strong>（Aman idiom）に。<br>
+    <strong>効果：</strong>階層 <em>"primary は明確に主役"</em>、secondary は控えめな探索オプション。最も editorial で luxury。CV 強度高い。
+  </div>
+</div>
+
+<!-- ============ B · AVATAR PRIMARY ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">B · Avatar primary</span>
+    <span class="variant-name">Manabu's photo を pill 左端に内蔵 · 個人ブランド最強</span>
+  </div>
+  <div class="hero">
+    <h1>Tokyo Private Walking Tours <span class="gold">with a Licensed Local Guide</span></h1>
+    <p>A private Tokyo tour shaped around your interests, pace, and questions.</p>
+    <div class="cta-row">
+      <button class="btn-primary-avatar">
+        <span class="avatar"></span>
+        Talk to Manabu <span class="arrow">→</span>
+      </button>
+      <button class="btn-secondary-ghost">See Tour Options <span class="arrow">→</span></button>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>primary copy を "Talk to Manabu" にして、左端に Manabu の <strong>48px portrait + gold border</strong>。secondary そのまま。<br>
+    <strong>効果：</strong>"会社じゃなくて Manabu と話せる" を視覚化。個人ブランド差別化最大。Hero ヘッドライン "with a Licensed Local Guide" との連携も◎。
+  </div>
+</div>
+
+<!-- ============ C · SUBTITLE PRIMARY ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">C · Subtitle primary</span>
+    <span class="variant-name">2-line CTA · 上段 main + 下段 reassurance gold</span>
+  </div>
+  <div class="hero">
+    <h1>Tokyo Private Walking Tours <span class="gold">with a Licensed Local Guide</span></h1>
+    <p>A private Tokyo tour shaped around your interests, pace, and questions.</p>
+    <div class="cta-row">
+      <button class="btn-primary-subtitle">
+        <span class="main">Request Your Private Tour <span class="arrow">→</span></span>
+        <span class="sub">Reply within 24 hours · No commitment</span>
+      </button>
+      <button class="btn-secondary-ghost">See Tour Options <span class="arrow">→</span></button>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>primary を 2 行に — 上段 "Request Your Private Tour" 通常、下段 <strong>"Reply within 24 hours · No commitment"</strong> small gold uppercase。<br>
+    <strong>効果：</strong>CTA に <em>reassurance</em>（リスクリバーサル）を直接埋め込み。"押し売り感" を消し、conversion 強化。"地味" 解消にも◎。
+  </div>
+</div>
+
+<!-- ============ D · CREAM SECONDARY ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">D · Cream secondary</span>
+    <span class="variant-name">primary 黒 pill + secondary <strong>cream solid</strong> pill · 反転対比</span>
+  </div>
+  <div class="hero">
+    <h1>Tokyo Private Walking Tours <span class="gold">with a Licensed Local Guide</span></h1>
+    <p>A private Tokyo tour shaped around your interests, pace, and questions.</p>
+    <div class="cta-row">
+      <button class="btn-primary-pill">Request Your Private Tour <span class="arrow">→</span></button>
+      <button class="btn-secondary-cream">See Tour Options <span class="arrow">→</span></button>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>secondary を <code>rgba(255,.10) outlined ghost</code> → <strong>cream solid <code>#fffdf8</code></strong> + ink text。<br>
+    <strong>効果：</strong>"black + cream" の <em>写真と無関係な独立 pair</em>。Hero 写真 に左右されず常に確実に読める。階層は同じだが visual identity 強い。Aman / Belmond の標準 pair pattern。
+  </div>
+</div>
+
+<!-- ============ DECISION ============ -->
+<div style="max-width: 1280px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">推奨</h2>
+  <p style="margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.7;">
+    各案の方向性：
+  </p>
+  <ul style="color: var(--muted); font-size: 14px; line-height: 1.75; padding-left: 22px; margin: 0 0 16px;">
+    <li><strong>A · Asymmetric</strong> — 階層最強。primary が明確に主役、secondary は editorial text-link。luxury idiom 標準。</li>
+    <li><strong>B · Avatar</strong> — 個人ブランド最強差別化。"Talk to Manabu" のコピー変更含む。</li>
+    <li><strong>C · Subtitle</strong> — primary に reassurance を内蔵。CV 強度・"地味" 解消両方◎。</li>
+    <li><strong>D · Cream secondary</strong> — visual contrast pair で写真に依存しない。階層は弱め。</li>
+  </ul>
+  <p style="margin: 0; color: var(--muted-2); font-size: 14px; line-height: 1.65;">
+    シニア推奨は <strong>A + C 組み合わせ</strong> （asymmetric hierarchy + subtitle）または <strong>B（Avatar）</strong>。
+    A+C なら「primary：Manabu's portrait + 2-line + 大きめ pill」「secondary：text-link」で hero 直撃。どれで進めますか？
+  </p>
+</div>
+
+</body>
+</html>

@@ -68,34 +68,52 @@ export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) =
           />
         </div>
 
-        <div className="max-w-xl mx-auto">
-          <h3 className="text-lg font-semibold text-foreground text-center mb-6">
-            {tourName}: {perPerson(1)} for your entire group
+        <div className="max-w-2xl mx-auto bg-card border border-border rounded-xl px-6 py-8 md:px-10 md:py-10">
+          <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground text-center tracking-tight">
+            {tourName}
           </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-3 px-4 font-medium text-muted-foreground">Group size</th>
-                  <th className="text-right py-3 px-4 font-medium text-muted-foreground">Per person</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[1, 2, 3, 4, 5, 6].map((n) => (
-                  <tr key={n} className="border-b border-border/50">
-                    <td className="py-3 px-4 text-muted-foreground">
-                      {n} {n === 1 ? "person" : "people"}
-                    </td>
-                    <td className="py-3 px-4 text-right font-medium text-foreground">
-                      {perPerson(n)}/person
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <p className="text-center text-sm text-muted-foreground mt-1.5 mb-8">
+            {perPerson(1)} fixed for your entire group · the more you bring, the better the per-person value.
+          </p>
+          <div className="space-y-0">
+            {[1, 2, 3, 4, 5, 6].map((n) => {
+              const widthPct = (1 / n) * 100;
+              const isBestValue = n === 6;
+              return (
+                <div
+                  key={n}
+                  className="grid grid-cols-[80px_1fr_120px] sm:grid-cols-[100px_1fr_130px] items-center gap-3 sm:gap-4 py-3 border-b border-border/40 last:border-b-0"
+                >
+                  <div className="text-sm text-foreground flex items-baseline gap-1.5 flex-wrap">
+                    <span className="font-serif text-xl md:text-2xl text-foreground leading-none font-semibold">{n}</span>
+                    <span className="text-[13px] text-muted-foreground">{n === 1 ? "person" : "people"}</span>
+                  </div>
+                  <div className="h-2 bg-foreground/[0.06] rounded-full relative overflow-hidden">
+                    <div
+                      className="h-full bg-foreground/30 rounded-full"
+                      style={{ width: `${widthPct}%` }}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="text-right">
+                    <p className="font-serif text-lg md:text-xl font-semibold leading-none text-foreground">
+                      {perPerson(n)}
+                    </p>
+                    <p className="text-[10px] uppercase tracking-[0.14em] font-bold text-muted-foreground/80 mt-0.5">
+                      per person
+                    </p>
+                    {isBestValue && (
+                      <span className="inline-block mt-1 text-[9px] font-bold uppercase tracking-[0.14em] text-accent border border-accent/40 px-1.5 py-0.5 rounded">
+                        Best value
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-4">
-            The tour price is fixed per group — the more people you bring, the better value per person.
+          <p className="text-center text-xs text-muted-foreground mt-6 pt-5 border-t border-border">
+            <span className="font-semibold text-foreground">Tip:</span> Most guests bring 2–4 people. Splitting with friends or family makes it almost the same price as a public tour — but private.
           </p>
         </div>
       </div>
@@ -116,42 +134,42 @@ function ComparisonCard({ heading, rows, valueOf, tone }: ComparisonCardProps) {
     <div
       className={
         isPositive
-          ? "relative bg-card rounded-lg px-5 py-6 md:px-6 md:py-7 border-t-[3px] border-accent shadow-[0_8px_24px_-8px_rgba(0,0,0,0.18)] ring-1 ring-accent/20"
-          : "bg-muted/40 rounded-lg px-5 py-6 md:px-6 md:py-7 border border-border"
+          ? "relative bg-card rounded-lg px-6 py-7 md:px-7 md:py-8 border-t-[3px] border-accent shadow-[0_8px_24px_-8px_rgba(0,0,0,0.18)] ring-1 ring-accent/20"
+          : "bg-muted/40 rounded-lg px-6 py-7 md:px-7 md:py-8 border border-border"
       }
     >
       {isPositive && (
-        <span className="absolute -top-3 right-5 text-[10px] tracking-widest font-semibold uppercase text-accent-foreground bg-accent px-2.5 py-1 rounded-sm">
+        <span className="absolute -top-3 right-5 text-[10px] tracking-[0.18em] font-bold uppercase text-accent-foreground bg-accent px-3 py-1 rounded-sm">
           Recommended
         </span>
       )}
       <h3
         className={
           isPositive
-            ? "text-base md:text-lg font-semibold text-accent mb-5"
-            : "text-base md:text-lg font-medium text-muted-foreground mb-5"
+            ? "font-serif text-xl md:text-2xl font-semibold text-foreground tracking-tight mb-6"
+            : "font-serif text-xl md:text-2xl font-semibold text-muted-foreground tracking-tight mb-6"
         }
       >
         {heading}
       </h3>
-      <ul className="space-y-3">
+      <ul className="space-y-3.5">
         {rows.map((r) => {
           const value = valueOf(r);
           return (
             <li
               key={r.label}
-              className="flex items-start gap-2 md:gap-2.5 text-[13px] leading-snug whitespace-nowrap"
+              className="flex items-start gap-3 text-sm leading-relaxed"
             >
               {isPositive ? (
                 <Check
-                  className="w-[16px] h-[16px] mt-0.5 text-accent shrink-0"
-                  strokeWidth={3}
+                  className="w-[16px] h-[16px] mt-1 text-accent shrink-0"
+                  strokeWidth={2.5}
                   aria-hidden="true"
                 />
               ) : (
                 <X
-                  className="w-[16px] h-[16px] mt-0.5 text-rose-500 shrink-0"
-                  strokeWidth={3}
+                  className="w-[16px] h-[16px] mt-1 text-muted-foreground/70 shrink-0"
+                  strokeWidth={2.5}
                   aria-hidden="true"
                 />
               )}
@@ -164,8 +182,8 @@ function ComparisonCard({ heading, rows, valueOf, tone }: ComparisonCardProps) {
                 <span
                   className={
                     isPositive
-                      ? "font-semibold"
-                      : "font-semibold text-foreground/80"
+                      ? "font-semibold text-foreground"
+                      : "font-semibold text-foreground/75"
                   }
                 >
                   {r.label}:
@@ -214,34 +232,52 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
           />
         </div>
 
-        <div className="max-w-xl mx-auto">
-          <h3 className="text-lg font-semibold text-foreground text-center mb-6">
-            {tourName}: {perPerson(1)} para todo tu grupo
+        <div className="max-w-2xl mx-auto bg-card border border-border rounded-xl px-6 py-8 md:px-10 md:py-10">
+          <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground text-center tracking-tight">
+            {tourName}
           </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-3 px-4 font-medium text-muted-foreground">Grupo</th>
-                  <th className="text-right py-3 px-4 font-medium text-muted-foreground">Por persona</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[1, 2, 3, 4, 5, 6].map((n) => (
-                  <tr key={n} className="border-b border-border/50">
-                    <td className="py-3 px-4 text-muted-foreground">
-                      {n} {n === 1 ? "persona" : "personas"}
-                    </td>
-                    <td className="py-3 px-4 text-right font-medium text-foreground">
-                      {perPerson(n)}/persona
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <p className="text-center text-sm text-muted-foreground mt-1.5 mb-8">
+            {perPerson(1)} fijo para todo tu grupo · cuantas más personas, mejor precio por persona.
+          </p>
+          <div className="space-y-0">
+            {[1, 2, 3, 4, 5, 6].map((n) => {
+              const widthPct = (1 / n) * 100;
+              const isBestValue = n === 6;
+              return (
+                <div
+                  key={n}
+                  className="grid grid-cols-[80px_1fr_120px] sm:grid-cols-[100px_1fr_130px] items-center gap-3 sm:gap-4 py-3 border-b border-border/40 last:border-b-0"
+                >
+                  <div className="text-sm text-foreground flex items-baseline gap-1.5 flex-wrap">
+                    <span className="font-serif text-xl md:text-2xl text-foreground leading-none font-semibold">{n}</span>
+                    <span className="text-[13px] text-muted-foreground">{n === 1 ? "persona" : "personas"}</span>
+                  </div>
+                  <div className="h-2 bg-foreground/[0.06] rounded-full relative overflow-hidden">
+                    <div
+                      className="h-full bg-foreground/30 rounded-full"
+                      style={{ width: `${widthPct}%` }}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="text-right">
+                    <p className="font-serif text-lg md:text-xl font-semibold leading-none text-foreground">
+                      {perPerson(n)}
+                    </p>
+                    <p className="text-[10px] uppercase tracking-[0.14em] font-bold text-muted-foreground/80 mt-0.5">
+                      por persona
+                    </p>
+                    {isBestValue && (
+                      <span className="inline-block mt-1 text-[9px] font-bold uppercase tracking-[0.14em] text-accent border border-accent/40 px-1.5 py-0.5 rounded">
+                        Mejor valor
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-4">
-            El precio del tour es fijo por grupo — cuantas más personas, mejor precio por persona.
+          <p className="text-center text-xs text-muted-foreground mt-6 pt-5 border-t border-border">
+            <span className="font-semibold text-foreground">Consejo:</span> La mayoría viaja con 2–4 personas. Compartirlo con amigos o familia lo hace casi al mismo precio que un tour público — pero privado.
           </p>
         </div>
       </div>

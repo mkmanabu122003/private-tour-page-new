@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const NikkoDayTrip = () => {
   return (
@@ -14,53 +16,35 @@ const NikkoDayTrip = () => {
         canonicalPath="/blog/nikko-day-trip-from-tokyo"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/nikko-toshogu-hero.webp"
-          alt="The ornate Yomeimon Gate at Nikko Tosho-gu Shrine surrounded by towering cedar trees"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trip Guides</p>
-            <h1 className="heading-display text-foreground">
-              Nikko Day Trip from Tokyo: Complete Guide
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 8, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/nikko-toshogu-hero.webp"
+        imageAlt="The ornate Yomeimon Gate at Nikko Tosho-gu Shrine surrounded by towering cedar trees"
+        eyebrow="Day Trip Guides"
+        title="Nikko Day Trip from Tokyo: Complete Guide"
+        date="March 8, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "How to Get to Nikko from Tokyo", href: "#section-01-how-to-get-to-nikko-from-tokyo" },
+          { num: "02", label: "Top Sights in Nikko", href: "#section-02-top-sights-in-nikko" },
+          { num: "03", label: "How Much Time Do You Need…", href: "#section-03-how-much-time-do-you-need-in-nikko" },
+          { num: "04", label: "What to Eat in Nikko", href: "#section-04-what-to-eat-in-nikko" },
+          { num: "05", label: "Nikko in Each Season", href: "#section-05-nikko-in-each-season" },
+          { num: "06", label: "Self-Guided vs Private…", href: "#section-06-self-guided-vs-private-guided-tour" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Nikko is one of those places that takes visitors by surprise. People come expecting a temple and a waterfall, and they leave speechless. Two hours north of Tokyo, hidden in the mountains of Tochigi Prefecture, sits one of the most extravagantly decorated shrine complexes on earth, a place where every surface is covered in gold leaf and thousands of hand-carved figures tell stories that are four centuries old. I have been leading guided tours to Nikko for years now, and it remains the day trip my clients talk about most when they write to me after returning home. There is something about the combination of extreme human artistry and raw mountain nature that stays with you in a way that other destinations simply do not.
@@ -70,7 +54,8 @@ const NikkoDayTrip = () => {
             </p>
 
             {/* Section 1: How to Get to Nikko */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · How to Get to Nikko from Tokyo</span></div>
+            <h2 id="section-01-how-to-get-to-nikko-from-tokyo" className="scroll-mt-20">
               How to Get to Nikko from Tokyo (Train Options & Cost)
             </h2>
             <figure className="my-8">
@@ -113,7 +98,8 @@ const NikkoDayTrip = () => {
             </p>
 
             {/* Section 2: Top Sights */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Top Sights in Nikko</span></div>
+            <h2 id="section-02-top-sights-in-nikko" className="scroll-mt-20">
               Top Sights in Nikko (Tosho-gu, Kegon Falls, Shinkyo Bridge)
             </h2>
             <figure className="my-8">
@@ -151,7 +137,7 @@ const NikkoDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Shinkyo Bridge</strong> is the first major landmark you encounter when approaching the shrine area on foot, and it is worth more than a passing glance. This sacred vermilion bridge spans the Daiya River gorge and has been here in some form since the eighth century, though the current structure dates to 1636. According to legend, the Buddhist monk Shodo Shonin was blocked by the river on his journey to reach the sacred mountains, and two serpents appeared to form a bridge for him to cross. The bridge is photogenic in any season, but in autumn when the maple trees along the riverbank turn crimson and the water runs clear over green rocks beneath the red lacquer, it is genuinely one of the most beautiful single views in all of Japan. You can walk across the bridge for a 300-yen fee, which is worth doing for the view upstream toward the mountains, but the best photographs are actually taken from the road bridge next to it, which is free.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Kanmangafuchi Abyss and the Narabi Jizo
             </h3>
             <figure className="my-8">
@@ -178,7 +164,8 @@ const NikkoDayTrip = () => {
             <InlineCTA message="Want a guided Nikko day trip with all logistics handled?" href="/tours/nikko-day-trip" />
 
             {/* Section 3: How Much Time */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · How Much Time Do You Need in Nikko?</span></div>
+            <h2 id="section-03-how-much-time-do-you-need-in-nikko" className="scroll-mt-20">
               How Much Time Do You Need in Nikko?
             </h2>
             <figure className="my-8">
@@ -205,7 +192,8 @@ const NikkoDayTrip = () => {
             </p>
 
             {/* Section: What to Eat */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · What to Eat in Nikko</span></div>
+            <h2 id="section-04-what-to-eat-in-nikko" className="scroll-mt-20">
               What to Eat in Nikko
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -244,7 +232,8 @@ const NikkoDayTrip = () => {
             </p>
 
             {/* Section 4: Seasons */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Nikko in Each Season</span></div>
+            <h2 id="section-05-nikko-in-each-season" className="scroll-mt-20">
               Nikko in Each Season: When to Go
             </h2>
             <figure className="my-8">
@@ -277,7 +266,8 @@ const NikkoDayTrip = () => {
             </p>
 
             {/* Section 5: Self-Guided vs Private Guided Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Self-Guided vs Private Guided Tour</span></div>
+            <h2 id="section-06-self-guided-vs-private-guided-tour" className="scroll-mt-20">
               Self-Guided vs Private Guided Tour: Which is Better?
             </h2>
             <figure className="my-8">
@@ -315,7 +305,7 @@ const NikkoDayTrip = () => {
 
             {/* CTA Section */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Book a Private Nikko Day Trip
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -330,7 +320,11 @@ const NikkoDayTrip = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -419,7 +413,9 @@ const NikkoDayTrip = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

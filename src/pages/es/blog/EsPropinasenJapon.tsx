@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { QuickAnswerEs } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsPropinasenJapon = () => {
   return (
@@ -18,59 +20,42 @@ const EsPropinasenJapon = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/asakusa-kaminarimon-gate.webp"
-          alt="Puerta Kaminarimon en Asakusa, entendiendo la cultura de las propinas en Japón"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Cultura Japonesa</p>
-            <h1 className="heading-display text-foreground">
-              Propinas en Japón: Lo Que Necesitas Saber
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/asakusa-kaminarimon-gate.webp"
+        imageAlt="Puerta Kaminarimon en Asakusa, entendiendo la cultura de las propinas en Japón"
+        eyebrow="Cultura Japonesa"
+        title="Propinas en Japón: Lo Que Necesitas Saber"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "La primera vez que intenté…", href: "#section-01-la-primera-vez-que-intenté-rechazar-una-propina" },
+          { num: "02", label: "¿Por qué no se dan propinas…", href: "#section-02-por-qué-no-se-dan-propinas-en-japón" },
+          { num: "03", label: "¿Y en hoteles de lujo? ¿Y…", href: "#section-03-y-en-hoteles-de-lujo-y-en-ryokan" },
+          { num: "04", label: "Cómo mostrar agradecimiento…", href: "#section-04-cómo-mostrar-agradecimiento-sin-propina" },
+          { num: "05", label: "Lo que sí puedes hacer", href: "#section-05-lo-que-sí-puedes-hacer" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswerEs
               answer="En Japón no se deja propina. No es costumbre y puede causar confusión — la mayoría de trabajadores intentarán devolverte el dinero."
               hook="Pero hay 3 situaciones específicas donde mostrar gratitud SÍ se espera — y hacerlo mal puede resultar incómodo. Un guía local explica la etiqueta completa a continuación."
             />
             {/* La primera vez que intenté rechazar una propina */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · La primera vez que intenté rechazar una propina</span></div>
+            <h2 id="section-01-la-primera-vez-que-intenté-rechazar-una-propina" className="scroll-mt-20">
               La primera vez que intenté rechazar una propina
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -87,14 +72,15 @@ const EsPropinasenJapon = () => {
             </p>
 
             {/* ¿Por qué no se dan propinas en Japón? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · ¿Por qué no se dan propinas en Japón?</span></div>
+            <h2 id="section-02-por-qué-no-se-dan-propinas-en-japón" className="scroll-mt-20">
               ¿Por qué no se dan propinas en Japón?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si vienes de un país hispanohablante, la idea de no dejar propina probablemente te resulte extraña. En México, dejar el 10-15% es casi obligatorio. En España, redondear la cuenta o dejar unas monedas es lo habitual. En Argentina, el 10% es la norma. Pero en Japón, la costumbre es radicalmente diferente, y la razón es más profunda de lo que imaginas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El concepto de "omotenashi" (hospitalidad japonesa)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -107,7 +93,7 @@ const EsPropinasenJapon = () => {
               Esto contrasta muchísimo con la cultura de servicio en Latinoamérica o España, donde, seamos honestos, a veces la calidad del servicio está directamente ligada a la propina esperada. En Japón, esa conexión simplemente no existe. El buen servicio es una obligación moral, no una transacción.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El precio ya incluye el servicio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -117,7 +103,7 @@ const EsPropinasenJapon = () => {
               Compara esto con países donde los camareros dependen de las propinas para completar un salario mínimo insuficiente. En Japón, el sistema está diseñado para que el trabajador reciba una compensación digna sin depender de la generosidad variable del cliente.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Dar propina causa confusión... ¿de verdad?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -131,21 +117,22 @@ const EsPropinasenJapon = () => {
             </p>
 
             {/* ¿Y en hoteles de lujo? ¿Y en ryokan? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · ¿Y en hoteles de lujo? ¿Y en ryokan?</span></div>
+            <h2 id="section-03-y-en-hoteles-de-lujo-y-en-ryokan" className="scroll-mt-20">
               ¿Y en hoteles de lujo? ¿Y en ryokan?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La regla general de no dejar <strong className="text-foreground">propinas en Japón</strong> tiene algunos matices según el tipo de alojamiento. Vamos a verlos uno por uno.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Hoteles internacionales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En cadenas hoteleras internacionales como el Ritz-Carlton, el Four Seasons o el Park Hyatt de Tokio (sí, el del "Lost in Translation"), el personal está acostumbrado a recibir huéspedes de todo el mundo. Si dejas propina, no se ofenderán. Probablemente la acepten con una inclinación cortés. Pero no es esperada ni necesaria. Estos hoteles ya incluyen cargos de servicio del 10-15% en la factura. Estás cubierto.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ryokan tradicional (la excepción que confirma la regla)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -171,7 +158,7 @@ const EsPropinasenJapon = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Restaurantes y taxis
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -192,14 +179,15 @@ const EsPropinasenJapon = () => {
             </figure>
 
             {/* Cómo mostrar agradecimiento sin propina */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cómo mostrar agradecimiento sin propina</span></div>
+            <h2 id="section-04-cómo-mostrar-agradecimiento-sin-propina" className="scroll-mt-20">
               Cómo mostrar agradecimiento sin propina
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Entiendo la frustración. Vienes de una cultura donde la propina es la forma natural de decir "hiciste un trabajo increíble". Y de repente estás en Japón, recibes el mejor servicio de tu vida, y no puedes dejar ni una moneda. ¿Qué haces? Hay formas de agradecer que en Japón valen más que cualquier billete.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Palabras mágicas en japonés
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -209,7 +197,7 @@ const EsPropinasenJapon = () => {
               Otra expresión poderosa: <strong className="text-foreground">"osewa ni narimashita"</strong>, que significa "gracias por cuidar de mí". Es perfecta al despedirte de un guía, del personal de un ryokan o de cualquier persona que te haya atendido con dedicación. Es formal, respetuosa y demuestra que entiendes algo de la cultura japonesa.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Una carta o regalo pequeño
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -232,7 +220,7 @@ const EsPropinasenJapon = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Una reseña online (lo que más valoran hoy)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -240,28 +228,29 @@ const EsPropinasenJapon = () => {
             </p>
 
             {/* Lo que sí puedes hacer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Lo que sí puedes hacer</span></div>
+            <h2 id="section-05-lo-que-sí-puedes-hacer" className="scroll-mt-20">
               Lo que sí puedes hacer (y que los japoneses valoran más)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Más allá de las <strong className="text-foreground">propinas en Japón</strong>, o la ausencia de ellas, hay comportamientos que los japoneses apreciamos profundamente en nuestros visitantes. Son pequeños gestos que demuestran respeto y que, créeme, no pasan desapercibidos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ser puntual y respetuoso
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En Japón, llegar puntual no es una virtud: es lo mínimo. Llegar cinco minutos antes es lo ideal. Llegar tarde, aunque sea cinco minutos, sin avisar es considerado una falta de respeto significativa. Sé que en muchos países hispanohablantes la relación con el tiempo es más flexible (la famosa "hora latina"), y no hay nada malo en eso en su contexto. Pero cuando estés en Japón, hacer el esfuerzo de ser puntual comunica más respeto que cualquier propina.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Intentar usar palillos (de verdad, nos alegramos)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No tienes que ser un experto. No importa si se te cae el arroz. Lo que importa es el intento. Cuando un visitante agarra los palillos e intenta comer como lo hacemos nosotros, aunque sea con dificultad y risas, nos encanta. Es una señal de curiosidad y respeto por nuestra cultura. Y si realmente no puedes, no pasa nada: pide un tenedor sin vergüenza. Pero inténtalo primero. Si quieres practicar, te recomiendo empezar con el edamame, es el modo fácil de los palillos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Aprender dos o tres frases
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -273,13 +262,14 @@ const EsPropinasenJapon = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre las propinas en Japón
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Es obligatorio dejar propina en Japón?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -288,7 +278,7 @@ const EsPropinasenJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Qué pasa si dejo propina?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -297,7 +287,7 @@ const EsPropinasenJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Y en un tour privado?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -306,7 +296,7 @@ const EsPropinasenJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Existe alguna excepción?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -315,7 +305,7 @@ const EsPropinasenJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cómo se dice "gracias" en japonés?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -326,7 +316,7 @@ const EsPropinasenJapon = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres descubrir Japón con un guía local que habla tu idioma?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -341,7 +331,11 @@ const EsPropinasenJapon = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -373,7 +367,9 @@ const EsPropinasenJapon = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

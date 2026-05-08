@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 import { GuideInsiderNoteEs } from "@/components/blog/GuideInsiderNote";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsSensojiTemploMasVisitado = () => {
   return (
@@ -25,50 +27,38 @@ const EsSensojiTemploMasVisitado = () => {
         ]}
       />
 
-      {/* Imagen Principal */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-sensoji-pagoda.webp"
-          alt="Pagoda del Templo Senso-ji en Asakusa, Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              ¿Es Senso-ji realmente el templo más visitado del mundo?
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Guía Oficial con Licencia</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />7 de marzo de 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía Intérprete con Licencia Nacional que realiza tours por Senso-ji varias veces por semana. Última actualización: abril 2026.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-sensoji-pagoda.webp"
+        imageAlt="Pagoda del Templo Senso-ji en Asakusa, Tokio"
+        eyebrow="Guías de Barrios de Tokio"
+        title="¿Es Senso-ji realmente el templo más visitado del mundo?"
+        subtitle="Escrito por Manabu, Guía Intérprete con Licencia Nacional que realiza tours por Senso-ji varias veces por semana. Última actualización: abril 2026."
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "La cifra de 30 millones", href: "#section-01-la-cifra-de-30-millones" },
+          { num: "02", label: "Cómo se ven 30 millones de…", href: "#section-02-cómo-se-ven-30-millones-de-visitantes-en-la" },
+          { num: "03", label: "Por qué Senso-ji atrae a…", href: "#section-03-por-qué-senso-ji-atrae-a-tanta-gente" },
+          { num: "04", label: "Cómo visitarlo sin multitudes", href: "#section-04-cómo-visitarlo-sin-multitudes" },
+          { num: "05", label: "Lo que la mayoría de esos…", href: "#section-05-lo-que-la-mayoría-de-esos-30-millones-se-pierde" },
+          { num: "06", label: "Descubre Senso-ji más allá…", href: "#section-06-descubre-senso-ji-más-allá-de-las-multitudes" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Respuesta Rápida — objetivo de fragmento destacado */}
             <div className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg mb-8">
               <p className="font-semibold text-foreground mb-2">Respuesta rápida</p>
@@ -96,7 +86,8 @@ const EsSensojiTemploMasVisitado = () => {
             </p>
 
             {/* Sección 1 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · La cifra de 30 millones</span></div>
+            <h2 id="section-01-la-cifra-de-30-millones" className="scroll-mt-20">
               La cifra de 30 millones: ¿de dónde sale?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -113,7 +104,8 @@ const EsSensojiTemploMasVisitado = () => {
             </p>
 
             {/* Sección 2 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Cómo se ven 30 millones de visitantes en la</span></div>
+            <h2 id="section-02-cómo-se-ven-30-millones-de-visitantes-en-la" className="scroll-mt-20">
               Cómo se ven 30 millones de visitantes en la práctica
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -177,7 +169,8 @@ const EsSensojiTemploMasVisitado = () => {
             </p>
 
             {/* Sección 3 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Por qué Senso-ji atrae a tanta gente</span></div>
+            <h2 id="section-03-por-qué-senso-ji-atrae-a-tanta-gente" className="scroll-mt-20">
               Por qué Senso-ji atrae a tanta gente
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -200,7 +193,8 @@ const EsSensojiTemploMasVisitado = () => {
             </p>
 
             {/* Sección 4 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cómo visitarlo sin multitudes</span></div>
+            <h2 id="section-04-cómo-visitarlo-sin-multitudes" className="scroll-mt-20">
               Cómo visitarlo sin multitudes
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -220,7 +214,8 @@ const EsSensojiTemploMasVisitado = () => {
             </p>
 
             {/* Sección 5 — Rincones Ocultos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Lo que la mayoría de esos 30 millones se pierde</span></div>
+            <h2 id="section-05-lo-que-la-mayoría-de-esos-30-millones-se-pierde" className="scroll-mt-20">
               Lo que la mayoría de esos 30 millones se pierde
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -252,7 +247,8 @@ const EsSensojiTemploMasVisitado = () => {
 
             {/* CTA principal */}
             <section className="cta-section bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · Descubre Senso-ji más allá de las multitudes</span></div>
+              <h2 id="section-06-descubre-senso-ji-más-allá-de-las-multitudes" className="scroll-mt-20">
                 Descubre Senso-ji más allá de las multitudes
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -267,34 +263,35 @@ const EsSensojiTemploMasVisitado = () => {
 
             {/* Preguntas Frecuentes */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Preguntas Frecuentes</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Es Senso-ji realmente el templo más visitado del mundo?</h3>
+                  <h3>¿Es Senso-ji realmente el templo más visitado del mundo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Senso-ji figura constantemente entre los sitios religiosos más visitados del planeta, con unos 30 millones de visitantes al año. Que ocupe el primer puesto absoluto depende de cómo se definan y cuenten los visitantes. El Templo Dorado de Amritsar y los sitios de La Meca atraen cifras comparables o superiores. Lo que es seguro es que Senso-ji es el templo más visitado de Japón y uno de los sitios religiosos con más afluencia del mundo.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es la mejor hora para visitar Senso-ji?</h3>
+                  <h3>¿Cuál es la mejor hora para visitar Senso-ji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Antes de las 8 de la mañana, sin duda. Los terrenos están abiertos las 24 horas, y el salón principal abre a las 6 AM (6:30 AM de octubre a marzo). A esa hora tendrás el templo casi para ti solo. Las visitas nocturnas después de las 5 PM también son excelentes: las puertas y la pagoda se iluminan de forma espectacular tras la puesta de sol.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Senso-ji cobra entrada?</h3>
+                  <h3>¿Senso-ji cobra entrada?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No. Senso-ji es completamente gratuito, incluido el salón principal. Esta es una de las razones por las que atrae a tantos visitantes. Los únicos gastos son opcionales: los omikuji o papeletas de la fortuna (100 yenes), el incienso y los amuletos. El Jardín Denboin, que es una zona separada, cobra una pequeña entrada durante su limitada apertura estacional.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuánto tiempo debería dedicar a Senso-ji?</h3>
+                  <h3>¿Cuánto tiempo debería dedicar a Senso-ji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La mayoría de los visitantes pasa entre 30 y 45 minutos, pero yo recomiendo al menos hora y media o dos horas. Eso te da tiempo para explorar el salón principal, sacar un omikuji, visitar el a menudo ignorado Santuario de Asakusa al lado, recorrer las callejuelas y quizá encontrar un banco tranquilo para sentarte y absorber la atmósfera. Si el Jardín Denboin está abierto, añade otros 30 minutos.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Qué ver en Asakusa además de Senso-ji?</h3>
+                  <h3>¿Qué ver en Asakusa además de Senso-ji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Asakusa es mucho más que Senso-ji. Puedes pasear por el paseo del río Sumida con vistas al Tokyo Skytree, explorar la calle Hoppy-dori (la zona de izakayas más castiza del barrio), visitar el Santuario Imado o descubrir el barrio de Kappabashi, famoso por sus tiendas de utensilios de cocina y sus increíbles muestras de comida de plástico. Lee mi{" "}
                     <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">guía completa de Asakusa</Link>{" "}
@@ -302,7 +299,7 @@ const EsSensojiTemploMasVisitado = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cómo llegar a Senso-ji desde el centro de Tokio?</h3>
+                  <h3>¿Cómo llegar a Senso-ji desde el centro de Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La forma más sencilla es tomar la línea Ginza del metro hasta la estación de Asakusa (unos 15 minutos desde Ginza, 20 desde Shibuya con transbordo). Desde la estación, el templo está a 5 minutos a pie. También puedes llegar por la línea Asakusa (Toei) o la línea Tobu Skytree.
                   </p>
@@ -315,7 +312,11 @@ const EsSensojiTemploMasVisitado = () => {
               <p>La pagoda de cinco pisos (Gojunoto) está preciosa por las noches estos días gracias a la iluminación de primavera. Merece la pena volver después de cenar si tu hotel está cerca: la atmósfera nocturna es completamente diferente del caos diurno.</p>
             </GuideInsiderNoteEs>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -342,7 +343,9 @@ const EsSensojiTemploMasVisitado = () => {
           { "@type": "Question", name: "¿Cómo llegar a Senso-ji desde el centro de Tokio?", acceptedAnswer: { "@type": "Answer", text: "Toma la línea Ginza del metro hasta la estación de Asakusa (15 minutos desde Ginza). El templo está a 5 minutos a pie. También puedes usar la línea Asakusa (Toei) o la línea Tobu Skytree." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

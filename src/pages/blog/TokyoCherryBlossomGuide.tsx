@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const TokyoCherryBlossomGuide = () => {
   return (
@@ -19,55 +21,43 @@ const TokyoCherryBlossomGuide = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/senso-ji-temple-tokyo.webp"
-          alt="Cherry blossom trees in bloom near Senso-ji Temple, Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo Cherry Blossoms 2026: A Local Guide's Honest Ranking of the Best Spots
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 22, 2026</span>
-            </div>
-            <p className="mt-2 text-sm text-muted-foreground">Last updated: March 2026</p>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided 500+ private tours through Tokyo's cherry blossom season.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/senso-ji-temple-tokyo.webp"
+        imageAlt="Cherry blossom trees in bloom near Senso-ji Temple, Tokyo"
+        eyebrow="Planning Your Trip"
+        title="Tokyo Cherry Blossoms 2026: A Local Guide's Honest Ranking of the Best Spots"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided 500+ private tours through Tokyo's cherry blossom season."
+        date="March 22, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "2026 Cherry Blossom…", href: "#section-01-2026-cherry-blossom-forecast-for-tokyo" },
+          { num: "02", label: "The 7 Best Cherry Blossom…", href: "#section-02-the-7-best-cherry-blossom-spots-in-tokyo" },
+          { num: "03", label: "A Guide's Practical Tips…", href: "#section-03-a-guides-practical-tips-for-cherry-blossom-season" },
+          { num: "04", label: "How to Combine Cherry…", href: "#section-04-how-to-combine-cherry-blossoms-with-sightseeing" },
+          { num: "05", label: "FAQ", href: "#section-05-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Every spring, I get the same question from guests arriving in Tokyo: "Are we too early? Too late? Where should we go?" Cherry blossom season in Tokyo is beautiful, but it's also unpredictable, crowded, and surprisingly short. The window between first bloom and the last petals falling is roughly two weeks, and the "perfect" moment lasts maybe four or five days.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               After guiding hundreds of visitors through sakura season, I've learned that the difference between a magical experience and a frustrating one comes down to three things: timing, location, and time of day. This guide covers all three.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · 2026 Cherry Blossom Forecast for Tokyo</span></div>
+            <h2 id="section-01-2026-cherry-blossom-forecast-for-tokyo" className="scroll-mt-20">
               2026 Cherry Blossom Forecast for Tokyo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -85,15 +75,15 @@ const TokyoCherryBlossomGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong>Important:</strong> These dates are forecasts and can shift by 2–3 days. Different tree varieties bloom at different times. Shinjuku Gyoen, for example, has early and late-blooming varieties that extend the viewing window by a week or more.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The 7 Best Cherry Blossom Spots in Tokyo</span></div>
+            <h2 id="section-02-the-7-best-cherry-blossom-spots-in-tokyo" className="scroll-mt-20">
               The 7 Best Cherry Blossom Spots in Tokyo (Ranked by a Guide)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I'm ranking these based on the overall experience — not just the trees, but the atmosphere, accessibility, crowd levels, and how the spot photographs. Every list you'll find online puts Ueno Park at the top. I don't.
             </p>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               1. Meguro River (目黒川) — Best Overall Experience
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -119,7 +109,7 @@ const TokyoCherryBlossomGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               2. Chidorigafuchi (千鳥ヶ淵) — Most Photogenic
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -138,7 +128,7 @@ const TokyoCherryBlossomGuide = () => {
               tourName="Custom Cherry Blossom Tour"
             />
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               3. Shinjuku Gyoen (新宿御苑) — Best for Families & Hanami Picnics
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,7 +141,7 @@ const TokyoCherryBlossomGuide = () => {
               <li><strong>Pro tip:</strong> The late-blooming Ichiyo and Kanzan varieties here peak around April 10–15, perfect if you arrive after the main season</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               4. Ueno Park (上野公園) — Best for Festival Atmosphere
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -165,7 +155,7 @@ const TokyoCherryBlossomGuide = () => {
                 {" "}and Yanaka Cemetery (another excellent, crowd-free cherry blossom spot)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               5. Sumida River (隅田川) — Best Combination with Asakusa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -179,7 +169,7 @@ const TokyoCherryBlossomGuide = () => {
               <li><strong>Pro tip:</strong> Walk the east bank (Sumida Park side) for the best Skytree + sakura photo angle</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               6. Yanaka Cemetery (谷中霊園) — Best Hidden Gem
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -195,7 +185,7 @@ const TokyoCherryBlossomGuide = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               7. Rikugien Garden (六義園) — Best for Evening Illumination
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -206,12 +196,12 @@ const TokyoCherryBlossomGuide = () => {
               <li><strong>Admission:</strong> ¥300</li>
               <li><strong>Access:</strong> Komagome Station (JR Yamanote Line / Namboku Line)</li>
             </ul>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · A Guide's Practical Tips for Cherry Blossom Season</span></div>
+            <h2 id="section-03-a-guides-practical-tips-for-cherry-blossom-season" className="scroll-mt-20">
               A Guide's Practical Tips for Cherry Blossom Season
             </h2>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               Timing Your Visit
             </h3>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
@@ -220,7 +210,7 @@ const TokyoCherryBlossomGuide = () => {
               <li><strong>Don't panic about timing:</strong> Even if you miss full bloom by a few days, the petal-fall (桜吹雪, sakura fubuki) is arguably more beautiful — cherry petals floating on rivers and covering paths like pink snow</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               What to Bring for Hanami
             </h3>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
@@ -230,7 +220,7 @@ const TokyoCherryBlossomGuide = () => {
               <li>A portable phone charger — you'll take more photos than you expect</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               Cherry Blossom Etiquette
             </h3>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
@@ -239,8 +229,8 @@ const TokyoCherryBlossomGuide = () => {
               <li><strong>Clean up completely</strong> — bring your trash with you. Japanese parks have very few trash bins</li>
               <li><strong>Keep music low</strong> — hanami is about enjoying nature, not outdoor concerts</li>
             </ul>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · How to Combine Cherry Blossoms with Sightseeing</span></div>
+            <h2 id="section-04-how-to-combine-cherry-blossoms-with-sightseeing" className="scroll-mt-20">
               How to Combine Cherry Blossoms with Sightseeing
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -283,8 +273,8 @@ const TokyoCherryBlossomGuide = () => {
                 </Link>
               </div>
             </div>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · FAQ</span></div>
+            <h2 id="section-05-faq" className="scroll-mt-20">
               Frequently Asked Questions
             </h2>
 
@@ -312,7 +302,11 @@ const TokyoCherryBlossomGuide = () => {
             <div className="mt-12">
               <RelatedTourCards tourIds={["asakusa", "custom"]} />
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -334,7 +328,9 @@ const TokyoCherryBlossomGuide = () => {
           { "@type": "Question", name: "Where is the least crowded cherry blossom spot in Tokyo?", acceptedAnswer: { "@type": "Answer", text: "Yanaka Cemetery is the best-kept secret. The main path has magnificent old trees with far fewer crowds than Ueno or Meguro." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

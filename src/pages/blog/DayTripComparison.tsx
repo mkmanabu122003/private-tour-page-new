@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { dayTripFinderConfig } from "@/data/diagnostics/dayTripFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const DayTripComparison = () => {
   return (
@@ -15,51 +17,31 @@ const DayTripComparison = () => {
         canonicalPath="/blog/kamakura-vs-hakone-vs-nikko-day-trip"
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trips</p>
-            <h1 className="heading-display text-foreground">
-              Kamakura vs Hakone vs Nikko: Which Day Trip Should You Choose?
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 25, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
+      {/* Hero — overlaid title */}
+      <BlogArticleHero
+        image="/images/blog/nikko-toshogu-hero.webp"
+        imageAlt="Kamakura vs Hakone vs Nikko - best day trips from Tokyo"
+        eyebrow="Day Trips"
+        title="Kamakura vs Hakone vs Nikko: Which Day Trip Should You Choose?"
+        date="February 25, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/nikko-toshogu-hero.webp"
-          alt="Kamakura vs Hakone vs Nikko - best day trips from Tokyo"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
-
-      {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+              { num: "01", label: "Quick Comparison", href: "#section-01-quick-comparison" },
+              { num: "02", label: "Kamakura", href: "#section-02-kamakura" },
+              { num: "03", label: "Hakone", href: "#section-03-hakone" },
+              { num: "04", label: "Nikko", href: "#section-04-nikko" },
+              { num: "05", label: "Can I Do Two?", href: "#section-05-can-i-do-two" },
+              { num: "06", label: "My Recommendation", href: "#section-06-my-recommendation" },
+            ]} />
+
+            <article>
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "Which day trip should I do?" I get this question on almost every tour. It's one of the most common dilemmas facing Tokyo visitors, and the answer is genuinely different for every traveler.
@@ -70,16 +52,12 @@ const DayTripComparison = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's an honest, detailed comparison to help you decide. And if you still can't choose after reading this, that's what custom itineraries are for.
             </p>
-          </article>
 
-          {/* Interactive Diagnostic Tool — opens in modal */}
-          <div className="max-w-3xl mx-auto">
+            {/* Interactive Diagnostic Tool — opens in modal */}
             <DiagnosticTrigger config={dayTripFinderConfig} />
-          </div>
-
-          <article className="max-w-3xl mx-auto prose-custom">
             {/* Quick Comparison Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Quick Comparison</span></div>
+            <h2 id="section-01-quick-comparison" className="scroll-mt-20">
               Quick Comparison
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -134,7 +112,8 @@ const DayTripComparison = () => {
             </div>
 
             {/* Kamakura */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Kamakura</span></div>
+            <h2 id="section-02-kamakura" className="scroll-mt-20">
               Kamakura: Japan's Ancient Capital by the Sea
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -160,14 +139,14 @@ const DayTripComparison = () => {
               Beyond the Great Buddha, Kamakura offers Hasedera Temple (spectacular ocean views and a famous golden Kannon statue), Tsurugaoka Hachimangu Shrine (the city's most important shrine, with a dramatic approach road), and Hokokuji Temple (a serene bamboo grove where you can enjoy matcha tea). The Komachi-dori shopping street near the station is perfect for lunch and snacking. Try the local shirasu (baby sardines) that Kamakura is famous for.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               History lovers, first-time Japan visitors who want a well-rounded experience, families (easy terrain, lots of variety), and food enthusiasts. Kamakura is also the easiest day trip logistically: simple train connections, compact walking area, and well-signed paths.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               What Most People Don't Know
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -185,7 +164,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* Hakone */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Hakone</span></div>
+            <h2 id="section-03-hakone" className="scroll-mt-20">
               Hakone: Hot Springs & the Iconic Fuji View
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -211,14 +191,14 @@ const DayTripComparison = () => {
               Hakone Shrine, with its red torii gate standing in the lake, is one of Japan's most photographed spiritual sites. The approach through the ancient cedar forest is atmospheric, and the lakeside torii creates a stunning composition. Beyond the main attractions, Hakone offers the Open-Air Museum (impressive sculpture garden with Picasso pavilion), traditional ryokan inns, and of course, onsen, the natural hot spring baths that are central to Japanese relaxation culture.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nature lovers, photographers (especially those chasing the Fuji shot), couples seeking a romantic experience, and anyone who wants a complete change of scenery from Tokyo's urban energy. If seeing Mt. Fuji is on your bucket list, Hakone is your best bet for a day trip (though weather cooperation is required. Fuji is visible roughly 60-70% of clear days in winter, less in summer).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Insider Tip: The Fuji Factor
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -239,7 +219,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* Nikko */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Nikko: The Hidden UNESCO Masterpiece</span></div>
+            <h2 id="section-04-nikko" className="scroll-mt-20">
               Nikko: The Hidden UNESCO Masterpiece
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -252,14 +233,14 @@ const DayTripComparison = () => {
               Beyond the shrine complex, Nikko offers the dramatic Kegon Falls, a 97-meter waterfall that you can view from an observation platform reached by elevator inside the cliff. Lake Chuzenji, at 1,269 meters elevation, offers a completely different climate and atmosphere from Tokyo. In autumn (October to November), the mountainside transforms into a tapestry of red, orange, and gold that rivals any foliage display in the world.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Best For
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               History buffs who want to understand the Tokugawa era, nature lovers (especially in autumn), UNESCO heritage enthusiasts, and photographers. Nikko is also significantly less crowded than Kamakura or Hakone, which is a major advantage for those who prefer a more peaceful experience.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Why It's Less Crowded Than the Others
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -280,7 +261,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* Can I Do Two? */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Can I Do Two in One Trip?</span></div>
+            <h2 id="section-05-can-i-do-two" className="scroll-mt-20">
               Can I Do Two in One Trip?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -306,7 +288,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* My Recommendation */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · My Recommendation</span></div>
+            <h2 id="section-06-my-recommendation" className="scroll-mt-20">
               My Recommendation
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -339,7 +322,7 @@ const DayTripComparison = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Ready to explore beyond Tokyo?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -354,9 +337,13 @@ const DayTripComparison = () => {
                 </Link>
               </div>
             </div>
-          </article>
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
+      </div>
 
       <RelatedTourCards tourIds={["custom"]} showViewAll />
 

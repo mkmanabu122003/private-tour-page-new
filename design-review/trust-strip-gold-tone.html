@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trust Strip — Gold Tone Refinement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --ink-soft: #2b2823;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --gold-muted: #a89765; /* darker, less saturated gold */
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    padding: 60px 0 80px;
+  }
+  .lining-nums { font-variant-numeric: lining-nums; }
+
+  .page-head {
+    max-width: 1280px;
+    margin: 0 auto 48px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+  .page-head code {
+    background: rgba(0,0,0,.04);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  .variant {
+    max-width: 1280px;
+    margin: 0 auto 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+  .variant-foot {
+    padding: 16px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+
+  .hero-strip-context {
+    height: 80px;
+    background:
+      linear-gradient(95deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 62%, rgba(0,0,0,0.18) 100%),
+      url("../public/images/tour-photos/group-photo.webp") center/cover, #2b2823;
+    display: flex; align-items: center; padding: 0 40px;
+    color: rgba(255,255,255,.85);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .trust-shell {
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+  }
+  .trust-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 36px 0;
+  }
+  .cell {
+    display: flex; align-items: center; gap: 18px;
+    padding: 0 28px;
+    border-left: 1px solid var(--line);
+  }
+  .cell:first-child { border-left: 0; padding-left: 0; }
+  .cell:last-child { padding-right: 0; }
+  .icon-base {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex: 0 0 56px;
+  }
+  .stat-base {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.005em;
+    margin: 0 0 4px;
+  }
+  .desc-base {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+  }
+
+  /* === CURRENT (deployed) — Plan B all-gold === */
+  .current .icon-base {
+    background: rgba(201,168,76,0.06);
+    border: 1.5px solid rgba(201,168,76,0.30);
+    color: var(--gold);
+  }
+  .current .stat-base { color: var(--gold); }
+
+  /* === ALT A · Ink stat, gold icon only === */
+  .altA .icon-base {
+    background: rgba(201,168,76,0.06);
+    border: 1.5px solid rgba(201,168,76,0.30);
+    color: var(--gold);
+  }
+  .altA .stat-base { color: var(--ink); }
+  .altA .star-only { color: var(--gold); margin-left: 2px; }
+
+  /* === ALT B · Hybrid: only 4.86★ gold === */
+  .altB .icon-base {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .altB .icon-base.gold {
+    background: rgba(201,168,76,0.06);
+    border: 1.5px solid rgba(201,168,76,0.30);
+    color: var(--gold);
+  }
+  .altB .stat-base { color: var(--ink); }
+  .altB .stat-base.gold { color: var(--gold); }
+
+  /* === ALT C · Muted gold (less saturated) === */
+  .altC .icon-base {
+    background: rgba(168,151,101,0.05);
+    border: 1px solid rgba(168,151,101,0.25);
+    color: var(--gold-muted);
+  }
+  .altC .stat-base { color: var(--gold-muted); }
+
+  /* === ALT D · Ink + gold underline === */
+  .altD .icon-base {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .altD .stat-base {
+    color: var(--ink);
+    display: inline-block;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+  }
+
+  /* compact recommendation tag */
+  .rec-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--gold);
+    background: rgba(201,168,76,.12);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Trust strip — gold tone refinement</h1>
+  <p>
+    現状（deployed）は Cormorant 32px gold × 4 + gold icon × 4 で <strong>金色が密</strong> に。
+    減らし方を4案で比較。冷静さ・editorial 感を出すために金を選択的に使う方針。
+  </p>
+</div>
+
+<!-- ============ CURRENT (deployed) ============ -->
+<div class="variant current">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT · 4× gold</span>
+    <span class="variant-name">deployed Plan B — all 4 stats in gold + 4 gold icons</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div><p class="stat-base">Licensed</p><p class="desc-base">Government certified</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div><p class="stat-base lining-nums">4.86★</p><p class="desc-base">Average rating</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div><p class="stat-base lining-nums">100%</p><p class="desc-base">Private, never shared</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div><p class="stat-base lining-nums">24h</p><p class="desc-base">Typical reply time</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue:</strong> Cormorant 32px gold が4つ並んで <span style="color:#9c563f;">金色が画面の主役を奪う</span>。Hero の "your licensed Tokyo guide" 直下で重く感じる。
+  </div>
+</div>
+
+<!-- ============ ALT A · Ink stat + gold icon ============ -->
+<div class="variant altA">
+  <div class="variant-head">
+    <span class="variant-tag">ALT A · Ink stat, gold icon only</span>
+    <span class="variant-name">Cormorant 32px → ink color · ★ だけ gold accent · icons gold tint</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div><p class="stat-base">Licensed</p><p class="desc-base">Government certified</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div><p class="stat-base lining-nums">4.86<span class="star-only">★</span></p><p class="desc-base">Average rating</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div><p class="stat-base lining-nums">100<span class="star-only">%</span></p><p class="desc-base">Private, never shared</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div><p class="stat-base lining-nums">24<span class="star-only">h</span></p><p class="desc-base">Typical reply time</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>stat 文字色 <code>gold → ink</code>。<strong>★/%/h の最後の1文字だけ gold</strong> で sparkle としてアクセント。icon は gold 維持。<br>
+    <strong>効果：</strong>金色が <em>"アクセント"</em> に格下げ。冷静で editorial。Cormorant のフォルム自体は変わらないので大きさ・存在感は維持。<span class="rec-tag">推奨</span>
+  </div>
+</div>
+
+<!-- ============ ALT B · Hybrid: only 4.86★ gold ============ -->
+<div class="variant altB">
+  <div class="variant-head">
+    <span class="variant-tag">ALT B · Strategic gold</span>
+    <span class="variant-name">"4.86★" だけ gold (rating は唯一の数値証明) · 他は ink</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div><p class="stat-base">Licensed</p><p class="desc-base">Government certified</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div><p class="stat-base gold lining-nums">4.86★</p><p class="desc-base">Average rating</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div><p class="stat-base lining-nums">100%</p><p class="desc-base">Private, never shared</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div><p class="stat-base lining-nums">24h</p><p class="desc-base">Typical reply time</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>"4.86★" のみ gold（rating cell が <em>"highlight"</em> として浮き上がる）。他3つは ink stat + neutral icon（gray border）。<br>
+    <strong>効果：</strong>金色 = 1cell のみ。ハイライト効果最大。<em>4.86★ がページ上の最重要シグナル</em>として読み手に伝わる。CTRに効く可能性あり。
+  </div>
+</div>
+
+<!-- ============ ALT C · Muted gold ============ -->
+<div class="variant altC">
+  <div class="variant-head">
+    <span class="variant-tag">ALT C · Muted gold (#a89765)</span>
+    <span class="variant-name">同じ4× gold だが彩度を落とす — 全体の "強さ" を緩和</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div><p class="stat-base">Licensed</p><p class="desc-base">Government certified</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div><p class="stat-base lining-nums">4.86★</p><p class="desc-base">Average rating</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div><p class="stat-base lining-nums">100%</p><p class="desc-base">Private, never shared</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div><p class="stat-base lining-nums">24h</p><p class="desc-base">Typical reply time</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>gold <code>#c9a84c</code> → <code>#a89765</code>（彩度↓・明度↓）。stat 4つすべての色を bronzy gold に。<br>
+    <strong>効果：</strong>"金色感" は残るが落ち着いた tone に。Aman のブロンズ系。ただし about-meta（同じ #c9a84c）と色味が分裂するため、<em>about-meta も同色に変える必要</em>あり。
+  </div>
+</div>
+
+<!-- ============ ALT D · Ink stat + gold underline ============ -->
+<div class="variant altD">
+  <div class="variant-head">
+    <span class="variant-tag">ALT D · Ink + gold underline</span>
+    <span class="variant-name">Cormorant ink · 数字の下に細い gold ルール · 装飾要素として gold 残す</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div><p class="stat-base">Licensed</p><p class="desc-base">Government certified</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div><p class="stat-base lining-nums">4.86★</p><p class="desc-base">Average rating</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div><p class="stat-base lining-nums">100%</p><p class="desc-base">Private, never shared</p></div>
+        </div>
+        <div class="cell">
+          <div class="icon-base"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div><p class="stat-base lining-nums">24h</p><p class="desc-base">Typical reply time</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>stat = ink Cormorant 32px、文字下に <strong>2px gold underline</strong> を引く。icon は neutral gray border。<br>
+    <strong>効果：</strong>装飾的に gold を残すが文字は ink に。editorial magazine のページタイトル装飾風。冷静さ最大。
+  </div>
+</div>
+
+<!-- ============ DECISION TABLE ============ -->
+<div style="max-width: 1280px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">推奨</h2>
+  <p style="margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.65;">
+    <span class="rec-tag">ALT A · Ink stat + gold icon + last-char gold</span>
+    が最もバランス良い。Cormorant の存在感は維持しつつ、金色を<strong>「アクセント記号（★ % h）」</strong>に格下げして density を半分以下に。about-meta との色一貫性も保たれる。
+  </p>
+  <p style="margin: 0; color: var(--muted-2); font-size: 13px;">
+    "4.86★" を画面の主役にしたい場合は <strong>B</strong>。完全に金色感を緩和したい場合は <strong>D</strong>。
+  </p>
+</div>
+
+</body>
+</html>

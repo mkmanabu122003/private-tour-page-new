@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const TokyoPrivateTourGuideCost = () => {
@@ -17,56 +19,37 @@ const TokyoPrivateTourGuideCost = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/group-photo.webp"
-          alt="Private tour guide with group in Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              How Much Does a Private Tour Guide Cost in Tokyo? A 2026 Price Guide
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 14, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who works as a private tour guide in Tokyo. These are real prices from someone who does this every day.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/group-photo.webp"
+        imageAlt="Private tour guide with group in Tokyo"
+        eyebrow="Planning Your Trip"
+        title="How Much Does a Private Tour Guide Cost in Tokyo? A 2026 Price Guide"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who works as a private tour guide in Tokyo. These are real prices from someone who does this every day."
+        date="March 14, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What You'll Actually Pay", href: "#section-01-what-youll-actually-pay" },
+          { num: "02", label: "What Actually Affects the…", href: "#section-02-what-actually-affects-the-price" },
+          { num: "03", label: "What's Included and What's Not", href: "#section-03-whats-included-and-whats-not" },
+          { num: "04", label: "Is It Worth the Money?", href: "#section-04-is-it-worth-the-money" },
+          { num: "05", label: "How to Choose the Right Guide", href: "#section-05-how-to-choose-the-right-guide" },
+          { num: "06", label: "What I Charge", href: "#section-06-what-i-charge" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Direct Answer */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               A private tour guide in Tokyo costs between ¥40,000 and ¥50,000 per group for a half-day walking tour, and ¥60,000 to ¥80,000 for a full-day experience. Those are per-group prices, not per person, so a family of four pays the same as a couple.
@@ -83,7 +66,8 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
 
             {/* Price Comparison Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What You'll Actually Pay</span></div>
+            <h2 id="section-01-what-youll-actually-pay" className="scroll-mt-20">
               What You'll Actually Pay: A Breakdown
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -146,11 +130,12 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
 
             {/* What Affects the Price */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · What Actually Affects the Price</span></div>
+            <h2 id="section-02-what-actually-affects-the-price" className="scroll-mt-20">
               What Actually Affects the Price
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Group Size (It's Usually a Flat Rate)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -160,7 +145,7 @@ const TokyoPrivateTourGuideCost = () => {
               Some guides add a surcharge for groups larger than 6-8 people, since managing a bigger group requires more effort and changes the logistics.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Duration
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -179,7 +164,7 @@ const TokyoPrivateTourGuideCost = () => {
               {" "}cost more (¥70,000-80,000) because they involve longer hours, complex transport logistics, and travel time.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Licensed vs. Unlicensed Guides
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -189,21 +174,21 @@ const TokyoPrivateTourGuideCost = () => {
               Licensed guides generally charge more because they've invested years in preparation and have verified deep knowledge. Unlicensed guides can still be good, but quality varies enormously. The license is the only nationally recognized standard. Until 2018, only licensed guides could legally offer paid tours in Japan. The law changed, but the license remains the quality benchmark.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Language
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Most licensed guides in Tokyo work in English, Chinese, or Korean. Spanish-speaking licensed guides are rare. If you need a guide who speaks a less common language, expect fewer options and sometimes a small premium. This isn't marketing spin. It's basic supply and demand. For English speakers, you'll have the widest selection and most competitive pricing.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Season
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Cherry blossom season (late March to mid-April) and autumn foliage (mid-November to early December) are peak periods. Guides book up weeks in advance, and some charge 10-20% more during these windows. If you're visiting during peak season, book early. If your dates are flexible, shoulder seasons (May, June, September, October) offer the same quality experience with more availability.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Specialization
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -211,11 +196,12 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
 
             {/* What's Included and What's Not */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What's Included and What's Not</span></div>
+            <h2 id="section-03-whats-included-and-whats-not" className="scroll-mt-20">
               What's Included and What's Not
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Typically Included
             </h3>
             <ul className="space-y-3 mb-6">
@@ -239,7 +225,7 @@ const TokyoPrivateTourGuideCost = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Not Included (Almost Always)
             </h3>
             <ul className="space-y-3 mb-6">
@@ -258,7 +244,7 @@ const TokyoPrivateTourGuideCost = () => {
               On a typical Tokyo walking tour day, expect to spend an additional ¥2,000-5,000 per person on transport, food, and admissions. For day trips, transport alone can add ¥5,000-8,000 per person depending on the destination.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               A Note About Transportation Arrangements
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -266,14 +252,15 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
 
             {/* Is It Worth the Money */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Is It Worth the Money?</span></div>
+            <h2 id="section-04-is-it-worth-the-money" className="scroll-mt-20">
               Is It Worth the Money? (Honest Answer)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Not always. I say that as someone who makes a living doing this.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               When It's Worth Every Yen
             </h3>
             <ul className="space-y-3 mb-6">
@@ -298,7 +285,7 @@ const TokyoPrivateTourGuideCost = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               When You're Fine Without One
             </h3>
             <ul className="space-y-3 mb-6">
@@ -328,32 +315,33 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
 
             {/* How to Choose */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · How to Choose the Right Guide</span></div>
+            <h2 id="section-05-how-to-choose-the-right-guide" className="scroll-mt-20">
               How to Choose the Right Guide
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Check for the National License
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Ask whether the guide holds the National Government Licensed Guide Interpreter certification. It's the only nationally recognized quality standard in Japan. A licensed guide will have no problem telling you their registration number and issuing prefecture.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Read Reviews on Multiple Platforms
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Don't just check one site. Look at Google Reviews, TripAdvisor, and the guide's own booking platform. Pay attention to reviews from travelers similar to you. A solo backpacker and a family with toddlers have very different needs.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ask About Their Specialty
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Some guides specialize in food, others in history, architecture, or photography. If you have a specific interest, find someone who matches it. A generalist is fine for standard sightseeing, but depth comes from specialization.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Confirm What's Included
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -361,7 +349,8 @@ const TokyoPrivateTourGuideCost = () => {
             </p>
 
             {/* My Prices */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · What I Charge</span></div>
+            <h2 id="section-06-what-i-charge" className="scroll-mt-20">
               What I Charge (For Transparency)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -416,7 +405,7 @@ const TokyoPrivateTourGuideCost = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Not Sure If a Guide Fits Your Trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -432,12 +421,13 @@ const TokyoPrivateTourGuideCost = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     How much does a private tour guide cost in Tokyo per day?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -445,7 +435,7 @@ const TokyoPrivateTourGuideCost = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Is it per person or per group?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -453,7 +443,7 @@ const TokyoPrivateTourGuideCost = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     What's the difference between a licensed and unlicensed guide?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -461,7 +451,7 @@ const TokyoPrivateTourGuideCost = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Are tips expected for tour guides in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -469,7 +459,7 @@ const TokyoPrivateTourGuideCost = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Can a tour guide arrange my transportation in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -478,7 +468,11 @@ const TokyoPrivateTourGuideCost = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -585,7 +579,9 @@ const TokyoPrivateTourGuideCost = () => {
       2. License exam pass rate (10-20%) — verify current JNTO data
       3. Seasonal surcharge claim (10-20%) — based on general industry practice
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

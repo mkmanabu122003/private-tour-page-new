@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const KamakuraDayTripGuideVsSolo = () => {
   return (
@@ -24,57 +26,37 @@ const KamakuraDayTripGuideVsSolo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/kamakura-great-buddha.webp"
-          alt="The Great Buddha of Kamakura (Kotoku-in)"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trips</p>
-            <h1 className="heading-display text-foreground">
-              Kamakura Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 20, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads regular day trips from Tokyo to Kamakura.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Last updated: April 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/kamakura-great-buddha.webp"
+        imageAlt="The Great Buddha of Kamakura (Kotoku-in)"
+        eyebrow="Day Trips"
+        title="Kamakura Day Trip 2026: Guided Tour vs Going Solo (Honest Comparison)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads regular day trips from Tokyo to Kamakura."
+        date="April 20, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What's in Kamakura", href: "#section-01-whats-in-kamakura" },
+          { num: "02", label: "Solo vs Guided", href: "#section-02-solo-vs-guided" },
+          { num: "03", label: "The Solo Route", href: "#section-03-the-solo-route" },
+          { num: "04", label: "The Guided Route", href: "#section-04-the-guided-route" },
+          { num: "05", label: "Which One You Should Choose", href: "#section-05-which-one-you-should-choose" },
+          { num: "06", label: "A Note on Hydrangea Season", href: "#section-06-a-note-on-hydrangea-season" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Solo wins on pure cost — about ¥4,000 per person for the classic route (Great Buddha, Hasedera, Tsurugaoka Hachimangu) from Tokyo. Guided is ¥70,000 for up to 4 people and only really pays off in three situations: the June hydrangea season at Hasedera (when timed entry tickets are nearly impossible to secure in English), combining Kamakura with Enoshima in one day, or when you want the hidden temples that most day-trippers walk right past."
               hook="Here's the real cost breakdown — plus the 3 parts of Kamakura that most solo visitors miss completely, and the one piece of modern reservation logistics that's quietly made June the hardest month to do solo."
@@ -91,7 +73,8 @@ const KamakuraDayTripGuideVsSolo = () => {
             </p>
 
             {/* What's in Kamakura */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What's in Kamakura</span></div>
+            <h2 id="section-01-whats-in-kamakura" className="scroll-mt-20">
               What's in Kamakura: The Layers Most Day-Trippers Skip
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -105,7 +88,8 @@ const KamakuraDayTripGuideVsSolo = () => {
             </p>
 
             {/* Side-by-side comparison */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Solo vs Guided</span></div>
+            <h2 id="section-02-solo-vs-guided" className="scroll-mt-20">
               Solo vs Guided: At a Glance
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -163,10 +147,11 @@ const KamakuraDayTripGuideVsSolo = () => {
             </div>
 
             {/* The Solo Route */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · The Solo Route</span></div>
+            <h2 id="section-03-the-solo-route" className="scroll-mt-20">
               The Solo Route (Public Transit from Tokyo)
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Getting there
             </h3>
             <ul className="space-y-3 mb-6">
@@ -181,7 +166,7 @@ const KamakuraDayTripGuideVsSolo = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Getting around once you're there
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -194,7 +179,7 @@ const KamakuraDayTripGuideVsSolo = () => {
               For Tsurugaoka Hachimangu and the eastern temples (Hokokuji, Sugimotodera), you walk or take a local bus from Kamakura Station — not the Enoden.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Admission fees (2026)
             </h3>
             <div className="overflow-x-auto mb-8">
@@ -228,7 +213,7 @@ const KamakuraDayTripGuideVsSolo = () => {
               </table>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cost breakdown (1 person, classic 3-site route)
             </h3>
             <div className="overflow-x-auto mb-8">
@@ -265,7 +250,7 @@ const KamakuraDayTripGuideVsSolo = () => {
               Add Hokokuji (¥400) and the hydrangea ticket (¥500 in June) and you land around ¥4,000–¥4,300 per person. Lunch in Kamakura typically adds ¥1,500–¥3,000.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The 3 things solo visitors usually miss
             </h3>
             <ol className="space-y-3 mb-8 list-decimal list-inside">
@@ -281,7 +266,8 @@ const KamakuraDayTripGuideVsSolo = () => {
             </ol>
 
             {/* The Guided Route */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · The Guided Route</span></div>
+            <h2 id="section-04-the-guided-route" className="scroll-mt-20">
               The Guided Route (What You're Actually Paying For)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -327,7 +313,8 @@ const KamakuraDayTripGuideVsSolo = () => {
             </p>
 
             {/* Decision framework */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Which One You Should Choose</span></div>
+            <h2 id="section-05-which-one-you-should-choose" className="scroll-mt-20">
               Which One You Should Choose
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -372,7 +359,8 @@ const KamakuraDayTripGuideVsSolo = () => {
             </div>
 
             {/* Seasonal note */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · A Note on Hydrangea Season</span></div>
+            <h2 id="section-06-a-note-on-hydrangea-season" className="scroll-mt-20">
               A Note on Hydrangea Season (June)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -386,7 +374,7 @@ const KamakuraDayTripGuideVsSolo = () => {
             </p>
 
             {/* Related */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               Still Choosing Between Day Trips?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -407,7 +395,7 @@ const KamakuraDayTripGuideVsSolo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Planning a Kamakura Day Trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -427,34 +415,35 @@ const KamakuraDayTripGuideVsSolo = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can you do Kamakura as a day trip from Tokyo?</h3>
+                  <h3>Can you do Kamakura as a day trip from Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes, and it's one of the easiest. The JR Yokosuka Line from Tokyo Station reaches Kamakura in about 60 minutes, and the Shonan-Shinjuku Line from Shinjuku is roughly the same time. A full day comfortably covers the Great Buddha, Hasedera, and Tsurugaoka Hachimangu.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is the Enoden day pass worth buying?</h3>
+                  <h3>Is the Enoden day pass worth buying?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     For a classic Kamakura day (Great Buddha + Hasedera + optional Enoshima), yes — the ¥800 Noriorikun pays for itself in two or three rides. For just the shrines near Kamakura Station, a per-ride ticket is cheaper.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is the Japan Rail Pass worth it for Kamakura?</h3>
+                  <h3>Is the Japan Rail Pass worth it for Kamakura?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Both the JR Yokosuka Line and the Shonan-Shinjuku Line are covered by the JR Pass, so if you have one, use it. If you don't, round-trip JR tickets run about ¥1,900 — cheap enough that buying a JR Pass just for Kamakura doesn't make sense.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">When is the best time to visit Kamakura?</h3>
+                  <h3>When is the best time to visit Kamakura?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Hydrangea season (mid-June) and autumn leaves (late November to early December) are the two photographic peaks, but both bring serious crowds. For a quieter visit with good weather, aim for late April, early May, or mid-October. Winter weekdays are wonderfully uncrowded if you don't mind cool weather.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How many sites can you realistically see in one day?</h3>
+                  <h3>How many sites can you realistically see in one day?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Solo: comfortably 4–5 sites. Guided: 5–7 sites, because less time is lost on navigation, bus waits, and searching for lunch. If you want Hokokuji + the big three + Enoshima in one day, guided is noticeably less stressful.
                   </p>
@@ -462,7 +451,11 @@ const KamakuraDayTripGuideVsSolo = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -559,7 +552,9 @@ const KamakuraDayTripGuideVsSolo = () => {
         - 2026 specific hydrangea-ticket start/end dates — article says "check hasedera.jp in late May for the current year's schedule"
         - JR 2026-03-14 revised fare is reflected; final Tokyo→Kamakura PDF not individually accessed
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

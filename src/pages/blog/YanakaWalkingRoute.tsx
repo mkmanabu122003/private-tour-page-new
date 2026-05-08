@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const YanakaWalkingRoute = () => {
   return (
@@ -13,55 +15,45 @@ const YanakaWalkingRoute = () => {
         canonicalPath="/blog/yanaka-tokyo-walking-route"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/asakusa-kaminarimon-morning.webp"
-          alt="Quiet morning street scene in traditional Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Yanaka Tokyo: A Licensed Guide's 3-Hour Walking Route
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/asakusa-kaminarimon-morning.webp"
+        imageAlt="Quiet morning street scene in traditional Tokyo"
+        eyebrow="Tokyo Area Guides"
+        title="Yanaka Tokyo: A Licensed Guide's 3-Hour Walking Route"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Why Yanaka Survived When…", href: "#section-01-why-yanaka-survived-when-the-rest-of-tokyo-didnt" },
+          { num: "02", label: "The 3-Hour Route", href: "#section-02-the-3-hour-route" },
+          { num: "03", label: "What You're Looking At", href: "#section-03-what-youre-looking-at" },
+          { num: "04", label: "Where to Eat and Drink in…", href: "#section-04-where-to-eat-and-drink-in-yanaka" },
+          { num: "05", label: "Best Time to Visit Yanaka", href: "#section-05-best-time-to-visit-yanaka" },
+          { num: "06", label: "Walk Yanaka with a licensed…", href: "#section-06-walk-yanaka-with-a-licensed-guide-who-knows" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               There's a moment on every Yanaka tour I lead when a guest stops walking and just looks around. They've been in Tokyo for a day or two already. They've seen the neon of Shinjuku, the scramble crossing in Shibuya, the towering skyscrapers of Marunouchi. And then they step into Yanaka and something shifts. The buildings are low, wooden, weathered. Cats sleep on walls. An elderly woman sweeps the sidewalk in front of a shop that her grandmother opened. Nobody is rushing.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               "This doesn't feel like Tokyo," they say. But it is Tokyo. It's just the Tokyo that existed before everything else was built on top of it. And this yanaka tokyo walking route is how I show it to them, every time, because it works. Three hours, one straight line from Nippori to Nezu, and by the end you'll understand why this neighborhood matters more than most guidebooks let on.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Why Yanaka Survived When the Rest of Tokyo Didn't</span></div>
+            <h2 id="section-01-why-yanaka-survived-when-the-rest-of-tokyo-didnt" className="scroll-mt-20">
               Why Yanaka Survived When the Rest of Tokyo Didn't
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -76,20 +68,20 @@ const YanakaWalkingRoute = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               The result is that Yanaka today is the closest thing to pre-war Tokyo that still exists as a living neighborhood, not a museum, not a reconstruction, but an actual community where people live and work in buildings that their great-grandparents would recognize. That's what makes any yanaka tokyo walking route worth your time. You're not visiting a preserved relic. You're walking through a neighborhood that simply never stopped being itself.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The 3-Hour Route</span></div>
+            <h2 id="section-02-the-3-hour-route" className="scroll-mt-20">
               The 3-Hour Route (With Map Notes)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I've refined this yanaka tokyo walking route over hundreds of tours. It moves in a roughly straight line from north to south, which means you're never backtracking, and it's almost entirely flat despite Yanaka's hillside position. You'll cover about three kilometers at a pace that allows for plenty of stopping, looking, photographing, and eating.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Start: Nippori Station (West Exit)</h3>
+            <h3>Start: Nippori Station (West Exit)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Take the JR Yamanote Line to Nippori Station and use the west exit. You'll emerge onto a quiet street that immediately feels different from the station areas in Shinjuku or Shibuya. No department stores, no crowds, no electronic billboards. Just a residential neighborhood. Turn left and walk south. Within two minutes you'll reach the entrance to Yanaka Cemetery.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Yanaka Cemetery (30 minutes)</h3>
+            <h3>Yanaka Cemetery (30 minutes)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I know, a cemetery sounds like an unusual start to a walking tour. But Yanaka Cemetery is nothing like what most Western visitors expect. It's a sprawling, tree-lined space that functions more like a public park than a graveyard. Locals walk their dogs here. Families picnic under the cherry trees in spring. The main path, a wide, paved avenue lined with enormous cherry trees, is one of Tokyo's most beautiful walks during sakura season.
             </p>
@@ -97,7 +89,7 @@ const YanakaWalkingRoute = () => {
               The cemetery holds over 7,000 graves, including that of Tokugawa Yoshinobu, the fifteenth and last shogun of Japan. I always stop at his grave to explain the end of the Edo period: how this man voluntarily surrendered power in 1868, ending 260 years of military rule and launching Japan into the modern era. He retired to a quiet life and was eventually buried here, in a neighborhood that, fittingly, still feels like the Edo era he left behind.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Temple Row (45 minutes)</h3>
+            <h3>Temple Row (45 minutes)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Exiting the cemetery's southern edge, you enter what I call "temple row," a stretch of residential streets that contains over 70 Buddhist temples within a few blocks. Yanaka has the highest concentration of temples of any neighborhood in Tokyo, a legacy of Edo-period policies that relocated temples to the city's outskirts. Each temple is small, quiet, and often tended by a single priest and their family. Most are open to walk through, and you'll pass through wooden gates into moss-covered courtyards where stone lanterns lean with age and incense drifts from darkened halls.
             </p>
@@ -105,7 +97,7 @@ const YanakaWalkingRoute = () => {
               I don't try to visit every temple. Instead, I pick three or four based on what the guest is interested in. Tenno-ji has a seated bronze Buddha that predates the neighborhood. Kyoo-ji has a painted ceiling with a dragon that watches you from every angle. Joko-ji is tiny and easy to miss, but its garden is one of the most peaceful spaces in Tokyo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Yanaka Ginza (45 minutes)</h3>
+            <h3>Yanaka Ginza (45 minutes)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The route brings you to the top of the Yuyake Dandan, a flight of stairs famous for its sunset views over the rooftops of Yanaka. At the bottom of those stairs begins Yanaka Ginza, a 170-meter shopping street that is the heart of the neighborhood. This isn't a tourist shopping street. It's where residents buy their groceries, their household goods, their daily snacks.
             </p>
@@ -113,15 +105,15 @@ const YanakaWalkingRoute = () => {
               The street is narrow, lined with small shops on both sides, many with hand-painted signs and wooden facades. You'll find a butcher selling hand-formed croquettes, a pickle shop with barrels of vegetables fermenting in the doorway, a rice cracker maker who toasts each piece over charcoal. This is where I build in time for eating, and I'll cover the food in detail below.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Backstreets to Nezu (45 minutes)</h3>
+            <h3>Backstreets to Nezu (45 minutes)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               From Yanaka Ginza, the route threads through residential backstreets toward Nezu. This is the most rewarding section for photography and quiet observation. You'll pass wooden houses with potted plants overflowing onto narrow lanes, workshops where craftspeople still make things by hand, and community bulletin boards advertising neighborhood festivals. The streets are barely wide enough for a single car, and most traffic is bicycles and pedestrians.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The walk ends at Nezu Station on the Chiyoda Line, but before you descend into the subway, I always take guests to Nezu Shrine, one of Tokyo's oldest Shinto shrines, famous for its tunnel of vermillion torii gates and its azalea garden that erupts in color every April. It's a fitting end to a route that has moved from a cemetery of shoguns through streets of temples and into a living neighborhood that refuses to become anything other than what it has always been.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What You're Looking At</span></div>
+            <h2 id="section-03-what-youre-looking-at" className="scroll-mt-20">
               What You're Looking At: The Details That Matter
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -149,8 +141,8 @@ const YanakaWalkingRoute = () => {
               <Link to="/blog/old-tokyo-shitamachi" className="text-accent hover:underline">Shitamachi and old Tokyo</Link>
               , you'll recognize Yanaka as one of the best-preserved examples of everything that article describes.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Where to Eat and Drink in Yanaka</span></div>
+            <h2 id="section-04-where-to-eat-and-drink-in-yanaka" className="scroll-mt-20">
               Where to Eat and Drink in Yanaka
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -178,8 +170,8 @@ const YanakaWalkingRoute = () => {
               <Link to="/blog/tokyo-hidden-gems" className="text-accent hover:underline">Tokyo hidden gems guide</Link>{" "}
               covers several spots that pair well with a Yanaka visit.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Best Time to Visit Yanaka</span></div>
+            <h2 id="section-05-best-time-to-visit-yanaka" className="scroll-mt-20">
               Best Time to Visit Yanaka
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -212,7 +204,8 @@ const YanakaWalkingRoute = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · Walk Yanaka with a licensed guide who knows</span></div>
+              <h2 id="section-06-walk-yanaka-with-a-licensed-guide-who-knows" className="scroll-mt-20">
                 Walk Yanaka with a licensed guide who knows every backstreet
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -226,41 +219,46 @@ const YanakaWalkingRoute = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How do I get to the start of the Yanaka walking route?</h3>
+                  <h3>How do I get to the start of the Yanaka walking route?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Take the JR Yamanote Line to Nippori Station and use the west exit. The station is about 10 minutes from Ueno and 25 minutes from Shinjuku. From the west exit, the entrance to Yanaka Cemetery is a two-minute walk to the south.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is the Yanaka walking route suitable for children or elderly visitors?</h3>
+                  <h3>Is the Yanaka walking route suitable for children or elderly visitors?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes. The route is almost entirely flat, well-paved, and only about three kilometers total. The Yuyake Dandan staircase is the only significant elevation change, and it has handrails. I've walked this route with guests in their 80s and with families with young children. The pace is gentle and there are plenty of places to sit and rest.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Are shops in Yanaka open on weekends?</h3>
+                  <h3>Are shops in Yanaka open on weekends?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Most shops on Yanaka Ginza are open daily, though individual shops may close on different days of the week (usually Monday or Tuesday). Weekend afternoons are the busiest time. For a quieter experience, visit on a weekday morning.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can I combine Yanaka with other nearby areas?</h3>
+                  <h3>Can I combine Yanaka with other nearby areas?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Absolutely. Yanaka connects naturally to Ueno (museums, Ameyoko market) to the south and Nezu (Nezu Shrine, residential backstreets) at the route's end. Together, the Yanaka-Nezu-Sendagi area is known as "Yanesen" and makes a full-day outing. My Shitamachi tour often combines Yanaka with Asakusa for a comprehensive old Tokyo experience.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Do I need to book temple visits in advance?</h3>
+                  <h3>Do I need to book temple visits in advance?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No. The temples along the Yanaka walking route are open to the public and free to enter. You can walk into the grounds and courtyards at any time during daylight hours. Some interior halls may be closed to visitors, but the gardens and grounds are always accessible.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -285,7 +283,9 @@ const YanakaWalkingRoute = () => {
           { "@type": "Question", name: "Do I need to book temple visits in advance?", acceptedAnswer: { "@type": "Answer", text: "No. Temples along the route are open to the public and free to enter during daylight hours. No advance booking is needed." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

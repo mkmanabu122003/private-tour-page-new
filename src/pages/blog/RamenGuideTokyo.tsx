@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const RamenGuideTokyo = () => {
   return (
@@ -20,52 +22,44 @@ const RamenGuideTokyo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/ramen-guide-hero.webp"
-          alt="A bowl of rich Tokyo ramen with sesame, greens, and toppings"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Food Guides</p>
-            <h1 className="heading-display text-foreground">
-              Ramen Guide Tokyo: What a Local Guide Actually Orders (And Where)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a guide who has eaten ramen at least twice a week for the past 15 years and brings clients to his favorite shops on tour.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/ramen-guide-hero.webp"
+        imageAlt="A bowl of rich Tokyo ramen with sesame, greens, and toppings"
+        eyebrow="Food Guides"
+        title="Ramen Guide Tokyo: What a Local Guide Actually Orders (And Where)"
+        subtitle="Written by Manabu, a guide who has eaten ramen at least twice a week for the past 15 years and brings clients to his favorite shops on tour."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Why \"Best Ramen in Tokyo\"…", href: "#section-01-why-best-ramen-in-tokyo-lists-are-mostly-wrong" },
+          { num: "02", label: "The 4 Main Ramen Styles", href: "#section-02-the-4-main-ramen-styles" },
+          { num: "03", label: "My Personal Top Picks by…", href: "#section-03-my-personal-top-picks-by-neighborhood" },
+          { num: "04", label: "How to Order Ramen in Japan…", href: "#section-04-how-to-order-ramen-in-japan-without-speaking" },
+          { num: "05", label: "What to Eat with Your Ramen", href: "#section-05-what-to-eat-with-your-ramen" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Last year, a client from New York (a serious food person, ran a restaurant, knew his stuff) asked me to take him to the "best ramen in Tokyo." I paused. "The best ramen in Tokyo depends on what kind of ramen you mean," I said. "That's like asking for the best pizza in New York without specifying thin-crust, Sicilian, or Neapolitan."
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Tokyo has over 10,000 ramen shops. No single list can cover them all, and the "best ramen" articles you find online are usually sponsored, outdated, or reflect one writer's preference. This ramen guide for Tokyo is different: it's organized by style, informed by 15+ years of eating ramen in this city, and focused on helping you understand what you're ordering, not just where to stand in line.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Why "Best Ramen in Tokyo" Lists Are Mostly Wrong</span></div>
+            <h2 id="section-01-why-best-ramen-in-tokyo-lists-are-mostly-wrong" className="scroll-mt-20">
               Why "Best Ramen in Tokyo" Lists Are Mostly Wrong
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -74,11 +68,11 @@ const RamenGuideTokyo = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               The second problem: famous shops aren't always the best. Some of Tokyo's most hyped ramen joints live on their reputation from 2015. The shop with a 90-minute line in Shinjuku might serve great ramen, but the shop three blocks away with no line might serve better ramen. They just don't have a viral Instagram presence. In my tours, I take clients to both kinds, and the "discovery" shops are almost always the bigger hit.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The 4 Main Ramen Styles</span></div>
+            <h2 id="section-02-the-4-main-ramen-styles" className="scroll-mt-20">
               The 4 Main Ramen Styles (And Which Tokyo Neighborhood Does Each Best)
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Shoyu Ramen (Soy Sauce-Based)</h3>
+            <h3>Shoyu Ramen (Soy Sauce-Based)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is Tokyo's original ramen style: a clear or slightly brown broth made with chicken or seafood stock and seasoned with soy sauce. The flavor is clean, savory, and lets the quality of the noodles shine through. Think of it as ramen in its most refined form, with no heavy flavors to hide behind. The noodles are typically thin and wavy.
             </p>
@@ -86,7 +80,7 @@ const RamenGuideTokyo = () => {
               <strong className="text-foreground">Best neighborhoods:</strong> The eastern side of Tokyo (Asakusa, Ueno, and the old Shitamachi areas) is where shoyu ramen has its deepest roots. Many shops here have been serving essentially the same recipe for 40–60 years.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tonkotsu Ramen (Pork Bone Broth)</h3>
+            <h3>Tonkotsu Ramen (Pork Bone Broth)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The thick, creamy, opaque broth made by boiling pork bones for 12–20 hours. Originated in Fukuoka (Kyushu) and conquered Tokyo in the 2000s. The broth is rich, porky, and almost milky in texture. Noodles are thin and straight, served firm (kata) by default. This is the style most foreigners think of when they think "ramen."
             </p>
@@ -94,7 +88,7 @@ const RamenGuideTokyo = () => {
               <strong className="text-foreground">Best neighborhoods:</strong> Ikebukuro and Shinjuku have the highest concentration of quality tonkotsu shops, many run by Kyushu-born chefs who brought their recipes to Tokyo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Miso Ramen</h3>
+            <h3>Miso Ramen</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Originated in Sapporo (Hokkaido) and brought south to Tokyo. The broth is hearty, complex, and slightly sweet, with miso paste adding depth and umami. Often served with corn, butter, and bean sprouts, toppings that reflect its northern origins. The noodles are thick and curly to hold the heavy broth.
             </p>
@@ -102,15 +96,15 @@ const RamenGuideTokyo = () => {
               <strong className="text-foreground">Best neighborhoods:</strong> Miso ramen shops are scattered across Tokyo without a clear geographic center. Some of the best are in residential neighborhoods far from tourist areas, the kind of places you'd only find with a local guide or serious research.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tsukemen (Dipping Ramen)</h3>
+            <h3>Tsukemen (Dipping Ramen)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo's own invention. The noodles and broth are served separately. You dip the cold or room-temperature noodles into a concentrated, intensely flavored broth. The broth is thicker and more potent than regular ramen because it's designed as a dipping sauce, not a soup. Invented in the 1960s in Ikebukuro.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Best neighborhoods:</strong> Ikebukuro (where it was born), plus Shinjuku and Shibuya. Tsukemen is particularly good in summer when a hot bowl of soup ramen feels overwhelming.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · My Personal Top Picks by Neighborhood</span></div>
+            <h2 id="section-03-my-personal-top-picks-by-neighborhood" className="scroll-mt-20">
               My Personal Top Picks by Neighborhood
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -130,8 +124,8 @@ const RamenGuideTokyo = () => {
                 <strong className="text-foreground">Ramen Street (Tokyo Station):</strong> A curated collection of famous ramen shops inside Tokyo Station. Not a bad option for a quick bowl when passing through, though the lines are longer and the atmosphere is more "food court" than "authentic neighborhood shop."
               </li>
             </ul>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · How to Order Ramen in Japan Without Speaking</span></div>
+            <h2 id="section-04-how-to-order-ramen-in-japan-without-speaking" className="scroll-mt-20">
               How to Order Ramen in Japan Without Speaking Japanese
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -149,8 +143,8 @@ const RamenGuideTokyo = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Slurping is expected.</strong> In Japan, slurping your noodles is not rude. It's how ramen is eaten. The slurp aerates the noodles and broth, cooling them and enhancing the flavor. Think of it like swirling wine: functional, not just theatrical.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · What to Eat with Your Ramen</span></div>
+            <h2 id="section-05-what-to-eat-with-your-ramen" className="scroll-mt-20">
               What to Eat with Your Ramen (The Extras Nobody Tells You About)
             </h2>
             <ul className="space-y-4 mb-8">
@@ -178,7 +172,7 @@ const RamenGuideTokyo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a guide who knows where to eat?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -192,36 +186,41 @@ const RamenGuideTokyo = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What's the difference between shoyu and tonkotsu ramen?</h3>
+                  <h3>What's the difference between shoyu and tonkotsu ramen?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Shoyu (soy sauce) ramen has a clear or light brown broth made from chicken or seafood stock. It's clean and savory. Tonkotsu (pork bone) ramen has a thick, creamy, opaque white broth from boiling pork bones for 12+ hours. It's rich and heavy. They're completely different experiences. Shoyu is the elegant whiskey, tonkotsu is the craft beer.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is tipping expected at ramen shops in Tokyo?</h3>
+                  <h3>Is tipping expected at ramen shops in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No. Tipping is not practiced at ramen shops or any restaurant in Japan. The price on the ticket machine is the total price. No service charge, no tip expected or desired. For more on this, read my article on{" "}
                     <Link to="/blog/tipping-in-japan" className="text-accent hover:underline">tipping in Japan</Link>.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Are there vegetarian ramen options in Tokyo?</h3>
+                  <h3>Are there vegetarian ramen options in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes, though they're less common than meat-based options. Several shops specialize in vegetable-broth ramen (yasai ramen), and the number is growing. Some shops offer soy milk-based broths that are surprisingly rich. Look for shops that advertise "vegan" or "shojin" (Buddhist vegetarian) options. They exist in most major neighborhoods.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How much does a bowl of ramen cost in Tokyo?</h3>
+                  <h3>How much does a bowl of ramen cost in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     A standard bowl ranges from ¥800 to ¥1,200. Premium shops and specialty bowls can reach ¥1,500–2,000. Toppings (egg, extra chashu, nori) are ¥100–300 each. A full ramen meal with toppings and gyoza typically costs ¥1,200–1,800 per person, one of the best food values in Tokyo.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -247,7 +246,9 @@ const RamenGuideTokyo = () => {
           { "@type": "Question", name: "How much does ramen cost in Tokyo?", acceptedAnswer: { "@type": "Answer", text: "¥800–1,200 for a standard bowl. A full meal with toppings and gyoza: ¥1,200–1,800. One of Tokyo's best food values." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

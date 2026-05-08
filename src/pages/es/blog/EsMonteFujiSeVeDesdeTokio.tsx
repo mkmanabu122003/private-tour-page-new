@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsMonteFujiSeVeDesdeTokio = () => {
   return (
@@ -19,53 +21,34 @@ const EsMonteFujiSeVeDesdeTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/hakone-pirate-ship-ashi.webp"
-          alt="Monte Fuji visto desde el lago Ashi en Hakone"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planifica tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              ¿Se Ve el Monte Fuji desde Tokio? Cuándo, Desde Dónde y Cómo
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/hakone-pirate-ship-ashi.webp"
+        imageAlt="Monte Fuji visto desde el lago Ashi en Hakone"
+        eyebrow="Planifica tu Viaje"
+        title="¿Se Ve el Monte Fuji desde Tokio? Cuándo, Desde Dónde y Cómo"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "La Respuesta Corta", href: "#section-01-la-respuesta-corta" },
+          { num: "02", label: "Los Mejores Miradores del…", href: "#section-02-los-mejores-miradores-del-monte-fuji-dentro" },
+          { num: "03", label: "La Mejor Hora del Día para…", href: "#section-03-la-mejor-hora-del-día-para-ver-el-monte-fuji" },
+          { num: "04", label: "Fuji-san en la Cultura…", href: "#section-04-fuji-san-en-la-cultura-japonesa" },
+          { num: "05", label: "FAQ", href: "#section-05-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Este artículo cubre todo sobre ver el Monte Fuji desde Tokio: los mejores miradores, las horas ideales y la época del año. Si también quieres visitarlo en persona, más abajo encontrarás cómo llegar en tren o autobús.
@@ -78,21 +61,22 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             {/* La respuesta corta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · La Respuesta Corta</span></div>
+            <h2 id="section-01-la-respuesta-corta" className="scroll-mt-20">
               La Respuesta Corta: Sí, Pero Depende del Día
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Monte Fuji está a unos 100 kilómetros al suroeste de Tokio. Es la montaña más alta de Japón, con 3.776 metros, y su forma cónica perfecta la hace visible desde distancias enormes, siempre que la atmósfera lo permita. El problema no es la distancia, sino lo que hay entre tú y la montaña: humedad, contaminación, nubes y calima. Sí, se ve el Monte Fuji desde Tokio, pero no todos los días del año.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Por qué algunos días no se ve?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La visibilidad del Fuji depende fundamentalmente de la calidad del aire. En verano, la humedad alta crea una capa de vapor que actúa como un velo sobre el horizonte. Incluso en días soleados y despejados, esa humedad suspendida puede hacer que la montaña desaparezca por completo. En invierno ocurre lo contrario: el aire seco y frío procedente de Siberia limpia la atmósfera y deja un cielo tan nítido que el Fuji parece estar a un paso. Recuerdo una mañana de enero en la que, al salir de la estación de Shinjuku, el Fuji apareció entre los edificios tan grande y tan claro que parecía un decorado de cine. Ese tipo de días son los que nos recuerdan por qué vivimos aquí.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Las mejores épocas del año para verlo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -109,28 +93,29 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             {/* Los mejores miradores */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Los Mejores Miradores del Monte Fuji Dentro</span></div>
+            <h2 id="section-02-los-mejores-miradores-del-monte-fuji-dentro" className="scroll-mt-20">
               Los Mejores Miradores del Monte Fuji Dentro de Tokio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No todos los miradores son iguales. Algunos son famosos pero decepcionantes. Otros son gratuitos, vacíos y ofrecen las mejores vistas. Después de años viviendo aquí, estos son los que recomiendo de verdad.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tokyo Skytree (el más famoso)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Con 634 metros de altura, el Tokyo Skytree es el punto más alto de la ciudad y, lógicamente, uno de los mejores sitios desde donde se ve el Monte Fuji desde Tokio. Desde la plataforma de observación Tembo Deck (a 350 metros) o la Tembo Galleria (a 450 metros), el Fuji aparece al suroeste como una silueta inconfundible. En días claros de invierno, la vista es sencillamente sobrecogedora. El inconveniente es el precio (alrededor de 2.100 yenes para la primera plataforma y 3.400 yenes para las dos) y las colas, que pueden ser largas en fines de semana y festivos. Mi consejo: ve entre semana, justo cuando abren, para disfrutar de la vista sin aglomeraciones.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Torre de Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La Torre de Tokio tiene menos altura que el Skytree (333 metros), pero está más al sur y ofrece un ángulo diferente hacia el Fuji. Desde su plataforma principal a 150 metros, en un día claro puedes ver la montaña enmarcada entre los edificios del distrito de Minato. Es un mirador más íntimo y con menos turistas que el Skytree. Hay algo nostálgico en verla: esta torre roja y blanca inspirada en la Torre Eiffel lleva aquí desde 1958, y durante décadas fue el lugar favorito de los tokiotas para contemplar el Fuji. Esa tradición sigue viva.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Sky (el nuevo favorito, 360°)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -144,14 +129,14 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Puente de Odaiba al atardecer
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Odaiba es una isla artificial en la Bahía de Tokio, y el paseo marítimo junto al Rainbow Bridge ofrece una perspectiva única: el Fuji al fondo, los rascacielos de Tokio en medio y el mar en primer plano. Al atardecer, si la visibilidad acompaña, el Monte Fuji se recorta como una silueta oscura contra un cielo naranja y rosa. Es uno de los paisajes urbanos más bonitos que conozco. Recuerdo una tarde de noviembre en la que llevé a una familia española a Odaiba sin decirles por qué. Cuando vieron el Fuji al fondo del puente, con la Torre de Tokio iluminada a la izquierda, la madre se emocionó hasta las lágrimas. Esos momentos son los que hacen que mi trabajo merezca la pena.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desde el shinkansen (bonus)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -159,28 +144,29 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             {/* La mejor hora del día */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · La Mejor Hora del Día para Ver el Monte Fuji</span></div>
+            <h2 id="section-03-la-mejor-hora-del-día-para-ver-el-monte-fuji" className="scroll-mt-20">
               La Mejor Hora del Día para Ver el Monte Fuji
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La hora importa tanto como la época del año. La atmósfera cambia a lo largo del día, y eso afecta directamente a la visibilidad.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Amanecer: la opción más segura
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Las primeras horas de la mañana son, con diferencia, el mejor momento. El aire está más frío, la humedad no ha tenido tiempo de acumularse y la actividad humana aún no ha generado contaminación. Si te levantas antes del amanecer y te sitúas en un buen mirador, tus probabilidades de ver el Fuji son las más altas del día. En invierno, el amanecer en Tokio es sobre las 6:30, así que no necesitas madrugar de forma extrema. El Fuji al amanecer, con la cima nevada brillando en rosa y dorado, es una imagen que se queda grabada para siempre.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Atardecer: el Fuji en silueta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El atardecer también puede funcionar, aunque la visibilidad suele ser peor que por la mañana. La ventaja es estética: cuando se ve el Monte Fuji desde Tokio al atardecer, aparece como una silueta oscura contra un cielo encendido. No ves los detalles, ni la nieve, ni las laderas, pero la forma cónica perfecta se recorta con una belleza casi irreal. Odaiba y la zona del Tokyo Gate Bridge son ideales para esta hora.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Días de lluvia y tifones: olvídalo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -188,21 +174,22 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             {/* Fuji en la cultura japonesa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Fuji-san en la Cultura Japonesa</span></div>
+            <h2 id="section-04-fuji-san-en-la-cultura-japonesa" className="scroll-mt-20">
               Fuji-san en la Cultura Japonesa (Por Qué Nos Obsesiona)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Para los japoneses, el Monte Fuji no es solo una montaña. Es un símbolo nacional, un objeto de devoción espiritual y una fuente inagotable de inspiración artística. Quiero contarte un poco sobre por qué nos importa tanto, porque creo que entenderlo hace que la experiencia de verlo sea más profunda.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Las 36 vistas de Hokusai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En la década de 1830, el artista ukiyo-e Katsushika Hokusai publicó su serie "Treinta y seis vistas del Monte Fuji", una colección de grabados en madera que mostraban el Fuji desde distintos puntos y en distintas estaciones. La más famosa, "La gran ola de Kanagawa", muestra una ola gigante con el Fuji pequeño al fondo, una de las imágenes más reconocibles del arte universal. Lo que muchos no saben es que muchas de esas 36 vistas fueron pintadas desde lugares dentro o cerca de Tokio (entonces llamado Edo). Hokusai ya sabía, hace casi 200 años, que se ve el Monte Fuji desde Tokio y que esa visión era digna de ser inmortalizada. Si te interesa el arte, el Museo Sumida Hokusai, cerca del Skytree, tiene reproducciones magníficas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Por qué los japoneses miran al Fuji como los españoles al mar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -210,28 +197,28 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             {/* ¿Quieres verlo más de cerca? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               ¿Quieres Verlo Más de Cerca? Cómo Ir al Monte Fuji desde Tokio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si ver el Fuji desde Tokio te deja con ganas de más, puedes visitarlo en persona en una excursión de un día. La zona de los Cinco Lagos (Kawaguchiko) está a menos de 2 horas de Shinjuku.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               En tren (la opción más práctica)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Desde Shinjuku, el <strong className="text-foreground">tren expreso Fuji Excursion</strong> te lleva directamente a Kawaguchiko en 1 hora y 50 minutos (4.130 yenes por trayecto). Tiene reserva obligatoria y se agota rápido. Si tienes el Japan Rail Pass, puedes cubrir parte del trayecto hasta Otsuki y pagar solo el tramo final (1.170 yenes).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               En autobús (la más económica)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los autobuses salen de Shinjuku Busta y llegan a Kawaguchiko en unas 2 horas por unos 2.200 yenes. La mitad del precio del tren, aunque el tráfico puede alargar el viaje en fines de semana.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Subir o solo verlo?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -239,13 +226,14 @@ const EsMonteFujiSeVeDesdeTokio = () => {
             </p>
 
             {/* Preguntas frecuentes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · FAQ</span></div>
+            <h2 id="section-05-faq" className="scroll-mt-20">
               Preguntas Frecuentes
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Se ve el Monte Fuji desde Tokio todo el año?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -254,7 +242,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuántos días al año se ve el Monte Fuji desde Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -263,7 +251,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿En qué meses se ve mejor el Monte Fuji desde Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -272,7 +260,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cómo saber si se ve el Monte Fuji hoy?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -281,7 +269,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuál es el mejor mirador gratuito en 2026?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -290,7 +278,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Se ve desde el hotel?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -299,7 +287,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuántos kilómetros hay entre Tokio y el Monte Fuji?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -308,7 +296,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Hay tours para ver el Monte Fuji desde Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -323,7 +311,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres ver el Monte Fuji con un guía local que conoce los mejores miradores?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -338,7 +326,11 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -448,7 +440,9 @@ const EsMonteFujiSeVeDesdeTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

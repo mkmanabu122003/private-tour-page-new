@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsAsakusaTokioGuia = () => {
   return (
@@ -19,53 +21,35 @@ const EsAsakusaTokioGuia = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-guide-hero.webp"
-          alt="Guía completa de Asakusa, más allá de Senso-ji"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Asakusa: Qué Ver, Qué Evitar y Cómo Ir Antes Que los Turistas
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-guide-hero.webp"
+        imageAlt="Guía completa de Asakusa, más allá de Senso-ji"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Asakusa: Qué Ver, Qué Evitar y Cómo Ir Antes Que los Turistas"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Asakusa a las 7 de la Mañana", href: "#section-01-asakusa-a-las-7-de-la-mañana" },
+          { num: "02", label: "Qué Ver en Asakusa", href: "#section-02-qué-ver-en-asakusa" },
+          { num: "03", label: "Qué Evitar en Asakusa", href: "#section-03-qué-evitar-en-asakusa" },
+          { num: "04", label: "Dónde Comer en Asakusa Como…", href: "#section-04-dónde-comer-en-asakusa-como-un-local" },
+          { num: "05", label: "Cómo Llegar y Cuánto Tiempo…", href: "#section-05-cómo-llegar-y-cuánto-tiempo-dedicar" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Piensa en Asakusa como el casco antiguo de tu ciudad, el lugar donde todo empezó. En mi caso no es una metáfora: crecí a veinte minutos de aquí, y este barrio forma parte de mi historia personal tanto como del mapa de Tokio. Llevo años empezando mis mañanas aquí antes de que llegue el primer autobús turístico, y puedo asegurarte una cosa: el Asakusa de las siete de la mañana y el de las doce del mediodía son dos lugares completamente distintos.
@@ -78,14 +62,15 @@ const EsAsakusaTokioGuia = () => {
             </p>
 
             {/* Asakusa a las 7 de la mañana */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Asakusa a las 7 de la Mañana</span></div>
+            <h2 id="section-01-asakusa-a-las-7-de-la-mañana" className="scroll-mt-20">
               Asakusa a las 7 de la Mañana: Otro Mundo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El recinto del Senso-ji nunca cierra. La mayoría de la gente no lo sabe, pero puedes entrar a cualquier hora del día o de la noche. La diferencia entre hacerlo a las 7 AM y hacerlo a mediodía es la diferencia entre meditar en un jardín y esperar en la cola de un aeropuerto. Si de verdad quieres vivir Asakusa, esta es tu asakusa tokio guia número uno: madruga.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Senso-ji Sin Nadie (y Por Qué las Fotos Son Mejores)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -95,14 +80,14 @@ const EsAsakusaTokioGuia = () => {
               He acompañado a fotógrafos profesionales que han venido expresamente a las 6:30 AM para capturar el templo vacío. Sin excepción, todos me han dicho lo mismo: "No parece la misma ciudad." Y tienen razón. No lo es.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los Monjes y la Ceremonia Matutina
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A primera hora, los monjes del Senso-ji realizan sus rezos matutinos dentro del salón principal. Si llegas sobre las 6:30 AM, puedes escuchar los sutras a través de las puertas abiertas. No es un espectáculo para turistas; es una práctica religiosa real que lleva ocurriendo aquí de forma ininterrumpida durante siglos. El sonido de los cantos mezclado con el olor del incienso del gran incensario (jokoro) es una de las experiencias más genuinas que puedes vivir en Tokio. No necesitas permiso para estar ahí, pero sí necesitas respeto: no hables, no uses el flash y mantén una distancia prudente. Si te interesa la espiritualidad japonesa, esta ceremonia vale más que cualquier museo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Ritual que Yo Sigo Cada Mañana de Tour
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -110,35 +95,36 @@ const EsAsakusaTokioGuia = () => {
             </p>
 
             {/* Qué ver en Asakusa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Qué Ver en Asakusa</span></div>
+            <h2 id="section-02-qué-ver-en-asakusa" className="scroll-mt-20">
               Qué Ver en Asakusa (Más Allá de lo Obvio)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Todo el mundo conoce el Senso-ji y Kaminarimon. Pero cualquier asakusa tokio guia que se precie tiene que ir más allá. Este barrio tiene capas que solo se revelan cuando te sales del recorrido estándar.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Kaminarimon y Nakamise: la Foto y Luego Qué
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No te digo que te saltes Kaminarimon, es icónica por una razón, y el farol rojo de 700 kilos que cuelga de ella es genuinamente impresionante. Hazle la foto. Pero no te quedes ahí. La mayoría de visitantes gastan treinta minutos recorriendo los 250 metros de Nakamise-dori, compran un recuerdo y creen que ya han terminado. Si haces eso, te estás perdiendo el 80% del barrio. Mi consejo: cruza Kaminarimon, echa un vistazo rápido a Nakamise y después gira a la izquierda o la derecha por cualquier callejón lateral. Es ahí donde empieza el Asakusa real.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los Santuarios Escondidos que el 99% No Visita
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A cinco minutos al norte del Senso-ji hay un pequeño santuario llamado Imado-jinja. Está dedicado a los gatos de la suerte (maneki-neko) y a las parejas que buscan amor. Las figuritas de cerámica y los ema (tablillas de deseos) son encantadores, pero lo mejor es la tranquilidad absoluta del lugar. A diez minutos a pie en la dirección opuesta, hacia el oeste, encuentras el santuario de Chingo-do, escondido en un callejón y dedicado a los tanuki, las criaturas mitológicas japonesas con forma de mapache. Hay estatuas de tanuki por todas partes, y el ambiente es completamente diferente al del Senso-ji. Estos rincones no aparecen en la mayoría de guías turísticas, y esa es precisamente la razón por la que merecen tu tiempo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Hoppy-dori: la Calle de los Izakaya al Aire Libre
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Hoppy-dori es un callejón a pocos minutos al oeste del Senso-ji donde los izakaya sacan mesas a la calle y los trabajadores del barrio vienen a beber shochu con Hoppy, una bebida de posguerra que sigue siendo seña de identidad de Asakusa. A partir de las 3 o 4 de la tarde, el callejón cobra vida con el humo de las parrillas de yakitori, las conversaciones a voz en cuello y el tintineo de los vasos. Es el antídoto perfecto a la solemnidad del templo. Si vienes por la mañana temprano para el Senso-ji, reserva la tarde para volver aquí y vivir la otra cara de Asakusa: la cara festiva, ruidosa y genuinamente local. Una cerveza, unas brochetas de pollo y una conversación con el dueño del puesto de al lado. Eso es Asakusa sin filtro.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Río Sumida y el Paseo que Nadie Hace
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -146,28 +132,29 @@ const EsAsakusaTokioGuia = () => {
             </p>
 
             {/* Qué evitar en Asakusa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Qué Evitar en Asakusa</span></div>
+            <h2 id="section-03-qué-evitar-en-asakusa" className="scroll-mt-20">
               Qué Evitar en Asakusa
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Parte de cualquier buena asakusa tokio guia es decirte lo que no merece tu tiempo. Asakusa tiene trampas, como cualquier barrio turístico del mundo, y conocerlas te ahorrará dinero, tiempo y frustraciones.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Las Trampas Turísticas de Nakamise
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No todo en Nakamise-dori es malo, pero hay que saber distinguir. Evita los puestos que venden katanas de plástico, abanicos baratos con "kanji" inventado y camisetas con mensajes en japonés incorrecto. Estos productos están diseñados para venderse rápido a turistas que no volverán. Si quieres recuerdos auténticos, busca las tiendas que llevan generaciones en el mismo sitio; las reconocerás porque no tienen carteles llamativos en cinco idiomas ni descuentos por compra múltiple. También evita los helados de sabores extravagantes (wasabi, carbón activado, etc.) que se venden a precios inflados. Son llamativos para Instagram, pero ni saben bien ni tienen nada que ver con la gastronomía japonesa real.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los Rickshaws (No Son lo que Parecen)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Verás rickshaws estacionados frente a Kaminarimon con jóvenes entusiastas ofreciéndote un paseo. Son legales, no son una estafa exactamente, pero tampoco son la experiencia cultural que prometen. Los recorridos son cortos (normalmente 15-30 minutos), siguen una ruta preestablecida por las calles principales y cuestan entre 5.000 y 15.000 yenes dependiendo de la duración. El narrador suele ser un estudiante con un guion memorizado. Por ese dinero, puedes contratar un tour a pie con un guía con licencia que te muestre diez veces más durante tres horas. No te juzgo si subes a uno por diversión, pero no confundas el paseo con una experiencia local auténtica.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Horarios a Evitar (la Hora Punta Turística)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -175,21 +162,22 @@ const EsAsakusaTokioGuia = () => {
             </p>
 
             {/* Dónde comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Dónde Comer en Asakusa Como un Local</span></div>
+            <h2 id="section-04-dónde-comer-en-asakusa-como-un-local" className="scroll-mt-20">
               Dónde Comer en Asakusa Como un Local
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Asakusa tiene una escena gastronómica profunda que va mucho más allá de la comida callejera de Nakamise. Esta asakusa tokio guia no estaría completa sin contarte dónde como yo cuando estoy en el barrio, que es prácticamente cada semana.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desayuno: las Cafeterías del Barrio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si madrugas para el Senso-ji, necesitarás desayuno. Olvídate de las cadenas de café. Asakusa tiene kissaten (cafeterías tradicionales japonesas) que abren desde las 7 u 8 AM y sirven lo que los vecinos del barrio han desayunado durante décadas: tostadas gruesas (shokupan) con mantequilla, un huevo cocido y café filtrado preparado lentamente. Los locales más auténticos están al sur y al oeste de Kaminarimon, en calles residenciales donde rara vez entra un turista. Busca los que tienen una cortina pequeña en la puerta y solo unas pocas mesas. El café no será de especialidad, pero la experiencia de sentarte en un lugar que no ha cambiado en cuarenta años vale mucho más que un latte de cadena.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Almuerzo: Tempura y Soba Artesanales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -200,7 +188,7 @@ const EsAsakusaTokioGuia = () => {
               , Asakusa es uno de los mejores barrios para explorarla.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Merienda: los Dulces de Nakamise que Sí Merecen la Pena
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -208,18 +196,19 @@ const EsAsakusaTokioGuia = () => {
             </p>
 
             {/* Cómo llegar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cómo Llegar y Cuánto Tiempo Dedicar</span></div>
+            <h2 id="section-05-cómo-llegar-y-cuánto-tiempo-dedicar" className="scroll-mt-20">
               Cómo Llegar y Cuánto Tiempo Dedicar
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desde Cualquier Punto de Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Asakusa es accesible desde prácticamente cualquier punto de Tokio en menos de 30 minutos. La estación principal es Asakusa, servida por la línea Ginza del metro (línea naranja), la línea Asakusa de Toei (línea rosa) y el Tsukuba Express. Desde Shinjuku, toma la línea Marunouchi hasta Akasaka-mitsuke y cambia a la Ginza, unos 30 minutos en total. Desde Shibuya, toma la Ginza hasta Asakusa directamente, unos 30 minutos. Desde Tokyo Station, usa la Ginza, unos 15 minutos. Si vienes desde Ueno, son solo dos paradas en la Ginza. La salida 1 de la estación te deja a cien metros de Kaminarimon. Si quieres llegar a las 7 AM, calcula tu ruta con antelación: el metro empieza a funcionar sobre las 5 AM, así que incluso madrugar mucho es perfectamente viable.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mi Itinerario Recomendado de 3-4 Horas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -227,13 +216,14 @@ const EsAsakusaTokioGuia = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas Frecuentes Sobre Asakusa
             </h2>
 
             <div className="space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuánto tiempo necesito en Asakusa?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -242,7 +232,7 @@ const EsAsakusaTokioGuia = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuándo es mejor ir?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -251,7 +241,7 @@ const EsAsakusaTokioGuia = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Es gratis entrar al Senso-ji?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -260,7 +250,7 @@ const EsAsakusaTokioGuia = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Puedo combinar Asakusa con otros barrios?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -269,7 +259,7 @@ const EsAsakusaTokioGuia = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Merece la pena un tour guiado en Asakusa?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -284,7 +274,7 @@ const EsAsakusaTokioGuia = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres vivir el Asakusa de las 7 de la mañana con un guía local?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -299,7 +289,11 @@ const EsAsakusaTokioGuia = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -387,7 +381,9 @@ const EsAsakusaTokioGuia = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

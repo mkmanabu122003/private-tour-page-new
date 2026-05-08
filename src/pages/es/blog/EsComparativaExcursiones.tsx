@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { dayTripFinderConfigEs } from "@/data/diagnostics/dayTripFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsComparativaExcursiones = () => {
   return (
@@ -21,51 +23,35 @@ const EsComparativaExcursiones = () => {
         ]}
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Excursiones</p>
-            <h1 className="heading-display text-foreground">
-              Kamakura vs Hakone vs Nikko: ¿Qué Excursión Elegir desde Tokio?
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía Turístico con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/nikko-toshogu-hero.webp"
-          alt="Kamakura vs Hakone vs Nikko - mejores excursiones desde Tokio"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/nikko-toshogu-hero.webp"
+        imageAlt="Kamakura vs Hakone vs Nikko - mejores excursiones desde Tokio"
+        eyebrow="Excursiones"
+        title="Kamakura vs Hakone vs Nikko: ¿Qué Excursión Elegir desde Tokio?"
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Comparación Rápida", href: "#section-01-comparación-rápida" },
+          { num: "02", label: "Kamakura", href: "#section-02-kamakura" },
+          { num: "03", label: "Hakone", href: "#section-03-hakone" },
+          { num: "04", label: "Nikko: La Obra Maestra…", href: "#section-04-nikko-la-obra-maestra-unesco-escondida" },
+          { num: "05", label: "¿Puedo Hacer Dos en un Solo…", href: "#section-05-puedo-hacer-dos-en-un-solo-viaje" },
+          { num: "06", label: "Mi Recomendación", href: "#section-06-mi-recomendación" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "¿Qué excursión debería hacer?". Me hacen esta pregunta en casi todos los tours. Es uno de los dilemas más comunes entre los visitantes de Tokio, y la respuesta es genuinamente diferente para cada viajero.
@@ -83,9 +69,10 @@ const EsComparativaExcursiones = () => {
             <DiagnosticTrigger config={dayTripFinderConfigEs} />
           </div>
 
-          <article className="max-w-3xl mx-auto prose-custom">
+          <article className="max-w-3xl mx-auto prose-editorial">
             {/* Quick Comparison Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Comparación Rápida</span></div>
+            <h2 id="section-01-comparación-rápida" className="scroll-mt-20">
               Comparación Rápida
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -140,7 +127,8 @@ const EsComparativaExcursiones = () => {
             </div>
 
             {/* Kamakura */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Kamakura</span></div>
+            <h2 id="section-02-kamakura" className="scroll-mt-20">
               Kamakura: La Antigua Capital de Japón Junto al Mar
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -166,14 +154,14 @@ const EsComparativaExcursiones = () => {
               Más allá del Gran Buda, Kamakura ofrece el Templo Hasedera (espectaculares vistas al océano y una famosa estatua dorada de Kannon), el Santuario Tsurugaoka Hachimangu (el santuario más importante de la ciudad, con un dramático camino de acceso) y el Templo Hokokuji (un sereno bosque de bambú donde puedes disfrutar de té matcha). La calle comercial Komachi-dori, cerca de la estación, es perfecta para almorzar y picar algo. Prueba el shirasu local (sardinas bebé) por el que Kamakura es famosa.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ideal Para
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Amantes de la historia, visitantes que viajan a Japón por primera vez y quieren una experiencia completa, familias (terreno fácil, mucha variedad) y entusiastas de la gastronomía. Kamakura es también la excursión más fácil logísticamente: conexiones de tren sencillas, zona compacta para caminar y senderos bien señalizados.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo Que la Mayoría No Sabe
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -186,7 +174,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* Hakone */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Hakone</span></div>
+            <h2 id="section-03-hakone" className="scroll-mt-20">
               Hakone: Aguas Termales y la Icónica Vista del Fuji
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -212,14 +201,14 @@ const EsComparativaExcursiones = () => {
               El Santuario de Hakone, con su torii rojo situado en el lago, es uno de los lugares espirituales más fotografiados de Japón. El camino de acceso a través del antiguo bosque de cedros es atmosférico, y el torii junto al lago crea una composición impresionante. Más allá de las atracciones principales, Hakone ofrece el Museo al Aire Libre (impresionante jardín de esculturas con pabellón de Picasso), posadas tradicionales ryokan y, por supuesto, onsen, los baños termales naturales que son fundamentales en la cultura japonesa de relajación.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ideal Para
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Amantes de la naturaleza, fotógrafos (especialmente los que buscan la foto del Fuji), parejas que buscan una experiencia romántica, y cualquier persona que quiera un cambio completo de escenario respecto a la energía urbana de Tokio. Si ver el Monte Fuji está en tu lista de deseos, Hakone es tu mejor opción para una excursión de un día (aunque se requiere la cooperación del clima; el Fuji es visible aproximadamente el 60-70% de los días despejados en invierno, menos en verano).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Consejo Local: El Factor Fuji
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -235,7 +224,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* Nikko */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Nikko: La Obra Maestra UNESCO Escondida</span></div>
+            <h2 id="section-04-nikko-la-obra-maestra-unesco-escondida" className="scroll-mt-20">
               Nikko: La Obra Maestra UNESCO Escondida
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -248,14 +238,14 @@ const EsComparativaExcursiones = () => {
               Más allá del complejo del santuario, Nikko ofrece las impresionantes Cataratas Kegon, una cascada de 97 metros que puedes contemplar desde una plataforma de observación a la que se accede mediante un ascensor dentro del acantilado. El Lago Chuzenji, a 1.269 metros de altitud, ofrece un clima y una atmósfera completamente diferentes a los de Tokio. En otoño (octubre a noviembre), la ladera de la montaña se transforma en un tapiz de rojo, naranja y dorado que rivaliza con cualquier espectáculo de follaje en el mundo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ideal Para
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Apasionados de la historia que quieran comprender la era Tokugawa, amantes de la naturaleza (especialmente en otoño), entusiastas del patrimonio UNESCO y fotógrafos. Nikko también tiene significativamente menos aglomeraciones que Kamakura o Hakone, lo cual es una gran ventaja para quienes prefieren una experiencia más tranquila.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Por Qué Tiene Menos Aglomeraciones Que los Otros
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -271,7 +261,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* Can I Do Two? */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · ¿Puedo Hacer Dos en un Solo Viaje?</span></div>
+            <h2 id="section-05-puedo-hacer-dos-en-un-solo-viaje" className="scroll-mt-20">
               ¿Puedo Hacer Dos en un Solo Viaje?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -297,7 +288,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* My Recommendation */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Mi Recomendación</span></div>
+            <h2 id="section-06-mi-recomendación" className="scroll-mt-20">
               Mi Recomendación
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -330,7 +322,7 @@ const EsComparativaExcursiones = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Listo para explorar más allá de Tokio?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -345,7 +337,11 @@ const EsComparativaExcursiones = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -377,7 +373,9 @@ const EsComparativaExcursiones = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

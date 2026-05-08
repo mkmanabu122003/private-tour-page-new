@@ -29,8 +29,12 @@ function writeActionsToSheet(analysis, date) {
     sheet.setColumnWidth(9, 80);
   }
 
-  if (!analysis || !analysis.actions) return;
+  if (!analysis || !analysis.actions) {
+    Logger.log(`Actionsシート書き込みスキップ: analysis=${!!analysis}, actions=${analysis ? typeof analysis.actions : 'N/A'}`);
+    return;
+  }
 
+  Logger.log(`Actionsシート書き込み開始: ${analysis.actions.length}件のアクション`);
   const startRow = sheet.getLastRow() + 1;
 
   analysis.actions.forEach((action, i) => {
@@ -70,9 +74,15 @@ function applyPriorityFormatting(sheet, startRow, count) {
   for (let i = 0; i < count; i++) {
     const row = startRow + i;
     const priority = sheet.getRange(row, 3).getValue();
+    const category = sheet.getRange(row, 4).getValue();
     const range = sheet.getRange(row, 1, 1, 12);
 
-    if (priority === 'high') {
+    // 新規記事提案は専用カラーで区別
+    if (category === 'new-article-en') {
+      range.setBackground('#E6F3FF'); // 薄い青（英語新規記事）
+    } else if (category === 'new-article-es') {
+      range.setBackground('#F0E6FF'); // 薄い紫（スペイン語新規記事）
+    } else if (priority === 'high') {
       range.setBackground('#FFF2F0'); // 薄い赤
     } else if (priority === 'medium') {
       range.setBackground('#FFFBE6'); // 薄い黄

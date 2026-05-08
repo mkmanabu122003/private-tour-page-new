@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaAsakusa = () => {
   return (
@@ -20,53 +22,35 @@ const EsGuiaAsakusa = () => {
         ]}
       />
 
-      {/* Imagen Principal */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-guide-hero.webp"
-          alt="Guía completa de Asakusa - más allá del Templo Senso-ji"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Guía de Asakusa: Qué Ver Más Allá del Templo Senso-ji
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-guide-hero.webp"
+        imageAlt="Guía completa de Asakusa - más allá del Templo Senso-ji"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Guía de Asakusa: Qué Ver Más Allá del Templo Senso-ji"
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Templo Senso-ji", href: "#section-01-templo-senso-ji" },
+          { num: "02", label: "Joyas Ocultas Alrededor de…", href: "#section-02-joyas-ocultas-alrededor-de-asakusa" },
+          { num: "03", label: "La Mejor Comida Callejera…", href: "#section-03-la-mejor-comida-callejera-de-asakusa" },
+          { num: "04", label: "Cuándo Visitar Asakusa", href: "#section-04-cuándo-visitar-asakusa" },
+          { num: "05", label: "Combinar Con", href: "#section-05-combinar-con" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Asakusa es el barrio más tradicional de Tokio, y uno de los más concurridos. Cada año, aproximadamente 30 millones de visitantes pasan por el Templo Senso-ji, convirtiéndolo en uno de los sitios religiosos más visitados del mundo entero. La mayoría de esos visitantes siguen exactamente la misma ruta: Puerta Kaminarimon, calle comercial Nakamise-dori, una foto rápida en el salón principal, y se van. Se pierden aproximadamente el 90% de lo que hace realmente especial a Asakusa.
@@ -76,7 +60,8 @@ const EsGuiaAsakusa = () => {
             </p>
 
             {/* Templo Senso-ji */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Templo Senso-ji</span></div>
+            <h2 id="section-01-templo-senso-ji" className="scroll-mt-20">
               Templo Senso-ji: Consejos que la Mayoría de Guías No Te Contarán
             </h2>
             <figure className="my-8">
@@ -96,7 +81,7 @@ const EsGuiaAsakusa = () => {
               Empecemos por la atracción principal, porque vas a visitar el Senso-ji pase lo que pase, y deberías hacerlo. Es el templo más antiguo de Tokio, fundado en el año 645 d.C. según la leyenda, y la historia que alberga es genuinamente extraordinaria. La clave está en saber cómo visitarlo correctamente para que realmente disfrutes la experiencia en lugar de simplemente sobrevivir a las multitudes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Momento lo Es Todo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -106,21 +91,21 @@ const EsGuiaAsakusa = () => {
               Si debes visitar durante las horas punta (10 AM a 4 PM), los días entre semana son significativamente menos concurridos que los fines de semana. Evita los festivos nacionales y los tres primeros días de enero (Hatsumode, la visita de Año Nuevo al templo) a menos que quieras vivir específicamente el ambiente festivo; en ese caso, abraza las multitudes y disfruta de la energía.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La Entrada Lateral Secreta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Aquí va algo que la mayoría de visitantes nunca descubre: no tienes que entrar por Kaminarimon y abrirte paso por Nakamise-dori. Hay entradas laterales al recinto del templo tanto por el este como por el oeste. Mi acceso favorito es por el lado oeste, caminando por las calles residenciales más tranquilas. Entras por la Puerta Nitenmon, una entrada hermosa pero ampliamente ignorada que te coloca justo al lado de la pagoda de cinco pisos y el salón principal sin tocar jamás la concurrida calle comercial. Siempre puedes recorrer Nakamise-dori después; simplemente acércate desde el extremo del templo, caminando hacia el sur, lo que va en contra del flujo turístico principal y te da una perspectiva completamente diferente.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Comprendiendo los Papeles de la Fortuna
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los omikuji (papeles de la fortuna) del Senso-ji son famosos por dar una proporción desproporcionadamente alta de fortunas de "mala suerte": aproximadamente el 30% de las fortunas aquí son kyo (mala suerte), comparado con alrededor del 7% en la mayoría de los demás templos. Esto es históricamente auténtico y no ha sido ajustado para los turistas. Si sacas una mala fortuna, no te preocupes. La tradición es atarla al estante metálico cerca de la caja de fortunas, lo que simbólicamente deja la mala suerte atrás en el templo. Si sacas una buena fortuna, guárdala en tu cartera. Las fortunas están escritas en japonés clásico con traducciones al inglés, y cubren todo, desde la salud y los negocios hasta los viajes y las relaciones.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Templo vs. Santuario: Ambos Están Aquí
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -137,14 +122,15 @@ const EsGuiaAsakusa = () => {
             <InlineCTAEs href="/es/tours/asakusa" />
 
             {/* Joyas Ocultas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Joyas Ocultas Alrededor de Asakusa</span></div>
+            <h2 id="section-02-joyas-ocultas-alrededor-de-asakusa" className="scroll-mt-20">
               Joyas Ocultas Alrededor de Asakusa
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Senso-ji es el ancla de Asakusa, pero el barrio que lo rodea está lleno de rincones por los que la mayoría de turistas pasa de largo. Estos son los lugares que hacen que Asakusa se sienta como un barrio vivo y palpitante en lugar de una simple atracción turística.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Santuario de Asakusa
             </h3>
             <figure className="my-8">
@@ -164,14 +150,14 @@ const EsGuiaAsakusa = () => {
               Mencioné el Santuario de Asakusa antes, pero merece su propio apartado porque aproximadamente el 90% de los turistas pasa de largo sin darse cuenta de que está ahí. El santuario se encuentra inmediatamente al este del salón principal del Senso-ji, a través de una pequeña puerta que muchas personas suponen que lleva a una zona restringida. No es así. Camina a través de ella y encontrarás un hermoso santuario sintoísta que data de 1649, construido por el tercer shogun Tokugawa. La arquitectura es original y está designada como Bien Cultural de Importancia. También es el centro del festival Sanja Matsuri en mayo, uno de los más grandes y emocionantes festivales de todo Tokio. En un día normal, podrías ser el único visitante aquí mientras cientos de personas se agolpan en el Senso-ji a solo metros de distancia.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Jardín Denboin
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Jardín Denboin es un paraíso oculto que la mayoría de visitantes de Asakusa nunca ve. Este jardín del período Edo pertenece a la residencia del abad del Senso-ji y cuenta con un estanque tranquilo, árboles cuidadosamente podados, una casa de té y vistas de la pagoda de cinco pisos reflejada en el agua. La pega es que solo abre estacionalmente, típicamente en primavera (marzo a mayo), y requiere una pequeña tarifa de entrada. Consulta las fechas de apertura actuales antes de tu visita, ya que el calendario cambia cada año. Cuando está abierto, el contraste entre la concurrida Nakamise-dori justo al otro lado de los muros y este sereno jardín casi secreto es una de las experiencias más impactantes de Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Calle Hoppy (Hoppy-dori)
             </h3>
             <figure className="my-8">
@@ -191,14 +177,14 @@ const EsGuiaAsakusa = () => {
               Camina unos minutos al oeste del Senso-ji y encontrarás la Calle Hoppy, un animado callejón de bares que cobra vida a media tarde y por la noche. Nombrada en honor al Hoppy, una bebida de baja graduación alcohólica similar a la cerveza que se hizo popular en el Japón de posguerra cuando la cerveza auténtica era demasiado cara, esta estrecha calle está flanqueada por pequeños izakaya (tabernas japonesas) que sacan sus mesas y sillas a la acera. El ambiente es relajado y alegre, con humo elevándose de las parrillas, faroles balanceándose con la brisa y el sonido de vasos chocando y risas. Pide un set de Hoppy (la bebida más un vaso de shochu) y algo de yakitori o tendón de ternera estofado. Aquí es donde los trabajadores locales de Asakusa vienen después de un largo día, y es un mundo aparte de las multitudes turísticas del templo. Mejor visitarla a partir de las 4 PM aproximadamente.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Parque Sumida y el Paseo del Río
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El río Sumida bordea el lado este de Asakusa, y el parque que se extiende a lo largo de sus orillas es uno de los paseos más agradables de la zona. Desde el parque, obtienes una vista impresionante que combina el Tokio tradicional y el moderno en un solo encuadre: la antigua pagoda del Senso-ji detrás de ti y el futurista Tokyo Skytree directamente delante. A finales de marzo y principios de abril, los cerezos a lo largo del río estallan en flor, y la zona se convierte en uno de los mejores puntos de hanami (contemplación de los cerezos en flor) de la ciudad. Incluso fuera de la temporada de cerezos, el paseo por el río es un escape tranquilo de las calles concurridas, y el nuevo puente peatonal ofrece vistas elevadas del agua y el horizonte. Camina hacia el norte por el río para descubrir pequeños parques vecinales y puntos de pesca locales que se sienten a kilómetros de cualquier ruta turística.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Calle Kappabashi: Paraíso de Utensilios de Cocina
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -220,7 +206,8 @@ const EsGuiaAsakusa = () => {
             </figure>
 
             {/* Mejor Comida Callejera */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · La Mejor Comida Callejera de Asakusa</span></div>
+            <h2 id="section-03-la-mejor-comida-callejera-de-asakusa" className="scroll-mt-20">
               La Mejor Comida Callejera de Asakusa
             </h2>
             <figure className="my-8">
@@ -240,7 +227,7 @@ const EsGuiaAsakusa = () => {
               Asakusa es uno de los mejores barrios de Tokio para comida callejera, pero necesitas saber dónde buscar. Nakamise-dori, la calle comercial principal que lleva al Senso-ji, tiene más de 90 puestos, pero no todos merecen tu dinero. Así es como navegar la escena gastronómica como un local.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Nakamise-dori: Qué Merece la Pena
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -250,7 +237,7 @@ const EsGuiaAsakusa = () => {
               Los <strong className="text-foreground">kibi-dango</strong> son otro clásico de Asakusa: pequeñas bolas de masa de mijo, masticables, cubiertas de harina de soja dulce (kinako). Se sirven en un palillo con una taza de té frío o caliente, y cuestan casi nada. La tradición de vender kibi-dango aquí se remonta al período Edo, y un puesto en el camino principal lleva haciéndolos de la misma manera durante generaciones. El <strong className="text-foreground">melon-pan</strong> (pan de melón) es un clásico de la panadería japonesa, y las versiones que se venden cerca del Senso-ji son particularmente buenas: corteza crujiente de galleta por fuera, pan suave y esponjoso por dentro. Algunos puestos los ofrecen recién sacados del horno con una bola de helado dentro, que es una combinación indulgente y deliciosa.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Más Allá de la Calle Principal
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -261,7 +248,8 @@ const EsGuiaAsakusa = () => {
             </p>
 
             {/* Cuándo Visitar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cuándo Visitar Asakusa</span></div>
+            <h2 id="section-04-cuándo-visitar-asakusa" className="scroll-mt-20">
               Cuándo Visitar Asakusa
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -275,7 +263,8 @@ const EsGuiaAsakusa = () => {
             </p>
 
             {/* Combinar Con */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Combinar Con</span></div>
+            <h2 id="section-05-combinar-con" className="scroll-mt-20">
               Combinar Con
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -299,7 +288,7 @@ const EsGuiaAsakusa = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres que un local te enseñe el Asakusa que la mayoría de turistas nunca ve?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -314,7 +303,11 @@ const EsGuiaAsakusa = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -347,7 +340,9 @@ const EsGuiaAsakusa = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

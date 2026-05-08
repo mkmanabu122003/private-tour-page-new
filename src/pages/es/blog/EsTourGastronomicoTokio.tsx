@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const EsTourGastronomicoTokio = () => {
@@ -16,56 +18,36 @@ const EsTourGastronomicoTokio = () => {
         canonicalPath="/es/blog/tour-gastronomico-tokio"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/food-tour-tsukiji.webp"
-          alt="Comida callejera fresca en el mercado de Tsukiji, Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Gastronomía</p>
-            <h1 className="heading-display text-foreground">
-              Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que hace tours de comida en Tokio cada semana.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/food-tour-tsukiji.webp"
+        imageAlt="Comida callejera fresca en el mercado de Tsukiji, Tokio"
+        eyebrow="Gastronomía"
+        title="Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que hace tours de comida en Tokio cada semana."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Qué Te Da un Tour de…", href: "#section-01-qué-te-da-un-tour-de-comida-que-no-puedes" },
+          { num: "02", label: "Solo vs. Con Guía", href: "#section-02-solo-vs-con-guía" },
+          { num: "03", label: "La Doble Barrera Idiomática", href: "#section-03-la-doble-barrera-idiomática" },
+          { num: "04", label: "Lo Que Hago en Mis Tours de…", href: "#section-04-lo-que-hago-en-mis-tours-de-comida" },
+          { num: "05", label: "Las Mejores Zonas de Tokio…", href: "#section-05-las-mejores-zonas-de-tokio-para-comer" },
+          { num: "06", label: "¿Te Interesa un Tour de…", href: "#section-06-te-interesa-un-tour-de-comida-en-español" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               {/* <!-- VERIFIED: Tokyo #1 worldwide with 160 Michelin-starred restaurants in 2026 guide. Confirmed. Checked: 2026-03-14 --> */}
@@ -83,11 +65,12 @@ const EsTourGastronomicoTokio = () => {
             </p>
 
             {/* Qué te da un food tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Qué Te Da un Tour de Comida Que No Puedes</span></div>
+            <h2 id="section-01-qué-te-da-un-tour-de-comida-que-no-puedes" className="scroll-mt-20">
               ¿Qué Te Da un Tour de Comida Que No Puedes Conseguir Solo?
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Acceso a Sitios Sin Carta en Otro Idioma
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -97,21 +80,21 @@ const EsTourGastronomicoTokio = () => {
               Con un guía, esos lugares se abren. Puedo pedir por ti, explicarte qué estás comiendo, y contarte por qué este plato es especial. La diferencia entre comer en Tokio y entender lo que comes en Tokio es enorme.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Entender Lo Que Comes
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El sushi en Japón no es "sushi" a secas. Es maguro (atún), toro (ventresca de atún), hirame (rodaballo), ikura (huevas de salmón), uni (erizo de mar). Cada pieza tiene una temporada, una preparación y una historia. Un tour de comida no es solo comer: es una clase magistral comprimida sobre la cultura gastronómica japonesa.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Estrategia de Porciones
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Uno de los errores más comunes de los viajeros es llenarse en la primera parada. En un tour bien planificado, comes porciones pequeñas y variadas a lo largo de 3-4 horas: un par de piezas de sushi aquí, un tamagoyaki allí, un vaso de amazake (bebida de arroz) entre medias. Al final del tour has probado 10-12 cosas diferentes sin estar incómodamente lleno.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Restricciones Alimentarias en Japonés
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -119,11 +102,12 @@ const EsTourGastronomicoTokio = () => {
             </p>
 
             {/* Comparación honesta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Solo vs. Con Guía</span></div>
+            <h2 id="section-02-solo-vs-con-guía" className="scroll-mt-20">
               Solo vs. Con Guía: Comparación Honesta
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ventajas de Explorar Solo
             </h3>
             <ul className="space-y-3 mb-6">
@@ -141,7 +125,7 @@ const EsTourGastronomicoTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ventajas del Tour con Guía
             </h3>
             <ul className="space-y-3 mb-8">
@@ -163,7 +147,8 @@ const EsTourGastronomicoTokio = () => {
             </ul>
 
             {/* La doble barrera */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · La Doble Barrera Idiomática</span></div>
+            <h2 id="section-03-la-doble-barrera-idiomática" className="scroll-mt-20">
               La Doble Barrera Idiomática
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -177,7 +162,8 @@ const EsTourGastronomicoTokio = () => {
             </p>
 
             {/* Lo que hago en mis tours */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Lo Que Hago en Mis Tours de Comida</span></div>
+            <h2 id="section-04-lo-que-hago-en-mis-tours-de-comida" className="scroll-mt-20">
               Lo Que Hago en Mis Tours de Comida
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -199,11 +185,12 @@ const EsTourGastronomicoTokio = () => {
             </ul>
 
             {/* Mejores zonas para comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Las Mejores Zonas de Tokio para Comer</span></div>
+            <h2 id="section-05-las-mejores-zonas-de-tokio-para-comer" className="scroll-mt-20">
               Las Mejores Zonas de Tokio para Comer
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tsukiji (Mercado de Pescado)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -214,14 +201,14 @@ const EsTourGastronomicoTokio = () => {
               {" "}para más detalles.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Yurakucho (Izakaya y Tapeo Japonés)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Bajo las vías del tren, entre las estaciones de Yurakucho y Shinbashi. Yakitori, cerveza, ambiente local puro. Lo más parecido a la cultura de tapas que encontrarás en Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Yanaka (Comida Tradicional)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -232,7 +219,7 @@ const EsTourGastronomicoTokio = () => {
               .
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya (Comida Moderna)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -241,7 +228,8 @@ const EsTourGastronomicoTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · ¿Te Interesa un Tour de Comida en Español?</span></div>
+              <h2 id="section-06-te-interesa-un-tour-de-comida-en-español" className="scroll-mt-20">
                 ¿Te Interesa un Tour de Comida en Español?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -259,7 +247,11 @@ const EsTourGastronomicoTokio = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -317,7 +309,9 @@ const EsTourGastronomicoTokio = () => {
       1. Tour route matches actual food tour offerings — confirm consistency
       2. Cultural comparisons (dashi/jamón caldo, izakaya/tapas) — confirm audience resonance
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

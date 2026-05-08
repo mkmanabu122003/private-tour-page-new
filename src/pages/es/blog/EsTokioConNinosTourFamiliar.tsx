@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const EsTokioConNinosTourFamiliar = () => {
@@ -20,61 +22,37 @@ const EsTokioConNinosTourFamiliar = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/senso-ji-temple-tokyo.webp"
-          alt="Zona del templo Senso-ji en Tokio, ideal para familias"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Tokio con Niños</li>
-              </ol>
-            </nav>
-            <p className="text-label text-accent mb-3">Planifica Tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              Tokio con Niños: Por Qué las Familias Contratan Guías Privados (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que acompaña regularmente a familias con niños de todas las edades por Tokio.
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/senso-ji-temple-tokyo.webp"
+        imageAlt="Zona del templo Senso-ji en Tokio, ideal para familias"
+        eyebrow="Planifica Tu Viaje"
+        title="Tokio con Niños: Por Qué las Familias Contratan Guías Privados (2026)"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que acompaña regularmente a familias con niños de todas las edades por Tokio."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Los Retos Reales", href: "#section-01-los-retos-reales" },
+          { num: "02", label: "Mejores Lugares de Tokio…", href: "#section-02-mejores-lugares-de-tokio-para-familias" },
+          { num: "03", label: "Qué Hace Diferente un Guía…", href: "#section-03-qué-hace-diferente-un-guía-para-familias" },
+          { num: "04", label: "Itinerario Familiar de 3 Días", href: "#section-04-itinerario-familiar-de-3-días" },
+          { num: "05", label: "¿Cuánto Cuesta para Familias?", href: "#section-05-cuánto-cuesta-para-familias" },
+          { num: "06", label: "Cada Familia Es Diferente", href: "#section-06-cada-familia-es-diferente" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Tokio es una de las mejores ciudades del mundo para viajar en familia. Es segura, limpia y está llena de cosas que fascinan a niños de cualquier edad. Pero seamos realistas: también es una ciudad de 14 millones de personas con un sistema de metro que tiene 13 líneas diferentes, restaurantes donde nadie habla español y sitios culturales donde "por favor, silencio" es la regla no escrita.
@@ -88,11 +66,12 @@ const EsTokioConNinosTourFamiliar = () => {
             </p>
 
             {/* Los Retos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Los Retos Reales</span></div>
+            <h2 id="section-01-los-retos-reales" className="scroll-mt-20">
               Los Retos Reales (Y Cómo Resolverlos)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Trenes y Cochecitos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -103,7 +82,7 @@ const EsTokioConNinosTourFamiliar = () => {
               La solución: evita las horas punta por completo, ten claro qué estaciones tienen ascensor (yo las tengo mapeadas para cada ruta que planeo) y considera usar una mochila portabebés en lugar del cochecito en algunos días. Las estaciones de la línea Yamanote suelen estar bien equipadas, pero las estaciones más pequeñas del Metro pueden dar sorpresas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Comida para Niños Quisquillosos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -115,7 +94,7 @@ const EsTokioConNinosTourFamiliar = () => {
             </p>
 
             {/* Recomendaciones por Edad */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Consejos Según la Edad de tus Hijos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -128,14 +107,14 @@ const EsTokioConNinosTourFamiliar = () => {
               <strong className="text-foreground">Preadolescentes y adolescentes (11-17 años):</strong> Akihabara, Harajuku y Shibuya son su territorio. Déjales algo de libertad para explorar tiendas por su cuenta mientras tú esperas cerca. Los adolescentes también aprecian experiencias más "adultas" como la ceremonia del té o la comida callejera en Tsukiji. Un guía puede hacer que la historia y la cultura les resulten realmente interesantes, no solo "más cosas aburridas de padres".
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Fatiga de Templos y Santuarios
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los niños tienen una tolerancia limitada para "otro edificio antiguo". El truco es intercalar templos con actividades que les emocionen y hacer que las visitas a los templos sean interactivas. Yo les cuento historias sobre las estatuas guardianas (¿de quién protegen el templo?), les dejo tocar la campana y aplaudir en los santuarios, y les reto a encontrar símbolos específicos tallados en los edificios. Una visita que aburriría a un niño de 7 años en 5 minutos se convierte en una búsqueda del tesoro de 30 minutos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ritmo y Horarios
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -149,11 +128,12 @@ const EsTokioConNinosTourFamiliar = () => {
             />
 
             {/* Mejores Lugares de Tokio para Familias */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Mejores Lugares de Tokio para Familias</span></div>
+            <h2 id="section-02-mejores-lugares-de-tokio-para-familias" className="scroll-mt-20">
               Mejores Lugares de Tokio para Familias
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               TeamLab Borderless (Azabudai Hills)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -161,7 +141,7 @@ const EsTokioConNinosTourFamiliar = () => {
               El museo de arte digital inmersivo que fascina por igual a niños y adultos. Los niños pueden correr entre salas de cascadas proyectadas, dibujar criaturas que cobran vida en las paredes e interactuar con instalaciones de luz. Reserva 2-3 horas. Compra las entradas online con antelación porque se agotan con frecuencia.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Zona de Ueno (Zoo, Museos, Parque)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -169,7 +149,7 @@ const EsTokioConNinosTourFamiliar = () => {
               Ueno es un día completo en familia en una sola zona. El zoo (¥600 para adultos, uno de los más antiguos de Japón), el Museo Nacional de Naturaleza y Ciencia (dinosaurios, exposiciones interactivas), el parque de Ueno para correr y el mercado de Ameyoko para comer algo callejero. Todo está a distancia a pie, lo que significa cero trasbordos estresantes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Odaiba
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -177,7 +157,7 @@ const EsTokioConNinosTourFamiliar = () => {
               La zona frente al mar con la estatua de Gundam a tamaño real, centros comerciales, una pequeña playa y el monorraíl Yurikamome sobre el Rainbow Bridge (que es una atracción en sí para los niños). TeamLab Planets en Toyosu, muy cerca, es otra opción de arte digital inmersivo (abierto hasta 2027). Ideal para una media jornada cuando todos necesitan un respiro de templos y cultura tradicional.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Asakusa (La Ruta para Familias)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -187,14 +167,14 @@ const EsTokioConNinosTourFamiliar = () => {
               {" "}funciona muy bien con niños si lo planificas bien. La calle comercial Nakamise tiene tentempiés y juguetes pequeños. El templo Senso-ji tiene el ritual del incienso (a los niños les encanta abanicarse el humo "para tener buena salud"). Las callejuelas tienen tiendas de taiyaki, dulcerías tradicionales y paseos en rickshaw. Yo organizo las visitas familiares a media mañana, cuando las primeras aglomeraciones se disipan.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Akihabara (Para Niños Mayores)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Niños a partir de 8 años que les gusten los videojuegos, el anime o la tecnología estarán en el paraíso. Salones recreativos retro, tiendas de juguetes de varios pisos y callejones llenos de máquinas de cápsulas (gashapon). Es un destino "premio" que mantiene motivados a los mayores durante las visitas culturales del principio del viaje.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Parques Que los Turistas No Conocen
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -208,7 +188,8 @@ const EsTokioConNinosTourFamiliar = () => {
             />
 
             {/* Qué Hace Diferente un Guía Familiar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Qué Hace Diferente un Guía para Familias</span></div>
+            <h2 id="section-03-qué-hace-diferente-un-guía-para-familias" className="scroll-mt-20">
               Qué Hace Diferente un Guía para Familias
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -234,14 +215,15 @@ const EsTokioConNinosTourFamiliar = () => {
             </ul>
 
             {/* Itinerario Familiar de 3 Días */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Itinerario Familiar de 3 Días</span></div>
+            <h2 id="section-04-itinerario-familiar-de-3-días" className="scroll-mt-20">
               Itinerario Familiar de 3 Días (Edades 4-10)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Este es un plan realista, no una lista de fantasía para "verlo todo". Incluye tiempo de descanso, paradas para picar algo y asume que los niños estarán cansados a media tarde.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Día 1: Asakusa y Ueno (El Mejor Día para Llevar Guía)
             </h3>
             <ul className="space-y-2 mb-4">
@@ -269,7 +251,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Día 2: Shibuya, Harajuku y Santuario Meiji (Factible por Cuenta Propia)
             </h3>
             <ul className="space-y-2 mb-4">
@@ -290,7 +272,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Día 3: Elige Tu Aventura
             </h3>
             <ul className="space-y-2 mb-8">
@@ -320,7 +302,8 @@ const EsTokioConNinosTourFamiliar = () => {
             />
 
             {/* Precios para Familias */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · ¿Cuánto Cuesta para Familias?</span></div>
+            <h2 id="section-05-cuánto-cuesta-para-familias" className="scroll-mt-20">
               ¿Cuánto Cuesta para Familias?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -352,7 +335,8 @@ const EsTokioConNinosTourFamiliar = () => {
 
             {/* CTA Principal */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · Cada Familia Es Diferente</span></div>
+              <h2 id="section-06-cada-familia-es-diferente" className="scroll-mt-20">
                 Cada Familia Es Diferente
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -370,13 +354,14 @@ const EsTokioConNinosTourFamiliar = () => {
             </div>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+            <h2 id="section-07-faq" className="scroll-mt-20">
               Preguntas Frecuentes: Tokio con Niños
             </h2>
 
             <div className="space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Es seguro viajar a Tokio con niños?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -385,7 +370,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿A qué edad se puede llevar a un niño a Japón?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -394,7 +379,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Merece la pena un tour privado para familias en Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -403,7 +388,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Qué comen los niños en Japón si no les gusta el sushi?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -412,7 +397,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuántos días necesito en Tokio con niños?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -421,7 +406,7 @@ const EsTokioConNinosTourFamiliar = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Se puede usar cochecito en Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -430,7 +415,11 @@ const EsTokioConNinosTourFamiliar = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -542,7 +531,9 @@ const EsTokioConNinosTourFamiliar = () => {
       - Coco Ichibanya: CONFIRMED 2,000+ a nivel nacional
       - Precios tours: Asakusa ¥45,000, Kamakura ¥70,000 — coinciden con páginas de tours
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

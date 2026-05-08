@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsExcursionNikkoDesdeTokio = () => {
   return (
@@ -18,53 +20,36 @@ const EsExcursionNikkoDesdeTokio = () => {
         ]}
       />
 
-      {/* Imagen Principal */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/nikko-toshogu-hero.webp"
-          alt="Entrada al santuario Toshogu a través del torii de piedra en Nikko"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Excursiones</p>
-            <h1 className="heading-display text-foreground">
-              Excursión a Nikko desde Tokio: Guía Completa 2026
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/nikko-toshogu-hero.webp"
+        imageAlt="Entrada al santuario Toshogu a través del torii de piedra en Nikko"
+        eyebrow="Guías de Excursiones"
+        title="Excursión a Nikko desde Tokio: Guía Completa 2026"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Por qué Nikko?", href: "#section-01-por-qué-nikko" },
+          { num: "02", label: "Cómo llegar a Nikko desde…", href: "#section-02-cómo-llegar-a-nikko-desde-tokio" },
+          { num: "03", label: "Qué ver en Nikko", href: "#section-03-qué-ver-en-nikko" },
+          { num: "04", label: "Qué comer en Nikko", href: "#section-04-qué-comer-en-nikko" },
+          { num: "05", label: "Cuándo ir a Nikko", href: "#section-05-cuándo-ir-a-nikko" },
+          { num: "06", label: "¿Con guía o por tu cuenta?", href: "#section-06-con-guía-o-por-tu-cuenta" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Si estás planificando una excursión a Nikko desde Tokio, probablemente ya hayas visto las fotos del santuario Toshogu entre los cedros gigantes y te hayas preguntado: ¿merece la pena ir? La respuesta corta es sí, absolutamente. Pero déjame explicarte por qué, cómo llegar sin complicaciones y qué ver para que no pierdas ni un minuto del día.
@@ -74,21 +59,22 @@ const EsExcursionNikkoDesdeTokio = () => {
             </p>
 
             {/* ¿Por qué Nikko? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Por qué Nikko?</span></div>
+            <h2 id="section-01-por-qué-nikko" className="scroll-mt-20">
               ¿Por qué Nikko? (y por qué la mayoría se lo pierde)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La mayoría de los viajeros que vienen a Tokio tienen Kioto, Osaka y quizás Hiroshima en su lista. Nikko rara vez aparece en los primeros borradores del itinerario, y es una pena. A menos de dos horas de la capital, Nikko ofrece algo que ninguna otra excursión de un día puede igualar: la combinación perfecta de arquitectura monumental, bosques centenarios y una atmósfera que te hace sentir que has viajado siglos atrás en el tiempo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Un poco de historia: el mausoleo de Tokugawa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Para entender Nikko hay que entender a Tokugawa Ieyasu, el shogun que unificó Japón en 1603 y fundó una dinastía que gobernaría durante más de 250 años. Cuando Ieyasu murió en 1616, su nieto Iemitsu ordenó la construcción de un mausoleo que reflejara el poder absoluto de la familia. El resultado fue Toshogu, un complejo de santuarios tan elaborado y tan cargado de simbolismo político que no tiene equivalente en todo Japón. Piensa en ello como el Escorial en España, un mausoleo de poder. No es un templo donde ir a meditar en silencio. Es una declaración: "aquí descansa quien gobernó todo esto".
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que hace especial a Nikko: naturaleza + historia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -96,14 +82,15 @@ const EsExcursionNikkoDesdeTokio = () => {
             </p>
 
             {/* Cómo llegar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Cómo llegar a Nikko desde Tokio</span></div>
+            <h2 id="section-02-cómo-llegar-a-nikko-desde-tokio" className="scroll-mt-20">
               Cómo llegar a Nikko desde Tokio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Hay dos rutas principales para hacer la excursión a Nikko desde Tokio. La elección depende de tu presupuesto, si tienes JR Pass y cuánto valoras tu tiempo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Opción 1: Tobu Railway desde Asakusa (la más económica)
             </h3>
             <figure className="my-8">
@@ -139,14 +126,14 @@ const EsExcursionNikkoDesdeTokio = () => {
               Si quieres que el viaje sea parte de la experiencia, el Spacia X ofrece un vagón premium con asientos reclinables amplios, mucho espacio para las piernas y ventanas panorámicas. El sobrecoste es modesto — unos 1.000 yenes más que un asiento estándar — y en un trayecto matutino, puedes ver cómo el paisaje urbano de Tokio da paso a arrozales, colinas boscosas y finalmente las montañas de Tochigi. Mis clientes dicen a menudo que el vagón premium marcó el tono de todo el día.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Opción 2: JR Shinkansen + línea local (la más rápida)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si tienes el Japan Rail Pass, esta opción sale "gratis" dentro de tu pase. Tomas el Tohoku Shinkansen desde Tokio o Ueno hasta Utsunomiya (unos 50 minutos) y ahí cambias a la línea JR Nikko (otros 45 minutos). El tiempo total es de aproximadamente 1 hora y 40 minutos, ligeramente más rápido que Tobu. Sin JR Pass, el coste es significativamente mayor, alrededor de 5.500 yenes por trayecto, así que solo merece la pena si ya tienes el pase activado.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tiempos reales y precios actualizados 2026
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -156,14 +143,15 @@ const EsExcursionNikkoDesdeTokio = () => {
             <InlineCTAEs href="/es/tours/nikko" />
 
             {/* Qué ver */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Qué ver en Nikko</span></div>
+            <h2 id="section-03-qué-ver-en-nikko" className="scroll-mt-20">
               Qué ver en Nikko (itinerario de un día)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Con un día bien aprovechado puedes ver los puntos esenciales sin prisas. Este es el itinerario que sigo cuando guío la excursión a Nikko desde Tokio, ajustado a lo largo de muchas visitas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Toshogu: el santuario más decorado de Japón
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -173,7 +161,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               Dentro del complejo encontrarás también los famosos tres monos sabios (no ver, no oír, no hablar) tallados en el establo sagrado, y el gato durmiente (nemuri-neko) sobre la puerta que lleva a la tumba de Ieyasu. La subida a la tumba, por unas 200 escaleras de piedra entre cedros inmensos, es uno de los momentos más sobrecogedores de toda la excursión. La entrada a Toshogu cuesta 1.300 yenes para adultos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Puente Shinkyo y el río Daiya
             </h3>
             <figure className="my-8">
@@ -193,7 +181,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               El puente Shinkyo, pintado en rojo lacado brillante, cruza el río Daiya justo a la entrada de la zona de santuarios. Es considerado uno de los tres puentes más bellos de Japón. Puedes cruzarlo por 300 yenes o simplemente admirarlo desde la orilla. La vista desde abajo, con el agua cristalina del río, los árboles y el puente rojo enmarcando la escena, es honestamente igual de buena. Es un punto de parada perfecto para tomar fotos antes de subir hacia los santuarios.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Kanmangafuchi y los Narabi Jizo
             </h3>
             <figure className="my-8">
@@ -213,7 +201,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               La mayoría de visitantes no sale del recinto de Toshogu, y por eso se pierde uno de los paseos más atmosféricos de toda la región. A unos veinte minutos a pie del complejo de santuarios, un sendero junto al río lleva a Kanmangafuchi, una garganta volcánica tallada por el río Daiya. A lo largo del camino se encuentran los Narabi Jizo, una fila de unas setenta estatuas de piedra cubiertas con baberos y gorros rojos, con los rostros desgastados por siglos de intemperie. La leyenda dice que cada vez que alguien intenta contarlas, obtiene un número diferente, de ahí su apodo de "Bake Jizo" (Jizo fantasma). El sendero está a la sombra de árboles centenarios, el río ruge abajo y es probable que tengas el lugar casi para ti solo. Es el tipo de rincón que demuestra por qué un guía marca la diferencia: yo llevo a todos mis clientes aquí y siempre se convierte en uno de sus recuerdos favoritos. El paseo ida y vuelta dura unos treinta minutos y es completamente gratuito.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lago Chuzenji y cascada Kegon (si tienes tiempo)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -221,7 +209,8 @@ const EsExcursionNikkoDesdeTokio = () => {
             </p>
 
             {/* Qué comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Qué comer en Nikko</span></div>
+            <h2 id="section-04-qué-comer-en-nikko" className="scroll-mt-20">
               Qué comer en Nikko
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -260,25 +249,26 @@ const EsExcursionNikkoDesdeTokio = () => {
             </p>
 
             {/* Cuándo ir */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cuándo ir a Nikko</span></div>
+            <h2 id="section-05-cuándo-ir-a-nikko" className="scroll-mt-20">
               Cuándo ir a Nikko
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Otoño (octubre-noviembre): la mejor época
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si puedes elegir, planifica tu excursión a Nikko desde Tokio entre mediados de octubre y mediados de noviembre. El koyo (cambio de color de las hojas) transforma los bosques de cedros y arces en una explosión de rojos, naranjas y amarillos que contrasta espectacularmente con las lacas rojas y doradas de los santuarios. La zona del Lago Chuzenji cambia de color una o dos semanas antes que los santuarios, porque está a mayor altitud. Es la época más popular, así que espera más visitantes, pero la belleza compensa con creces.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Primavera y verano
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La primavera trae los cerezos en flor a Nikko, normalmente una o dos semanas después de Tokio por la diferencia de altitud. El verano es verde, exuberante y considerablemente más fresco que Tokio, una ventaja real cuando la capital está a 35 grados y 90% de humedad. Nikko en verano funciona casi como un refugio de montaña: bosques densos, cascadas con niebla y temperaturas que pueden ser 5 a 8 grados más bajas que en la ciudad.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Invierno: Nikko bajo la nieve
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -286,11 +276,12 @@ const EsExcursionNikkoDesdeTokio = () => {
             </p>
 
             {/* ¿Con guía o por tu cuenta? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · ¿Con guía o por tu cuenta?</span></div>
+            <h2 id="section-06-con-guía-o-por-tu-cuenta" className="scroll-mt-20">
               ¿Con guía o por tu cuenta?
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que te pierdes sin guía
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -311,7 +302,7 @@ const EsExcursionNikkoDesdeTokio = () => {
               .
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mi experiencia guiando en Nikko
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -323,7 +314,8 @@ const EsExcursionNikkoDesdeTokio = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+            <h2 id="section-07-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre la excursión a Nikko desde Tokio
             </h2>
             <figure className="my-8">
@@ -340,35 +332,35 @@ const EsExcursionNikkoDesdeTokio = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Se puede hacer en un día?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí, y es lo que hace la mayoría de visitantes. Saliendo de Tokio a las 7:30 y volviendo alrededor de las 18:00-19:00 tienes tiempo de sobra para ver los santuarios principales y el puente Shinkyo. Si quieres incluir el Lago Chuzenji, el día será más largo pero factible si sales muy temprano.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cuánto cuesta?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Presupuesto mínimo para un día: transporte ida y vuelta en Tobu rápido (~2.800 yenes), entrada a Toshogu (1.300 yenes), comida (~1.500 yenes). Total aproximado: unos 5.600 yenes (alrededor de 35-40 euros). Si usas el tren expreso o subes al Lago Chuzenji, añade unos 2.000-3.000 yenes más.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Merece la pena el Nikko Pass?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Nikko Pass de Tobu Railway existe en dos versiones: el básico (que cubre el trayecto Asakusa-Nikko y autobuses locales) y el "all area" (que incluye los autobuses hasta el Lago Chuzenji). Si planeas subir al lago, el all area pass se amortiza fácilmente. Si solo vas a ver los santuarios del centro de Nikko, el pase básico puede ahorrarte unos cientos de yenes, pero no es imprescindible.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Puedo ir con JR Pass?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí, pero con la ruta JR (Shinkansen a Utsunomiya + línea JR Nikko). La línea Tobu no está cubierta por el JR Pass. Si ya tienes el pase activado, la ruta JR es la elección lógica. Si no tienes JR Pass, Tobu es más barato y más directo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Nikko o Kamakura?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -377,7 +369,7 @@ const EsExcursionNikkoDesdeTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres descubrir Nikko con un guía que conoce cada rincón?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -392,7 +384,11 @@ const EsExcursionNikkoDesdeTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -424,7 +420,9 @@ const EsExcursionNikkoDesdeTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

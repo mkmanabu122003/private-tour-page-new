@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const VegetarianFoodTourTokyo = () => {
   return (
@@ -20,53 +22,33 @@ const VegetarianFoodTourTokyo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/vegetarian-matcha-wagashi.webp"
-          alt="Matcha tea and traditional wagashi sweets, a perfect vegetarian-friendly experience in Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Food & Culture</p>
-            <h1 className="heading-display text-foreground">
-              Vegetarian Food Tour Tokyo: A Complete Guide for Dietary Restrictions
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 8, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/vegetarian-matcha-wagashi.webp"
+        imageAlt="Matcha tea and traditional wagashi sweets, a perfect vegetarian-friendly experience in Tokyo"
+        eyebrow="Food & Culture"
+        title="Vegetarian Food Tour Tokyo: A Complete Guide for Dietary Restrictions"
+        date="March 8, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Can You Do a Food Tour in…", href: "#section-01-can-you-do-a-food-tour-in-tokyo-as-a-vegetarian" },
+          { num: "02", label: "Best Areas for Vegetarian-Fr…", href: "#section-02-best-areas-for-vegetarian-friendly-food" },
+          { num: "03", label: "What to Expect on a Private…", href: "#section-03-what-to-expect-on-a-private-vegetarian-food-tour" },
+          { num: "04", label: "How to Communicate Dietary…", href: "#section-04-how-to-communicate-dietary-restrictions-in-japan" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               One of the most common concerns I hear from guests before they book a food tour with me is about dietary restrictions. "I'm vegetarian, is that going to be a problem in Tokyo?" or "My partner is vegan and we're worried there won't be anything for them to eat." I completely understand the anxiety. Japan has a reputation as a meat-and-fish-heavy food culture, and when you look at the typical tourist food recommendations, everything seems to revolve around sushi, ramen with pork broth, and grilled yakitori skewers. But after leading hundreds of food-focused tours across Tokyo over the years, I can tell you with absolute confidence that vegetarian and vegan travelers can eat extraordinarily well here. You just need to know where to look, what to ask for, and how to communicate your needs clearly.
@@ -76,7 +58,8 @@ const VegetarianFoodTourTokyo = () => {
             </p>
 
             {/* Section 1: Can You Do a Food Tour as a Vegetarian? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Can You Do a Food Tour in Tokyo as a Vegetarian?</span></div>
+            <h2 id="section-01-can-you-do-a-food-tour-in-tokyo-as-a-vegetarian" className="scroll-mt-20">
               Can You Do a Food Tour in Tokyo as a Vegetarian?
             </h2>
             <figure className="my-8">
@@ -103,7 +86,8 @@ const VegetarianFoodTourTokyo = () => {
             </p>
 
             {/* Section 2: Best Areas for Vegetarian-Friendly Food */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Best Areas for Vegetarian-Friendly Food</span></div>
+            <h2 id="section-02-best-areas-for-vegetarian-friendly-food" className="scroll-mt-20">
               Best Areas for Vegetarian-Friendly Food (Asakusa, Tsukiji, Shinjuku)
             </h2>
             <figure className="my-8">
@@ -133,7 +117,8 @@ const VegetarianFoodTourTokyo = () => {
             </p>
 
             {/* Section 3: What to Expect on a Private Vegetarian Food Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What to Expect on a Private Vegetarian Food Tour</span></div>
+            <h2 id="section-03-what-to-expect-on-a-private-vegetarian-food-tour" className="scroll-mt-20">
               What to Expect on a Private Vegetarian Food Tour
             </h2>
             <figure className="my-8">
@@ -160,7 +145,8 @@ const VegetarianFoodTourTokyo = () => {
             </p>
 
             {/* Section 4: How to Communicate Dietary Restrictions */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · How to Communicate Dietary Restrictions in Japan</span></div>
+            <h2 id="section-04-how-to-communicate-dietary-restrictions-in-japan" className="scroll-mt-20">
               How to Communicate Dietary Restrictions in Japan
             </h2>
             <figure className="my-8">
@@ -188,7 +174,7 @@ const VegetarianFoodTourTokyo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Book a Custom Vegetarian Food Tour
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -203,7 +189,11 @@ const VegetarianFoodTourTokyo = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -238,7 +228,9 @@ const VegetarianFoodTourTokyo = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

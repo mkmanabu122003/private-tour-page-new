@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CTA Button Refinement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --ink-soft: #2b2823;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --gold-light: #d4b65e;
+    --gold-deep: #b8943b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    padding: 60px 0 80px;
+  }
+
+  .page-head {
+    max-width: 1280px;
+    margin: 0 auto 48px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+  .page-head code {
+    background: rgba(0,0,0,.04);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  /* Variant card */
+  .variant {
+    max-width: 1280px;
+    margin: 0 auto 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+  .variant-body {
+    padding: 32px;
+    background: var(--paper);
+  }
+  /* Header context — show button in nav */
+  .nav-context {
+    background: rgba(248,247,241,.96);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-context .brand {
+    font-family: Georgia, serif;
+    letter-spacing: .18em;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .nav-context .navlinks {
+    display: flex; gap: 28px; align-items: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* Hero context — dark bg */
+  .hero-context {
+    height: 180px;
+    background:
+      linear-gradient(95deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.42) 70%, rgba(0,0,0,0.18) 100%),
+      url("../public/images/tour-photos/group-photo.webp") center/cover, #2b2823;
+    padding: 32px;
+    display: flex; flex-direction: column; justify-content: end;
+    color: #fff;
+  }
+  .hero-context p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 16px;
+    color: rgba(255,255,255,.92);
+    text-shadow: 0 1px 14px rgba(0,0,0,.45);
+  }
+
+  .size-row {
+    margin-top: 24px;
+    padding: 24px 28px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+  }
+  .size-row .size-label {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    width: 120px;
+  }
+
+  .variant-foot {
+    padding: 16px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+  .variant-foot code { background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; font-size: 11px; }
+
+  /* === BUTTON BASE === */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    transition: all .25s ease;
+    cursor: pointer;
+    border: none;
+    line-height: 1;
+  }
+  .btn-sm { padding: 10px 18px; font-size: 13px; }
+  .btn-md { padding: 12px 24px; font-size: 14px; }
+  .btn-lg { padding: 16px 30px; font-size: 16px; }
+  .btn .arrow {
+    transition: transform .25s ease;
+    font-size: 16px;
+  }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* === CURRENT === */
+  .btn-current {
+    background-image: linear-gradient(to bottom, #D4B65E 0%, #B8943B 100%);
+    color: #F5ECD4;
+    letter-spacing: 0.02em;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 4px 12px rgba(139,115,63,.25);
+  }
+  .btn-current:hover {
+    background-image: linear-gradient(to bottom, #DFC26D 0%, #C4A043 100%);
+    transform: translateY(-1px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 8px 20px rgba(139,115,63,.35);
+  }
+
+  /* === PLAN A · Ink text on gold (contrast fix) === */
+  .btn-A {
+    background-image: linear-gradient(to bottom, #DFC26D 0%, #B8943B 100%);
+    color: #1a1404;
+    letter-spacing: 0.02em;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 4px 12px rgba(139,115,63,.30);
+    font-weight: 700;
+  }
+  .btn-A:hover {
+    background-image: linear-gradient(to bottom, #E5CC78 0%, #C4A043 100%);
+    transform: translateY(-1px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.55), 0 8px 22px rgba(139,115,63,.40);
+  }
+
+  /* === PLAN B · Black button with gold border === */
+  .btn-B {
+    background: var(--ink);
+    color: #f4e5b6;
+    border: 1.5px solid var(--gold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size-adjust: 0.5;
+    box-shadow: 0 4px 14px rgba(23,23,23,.18);
+    font-weight: 700;
+  }
+  .btn-B.btn-sm { font-size: 11px; padding: 11px 18px; letter-spacing: 0.18em; }
+  .btn-B.btn-md { font-size: 12px; padding: 13px 24px; letter-spacing: 0.18em; }
+  .btn-B.btn-lg { font-size: 13px; padding: 17px 32px; letter-spacing: 0.18em; }
+  .btn-B:hover {
+    background: #2b2823;
+    border-color: #dfc26d;
+    box-shadow: 0 6px 20px rgba(23,23,23,.28), 0 0 0 4px rgba(201,168,76,.10);
+    transform: translateY(-1px);
+  }
+
+  /* === PLAN C · Sharp ink button (minimalist) === */
+  .btn-C {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    letter-spacing: 0.06em;
+    box-shadow: 0 6px 18px rgba(23,23,23,.22);
+    font-weight: 600;
+  }
+  .btn-C .arrow { color: var(--gold); font-weight: 700; }
+  .btn-C:hover {
+    background: #2b2823;
+    box-shadow: 0 10px 24px rgba(23,23,23,.32);
+    transform: translateY(-1px);
+  }
+
+  /* === PLAN D · Gold border + cream fill (subtle premium) === */
+  .btn-D {
+    background: var(--card);
+    color: var(--ink);
+    border: 1.5px solid var(--gold);
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 8px rgba(201,168,76,.10);
+    font-weight: 700;
+  }
+  .btn-D:hover {
+    background: var(--gold);
+    color: var(--ink);
+    border-color: var(--gold);
+    box-shadow: 0 6px 18px rgba(201,168,76,.30);
+    transform: translateY(-1px);
+  }
+
+  /* === PLAN E · Filled gold + ink letterspacing (luxury menu) === */
+  .btn-E {
+    background-image: linear-gradient(to bottom, #DFC26D 0%, #B8943B 100%);
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 4px 14px rgba(139,115,63,.28);
+  }
+  .btn-E.btn-sm { font-size: 11px; padding: 11px 18px; }
+  .btn-E.btn-md { font-size: 11.5px; padding: 13px 24px; }
+  .btn-E.btn-lg { font-size: 13px; padding: 17px 32px; }
+  .btn-E:hover {
+    background-image: linear-gradient(to bottom, #E5CC78 0%, #C4A043 100%);
+    transform: translateY(-1px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 8px 22px rgba(139,115,63,.38);
+  }
+
+  /* Recommendation tag */
+  .rec {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--gold);
+    background: rgba(201,168,76,.12);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>CTA button refinement</h1>
+  <p>
+    現状（<code>btn-accent</code>）はテキストが <code>#F5ECD4</code>（cream）で gold gradient に対し<strong>低コントラスト</strong>。"Request a Tour" として読みづらい・地味。
+    5案で比較。各案を <strong>Header（sm）/ Default（md）/ Hero（lg）</strong> 3サイズで表示しています。
+  </p>
+</div>
+
+<!-- ============ CURRENT ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT</span>
+    <span class="variant-name">btn-accent · cream text on gold gradient</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-current btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-current btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-current btn-sm">Request a Tour</button>
+    <button class="btn btn-current btn-md">Request a Tour</button>
+    <button class="btn btn-current btn-lg">Request Your Private Tour</button>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue：</strong>cream text <code>#F5ECD4</code> が gold gradient 上で <span style="color:#9c563f;">コントラスト不足</span>（WCAG 検査では境界）。Hero 上では特に "Request Your Private Tour" が雰囲気に埋もれる。
+  </div>
+</div>
+
+<!-- ============ PLAN A ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN A · Ink text on gold</span>
+    <span class="variant-name">最小変更 · text を ink にして contrast 確保</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-A btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-A btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-A btn-sm">Request a Tour</button>
+    <button class="btn btn-A btn-md">Request a Tour</button>
+    <button class="btn btn-A btn-lg">Request Your Private Tour</button>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>text color <code>#F5ECD4 → #1a1404</code>（dark ink-brown）／font-weight 600 → 700／gradient を少し明るめに（読みやすさ↑）。<br>
+    <strong>効果：</strong>Aman / Belmond の "金の地に黒文字" idiom。<em>WCAG AA クリア</em>。最小変更で雰囲気そのまま、可読性 ↑↑。<span class="rec">推奨候補</span>
+  </div>
+</div>
+
+<!-- ============ PLAN B ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN B · Black + gold border</span>
+    <span class="variant-name">editorial premium · 黒地 / gold border / cream gold text uppercase</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-B btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-B btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-B btn-sm">Request a Tour</button>
+    <button class="btn btn-B btn-md">Request a Tour</button>
+    <button class="btn btn-B btn-lg">Request Your Private Tour</button>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>bg <code>#171717</code>（ink）／border <code>1.5px gold</code>／text <code>#f4e5b6</code> uppercase tracking 0.18em／hover で gold halo ring 出現。<br>
+    <strong>効果：</strong>editorial luxury idiom（Mr & Mrs Smith / Black Tomato 風）。 Hero の dark bg に <em>溶け込む</em> リスクあり（Hero は要 white 系統 contrast）。
+  </div>
+</div>
+
+<!-- ============ PLAN C ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN C · Sharp ink minimalist</span>
+    <span class="variant-name">黒地 + paper text + gold arrow accent · Aman 風</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-C btn-sm">Request a Tour <span class="arrow">→</span></button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-C btn-lg">Request Your Private Tour <span class="arrow">→</span></button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-C btn-sm">Request a Tour <span class="arrow">→</span></button>
+    <button class="btn btn-C btn-md">Request a Tour <span class="arrow">→</span></button>
+    <button class="btn btn-C btn-lg">Request Your Private Tour <span class="arrow">→</span></button>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>solid ink bg <code>#171717</code>／cream paper text／<strong>gold arrow → だけ accent</strong>／高い shadow。<br>
+    <strong>効果：</strong>Aman Resorts 風の minimalist 高級感。gold が arrow の 1点だけなので "金色多すぎ問題" 発生せず。Hero / nav 両方で identity 出る。
+  </div>
+</div>
+
+<!-- ============ PLAN D ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN D · Gold border + cream</span>
+    <span class="variant-name">subtle premium · cream bg / gold border / hover で fill</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-D btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-D btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-D btn-sm">Request a Tour</button>
+    <button class="btn btn-D btn-md">Request a Tour</button>
+    <button class="btn btn-D btn-lg">Request Your Private Tour</button>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>bg <code>#fffdf8</code>（cream）／border <code>1.5px gold</code>／text ink black／hover で gold fill。<br>
+    <strong>効果：</strong>最も subtle・editorial。Hero 上では <strong>白系として読める</strong>（contrast 最大）。"buy" よりは "explore" の柔らかい誘導。CV 強度はやや控えめ。
+  </div>
+</div>
+
+<!-- ============ PLAN E ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN E · Luxury menu</span>
+    <span class="variant-name">gold gradient + ink uppercase 0.18em letterspacing</span>
+  </div>
+  <div class="nav-context">
+    <span class="brand">TANUKI TABI TRAVEL</span>
+    <div class="navlinks">
+      <span>Tours</span><span>Blog</span><span>About</span>
+      <button class="btn btn-E btn-sm">Request a Tour</button>
+    </div>
+  </div>
+  <div class="hero-context">
+    <p>"Tokyo private walking tours, with a Licensed Local Guide"</p>
+    <button class="btn btn-E btn-lg">Request Your Private Tour →</button>
+  </div>
+  <div class="size-row">
+    <span class="size-label">All sizes</span>
+    <button class="btn btn-E btn-sm">Request a Tour</button>
+    <button class="btn btn-E btn-md">Request a Tour</button>
+    <button class="btn btn-E btn-lg">Request Your Private Tour</button>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>gold gradient（A と同じ）+ ink text + <strong>uppercase tracking 0.18em</strong>（label idiom）+ font-weight 700。<br>
+    <strong>効果：</strong>Plan A の高コントラストに editorial 装飾を追加。Cormorant の section-eyebrow と同じ tracking で <em>ページ全体のタイポグラフィと統一感</em>。
+  </div>
+</div>
+
+<!-- ============ DECISION TABLE ============ -->
+<div style="max-width: 1280px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">案ごとの比較</h2>
+  <table style="width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;">
+    <thead>
+      <tr style="background: var(--card);">
+        <th style="padding: 12px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">観点</th>
+        <th style="padding: 12px 14px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">A</th>
+        <th style="padding: 12px 14px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">B</th>
+        <th style="padding: 12px 14px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">C</th>
+        <th style="padding: 12px 14px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">D</th>
+        <th style="padding: 12px 14px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">E</th>
+      </tr>
+    </thead>
+    <tbody style="font-size: 13px; color: var(--muted);">
+      <tr><td style="padding: 12px 14px; color: var(--ink); font-weight: 600;">Header での読みやすさ</td><td style="text-align: center;">◎</td><td style="text-align: center;">○</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎</td></tr>
+      <tr><td style="padding: 12px 14px; color: var(--ink); font-weight: 600;">Hero（dark bg）での見え</td><td style="text-align: center;">◎</td><td style="text-align: center;">△ 溶ける</td><td style="text-align: center;">○ 溶けかけ</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎</td></tr>
+      <tr><td style="padding: 12px 14px; color: var(--ink); font-weight: 600;">CV 強度（クリックされやすさ）</td><td style="text-align: center;">◎</td><td style="text-align: center;">○</td><td style="text-align: center;">◎</td><td style="text-align: center;">△ 控えめ</td><td style="text-align: center;">◎</td></tr>
+      <tr><td style="padding: 12px 14px; color: var(--ink); font-weight: 600;">editorial 一貫性</td><td style="text-align: center;">○</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎</td></tr>
+      <tr><td style="padding: 12px 14px; color: var(--ink); font-weight: 600;">実装コスト</td><td style="text-align: center;">最小</td><td style="text-align: center;">中</td><td style="text-align: center;">中</td><td style="text-align: center;">小</td><td style="text-align: center;">小</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 20px; color: var(--muted); font-size: 14px; line-height: 1.6;">
+    <strong style="color: var(--ink);">推奨：</strong>
+    <span class="rec">PLAN A</span> または <span class="rec">PLAN E</span>。
+    A は最小変更で可読性確保、E は A + uppercase tracking で editorial 装飾。"地味" を解消するなら E のほうが効果的。
+    <strong>C</strong> は黒×金で全く違う方向性、強い差別化を狙う場合。
+  </p>
+</div>
+
+</body>
+</html>

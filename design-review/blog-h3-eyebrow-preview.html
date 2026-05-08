@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>h3 Eyebrow Conversion — BEFORE / AFTER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --ink-soft: #2b2823;
+        --muted: #4f4a43;
+        --muted-2: #6a655c;
+        --soft: #eeeae0;
+        --line: #dcd4c2;
+        --gold: #c9a84c;
+        --gold-soft: #f4e5b6;
+        --clay: #9c563f;
+        --card: #fffdf8;
+      }
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #1d1a14;
+        color: #f8f7f1;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 13px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .toolbar .title { font-weight: 700; letter-spacing: .04em; }
+      .toolbar .meta { color: #c9c2b0; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        max-width: 1680px;
+        margin: 0 auto;
+      }
+      .pane {
+        padding: 32px 40px 64px;
+      }
+      .pane.before { background: #efe9d9; border-right: 1px dashed #c9c2b0; }
+      .pane.after  { background: var(--paper); }
+      .pane-label {
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--muted-2);
+        margin-bottom: 28px;
+        padding: 6px 10px;
+        background: rgba(0,0,0,.05);
+        display: inline-block;
+        border-radius: 3px;
+      }
+      .pane.before .pane-label { color: #8b3a2a; background: rgba(156, 86, 63, .12); }
+      .pane.after  .pane-label { color: #5a7a3a; background: rgba(120, 152, 80, .15); }
+
+      /* === Plan A typography (mirrors src/index.css .prose-plan-a) === */
+      .article {
+        max-width: 720px;
+        margin: 0 auto;
+        color: var(--ink);
+      }
+      .article h2 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.15;
+        letter-spacing: -0.005em;
+        margin: 0 0 22px;
+      }
+      .article p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin: 0 0 22px;
+        color: var(--muted);
+      }
+      .article p strong { color: var(--ink); font-weight: 700; }
+      .article .hl-gold {
+        background: linear-gradient(transparent 62%, var(--gold-soft) 62%);
+        padding: 0 2px;
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      /* Numbered eyebrow above h2 */
+      .section-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 0;
+        margin-bottom: 14px;
+      }
+      .section-eyebrow::before {
+        content: "";
+        width: 56px;
+        height: 2px;
+        background: var(--gold);
+        flex: 0 0 auto;
+      }
+      .section-eyebrow span {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--gold);
+      }
+
+      /* === BEFORE: current h3 (text-xl font-medium serif-ish via Tailwind) === */
+      .pane.before .article h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 24px;
+        line-height: 1.3;
+        font-weight: 500;
+        color: var(--ink);
+        margin: 32px 0 16px;
+      }
+
+      /* === AFTER: h3 → eyebrow style === */
+      .pane.after .article h3 {
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 44px 0 12px;
+      }
+
+      /* Annotation footer */
+      .footer {
+        max-width: 1680px;
+        margin: 0 auto;
+        padding: 32px 40px 80px;
+        background: #1d1a14;
+        color: #f8f7f1;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+      .footer h3 {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--gold);
+        margin: 0 0 12px;
+      }
+      .footer .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      .footer code {
+        background: rgba(255,255,255,.08);
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 12px;
+        color: #f4e5b6;
+      }
+      .footer ul { margin: 0 0 0 18px; padding: 0; }
+      .footer li { margin-bottom: 6px; }
+
+      /* === Edge cases panel === */
+      .edge-cases {
+        max-width: 1680px;
+        margin: 0 auto;
+        background: #fffdf8;
+        padding: 40px 40px 56px;
+        border-top: 1px solid var(--line);
+      }
+      .edge-cases-title {
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--muted-2);
+        margin-bottom: 24px;
+      }
+      .edge-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .edge-card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 24px 22px;
+      }
+      .edge-card .tag {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .edge-card .demo-h3 {
+        margin: 0 0 10px;
+      }
+      .edge-card.choice .demo-h3,
+      .edge-card.guide .demo-h3,
+      .edge-card.faq .demo-h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 600;
+        line-height: 1.3;
+        color: var(--ink);
+      }
+      .edge-card.choice .demo-h3 { font-size: 24px; }
+      .edge-card.guide  .demo-h3 { font-size: 28px; }
+      .edge-card.faq    .demo-h3 { font-size: 22px; }
+      .edge-card p {
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--muted);
+        margin: 0;
+      }
+      .edge-card .note {
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px dashed var(--line);
+        font-size: 12px;
+        color: var(--muted-2);
+      }
+      .edge-card .note code {
+        background: rgba(0,0,0,.05);
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 11px;
+      }
+
+      .gn-label {
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--clay);
+        margin-bottom: 8px;
+      }
+      .choice-label {
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 1100px) {
+        .grid { grid-template-columns: 1fr; }
+        .pane.before { border-right: none; border-bottom: 1px dashed #c9c2b0; }
+        .edge-grid { grid-template-columns: 1fr; }
+        .footer .row { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">h3 EYEBROW CONVERSION</span>
+      <span class="meta">Plan A — Editorial Trust · NaritaVsHaneda.tsx · Section 03 (Narita Access)</span>
+    </div>
+
+    <div class="grid">
+      <!-- ========= BEFORE ========= -->
+      <section class="pane before">
+        <div class="pane-label">Before · 現在の h3（serif 24px）</div>
+        <article class="article">
+          <div class="section-eyebrow"><span>Section 03 · Narita Access</span></div>
+          <h2>Narita Access in 2026: Four Ways to Central Tokyo</h2>
+          <p>Narita has four realistic transit options, and each makes sense for a different scenario. Exact 2026 fares and times below.</p>
+
+          <h3>1. Keisei Skyliner (the fastest, best value)</h3>
+          <p>The Skyliner runs directly to <strong>Nippori in 36 minutes</strong> and <strong>Ueno in 41 minutes</strong> for <strong>¥2,470</strong>. Trains depart every 20 minutes. At Nippori, you transfer to the JR Yamanote Line, which connects to Shinjuku, Shibuya, and everywhere else in central Tokyo in under 25 minutes. This is my default recommendation for clients staying anywhere on the Yamanote loop, particularly the east and north sides.</p>
+
+          <h3>2. Narita Express / N'EX (best for west-side hotels)</h3>
+          <p>The JR Narita Express goes directly to Tokyo, Shinagawa, Shibuya, Shinjuku, Ikebukuro, and Yokohama without transfers. Ordinary class to Shinjuku is <strong>¥3,250</strong>; Green Car is <strong>¥4,020</strong>. Travel time is <strong>60-98 minutes</strong> depending on the stop.</p>
+
+          <h3>3. Airport Limousine Bus (the hotel-door option)</h3>
+          <p>The Limousine Bus drops you directly at your hotel's front door — no transfers, no dragging suitcases through Shinjuku Station. Fare to Shinjuku-area hotels is typically <strong>¥3,200</strong>, with 2-4 buses per hour between 7 AM and 10 PM. Journey time is <strong>90-120 minutes</strong> depending on traffic.</p>
+
+          <h3>4. Fixed-Rate Taxi (only if you must)</h3>
+          <p>Narita offers fixed-rate taxi service to Tokyo's 23 wards. A typical arrival-day taxi to central Tokyo runs <strong>¥25,000-32,000 including tolls</strong>. Rarely worth it unless you're traveling with four people, heavy luggage, and special circumstances.</p>
+        </article>
+      </section>
+
+      <!-- ========= AFTER ========= -->
+      <section class="pane after">
+        <div class="pane-label">After · h3 アイブロウ化（Inter 14px uppercase）</div>
+        <article class="article">
+          <div class="section-eyebrow"><span>Section 03 · Narita Access</span></div>
+          <h2>Narita Access in 2026: Four Ways to Central Tokyo</h2>
+          <p>Narita has four realistic transit options, and each makes sense for a different scenario. Exact 2026 fares and times below.</p>
+
+          <h3>1. Keisei Skyliner (the fastest, best value)</h3>
+          <p>The Skyliner runs directly to <strong>Nippori in 36 minutes</strong> and <strong>Ueno in 41 minutes</strong> for <strong>¥2,470</strong>. Trains depart every 20 minutes. At Nippori, you transfer to the JR Yamanote Line, which connects to Shinjuku, Shibuya, and everywhere else in central Tokyo in under 25 minutes. This is my default recommendation for clients staying anywhere on the Yamanote loop, particularly the east and north sides.</p>
+
+          <h3>2. Narita Express / N'EX (best for west-side hotels)</h3>
+          <p>The JR Narita Express goes directly to Tokyo, Shinagawa, Shibuya, Shinjuku, Ikebukuro, and Yokohama without transfers. Ordinary class to Shinjuku is <strong>¥3,250</strong>; Green Car is <strong>¥4,020</strong>. Travel time is <strong>60-98 minutes</strong> depending on the stop.</p>
+
+          <h3>3. Airport Limousine Bus (the hotel-door option)</h3>
+          <p>The Limousine Bus drops you directly at your hotel's front door — no transfers, no dragging suitcases through Shinjuku Station. Fare to Shinjuku-area hotels is typically <strong>¥3,200</strong>, with 2-4 buses per hour between 7 AM and 10 PM. Journey time is <strong>90-120 minutes</strong> depending on traffic.</p>
+
+          <h3>4. Fixed-Rate Taxi (only if you must)</h3>
+          <p>Narita offers fixed-rate taxi service to Tokyo's 23 wards. A typical arrival-day taxi to central Tokyo runs <strong>¥25,000-32,000 including tolls</strong>. Rarely worth it unless you're traveling with four people, heavy luggage, and special circumstances.</p>
+        </article>
+      </section>
+    </div>
+
+    <!-- ========= EDGE CASES ========= -->
+    <div class="edge-cases">
+      <div class="edge-cases-title">Edge cases · これら3種類の h3 はアイブロウ化しない（serif残す）</div>
+      <div class="edge-grid">
+        <div class="edge-card choice">
+          <p class="choice-label">Default for most travelers</p>
+          <h3 class="demo-h3">Choose Haneda if…</h3>
+          <p>Quick-decision の二択カード内の見出し。読者が即座に「自分はどっち側か」を判断する箇所。</p>
+          <div class="note"><code>.choice-card h3</code> → Cormorant 24px のまま</div>
+        </div>
+        <div class="edge-card guide">
+          <p class="gn-label">Manabu's take</p>
+          <h3 class="demo-h3">Pick the airport that fits your first three hours, not your flight price.</h3>
+          <p>ガイド一人称ブロックの結論文。ブログ全体の権威性の象徴。</p>
+          <div class="note"><code>.guide-note-callout h3</code> → Cormorant 28-30px のまま（gn-title）</div>
+        </div>
+        <div class="edge-card faq">
+          <h3 class="demo-h3">Did Tsukiji Market close?</h3>
+          <p>FAQ の質問文。検索流入で直接読まれることが多く、可読性最優先。</p>
+          <div class="note"><code>.faq-block h3</code> → Cormorant 24px のまま（既存ルール）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= TECH NOTES ========= -->
+    <div class="footer">
+      <div class="row">
+        <div>
+          <h3>追加するCSS（src/index.css）</h3>
+          <pre style="background:rgba(255,255,255,.05); padding:14px; border-radius:6px; overflow-x:auto; font-size:12px; line-height:1.5; margin:0;">/* Sub-section h3 → eyebrow */
+.prose-plan-a h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;       /* 14px */
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Exceptions (keep Cormorant) */
+.prose-plan-a .choice-card h3,
+.prose-plan-a .guide-note-callout h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  color: hsl(var(--foreground));
+}</pre>
+        </div>
+        <div>
+          <h3>変更するJSX</h3>
+          <ul>
+            <li><code>NaritaVsHaneda.tsx</code> の12箇所（L205, 212, 219, 226, 242, 249, 256, 263, 276, 287, 294, 301）</li>
+            <li>具体的には: <code>&lt;h3 className="text-xl font-medium text-foreground mt-8 mb-4"&gt;</code> → <code>&lt;h3&gt;</code></li>
+            <li><code>TsukijiVsToyosu.tsx</code>: 全 h3 が FAQ 内なので変更不要</li>
+          </ul>
+          <h3 style="margin-top:24px">未確認ポイント</h3>
+          <ul>
+            <li>L139 <code>Manabu's take</code> 内の <code>&lt;h3&gt;</code>: 上記 CSS で <code>.guide-note-callout h3</code> セレクタが当たるので JSX 変更不要</li>
+            <li>L161, L171 の choice-card h3: 同様に <code>.choice-card h3</code> セレクタが当たる</li>
+            <li>色は <code>--foreground</code>（黒）で提案。前回の <code>blog-typography-A.html</code> プレビューと統一</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const ShibuyaHarajukuGuide = () => {
   return (
@@ -16,51 +18,34 @@ const ShibuyaHarajukuGuide = () => {
         canonicalPath="/blog/shibuya-harajuku-guide"
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Shibuya & Harajuku: A Local Guide to Tokyo's Modern Side
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 25, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/shibuya-harajuku-guide-hero.webp"
-          alt="Guide to Shibuya and Harajuku - Tokyo's modern side"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/shibuya-harajuku-guide-hero.webp"
+        imageAlt="Guide to Shibuya and Harajuku - Tokyo's modern side"
+        eyebrow="Tokyo Area Guides"
+        title="Shibuya & Harajuku: A Local Guide to Tokyo's Modern Side"
+        date="February 25, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Shibuya Crossing", href: "#section-01-shibuya-crossing" },
+          { num: "02", label: "Beyond the Crossing", href: "#section-02-beyond-the-crossing" },
+          { num: "03", label: "Harajuku", href: "#section-03-harajuku" },
+          { num: "04", label: "Where to Eat", href: "#section-04-where-to-eat" },
+          { num: "05", label: "Evening Plans", href: "#section-05-evening-plans" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               If Asakusa represents old Tokyo, the temples, the traditions, the quiet rituals of another era, then Shibuya and Harajuku are the city's creative pulse. These neighboring districts sit on the western side of central Tokyo, connected by a short walk or a single train stop, yet each carries a completely different energy. Shibuya is frenetic, commercial, and alive with neon and noise. Harajuku is a place of subcultures, fashion experiments, and architectural statements. Together they form what many visitors picture when they imagine modern Tokyo.
@@ -70,7 +55,8 @@ const ShibuyaHarajukuGuide = () => {
             </p>
 
             {/* Shibuya Crossing */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Shibuya Crossing</span></div>
+            <h2 id="section-01-shibuya-crossing" className="scroll-mt-20">
               Shibuya Crossing: How to Actually Enjoy It
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -100,35 +86,36 @@ const ShibuyaHarajukuGuide = () => {
             </p>
 
             {/* Beyond the Crossing */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Beyond the Crossing</span></div>
+            <h2 id="section-02-beyond-the-crossing" className="scroll-mt-20">
               Beyond the Crossing: Shibuya's Best Kept Secrets
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Most visitors never venture more than a block or two past the crossing, which means they miss the neighborhoods that give Shibuya its real character. Here are the spots I take people on my tours, the places that reward curiosity and a willingness to wander.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Nonbei Yokocho (Drunkard's Alley)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tucked behind the train tracks just a two-minute walk from Shibuya Station's north exit, Nonbei Yokocho is a narrow lane of tiny bars that feels like it belongs in a different decade. Think of it as Shibuya's answer to Shinjuku's Golden Gai: small, atmospheric drinking establishments that seat maybe six to eight people each. The difference is that Nonbei Yokocho is far less touristy and has a more relaxed, welcoming vibe. Some of these bars have been run by the same owners for 40 or 50 years. Evenings are the best time to visit, and don't be afraid to duck into a place that catches your eye. Most welcome newcomers, even those who don't speak Japanese. A simple "osusume kudasai" (your recommendation, please) will get you started.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Center-gai and the Side Streets
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Center-gai (officially renamed "Basketball Street," though nobody calls it that) is Shibuya's main pedestrian shopping street, loud and crowded with fast-food chains and clothing stores. It's worth a walk-through for the atmosphere, but the real finds are on the narrow side streets that branch off it. These smaller alleys hide izakayas with handwritten menus, tiny ramen counters with lines out the door, and vintage clothing shops where you can find one-of-a-kind pieces. The rule of thumb in Shibuya is simple: if a street looks too narrow to bother with, it's probably worth exploring.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Stream and the River Area
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               One of Shibuya's most dramatic recent transformations is the area around the Shibuya River, south of the station. The Shibuya Stream complex opened in 2018 and turned what was a hidden, concrete-covered waterway into an open-air riverside promenade with restaurants, cafes, and public seating areas. It's where office workers eat lunch and where couples stroll on weekend afternoons. The vibe is completely different from the chaos of the crossing: modern, relaxed, almost European in feel. Follow the river walk south and you'll find yourself in a surprisingly quiet residential area that most tourists have no idea exists.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Dogenzaka: More Than Its Reputation
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,14 +138,15 @@ const ShibuyaHarajukuGuide = () => {
             <InlineCTA message="Want to explore Shibuya and Harajuku with a local guide?" href="/tours/shibuya-harajuku" />
 
             {/* Harajuku */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Harajuku</span></div>
+            <h2 id="section-03-harajuku" className="scroll-mt-20">
               Harajuku: More Than Takeshita Street
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Harajuku is synonymous with Japanese youth culture, and for many visitors it's the neighborhood they're most excited to see. But Harajuku is much more than the single street most people visit. Let me break down what's here and how to make the most of it.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Takeshita Street: A Reality Check
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -178,7 +166,7 @@ const ShibuyaHarajukuGuide = () => {
                 Cat Street, Harajuku's real fashion street, away from the Takeshita crowds
               </figcaption>
             </figure>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cat Street: The Real Fashion Street
             </h3>
             <figure className="my-8">
@@ -198,7 +186,7 @@ const ShibuyaHarajukuGuide = () => {
               Running roughly parallel to Takeshita Street but one block south, Cat Street (Kyuushibuya-gawa Yuuhodou) is where Harajuku's fashion-conscious locals actually shop. Built along a former riverbed, it's a winding, tree-lined street with independent boutiques, designer flagship stores, vintage shops, and some of the best coffee in the area. The atmosphere is completely different from Takeshita: relaxed, curated, and genuinely stylish. This is where Japanese streetwear brands test new concepts, where up-and-coming designers open their first shops, and where you'll spot fashion-forward locals putting together outfits that wouldn't look out of place in a magazine. If you only have time for one Harajuku street, make it Cat Street.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Omotesando: An Architecture Walk
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -218,14 +206,14 @@ const ShibuyaHarajukuGuide = () => {
                 The forested approach to Meiji Shrine, a world away from Harajuku's crowds
               </figcaption>
             </figure>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Meiji Shrine: A Peaceful Contrast
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Just a five-minute walk from the neon chaos of Takeshita Street, Meiji Shrine (Meiji Jingu) sits inside a 170-acre forested park that feels like an entirely different world. Dedicated to Emperor Meiji and Empress Shoken, the shrine is one of Tokyo's most important Shinto sites. The transition from Harajuku's pop culture excess to the shrine's towering torii gates and gravel paths is one of the most dramatic contrasts in all of Tokyo, and it perfectly captures what makes this city so endlessly fascinating. Arrive early in the morning for the most serene experience, and keep an eye out for traditional wedding processions on weekends.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Yoyogi Park: Tokyo's Living Room
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -246,21 +234,22 @@ const ShibuyaHarajukuGuide = () => {
             </p>
 
             {/* Where to Eat */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Where to Eat</span></div>
+            <h2 id="section-04-where-to-eat" className="scroll-mt-20">
               Where to Eat
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               One of the best things about Shibuya and Harajuku is the sheer density of food options, ranging from cheap street snacks to world-class dining. Here are my recommendations for visitors who want to eat well without relying on Google's top results (which tend to steer you toward tourist traps).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Harajuku Street Food: The Classics
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Harajuku crepes are a Tokyo institution. The thin, folded crepes stuffed with whipped cream, fresh fruit, chocolate, and ice cream have been a Takeshita Street staple since the 1970s. Marion Crepes and Angels Heart are the originals, and they're still good. Cotton candy shops have exploded in popularity in recent years, with shops offering massive, colorful clouds of spun sugar that are as much about the Instagram photo as the taste. They're fun, ephemeral, and perfectly Harajuku. For something more substantial, the side streets around Takeshita hide excellent takoyaki (octopus ball) stands and small curry shops that cater to hungry locals rather than tourists.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Ramen and Beyond
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -268,28 +257,29 @@ const ShibuyaHarajukuGuide = () => {
             </p>
 
             {/* Evening Plans */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Evening Plans</span></div>
+            <h2 id="section-05-evening-plans" className="scroll-mt-20">
               Evening Plans
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shibuya transforms after dark. The neon intensifies, the crowds shift from shoppers to revelers, and the energy of the neighborhood changes completely. If you want to experience Tokyo nightlife, Shibuya is one of the best starting points, and here's how to do it safely and enjoyably.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Nightlife Starting Points
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For a relaxed evening, start at Nonbei Yokocho (the alley I mentioned earlier) or one of the craft beer bars near the station. Shibuya has an excellent craft beer scene, with spots like Mikkeller Tokyo and Goodbeer Faucets offering Japanese and international microbrews in stylish settings. If you're looking for something livelier, the streets around Center-gai have dozens of izakayas where you can order rounds of drinks and small plates in the classic Japanese drinking style. For clubbing, Shibuya is home to some of Tokyo's most iconic venues, though the scene starts late, typically after midnight.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Safe Bar-Hopping Tips for Tourists
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo is one of the safest cities in the world for nightlife, but a few common-sense tips will improve your experience. Stick to places with visible menus and posted prices. This avoids any surprise charges. Be cautious of touts on the street who invite you to "special" bars; the legitimate places don't need to recruit customers from the sidewalk. Many smaller bars have a table charge (otoshi) of 300 to 500 yen per person, which typically includes a small appetizer. This is standard practice, not a scam. If you're unsure about a place, ask your hotel concierge or look for spots with reviews in English on Google Maps.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Last Train: Know Your Limits
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -298,7 +288,7 @@ const ShibuyaHarajukuGuide = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want to explore Shibuya and Harajuku with a local who knows every backstreet?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -313,7 +303,11 @@ const ShibuyaHarajukuGuide = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -347,7 +341,9 @@ const ShibuyaHarajukuGuide = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

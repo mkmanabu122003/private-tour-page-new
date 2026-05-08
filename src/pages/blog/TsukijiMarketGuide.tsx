@@ -7,6 +7,8 @@ import { InlineCTA } from "@/components/blog/InlineCTA";
 import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const TsukijiMarketGuide = () => {
   return (
@@ -27,51 +29,36 @@ const TsukijiMarketGuide = () => {
         ]}
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Tsukiji Outer Market Guide 2026: Yes, It's Still Open
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 7, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/tsukiji-market-seafood-stalls.webp"
-          alt="Seafood skewer stalls at Tsukiji Outer Market in Tokyo"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/tsukiji-market-seafood-stalls.webp"
+        imageAlt="Seafood skewer stalls at Tsukiji Outer Market in Tokyo"
+        eyebrow="Tokyo Area Guides"
+        title="Tsukiji Outer Market Guide 2026: Yes, It's Still Open"
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Tsukiji Outer Market Hours", href: "#section-01-tsukiji-outer-market-hours" },
+          { num: "02", label: "What Happened to Tsukiji", href: "#section-02-what-happened-to-tsukiji" },
+          { num: "03", label: "What's Still There", href: "#section-03-whats-still-there" },
+          { num: "04", label: "What to Eat and Where", href: "#section-04-what-to-eat-and-where" },
+          { num: "05", label: "How to Get There and When…", href: "#section-05-how-to-get-there-and-when-to-arrive" },
+          { num: "06", label: "Tsukiji vs. Toyosu", href: "#section-06-tsukiji-vs-toyosu" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Quick Answer Box — Featured Snippet target */}
             <div className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg mb-8">
               <p className="font-semibold text-foreground mb-2">Quick Answer</p>
@@ -159,7 +146,8 @@ const TsukijiMarketGuide = () => {
             </p>
 
             {/* Section: Tsukiji Market Hours — exact-match for top GSC queries */}
-            <h2 id="hours" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 01 · Tsukiji Outer Market Hours</span></div>
+            <h2 id="hours" className="scroll-mt-20">
               Tsukiji Outer Market Hours (2026)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -235,7 +223,8 @@ const TsukijiMarketGuide = () => {
             </p>
 
             {/* Section 1: What Happened */}
-            <h2 id="what-happened" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 02 · What Happened to Tsukiji</span></div>
+            <h2 id="what-happened" className="scroll-mt-20">
               What Happened to Tsukiji (The Quick Version)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -252,7 +241,8 @@ const TsukijiMarketGuide = () => {
             </p>
 
             {/* Section 2: The Outer Market */}
-            <h2 id="outer-market" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 03 · What's Still There</span></div>
+            <h2 id="outer-market" className="scroll-mt-20">
               What's Still There: The Outer Market
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -285,14 +275,15 @@ const TsukijiMarketGuide = () => {
             />
 
             {/* Section 3: What to Eat */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · What to Eat and Where</span></div>
+            <h2 id="section-04-what-to-eat-and-where" className="scroll-mt-20">
               What to Eat and Where (My Personal Picks)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the part of my tsukiji guide where I get to share what I actually eat when I'm here, not as a guide performing for clients, but as someone who genuinely loves this market and has strong opinions about its food. Come hungry. Seriously. Skip breakfast at the hotel. You'll want the stomach space.
             </p>
 
-            <h3 id="tamagoyaki" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
+            <h3 id="tamagoyaki" className="scroll-mt-20">
               Tamagoyaki: The Icon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -315,7 +306,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 id="sushi" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
+            <h3 id="sushi" className="scroll-mt-20">
               Fresh Sushi: Standing Up, As It Should Be
             </h3>
             <figure className="my-8">
@@ -352,7 +343,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 id="kaisendon" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
+            <h3 id="kaisendon" className="scroll-mt-20">
               Seafood Rice Bowls (Kaisendon)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -373,7 +364,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 id="pickles" className="text-xl font-medium text-foreground mt-8 mb-4 scroll-mt-20">
+            <h3 id="pickles" className="scroll-mt-20">
               Pickles and Dried Goods: The Souvenirs Worth Buying
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -401,7 +392,8 @@ const TsukijiMarketGuide = () => {
             </GuideInsiderNote>
 
             {/* Section 4: Getting There */}
-            <h2 id="how-to-get-there" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 05 · How to Get There and When to Arrive</span></div>
+            <h2 id="how-to-get-there" className="scroll-mt-20">
               How to Get There and When to Arrive
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -411,7 +403,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Arrive by 8:00 AM.</strong> This is the sweet spot. The stalls are fully set up and stocked, the grills are fired up, the fish is at peak freshness, and the crowds haven't yet built to their midday density. By 8 AM, you'll have room to browse, ask questions, take photos, and eat without feeling rushed. Between 9 and 10 AM is still good but noticeably busier. After 11 AM, you're competing with lunch crowds. By 1 to 2 PM, many stalls begin closing, and by 3 PM the market is largely shut down for the day.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
+              <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway. Staying in Ginza? You can also <Link to="/blog/ginza-to-tsukiji-walking-route" className="text-accent hover:underline">walk from Ginza to Tsukiji in about 15 minutes</Link> along Harumi-dori &mdash; flat, scenic, and past Kabukiza Theatre.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday, Thursday, and Friday give you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays and select Wednesdays</strong>. Most stalls are closed on Sundays and on certain Wednesdays that follow the Tokyo Central Wholesale Market calendar (not every Wednesday). Always check the <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">market's official calendar</a> before your visit, as additional closure days occur around holidays. If you only have one morning in Tokyo for food, make it a Tuesday, Thursday, or Friday at Tsukiji.
@@ -431,7 +423,8 @@ const TsukijiMarketGuide = () => {
             />
 
             {/* Section 5: Tsukiji vs Toyosu */}
-            <h2 id="tsukiji-vs-toyosu" className="heading-section text-foreground mt-12 mb-6 scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 06 · Tsukiji vs. Toyosu</span></div>
+            <h2 id="tsukiji-vs-toyosu" className="scroll-mt-20">
               Tsukiji vs. Toyosu: Should You Visit Both?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -459,7 +452,7 @@ const TsukijiMarketGuide = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want to experience Tsukiji with a local who knows every stall?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -477,53 +470,58 @@ const TsukijiMarketGuide = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji Market still open in 2026?</h3>
+                  <h3>Is Tsukiji Market still open in 2026?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market, with over 400 shops, restaurants, and food stalls, remains open and thriving. It's one of the best food destinations in Tokyo and well worth a morning visit.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What time does Tsukiji Outer Market open and close?</h3>
+                  <h3>What time does Tsukiji Outer Market open and close?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Most shops at Tsukiji Outer Market open around 5:00 AM and close by 2:00 PM, though each shop sets its own hours. The peak window for visitors is 7:00–11:00 AM, when everything is open and stocked. After 2:00 PM the market is effectively shut down for the day.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji Outer Market open on Sundays?</h3>
+                  <h3>Is Tsukiji Outer Market open on Sundays?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No. Tsukiji Outer Market is closed every Sunday — most shops, food stalls, and restaurants are shut. A handful of cafes near the market may open, but it's not worth a visit. Plan for Tuesday, Thursday, or Friday morning instead.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What time should I arrive at Tsukiji?</h3>
+                  <h3>What time should I arrive at Tsukiji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Aim for 8:00 AM. The stalls are fully stocked, the grills are hot, and the crowds are still manageable. Between 9 and 10 AM is acceptable but busier. Most stalls begin closing by 1 to 2 PM, so this is strictly a morning destination.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Tsukiji open on weekends?</h3>
+                  <h3>Is Tsukiji open on weekends?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Saturday mornings are open but very crowded with both tourists and local shoppers. Most stalls are closed on Sundays and on select Wednesdays (following the wholesale market calendar — not every Wednesday). Weekday mornings (Tuesday, Thursday, and Friday) offer the best experience: full selection, fewer crowds, and a more relaxed atmosphere. Check the official market calendar before your visit.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Should I visit Tsukiji or Toyosu?</h3>
+                  <h3>Should I visit Tsukiji or Toyosu?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     For most visitors, Tsukiji is the better choice. The food variety is greater, the atmosphere is more immersive, and no reservation is needed. Toyosu is worth visiting only if you specifically want to see the tuna auction, which requires winning a monthly lottery (not a simple reservation). If you have time, you can do both in one morning: Toyosu at dawn, Tsukiji by 8 AM.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How do I get to Tsukiji Market?</h3>
+                  <h3>How do I get to Tsukiji Market?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a two-minute walk from the station. Alternatively, the Oedo Line stops at Tsukiji-shijo Station. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -555,7 +553,9 @@ const TsukijiMarketGuide = () => {
           { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

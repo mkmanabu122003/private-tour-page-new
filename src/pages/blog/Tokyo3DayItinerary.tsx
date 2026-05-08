@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const Tokyo3DayItinerary = () => {
   return (
@@ -14,53 +16,33 @@ const Tokyo3DayItinerary = () => {
         canonicalPath="/blog/tokyo-3-day-itinerary"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/shibuya-crossing-tokyo.webp"
-          alt="Shibuya Crossing in Tokyo, a must-see on any 3-day itinerary"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Itineraries</p>
-            <h1 className="heading-display text-foreground">
-              The Perfect 3-Day Tokyo Itinerary: From a Local Guide
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 25, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/shibuya-crossing-tokyo.webp"
+        imageAlt="Shibuya Crossing in Tokyo, a must-see on any 3-day itinerary"
+        eyebrow="Itineraries"
+        title="The Perfect 3-Day Tokyo Itinerary: From a Local Guide"
+        date="February 25, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Day 1: East Tokyo, History…", href: "#section-01-day-1-east-tokyo-history-tradition" },
+          { num: "02", label: "Day 2: West Tokyo, Modern…", href: "#section-02-day-2-west-tokyo-modern-culture-energy" },
+          { num: "03", label: "Day 3: Choose Your Adventure", href: "#section-03-day-3-choose-your-adventure" },
+          { num: "04", label: "Practical Tips for Your…", href: "#section-04-practical-tips-for-your-tokyo-visit" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               After guiding over 500 tours in Tokyo, I've seen what works and what doesn't for first-time visitors. Some travelers try to cram everything into a single day and end up exhausted. Others miss hidden gems because they stick to the most obvious attractions. This 3-day itinerary balances must-see highlights with local experiences most tourists miss. Feel free to mix and match. Every traveler is different, and the best itinerary is the one that excites you.
@@ -73,11 +55,12 @@ const Tokyo3DayItinerary = () => {
             </p>
 
             {/* Day 1 */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Day 1: East Tokyo, History & Tradition</span></div>
+            <h2 id="section-01-day-1-east-tokyo-history-tradition" className="scroll-mt-20">
               Day 1: East Tokyo, History & Tradition
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Morning: Asakusa, Where Old Tokyo Lives
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -115,7 +98,7 @@ const Tokyo3DayItinerary = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Late Morning: Walk to Tokyo Skytree via Sumida Park
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -138,14 +121,14 @@ const Tokyo3DayItinerary = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lunch: Local Flavors Near Asakusa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               For lunch, I recommend trying one of Asakusa's traditional soba (buckwheat noodle) restaurants or a tempura spot. Asakusa has been famous for tempura since the Edo period, and there are still family-run restaurants here that have been perfecting their craft for over a century. If you're adventurous, try monjayaki, Tokyo's version of the Osaka okonomiyaki pancake, messier but delicious.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Afternoon: Yanaka, Tokyo's Nostalgic Old Town
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -162,7 +145,7 @@ const Tokyo3DayItinerary = () => {
               uncovers stories and spots you won't find in any guidebook.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Evening: Ueno Area & Ameyoko Market
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -193,11 +176,12 @@ const Tokyo3DayItinerary = () => {
             <InlineCTA message="Want a local guide to optimize your 3-day Tokyo itinerary?" href="/contact" />
 
             {/* Day 2 */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Day 2: West Tokyo, Modern Culture & Energy</span></div>
+            <h2 id="section-02-day-2-west-tokyo-modern-culture-energy" className="scroll-mt-20">
               Day 2: West Tokyo, Modern Culture & Energy
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Morning: Meiji Shrine, Peace in the City
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -207,7 +191,7 @@ const Tokyo3DayItinerary = () => {
               Watch for wedding ceremonies if you visit on weekends. You might catch a traditional Shinto wedding procession. The shrine also has a beautiful iris garden (best in June) and a sake barrel display that tells the story of Japan's relationship with wine and spirits.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Late Morning: Harajuku, Youth Culture Explosion
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -242,14 +226,14 @@ const Tokyo3DayItinerary = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lunch: Shibuya Area
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Head to Shibuya for lunch. Skip the chain restaurants and look for local spots in the back streets. I recommend trying a proper ramen shop (the wait is worth it) or a Japanese curry restaurant. Shibuya has some of the best in the city. If you want something quick and quintessentially Japanese, try a gyudon (beef bowl) at a counter restaurant. Fast, filling, and delicious.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Afternoon: Shibuya Crossing & Beyond
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -259,7 +243,7 @@ const Tokyo3DayItinerary = () => {
               If you have energy left, walk through the quieter neighborhoods behind the main streets. Tomigaya and Kamiyamacho are local favorites with excellent cafes, independent bookshops, and small restaurants that most tourists never discover. Tomigaya in particular has become one of Tokyo's most interesting food neighborhoods, with tiny ramen shops, natural wine bars, and pastry cafes that draw locals from across the city. It's a 10-minute walk from the Shibuya scramble, but it feels like a completely different world.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Evening: Shinjuku Nightlife
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -288,11 +272,12 @@ const Tokyo3DayItinerary = () => {
             </figure>
 
             {/* Day 3 */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Day 3: Choose Your Adventure</span></div>
+            <h2 id="section-03-day-3-choose-your-adventure" className="scroll-mt-20">
               Day 3: Choose Your Adventure
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Option A: Central Tokyo, Food, Gardens & History
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -338,7 +323,7 @@ const Tokyo3DayItinerary = () => {
               <strong className="text-foreground">Evening: Ginza.</strong> End your Tokyo stay in Ginza, the upscale shopping district. Even if you're not shopping, the department store food halls (depachika) in the basement floors are worth visiting. They're culinary wonderlands of beautifully packaged Japanese sweets, bento boxes, and gourmet treats. Perfect for picking up edible souvenirs.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Option B: Day Trip from Tokyo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -372,11 +357,12 @@ const Tokyo3DayItinerary = () => {
             </p>
 
             {/* Practical Tips */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Practical Tips for Your Tokyo Visit</span></div>
+            <h2 id="section-04-practical-tips-for-your-tokyo-visit" className="scroll-mt-20">
               Practical Tips for Your Tokyo Visit
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Getting Around
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -386,7 +372,7 @@ const Tokyo3DayItinerary = () => {
               Don't be intimidated by the train system. It's actually very intuitive once you understand that different companies operate different lines. Signs are in English, stations are announced in English, and trains are almost always on time. During rush hour (7:30-9 AM), avoid the busiest lines if possible, or travel in the opposite direction of commuter flow.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               When to Visit
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -400,14 +386,14 @@ const Tokyo3DayItinerary = () => {
               .
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Money Matters
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japan is still more cash-dependent than many countries, especially at small restaurants, temples, and markets. Carry at least ¥10,000-20,000 in cash. 7-Eleven and Post Office ATMs accept international cards reliably. Credit cards are increasingly accepted at larger establishments, but don't rely on them exclusively. Your IC card (Suica/Pasmo) is the most convenient payment method for small purchases.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Food & Dining
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -417,7 +403,7 @@ const Tokyo3DayItinerary = () => {
               A few practical notes: most restaurants display plastic food models or photo menus outside, so you can see what you're ordering before you sit down. Many smaller restaurants use ticket vending machines at the entrance. Just insert coins or bills, press the button for what you want, and hand the ticket to the chef. It's faster and simpler than it sounds. Tipping is not practiced in Japan, at restaurants or anywhere else. The price on the menu is the price you pay, and excellent service is simply the standard.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Temple & Shrine Etiquette
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -433,7 +419,7 @@ const Tokyo3DayItinerary = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a local guide to bring this itinerary to life?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -448,7 +434,11 @@ const Tokyo3DayItinerary = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -480,7 +470,9 @@ const Tokyo3DayItinerary = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

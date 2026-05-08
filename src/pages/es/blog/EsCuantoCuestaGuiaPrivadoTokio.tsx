@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const EsCuantoCuestaGuiaPrivadoTokio = () => {
@@ -18,56 +20,38 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/group-photo.webp"
-          alt="Grupo de turistas con guía privado en Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías Útiles</p>
-            <h1 className="heading-display text-foreground">
-              ¿Cuánto Cuesta un Guía Privado en Tokio? Precios Reales 2026
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que trabaja en Tokio. Estos son precios reales de alguien que hace esto cada día, no de una plataforma de reservas.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/group-photo.webp"
+        imageAlt="Grupo de turistas con guía privado en Tokio"
+        eyebrow="Guías Útiles"
+        title="¿Cuánto Cuesta un Guía Privado en Tokio? Precios Reales 2026"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que trabaja en Tokio. Estos son precios reales de alguien que hace esto cada día, no de una plataforma de reservas."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Tabla de Precios", href: "#section-01-tabla-de-precios" },
+          { num: "02", label: "Por Qué los Guías en…", href: "#section-02-por-qué-los-guías-en-español-son-más-escasos" },
+          { num: "03", label: "¿Qué Está Incluido en el…", href: "#section-03-qué-está-incluido-en-el-precio" },
+          { num: "04", label: "¿Qué Determina el Precio?", href: "#section-04-qué-determina-el-precio" },
+          { num: "05", label: "¿Merece la Pena el Gasto?", href: "#section-05-merece-la-pena-el-gasto" },
+          { num: "06", label: "Cómo Elegir Bien", href: "#section-06-cómo-elegir-bien" },
+          { num: "07", label: "Mis Tarifas", href: "#section-07-mis-tarifas" },
+          { num: "08", label: "FAQ", href: "#section-08-faq" }
+            ]} />
+
+            <article>
+
             {/* Respuesta directa */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Un guía privado en Tokio cuesta entre ¥40,000 y ¥50,000 por grupo para un tour de medio día, y entre ¥50,000 y ¥80,000 para un día completo. Son precios por grupo, no por persona. Una familia de cuatro paga lo mismo que una pareja.
@@ -88,7 +72,8 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Tabla comparativa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Tabla de Precios</span></div>
+            <h2 id="section-01-tabla-de-precios" className="scroll-mt-20">
               Tabla de Precios: Todas las Opciones Comparadas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,7 +136,8 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Por qué los guías en español son más escasos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Por Qué los Guías en Español Son Más Escasos</span></div>
+            <h2 id="section-02-por-qué-los-guías-en-español-son-más-escasos" className="scroll-mt-20">
               Por Qué los Guías en Español Son Más Escasos (y Qué Significa para el Precio)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -165,11 +151,12 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Qué está incluido */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · ¿Qué Está Incluido en el Precio?</span></div>
+            <h2 id="section-03-qué-está-incluido-en-el-precio" className="scroll-mt-20">
               ¿Qué Está Incluido en el Precio? (Y Qué No)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo Que Incluye un Tour Privado
             </h3>
             <ul className="space-y-3 mb-6">
@@ -193,7 +180,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo Que NO Incluye (Casi Nunca)
             </h3>
             <ul className="space-y-3 mb-6">
@@ -211,7 +198,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               En un día típico en Tokio, calcula entre ¥2,000 y ¥5,000 adicionales por persona para transporte, comida y entradas. Para excursiones de un día (Hakone, Kamakura, Nikko), el transporte solo puede sumar ¥5,000-8,000 por persona.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sobre la Organización del Transporte
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -219,18 +206,19 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Qué afecta el precio */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · ¿Qué Determina el Precio?</span></div>
+            <h2 id="section-04-qué-determina-el-precio" className="scroll-mt-20">
               ¿Qué Determina el Precio?
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tamaño del Grupo (Tarifa Plana)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La mayoría de guías privados cobramos por grupo, no por persona. Para un grupo de cuatro pagando ¥45,000 por un tour, son ¥11,250 por persona. Para una pareja, ¥22,500 cada uno. Cuanto más grande el grupo, más rentable resulta.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Duración
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -249,7 +237,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               : ¥70,000-80,000 por las horas extra y la logística de transporte.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Licencia vs. Sin Licencia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -260,7 +248,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               {" "}(全国通訳案内士) requiere pasar un examen del gobierno japonés que cubre historia, geografía, cultura y dominio avanzado de un idioma extranjero. La tasa de aprobación ronda el 10-20% dependiendo del año. Los guías con licencia cobramos más porque hemos invertido años de formación y ofrecemos un nivel de conocimiento verificado.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Temporada
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -268,14 +256,15 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* ¿Merece la pena? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · ¿Merece la Pena el Gasto?</span></div>
+            <h2 id="section-05-merece-la-pena-el-gasto" className="scroll-mt-20">
               ¿Merece la Pena el Gasto? (Respuesta Honesta)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No siempre. Y eso lo digo como alguien que se gana la vida haciendo esto.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Merece la Pena Para...
             </h3>
             <ul className="space-y-3 mb-6">
@@ -293,7 +282,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Probablemente No Necesitas un Guía Si...
             </h3>
             <ul className="space-y-3 mb-6">
@@ -316,32 +305,33 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Cómo elegir */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Cómo Elegir Bien</span></div>
+            <h2 id="section-06-cómo-elegir-bien" className="scroll-mt-20">
               Cómo Elegir Bien (Checklist)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Pregunta por la Licencia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No es obligatoria, pero es el único indicador oficial de calidad en Japón. Si un guía tiene la licencia nacional, sabes que ha pasado un examen riguroso. Pregúntalo directamente. Un guía con licencia no tendrá problema en confirmarlo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lee las Reseñas en Detalle
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No te quedes con la puntuación general. Busca reseñas de viajeros con un perfil similar al tuyo: familias si viajas con niños, parejas si vais dos, personas que mencionen el idioma español. Las reseñas genéricas tipo "great tour" no dicen mucho.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Compara Lo Que Incluye, No Solo el Precio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Un guía que cobra ¥40,000 con itinerario personalizado, soporte previo al viaje y 8 horas de servicio puede ser mejor inversión que uno que cobra ¥20,000 por 4 horas sin planificación. Haz las cuentas completas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cuidado con las Plataformas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -349,7 +339,8 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Mis tarifas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Mis Tarifas</span></div>
+            <h2 id="section-07-mis-tarifas" className="scroll-mt-20">
               Mis Tarifas (Con Total Transparencia)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -404,7 +395,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Tienes Dudas Sobre Precios o Tu Itinerario?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -425,12 +416,13 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 08 · FAQ</span></div>
+              <h2 id="section-08-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿El precio es por persona o por grupo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -438,7 +430,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Hay guías que hablen español en Tokio?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -446,7 +438,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Qué diferencia hay entre un guía con licencia y sin licencia?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -454,7 +446,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Se deja propina a los guías en Japón?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -462,7 +454,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Puede el guía reservar mi transporte?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -471,7 +463,11 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -583,7 +579,9 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
       1. EUR/JPY rate may fluctuate — recheck at actual publishing time
       2. License exam pass rate (10-20%) — verify current JNTO data
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inline CTA — Design Options</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --ink-soft: #2b2823;
+        --muted: #4f4a43;
+        --muted-2: #6a655c;
+        --soft: #eeeae0;
+        --line: #dcd4c2;
+        --line-2: #c4bba6;
+        --gold: #c9a84c;
+        --gold-soft: #f4e5b6;
+        --gold-deep: #a88930;
+        --clay: #9c563f;
+        --card: #fffdf8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-variant-numeric: lining-nums tabular-nums;
+      }
+      .toolbar {
+        position: sticky; top: 0; z-index: 10;
+        background: #1d1a14; color: #f8f7f1;
+        padding: 14px 24px;
+        display: flex; align-items: center; gap: 24px;
+        font-size: 13px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .toolbar .title { font-weight: 700; letter-spacing: .04em; }
+      .toolbar .meta { color: #c9c2b0; }
+
+      .stack { max-width: 800px; margin: 0 auto; padding: 32px 32px 80px; }
+      .opt {
+        background: var(--paper);
+        padding: 32px 36px 36px;
+        border-radius: 10px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      }
+      .opt-tag {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 4px;
+      }
+      .opt-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0 0 8px;
+      }
+      .opt-desc {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0 0 24px;
+        max-width: 720px;
+        line-height: 1.55;
+      }
+
+      /* Mock article context paragraph */
+      .ctx {
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--muted);
+        margin: 0 0 22px;
+      }
+      .ctx + .ctx { margin-top: -10px; }
+
+      /* ============== NOW (current code) ============== */
+      .now-cta {
+        background: rgba(199, 168, 76, .10);
+        border-left: 4px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+        padding: 20px 24px;
+        margin: 30px 0;
+      }
+      .now-cta p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink); }
+      .now-cta strong { font-weight: 700; }
+      .now-cta a { color: var(--gold-deep); font-weight: 600; text-decoration: none; }
+      .now-cta a:hover { text-decoration: underline; }
+
+      /* ============== A — Editorial Inline ============== */
+      .cta-a {
+        margin: 36px 0;
+        padding: 24px 0;
+        border-top: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+        text-align: center;
+      }
+      .cta-a .eyebrow {
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 10px;
+      }
+      .cta-a .question {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.25;
+        margin: 0 auto 14px;
+        max-width: 540px;
+      }
+      .cta-a .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--ink);
+        text-decoration: none;
+        padding: 11px 22px;
+        border: 1.5px solid var(--ink);
+        background: transparent;
+        transition: all .2s;
+      }
+      .cta-a .btn:hover { background: var(--ink); color: var(--paper); }
+      .cta-a .btn .arrow { display: inline-block; transition: transform .2s; }
+      .cta-a .btn:hover .arrow { transform: translateX(3px); }
+
+      /* ============== B — Manabu's whisper ============== */
+      .cta-b {
+        margin: 36px 0;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 18px;
+        align-items: center;
+        padding: 22px 0 22px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .cta-b .portrait {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #c8b88a, #9c563f);
+      }
+      .cta-b .body {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .cta-b .label {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.20em;
+        font-weight: 700;
+        color: var(--clay);
+      }
+      .cta-b .msg {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 19px;
+        line-height: 1.35;
+        color: var(--ink);
+        margin: 0;
+      }
+      .cta-b .link {
+        align-self: flex-start;
+        margin-top: 8px;
+        font-family: Inter, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 2px solid var(--gold);
+        padding-bottom: 2px;
+      }
+      .cta-b .link:hover { color: var(--gold-deep); }
+
+      /* ============== C — Centered button card ============== */
+      .cta-c {
+        margin: 40px 0;
+        text-align: center;
+        padding: 28px 24px 30px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        position: relative;
+      }
+      .cta-c::before {
+        content: "";
+        position: absolute;
+        top: -1px; left: 50%;
+        transform: translateX(-50%);
+        width: 80px; height: 3px;
+        background: var(--gold);
+      }
+      .cta-c .question {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.3;
+        margin: 0 auto 18px;
+        max-width: 540px;
+      }
+      .cta-c .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(#d5b65e, #b8943b);
+        color: #fff7dd;
+        padding: 13px 26px;
+        border-radius: 4px;
+        font-family: Inter, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        box-shadow: 0 8px 20px rgba(168, 137, 48, .25);
+        transition: transform .2s, box-shadow .2s;
+      }
+      .cta-c .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 26px rgba(168, 137, 48, .32);
+      }
+
+      /* ============== D — Margin pull-aside ============== */
+      .cta-d {
+        margin: 36px 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: end;
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--ink);
+      }
+      .cta-d .left {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .cta-d .eyebrow {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.20em;
+        font-weight: 700;
+        color: var(--gold);
+      }
+      .cta-d .question {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.25;
+        margin: 0;
+      }
+      .cta-d .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+        color: var(--ink);
+        text-decoration: none;
+        white-space: nowrap;
+        padding-bottom: 4px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .cta-d .btn:hover { color: var(--gold-deep); }
+
+      /* ============== E — Quote with seal ============== */
+      .cta-e {
+        margin: 40px 0;
+        padding: 26px 28px 24px 60px;
+        background: #1d1a14;
+        color: #f8f7f1;
+        border-radius: 4px;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-e::before {
+        content: "";
+        position: absolute;
+        left: 22px; top: 22px;
+        width: 26px; height: 26px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      .cta-e::after {
+        content: "M";
+        position: absolute;
+        left: 22px; top: 21px;
+        width: 26px; height: 26px;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #1d1a14;
+        text-align: center;
+        line-height: 26px;
+      }
+      .cta-e .label {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 6px;
+      }
+      .cta-e .question {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 1.3;
+        color: #f4e5b6;
+        margin: 0 0 14px;
+      }
+      .cta-e .link {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1.5px solid rgba(199, 168, 76, .4);
+        padding-bottom: 2px;
+      }
+      .cta-e .link:hover { color: var(--gold-soft); border-bottom-color: var(--gold); }
+
+      /* ============== Decision matrix ============== */
+      .matrix {
+        background: #1d1a14;
+        color: #f4e5b6;
+      }
+      .matrix table { width: 100%; color:#e0d8c0; font-size:14px; border-collapse:collapse; margin-top: 10px; }
+      .matrix th, .matrix td { padding: 12px 12px; vertical-align: top; line-height: 1.5; text-align: left; }
+      .matrix th { color: var(--gold); text-transform: uppercase; letter-spacing: .14em; font-size: 11px; font-weight: 700; border-bottom: 1px solid #4a4030; }
+      .matrix td { border-bottom: 1px solid #2e2820; }
+      .matrix td.case { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 600; color: #f4e5b6; }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">INLINE CTA — DESIGN OPTIONS</span>
+      <span class="meta">InlineCTA component · used in 10+ blog articles</span>
+    </div>
+
+    <div class="stack">
+
+      <!-- ============ NOW ============ -->
+      <section class="opt">
+        <div class="opt-tag">Now · 現状</div>
+        <h2 class="opt-name">Left-border beige box</h2>
+        <p class="opt-desc">ベージュ地＋左ゴールドボーダー。Quick Decision ボックスと装飾パターンが被っており、デザイン上の差別化が弱い。リンクが本文と同じ流れに埋もれて見つけにくい。</p>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <aside class="now-cta">
+          <p><strong>Want a private guide who plans your arrival day around your actual jet lag?</strong> Our private Tokyo tours bring these stories to life. <a href="#">Book a custom Tokyo tour →</a></p>
+        </aside>
+        <p class="ctx">When Narita is actually faster (yes, really)…</p>
+      </section>
+
+      <!-- ============ A ============ -->
+      <section class="opt">
+        <div class="opt-tag">A · Editorial</div>
+        <h2 class="opt-name">Top/Bottom Rule + Outlined Button — 雑誌の章末アド風</h2>
+        <p class="opt-desc">上下の細いインクルール + センター揃え。Cormorant の質問文 + 黒線アウトラインのボタン。Plan A の pull-quote と意匠を揃え、本文の流れを区切るブレイクポイントとして機能する。色はインク+ゴールドのみ。</p>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <div class="cta-a">
+          <p class="eyebrow">A note from your guide</p>
+          <p class="question">Want a private guide who plans your arrival day around your actual jet lag?</p>
+          <a class="btn" href="#">Book a Custom Tokyo Tour <span class="arrow">→</span></a>
+        </div>
+        <p class="ctx">When Narita is actually faster (yes, really)…</p>
+      </section>
+
+      <!-- ============ B ============ -->
+      <section class="opt">
+        <div class="opt-tag">B · Whisper</div>
+        <h2 class="opt-name">Manabu's Note — ガイドの一言として埋め込む</h2>
+        <p class="opt-desc">Manabu のポートレート + Italic Cormorant の私的なメッセージ + ゴールド下線リンク。CTA というよりガイドの "ささやき" として記事の一部に溶け込む。クリック率より記事との親和性を優先する記事末でない位置に最適。</p>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <div class="cta-b">
+          <div class="portrait"></div>
+          <div class="body">
+            <span class="label">A note from Manabu</span>
+            <p class="msg">If you want me to plan your arrival day around your actual jet lag — that's literally what I do.</p>
+            <a class="link" href="#">See my private Tokyo tours →</a>
+          </div>
+        </div>
+        <p class="ctx">When Narita is actually faster (yes, really)…</p>
+      </section>
+
+      <!-- ============ C ============ -->
+      <section class="opt">
+        <div class="opt-tag">C · 行動喚起</div>
+        <h2 class="opt-name">Centered Card with Gradient Button — 予約獲得最優先</h2>
+        <p class="opt-desc">薄カード + 上に短いゴールドルール + センター Cormorant の質問 + サイト共通のゴールドグラデーションボタン。Header 右上の "Book Now" ボタンと意匠を揃え、本文中の "予約セクション" として明示的に分かる。記事末や h2 セクション末の CTA に最適。</p>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <div class="cta-c">
+          <p class="question">Want a private guide who plans your arrival day around your actual jet lag?</p>
+          <a class="btn" href="#">Book a Custom Tokyo Tour →</a>
+        </div>
+        <p class="ctx">When Narita is actually faster (yes, really)…</p>
+      </section>
+
+      <!-- ============ D ============ -->
+      <section class="opt">
+        <div class="opt-tag">D · ミニマル</div>
+        <h2 class="opt-name">Margin Aside with Gold Underline — 控えめだが拾える</h2>
+        <p class="opt-desc">下に太いインクルール、左に小さなゴールド eyebrow + Cormorant 質問、右に下線つき uppercase リンク。装飾は最小だが、左右レイアウトで「読者への問いかけ + 答え」が一目で分かる。本文中盤に置くインライン CTA に最適で、邪魔にならない。</p>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <div class="cta-d">
+          <div class="left">
+            <span class="eyebrow">A custom day is possible</span>
+            <p class="question">Plan your arrival day around your actual jet lag.</p>
+          </div>
+          <a class="btn" href="#">Book a tour →</a>
+        </div>
+        <p class="ctx">When Narita is actually faster (yes, really)…</p>
+      </section>
+
+      <!-- ============ E ============ -->
+      <section class="opt">
+        <div class="opt-tag">E · 大胆</div>
+        <h2 class="opt-name">Dark Card with Author Seal — 主役モジュール</h2>
+        <p class="opt-desc">黒地カード + 左上に "M" シール（Manabu の頭文字をゴールドで）+ ゴールド eyebrow + Cormorant 質問 + ゴールド uppercase リンク。記事のなかで一番目立つ主役 CTA。記事末の最終アクションに配置すると圧倒的な存在感。多用すると重い。</p>
+        <p class="ctx">…If you have flight flexibility, a Tuesday or Wednesday mid-morning arrival at either airport gives you the smoothest ride in.</p>
+        <div class="cta-e">
+          <p class="label">From Manabu's tour menu</p>
+          <p class="question">If you want me to plan your arrival day around your actual jet lag — that's what a custom Tokyo tour is for.</p>
+          <a class="link" href="#">See custom tours →</a>
+        </div>
+        <p class="ctx">When Narita is actually faster (yes, really)…</p>
+      </section>
+
+      <!-- ============ Decision matrix ============ -->
+      <section class="opt matrix">
+        <div class="opt-tag" style="color: var(--gold)">使い分け</div>
+        <h2 class="opt-name" style="color: #f4e5b6">どこに何を置くか</h2>
+        <table>
+          <thead>
+            <tr><th>案</th><th>向き</th><th>注意</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="case">A · Editorial</td><td>記事中盤の標準 CTA。装飾控えめだが品がある。<strong style="color:var(--gold)">最も汎用的</strong></td><td>クリック率は C より低い。</td></tr>
+            <tr><td class="case">B · Whisper</td><td>"ガイドが一言だけ言う" イントロや前半の柔らかい CTA。記事との親和性最強。</td><td>ボタン感ゼロ、CV 直結ではない。</td></tr>
+            <tr><td class="case">C · Centered</td><td>記事末・h2 末の "決定打"。Header と同じグラデボタンで予約導線と統一。</td><td>1記事に何個も置くとうるさい。1〜2回まで。</td></tr>
+            <tr><td class="case">D · Aside</td><td>本文中盤、邪魔にならず拾える。Header CTA を補強する控え。</td><td>地味なので単独で記事末には弱い。</td></tr>
+            <tr><td class="case">E · Dark seal</td><td>記事末の最終 CTA。フッター直前の "強い結び"。</td><td>Manabu の世界観を強く出す。汎用性低い。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </body>
+</html>

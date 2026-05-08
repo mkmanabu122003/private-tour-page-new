@@ -187,7 +187,7 @@ const blogPosts: BlogPost[] = [
     date: "March 7, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Tokyo Neighborhoods",
-    image: "/images/blog/tsukiji-outer-market-entrance.webp",
+    image: "/images/blog/tsukiji-market-seafood-stalls.webp",
   },
   // Day Trip Guides (new)
   {
@@ -321,7 +321,7 @@ const blogPosts: BlogPost[] = [
     date: "February 25, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Decision Helpers",
-    image: "/images/tour-photos/group-photo.webp",
+    image: "/images/tour-photos/tour-photo-1.webp",
   },
   {
     slug: "tokyo-private-tour-guide-cost",
@@ -331,7 +331,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Decision Helpers",
-    image: "/images/tour-photos/tour-photo-2.webp",
+    image: "/images/blog/tipping-japan-hero.webp",
   },
   {
     slug: "free-walking-tour-vs-private-tokyo",
@@ -344,14 +344,14 @@ const blogPosts: BlogPost[] = [
     image: "/images/tour-photos/sumida-river-group-selfie.webp",
   },
   {
-    slug: "what-to-expect-private-tour",
+    slug: "what-to-expect-private-tour-tokyo",
     title: "What to Expect on a Private Tour in Tokyo (From Your Guide)",
     description:
       "Meeting point, pace, flexibility, food, rain plans. A Tokyo guide walks you through exactly what happens from start to finish.",
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Decision Helpers",
-    image: "/images/tour-photos/photo2.webp",
+    image: "/images/tour-photos/tour-photo-2.webp",
   },
   {
     slug: "first-time-tokyo-local-guide",
@@ -361,7 +361,7 @@ const blogPosts: BlogPost[] = [
     date: "March 14, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Decision Helpers",
-    image: "/images/tour-photos/asakusa-guest-selfie.webp",
+    image: "/images/tour-photos/tour-photo-3.webp",
   },
   // New Day Trip Guides
   {
@@ -402,7 +402,7 @@ const blogPosts: BlogPost[] = [
     date: "April 20, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Decision Helpers",
-    image: "/images/tour-photos/sumida-river-group-selfie.webp",
+    image: "/images/blog/shinbashi-taiyaki-shop.webp",
   },
   // New Planning
   {
@@ -435,6 +435,16 @@ const blogPosts: BlogPost[] = [
     author: "Manabu, Licensed Tour Guide",
     category: "Food & Drink",
     image: "/images/blog/ginza-backstreet-buildings.webp",
+  },
+  {
+    slug: "ginza-to-tsukiji-walking-route",
+    title: "Walking from Ginza to Tsukiji: 3 Routes Compared (2026)",
+    description:
+      "Walk Ginza to Tsukiji in 15 min along Harumi-dori, past Kabukiza & Tsukiji Hongan-ji. A licensed Tokyo guide on 3 routes, exits, and timing.",
+    date: "May 8, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Tokyo Neighborhoods",
+    image: "/images/blog/ginza-shopping-street.webp",
   },
 ];
 
@@ -515,26 +525,26 @@ const PostCard = ({ post, showPopularBadge }: PostCardProps) => (
       )}
     </div>
     <div className="p-6">
-      <p className="text-label text-accent mb-2">{post.category}</p>
-      <h3 className="text-xl font-medium text-foreground group-hover:text-accent transition-colors mb-3">
+      <p className="text-label text-accent mb-3">{post.category}</p>
+      <h3 className="heading-card text-foreground group-hover:text-accent transition-colors">
         {post.title}
       </h3>
-      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+      <p className="mt-2 text-body line-clamp-3">
         {post.description}
       </p>
-      <div className="flex items-center gap-4 text-xs text-muted-foreground">
-        <span className="flex items-center gap-1">
+      <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
+        <div className="flex items-center gap-1">
           <User className="w-3 h-3" />
-          {post.author}
-        </span>
-        <span className="flex items-center gap-1">
+          <span>{post.author}</span>
+        </div>
+        <div className="flex items-center gap-1">
           <Calendar className="w-3 h-3" />
-          {post.date}
-        </span>
+          <span>{post.date}</span>
+        </div>
       </div>
-      <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm">
+      <div className="mt-4 pt-4 border-t border-border flex items-center gap-2 text-accent font-medium text-sm group-hover:gap-3 transition-all">
         <span>Read Article</span>
-        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        <ArrowRight className="w-4 h-4" />
       </div>
     </div>
   </Link>
@@ -590,15 +600,16 @@ const BlogIndex = () => {
       {popularPosts.length > 0 && (
         <section className="py-12 bg-accent/5 border-b border-border/40">
           <div className="container-section">
-            <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <h2 className="text-xl font-semibold tracking-tight text-foreground">
-                Start Here — Most Read
-              </h2>
+            <div className="mb-8 max-w-2xl">
+              <p className="text-label text-accent mb-3 inline-flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" />
+                Start Here
+              </p>
+              <h2 className="heading-section text-foreground">Most Read</h2>
+              <p className="mt-4 text-body">
+                The three articles travelers cite most often when they reach out about a private tour.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground mb-8 max-w-2xl">
-              The three articles travelers cite most often when they reach out about a private tour.
-            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularPosts.map((post) => (
                 <PostCard key={post.slug} post={post} showPopularBadge />
@@ -611,9 +622,7 @@ const BlogIndex = () => {
       {/* Browse by Topic — anchor pills */}
       <section className="py-8 border-b border-border/40">
         <div className="container-section">
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-            Browse by Topic
-          </p>
+          <p className="text-label text-accent mb-3">Browse by Topic</p>
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => {
               const meta = CATEGORY_META[category];
@@ -645,13 +654,14 @@ const BlogIndex = () => {
             return (
               <div key={category} id={meta.anchor} className="mb-16 last:mb-0 scroll-mt-24">
                 <div className="mb-8 max-w-3xl">
+                  <p className="text-label text-accent mb-3">Topic</p>
                   <h2 className="heading-section text-foreground">
                     {category}{" "}
                     <span className="text-muted-foreground font-normal text-base align-middle">
                       ({postsInCategory.length})
                     </span>
                   </h2>
-                  <p className="mt-3 text-muted-foreground leading-relaxed">
+                  <p className="mt-4 text-body">
                     {meta.description}
                   </p>
                 </div>
@@ -683,12 +693,12 @@ const BlogIndex = () => {
             Turn these travel tips into real experiences with a private guided tour.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tours" className="btn-accent">
+            <Link to="/tours" className="btn-accent-on-dark">
               Browse Tours
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
+              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
             >
               Contact Us
             </Link>

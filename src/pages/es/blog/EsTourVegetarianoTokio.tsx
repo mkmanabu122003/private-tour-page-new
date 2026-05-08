@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsTourVegetarianoTokio = () => {
   return (
@@ -21,58 +23,35 @@ const EsTourVegetarianoTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/vegetarian-matcha-wagashi.webp"
-          alt="Té matcha y wagashi tradicionales, una experiencia perfecta para vegetarianos en Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Tour Vegetariano</li>
-              </ol>
-            </nav>
-            <p className="text-label text-accent mb-3">Gastronomía y Cultura</p>
-            <h1 className="heading-display text-foreground">
-              Tour Gastronómico Vegetariano en Tokio: La Guía Definitiva para Comer Sin Preocupaciones
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                8 de marzo de 2026
-              </span>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/vegetarian-matcha-wagashi.webp"
+        imageAlt="Té matcha y wagashi tradicionales, una experiencia perfecta para vegetarianos en Tokio"
+        eyebrow="Gastronomía y Cultura"
+        title="Tour Gastronómico Vegetariano en Tokio: La Guía Definitiva para Comer Sin Preocupaciones"
+        date="8 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Se puede hacer un tour…", href: "#section-01-se-puede-hacer-un-tour-gastronómico-en" },
+          { num: "02", label: "Mejores zonas para comida…", href: "#section-02-mejores-zonas-para-comida-vegetariana" },
+          { num: "03", label: "Qué esperar en un tour…", href: "#section-03-qué-esperar-en-un-tour-gastronómico" },
+          { num: "04", label: "Cómo comunicar restricciones…", href: "#section-04-cómo-comunicar-restricciones-alimentarias-en-japón" },
+          { num: "05", label: "Platos vegetarianos…", href: "#section-05-platos-vegetarianos-japoneses-que-no-te" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción - gancho de dolor */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               "Soy vegetariano, ¿voy a poder comer en Japón?" Es la pregunta que más escucho antes de que mis invitados reserven un tour gastronómico conmigo. Y lo entiendo perfectamente. Cuando buscas "comida japonesa" en internet, todo parece girar alrededor del sushi, el ramen con caldo de cerdo y las brochetas de yakitori. La reputación de Japón como paraíso de la carne y el pescado es tan fuerte que muchos viajeros vegetarianos sienten verdadera ansiedad antes de llegar. Pero después de guiar cientos de tours gastronómicos por Tokio a lo largo de los años, te puedo decir con total seguridad: los viajeros vegetarianos y veganos pueden comer extraordinariamente bien aquí. Solo necesitas saber dónde buscar, qué pedir y cómo comunicar tus necesidades. Y ahí es exactamente donde entra un guía que habla japonés.
@@ -82,7 +61,8 @@ const EsTourVegetarianoTokio = () => {
             </p>
 
             {/* Sección 1: ¿Se puede hacer un tour gastronómico como vegetariano? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Se puede hacer un tour gastronómico en</span></div>
+            <h2 id="section-01-se-puede-hacer-un-tour-gastronómico-en" className="scroll-mt-20">
               ¿Se puede hacer un tour gastronómico en Tokio siendo vegetariano?
             </h2>
             <figure className="my-8">
@@ -115,7 +95,8 @@ const EsTourVegetarianoTokio = () => {
             />
 
             {/* Sección 2: Mejores zonas para comida vegetariana */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Mejores zonas para comida vegetariana</span></div>
+            <h2 id="section-02-mejores-zonas-para-comida-vegetariana" className="scroll-mt-20">
               Mejores zonas para comida vegetariana (Asakusa, Tsukiji, Shinjuku)
             </h2>
             <figure className="my-8">
@@ -145,7 +126,8 @@ const EsTourVegetarianoTokio = () => {
             </p>
 
             {/* Sección 3: Qué esperar en un tour privado vegetariano */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Qué esperar en un tour gastronómico</span></div>
+            <h2 id="section-03-qué-esperar-en-un-tour-gastronómico" className="scroll-mt-20">
               Qué esperar en un tour gastronómico vegetariano privado
             </h2>
             <figure className="my-8">
@@ -178,7 +160,8 @@ const EsTourVegetarianoTokio = () => {
             />
 
             {/* Sección 4: Cómo comunicar restricciones alimentarias */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cómo comunicar restricciones alimentarias en Japón</span></div>
+            <h2 id="section-04-cómo-comunicar-restricciones-alimentarias-en-japó" className="scroll-mt-20">
               Cómo comunicar restricciones alimentarias en Japón
             </h2>
             <figure className="my-8">
@@ -205,7 +188,8 @@ const EsTourVegetarianoTokio = () => {
             </p>
 
             {/* Platos vegetarianos imprescindibles */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Platos vegetarianos japoneses que no te</span></div>
+            <h2 id="section-05-platos-vegetarianos-japoneses-que-no-te" className="scroll-mt-20">
               Platos vegetarianos japoneses que no te puedes perder
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -224,7 +208,7 @@ const EsTourVegetarianoTokio = () => {
 
             {/* CTA final */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Reserva tu tour gastronómico vegetariano a medida
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -241,13 +225,14 @@ const EsTourVegetarianoTokio = () => {
             </div>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre comida vegetariana en Japón
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Es difícil encontrar comida vegetariana en Japón?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -256,7 +241,7 @@ const EsTourVegetarianoTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Hay restaurantes veganos en Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -265,7 +250,7 @@ const EsTourVegetarianoTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Qué es el shojin ryori y dónde puedo probarlo?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -278,7 +263,7 @@ const EsTourVegetarianoTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Puedo encontrar comida vegetariana en las konbini (tiendas de conveniencia)?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -287,7 +272,7 @@ const EsTourVegetarianoTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuánto cuesta un tour gastronómico vegetariano privado en Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -299,7 +284,11 @@ const EsTourVegetarianoTokio = () => {
                 </p>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -389,7 +378,9 @@ const EsTourVegetarianoTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

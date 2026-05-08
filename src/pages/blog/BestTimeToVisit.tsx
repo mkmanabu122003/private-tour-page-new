@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const BestTimeToVisit = () => {
   return (
@@ -19,47 +21,37 @@ const BestTimeToVisit = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/meiji-shrine-torii-gate.webp"
-          alt="Meiji Shrine torii gate in Tokyo, beautiful in every season"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planning Your Trip</p>
-            <h1 className="heading-display text-foreground">
-              Best Time to Visit Tokyo: A Local Guide's Honest Answer (Not the Usual One)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who guides tours year-round in Tokyo. This is based on 500+ tours across every season.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/meiji-shrine-torii-gate.webp"
+        imageAlt="Meiji Shrine torii gate in Tokyo, beautiful in every season"
+        eyebrow="Planning Your Trip"
+        title="Best Time to Visit Tokyo: A Local Guide's Honest Answer (Not the Usual One)"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who guides tours year-round in Tokyo. This is based on 500+ tours across every season."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "The Answer Nobody Gives You", href: "#section-01-the-answer-nobody-gives-you" },
+          { num: "02", label: "Spring (March", href: "#section-02-spring-march" },
+          { num: "03", label: "Summer (June", href: "#section-03-summer-june" },
+          { num: "04", label: "Autumn (September", href: "#section-04-autumn-september" },
+          { num: "05", label: "Winter (December", href: "#section-05-winter-december" },
+          { num: "06", label: "When I Personally Avoid…", href: "#section-06-when-i-personally-avoid-taking-clients-to-tokyo" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="The best time to visit Tokyo is March-April (cherry blossoms) or October-November (autumn colors). January is cheapest with fewest crowds. Avoid August — it's hot, humid, and expensive."
               hook="But a local guide's top pick might surprise you. Here's the honest month-by-month breakdown, including the 'secret' month nobody recommends that probably should be your first choice."
@@ -83,7 +75,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Jan</td>
                     <td className="px-4 py-3">Cold & clear</td>
                     <td className="px-4 py-3">Low</td>
-                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">$</td>
                     <td className="px-4 py-3">New Year temples & sales</td>
                     <td className="px-4 py-3">★★★★</td>
                   </tr>
@@ -91,7 +83,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Feb</td>
                     <td className="px-4 py-3">Cold & dry</td>
                     <td className="px-4 py-3">Low</td>
-                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">$</td>
                     <td className="px-4 py-3">Plum blossoms begin</td>
                     <td className="px-4 py-3">★★★</td>
                   </tr>
@@ -99,7 +91,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Mar</td>
                     <td className="px-4 py-3">Mild warming</td>
                     <td className="px-4 py-3">Rising</td>
-                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Cherry blossoms begin late March</td>
                     <td className="px-4 py-3">★★★★★</td>
                   </tr>
@@ -107,7 +99,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Apr</td>
                     <td className="px-4 py-3">Warm & pleasant</td>
                     <td className="px-4 py-3">Very High</td>
-                    <td className="px-4 py-3">$$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Peak cherry blossoms</td>
                     <td className="px-4 py-3">★★★★★</td>
                   </tr>
@@ -115,7 +107,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">May</td>
                     <td className="px-4 py-3">Warm</td>
                     <td className="px-4 py-3">High (Golden Week early)</td>
-                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Fresh green season</td>
                     <td className="px-4 py-3">★★★★</td>
                   </tr>
@@ -123,7 +115,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Jun</td>
                     <td className="px-4 py-3">Warm & rainy</td>
                     <td className="px-4 py-3">Moderate</td>
-                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">$</td>
                     <td className="px-4 py-3">Rainy season (tsuyu) begins</td>
                     <td className="px-4 py-3">★★</td>
                   </tr>
@@ -131,7 +123,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Jul</td>
                     <td className="px-4 py-3">Hot & humid</td>
                     <td className="px-4 py-3">High</td>
-                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Summer festivals & fireworks</td>
                     <td className="px-4 py-3">★★★</td>
                   </tr>
@@ -139,7 +131,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Aug</td>
                     <td className="px-4 py-3">Very hot & humid</td>
                     <td className="px-4 py-3">Very High (Obon)</td>
-                    <td className="px-4 py-3">$$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Peak summer - avoid if possible</td>
                     <td className="px-4 py-3">★★</td>
                   </tr>
@@ -147,7 +139,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Sep</td>
                     <td className="px-4 py-3">Warm</td>
                     <td className="px-4 py-3">Moderate</td>
-                    <td className="px-4 py-3">$$</td>
+                    <td className="px-4 py-3">$</td>
                     <td className="px-4 py-3">Typhoon season but crowds thin</td>
                     <td className="px-4 py-3">★★★</td>
                   </tr>
@@ -155,7 +147,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Oct</td>
                     <td className="px-4 py-3">Cool & crisp</td>
                     <td className="px-4 py-3">Rising</td>
-                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Autumn colors begin</td>
                     <td className="px-4 py-3">★★★★★</td>
                   </tr>
@@ -163,7 +155,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Nov</td>
                     <td className="px-4 py-3">Cool</td>
                     <td className="px-4 py-3">Moderate</td>
-                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Peak autumn foliage</td>
                     <td className="px-4 py-3">★★★★★</td>
                   </tr>
@@ -171,7 +163,7 @@ const BestTimeToVisit = () => {
                     <td className="px-4 py-3 font-medium text-foreground">Dec</td>
                     <td className="px-4 py-3">Cold</td>
                     <td className="px-4 py-3">Moderate</td>
-                    <td className="px-4 py-3">$$$</td>
+                    <td className="px-4 py-3">$$</td>
                     <td className="px-4 py-3">Winter illuminations & holiday atmosphere</td>
                     <td className="px-4 py-3">★★★★</td>
                   </tr>
@@ -185,8 +177,8 @@ const BestTimeToVisit = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               After guiding tours in every month of the year for over a decade, here's what I actually tell my clients, including the season I avoid and the month nobody recommends that probably should be your first choice.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · The Answer Nobody Gives You</span></div>
+            <h2 id="section-01-the-answer-nobody-gives-you" className="scroll-mt-20">
               The Answer Nobody Gives You (It Depends on YOU)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -209,8 +201,8 @@ const BestTimeToVisit = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Now let me walk through each season with the specifics: temperatures, events, honest trade-offs, and what I tell my private tour clients before they book.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Spring (March</span></div>
+            <h2 id="section-02-spring-march" className="scroll-mt-20">
               Spring (March–May): Cherry Blossoms and the Crowds That Come with Them
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -231,8 +223,8 @@ const BestTimeToVisit = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Guide's tip:</strong> Mid-to-late May, after Golden Week, is one of Tokyo's best-kept secrets. The weather is warm (18–25°C), crowds vanish, prices drop sharply, and the fresh green foliage, called shinryoku, is beautiful in a quieter way than the blossoms. If you don't need the cherry blossoms specifically, late May is genuinely a better time to visit Tokyo for most people.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Summer (June</span></div>
+            <h2 id="section-03-summer-june" className="scroll-mt-20">
               Summer (June–August): Hot, Humid, and Underrated
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -250,8 +242,8 @@ const BestTimeToVisit = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Obon (mid-August)</strong> is Japan's festival of the dead, when families return to their hometowns. Tokyo partially empties out. Some restaurants close, but tourist spots are less crowded. Bon Odori dance festivals happen in parks and temple grounds across the city. Hotel prices are moderate. If you can handle the heat, Obon week is surprisingly practical.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Autumn (September</span></div>
+            <h2 id="section-04-autumn-september" className="scroll-mt-20">
               Autumn (September–November): The Season I Recommend Most
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -271,8 +263,8 @@ const BestTimeToVisit = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Autumn crowds do exist (November is trending upward as more travelers discover Japan's fall colors), but they're still noticeably lighter than spring. Hotel prices are 30–50% lower than cherry blossom season. You can get restaurant reservations with days of notice rather than weeks.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Winter (December</span></div>
+            <h2 id="section-05-winter-december" className="scroll-mt-20">
               Winter (December–February): Cold but Surprisingly Good
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -289,8 +281,8 @@ const BestTimeToVisit = () => {
               <Link to="/blog/tokyo-hidden-gems" className="text-accent hover:underline">Hakone</Link>{" "}
               with cold air on your face and clear views of Mt. Fuji is unforgettable.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · When I Personally Avoid Taking Clients to Tokyo</span></div>
+            <h2 id="section-06-when-i-personally-avoid-taking-clients-to-tokyo" className="scroll-mt-20">
               When I Personally Avoid Taking Clients to Tokyo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -313,7 +305,7 @@ const BestTimeToVisit = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Planning your Tokyo trip? I can help you make the most of whatever season you choose.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -327,41 +319,46 @@ const BestTimeToVisit = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">When are cherry blossoms in Tokyo?</h3>
+                  <h3>When are cherry blossoms in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Cherry blossoms in Tokyo typically reach full bloom between late March and early April, lasting 7–10 days at peak. The exact dates vary each year depending on winter temperatures. The Japan Meteorological Corporation publishes forecasts starting in January. Follow these closely when planning. Book flights and hotels 4–6 months in advance for cherry blossom season.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What is Golden Week and should I avoid it?</h3>
+                  <h3>What is Golden Week and should I avoid it?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Golden Week runs from April 29 to May 5 and is Japan's longest holiday period. The entire country travels simultaneously, leading to packed trains, sold-out hotels, and crowded attractions. Unless you've planned everything months in advance, I recommend arriving after Golden Week ends. Mid-May offers warm weather and thin crowds at much lower prices.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Tokyo safe to visit during typhoon season?</h3>
+                  <h3>Is Tokyo safe to visit during typhoon season?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Typhoon season runs from August through October, with September being the peak risk month for Tokyo. Direct hits on the city are uncommon, maybe once every few years, but when they happen, they can disrupt 1–2 days of your trip with heavy rain and suspended train service. The risk is manageable if your schedule is flexible. Tokyo's infrastructure handles typhoons efficiently, and life returns to normal quickly after they pass.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What's the cheapest month to visit Tokyo?</h3>
+                  <h3>What's the cheapest month to visit Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     January and September consistently offer the lowest hotel rates and flight prices. January is cold but sunny, with winter illuminations and empty attractions. September is warm with typhoon risk but offers extraordinary value. Both months see hotel prices 40–60% below cherry blossom season peaks.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What should I pack for Tokyo in winter?</h3>
+                  <h3>What should I pack for Tokyo in winter?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Tokyo winters are cold (2–10°C) but not extreme. Pack layers: a warm coat, sweater, scarf, and gloves. The city is very walkable in winter, and you'll move between heated indoor spaces frequently. Heattech thermal underlayers (available at Uniqlo stores everywhere in Tokyo) are the local secret for staying warm without bulk.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -390,7 +387,9 @@ const BestTimeToVisit = () => {
           { "@type": "Question", name: "Is Tokyo worth visiting in winter?", acceptedAnswer: { "@type": "Answer", text: "Absolutely. Winter (December-February) brings crisp, clear skies perfect for seeing Mt. Fuji, fewer tourists, lower prices, and beautiful winter illuminations across the city." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

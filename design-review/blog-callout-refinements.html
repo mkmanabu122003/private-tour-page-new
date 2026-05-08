@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Callout Refinements</title>
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --muted: #5d5952;
+        --line: #ddd6c6;
+        --gold: #b8943b;
+        --sage: #557160;
+        --clay: #9c563f;
+        --card: #fffdf8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        letter-spacing: 0;
+        line-height: 1;
+        margin: 0;
+      }
+      p { margin: 0; color: var(--muted); line-height: 1.72; }
+      .canvas {
+        width: 1440px;
+        min-height: 1800px;
+        margin: 0 auto;
+        padding: 92px 112px;
+      }
+      .eyebrow {
+        color: var(--gold);
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .18em;
+        font-weight: 700;
+      }
+      .intro {
+        max-width: 920px;
+        margin-bottom: 58px;
+      }
+      .intro h1 {
+        font-size: 74px;
+        margin: 12px 0 20px;
+      }
+      .intro p {
+        font-size: 20px;
+        max-width: 760px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+      .sample {
+        border-top: 1px solid var(--line);
+        padding-top: 26px;
+        min-height: 410px;
+      }
+      .sample-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+      }
+      .sample-title h2 {
+        font-size: 34px;
+      }
+      .sample-title span {
+        color: #8b806f;
+        font-size: 12px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+      .guide-aside {
+        display: grid;
+        grid-template-columns: 82px 1fr;
+        gap: 22px;
+        align-items: start;
+      }
+      .portrait {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background: url("/src/assets/About_page_Manabu_team_photo.webp") center/cover;
+      }
+      .guide-aside h3 {
+        color: var(--clay);
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      .guide-aside .rule {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        font-size: 15px;
+      }
+      .verdict {
+        padding: 0 0 0 30px;
+        border-left: 1px solid #b8a986;
+      }
+      .verdict .mark {
+        font-family: Georgia, serif;
+        color: var(--gold);
+        font-size: 58px;
+        line-height: .8;
+        margin-bottom: 8px;
+      }
+      .verdict h3 {
+        font-size: 40px;
+        margin-bottom: 12px;
+      }
+      .mini-compare {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--card);
+      }
+      .mini-compare section {
+        padding: 24px;
+      }
+      .mini-compare section + section {
+        border-left: 1px solid var(--line);
+      }
+      .mini-compare h3 {
+        font-size: 31px;
+        margin-bottom: 12px;
+      }
+      .mini-compare ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .field-note {
+        background: #eeece1;
+        border-radius: 8px;
+        padding: 26px 30px;
+        display: grid;
+        grid-template-columns: 1fr 190px;
+        gap: 24px;
+        align-items: center;
+      }
+      .field-note h3 {
+        font-size: 38px;
+        color: var(--sage);
+        margin-bottom: 10px;
+      }
+      .field-note .stamp {
+        border: 1px solid #beb7a8;
+        border-radius: 999px;
+        padding: 12px 14px;
+        color: #5c5549;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+      .pullquote {
+        font-family: Georgia, serif;
+        font-size: 30px;
+        line-height: 1.45;
+        color: #292722;
+        padding: 30px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .caption {
+        margin-top: 14px;
+        color: #8a806f;
+        font-size: 12px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+      .do-dont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .do-dont div {
+        padding: 22px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--card);
+      }
+      .do-dont b {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--ink);
+      }
+      .route-strip {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 18px;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .route-strip:first-of-type {
+        border-top: 1px solid var(--line);
+      }
+      .route-strip time {
+        font-weight: 800;
+        color: var(--ink);
+      }
+      .bad {
+        opacity: .62;
+        filter: grayscale(.1);
+      }
+      .old-box {
+        border-left: 4px solid var(--gold);
+        background: #fffaf0;
+        padding: 22px 26px;
+        border-radius: 0 8px 8px 0;
+      }
+      .old-box b { display: block; margin-bottom: 8px; }
+    </style>
+  </head>
+  <body>
+    <main class="canvas">
+      <div class="intro">
+        <div class="eyebrow">Callout Redesign</div>
+        <h1>Less boxed, more guided.</h1>
+        <p>Replace generic note boxes with modules that feel like Manabu's judgment: guide notes, field notes, decision cards, route strips, and editorial pull quotes.</p>
+      </div>
+
+      <div class="grid">
+        <article class="sample bad">
+          <div class="sample-title"><h2>Current Pattern</h2><span>avoid</span></div>
+          <div class="old-box">
+            <b>Replace broad tables with compact modules.</b>
+            <p>Tables look AI-generated when every row is equally weighted. Use them only for exact data. For judgment calls, cards feel more human and easier to scan.</p>
+          </div>
+          <p class="caption">Why it feels weak: generic blog-template treatment, no voice, no visual hierarchy beyond the left rule.</p>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Guide Note</h2><span>best default</span></div>
+          <div class="guide-aside">
+            <div class="portrait"></div>
+            <div>
+              <div class="eyebrow">Manabu's take</div>
+              <h3>Use tables only when the data is exact.</h3>
+              <p>For recommendation sections, I would rather show the choice I make with guests: Tsukiji for most first-timers, Toyosu only when the auction is the point.</p>
+              <p class="rule">Feels personal, credible, and less like a generated explainer.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Editorial Verdict</h2><span>strong answer</span></div>
+          <div class="verdict">
+            <div class="mark">01</div>
+            <h3>Turn comparison into a recommendation.</h3>
+            <p>A long table makes every row feel equally important. A verdict block gives the reader a clear answer first, then lets the detail support it.</p>
+          </div>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Choice Cards</h2><span>scannable</span></div>
+          <div class="mini-compare">
+            <section>
+              <h3>Use cards for judgment</h3>
+              <ul>
+                <li>Best for first-timers</li>
+                <li>When to choose each market</li>
+                <li>Guide's practical recommendation</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Use tables for facts</h3>
+              <ul>
+                <li>Hours and closed days</li>
+                <li>Station and access time</li>
+                <li>Official fees or reservation rules</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Field Note</h2><span>local texture</span></div>
+          <div class="field-note">
+            <div>
+              <div class="eyebrow">Field note</div>
+              <h3>What matters is not the number of rows. It is the visitor's next decision.</h3>
+              <p>After a first answer, use short notes for timing, crowds, and route planning.</p>
+            </div>
+            <div class="stamp">Observed on tour</div>
+          </div>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Route Strip</h2><span>practical</span></div>
+          <div class="route-strip"><time>8:00</time><p>Arrive at Tsukiji while stalls are open and before the heaviest crowd.</p></div>
+          <div class="route-strip"><time>9:30</time><p>Move from food stalls to knife shops, tea, ceramics, or a Ginza walk.</p></div>
+          <div class="route-strip"><time>After</time><p>Add Toyosu only when auction viewing or Senkyaku Banrai is part of the plan.</p></div>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Pull Quote</h2><span>human voice</span></div>
+          <div class="pullquote">"For travel advice, the most useful design is often not a box. It is a sentence that sounds like a guide would actually say it."</div>
+        </article>
+
+        <article class="sample">
+          <div class="sample-title"><h2>Do / Don't</h2><span>compact rule</span></div>
+          <div class="do-dont">
+            <div><b>Do</b><p>Use restrained modules that carry a decision, route, or personal observation.</p></div>
+            <div><b>Don't</b><p>Use decorative boxes just to break up text. They quickly look generic.</p></div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

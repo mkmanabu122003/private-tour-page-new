@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const ShinjukuGuide = () => {
   return (
@@ -16,54 +18,43 @@ const ShinjukuGuide = () => {
         canonicalPath="/blog/shinjuku-guide"
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Shinjuku Guide: What a Licensed Guide Actually Shows Clients
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                February 25, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a Tokyo-based National Government Licensed Guide Interpreter who has walked Shinjuku's streets with hundreds of international visitors.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/shinjuku-guide-hero.webp"
-          alt="Shinjuku guide - navigating Tokyo's neon-lit heart"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
 
-      {/* Article Content */}
-      <section className="py-16">
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/shinjuku-guide-hero.webp"
+        imageAlt="Shinjuku guide - navigating Tokyo's neon-lit heart"
+        eyebrow="Tokyo Area Guides"
+        title="Shinjuku Guide: What a Licensed Guide Actually Shows Clients"
+        subtitle="Written by Manabu, a Tokyo-based National Government Licensed Guide Interpreter who has walked Shinjuku's streets with hundreds of international visitors."
+        date="February 25, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Getting Oriented", href: "#section-01-getting-oriented" },
+          { num: "02", label: "Golden Gai", href: "#section-02-golden-gai" },
+          { num: "03", label: "Omoide Yokocho", href: "#section-03-omoide-yokocho" },
+          { num: "04", label: "Shinjuku Gyoen", href: "#section-04-shinjuku-gyoen" },
+          { num: "05", label: "Kabukicho", href: "#section-05-kabukicho" },
+          { num: "06", label: "Where to Eat in Shinjuku", href: "#section-06-where-to-eat-in-shinjuku" },
+          { num: "07", label: "Practical Tips for Visiting…", href: "#section-07-practical-tips-for-visiting-shinjuku" },
+          { num: "08", label: "Shinjuku by Time of Day", href: "#section-08-shinjuku-by-time-of-day" },
+          { num: "09", label: "Shinjuku's Hidden Spots…", href: "#section-09-shinjukus-hidden-spots-that-most-tourists-miss" },
+          { num: "10", label: "Shinjuku vs. Shibuya", href: "#section-10-shinjuku-vs-shibuya" },
+          { num: "11", label: "Why Hire a Guide in Shinjuku", href: "#section-11-why-hire-a-guide-in-shinjuku" },
+          { num: "12", label: "Getting Around Shinjuku", href: "#section-12-getting-around-shinjuku" },
+          { num: "13", label: "FAQ", href: "#section-13-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Shinjuku Station handles 3.5 million passengers daily, making it the busiest
@@ -86,7 +77,8 @@ const ShinjukuGuide = () => {
             </p>
 
             {/* Getting Oriented */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Getting Oriented</span></div>
+            <h2 id="section-01-getting-oriented" className="scroll-mt-20">
               Getting Oriented: Shinjuku's Two Sides
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -136,7 +128,8 @@ const ShinjukuGuide = () => {
             </figure>
 
             {/* Golden Gai */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Golden Gai</span></div>
+            <h2 id="section-02-golden-gai" className="scroll-mt-20">
               Golden Gai: The World's Most Intimate Bar District
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -198,7 +191,8 @@ const ShinjukuGuide = () => {
             <InlineCTA message="Want to discover Shinjuku's hidden side with a local?" href="/contact" />
 
             {/* Omoide Yokocho */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Omoide Yokocho</span></div>
+            <h2 id="section-03-omoide-yokocho" className="scroll-mt-20">
               Omoide Yokocho (Memory Lane)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -259,7 +253,8 @@ const ShinjukuGuide = () => {
             </figure>
 
             {/* Shinjuku Gyoen */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Shinjuku Gyoen</span></div>
+            <h2 id="section-04-shinjuku-gyoen" className="scroll-mt-20">
               Shinjuku Gyoen: An Unexpected Oasis
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -321,8 +316,8 @@ const ShinjukuGuide = () => {
                 Kabukicho at night: neon, energy, and Tokyo at maximum volume
               </figcaption>
             </figure>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Kabukicho</span></div>
+            <h2 id="section-05-kabukicho" className="scroll-mt-20">
               Kabukicho: Tokyo's Entertainment Capital
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -372,8 +367,8 @@ const ShinjukuGuide = () => {
                 Juicy yakitori skewers at one of Shinjuku's many izakayas
               </figcaption>
             </figure>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Where to Eat in Shinjuku</span></div>
+            <h2 id="section-06-where-to-eat-in-shinjuku" className="scroll-mt-20">
               Where to Eat in Shinjuku
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -382,7 +377,7 @@ const ShinjukuGuide = () => {
               help you narrow it down.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Department Store Basement Food Halls (Depachika)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -414,7 +409,7 @@ const ShinjukuGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ramen and Noodles
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -429,7 +424,7 @@ const ShinjukuGuide = () => {
               bowl.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Late-Night Options
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -460,7 +455,7 @@ const ShinjukuGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Budget Tips
             </h3>
             <ul className="space-y-4 mb-8">
@@ -489,7 +484,8 @@ const ShinjukuGuide = () => {
             </ul>
 
             {/* Practical Tips */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Practical Tips for Visiting Shinjuku</span></div>
+            <h2 id="section-07-practical-tips-for-visiting-shinjuku" className="scroll-mt-20">
               Practical Tips for Visiting Shinjuku
             </h2>
             <ul className="space-y-4 mb-8">
@@ -525,31 +521,32 @@ const ShinjukuGuide = () => {
             </ul>
 
             {/* Shinjuku by Time of Day */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Shinjuku by Time of Day</span></div>
+            <h2 id="section-08-shinjuku-by-time-of-day" className="scroll-mt-20">
               Shinjuku by Time of Day: A Local's Schedule
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               One of the most common questions I get from tour guests is: "When should I visit Shinjuku?" The answer depends entirely on what you want to experience. Here's how I'd plan a full day if I were visiting for the first time.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Morning (7:00–9:00 AM): Shinjuku Gyoen Morning Walk
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Start your day with the calm before the storm. Shinjuku Gyoen opens at 9 AM (but the surrounding area is quiet and pleasant for an early walk). Arrive right when the gates open to enjoy the gardens in near-solitude. The contrast with the chaos you'll experience later makes this especially rewarding. The morning light through the Japanese garden is perfect for photography, and you'll have the wide lawns almost to yourself.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Midday (12:00–2:00 PM): Depachika Lunch Strategy
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Head to the basement floor of Isetan or Takashimaya department stores for the depachika experience. The trick is timing: arrive just before the lunch rush (around 11:30 AM) or slightly after (1:30 PM) for the best selection without crowds. Assemble a bento box and side dishes for a fraction of restaurant prices. If the weather is good, take your depachika haul back to Shinjuku Gyoen for a picnic. This is exactly what many Tokyo office workers do, and it's one of the most pleasant lunch experiences in the city.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Late Afternoon (5:00–7:00 PM): Omoide Yokocho at Golden Hour
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the magic window for Omoide Yokocho. The yakitori stalls are firing up, the after-work crowd is just starting to trickle in, and the setting sun casts that perfect warm light through the smoke and steam. Grab a stool at one of the open-front stalls, order a beer and a few skewers, and watch the transition from day to night. The atmosphere at this hour is unmatched: bustling but not yet overwhelming, authentic and full of character.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Evening (7:00 PM onwards): Kabukicho and Golden Gai
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -557,7 +554,8 @@ const ShinjukuGuide = () => {
             </p>
 
             {/* Hidden Spots */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 09 · Shinjuku's Hidden Spots That Most Tourists Miss</span></div>
+            <h2 id="section-09-shinjukus-hidden-spots-that-most-tourists-miss" className="scroll-mt-20">
               Shinjuku's Hidden Spots That Most Tourists Miss
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -596,7 +594,8 @@ const ShinjukuGuide = () => {
             </ul>
 
             {/* Shinjuku vs Shibuya */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 10 · Shinjuku vs. Shibuya</span></div>
+            <h2 id="section-10-shinjuku-vs-shibuya" className="scroll-mt-20">
               Shinjuku vs. Shibuya: Which Should You Visit?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -625,7 +624,8 @@ const ShinjukuGuide = () => {
             </p>
 
             {/* What I Show Clients */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 11 · Why Hire a Guide in Shinjuku</span></div>
+            <h2 id="section-11-why-hire-a-guide-in-shinjuku" className="scroll-mt-20">
               Why Hire a Guide in Shinjuku: What I Actually Show Clients
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -656,13 +656,14 @@ const ShinjukuGuide = () => {
             </p>
 
             {/* Station Survival Guide */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 12 · Getting Around Shinjuku</span></div>
+            <h2 id="section-12-getting-around-shinjuku" className="scroll-mt-20">
               Getting Around Shinjuku: The Station Survival Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shinjuku Station is officially the world's busiest railway station, handling over 3.5 million passengers daily. It's served by JR East, Odakyu, Keio, Tokyo Metro, and Toei Subway, with over 200 exits connecting to an underground maze of shopping corridors. Even Tokyo locals sometimes get lost here. Here's how to navigate it like a pro.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               The Four Key Exits
             </h3>
             <ul className="space-y-4 mb-8">
@@ -679,7 +680,7 @@ const ShinjukuGuide = () => {
                 <strong className="text-foreground">New South Exit (新南口 / Shin-minami-guchi):</strong> Use this for the Shinjuku Expressway Bus Terminal (Busta Shinjuku), which handles highway buses to destinations across Japan. Also useful for accessing the Shinjuku Gyoen area from a slightly different angle.
               </li>
             </ul>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Survival Tips for the Station
             </h3>
             <ul className="space-y-4 mb-8">
@@ -699,7 +700,7 @@ const ShinjukuGuide = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want to explore Shinjuku with an expert guide who knows every hidden corner?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -717,12 +718,13 @@ const ShinjukuGuide = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 13 · FAQ</span></div>
+              <h2 id="section-13-faq" className="scroll-mt-20">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Is Shinjuku safe at night?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -730,7 +732,7 @@ const ShinjukuGuide = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     How long should I spend in Shinjuku?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -738,7 +740,7 @@ const ShinjukuGuide = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     What is Shinjuku best known for?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -746,7 +748,7 @@ const ShinjukuGuide = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     Is Kabukicho safe for tourists?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -755,7 +757,11 @@ const ShinjukuGuide = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -837,7 +843,9 @@ const ShinjukuGuide = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

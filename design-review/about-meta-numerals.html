@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About-meta Serif Numerals — Glyph Refinement Proposals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --ink: #171717;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --card: #fffdf8;
+  }
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+    padding: 60px 40px 80px;
+  }
+
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0 0 56px;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 720px;
+  }
+
+  /* Variant card wrapper */
+  .variant {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 0 auto 28px;
+    max-width: 920px;
+    overflow: hidden;
+  }
+  .variant-head {
+    padding: 16px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(248,247,241,.85);
+  }
+  .variant-body {
+    padding: 56px 64px;
+    background: var(--paper);
+  }
+  .variant-foot {
+    padding: 18px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+
+  /* === The about-meta block === */
+  .about-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 64px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stat .num {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--gold);
+    margin: 0 0 6px;
+    letter-spacing: -0.005em;
+    /* Stop OpenType numerals from misaligning */
+    font-feature-settings: "lnum";
+  }
+  .stat .lbl {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    margin: 0;
+  }
+
+  /* Inline modifiers per proposal */
+  .star-current {
+    /* Match current production: text-2xl Unicode ★, font-serif (Cormorant) */
+    font-size: 28px;
+    vertical-align: -2px;
+  }
+
+  .star-six {
+    /* Six-point star ✦ — lighter, more refined */
+    font-size: 24px;
+    vertical-align: 0;
+    margin-left: 2px;
+    color: var(--gold);
+  }
+
+  .frac-slash {
+    /* fraction slash U+2044 — italicized look in serif */
+    font-style: italic;
+    color: var(--gold);
+    margin: 0 4px;
+    font-weight: 400;
+  }
+
+  .plus-sub {
+    /* Smaller "+" for elegance */
+    font-size: 24px;
+    font-weight: 500;
+    vertical-align: 4px;
+    margin-left: 1px;
+  }
+
+  .plus-sup {
+    /* Superscript ⁺ */
+    font-size: 22px;
+    vertical-align: 12px;
+    margin-left: -2px;
+  }
+
+  .star-svg {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: -2px;
+    margin-left: 6px;
+  }
+  .star-svg-large {
+    width: 26px;
+    height: 26px;
+  }
+
+  .star-prefix {
+    /* Small star prefix in label row */
+    font-size: 14px;
+    color: var(--gold);
+    margin-right: 6px;
+    vertical-align: -1px;
+  }
+
+  /* Highlight the changed glyphs in body */
+  .highlight {
+    position: relative;
+  }
+  .highlight::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    opacity: 0.4;
+    border-radius: 2px;
+  }
+
+  /* Side label */
+  .left-rail {
+    max-width: 920px;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+  .left-rail .rule {
+    flex: 1; height: 1px; background: var(--line);
+  }
+  .left-rail .label {
+    color: var(--muted-2);
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width: 920px; margin: 0 auto;">
+  <h1>About-meta serif numerals — glyph refinement</h1>
+  <p class="intro">
+    現状（Current）の <code style="background:rgba(0,0,0,.04); padding:1px 5px; border-radius:3px;">★</code> と <code style="background:rgba(0,0,0,.04); padding:1px 5px; border-radius:3px;">·</code> は Unicode 文字を Cormorant でレンダリングしているため、繊細な serif と質感が合わない。
+    3案で比較してください。production への適用は提案 A 〜 C のいずれかをそのまま反映できます。
+  </p>
+</div>
+
+<!-- ============ CURRENT ============ -->
+<div class="left-rail">
+  <span class="label">Current · Production</span>
+  <span class="rule"></span>
+</div>
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT</span>
+    <span class="variant-name">Unicode ★ + · (now in production)</span>
+  </div>
+  <div class="variant-body">
+    <div class="about-meta">
+      <div class="stat">
+        <p class="num">500+</p>
+        <p class="lbl">Private tours</p>
+      </div>
+      <div class="stat">
+        <p class="num">4.86<span class="star-current">★</span></p>
+        <p class="lbl">Average rating</p>
+      </div>
+      <div class="stat">
+        <p class="num">EN · ES</p>
+        <p class="lbl">Languages</p>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue:</strong> ★ は Cormorant 内で塊感のある solid black star。`+` は serif 内で太め。`·` は中央点が控えめすぎ。シンボルが editorial 感を弱めている。
+  </div>
+</div>
+
+<!-- ============ PROPOSAL A ============ -->
+<div class="left-rail" style="margin-top: 40px;">
+  <span class="label">Proposal A · Symbols → labels</span>
+  <span class="rule"></span>
+</div>
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">A</span>
+    <span class="variant-name">Move ★ to label, keep numbers pure</span>
+  </div>
+  <div class="variant-body">
+    <div class="about-meta">
+      <div class="stat">
+        <p class="num">500+</p>
+        <p class="lbl">Private tours</p>
+      </div>
+      <div class="stat">
+        <p class="num">4.86</p>
+        <p class="lbl"><span class="star-prefix">★</span>Average rating</p>
+      </div>
+      <div class="stat">
+        <p class="num">EN · ES</p>
+        <p class="lbl">Languages</p>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>"4.86★" → 数字のみ「<span class="highlight">4.86</span>」／★ を <span class="highlight">label 行の先頭に小さく</span>（gold 14px）配置。"500+" "EN · ES" はそのまま。<br>
+    <strong>効果：</strong>数字行が <em>pure Cormorant</em> になり最もエレガント。実装最短（1行の HTML 変更）。
+  </div>
+</div>
+
+<!-- ============ PROPOSAL B ============ -->
+<div class="left-rail" style="margin-top: 40px;">
+  <span class="label">Proposal B · Refined glyphs</span>
+  <span class="rule"></span>
+</div>
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">B</span>
+    <span class="variant-name">★ → ✦  ·  · → ⁄  ·  + → small</span>
+  </div>
+  <div class="variant-body">
+    <div class="about-meta">
+      <div class="stat">
+        <p class="num">500<span class="plus-sub">+</span></p>
+        <p class="lbl">Private tours</p>
+      </div>
+      <div class="stat">
+        <p class="num">4.86<span class="star-six">✦</span></p>
+        <p class="lbl">Avg. rating</p>
+      </div>
+      <div class="stat">
+        <p class="num">EN<span class="frac-slash">⁄</span>ES</p>
+        <p class="lbl">Languages</p>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>★ → <span class="highlight">✦</span>（six-point star, U+2726、細身）／· → <span class="highlight">⁄</span>（fraction slash, U+2044、italic-feel）／+ → <span class="highlight">小さい "+" で superscript 風</span>。<br>
+    <strong>効果：</strong>シンボルの存在感は残しつつ editorial luxury 感（Aman / Belmond メニュー風）。Unicode のみで実装、SVG 不要。
+  </div>
+</div>
+
+<!-- ============ PROPOSAL C ============ -->
+<div class="left-rail" style="margin-top: 40px;">
+  <span class="label">Proposal C · Custom SVG star + superscript</span>
+  <span class="rule"></span>
+</div>
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">C</span>
+    <span class="variant-name">Hand-drawn star · superscript ⁺ · fraction slash</span>
+  </div>
+  <div class="variant-body">
+    <div class="about-meta">
+      <div class="stat">
+        <p class="num">500<span class="plus-sup">⁺</span></p>
+        <p class="lbl">Private tours</p>
+      </div>
+      <div class="stat">
+        <p class="num">4.86<svg class="star-svg" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 L14.6 9.5 L22 10.2 L16.5 14.7 L18.3 21.5 L12 17.6 L5.7 21.5 L7.5 14.7 L2 10.2 L9.4 9.5 Z" fill="#c9a84c" fill-opacity="0.18"/></svg></p>
+        <p class="lbl">Avg. rating</p>
+      </div>
+      <div class="stat">
+        <p class="num">EN<span class="frac-slash">⁄</span>ES</p>
+        <p class="lbl">Languages</p>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>★ → <span class="highlight">手描き thin-line SVG star</span>（5-point, 1.4px stroke, fill opacity 0.18）／+ → <span class="highlight">superscript ⁺</span>（U+207A、Unicode）／· → <span class="highlight">⁄</span>（fraction slash）。<br>
+    <strong>効果：</strong>完全カスタム editorial luxury。Cormorant の繊細さと SVG の輪郭が完全に統一。実装はSVG inline 1個のみで軽量。
+  </div>
+</div>
+
+<!-- ============ SIDE-BY-SIDE COMPARISON ============ -->
+<div class="left-rail" style="margin-top: 56px;">
+  <span class="label">Side-by-side · 4.86 row only</span>
+  <span class="rule"></span>
+</div>
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">COMPARE</span>
+    <span class="variant-name">Just the rating number, magnified</span>
+  </div>
+  <div class="variant-body" style="padding: 56px 64px;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; align-items: end;">
+      <div style="text-align: center;">
+        <p class="num" style="font-size: 64px;">4.86<span class="star-current" style="font-size: 48px;">★</span></p>
+        <p class="lbl" style="margin-top: 14px;">Current</p>
+      </div>
+      <div style="text-align: center;">
+        <p class="num" style="font-size: 64px;">4.86</p>
+        <p class="lbl" style="margin-top: 14px;"><span class="star-prefix" style="font-size: 18px;">★</span>Avg. rating</p>
+      </div>
+      <div style="text-align: center;">
+        <p class="num" style="font-size: 64px;">4.86<span class="star-six" style="font-size: 44px; margin-left: 4px;">✦</span></p>
+        <p class="lbl" style="margin-top: 14px;">Proposal B</p>
+      </div>
+      <div style="text-align: center;">
+        <p class="num" style="font-size: 64px; display: inline-flex; align-items: center; gap: 8px;">4.86<svg class="star-svg-large" style="width: 44px; height: 44px;" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 L14.6 9.5 L22 10.2 L16.5 14.7 L18.3 21.5 L12 17.6 L5.7 21.5 L7.5 14.7 L2 10.2 L9.4 9.5 Z" fill="#c9a84c" fill-opacity="0.18"/></svg></p>
+        <p class="lbl" style="margin-top: 14px;">Proposal C</p>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>判断ポイント：</strong>"★" の塊感がCurrentで突出。A は最も控えめ（数字優位）／B は ✦ で繊細さ ↑／C は SVG で完全制御＋outline で軽やか。
+  </div>
+</div>
+
+<div style="max-width: 920px; margin: 60px auto 0; text-align: center; color: var(--muted); font-size: 13px;">
+  <p style="margin: 0;">Generated 2026-05-08 · for review only · production: <code>src/pages/Index.tsx</code> About section <code>about-meta</code> block</p>
+</div>
+
+</body>
+</html>

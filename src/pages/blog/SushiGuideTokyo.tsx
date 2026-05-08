@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const SushiGuideTokyo = () => {
   return (
@@ -15,52 +17,45 @@ const SushiGuideTokyo = () => {
         canonicalPath="/blog/sushi-guide-tokyo"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/tokyo-sushi-nigiri-platter.webp"
-          alt="Assorted nigiri sushi platter — tamago, maguro, salmon, ebi, hotate, anago — at a Tokyo sushi counter"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Food Guides</p>
-            <h1 className="heading-display text-foreground">
-              Sushi Guide Tokyo: What a Licensed Guide Orders (And What to Avoid)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a guide who grew up eating sushi in Tokyo and has spent the last decade showing visitors where to find the real thing.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/tokyo-sushi-nigiri-platter.webp"
+        imageAlt="Assorted nigiri sushi platter — tamago, maguro, salmon, ebi, hotate, anago — at a Tokyo sushi counter"
+        eyebrow="Food Guides"
+        title="Sushi Guide Tokyo: What a Licensed Guide Orders (And What to Avoid)"
+        subtitle="Written by Manabu, a guide who grew up eating sushi in Tokyo and has spent the last decade showing visitors where to find the real thing."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "The Sushi You Think You…", href: "#section-01-the-sushi-you-think-you-know-vs-whats" },
+          { num: "02", label: "Types of Sushi Restaurants", href: "#section-02-types-of-sushi-restaurants" },
+          { num: "03", label: "What to Order as a First-Timer", href: "#section-03-what-to-order-as-a-first-timer" },
+          { num: "04", label: "Sushi Etiquette", href: "#section-04-sushi-etiquette" },
+          { num: "05", label: "My Picks by Budget", href: "#section-05-my-picks-by-budget" },
+          { num: "06", label: "Eat sushi with a guide who…", href: "#section-06-eat-sushi-with-a-guide-who-knows-the-chefs" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               I once sat next to a couple at a sushi counter in Ginza. They'd booked the restaurant months in advance, flown fourteen hours, and were clearly excited. Then they dunked each piece of sushi rice-side-down into a pool of soy sauce, mixed wasabi into it until it looked like pond water, and stacked pickled ginger on top of every piece like a garnish. The chef said nothing, but I could see his expression. It wasn't anger. It was sadness.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               That moment is why I wrote this sushi guide for Tokyo. Not to be a snob about rules, but because understanding sushi (how it works, what to order, how to eat it) transforms the experience from "nice raw fish" into something genuinely unforgettable. Tokyo has more Michelin-starred sushi restaurants than any city on Earth. But you don't need a Michelin star to eat incredible sushi here. You just need to know what you're looking at.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · The Sushi You Think You Know vs. What's</span></div>
+            <h2 id="section-01-the-sushi-you-think-you-know-vs-whats" className="scroll-mt-20">
               The Sushi You Think You Know vs. What's Actually Served in Tokyo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -72,31 +67,31 @@ const SushiGuideTokyo = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               The other thing that surprises visitors: sushi in Tokyo is seasonal. You won't find the same fish in January as you will in August. In winter, it's fatty tuna (toro), yellowtail (buri), and mackerel. In summer, it's sea bream (tai), octopus (tako), and conger eel (anago). A good sushi guide for Tokyo would tell you that the best piece of sushi is whatever's in season that week, not whatever you saw on a "top 10" list written in March about fish that peaks in September.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Types of Sushi Restaurants</span></div>
+            <h2 id="section-02-types-of-sushi-restaurants" className="scroll-mt-20">
               Types of Sushi Restaurants (And Which to Pick)
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Kaiten-zushi (Conveyor Belt Sushi)</h3>
+            <h3>Kaiten-zushi (Conveyor Belt Sushi)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Plates of sushi rotating on a belt, color-coded by price (usually ¥100–500 per plate). This is casual, fun, and a great way to try many types without committing. The quality at the best chains (Sushiro, Kura Sushi, Hamazushi) is genuinely good, especially for the price. Don't let anyone tell you it's "not real sushi." It is. It's just the casual version. Think diner versus fine dining. Both serve food, both can be excellent in their own context.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Omakase Counter Sushi</h3>
+            <h3>Omakase Counter Sushi</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the experience most people picture when they think of sushi in Tokyo: sitting at a wooden counter, watching the chef prepare each piece by hand, and eating it within seconds of it being placed in front of you. "Omakase" means "I'll leave it to you," and the chef decides what you eat based on what's best that day. It's intimate, theatrical, and the sushi equivalent of a tasting menu. Prices range from ¥5,000 at neighborhood spots to ¥50,000+ at Ginza temples of sushi.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tachi-gui (Standing Sushi)</h3>
+            <h3>Tachi-gui (Standing Sushi)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Standing sushi bars are Tokyo's best-kept secret for sushi guide Tokyo visitors who want quality without the price tag. You stand at a counter, order individual pieces, and eat quickly. No reservations, no ceremony, just excellent fish at 30–50% less than a seated omakase. Some of my favorite sushi experiences have been at standing bars near Tsukiji's outer market and in train station basements. The fish is the same quality; you're just paying less because there's no chair.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Supermarket Sushi</h3>
+            <h3>Supermarket Sushi</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Don't laugh. Supermarket sushi in Tokyo is better than restaurant sushi in most other countries. After 7 PM, many supermarkets discount their sushi platters by 20–50%. A ¥500 pack of nigiri from a Tokyo supermarket at closing time is an absurdly good meal. I eat it at least once a week. It's not a "sushi experience," it's just good, honest, inexpensive fish on rice.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What to Order as a First-Timer</span></div>
+            <h2 id="section-03-what-to-order-as-a-first-timer" className="scroll-mt-20">
               What to Order as a First-Timer
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -111,8 +106,8 @@ const SushiGuideTokyo = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Seasonal picks I love:</strong> In winter, ask for engawa (the fin muscle of flounder). It's buttery, slightly chewy, and not something you'll find easily outside Japan. In summer, try shima-aji (striped jack), clean, bright, and incredibly fresh. Year-round, uni (sea urchin) from Hokkaido is world-class, but only if it's domestic. Imported uni is a different animal entirely.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Sushi Etiquette</span></div>
+            <h2 id="section-04-sushi-etiquette" className="scroll-mt-20">
               Sushi Etiquette: The Rules That Matter
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -135,25 +130,25 @@ const SushiGuideTokyo = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               One more thing: eat each piece in one bite if possible. Nigiri is constructed as a single unit, and the balance of fish, rice, and wasabi is designed for one mouthful. Biting it in half disrupts that balance and usually results in it falling apart. If the piece is too large (some chefs make them big), it's okay to ask the chef to make them smaller. A good chef will appreciate that you care.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · My Picks by Budget</span></div>
+            <h2 id="section-05-my-picks-by-budget" className="scroll-mt-20">
               My Picks by Budget
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Any honest sushi guide for Tokyo needs to address money. Sushi here spans an enormous price range, and more expensive doesn't always mean better. Here's how I think about it:
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Budget: ¥1,500–3,000 per person</h3>
+            <h3>Budget: ¥1,500–3,000 per person</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Conveyor belt sushi and standing sushi bars. At this price, you'll eat 8–15 pieces of genuinely good nigiri. The fish is fresh, the rice is properly seasoned, and the experience is fun. Sushiro and Kura Sushi are the big chains; both are excellent for the price. For standing sushi, look near major train stations. There's almost always a tachi-gui spot in the basement food floor. If you're on a budget and you hit a standing sushi bar near the old Tsukiji outer market area around 11 AM, you're eating some of the freshest fish in the world for less than a fast-food meal in New York.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Mid-Range: ¥5,000–10,000 per person</h3>
+            <h3>Mid-Range: ¥5,000–10,000 per person</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the sweet spot. At this price, you can get an omakase lunch at a neighborhood sushi counter, usually 10–12 pieces plus miso soup and a small appetizer. These are the restaurants where the chef trained at a famous place, broke off on his own, and charges fair prices because he doesn't have Ginza rent. The fish quality is often identical to places charging three times as much. Lunch omakase is almost always cheaper than dinner; some shops offer the same menu at 40% less during the day. I take most of my tour clients to restaurants in this range.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Splurge: ¥15,000+ per person</h3>
+            <h3>Splurge: ¥15,000+ per person</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               High-end omakase in Ginza, Roppongi, or Nishi-Azabu. At this level, you're paying for the best seasonal fish available, a master chef's decades of technique, premium ingredients (aged soy sauce, hand-grated real wasabi, rare vinegars), and an intimate atmosphere that usually seats 6–10 people. The sushi is extraordinary, each piece a small masterpiece, but the law of diminishing returns applies. The jump from ¥3,000 to ¥8,000 is enormous in quality. The jump from ¥15,000 to ¥30,000 is noticeable but not life-changing. If you're going to splurge, I'd suggest one high-end meal in the ¥15,000–20,000 range and spending the rest of your sushi budget at mid-range and standing spots.
             </p>
@@ -171,7 +166,8 @@ const SushiGuideTokyo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · Eat sushi with a guide who knows the chefs</span></div>
+              <h2 id="section-06-eat-sushi-with-a-guide-who-knows-the-chefs" className="scroll-mt-20">
                 Eat sushi with a guide who knows the chefs
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -185,35 +181,40 @@ const SushiGuideTokyo = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Do I need a reservation for sushi in Tokyo?</h3>
+                  <h3>Do I need a reservation for sushi in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     It depends on the tier. Conveyor belt and standing sushi bars are walk-in only. Mid-range omakase counters sometimes take reservations but often have space at lunch. High-end Ginza-level restaurants almost always require booking 1–3 months in advance, and many only accept reservations in Japanese. Your hotel concierge or a licensed guide can help with this.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is it rude to order sushi with chopsticks instead of fingers?</h3>
+                  <h3>Is it rude to order sushi with chopsticks instead of fingers?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Not at all. Both are perfectly acceptable. Fingers are traditional and often easier for nigiri (less risk of the piece falling apart), but chopsticks are equally fine. The chef won't judge you either way. What matters more is how you dip: fish side into soy sauce, not rice side.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What's the best time of year for sushi in Tokyo?</h3>
+                  <h3>What's the best time of year for sushi in Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Every season offers different fish, so there's no single "best" time. Winter (December–February) is prime for fatty tuna and yellowtail. Spring brings red snapper and shellfish. Summer features sea bream and octopus. Autumn offers saury and salmon roe. The best strategy is to eat omakase and let the chef serve whatever's peaking that day.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can I get good sushi in Tokyo on a budget?</h3>
+                  <h3>Can I get good sushi in Tokyo on a budget?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Absolutely. Standing sushi bars serve excellent nigiri for ¥100–300 per piece, and conveyor belt chains like Sushiro offer quality that would pass for a good sushi restaurant in most other countries, at ¥100–150 per plate. Even supermarket sushi in Tokyo, especially after the evening discount, is remarkably good. You can eat world-class sushi for under ¥2,000.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -239,7 +240,9 @@ const SushiGuideTokyo = () => {
           { "@type": "Question", name: "Can I get good sushi in Tokyo on a budget?", acceptedAnswer: { "@type": "Answer", text: "Yes. Standing sushi bars serve excellent nigiri for ¥100-300 per piece. Conveyor belt chains offer great quality at ¥100-150 per plate. Even supermarket sushi in Tokyo is remarkably good." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

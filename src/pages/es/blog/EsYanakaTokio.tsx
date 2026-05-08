@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsYanakaTokio = () => {
   return (
@@ -19,53 +21,35 @@ const EsYanakaTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/yanaka-ginza-shopping-street.webp"
-          alt="Calle comercial Yanaka Ginza vista desde las escaleras Yuyake Dandan"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Yanaka, el Tokio Auténtico: Ruta de 3 Horas con un Guía Japonés
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/yanaka-ginza-shopping-street.webp"
+        imageAlt="Calle comercial Yanaka Ginza vista desde las escaleras Yuyake Dandan"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Yanaka, el Tokio Auténtico: Ruta de 3 Horas con un Guía Japonés"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Por qué Yanaka es…", href: "#section-01-por-qué-yanaka-es-diferente-al-resto-de-tokio" },
+          { num: "02", label: "Mi ruta de 3 horas por Yanaka", href: "#section-02-mi-ruta-de-3-horas-por-yanaka" },
+          { num: "03", label: "Qué comer en Yanaka", href: "#section-03-qué-comer-en-yanaka" },
+          { num: "04", label: "Cuándo ir a Yanaka", href: "#section-04-cuándo-ir-a-yanaka" },
+          { num: "05", label: "Yanaka para el viajero que…", href: "#section-05-yanaka-para-el-viajero-que-ya-conoce-tokio" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Hay un Tokio que la mayoría de los viajeros nunca ven. No está en Shibuya, ni en Shinjuku, ni en las calles eléctricas de Akihabara. Está en Yanaka, un barrio donde el tiempo decidió detenerse hace décadas y donde todavía es posible caminar por calles que tienen el mismo aspecto que en los años cincuenta. Si tuviera que explicarlo con una imagen que un hispanohablante entienda, diría que Yanaka es como el Albaicín de Granada o el barrio de San Telmo en Buenos Aires, un lugar que se resiste al paso del tiempo.
@@ -78,11 +62,12 @@ const EsYanakaTokio = () => {
             </p>
 
             {/* Por qué Yanaka es diferente */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Por qué Yanaka es diferente al resto de Tokio?</span></div>
+            <h2 id="section-01-por-qué-yanaka-es-diferente-al-resto-de-tokio" className="scroll-mt-20">
               ¿Por qué Yanaka es diferente al resto de Tokio?
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El barrio que los bombardeos no destruyeron
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -92,7 +77,7 @@ const EsYanakaTokio = () => {
               Eso convierte a Yanaka en algo extraordinario: un fragmento vivo del Tokio de antes de la guerra. Cuando caminas por sus calles, no estás viendo una reconstrucción ni un museo al aire libre. Estás viendo el Tokio real, el que existía antes de que la modernidad lo transformara todo. Este es el punto de partida de cualquier <strong className="text-foreground">yanaka tokio itinerario</strong> que merezca la pena.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La vida que desapareció del resto de la ciudad
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -103,21 +88,22 @@ const EsYanakaTokio = () => {
             </p>
 
             {/* Ruta de 3 horas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Mi ruta de 3 horas por Yanaka</span></div>
+            <h2 id="section-02-mi-ruta-de-3-horas-por-yanaka" className="scroll-mt-20">
               Mi ruta de 3 horas por Yanaka (paso a paso)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Este es el <strong className="text-foreground">yanaka tokio itinerario</strong> exacto que hago con mis invitados. Tres horas a paso tranquilo, con paradas para comer, para contemplar y para entender la historia que hay detrás de cada rincón.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Inicio: Estación de Nippori y la salida norte
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Empezamos siempre en la estación de Nippori, salida norte. Es accesible con la línea JR Yamanote, lo que la hace fácil de alcanzar desde cualquier punto de Tokio. Nada más salir de la estación, el cambio es inmediato. Desaparece el ruido del tren y aparece un silencio que no esperarías encontrar a veinte minutos de Shinjuku. Aquí nos orientamos, miro a mis invitados a los ojos y les digo: "A partir de ahora, vamos a caminar despacio. Yanaka no se visita con prisa."
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Yanaka Ginza: la calle comercial de otro tiempo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -127,7 +113,7 @@ const EsYanakaTokio = () => {
               Lo que hace especial a Yanaka Ginza es que no fue diseñada para turistas. Sus clientes son los vecinos del barrio: las señoras que compran el tofu para la cena, los padres que llevan a sus hijos a comprar un helado después del colegio. Tú, como visitante, eres un invitado en su vida cotidiana. Y eso es exactamente lo que hace que la experiencia sea tan auténtica.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El cementerio de Yanaka (sí, es un paseo)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -137,7 +123,7 @@ const EsYanakaTokio = () => {
               Yo siempre me detengo junto a la tumba de Tokugawa Yoshinobu, el último shogún de Japón. Es una lápida modesta para un hombre que tuvo en sus manos el destino de un imperio. Les cuento a mis invitados su historia, cómo entregó el poder al emperador, cómo vivió sus últimos años pintando y haciendo fotografía, y siempre veo cómo la historia de Japón cobra vida de una manera que ningún libro de texto puede lograr.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los templos escondidos del barrio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -147,7 +133,7 @@ const EsYanakaTokio = () => {
               Lo que hago con mis invitados es elegir tres o cuatro templos según la temporada y el estado de ánimo del grupo. No se trata de ver todos, sino de entender cómo el budismo se integra en la vida diaria japonesa de una manera que los grandes templos turísticos de Kioto ya no pueden mostrar. En Yanaka, la espiritualidad no es un espectáculo: es parte del tejido del barrio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Yuyake Dandan: el mirador del atardecer
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -158,28 +144,29 @@ const EsYanakaTokio = () => {
             </p>
 
             {/* Qué comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Qué comer en Yanaka</span></div>
+            <h2 id="section-03-qué-comer-en-yanaka" className="scroll-mt-20">
               Qué comer en Yanaka
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Yanaka no es un barrio gastronómico como Tsukiji, pero tiene algo mejor: comida honesta, hecha por las mismas manos desde hace décadas, sin pretensiones ni precios inflados.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los croquetas de menchi-katsu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En Yanaka Ginza hay varias carnicerías que venden menchi-katsu recién frito: croquetas de carne picada empanadas y crujientes por fuera, jugosas por dentro. Cuestan entre 150 y 250 yenes y se comen de pie, envueltas en un papel que absorbe el aceite. Son la comida callejera perfecta del barrio: nada sofisticada, absolutamente deliciosa. Yo siempre compro una al inicio del paseo y otra al final. Es mi ritual.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Helado de sabores japoneses
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Hay una heladería en Yanaka Ginza que ofrece sabores que no encontrarás en ningún otro lugar: sakura (flor de cerezo), kurogoma (sésamo negro), murasaki imo (boniato morado) y matcha intenso. Un cucurucho cuesta unos 350 yenes. Es especialmente perfecto en los meses cálidos, cuando el paseo por el barrio te deja con ganas de algo fresco. Pero incluso en invierno, los japoneses comen helado (no preguntes por qué, simplemente únete a la costumbre).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los dulces tradicionales de las abuelas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -187,25 +174,26 @@ const EsYanakaTokio = () => {
             </p>
 
             {/* Cuándo ir */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cuándo ir a Yanaka</span></div>
+            <h2 id="section-04-cuándo-ir-a-yanaka" className="scroll-mt-20">
               Cuándo ir a Yanaka
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Primavera: cerezos en el cementerio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               De finales de marzo a principios de abril, el cementerio de Yanaka se transforma en un túnel de cerezos en flor. Los pétalos caen sobre las tumbas y los caminos de piedra, y la luz filtrada a través de las flores crea una atmósfera que es difícil de describir con palabras. Lo mejor de ver los cerezos aquí en lugar de en los parques más famosos es la tranquilidad: mientras miles de personas se amontonan en Ueno, en Yanaka puedes caminar bajo los cerezos prácticamente solo. Es, en mi opinión, el secreto mejor guardado de la temporada de sakura en Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Otoño: el mejor momento
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si me preguntas cuándo hacer un <strong className="text-foreground">yanaka tokio itinerario</strong>, te diré que en otoño. De mediados de noviembre a principios de diciembre, los arces japoneses se tiñen de rojo y naranja, la temperatura es perfecta para caminar, y la luz de la tarde dorada convierte cada callejón en una postal. Es la temporada en la que Yanaka muestra su mejor versión, y es cuando yo más disfruto guiando aquí.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Entre semana vs. fin de semana
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -213,11 +201,12 @@ const EsYanakaTokio = () => {
             </p>
 
             {/* Para viajeros repetidores */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Yanaka para el viajero que ya conoce Tokio</span></div>
+            <h2 id="section-05-yanaka-para-el-viajero-que-ya-conoce-tokio" className="scroll-mt-20">
               Yanaka para el viajero que ya conoce Tokio
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Por qué este barrio enamora a los viajeros repetidores
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -232,39 +221,40 @@ const EsYanakaTokio = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre Yanaka
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cómo llego a Yanaka?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La forma más fácil es tomar la línea JR Yamanote hasta la estación de Nippori y usar la salida norte. Desde Tokio Station son unos 12 minutos, desde Shinjuku unos 20 minutos. También puedes llegar a la estación de Sendagi en la línea Chiyoda del metro, que te deja más cerca del cementerio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cuánto tiempo necesito?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Un mínimo de dos horas para ver lo esencial. Tres horas si quieres comer con calma y entrar en algunos templos. Medio día si quieres combinar Yanaka con el cercano parque de Ueno. Mi <strong className="text-foreground">yanaka tokio itinerario</strong> guiado dura tres horas, que es el tiempo ideal para absorber el barrio sin agotarte.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Hay tiendas en inglés/español?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No. Y esa es parte de su encanto. Yanaka es un barrio japonés para japoneses. Los carteles están en japonés, los vendedores hablan japonés, y los menús están en japonés. Es precisamente por eso que un <strong className="text-foreground">yanaka tokio itinerario</strong> con guía tiene tanto valor: yo me encargo de traducir, explicar y conectarte con las personas del barrio de una manera que sería imposible por tu cuenta.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Se puede combinar con otros barrios?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí. Yanaka está a diez minutos a pie del parque de Ueno, lo que permite combinar ambos en un día completo. También puedes conectar con Nezu y Sendagi, que junto con Yanaka forman el área conocida como "Yanesen", tres barrios tradicionales que conservan la misma atmósfera. En nuestro tour cubrimos los puntos más interesantes de esta zona extendida.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Merece la pena un tour guiado?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -273,7 +263,7 @@ const EsYanakaTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres descubrir el Tokio que sobrevivió al tiempo?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -288,7 +278,11 @@ const EsYanakaTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -322,7 +316,9 @@ const EsYanakaTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

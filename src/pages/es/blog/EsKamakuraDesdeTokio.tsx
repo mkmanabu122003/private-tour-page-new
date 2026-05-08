@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsKamakuraDesdeTokio = () => {
   return (
@@ -18,53 +20,35 @@ const EsKamakuraDesdeTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/kamakura-great-buddha.webp"
-          alt="Gran Buda de Kamakura: excursión desde Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Excursiones</p>
-            <h1 className="heading-display text-foreground">
-              Kamakura desde Tokio: Lo Que Nadie Te Cuenta Antes de Ir
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/kamakura-great-buddha.webp"
+        imageAlt="Gran Buda de Kamakura: excursión desde Tokio"
+        eyebrow="Guías de Excursiones"
+        title="Kamakura desde Tokio: Lo Que Nadie Te Cuenta Antes de Ir"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Por qué Kamakura merece un…", href: "#section-01-por-qué-kamakura-merece-un-día-completo" },
+          { num: "02", label: "Cómo ir de Tokio a Kamakura", href: "#section-02-cómo-ir-de-tokio-a-kamakura" },
+          { num: "03", label: "Qué ver en Kamakura", href: "#section-03-qué-ver-en-kamakura" },
+          { num: "04", label: "Dónde comer en Kamakura", href: "#section-04-dónde-comer-en-kamakura" },
+          { num: "05", label: "Los errores que veo en mis…", href: "#section-05-los-errores-que-veo-en-mis-clientes" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Si me preguntas cuál es la mejor excursión de un día desde Tokio, mi respuesta siempre es la misma: Kamakura. No porque sea la más espectacular (Hakone tiene su volcán, Nikko sus santuarios dorados), sino porque Kamakura te da algo que ningún otro destino cercano a Tokio puede ofrecer: una antigua capital samurái junto al mar, con templos entre montañas boscosas, playas de arena oscura y una cultura gastronómica que merece un viaje por sí sola. Es como si Toledo estuviera junto al mar.
@@ -81,21 +65,22 @@ const EsKamakuraDesdeTokio = () => {
             </p>
 
             {/* Por qué Kamakura merece un día completo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Por qué Kamakura merece un día completo</span></div>
+            <h2 id="section-01-por-qué-kamakura-merece-un-día-completo" className="scroll-mt-20">
               Por qué Kamakura merece un día completo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Muchos visitantes cometen el error de meter Kamakura en medio día, como si fuera una parada rápida entre Shibuya y Shinjuku. No lo es. Kamakura fue la capital de Japón durante el período Kamakura (1185-1333), cuando el shogunato gobernaba el país desde aquí. Esa historia se siente en cada rincón, y necesitas tiempo para absorberla.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La antigua capital de los samuráis
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Antes de que Tokio existiera como centro de poder, Kamakura era donde se tomaban las decisiones. Minamoto no Yoritomo estableció aquí el primer gobierno militar de Japón, y durante casi 150 años esta pequeña ciudad costera fue el centro político del país. Los templos y santuarios que visitarás no son atracciones turísticas construidas para impresionar, son los restos reales de una capital medieval. Tsurugaoka Hachimangu no era solo un santuario; era el corazón espiritual del gobierno samurái. Esa profundidad histórica es lo que hace que una <strong className="text-foreground">excursión Kamakura desde Tokio</strong> sea tan diferente de visitar un templo cualquiera en la capital.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mar, montaña y templos en un solo lugar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -103,28 +88,29 @@ const EsKamakuraDesdeTokio = () => {
             </p>
 
             {/* Cómo ir de Tokio a Kamakura */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Cómo ir de Tokio a Kamakura</span></div>
+            <h2 id="section-02-cómo-ir-de-tokio-a-kamakura" className="scroll-mt-20">
               Cómo ir de Tokio a Kamakura
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Llegar a Kamakura desde Tokio es más sencillo de lo que parece, pero hay opciones que conviene conocer antes de subirse al tren.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               JR Yokosuka Line desde Tokio/Shinagawa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La forma más directa y económica es la <strong className="text-foreground">JR Yokosuka Line</strong>, que sale de las estaciones de Tokio y Shinagawa. El trayecto dura aproximadamente una hora desde Tokio Station y unos 50 minutos desde Shinagawa. No necesitas reservar asiento, es un tren local con asientos libres. Si tienes el Japan Rail Pass, este trayecto está incluido, lo cual convierte esta <strong className="text-foreground">excursión Kamakura desde Tokio</strong> en básicamente gratuita en transporte. Sin JR Pass, el billete de ida cuesta alrededor de 940 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Enoden: el tranvía que es una experiencia en sí
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una vez en Kamakura, el <strong className="text-foreground">Enoden</strong> (Enoshima Electric Railway) es mucho más que un medio de transporte: es una de las experiencias más encantadoras de tu visita. Este pequeño tranvía vintage conecta la estación de Kamakura con Enoshima en unos 34 minutos, pasando entre casas tan cerca que podrías tocar la ropa tendida, bordeando acantilados costeros con vistas al mar y atravesando zonas residenciales que parecen detenidas en el tiempo. La parada de Hase te deja a pocos minutos del Gran Buda y del templo Hasedera. Un billete de día del Enoden cuesta 800 yenes y te permite subir y bajar las veces que quieras.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Precios y tiempos reales 2026
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -134,35 +120,36 @@ const EsKamakuraDesdeTokio = () => {
             <InlineCTAEs href="/es/tours/kamakura" />
 
             {/* Qué ver en Kamakura */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Qué ver en Kamakura</span></div>
+            <h2 id="section-03-qué-ver-en-kamakura" className="scroll-mt-20">
               Qué ver en Kamakura (mi ruta recomendada)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Después de cientos de visitas, he afinado una ruta que maximiza lo que ves sin agotarte. Este es el orden que recomiendo, empezando por lo más lejos de la estación para evitar las multitudes de la mañana.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Gran Buda (Kotoku-in): la foto obligatoria
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El <strong className="text-foreground">Daibutsu</strong> (Gran Buda) de Kamakura es una estatua de bronce de 13,35 metros de altura que lleva aquí desde 1252. Originalmente estaba dentro de un gran templo de madera, pero un tsunami en el siglo XV destruyó el edificio y desde entonces el Buda ha permanecido al aire libre, expuesto a los elementos. Eso es parte de su magia: mientras que otros Budas gigantes de Japón están encerrados en salones oscuros, este te recibe a cielo abierto. La entrada cuesta 300 yenes, y por 20 yenes adicionales puedes entrar en el interior hueco de la estatua. Llega antes de las 10:00 para fotografiarlo sin doscientas cabezas de fondo. Es el emblema de cualquier <strong className="text-foreground">excursión Kamakura desde Tokio</strong> que se precie.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Hasedera: el templo con vistas al mar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A solo diez minutos a pie del Gran Buda, Hasedera es mi templo favorito de Kamakura, y posiblemente de todo Japón. La razón es simple: su plataforma de observación ofrece una vista panorámica de la bahía de Sagami que te deja sin palabras. Dentro del templo encontrarás la mayor estatua de madera de Kannon (la diosa de la misericordia) en Japón, con más de 9 metros de altura y cubierta de pan de oro. Pero lo que realmente enamora de Hasedera son sus jardines: miles de hortensias en junio, cerezos en primavera, y un jardín japonés con estanques de carpas koi que invita a sentarse y respirar. La entrada es de 400 yenes. Reserva al menos 45 minutos aquí.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tsurugaoka Hachimangu: el santuario principal
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Este es el santuario más importante de Kamakura, fundado en 1063 y reubicado a su posición actual por Minamoto no Yoritomo en 1180. Es enorme. La avenida principal (Wakamiya Oji) que conduce al santuario desde la costa fue diseñada como un eje ceremonial, y todavía se percibe esa grandiosidad. Sube la escalinata empinada hasta el salón principal para tener una vista impresionante del paseo arbolado y la ciudad más allá. El recinto incluye estanques con lotos, un museo de tesoros nacionales y a menudo alguna ceremonia sintoísta en curso. La entrada al recinto es gratuita. Es un lugar que respira historia en cada piedra.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Komachi-dori: la calle comercial (con trampas)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -170,28 +157,29 @@ const EsKamakuraDesdeTokio = () => {
             </p>
 
             {/* Dónde comer en Kamakura */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Dónde comer en Kamakura</span></div>
+            <h2 id="section-04-dónde-comer-en-kamakura" className="scroll-mt-20">
               Dónde comer en Kamakura
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La gastronomía de Kamakura tiene una estrella indiscutible y varios secundarios que merecen atención. Esto es lo que recomiendo a todos mis clientes cuando hacen la <strong className="text-foreground">excursión Kamakura desde Tokio</strong>.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shirasu (boquerón japonés): el plato estrella
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El shirasu es la especialidad absoluta de Kamakura. Son crías de sardina o anchoa, diminutas y translúcidas, que se pescan en la bahía de Sagami justo frente a la ciudad. Se sirven de dos formas: <strong className="text-foreground">nama-shirasu</strong> (crudos, cuando la pesca del día lo permite) o <strong className="text-foreground">kamaage-shirasu</strong> (ligeramente hervidos). El plato más típico es el shirasu-don: un bol de arroz cubierto de shirasu con un poco de jengibre rallado y salsa de soja. Es simple, fresco y absolutamente delicioso. Los mejores restaurantes de shirasu están cerca de la costa, no en Komachi-dori. Espera pagar entre 1.200 y 1.800 yenes por un buen shirasu-don. Nota importante: entre enero y mediados de marzo, hay veda de shirasu, así que no habrá nama-shirasu disponible en esos meses.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Soba artesanal en los callejones
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kamakura tiene una tradición de soba (fideos de trigo sarraceno) artesanal que muchos visitantes pasan por alto porque van directos al shirasu. Error. Hay pequeños restaurantes de soba escondidos en los callejones laterales, lejos de Komachi-dori, donde un maestro artesano prepara los fideos a mano cada mañana. El soba frío (zaru soba) servido sobre una esterilla de bambú con salsa de inmersión es perfecto después de caminar bajo el sol. Busca locales pequeños con solo seis u ocho mesas. Si hay cola de japoneses fuera, es buena señal. Un plato de soba artesanal cuesta entre 1.000 y 1.500 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que debes evitar en Komachi-dori
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -207,28 +195,29 @@ const EsKamakuraDesdeTokio = () => {
             </p>
 
             {/* Los errores que veo en mis clientes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Los errores que veo en mis clientes</span></div>
+            <h2 id="section-05-los-errores-que-veo-en-mis-clientes" className="scroll-mt-20">
               Los errores que veo en mis clientes
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Llevo años guiando visitantes por Kamakura y estos son los tres errores que veo una y otra vez. Si lees esto antes de tu viaje, ya irás mejor preparado que el 90% de los turistas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Intentar ver todo en medio día
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Este es el error número uno. Alguien lee que Kamakura está "a una hora de Tokio" y decide ir después del almuerzo, pensando que con tres horas es suficiente. No lo es. Entre el trayecto, los desplazamientos internos, las visitas a los templos y una comida decente, necesitas un mínimo de seis horas para una <strong className="text-foreground">excursión Kamakura desde Tokio</strong> que merezca la pena. Mi recomendación es salir de Tokio a las 8:30-9:00 y volver sobre las 17:00-18:00. Así tendrás tiempo para respirar, sentarte a comer sin prisa y disfrutar del ambiente sin ir corriendo de templo en templo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               No llevar calzado cómodo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kamakura no es plana. Los templos están en colinas, las escaleras son empinadas y a menudo irregulares, y los caminos entre santuarios pasan por senderos de tierra y grava. He visto a gente con tacones intentando subir las escaleras de Tsurugaoka Hachimangu y a personas con sandalias nuevas con ampollas a las dos horas. Zapatillas deportivas cómodas, ya usadas. Punto. Si llueve, las piedras mojadas son resbaladizas, así que lleva también un paraguas pequeño.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ignorar la playa de Yuigahama
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -236,13 +225,14 @@ const EsKamakuraDesdeTokio = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre Kamakura desde Tokio
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">
+                <h3>
                   ¿Se puede hacer Kamakura en un día?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -251,7 +241,7 @@ const EsKamakuraDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuánto cuesta la excursión Kamakura desde Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -260,7 +250,7 @@ const EsKamakuraDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">
+                <h3>
                   ¿Kamakura o Hakone?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -269,7 +259,7 @@ const EsKamakuraDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">
+                <h3>
                   ¿Merece la pena ir con guía?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -278,7 +268,7 @@ const EsKamakuraDesdeTokio = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">
+                <h3>
                   ¿Qué hago si llueve?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -289,7 +279,7 @@ const EsKamakuraDesdeTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres hacer la excursión Kamakura desde Tokio con un guía local?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -304,7 +294,11 @@ const EsKamakuraDesdeTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -336,7 +330,9 @@ const EsKamakuraDesdeTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

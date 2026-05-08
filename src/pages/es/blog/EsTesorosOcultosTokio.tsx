@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsTesorosOcultosTokio = () => {
   return (
@@ -18,56 +20,37 @@ const EsTesorosOcultosTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-hidden-shrine.webp"
-          alt="Santuario escondido en Tokio, una joya desconocida de la ciudad"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Tokio Secreto: Lugares Fuera de lo Común que la Mayoría de Turistas Nunca Encuentra (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) con más de 500 tours privados completados en Tokio.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-hidden-shrine.webp"
+        imageAlt="Santuario escondido en Tokio, una joya desconocida de la ciudad"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Tokio Secreto: Lugares Fuera de lo Común que la Mayoría de Turistas Nunca Encuentra (2026)"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) con más de 500 tours privados completados en Tokio."
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Por qué las listas de…", href: "#section-01-por-qué-las-listas-de-tesoros-ocultos" },
+          { num: "02", label: "Yanaka", href: "#section-02-yanaka" },
+          { num: "03", label: "Kagurazaka", href: "#section-03-kagurazaka" },
+          { num: "04", label: "Santuario Nezu", href: "#section-04-santuario-nezu" },
+          { num: "05", label: "Shinbashi bajo las vías", href: "#section-05-shinbashi-bajo-las-vías" },
+          { num: "06", label: "Cómo encontrar tus propios…", href: "#section-06-cómo-encontrar-tus-propios-tesoros-ocultos" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Seré sincero: casi no escribo este artículo. La expresión "tesoros ocultos de Tokio" me hace torcer un poco el gesto, porque el 90% de las listas que encuentras en internet no tienen nada de oculto. Son lugares populares reempaquetados con titulares llamativos. ¿Robot Restaurant? Aparece en todas las guías. ¿TeamLab? Hay dos horas de cola.
@@ -80,7 +63,8 @@ const EsTesorosOcultosTokio = () => {
             </p>
 
             {/* H2: Why "hidden gems" lists are usually wrong */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Por qué las listas de "tesoros ocultos"</span></div>
+            <h2 id="section-01-por-qué-las-listas-de-tesoros-ocultos" className="scroll-mt-20">
               Por qué las listas de "tesoros ocultos" suelen estar equivocadas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -94,7 +78,8 @@ const EsTesorosOcultosTokio = () => {
             </p>
 
             {/* H2: Yanaka */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Yanaka</span></div>
+            <h2 id="section-02-yanaka" className="scroll-mt-20">
               Yanaka: El barrio que sobrevivió a la guerra
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -115,7 +100,8 @@ const EsTesorosOcultosTokio = () => {
             </p>
 
             {/* H2: Kagurazaka */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Kagurazaka</span></div>
+            <h2 id="section-03-kagurazaka" className="scroll-mt-20">
               Kagurazaka: El antiguo barrio francés de Tokio con alma japonesa
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -129,7 +115,8 @@ const EsTesorosOcultosTokio = () => {
             </p>
 
             {/* H2: Nezu Shrine */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Santuario Nezu</span></div>
+            <h2 id="section-04-santuario-nezu" className="scroll-mt-20">
               Santuario Nezu: El Fushimi Inari sin las multitudes
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -150,7 +137,8 @@ const EsTesorosOcultosTokio = () => {
             </p>
 
             {/* H2: Shinbashi */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Shinbashi bajo las vías</span></div>
+            <h2 id="section-05-shinbashi-bajo-las-vías" className="scroll-mt-20">
               Shinbashi bajo las vías: Donde Tokio realmente se relaja
             </h2>
             <figure className="my-8">
@@ -224,31 +212,32 @@ const EsTesorosOcultosTokio = () => {
             </figure>
 
             {/* H2: How to find your own hidden gems */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Cómo encontrar tus propios tesoros ocultos</span></div>
+            <h2 id="section-06-cómo-encontrar-tus-propios-tesoros-ocultos" className="scroll-mt-20">
               Cómo encontrar tus propios tesoros ocultos (El método que yo uso)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Después de más de 500 tours, he desarrollado un método para descubrir lugares que recompensan la exploración de manera consistente. Este es el sistema que uso, y funciona para cualquier visitante dispuesto a ir despacio y prestar atención.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sigue los ríos y canales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokio se construyó sobre el agua. El río Sumida y decenas de canales más pequeños dieron forma a la geografía de la ciudad, y los barrios que los bordean conservan un carácter que las zonas del interior han perdido. Camina a lo largo de cualquier canal en Tokio y en quince minutos encontrarás algo inesperado: un pequeño santuario encajado entre dos edificios, una tienda familiar que lleva cuatro generaciones en el mismo sitio, o una vista de Tokio que no se parece en nada a las postales de neón.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Visita templos y santuarios en mañanas de entre semana
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokio tiene más de 4.500 templos y santuarios. Los famosos (Senso-ji, Meiji Jingu) acaparan todos los visitantes. Pero los templos de barrio, los que no tienen carteles en inglés ni tiendas de recuerdos, son donde verás la práctica religiosa japonesa tal como realmente existe: silenciosa, personal, entretejida en la vida diaria. Entra en cualquier barrio residencial antes de las 8 de la mañana y oirás el sonido de rezos budistas desde las puertas abiertas de los templos. Eso no es una representación. Es un martes por la mañana.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Busca la tienda más antigua de cada calle
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japón tiene más negocios centenarios que cualquier otro país: más de 33.000. En cualquier calle comercial de Tokio, busca la tienda con el letrero más desgastado, la fachada más tradicional o la gama de productos más sencilla. Esa tienda probablemente está contando una historia sobre la historia del barrio. La tienda de senbei (galletas de arroz) en Asakusa que lleva tostando galletas sobre carbón desde la era Meiji no solo vende aperitivos. Mantiene viva una tradición artesanal que la mayoría de países han abandonado.
             </p>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Pregunta a un local (pero haz la pregunta correcta)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -257,7 +246,7 @@ const EsTesorosOcultosTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres un guía que sepa dónde mirar?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -275,12 +264,13 @@ const EsTesorosOcultosTokio = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Es seguro visitar los tesoros ocultos de Tokio sin compañía?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -288,7 +278,7 @@ const EsTesorosOcultosTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cómo llego a estos lugares sin hablar japonés?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -296,7 +286,7 @@ const EsTesorosOcultosTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cuál es el mejor momento para visitar estos lugares?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -304,7 +294,7 @@ const EsTesorosOcultosTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Puedo combinar estos lugares en un solo día?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -312,7 +302,7 @@ const EsTesorosOcultosTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Es Shinbashi seguro por la noche?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -320,7 +310,7 @@ const EsTesorosOcultosTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Puedo comer en un izakaya de Shinbashi sin hablar japonés?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -331,7 +321,11 @@ const EsTesorosOcultosTokio = () => {
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -427,7 +421,9 @@ const EsTesorosOcultosTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

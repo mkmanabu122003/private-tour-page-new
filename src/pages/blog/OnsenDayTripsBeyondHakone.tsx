@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const OnsenDayTripsBeyondHakone = () => {
   return (
@@ -25,57 +27,38 @@ const OnsenDayTripsBeyondHakone = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/hakone-ropeway-owakudani.webp"
-          alt="Onsen steam rising from the mountains — Hakone isn't the only option from Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trips</p>
-            <h1 className="heading-display text-foreground">
-              5 Onsen Day Trips from Tokyo (That Aren't Hakone): 2026 Guide
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 24, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided onsen day trips across Kanto for years.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Last updated: April 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/hakone-ropeway-owakudani.webp"
+        imageAlt="Onsen steam rising from the mountains — Hakone isn't the only option from Tokyo"
+        eyebrow="Day Trips"
+        title="5 Onsen Day Trips from Tokyo (That Aren't Hakone): 2026 Guide"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided onsen day trips across Kanto for years."
+        date="April 24, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Quick Comparison Table", href: "#section-01-quick-comparison-table" },
+          { num: "02", label: "1. Atami", href: "#section-02-1-atami" },
+          { num: "03", label: "2. Chichibu Matsuri no Yu", href: "#section-03-2-chichibu-matsuri-no-yu" },
+          { num: "04", label: "3. Ikaho Onsen", href: "#section-04-3-ikaho-onsen" },
+          { num: "05", label: "4. Kusatsu Onsen", href: "#section-05-4-kusatsu-onsen" },
+          { num: "06", label: "5. Tokyo's Own Onsen", href: "#section-06-5-tokyos-own-onsen" },
+          { num: "07", label: "How to Pick", href: "#section-07-how-to-pick" },
+          { num: "08", label: "FAQ", href: "#section-08-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Hakone is the default Tokyo onsen day trip for good reasons — easy access, Mt. Fuji views, and ryokan culture packed into 90 minutes from Shinjuku. But if you're on your second trip, in a crowd-avoiding mood, or specifically chasing tattoo-friendly options, these five alternatives are worth knowing: Atami (fastest, 50 min by Shinkansen), Kusatsu (Japan's most famous sulfur springs, 3 hours), Ikaho (reddish iron waters + 365 stone steps, 2.5 hours), Chichibu Matsuri no Yu (Tokyo's easiest day onsen, 80-120 min), and Tokyo's own city onsen (Thermae-Yu in Shinjuku, Spa LaQua, or Toshimaen Niwa-no-Yu) when you have zero time to leave."
               hook="Below: access times, real 2026 fares, tattoo policy per destination, and the single biggest mistake I see first-timers make when they try to squeeze any onsen into the same day as a Tokyo tour."
@@ -96,7 +79,8 @@ const OnsenDayTripsBeyondHakone = () => {
             </p>
 
             {/* Quick Comparison */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Quick Comparison Table</span></div>
+            <h2 id="section-01-quick-comparison-table" className="scroll-mt-20">
               Quick Comparison Table
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -151,7 +135,8 @@ const OnsenDayTripsBeyondHakone = () => {
             />
 
             {/* 1. Atami */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · 1. Atami</span></div>
+            <h2 id="section-02-1-atami" className="scroll-mt-20">
               1. Atami — The Shinkansen-Fast Onsen (50 Minutes from Tokyo)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -169,7 +154,8 @@ const OnsenDayTripsBeyondHakone = () => {
             </p>
 
             {/* 2. Chichibu */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · 2. Chichibu Matsuri no Yu</span></div>
+            <h2 id="section-03-2-chichibu-matsuri-no-yu" className="scroll-mt-20">
               2. Chichibu Matsuri no Yu — Tokyo's Easiest Onsen Day Trip
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -194,7 +180,8 @@ const OnsenDayTripsBeyondHakone = () => {
             </p>
 
             {/* 3. Ikaho */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · 3. Ikaho Onsen</span></div>
+            <h2 id="section-04-3-ikaho-onsen" className="scroll-mt-20">
               3. Ikaho Onsen — The 365 Stone Steps & Iron-Rich Waters
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -216,7 +203,8 @@ const OnsenDayTripsBeyondHakone = () => {
             </p>
 
             {/* 4. Kusatsu */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · 4. Kusatsu Onsen</span></div>
+            <h2 id="section-05-4-kusatsu-onsen" className="scroll-mt-20">
               4. Kusatsu Onsen — Japan's Most Famous Hot Spring Town
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -241,14 +229,15 @@ const OnsenDayTripsBeyondHakone = () => {
             </p>
 
             {/* 5. City Onsen */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · 5. Tokyo's Own Onsen</span></div>
+            <h2 id="section-06-5-tokyos-own-onsen" className="scroll-mt-20">
               5. Tokyo's Own Onsen (When You Have Zero Time to Leave)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Not every onsen trip needs to be a trip. Tokyo itself sits on real hot-spring geology, and three facilities draw genuine natural hot spring water from deep underground. These aren't the same as a mountain onsen town experience, but they deliver the water and the ritual with 30 minutes of commute instead of three hours.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Thermae-Yu (Shinjuku Kabukicho)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -256,14 +245,14 @@ const OnsenDayTripsBeyondHakone = () => {
               <strong className="text-foreground">Tattoo policy:</strong> visible tattoos generally prohibited in the main baths, but the site offers cover stickers for sale.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Spa LaQua (Tokyo Dome City)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Inside the LaQua complex at Tokyo Dome City, Spa LaQua uses natural hot spring water drawn from <strong className="text-foreground">1,700 meters underground</strong>. Open-air baths, multiple indoor baths, saunas, and relaxation areas. Entry around ¥3,000 daytime, higher late-night rates. Great location if you're already in the Korakuen area — easy to combine with a Tokyo Dome event.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Toshimaen Niwa-no-Yu (Nerima, west Tokyo)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -288,7 +277,8 @@ const OnsenDayTripsBeyondHakone = () => {
             </GuideInsiderNote>
 
             {/* Decision Matrix */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · How to Pick</span></div>
+            <h2 id="section-07-how-to-pick" className="scroll-mt-20">
               How to Pick: A Simple Decision Path
             </h2>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground mb-8">
@@ -319,13 +309,14 @@ const OnsenDayTripsBeyondHakone = () => {
             />
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · FAQ</span></div>
+            <h2 id="section-08-faq" className="scroll-mt-20">
               Frequently Asked Questions
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Is any onsen fully tattoo-friendly?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -334,7 +325,7 @@ const OnsenDayTripsBeyondHakone = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Can I do an onsen trip in the morning and Tokyo sightseeing in the afternoon?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -343,7 +334,7 @@ const OnsenDayTripsBeyondHakone = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Do I need a swimsuit?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -352,7 +343,7 @@ const OnsenDayTripsBeyondHakone = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   What should I bring?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -361,7 +352,7 @@ const OnsenDayTripsBeyondHakone = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Is Hakone still the best default?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -374,7 +365,7 @@ const OnsenDayTripsBeyondHakone = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Do you offer guided onsen day trips?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -397,7 +388,7 @@ const OnsenDayTripsBeyondHakone = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a licensed guide for your onsen day trip — with the bath-etiquette, the bookings, and the language handled?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -412,7 +403,11 @@ const OnsenDayTripsBeyondHakone = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -497,7 +492,9 @@ const OnsenDayTripsBeyondHakone = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const TokyoIzakayaGuide = () => {
   return (
@@ -20,44 +22,36 @@ const TokyoIzakayaGuide = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/night-tour-omoide-yokocho.webp"
-          alt="Omoide Yokocho alley in Shinjuku — smoke, lanterns, and tiny izakaya stalls at night"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Food & Nightlife</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo Izakaya Guide: Where a Local Guide Actually Drinks
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />Last updated: April 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide who has spent more evenings in Tokyo's izakaya alleys than he'd like to admit.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/night-tour-omoide-yokocho.webp"
+        imageAlt="Omoide Yokocho alley in Shinjuku — smoke, lanterns, and tiny izakaya stalls at night"
+        eyebrow="Food & Nightlife"
+        title="Tokyo Izakaya Guide: Where a Local Guide Actually Drinks"
+        subtitle="Written by Manabu, a National Government Licensed Guide who has spent more evenings in Tokyo's izakaya alleys than he'd like to admit."
+        date="Last updated: April 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What Is an Izakaya, Exactly?", href: "#section-01-what-is-an-izakaya-exactly" },
+          { num: "02", label: "5 Izakaya Areas I Take…", href: "#section-02-5-izakaya-areas-i-take-clients-to" },
+          { num: "03", label: "How to Order at an Izakaya", href: "#section-03-how-to-order-at-an-izakaya" },
+          { num: "04", label: "What to Expect to Pay", href: "#section-04-what-to-expect-to-pay" },
+          { num: "05", label: "Why Izakaya Is Where a…", href: "#section-05-why-izakaya-is-where-a-guide-matters-most" },
+          { num: "06", label: "Practical Tips", href: "#section-06-practical-tips" }
+            ]} />
+
+            <article>
+
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Last month, a couple from London told me the highlight of their two-week Japan trip wasn't the temples. It wasn't Mt. Fuji. It was a tiny, six-seat yakitori bar under the train tracks in Yurakucho, where the owner grilled chicken over charcoal and poured them sake he'd chosen himself. They said they never would have found it alone. They wouldn't have known how to order. And they definitely wouldn't have understood why the man next to them kept insisting on buying them drinks.
@@ -67,7 +61,8 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* What is an izakaya */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What Is an Izakaya, Exactly?</span></div>
+            <h2 id="section-01-what-is-an-izakaya-exactly" className="scroll-mt-20">
               What Is an Izakaya, Exactly?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -81,12 +76,13 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* The 5 areas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · 5 Izakaya Areas I Take Clients To</span></div>
+            <h2 id="section-02-5-izakaya-areas-i-take-clients-to" className="scroll-mt-20">
               5 Izakaya Areas I Take Clients To
             </h2>
 
             {/* Golden Gai */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">1. Golden Gai (Shinjuku)</h3>
+            <h3>1. Golden Gai (Shinjuku)</h3>
             <img
               src="/images/tours/night-tour-golden-gai.webp"
               alt="Golden Gai narrow alley with tiny bars lit by paper lanterns in Shinjuku"
@@ -106,7 +102,7 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* Omoide Yokocho */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">2. Omoide Yokocho — Memory Lane (Shinjuku)</h3>
+            <h3>2. Omoide Yokocho — Memory Lane (Shinjuku)</h3>
             <img
               src="/images/blog/shinjuku-yakitori-skewers.webp"
               alt="Yakitori skewers grilling over charcoal at an Omoide Yokocho stall"
@@ -126,7 +122,7 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* Yurakucho */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">3. Yurakucho Under the Tracks</h3>
+            <h3>3. Yurakucho Under the Tracks</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">What it is:</strong> Nearly 700 meters of restaurants built under the brick arches of the JR Yamanote Line between Yurakucho and Shinbashi stations. Known as "gado-shita" (below the girder). Trains rumble overhead every few minutes. It's atmospheric in a way that no designed restaurant can replicate.
             </p>
@@ -138,7 +134,7 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* Shinbashi */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">4. Shinbashi Yokocho</h3>
+            <h3>4. Shinbashi Yokocho</h3>
             <img
               src="/images/blog/shinbashi-izakaya-exterior.webp"
               alt="Narrow izakaya alley in Shinbashi with red lanterns and salary workers"
@@ -155,7 +151,7 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* Ebisu */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">5. Ebisu Yokocho</h3>
+            <h3>5. Ebisu Yokocho</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">What it is:</strong> A curated food court of 20+ tiny stalls inside one building, each specializing in one thing — gyoza, oden, kushikatsu, sashimi. It's designed to feel like an old-school yokocho, but it's cleaner, more accessible, and every stall is good.
             </p>
@@ -164,21 +160,22 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* How to order */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · How to Order at an Izakaya</span></div>
+            <h2 id="section-03-how-to-order-at-an-izakaya" className="scroll-mt-20">
               How to Order at an Izakaya (Without Embarrassing Yourself)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">The Otoshi (Table Charge)</h3>
+            <h3>The Otoshi (Table Charge)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               When you sit down, a small dish will appear that you didn't order. This is the <em>otoshi</em> — a table charge disguised as an appetizer. It typically costs ¥300–500 per person. It's not a scam. It's standard at virtually every izakaya in Japan. Think of it as a cover charge that comes with food. Eat it. It's usually good.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">What to Order First</h3>
+            <h3>What to Order First</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Start with drinks. The classic first order is <strong className="text-foreground">Toriaezu nama</strong> ("A draft beer for now"). It's the phrase every Japanese person uses. After that, order food in waves: 2–3 small plates, eat them, then order more. Don't order everything at once — the kitchen sends dishes as they're ready, and part of the experience is the rhythm of ordering throughout the night.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">5 Things I Always Order</h3>
+            <h3>5 Things I Always Order</h3>
             <ul className="list-disc list-inside text-muted-foreground leading-relaxed mb-4 space-y-2">
               <li><strong className="text-foreground">Edamame</strong> — The universal starter. Every table gets one.</li>
               <li><strong className="text-foreground">Yakitori (negima)</strong> — Chicken and green onion skewers. The most popular style. Order with salt (shio), not sauce (tare), for cleaner flavor.</li>
@@ -187,13 +184,14 @@ const TokyoIzakayaGuide = () => {
               <li><strong className="text-foreground">Shime (the closer)</strong> — End with a small bowl of ochazuke (rice with tea poured over it) or a rice ball. This is how Japanese people close out a drinking session.</li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Nomihoudai (All-You-Can-Drink)</h3>
+            <h3>Nomihoudai (All-You-Can-Drink)</h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Many izakaya offer <em>nomihoudai</em> — unlimited drinks for a set time (usually 90–120 minutes) at a fixed price, typically ¥1,500–2,500. It's almost always worth it if you plan to have more than three drinks. The selection usually covers beer, highballs, shochu, sake, and soft drinks. Premium sake and cocktails may not be included.
             </p>
 
             {/* How much to spend */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · What to Expect to Pay</span></div>
+            <h2 id="section-04-what-to-expect-to-pay" className="scroll-mt-20">
               What to Expect to Pay
             </h2>
             <div className="bg-card border border-border rounded-lg p-6 mb-8">
@@ -224,7 +222,8 @@ const TokyoIzakayaGuide = () => {
             </div>
 
             {/* Why a guide */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Why Izakaya Is Where a Guide Matters Most</span></div>
+            <h2 id="section-05-why-izakaya-is-where-a-guide-matters-most" className="scroll-mt-20">
               Why Izakaya Is Where a Guide Matters Most
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -244,7 +243,8 @@ const TokyoIzakayaGuide = () => {
             </p>
 
             {/* Practical tips */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Practical Tips</span></div>
+            <h2 id="section-06-practical-tips" className="scroll-mt-20">
               Practical Tips
             </h2>
             <ul className="list-disc list-inside text-muted-foreground leading-relaxed mb-4 space-y-2">
@@ -265,7 +265,11 @@ const TokyoIzakayaGuide = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -291,7 +295,9 @@ const TokyoIzakayaGuide = () => {
           { "@type": "Question", name: "What is nomihoudai?", acceptedAnswer: { "@type": "Answer", text: "Nomihoudai means all-you-can-drink for a fixed time period (usually 90-120 minutes) at a set price of ¥1,500-2,500. It typically covers beer, highballs, shochu, basic sake, and soft drinks." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

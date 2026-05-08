@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { GuideInsiderNote } from "@/components/blog/GuideInsiderNote";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const HarajukuVsShibuyaVsShinjuku = () => {
   return (
@@ -25,57 +27,37 @@ const HarajukuVsShibuyaVsShinjuku = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/shibuya-harajuku-guide-hero.webp"
-          alt="Shibuya, Harajuku, and Shinjuku — three Tokyo neighborhoods on the same Yamanote Line"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Harajuku vs Shibuya vs Shinjuku: Which Tokyo Neighborhood Fits Your Trip?
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 23, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads walking tours across all three neighborhoods.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Last updated: April 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/shibuya-harajuku-guide-hero.webp"
+        imageAlt="Shibuya, Harajuku, and Shinjuku — three Tokyo neighborhoods on the same Yamanote Line"
+        eyebrow="Tokyo Area Guides"
+        title="Harajuku vs Shibuya vs Shinjuku: Which Tokyo Neighborhood Fits Your Trip?"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who leads walking tours across all three neighborhoods."
+        date="April 23, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "The 3-Way Quick Comparison", href: "#section-01-the-3-way-quick-comparison" },
+          { num: "02", label: "How They Connect", href: "#section-02-how-they-connect" },
+          { num: "03", label: "Harajuku", href: "#section-03-harajuku" },
+          { num: "04", label: "Shibuya", href: "#section-04-shibuya" },
+          { num: "05", label: "Shinjuku", href: "#section-05-shinjuku" },
+          { num: "06", label: "The Decision Matrix", href: "#section-06-the-decision-matrix" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Pick Harajuku for Gen-Z fashion and Takeshita Street — but treat it as a 60-90 minute stop, not a half-day. Pick Shibuya for the Crossing, Shibuya Sky at sunset, and the biggest urban-energy hit in Tokyo. Pick Shinjuku for nightlife (Golden Gai, Omoide Yokocho), free panoramic Fuji views from the Tokyo Metropolitan Government Building, and the deepest restaurant density in the city. All three sit on the same Yamanote Line within 7 minutes of each other — the real question isn't 'which' but 'how to sequence'."
               hook="Below: a comparison table, the exact Yamanote sequence I give my clients, and the one mistake I see first-timers make every single week when they try to cram all three into the same afternoon."
@@ -92,7 +74,8 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             </p>
 
             {/* Quick Comparison Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · The 3-Way Quick Comparison</span></div>
+            <h2 id="section-01-the-3-way-quick-comparison" className="scroll-mt-20">
               The 3-Way Quick Comparison
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -165,7 +148,8 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             />
 
             {/* Yamanote Line Secret */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · How They Connect</span></div>
+            <h2 id="section-02-how-they-connect" className="scroll-mt-20">
               How They Connect: The Yamanote Line Advantage
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -183,28 +167,29 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             </p>
 
             {/* Harajuku */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Harajuku</span></div>
+            <h2 id="section-03-harajuku" className="scroll-mt-20">
               Harajuku: Fashion Subculture Compressed Into 400 Meters
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Harajuku is a neighborhood of contrasts stacked on top of each other. It's the birthplace of Japanese youth fashion, home to Japan's most important Shinto shrine outside the imperial palace, and a 2-minute walk from one of Tokyo's most architecturally distinguished avenues. All inside a half-kilometer radius.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Takeshita Street (the famous one)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Takeshita Street is the 350-400 meter pedestrian lane running from JR Harajuku's Takeshita Exit to Meiji-dori. It's pedestrian-only from 11:00 AM to 6:00 PM, and peak crowds hit between 12:00 and 4:00 PM on weekends. Expect rainbow cotton candy, crêpe shops that have lines down the block, themed cafés, and teen fashion stores. It's loud, packed, and genuinely fun for 30-60 minutes. Beyond that, the novelty thins. Honest advice: see it, grab a crêpe, move on.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cat Street & Omotesando (the grown-up side)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               South of Takeshita, Cat Street runs diagonally from Harajuku toward Shibuya — a quieter pedestrian path lined with boutique streetwear, vintage stores, and the kind of small cafés that don't have English menus. It intersects with Omotesando, an avenue sometimes called "Tokyo's Champs-Élysées," where the buildings themselves are the attraction: Toyo Ito's Tod's, SANAA's Dior, Herzog & de Meuron's Prada. For anyone who cares about architecture, this stretch is a free open-air museum.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Meiji Shrine (free, green, essential)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -217,28 +202,29 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             </p>
 
             {/* Shibuya */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Shibuya</span></div>
+            <h2 id="section-04-shibuya" className="scroll-mt-20">
               Shibuya: The Icon, the Tower, and the Nightlife Backbone
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shibuya is where most first-time visitors feel they've finally "seen" Tokyo. It's chaotic in the best way — a neighborhood built around a pedestrian intersection and a train station, now layered with a post-2020 wave of skyscrapers that added new viewing platforms and dining districts. It's the neighborhood I'd send a Tokyo first-timer to if they only had one afternoon.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Crossing (the free spectacle)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Roughly 2,500-3,000 pedestrians cross during a single green light at peak hour, and up to 100,000 pass through in an hour on weekends. Guinness recognizes it as the world's busiest pedestrian crossing. Best photo angles: the Starbucks on the second floor of Tsutaya (pay-for-a-drink-and-stay), the outdoor terrace at Shibuya Scramble Square, or ground level from the Hachiko side. Peak drama is Friday and Saturday nights between 7:00 PM and 10:00 PM — rain makes the photos significantly better because umbrellas create color and texture.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Sky (book ahead or lose)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               On top of Shibuya Scramble Square, 229 meters up, this open-air 360° deck has quickly become the view in Tokyo. Adult admission: <strong className="text-foreground">¥3,000 before 3:00 PM, ¥3,700 from 3:00 PM onward</strong>. Sunset slots sell out within minutes of being released, often two weeks in advance. Book on the official site, not third-party platforms — counter tickets on the day of are nearly impossible to get at golden hour. On a clear day, Mt. Fuji is visible to the west.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Beyond the icon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -257,35 +243,36 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             />
 
             {/* Shinjuku */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Shinjuku</span></div>
+            <h2 id="section-05-shinjuku" className="scroll-mt-20">
               Shinjuku: The Neighborhood That Contains Everything
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shinjuku is functionally three neighborhoods that happen to share a station. Each side of Shinjuku Station has a completely different personality, and understanding that split saves you from wasting time wandering the wrong direction.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               West side: skyscrapers and the free view
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The west exit is the business district — tall glass buildings, hotel lobbies, and one of the best free experiences in Tokyo: the <strong className="text-foreground">Tokyo Metropolitan Government Building (Tocho)</strong>. Its observation decks are 202 meters up and completely free. South Deck hours are 9:30 AM - 9:30 PM; North Deck is 9:30 AM - 5:00 PM. On clear days, Mt. Fuji is visible to the west. In 2026, there's also a projection mapping show on the building's exterior nightly from sunset until about 9:45 PM — underrated and free.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               East side: shopping and Omoide Yokocho
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               East Shinjuku is department stores — Isetan, Lumine, Takashimaya — with some of Tokyo's best depachika (basement food halls). Tucked next to the station's west exit (confusingly) is Omoide Yokocho, "Memory Lane," a 60+ year old alley of tiny yakitori and ramen stalls that seat six or seven people at a time. Grills fire up around 5:00 PM and everything smells like smoke. It's touristy now but still authentic at the right hour.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Kabukicho: the nightlife engine
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               North-east of Shinjuku Station, Kabukicho is Tokyo's largest nightlife district — bars, clubs, karaoke, host clubs, and tourist-oriented oddities like the Godzilla Head on the 8th floor of Hotel Gracery (12 meters tall, roars hourly from noon to 8:00 PM). The real attraction is <strong className="text-foreground">Golden Gai</strong>: six narrow alleys containing 200+ miniature bars, most seating 6-8 people. Peak hour is 10:00 PM to midnight. Many bars charge a ¥500-1,000 seating fee and are regulars-only; look for bars with English menus posted outside — those welcome first-timers.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shinjuku Gyoen: the green break
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -298,7 +285,8 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             </p>
 
             {/* Decision Matrix */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · The Decision Matrix</span></div>
+            <h2 id="section-06-the-decision-matrix" className="scroll-mt-20">
               The Decision Matrix: Pick Based on Your Time
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -338,13 +326,14 @@ const HarajukuVsShibuyaVsShinjuku = () => {
             </GuideInsiderNote>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+            <h2 id="section-07-faq" className="scroll-mt-20">
               Frequently Asked Questions
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Which neighborhood should I stay in?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -353,7 +342,7 @@ const HarajukuVsShibuyaVsShinjuku = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Can I walk between all three?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -362,7 +351,7 @@ const HarajukuVsShibuyaVsShinjuku = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   When's the best time for Shibuya Crossing photos?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -371,7 +360,7 @@ const HarajukuVsShibuyaVsShinjuku = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Is Kabukicho safe at night?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -380,7 +369,7 @@ const HarajukuVsShibuyaVsShinjuku = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   How much should I budget for each?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -389,7 +378,7 @@ const HarajukuVsShibuyaVsShinjuku = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   Do you offer tours that cover all three?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -408,7 +397,7 @@ const HarajukuVsShibuyaVsShinjuku = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want these three neighborhoods walked in the right order, with the shortcuts?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -423,7 +412,11 @@ const HarajukuVsShibuyaVsShinjuku = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -508,7 +501,9 @@ const HarajukuVsShibuyaVsShinjuku = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

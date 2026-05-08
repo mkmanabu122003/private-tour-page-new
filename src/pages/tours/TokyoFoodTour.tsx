@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
+  ArrowLeft,
   ArrowRight,
   UtensilsCrossed,
   MapPin,
@@ -163,9 +164,8 @@ const TokyoFoodTour = () => {
         canonicalPath="/tours/tokyo-food-tour"
       />
 
-      {/* Hero Section */}
-      {/* Hero Image — clickable to capture dead-click intent */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
+      {/* Hero — image with overlaid title (BlogArticleHero pattern) */}
+      <section className="relative w-full h-[540px] md:h-[620px] lg:h-[660px] overflow-hidden">
         <button
           type="button"
           onClick={() => {
@@ -174,7 +174,7 @@ const TokyoFoodTour = () => {
               ?.scrollIntoView({ behavior: "smooth", block: "center" });
           }}
           aria-label="Click to see pricing and book this food tour"
-          className="block w-full h-full cursor-pointer"
+          className="absolute inset-0 w-full h-full cursor-pointer"
         >
           <img
             src="/images/tours/tokyo-food-tour-hero.webp"
@@ -184,31 +184,64 @@ const TokyoFoodTour = () => {
             width={1600}
             height={900}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         </button>
-      </section>
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15 pointer-events-none"
+          aria-hidden="true"
+        />
 
-      <section id="booking-cta" className="pt-16 pb-12 bg-secondary/30 scroll-mt-20">
-        <div className="container-section">
-          <div className="max-w-2xl">
-            <p className="text-label text-accent mb-3">Food Tours</p>
-            <h1 className="heading-display text-foreground">
-              Tokyo Private Food Tour
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Discover Tokyo's culinary soul, from street food stalls to
-              neighborhood favorites. A private, guided journey through the
-              flavors that define this city, tailored entirely to your tastes.
-            </p>
-            <div className="mt-8">
-              <Link to="/contact" className="btn-accent">
-                Book Your Food Tour
-                <ArrowRight className="btn-arrow" />
-              </Link>
+        {/* Floating back link (top) */}
+        <div className="absolute top-6 left-0 right-0 z-10">
+          <div className="container-section">
+            <Link
+              to="/tours"
+              className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors backdrop-blur-sm bg-black/25 px-3 py-1.5 rounded-md"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Tours
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom-aligned hero text overlay */}
+        <div className="absolute inset-x-0 bottom-0 pb-14 md:pb-16 z-10 pointer-events-none">
+          <div className="container-section">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent mb-4">
+                Food Tours · Private &amp; Tailored
+              </p>
+              <h1
+                className="text-white font-semibold leading-[1.05] tracking-tight text-4xl md:text-5xl lg:text-6xl"
+                style={{ textShadow: "0 2px 32px rgba(0,0,0,0.45)" }}
+              >
+                Tokyo Private Food Tour
+              </h1>
+              <p className="mt-6 text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
+                Discover Tokyo's culinary soul, from street food stalls to neighborhood favorites — tailored entirely to your tastes.
+              </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Inline Booking CTA */}
+      <section id="booking-cta" className="py-12 bg-accent/5 border-y border-accent/10 scroll-mt-20">
+        <div className="container-section text-center">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            Ready to book? Plan your private food tour →
+          </p>
+          <Link to="/contact" className="btn-accent-lg mt-6">
+            Book Your Food Tour
+            <ArrowRight className="btn-arrow" />
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Licensed guide · Private tour · Vegetarian / halal / gluten-free options
+          </p>
+        </div>
+      </section>
+
+      {/* Body — blog-style typography */}
+      <div className="prose-editorial">
 
       {/* What Makes This Tour Special */}
       <section className="py-16">
@@ -670,6 +703,8 @@ const TokyoFoodTour = () => {
         </div>
       </section>
 
+      </div>{/* /prose-editorial */}
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container-section text-center">
@@ -683,13 +718,13 @@ const TokyoFoodTour = () => {
             your guide will handle the rest.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-accent">
+            <Link to="/contact" className="btn-accent-on-dark">
               Plan Your Food Tour
               <ArrowRight className="btn-arrow" />
             </Link>
             <Link
               to="/tours"
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
+              className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50"
             >
               Browse All Tours
             </Link>

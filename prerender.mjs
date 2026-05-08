@@ -60,6 +60,7 @@ const routes = [
   "/blog/kamakura-day-trip-guide-vs-solo",
   "/blog/licensed-vs-unlicensed-tour-guides-japan",
   "/blog/tsukiji-to-ginza-food-walk",
+  "/blog/ginza-to-tsukiji-walking-route",
   "/blog/first-time-tokyo-local-guide",
   "/blog/tokyo-cherry-blossom-guide",
   "/blog/tsukiji-vs-toyosu",

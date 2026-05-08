@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const OldTokyoShitamachi = () => {
   return (
@@ -15,55 +17,44 @@ const OldTokyoShitamachi = () => {
         canonicalPath="/blog/old-tokyo-shitamachi"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/asakusa-backstreet-local.webp"
-          alt="Quiet backstreet in old Tokyo's Shitamachi district"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Old Tokyo Still Exists: A Guide's Map to Shitamachi
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/asakusa-backstreet-local.webp"
+        imageAlt="Quiet backstreet in old Tokyo's Shitamachi district"
+        eyebrow="Tokyo Area Guides"
+        title="Old Tokyo Still Exists: A Guide's Map to Shitamachi"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed in Tokyo."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What Is Shitamachi?", href: "#section-01-what-is-shitamachi" },
+          { num: "02", label: "The Neighborhoods That…", href: "#section-02-the-neighborhoods-that-survived" },
+          { num: "03", label: "What You'll Actually See", href: "#section-03-what-youll-actually-see" },
+          { num: "04", label: "How to Visit Shitamachi…", href: "#section-04-how-to-visit-shitamachi-without-a-guide" },
+          { num: "05", label: "Why I Always Bring Clients…", href: "#section-05-why-i-always-bring-clients-here-first" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               A guest from London once looked at me halfway through a tour of Asakusa and asked: "Where did old Tokyo go?" It's a fair question. You land in a city of glass towers, LED screens, and train stations that process more passengers daily than most airports handle in a year. The Tokyo you see from the bullet train window looks like it was built last Tuesday.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               But old Tokyo didn't disappear. It retreated. And if you know where to look, and more importantly, what you're looking at, you can still find it. The old Tokyo neighborhood that preserves this character most vividly has a name: Shitamachi. And its story is the story of Tokyo itself.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What Is Shitamachi?</span></div>
+            <h2 id="section-01-what-is-shitamachi" className="scroll-mt-20">
               What Is Shitamachi? (And Why Tokyo Has Two Souls)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -78,15 +69,15 @@ const OldTokyoShitamachi = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               When I guide clients through Shitamachi, I'm not just showing them old buildings. I'm showing them the surviving heartbeat of Edo-period merchant culture, the class of people who invented sushi, developed kabuki theater, created the woodblock prints that inspired the Impressionists, and built the food culture that Tokyo is famous for today. The samurai got the hilltops. The merchants got everything else worth remembering.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The Neighborhoods That Survived</span></div>
+            <h2 id="section-02-the-neighborhoods-that-survived" className="scroll-mt-20">
               The Neighborhoods That Survived
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Survival is the right word. The 1923 Great Kanto Earthquake destroyed much of Shitamachi. The firebombing of March 10, 1945, burned most of what remained. And postwar redevelopment replaced much of what the fire didn't reach. But pockets survived, sometimes through geography, sometimes through luck, sometimes through the sheer stubbornness of communities that refused to sell.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Asakusa</h3>
+            <h3>Asakusa</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Asakusa is the most famous old Tokyo neighborhood, and it's where I start most of my tours. Senso-ji, Tokyo's oldest temple (founded in 645 AD), anchors the district, but Asakusa's real character lives in the narrow streets behind the temple: Hoppy Street with its open-air drinking stalls, the craft workshops that still produce handmade goods, and the shotengai (covered shopping arcades) where you can buy everything from kitchen knives to festival costumes. Asakusa was the entertainment capital of Edo. Think of it as Tokyo's Broadway of the 1800s, except with kabuki theaters and pleasure quarters.
             </p>
@@ -104,7 +95,7 @@ const OldTokyoShitamachi = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Yanaka</h3>
+            <h3>Yanaka</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               If Asakusa is Shitamachi's public face, Yanaka is its quiet soul. This residential neighborhood near Ueno survived the earthquake and the firebombing largely intact, making it the closest thing to a time capsule that Tokyo has. The Yanaka Cemetery, where Japan's last shogun is buried, is a green, peaceful space surrounded by dozens of small Buddhist temples. Yanaka Ginza, the main shopping street, slopes downhill past shops that have been family-owned for generations. I've written a full{" "}
               <Link to="/blog/yanaka-tokyo-walking-route" className="text-accent hover:underline">walking route for Yanaka</Link>{" "}
@@ -124,7 +115,7 @@ const OldTokyoShitamachi = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Ningyocho and Nihonbashi</h3>
+            <h3>Ningyocho and Nihonbashi</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Ningyocho was once Edo's theater district. Its name means "doll town," a reference to the puppet theaters that thrived here. Today it's a quiet commercial neighborhood where modern offices sit alongside shops that have been selling the same products for 200 years. Nihonbashi, the "Japan Bridge," was the official center of the Edo road system; every distance in Japan was measured from this bridge. The original wooden bridge was replaced with a stone one in 1911, and it now sits beneath an expressway overpass in one of Tokyo's most poignant contrasts between old and new.
             </p>
@@ -142,12 +133,12 @@ const OldTokyoShitamachi = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Shibamata</h3>
+            <h3>Shibamata</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shibamata is the old Tokyo neighborhood that time truly forgot. Located on the far eastern edge of Tokyo, its approach to the Taishakuten temple looks almost exactly as it did in the early 1900s: a narrow lane lined with traditional shops selling dango (rice dumplings), senbei, and souvenirs. It's famous in Japan as the setting for the beloved "Tora-san" film series (imagine 48 films over 26 years, all set in this one neighborhood). Most foreign visitors have never heard of Shibamata, which is exactly why it retains its authenticity.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What You'll Actually See</span></div>
+            <h2 id="section-03-what-youll-actually-see" className="scroll-mt-20">
               What You'll Actually See (And What It Means)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -180,8 +171,8 @@ const OldTokyoShitamachi = () => {
                 A ceramics shop in Yanaka — the wooden storefront and handmade wares are exactly what Shitamachi looks like when you know where to look
               </figcaption>
             </figure>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · How to Visit Shitamachi Without a Guide</span></div>
+            <h2 id="section-04-how-to-visit-shitamachi-without-a-guide" className="scroll-mt-20">
               How to Visit Shitamachi Without a Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -203,8 +194,8 @@ const OldTokyoShitamachi = () => {
                 <strong className="text-foreground">Eat where the locals eat.</strong> Shitamachi neighborhoods are where Tokyo's food culture was born. Look for shops that are simple, busy with Japanese customers, and have been in the same spot for decades.
               </li>
             </ul>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Why I Always Bring Clients Here First</span></div>
+            <h2 id="section-05-why-i-always-bring-clients-here-first" className="scroll-mt-20">
               Why I Always Bring Clients Here First
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -222,7 +213,7 @@ const OldTokyoShitamachi = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want to explore old Tokyo with someone who knows its stories?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -236,35 +227,40 @@ const OldTokyoShitamachi = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What does "Shitamachi" mean?</h3>
+                  <h3>What does "Shitamachi" mean?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Shitamachi (下町) literally translates to "low city" or "downtown." It refers to the low-lying areas of Tokyo near the rivers and bay where merchants and craftsmen lived during the Edo period (1603–1868). Today it describes neighborhoods like Asakusa, Ueno, Yanaka, and Nihonbashi that retain the character of old Tokyo.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Shitamachi safe for tourists?</h3>
+                  <h3>Is Shitamachi safe for tourists?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Extremely safe. These are established residential neighborhoods with active community associations. You can walk through any Shitamachi area at any time of day or night. Crime rates here are among the lowest in a city that already has one of the lowest crime rates in the world.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How much time do I need to explore Shitamachi?</h3>
+                  <h3>How much time do I need to explore Shitamachi?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     A half day (3–4 hours) covers one neighborhood well, such as Asakusa or Yanaka. A full day lets you combine two neighborhoods with lunch in between. If you're genuinely interested in old Tokyo, dedicate at least two half-days to Shitamachi areas during your trip.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What's the difference between Shitamachi and Yamanote?</h3>
+                  <h3>What's the difference between Shitamachi and Yamanote?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Shitamachi ("low city") was the merchant and craftsman district in the flatlands. Yamanote ("mountain hand") was the samurai district on the hills. Today, Shitamachi areas like Asakusa retain traditional character, while Yamanote areas like Shibuya and Shinjuku are modern and commercial. The JR Yamanote Line roughly traces the boundary between the two.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -290,7 +286,9 @@ const OldTokyoShitamachi = () => {
           { "@type": "Question", name: "What's the difference between Shitamachi and Yamanote?", acceptedAnswer: { "@type": "Answer", text: "Shitamachi was the merchant district in the flatlands. Yamanote was the samurai district on the hills. Today, Shitamachi retains traditional character while Yamanote is modern and commercial." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

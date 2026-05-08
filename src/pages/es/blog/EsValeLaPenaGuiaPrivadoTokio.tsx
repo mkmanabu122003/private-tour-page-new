@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsValeLaPenaGuiaPrivadoTokio = () => {
   return (
@@ -18,53 +20,36 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/photo1.webp"
-          alt="Guía privado mostrando Tokio a turistas"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías Útiles</p>
-            <h1 className="heading-display text-foreground">
-              ¿Vale la Pena un Guía Privado en Tokio? Mi Respuesta Sin Rodeos
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/photo1.webp"
+        imageAlt="Guía privado mostrando Tokio a turistas"
+        eyebrow="Guías Útiles"
+        title="¿Vale la Pena un Guía Privado en Tokio? Mi Respuesta Sin Rodeos"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "La Respuesta Corta", href: "#section-01-la-respuesta-corta" },
+          { num: "02", label: "Lo que un Guía Privado Te Da", href: "#section-02-lo-que-un-guía-privado-te-da" },
+          { num: "03", label: "Historias Reales de Mis…", href: "#section-03-historias-reales-de-mis-clientes" },
+          { num: "04", label: "Tokio Sin Guía", href: "#section-04-tokio-sin-guía" },
+          { num: "05", label: "Cómo Decidir Si Necesitas…", href: "#section-05-cómo-decidir-si-necesitas-un-guía" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Si estás planificando un viaje a Tokio y has llegado hasta aquí, probablemente te estés preguntando: ¿vale la pena un guía privado en Tokio, o es mejor explorar por tu cuenta? Es una pregunta legítima. Tokio es seguro, tiene buena señalización y Google Maps funciona de maravilla. Entonces, ¿para qué pagar a alguien que camine contigo?
@@ -81,14 +66,15 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </p>
 
             {/* La respuesta corta (y honesta) */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · La Respuesta Corta</span></div>
+            <h2 id="section-01-la-respuesta-corta" className="scroll-mt-20">
               La Respuesta Corta (y Honesta)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No hay una respuesta universal. Depende de quién eres, qué buscas y cómo viajas. Pero después de años haciendo esto, puedo decirte con bastante claridad cuándo vale la pena un guía privado en Tokio y cuándo no.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Sí, Vale la Pena Si...
             </h3>
             <ul className="space-y-3 mb-6">
@@ -106,7 +92,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               No, No Vale la Pena Si...
             </h3>
             <ul className="space-y-3 mb-8">
@@ -122,14 +108,15 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </ul>
 
             {/* Lo que un guía privado te da */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Lo que un Guía Privado Te Da</span></div>
+            <h2 id="section-02-lo-que-un-guía-privado-te-da" className="scroll-mt-20">
               Lo que un Guía Privado Te Da (que Google No Puede)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Cuando me preguntan si vale la pena un guía privado en Tokio, siempre respondo lo mismo: depende de lo que esperas llevarte del viaje. Si buscas una experiencia que vaya más allá de la superficie, esto es lo que un guía cambia.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Contexto Cultural en Tiempo Real
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -139,7 +126,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Este contexto no es algo que se pueda googlear en el momento. Es conocimiento que se construye a lo largo de años estudiando historia, cultura y religión japonesas. Y lo mejor: se adapta a tus preguntas. Cuando un cliente me pregunta algo inesperado, "¿por qué hay un gato con la pata levantada en ese escaparate?", puedo conectar la respuesta con la historia del barrio, la cultura comercial del período Edo y la superstición que hay detrás. Todo en el momento, mientras caminamos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Acceso a Lugares y Experiencias que No Aparecen en las Guías
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -149,7 +136,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               No se trata de "lugares secretos", detesto ese término porque suena a marketing barato. Se trata de capas de experiencia que solo se desbloquean cuando alguien local te acompaña y puede mediar entre tú y la cultura.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Flexibilidad Total: Tu Tour, Tu Ritmo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -159,7 +146,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               Esa capacidad de leer tu energía y adaptar el recorrido en tiempo real es algo que ninguna app, audioguía ni itinerario descargado puede ofrecer. He tenido tours que empezaron como un recorrido histórico y terminaron siendo una expedición gastronómica porque vi que los ojos de mis clientes se iluminaban cada vez que pasábamos por un puesto de comida.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Solución de Problemas en el Momento
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -170,14 +157,15 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Historias reales de mis clientes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Historias Reales de Mis Clientes</span></div>
+            <h2 id="section-03-historias-reales-de-mis-clientes" className="scroll-mt-20">
               Historias Reales de Mis Clientes
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Las estadísticas están bien, pero lo que realmente demuestra si vale la pena un guía privado en Tokio son las historias. Estas son reales, con nombres cambiados por privacidad.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La Familia Española que Cambió Todo Su Itinerario en el Día 1
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
@@ -192,7 +180,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Viajero que "Ya Sabía Todo" y Descubrió que No
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
@@ -207,7 +195,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La Pareja que Solo Quería un Día... y Reservó Tres Más
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-6">
@@ -223,14 +211,15 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </div>
 
             {/* Tokio sin guía: lo que funciona y lo que no */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Tokio Sin Guía</span></div>
+            <h2 id="section-04-tokio-sin-guía" className="scroll-mt-20">
               Tokio Sin Guía: Lo que Funciona y Lo que No
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sería deshonesto decirte que siempre necesitas un guía privado en Tokio. No es verdad. Hay cosas que puedes hacer perfectamente solo y otras donde un guía marca una diferencia enorme.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que Puedes Hacer Perfectamente Solo
             </h3>
             <ul className="space-y-3 mb-6">
@@ -245,7 +234,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Donde un Guía Marca la Diferencia
             </h3>
             <ul className="space-y-3 mb-6">
@@ -260,7 +249,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los Momentos "Ojalá Tuviera un Guía"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -271,11 +260,12 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
             </p>
 
             {/* Cómo decidir si necesitas un guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cómo Decidir Si Necesitas un Guía</span></div>
+            <h2 id="section-05-cómo-decidir-si-necesitas-un-guía" className="scroll-mt-20">
               Cómo Decidir Si Necesitas un Guía
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mi Checklist de 5 Preguntas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -299,7 +289,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
               </li>
             </ol>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La Regla del "Primer Día"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -314,12 +304,13 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
 
             {/* Preguntas Frecuentes */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Vale la pena un guía solo por un día?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -327,7 +318,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Qué pasa si no me gusta el tour?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -335,7 +326,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Los guías privados hablan español?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -343,7 +334,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Puedo personalizar el itinerario?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -351,7 +342,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cuánto cuesta un guía privado en Tokio?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -371,7 +362,7 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Te ha ayudado a decidir? Echa un vistazo a mis tours.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -386,7 +377,11 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -473,7 +468,9 @@ const EsValeLaPenaGuiaPrivadoTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

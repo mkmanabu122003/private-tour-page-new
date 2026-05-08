@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaIzakayasTokio = () => {
   return (
@@ -20,44 +22,36 @@ const EsGuiaIzakayasTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/night-tour-omoide-yokocho.webp"
-          alt="Callejón de Omoide Yokocho en Shinjuku — humo, faroles e izakayas diminutas de noche"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/es/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Comida y Vida Nocturna</p>
-            <h1 className="heading-display text-foreground">
-              Guía de Izakayas en Tokio: Dónde Bebe un Guía Local
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Guía con Licencia</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />Última actualización: abril 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía con licencia nacional que ha pasado más noches en los callejones de izakayas de Tokio de las que le gustaría admitir.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/night-tour-omoide-yokocho.webp"
+        imageAlt="Callejón de Omoide Yokocho en Shinjuku — humo, faroles e izakayas diminutas de noche"
+        eyebrow="Comida y Vida Nocturna"
+        title="Guía de Izakayas en Tokio: Dónde Bebe un Guía Local"
+        subtitle="Escrito por Manabu, guía con licencia nacional que ha pasado más noches en los callejones de izakayas de Tokio de las que le gustaría admitir."
+        date="Última actualización: abril 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Qué es exactamente una…", href: "#section-01-qué-es-exactamente-una-izakaya" },
+          { num: "02", label: "5 zonas de izakayas a las…", href: "#section-02-5-zonas-de-izakayas-a-las-que-llevo-a-mis-clientes" },
+          { num: "03", label: "Cómo pedir en una izakaya", href: "#section-03-cómo-pedir-en-una-izakaya" },
+          { num: "04", label: "¿Cuánto cuesta?", href: "#section-04-cuánto-cuesta" },
+          { num: "05", label: "Por qué en las izakayas es…", href: "#section-05-por-qué-en-las-izakayas-es-donde-más-importa" },
+          { num: "06", label: "Consejos prácticos", href: "#section-06-consejos-prácticos" }
+            ]} />
+
+            <article>
+
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               El mes pasado, una pareja de Londres me dijo que lo mejor de sus dos semanas en Japón no fueron los templos. Tampoco el Monte Fuji. Fue un diminuto bar de yakitori con seis asientos bajo las vías del tren en Yurakucho, donde el dueño asaba pollo sobre carbón y les servía el sake que él mismo había elegido. Me dijeron que nunca lo habrían encontrado solos. No habrían sabido cómo pedir. Y desde luego no habrían entendido por qué el señor de al lado insistía en invitarles a una copa tras otra.
@@ -67,7 +61,8 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Qué es una izakaya */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Qué es exactamente una izakaya?</span></div>
+            <h2 id="section-01-qué-es-exactamente-una-izakaya" className="scroll-mt-20">
               ¿Qué es exactamente una izakaya?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -81,12 +76,13 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Las 5 zonas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · 5 zonas de izakayas a las que llevo a mis clientes</span></div>
+            <h2 id="section-02-5-zonas-de-izakayas-a-las-que-llevo-a-mis-cliente" className="scroll-mt-20">
               5 zonas de izakayas a las que llevo a mis clientes
             </h2>
 
             {/* Golden Gai */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">1. Golden Gai (Shinjuku)</h3>
+            <h3>1. Golden Gai (Shinjuku)</h3>
             <img
               src="/images/tours/night-tour-golden-gai.webp"
               alt="Callejón estrecho de Golden Gai con pequeños bares iluminados por faroles de papel en Shinjuku"
@@ -106,7 +102,7 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Omoide Yokocho */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">2. Omoide Yokocho — El Callejón de los Recuerdos (Shinjuku)</h3>
+            <h3>2. Omoide Yokocho — El Callejón de los Recuerdos (Shinjuku)</h3>
             <img
               src="/images/blog/shinjuku-yakitori-skewers.webp"
               alt="Brochetas de yakitori asándose sobre carbón en un puesto de Omoide Yokocho"
@@ -126,7 +122,7 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Yurakucho */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">3. Yurakucho bajo las vías</h3>
+            <h3>3. Yurakucho bajo las vías</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Casi 700 metros de restaurantes construidos bajo los arcos de ladrillo de la línea JR Yamanote, entre las estaciones de Yurakucho y Shinbashi. Se conoce como "gado-shita" (bajo la viga). Los trenes pasan retumbando cada pocos minutos. Tiene una atmósfera que ningún restaurante de diseño puede replicar.
             </p>
@@ -138,7 +134,7 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Shinbashi */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">4. Shinbashi Yokocho</h3>
+            <h3>4. Shinbashi Yokocho</h3>
             <img
               src="/images/blog/shinbashi-izakaya-exterior.webp"
               alt="Callejón estrecho de izakayas en Shinbashi con faroles rojos y oficinistas"
@@ -155,7 +151,7 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Ebisu */}
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">5. Ebisu Yokocho</h3>
+            <h3>5. Ebisu Yokocho</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Un mercado gastronómico con más de 20 puestos diminutos dentro de un mismo edificio, cada uno especializado en una cosa: gyoza, oden, kushikatsu, sashimi. Está diseñado para recrear el ambiente de un yokocho antiguo, pero es más limpio, más accesible y todos los puestos son buenos.
             </p>
@@ -164,21 +160,22 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Cómo pedir */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Cómo pedir en una izakaya</span></div>
+            <h2 id="section-03-cómo-pedir-en-una-izakaya" className="scroll-mt-20">
               Cómo pedir en una izakaya (sin pasar vergüenza)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">El otoshi (cargo de mesa)</h3>
+            <h3>El otoshi (cargo de mesa)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Cuando te sientes, aparecerá un platito que no has pedido. Esto es el <em>otoshi</em> — un cargo de mesa disfrazado de aperitivo. Normalmente cuesta entre ¥300 y ¥500 por persona. No es una estafa. Es lo normal en prácticamente todas las izakayas de Japón. Piensa en ello como un cargo de entrada que viene con comida. Cómetelo. Suele estar bueno.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Qué pedir primero</h3>
+            <h3>Qué pedir primero</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Empieza por las bebidas. El primer pedido clásico es <strong className="text-foreground">Toriaezu nama</strong> ("Una caña de cerveza, por ahora"). Es la frase que usa todo japonés. Después, pide comida por rondas: 2-3 platitos, cómelos y luego pide más. No pidas todo a la vez — la cocina envía los platos según están listos, y parte de la experiencia es el ritmo de ir pidiendo durante toda la noche.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">5 cosas que siempre pido</h3>
+            <h3>5 cosas que siempre pido</h3>
             <ul className="list-disc list-inside text-muted-foreground leading-relaxed mb-4 space-y-2">
               <li><strong className="text-foreground">Edamame</strong> — El aperitivo universal. Todas las mesas piden uno.</li>
               <li><strong className="text-foreground">Yakitori (negima)</strong> — Brochetas de pollo con cebolleta. El estilo más popular. Pídelo con sal (shio), no con salsa (tare), para un sabor más limpio.</li>
@@ -187,13 +184,14 @@ const EsGuiaIzakayasTokio = () => {
               <li><strong className="text-foreground">Shime (el cierre)</strong> — Termina con un bol pequeño de ochazuke (arroz con té verde por encima) o una bola de arroz. Así es como los japoneses cierran una sesión de bebida.</li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Nomihoudai (barra libre)</h3>
+            <h3>Nomihoudai (barra libre)</h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Muchas izakayas ofrecen <em>nomihoudai</em> — bebidas ilimitadas durante un tiempo fijo (normalmente 90-120 minutos) a un precio cerrado, típicamente ¥1,500-2,500. Casi siempre merece la pena si piensas tomar más de tres copas. La selección suele incluir cerveza, highballs, shochu, sake y refrescos. El sake premium y los cócteles especiales pueden no estar incluidos.
             </p>
 
             {/* Cuánto gastar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · ¿Cuánto cuesta?</span></div>
+            <h2 id="section-04-cuánto-cuesta" className="scroll-mt-20">
               ¿Cuánto cuesta?
             </h2>
             <div className="bg-card border border-border rounded-lg p-6 mb-8">
@@ -224,7 +222,8 @@ const EsGuiaIzakayasTokio = () => {
             </div>
 
             {/* Por qué un guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Por qué en las izakayas es donde más importa</span></div>
+            <h2 id="section-05-por-qué-en-las-izakayas-es-donde-más-importa" className="scroll-mt-20">
               Por qué en las izakayas es donde más importa tener un guía
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -244,7 +243,8 @@ const EsGuiaIzakayasTokio = () => {
             </p>
 
             {/* Consejos prácticos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Consejos prácticos</span></div>
+            <h2 id="section-06-consejos-prácticos" className="scroll-mt-20">
               Consejos prácticos
             </h2>
             <ul className="list-disc list-inside text-muted-foreground leading-relaxed mb-4 space-y-2">
@@ -265,7 +265,11 @@ const EsGuiaIzakayasTokio = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -291,7 +295,9 @@ const EsGuiaIzakayasTokio = () => {
           { "@type": "Question", name: "¿Qué es el nomihoudai?", acceptedAnswer: { "@type": "Answer", text: "Nomihoudai significa barra libre durante un tiempo limitado (normalmente 90-120 minutos) a un precio fijo de ¥1,500-2,500. Suele incluir cerveza, highballs, shochu, sake básico y refrescos." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

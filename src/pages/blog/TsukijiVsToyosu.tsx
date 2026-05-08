@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderConfig } from "@/data/diagnostics/foodFinder";
+import manabuPortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
 const TsukijiVsToyosu = () => {
   return (
@@ -25,65 +26,102 @@ const TsukijiVsToyosu = () => {
         ]}
       />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
+      <div className="prose-editorial">
+      {/* Hero with overlaid title — Plan A overlay */}
+      <section className="relative w-full h-[540px] md:h-[620px] lg:h-[660px] overflow-hidden">
+        <img
+          src="/images/blog/tsukiji-market-seafood-stalls.webp"
+          alt="Tsukiji vs Toyosu - comparing Tokyo's two fish markets"
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchpriority="high"
+          width={1600}
+          height={900}
+        />
+        {/* Dark gradient for text legibility */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15"
+          aria-hidden="true"
+        />
+
+        {/* Floating breadcrumb */}
+        <div className="absolute top-6 left-0 right-0 z-10">
+          <div className="container-section">
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors backdrop-blur-sm bg-black/25 px-3 py-1.5 rounded-md"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
-            <p className="text-label text-accent mb-3">Food Guides</p>
-            <h1 className="heading-display text-foreground">
+          </div>
+        </div>
+
+        {/* Bottom-aligned hero text */}
+        <div className="relative h-full container-section flex flex-col justify-end pb-14 md:pb-16">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              Food Guides · Tokyo
+            </p>
+            <h1
+              className="text-white"
+              style={{ textShadow: "0 2px 32px rgba(0,0,0,0.45)" }}
+            >
               Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?
             </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
+            <p className="mt-6 text-xl text-white/85 leading-relaxed max-w-2xl">
+              A local guide's honest comparison of Tokyo's two famous fish markets — street food, tuna auctions, timing, atmosphere, and how to combine both in one morning.
+            </p>
+            <div className="mt-7 flex items-center flex-wrap gap-x-1 gap-y-2 text-sm text-white/75">
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
+                By Manabu, Licensed Tour Guide
               </span>
+              <span className="meta-dot-light"></span>
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                March 31, 2026
+                Last updated March 2026
               </span>
+              <span className="meta-dot-light"></span>
+              <span>8 min read</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/tsukiji-market-seafood-stalls.webp"
-          alt="Tsukiji vs Toyosu - comparing Tokyo's two fish markets"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
-
       {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
-            {/* Quick Answer Box */}
-            <div className="bg-accent/5 border-l-4 border-accent p-5 rounded-r-lg mb-8">
-              <p className="font-semibold text-foreground mb-2">Quick Answer</p>
-              <p className="text-foreground leading-relaxed">
-                <strong>For most visitors: go to Tsukiji.</strong> It has better food variety, more atmosphere, and no reservation needed. Toyosu is worth it only if you specifically want to see the tuna auction (requires winning a monthly lottery).
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            {/* Left: Sticky TOC */}
+            <aside className="article-toc hidden lg:block">
+              <p className="toc-label">On this page</p>
+              <a href="#quick-decision"><span className="toc-num">01</span><span>Quick decision</span></a>
+              <a href="#section-history"><span className="toc-num">02</span><span>What moved in 2018</span></a>
+              <a href="#section-compare"><span className="toc-num">03</span><span>Side-by-side comparison</span></a>
+              <a href="#section-tsukiji"><span className="toc-num">04</span><span>Tsukiji outer market</span></a>
+              <a href="#section-toyosu"><span className="toc-num">05</span><span>Toyosu fish market</span></a>
+              <a href="#section-combined"><span className="toc-num">06</span><span>Visit both in one day</span></a>
+              <a href="#section-verdict"><span className="toc-num">07</span><span>My recommendation</span></a>
+              <a href="#section-faq"><span className="toc-num">08</span><span>FAQ</span></a>
+            </aside>
+
+            {/* Middle: Article */}
+            <article id="quick-decision">
+            {/* Quick Decision — Plan A module */}
+            <div className="quick-decision">
+              <p className="qd-eyebrow">Quick decision</p>
+              <h2>For most visitors, go to Tsukiji.</h2>
+              <p>
+                <span className="hl-gold">It has better food variety, more atmosphere, and no reservation needed.</span> Toyosu is worth it only if you specifically want to see the tuna auction, which requires winning a monthly lottery.
               </p>
-              <p className="text-muted-foreground mt-3 text-sm italic">
+              <p>
                 But the reality is more nuanced than that. As a guide who takes clients to both markets regularly, I'll explain when Toyosu actually makes more sense — and how to combine both in one morning.
               </p>
             </div>
 
             {/* Introduction */}
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              "Should I go to Tsukiji or Toyosu?" This is one of the most common questions I get from visitors planning their Tokyo itinerary, and I completely understand the confusion. The internet is full of contradictory advice. Some sites say Tsukiji is closed. Others say Toyosu replaced it. A few claim you need reservations for both. Almost none of them get the full picture right.
+            <p className="text-muted-foreground mb-4">
+              "Should I go to Tsukiji or Toyosu?" This is one of the most common questions I get from visitors planning their Tokyo itinerary, and I completely understand the confusion. The internet is full of contradictory advice. Some sites say Tsukiji is closed. Others say Toyosu replaced it. A few claim you need reservations for both. <strong>Almost none of them get the full picture right.</strong>
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I'm Manabu, a nationally licensed tour guide, and I take clients to both markets regularly. I've walked through Tsukiji's narrow lanes hundreds of times and I've watched the Toyosu tuna auction more times than I can count. The short answer is that these are two fundamentally different experiences, and which one you should visit depends entirely on what kind of traveler you are.
@@ -92,12 +130,28 @@ const TsukijiVsToyosu = () => {
               Let me give you the honest, detailed comparison that I give my tour clients — no hype, no outdated information, just a guide's perspective on two of Tokyo's most famous food destinations.
             </p>
 
+            {/* Manabu's take — guide-note callout */}
+            <div className="guide-note-callout">
+              <div
+                className="gn-portrait"
+                style={{ backgroundImage: `url(${manabuPortrait})` }}
+              />
+              <div>
+                <p className="gn-label">Manabu's take</p>
+                <p className="gn-title">The honest answer is simple, but the reason matters.</p>
+                <p>
+                  If you only have one morning, I would start with Tsukiji. Toyosu is fascinating for the auction, but Tsukiji gives most travelers more food, more atmosphere, and fewer logistics.
+                </p>
+              </div>
+            </div>
+
             {/* Section 1: The Confusion */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
-              The Confusion: What Actually Moved in 2018?
+            <div className="section-eyebrow"><span>Section 01 · The History</span></div>
+            <h2 id="section-history" className="text-foreground mb-6">
+              What Actually Moved in 2018?
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              To understand the Tsukiji vs Toyosu debate, you need to understand what happened in October 2018, because this is where all the confusion started. Tsukiji was never one single market. It was actually two distinct operations sharing the same neighborhood: the inner wholesale market and the outer retail market.
+            <p className="text-muted-foreground mb-4">
+              To understand the Tsukiji vs Toyosu debate, you need to understand what happened in October 2018, because this is where all the confusion started. <span className="hl-gold">Tsukiji was never one single market.</span> It was actually two distinct operations sharing the same neighborhood: the inner wholesale market and the outer retail market.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The <strong className="text-foreground">inner wholesale market</strong> was the massive, professional-only floor where licensed wholesalers auctioned and sold seafood in bulk every morning before dawn. This was where the famous tuna auctions happened, where turret trucks raced through narrow aisles, and where thousands of tons of fish changed hands before most of Tokyo woke up. The facilities were aging, sanitation was difficult to maintain, and after years of delays and political debates, the entire inner wholesale operation relocated to Toyosu, a modern facility built on a man-made island in Tokyo Bay.
@@ -112,10 +166,40 @@ const TsukijiVsToyosu = () => {
               So when someone tells you "Tsukiji is closed," they're repeating a half-truth that has confused millions of travelers. The wholesale floor is gone. The soul of the market — the part you can taste, touch, and experience — is very much alive.
             </p>
 
+            <blockquote className="pull-quote">
+              The part of Tsukiji that most tourists actually enjoyed never moved. The wholesale floor is gone. The food neighborhood is still alive.
+            </blockquote>
+
             {/* Section 2: Comparison Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Compare</span></div>
+            <h2 id="section-compare" className="text-foreground mb-6">
               Side-by-Side Comparison
             </h2>
+
+            {/* Photo pair — visual comparison before the data table */}
+            <div className="photo-pair">
+              <figure>
+                <img
+                  src="/images/blog/tsukiji-tamagoyaki.webp"
+                  alt="Tsukiji outer market — street food, narrow lanes"
+                  loading="lazy"
+                  width={800}
+                  height={460}
+                />
+                <figcaption>Tsukiji — street-level food texture</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/images/blog/toyosu-senkyaku-banrai.webp"
+                  alt="Toyosu fish market — modern facility on Tokyo Bay"
+                  loading="lazy"
+                  width={800}
+                  height={460}
+                />
+                <figcaption>Toyosu — modern market complex</figcaption>
+              </figure>
+            </div>
+
             <div className="overflow-x-auto mb-8">
               <table className="w-full text-sm border border-border rounded-lg overflow-hidden">
                 <thead>
@@ -190,8 +274,31 @@ const TsukijiVsToyosu = () => {
               </table>
             </div>
 
+            {/* Choice cards — quick decision summary after the table */}
+            <div className="choice-grid">
+              <div className="choice-card">
+                <p className="choice-label">Best for most travelers</p>
+                <p className="choice-title">Choose Tsukiji if…</p>
+                <ul>
+                  <li>You want street food, breakfast, and old-school market atmosphere.</li>
+                  <li>You do not want to deal with reservations or lottery timing.</li>
+                  <li>You like browsing knives, ceramics, tea, pickles, and kitchen goods.</li>
+                </ul>
+              </div>
+              <div className="choice-card">
+                <p className="choice-label">For auction-focused</p>
+                <p className="choice-title">Choose Toyosu if…</p>
+                <ul>
+                  <li>You specifically want to see the tuna auction.</li>
+                  <li>You prefer a clean, spacious, modern facility.</li>
+                  <li>You already secured an auction viewing slot and can arrive early.</li>
+                </ul>
+              </div>
+            </div>
+
             {/* Section 3: Tsukiji */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Tsukiji</span></div>
+            <h2 id="section-tsukiji" className="text-foreground mb-6">
               Tsukiji Outer Market: What to Expect
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -217,7 +324,7 @@ const TsukijiVsToyosu = () => {
               Beyond the food, Tsukiji is a treasure trove for anyone interested in Japanese culinary culture. The knife shops here supply professional chefs across Tokyo and are famous worldwide for their hand-forged Japanese steel blades. If you're looking for a kitchen souvenir that will last a lifetime, a Tsukiji knife is it. You'll also find shops selling ceramics, lacquerware, dried goods like katsuobushi (bonito flakes) and kombu (kelp), and an astonishing variety of Japanese pickles.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Timing matters.</strong> The sweet spot is 8:00 AM. Stalls are fully set up, grills are fired, and crowds haven't peaked yet. Between 9 and 10 AM is still good but noticeably busier. After 11 AM, you're competing with lunch crowds, and by 1 to 2 PM many stalls start closing. Weekday mornings (especially Tuesday, Thursday, and Friday) give you the best experience. Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays.
+              <strong className="text-foreground">Timing matters.</strong> <span className="hl-gold">The sweet spot is 8:00 AM.</span> Stalls are fully set up, grills are fired, and crowds haven't peaked yet. Between 9 and 10 AM is still good but noticeably busier. After 11 AM, you're competing with lunch crowds, and by 1 to 2 PM many stalls start closing. Weekday mornings (especially Tuesday, Thursday, and Friday) give you the best experience. Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               What I love about Tsukiji, and what keeps me coming back week after week with my tour guests, is that it feels alive. This isn't a tourist attraction pretending to be a market. It's a working market that happens to welcome visitors. The vendors know their products with an expertise that borders on obsessive, and that passion is contagious. When a fishmonger explains which ocean your otoro came from and how many days it's been aging, you're getting a glimpse into a food culture that runs centuries deep.
@@ -235,7 +342,8 @@ const TsukijiVsToyosu = () => {
             </p>
 
             {/* Section 4: Toyosu */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Toyosu</span></div>
+            <h2 id="section-toyosu" className="text-foreground mb-6">
               Toyosu Fish Market: What to Expect
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -248,7 +356,7 @@ const TsukijiVsToyosu = () => {
               But here's what you need to know: the visitor experience at Toyosu is fundamentally <strong className="text-foreground">observational, not participatory</strong>. You watch the auction from behind glass on an elevated viewing deck. You walk along enclosed corridors above the wholesale floor, looking down through windows at the action below. The design prioritizes hygiene and efficiency (which is exactly what a wholesale fish market should do), but it means you're always separated from the actual market by a barrier. You're watching, not touching, not tasting, not interacting.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The <strong className="text-foreground">auction viewing requires winning a monthly lottery</strong>. This is not a simple reservation — you apply online roughly one month in advance, and winners are selected at random. Only about 100 visitors are admitted per auction day, and the viewing takes place around 5:30 AM. If you don't win the lottery, there's still a visitor deck where you can observe the intermediate wholesale area during market hours, but you won't see the main tuna auction.
+              The <span className="hl-gold">auction viewing requires winning a monthly lottery</span>. This is not a simple reservation — you apply online roughly one month in advance, and winners are selected at random. Only about 100 visitors are admitted per auction day, and the viewing takes place around 5:30 AM. If you don't win the lottery, there's still a visitor deck where you can observe the intermediate wholesale area during market hours, but you won't see the main tuna auction.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               There is a restaurant floor with about 40 establishments, including several that relocated from the old Tsukiji inner market. The sushi here is excellent — some of these restaurants have decades-long reputations — but expect to pay premium prices (most meals start around 2,000 yen and popular spots can exceed 5,000 yen) and deal with long queues at the famous names. The restaurant floor is also the only area where you can eat; there's no street food scene here, no grazing from stall to stall the way you do at Tsukiji.
@@ -258,29 +366,45 @@ const TsukijiVsToyosu = () => {
             </p>
 
             {/* Section 5: Both in One Day */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Combined Itinerary</span></div>
+            <h2 id="section-combined" className="text-foreground mb-6">
               Can You Visit Both in One Day?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Yes, and it actually makes for an incredible morning if you're willing to start early. The two markets are about 20 minutes apart by train, and their schedules complement each other nicely. Here's the itinerary I recommend to my clients who want the full Tokyo fish market experience:
+              <span className="hl-gold">Yes, and it actually makes for an incredible morning if you're willing to start early.</span> The two markets are about 20 minutes apart by train, and their schedules complement each other nicely. Here's the itinerary I recommend to my clients who want the full Tokyo fish market experience:
             </p>
-            <ul className="space-y-3 mb-4">
-              <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">5:30 AM — Toyosu tuna auction viewing.</strong> If you won the lottery, arrive at Toyosu Market by 5:15 AM. The auction viewing takes about 45 minutes to an hour. Watch the auctioneers work their magic, take photos through the glass, and appreciate the scale of Japan's seafood industry. Even without the auction lottery, the intermediate wholesale area is active and worth observing from the visitor corridors.
-              </li>
-              <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">7:00 AM — Grab breakfast at Toyosu (optional).</strong> If you're hungry, have a quick sushi breakfast at one of the restaurants. But honestly, I'd recommend saving your appetite for Tsukiji.
-              </li>
-              <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">8:00 AM — Head to Tsukiji.</strong> Take the Yurikamome Line from Shijo-mae Station to Shimbashi, then transfer to the Hibiya Line for one stop to Tsukiji Station. The whole journey takes about 20 minutes.
-              </li>
-              <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">8:30 AM - 11:00 AM — Tsukiji food crawl.</strong> This is where the real eating happens. Graze through the outer market at your own pace — tamagoyaki, fresh uni, grilled scallops, standing sushi, Japanese pickles, matcha. Take your time, talk to vendors, and eat until you can't eat anymore.
-              </li>
-              <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">11:00 AM — Walk to Ginza for lunch or shopping.</strong> Tsukiji is a 15-minute walk from Ginza, Tokyo's upscale shopping district. It's a natural next stop and makes for a satisfying transition from the market's old-school energy to Ginza's polished elegance.
-              </li>
-            </ul>
+            <div className="route-timeline">
+              <div className="route-row">
+                <div className="route-time">5:30 AM</div>
+                <p className="route-desc">
+                  <strong>Toyosu tuna auction viewing.</strong> If you won the lottery, arrive at Toyosu Market by 5:15 AM. The auction viewing takes about 45 minutes to an hour. Watch the auctioneers work their magic, take photos through the glass, and appreciate the scale of Japan's seafood industry. Even without the auction lottery, the intermediate wholesale area is active and worth observing from the visitor corridors.
+                </p>
+              </div>
+              <div className="route-row">
+                <div className="route-time">7:00 AM</div>
+                <p className="route-desc">
+                  <strong>Grab breakfast at Toyosu (optional).</strong> If you're hungry, have a quick sushi breakfast at one of the restaurants. But honestly, I'd recommend saving your appetite for Tsukiji.
+                </p>
+              </div>
+              <div className="route-row">
+                <div className="route-time">8:00 AM</div>
+                <p className="route-desc">
+                  <strong>Head to Tsukiji.</strong> Take the Yurikamome Line from Shijo-mae Station to Shimbashi, then transfer to the Hibiya Line for one stop to Tsukiji Station. The whole journey takes about 20 minutes.
+                </p>
+              </div>
+              <div className="route-row">
+                <div className="route-time">8:30 – 11:00</div>
+                <p className="route-desc">
+                  <strong>Tsukiji food crawl.</strong> This is where the real eating happens. Graze through the outer market at your own pace — tamagoyaki, fresh uni, grilled scallops, standing sushi, Japanese pickles, matcha. Take your time, talk to vendors, and eat until you can't eat anymore.
+                </p>
+              </div>
+              <div className="route-row">
+                <div className="route-time">11:00 AM</div>
+                <p className="route-desc">
+                  <strong>Walk to Ginza for lunch or shopping.</strong> Tsukiji is a 15-minute walk from Ginza, Tokyo's upscale shopping district. It's a natural next stop and makes for a satisfying transition from the market's old-school energy to Ginza's polished elegance. (For the reverse trip &mdash; <em>walking to</em> Tsukiji from a Ginza hotel &mdash; see my <Link to="/blog/ginza-to-tsukiji-walking-route" className="text-accent hover:underline">Ginza to Tsukiji walking guide</Link>.)
+                </p>
+              </div>
+            </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This combined itinerary gives you the best of both worlds: the spectacle of Toyosu's wholesale operation and the sensory immersion of Tsukiji's food scene. The only catch is the early wake-up — you'll need to leave your hotel by 5:00 AM at the latest, which means going to bed early the night before. Most of my clients tell me the early start was absolutely worth it, but it does take a toll if you're already running on jet lag.
             </p>
@@ -289,7 +413,8 @@ const TsukijiVsToyosu = () => {
             </p>
 
             {/* Section 6: My Recommendation */}
-            <h2 className="heading-section text-foreground mt-16 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · The Verdict</span></div>
+            <h2 id="section-verdict" className="text-foreground mb-6">
               My Honest Recommendation
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -314,12 +439,12 @@ const TsukijiVsToyosu = () => {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              One thing I always tell my guests: Tsukiji's outer market is not a consolation prize for the inner market's departure. It's the main event. It always has been, even when the wholesale floor was still next door. The inner market was fascinating for industry insiders, but the outer market is where the food is — and food is what brings people to a fish market in the first place.
+              One thing I always tell my guests: <span className="hl-gold">Tsukiji's outer market is not a consolation prize for the inner market's departure. It's the main event.</span> It always has been, even when the wholesale floor was still next door. The inner market was fascinating for industry insiders, but the outer market is where the food is — and food is what brings people to a fish market in the first place.
             </p>
 
             {/* CTA */}
-            <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+            <div className="bg-secondary/50 rounded-lg p-8 mt-12 cta-block">
+              <h2 className="text-foreground mb-4 !text-[1.75rem] md:!text-[2rem] !leading-[1.2]">
                 Want to experience Tokyo's fish markets with a local guide?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -336,29 +461,30 @@ const TsukijiVsToyosu = () => {
             </div>
 
             {/* FAQ */}
-            <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+            <div className="mt-16 faq-block">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-faq" className="text-foreground mb-8">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Did Tsukiji Market close?</h3>
+                  <h3 className="text-foreground">Did Tsukiji Market close?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Only partially. The inner wholesale market (tuna auctions, wholesale vendors) moved to Toyosu in October 2018. But the outer market — with over 460 shops, restaurants, and food stalls — never closed. It remains one of Tokyo's best food destinations and is fully open in 2026. The outer market is the part that most tourists visited and enjoyed, and it's still exactly where it's always been.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is the tuna auction at Tsukiji or Toyosu?</h3>
+                  <h3 className="text-foreground">Is the tuna auction at Tsukiji or Toyosu?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     The tuna auction is at Toyosu Fish Market. It moved there from Tsukiji in 2018. To watch the auction, you need to win a monthly lottery — apply online about one month in advance. Only around 100 visitors are admitted per auction day, and viewing takes place from behind glass on an elevated deck starting around 5:30 AM.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Which market has better sushi?</h3>
+                  <h3 className="text-foreground">Which market has better sushi?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Both markets serve excellent sushi, but the experiences are very different. Tsukiji offers more variety and value — standing sushi counters serve outstanding fish at reasonable prices (8-10 pieces for around 2,000 to 3,000 yen), plus you can graze on other seafood from stalls. Toyosu has about 40 sit-down restaurants with higher prices (meals typically 2,000 to 5,000+ yen) and longer queues. For most visitors, Tsukiji's sushi scene is more accessible and more fun.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Do I need to book in advance for either market?</h3>
+                  <h3 className="text-foreground">Do I need to book in advance for either market?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Tsukiji requires no reservation at all — just show up on a day the market is open (closed Sundays and select Wednesdays). Toyosu's tuna auction requires winning a monthly lottery, applied for online about one month ahead. The Toyosu restaurant floor and visitor corridors are open without reservation, but popular restaurants have long queues. For the best Tsukiji experience, I recommend arriving by 8:00 AM on a weekday morning.
                   </p>
@@ -369,9 +495,35 @@ const TsukijiVsToyosu = () => {
             <p className="text-sm text-muted-foreground mt-12">
               Last updated: March 2026
             </p>
-          </article>
+            </article>
+
+            {/* Right: Sidebar — Guide Note + At a Glance */}
+            <aside className="article-sidebar hidden lg:flex">
+              <div className="sidebar-card">
+                <div
+                  className="sb-portrait"
+                  style={{ backgroundImage: `url(${manabuPortrait})` }}
+                />
+                <p className="sb-label">Guide Note</p>
+                <p>
+                  I take guests to both markets. My default plan is Tsukiji first, then Toyosu only when the auction is part of the morning.
+                </p>
+              </div>
+
+              <div className="sidebar-card">
+                <p className="sb-label">At a Glance</p>
+                <div className="fact-list">
+                  <div><strong>Best for food</strong>Tsukiji Outer Market</div>
+                  <div><strong>Best for auction</strong>Toyosu Fish Market</div>
+                  <div><strong>No reservation</strong>Tsukiji</div>
+                  <div><strong>Best time</strong>Around 8:00 AM</div>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
+      </div>
 
       <DiagnosticTrigger config={foodFinderConfig} />
 

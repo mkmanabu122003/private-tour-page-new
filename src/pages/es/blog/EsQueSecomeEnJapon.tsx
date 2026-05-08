@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsQueSecomeEnJapon = () => {
   return (
@@ -19,53 +21,35 @@ const EsQueSecomeEnJapon = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/tokyo-food-tour-hero.webp"
-          alt="Tour gastronómico en Tokio: qué se come en Japón"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Gastronomía Japonesa</p>
-            <h1 className="heading-display text-foreground">
-              ¿Qué Se Come en Japón? La Guía de Comida Japonesa Que Nadie Más Te Da
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/tokyo-food-tour-hero.webp"
+        imageAlt="Tour gastronómico en Tokio: qué se come en Japón"
+        eyebrow="Gastronomía Japonesa"
+        title="¿Qué Se Come en Japón? La Guía de Comida Japonesa Que Nadie Más Te Da"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Lo que comes en Japón vs.…", href: "#section-01-lo-que-comes-en-japón-vs-lo-que-comes-en-tu" },
+          { num: "02", label: "Desayuno, almuerzo y cena…", href: "#section-02-desayuno-almuerzo-y-cena-japonesa-típica" },
+          { num: "03", label: "Los 10 platos que…", href: "#section-03-los-10-platos-que-recomiendo-a-mis-clientes" },
+          { num: "04", label: "Dónde comer sin pagar de más", href: "#section-04-dónde-comer-sin-pagar-de-más" },
+          { num: "05", label: "Alergias e intolerancias en…", href: "#section-05-alergias-e-intolerancias-en-japón" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "¿Qué se come en Japón aparte de sushi?" Es la pregunta que más me hacen mis clientes antes de llegar a Tokio. Y lo entiendo perfectamente: la comida japonesa que conoces en España o en Latinoamérica tiene muy poco que ver con lo que realmente se come aquí a diario. Después de años guiando a viajeros hispanohablantes por los mercados, callejones e izakayas de Tokio, he escrito esta guía para contarte lo que de verdad vas a encontrar en tu plato cuando aterrices en Japón.
@@ -75,21 +59,22 @@ const EsQueSecomeEnJapon = () => {
             </p>
 
             {/* Lo que comes en Japón vs. lo que comes en tu país */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Lo que comes en Japón vs. lo que comes en tu</span></div>
+            <h2 id="section-01-lo-que-comes-en-japón-vs-lo-que-comes-en-tu" className="scroll-mt-20">
               Lo que comes en Japón vs. lo que comes en tu país como "japonés"
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Antes de hablar de platos concretos, necesito ser honesto contigo: lo que la mayoría de restaurantes "japoneses" sirven fuera de Japón tiene una relación lejana con la comida real del país. No digo que sea malo, pero es diferente. Muy diferente.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El sushi de verdad no es lo que piensas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El sushi que se come en Japón rara vez incluye aguacate, queso crema o salsas dulces por encima. Aquí el sushi es minimalista: un trozo de pescado fresco sobre arroz sazonado con vinagre, punto. La estrella es el ingrediente, no la salsa. Un buen itamae (maestro sushi) ajusta la temperatura del arroz, el corte del pescado y la cantidad de wasabi según cada pieza. Es una experiencia completamente distinta a pedir un "roll" en Madrid o Ciudad de México. Y lo mejor: un almuerzo de sushi de calidad en un restaurante de barrio puede costarte solo 1.500 a 2.500 yenes (unos 10-16 euros). No necesitas gastar una fortuna para comer sushi auténtico.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El ramen tampoco (y hay cientos de estilos)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -97,28 +82,29 @@ const EsQueSecomeEnJapon = () => {
             </p>
 
             {/* Desayuno, almuerzo y cena */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Desayuno, almuerzo y cena japonesa típica</span></div>
+            <h2 id="section-02-desayuno-almuerzo-y-cena-japonesa-típica" className="scroll-mt-20">
               Desayuno, almuerzo y cena japonesa típica
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Entender qué se come en Japón significa entender el ritmo de las tres comidas. Y es muy diferente al ritmo español o latinoamericano.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desayuno japonés (sí, incluye pescado y arroz)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El desayuno japonés tradicional sorprende a casi todos mis clientes. Incluye arroz blanco, sopa de miso, un trozo de pescado a la parrilla (normalmente salmón o caballa), encurtidos, tofu y natto (soja fermentada, con un olor potente y textura viscosa que divide opiniones). No hay tostadas ni cereales. Muchos hoteles de estilo japonés (ryokan) sirven este desayuno completo, y te recomiendo probarlo al menos una vez. Cadenas como Yoshinoya y Matsuya ofrecen desayunos japoneses completos desde 400 yenes. Eso sí, si el natto te resulta demasiado intenso, no te preocupes: la mayoría de japoneses entienden perfectamente que es un gusto adquirido.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Almuerzo: el arte del teishoku (menú del día)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El teishoku es como el menú del día en España, pero japonés. Es un set que incluye un plato principal (tonkatsu, pescado a la parrilla, pollo frito), arroz, sopa de miso, ensalada y encurtidos. Se sirve todo junto en una bandeja, normalmente por 800 a 1.200 yenes. Es la forma más habitual de almorzar para los japoneses que trabajan, y es una de las mejores relaciones calidad-precio que encontrarás. Cadenas como Ootoya y Yayoiken se especializan en teishoku casero y son excelentes opciones para probar comida cotidiana japonesa sin gastar de más. Siempre llevo a mis clientes a almorzar un teishoku al menos una vez durante el tour, porque es la forma más auténtica de entender qué se come en Japón a diario.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cena: desde izakaya hasta kaiseki
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -126,77 +112,78 @@ const EsQueSecomeEnJapon = () => {
             </p>
 
             {/* Los 10 platos que recomiendo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Los 10 platos que recomiendo a mis clientes</span></div>
+            <h2 id="section-03-los-10-platos-que-recomiendo-a-mis-clientes" className="scroll-mt-20">
               Los 10 platos que recomiendo a mis clientes
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Después de años escuchando las opiniones de cientos de viajeros hispanohablantes, esta es mi lista de los 10 platos imprescindibles. Para cada uno te explico qué es, cómo se compara con algo que ya conoces, dónde comerlo y cuánto cuesta.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               1. Ramen
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Fideos de trigo en caldo caliente (de cerdo, pollo, soja o miso) con toppings como huevo marinado, chashu (cerdo estofado), nori y cebolleta. <strong className="text-foreground">Comparación:</strong> Imagina un cocido o un caldo gallego, pero con fideos y llevado al extremo. <strong className="text-foreground">Dónde:</strong> Las ramenyas pequeñas de barrio son las mejores. Busca las que tienen cola en la puerta. <strong className="text-foreground">Precio:</strong> 800-1.200 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               2. Soba
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Fideos finos de trigo sarraceno, servidos fríos con salsa de soja para mojar o calientes en caldo. <strong className="text-foreground">Comparación:</strong> Los fideos fríos con salsa son algo que no tiene equivalente directo, pero piensa en una ensalada de pasta fría elevada al arte. <strong className="text-foreground">Dónde:</strong> Los restaurantes de soba artesanal donde muelen el trigo sarraceno a mano son los mejores. <strong className="text-foreground">Precio:</strong> 700-1.500 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               3. Udon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Fideos gruesos y masticables de trigo, en caldo caliente o fríos. La prefectura de Kagawa (Shikoku) es la meca del udon. <strong className="text-foreground">Comparación:</strong> La textura es parecida a un buen fideo fresco casero, pero más grueso y con más mordida. <strong className="text-foreground">Dónde:</strong> Cadenas como Marugame Seimen sirven udon decente y barato en todo Japón. <strong className="text-foreground">Precio:</strong> 300-800 yenes. Uno de los platos más baratos del país.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               4. Tempura
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Verduras y mariscos rebozados en una masa ligera y crujiente, fritos al momento. <strong className="text-foreground">Comparación:</strong> Parecido a una fritura andaluza, pero la masa es mucho más fina y crujiente, casi etérea. <strong className="text-foreground">Dónde:</strong> Los restaurantes especializados en tempura (tempura-ya) lo fríen pieza a pieza delante de ti. <strong className="text-foreground">Precio:</strong> Un set de tempura con arroz, 1.000-2.000 yenes. Un restaurante de alta gama, 5.000-10.000 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               5. Tonkatsu
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Chuleta de cerdo empanada y frita hasta quedar dorada y crujiente por fuera, jugosa por dentro. Se sirve con col rallada, arroz y sopa de miso. <strong className="text-foreground">Comparación:</strong> Es como un cachopo o un escalope de Milán, pero la técnica de empanado japonés (panko) lo hace increíblemente crujiente. <strong className="text-foreground">Dónde:</strong> Cadenas como Maisen y Wako son excelentes. <strong className="text-foreground">Precio:</strong> 1.000-2.000 yenes por un set completo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               6. Yakitori
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Brochetas de pollo a la parrilla con carbón. Se usan todas las partes del pollo: pechuga, muslo, piel, corazón, cartílago. <strong className="text-foreground">Comparación:</strong> Como pinchos morunos, pero de pollo y con una técnica de parrilla sobre carbón binchotan que les da un sabor ahumado único. <strong className="text-foreground">Dónde:</strong> Las yakitoryas debajo de las vías del tren en zonas como Yurakucho son las más auténticas. <strong className="text-foreground">Precio:</strong> 100-200 yenes por brocheta.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               7. Okonomiyaki
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Una especie de tortilla-crepe gruesa rellena de col, carne o marisco, cocinada en plancha y cubierta con salsa, mayonesa y katsuobushi (virutas de bonito seco). <strong className="text-foreground">Comparación:</strong> Piensa en una tortilla de patatas mezclada con una pizza, cocinada en plancha. Suena raro, sabe increíble. <strong className="text-foreground">Dónde:</strong> Osaka y Hiroshima son las capitales del okonomiyaki. En Tokio, el barrio de Tsukishima tiene buenos locales. <strong className="text-foreground">Precio:</strong> 800-1.500 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               8. Gyoza
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Empanadillas japonesas rellenas de cerdo y verduras, fritas por un lado y al vapor por el otro. <strong className="text-foreground">Comparación:</strong> Como unas empanadillas argentinas o unas empanadas gallegas, pero más pequeñas, más finas y con esa base crujiente que las hace adictivas. <strong className="text-foreground">Dónde:</strong> Cualquier ramenya las sirve como acompañamiento. Las cadenas Ohsho y Gyoza no Ohsho son especialistas. <strong className="text-foreground">Precio:</strong> 250-500 yenes por una ración de 6 piezas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               9. Curry japonés
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Qué es:</strong> Un curry suave, espeso y ligeramente dulce servido con arroz y normalmente acompañado de tonkatsu o verduras. No pica como el curry indio o tailandés. <strong className="text-foreground">Comparación:</strong> Es como un estofado suave con especias. Los japoneses lo consideran comfort food, como las lentejas para un español. <strong className="text-foreground">Dónde:</strong> CoCo Ichibanya es la cadena más popular y te permite personalizar el nivel de picante y los toppings. <strong className="text-foreground">Precio:</strong> 600-1.000 yenes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               10. Onigiri
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -204,28 +191,29 @@ const EsQueSecomeEnJapon = () => {
             </p>
 
             {/* Dónde comer sin pagar de más */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Dónde comer sin pagar de más</span></div>
+            <h2 id="section-04-dónde-comer-sin-pagar-de-más" className="scroll-mt-20">
               Dónde comer sin pagar de más
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una de las grandes sorpresas para mis clientes es descubrir que comer bien en Japón puede ser muy barato. La clave es saber dónde buscar y evitar las trampas turísticas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Konbini (tiendas de conveniencia): tu mejor aliado
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Las konbini japonesas (7-Eleven, Lawson, FamilyMart) no tienen nada que ver con un supermercado de conveniencia occidental. Aquí venden onigiri recién hechos, sándwiches con pan de leche increíblemente suave, ensaladas de pasta, pollo karaage crujiente, nikuman (bollos de carne al vapor) y postres que rivalizan con los de una pastelería. Todo por precios que van de 100 a 500 yenes. Mis clientes siempre se sorprenden cuando les llevo a un 7-Eleven por primera vez y descubren que un onigiri de salmón de 150 yenes es genuinamente delicioso. Las konbini están abiertas 24 horas y hay una literalmente en cada esquina. Son tu red de seguridad gastronómica en Japón.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Depachika (sótanos de grandes almacenes)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los depachika son los sótanos gastronómicos de los grandes almacenes japoneses (Isetan, Mitsukoshi, Takashimaya), y son uno de los secretos mejor guardados de la gastronomía japonesa. Imagina un mercado gourmet subterráneo con decenas de puestos vendiendo bentō (cajas de almuerzo) preparados por restaurantes famosos, wagashi (dulces tradicionales), frutas perfectas, quesos, carnes y mariscos. La calidad es excepcional y, sorprendentemente, los precios no son desorbitados: un bentō de alta calidad cuesta 800 a 1.500 yenes. Además, a partir de las 7 de la tarde, muchos puestos aplican descuentos del 20-50% en los productos del día. Consejo de local: ve al depachika de Isetan en Shinjuku al atardecer para cazar ofertas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cadenas de restaurantes que no son trampas turísticas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -233,28 +221,29 @@ const EsQueSecomeEnJapon = () => {
             </p>
 
             {/* Alergias e intolerancias */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Alergias e intolerancias en Japón</span></div>
+            <h2 id="section-05-alergias-e-intolerancias-en-japón" className="scroll-mt-20">
               Alergias e intolerancias en Japón (la guía práctica)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Saber qué se come en Japón también significa saber cómo navegar las restricciones alimentarias, y aquí tengo que ser honesto: no siempre es fácil.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Vegetarianos y veganos: la verdad difícil
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japón es un país complicado para vegetarianos y veganos. El dashi (caldo base que se usa en casi todo) se hace con katsuobushi (bonito seco), así que incluso platos que parecen vegetarianos como la sopa de miso o el tofu en salsa suelen llevar pescado. Dicho esto, la situación ha mejorado mucho en los últimos años, especialmente en Tokio. Existen restaurantes vegetarianos y veganos dedicados, y el shojin ryori (cocina budista vegetariana) es una tradición centenaria. Aplicaciones como HappyCow te ayudarán a encontrar opciones. Mi consejo: lleva una tarjeta explicativa en japonés y avisa siempre al restaurante antes de pedir.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Alergia al gluten en Japón
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La salsa de soja contiene trigo, y la salsa de soja está en todas partes. Esto hace que comer sin gluten en Japón sea un reto serio. El ramen, el udon, la tempura, el tonkatsu y muchos otros platos populares contienen gluten. Sin embargo, el arroz es naturalmente sin gluten, al igual que el sashimi (sin salsa de soja) y muchos platos a la parrilla con sal. Existen marcas de salsa de soja sin gluten (tamari) pero la mayoría de restaurantes no las tienen. De nuevo, una tarjeta en japonés explicando tu alergia es esencial. Si tienes enfermedad celíaca, te recomiendo preparar el viaje con antelación y tener siempre opciones de emergencia en la mochila.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tarjetas de alergia en japonés
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -262,25 +251,26 @@ const EsQueSecomeEnJapon = () => {
             </p>
 
             {/* Preguntas frecuentes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre la comida en Japón
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Es caro comer en Japón?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No necesariamente. Se puede comer muy bien por 500 a 1.500 yenes por comida (3-10 euros aproximadamente). Japón tiene una de las mejores relaciones calidad-precio gastronómicas del mundo, especialmente en cadenas de restaurantes y konbinis. Solo es caro si buscas restaurantes de alta gama o zonas muy turísticas. Un viajero con presupuesto moderado puede comer increíblemente bien gastando 3.000 a 5.000 yenes al día en comida.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Puedo pedir comida sin hablar japonés?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí. Muchos restaurantes tienen menús con fotos o pantallas táctiles con imágenes. Las máquinas expendedoras de tickets (muy comunes en ramenyas) tienen botones con fotos del plato. Google Translate con la cámara funciona razonablemente bien para traducir menús. Y en las zonas turísticas de Tokio, Kioto y Osaka, muchos restaurantes tienen menú en inglés. Dicho esto, aprender unas pocas frases básicas como "kore kudasai" (esto, por favor) o "okanjo kudasai" (la cuenta, por favor) te facilitará mucho la vida.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Qué como si soy vegetariano?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -291,14 +281,14 @@ const EsQueSecomeEnJapon = () => {
               {" "}para más ideas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cuál es el plato más popular en Japón?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Según encuestas nacionales, el curry japonés y el ramen compiten constantemente por el primer puesto como comida favorita de los japoneses, por encima del sushi. El curry es la comfort food nacional: se sirve en colegios, empresas, cuarteles militares y hogares. Es omnipresente, barato y universalmente querido. Si quieres comer como come un japonés de verdad, pide un curry con tonkatsu en cualquier cadena de curry.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Es seguro comer pescado crudo?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -316,7 +306,7 @@ const EsQueSecomeEnJapon = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres descubrir qué se come en Japón con un guía local?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -331,7 +321,11 @@ const EsQueSecomeEnJapon = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -365,7 +359,9 @@ const EsQueSecomeEnJapon = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaLicenciaOficialJapon = () => {
   return (
@@ -19,53 +21,35 @@ const EsGuiaLicenciaOficialJapon = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/tour-photo-1.webp"
-          alt="Guía con licencia oficial durante un tour privado en Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías Útiles</p>
-            <h1 className="heading-display text-foreground">
-              Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/tour-photo-1.webp"
+        imageAlt="Guía con licencia oficial durante un tour privado en Tokio"
+        eyebrow="Guías Útiles"
+        title="Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Qué es la licencia de guía…", href: "#section-01-qué-es-la-licencia-de-guía-oficial-en-japón" },
+          { num: "02", label: "Guía con licencia vs. guía…", href: "#section-02-guía-con-licencia-vs-guía-sin-licencia" },
+          { num: "03", label: "¿Por qué debería importarte…", href: "#section-03-por-qué-debería-importarte-como-viajero" },
+          { num: "04", label: "Cómo verificar si un guía…", href: "#section-04-cómo-verificar-si-un-guía-tiene-licencia" },
+          { num: "05", label: "Mi experiencia obteniendo…", href: "#section-05-mi-experiencia-obteniendo-la-licencia" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Hay algo que la mayoría de los viajeros no sabe antes de llegar a Japón: existe un examen nacional para ser guía turístico. No es un curso online de dos días ni un certificado que compras. Es un examen del gobierno japonés, con tasas de aprobación históricamente bajas, que cubre historia, geografía, leyes, cultura y dominio de idiomas extranjeros. Yo lo aprobé. Y hoy quiero explicarte qué significa realmente ser un <strong className="text-foreground">guía con licencia oficial en Japón</strong>, por qué debería importarte como viajero, y ser completamente honesto sobre cómo funciona esta industria.
@@ -75,14 +59,15 @@ const EsGuiaLicenciaOficialJapon = () => {
             </p>
 
             {/* Qué es la licencia */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Qué es la licencia de guía oficial en Japón?</span></div>
+            <h2 id="section-01-qué-es-la-licencia-de-guía-oficial-en-japón" className="scroll-mt-20">
               ¿Qué es la licencia de guía oficial en Japón?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La licencia se llama formalmente <strong className="text-foreground">全国通訳案内士 (Zenkoku Tsūyaku Annai-shi)</strong> — "guía-intérprete nacional" —, denominación adoptada con la reforma legal de enero de 2018 (antes era simplemente Tsūyaku Annai-shi, 通訳案内士). Es la única credencial nacional reconocida por el gobierno japonés para guías turísticos, y hasta esa reforma era legalmente obligatoria para cualquier persona que quisiera guiar a visitantes extranjeros a cambio de una remuneración.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El examen nacional (Tsūyaku Annai-shi)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -92,14 +77,14 @@ const EsGuiaLicenciaOficialJapon = () => {
               La parte oral es una entrevista donde los examinadores evalúan tu capacidad de explicar aspectos de la cultura japonesa a visitantes extranjeros de forma clara, precisa y natural. No basta con saber los datos: tienes que saber comunicarlos de una manera que un viajero realmente entienda y disfrute.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Qué se necesita para aprobar (datos reales)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La tasa de aprobación reciente ronda el <strong className="text-foreground">10%</strong> a nivel global: según los datos oficiales de la JNTO para el examen de 2024, la tasa general fue del 10,0%, con un 12,1% para español y cerca del 10% para inglés. En otros idiomas ha caído por debajo del 10%. La preparación seria requiere entre uno y tres años de estudio dedicado. No es algo que se aprueba "de pasada". La mayoría de los candidatos son japoneses con excelente dominio de idiomas extranjeros, extranjeros con años de residencia en Japón, o ambos. Muchos se presentan varias veces antes de aprobar.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cuántos guías con licencia hay en Japón
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -107,28 +92,29 @@ const EsGuiaLicenciaOficialJapon = () => {
             </p>
 
             {/* Licencia vs sin licencia */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Guía con licencia vs. guía sin licencia</span></div>
+            <h2 id="section-02-guía-con-licencia-vs-guía-sin-licencia" className="scroll-mt-20">
               Guía con licencia vs. guía sin licencia: las diferencias reales
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Voy a ser directo: desde 2018, la ley cambió y ya no es obligatorio tener licencia para guiar turistas en Japón. Esto significa que cualquier persona puede ofrecerse como guía turístico. Un estudiante universitario, un expatriado que lleva seis meses en el país, alguien que simplemente conoce bien su barrio. Y algunos de ellos son genuinamente buenos. Pero hay diferencias fundamentales que deberías conocer.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Conocimiento verificado por el gobierno
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Un guía licenciado ha demostrado, ante examinadores del gobierno, un conocimiento profundo y verificado de la historia, geografía, cultura y leyes del país. Esto no es una opinión, es un hecho documentado y registrado. Cuando te explico la diferencia entre un santuario sintoísta y un templo budista, o por qué la ceremonia del té tiene la estructura que tiene, o cómo funcionaba el sistema de los han durante el periodo Edo, no estoy repitiendo lo que leí en Wikipedia la noche anterior. Es conocimiento que ha sido evaluado y certificado.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Responsabilidad legal y seguros
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los guías con licencia estamos registrados ante las autoridades prefecturales. Esto significa que hay un marco de responsabilidad: si algo sale mal, hay un registro, hay una entidad a la que recurrir. Muchos guías con licencia también contamos con seguros de responsabilidad profesional. Un guía sin licencia que opera de manera informal no tiene ninguna de estas protecciones, ni para él ni para ti.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que puedo hacer que un guía sin licencia no puede
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -136,18 +122,19 @@ const EsGuiaLicenciaOficialJapon = () => {
             </p>
 
             {/* Por qué debería importarte */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · ¿Por qué debería importarte como viajero?</span></div>
+            <h2 id="section-03-por-qué-debería-importarte-como-viajero" className="scroll-mt-20">
               ¿Por qué debería importarte como viajero?
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La diferencia en la experiencia del tour
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La diferencia más tangible es la profundidad. Un guía sin licencia puede llevarte de un punto A a un punto B y contarte datos básicos. Un guía con licencia puede responder a tus preguntas inesperadas, conectar lo que estás viendo con un contexto histórico más amplio, y adaptarse a tus intereses en tiempo real. Si en medio de un tour por Asakusa me preguntas sobre la relación entre el budismo y el sintoísmo en Japón, puedo darte una explicación matizada de veinte minutos. No porque memoricé una respuesta, sino porque entiendo el tema con la profundidad que requirió el examen.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Historias reales: lo que mis clientes no esperaban
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -157,7 +144,7 @@ const EsGuiaLicenciaOficialJapon = () => {
               Otra familia mexicana me pidió un tour gastronómico por Tsukiji. Su hija de ocho años era alérgica al marisco. En lugar de cancelar o improvisar, reorganicé todo el recorrido para enfocarnos en los puestos de carne, tamagoyaki, frutas japonesas y dulces tradicionales, manteniéndola siempre a salvo mientras el resto de la familia disfrutaba también del marisco en puestos separados. Saber gestionar estas situaciones es parte de lo que la formación y la experiencia te dan.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Seguridad y confianza
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -165,25 +152,26 @@ const EsGuiaLicenciaOficialJapon = () => {
             </p>
 
             {/* Cómo verificar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cómo verificar si un guía tiene licencia</span></div>
+            <h2 id="section-04-cómo-verificar-si-un-guía-tiene-licencia" className="scroll-mt-20">
               Cómo verificar si un guía tiene licencia
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La insignia oficial
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Todo guía con licencia debe llevar una insignia visible durante los tours. Es una insignia emitida por el gobierno con un número de registro único. Si tu guía no la lleva, pregúntale por ella. Un guía legítimo no tendrá ningún problema en mostrártela; de hecho, estará orgulloso de hacerlo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El registro del gobierno
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los guías con licencia estamos registrados en las bases de datos de las prefecturas donde operamos. Puedes verificar el registro de un guía contactando a la oficina de turismo de la prefectura correspondiente. También la JNTO mantiene un directorio de guías registrados que puedes consultar. No es un proceso complicado, y cualquier guía con licencia debería facilitarte la verificación si lo solicitas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Preguntas que puedes hacer antes de contratar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -191,25 +179,26 @@ const EsGuiaLicenciaOficialJapon = () => {
             </p>
 
             {/* Mi experiencia */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Mi experiencia obteniendo la licencia</span></div>
+            <h2 id="section-05-mi-experiencia-obteniendo-la-licencia" className="scroll-mt-20">
               Mi experiencia obteniendo la licencia
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Por qué decidí presentarme al examen
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Llevaba años guiando de manera informal cuando me di cuenta de que quería hacer esto en serio, como profesión, no como pasatiempo. Y si iba a pedirle a alguien que confiara su experiencia en Japón a mis manos, sentía que debía respaldar esa confianza con algo más que mi palabra. Quería poder decir "tengo la licencia nacional" y que eso significara algo verificable. No todos los guías piensan así, y respeto las diferentes perspectivas, pero para mí era importante.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo más difícil del proceso
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sin duda, la parte de historia japonesa. No por falta de interés (me apasiona la historia), sino por la profundidad y amplitud que exige el examen. Tienes que conocer desde los detalles de la reforma Taika del siglo VII hasta las políticas económicas de la posguerra, pasando por las distintas escuelas de budismo que se desarrollaron en Japón y cómo influyeron en la arquitectura, el arte y la vida cotidiana de cada periodo. Estudié durante dos años, con un método bastante disciplinado: tres horas diarias entre semana, más los fines de semana. Hubo momentos en que pensé en abandonar, especialmente después de no aprobar en mi primer intento.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que cambió después de obtenerla
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -217,13 +206,14 @@ const EsGuiaLicenciaOficialJapon = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre guías con licencia en Japón
             </h2>
 
-            <div className="space-y-6 mb-8">
+            <div className="faq-block space-y-6 mb-8">
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Es obligatorio tener licencia para ser guía en Japón?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -232,7 +222,7 @@ const EsGuiaLicenciaOficialJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuántos idiomas habla un guía con licencia?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -241,7 +231,7 @@ const EsGuiaLicenciaOficialJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cuesta más un guía con licencia?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -250,7 +240,7 @@ const EsGuiaLicenciaOficialJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Cómo encuentro un guía con licencia que hable español?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -263,7 +253,7 @@ const EsGuiaLicenciaOficialJapon = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3>
                   ¿Puedo recorrer Japón sin guía?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -278,7 +268,7 @@ const EsGuiaLicenciaOficialJapon = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Buscas un guía con licencia que hable español en Japón?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -293,7 +283,11 @@ const EsGuiaLicenciaOficialJapon = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -325,7 +319,9 @@ const EsGuiaLicenciaOficialJapon = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

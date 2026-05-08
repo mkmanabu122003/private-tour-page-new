@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const EsRutaGastronomicaTsukijiGinza = () => {
@@ -21,56 +23,39 @@ const EsRutaGastronomicaTsukijiGinza = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/tsukiji-food-guide-hero.webp"
-          alt="Comida fresca en el mercado exterior de Tsukiji en Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Gastronomía</p>
-            <h1 className="heading-display text-foreground">
-              De Tsukiji a Ginza: La Ruta Gastronómica Que Hacen los Locales en Su Día Libre
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que recorre esta ruta con amigos cuando tiene una tarde libre.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/tsukiji-food-guide-hero.webp"
+        imageAlt="Comida fresca en el mercado exterior de Tsukiji en Tokio"
+        eyebrow="Gastronomía"
+        title="De Tsukiji a Ginza: La Ruta Gastronómica Que Hacen los Locales en Su Día Libre"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que recorre esta ruta con amigos cuando tiene una tarde libre."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Parada 1", href: "#section-01-parada-1" },
+          { num: "02", label: "Parada 2", href: "#section-02-parada-2" },
+          { num: "03", label: "Desvío Opcional: Jardines…", href: "#section-03-desvío-opcional-jardines-hamarikyu-añade-60" },
+          { num: "04", label: "Parada 3", href: "#section-04-parada-3" },
+          { num: "05", label: "Parada 4", href: "#section-05-parada-4" },
+          { num: "06", label: "Parada 5: Shinbashi", href: "#section-06-parada-5-shinbashi" },
+          { num: "07", label: "Solo vs. Con un Guía", href: "#section-07-solo-vs-con-un-guía" },
+          { num: "08", label: "Información Práctica", href: "#section-08-información-práctica" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Esta es la ruta que hago con amigos cuando tenemos una tarde libre y queremos comer bien sin complicarnos demasiado. Empieza en el mercado de pescado, termina bajo las vías del tren en Yurakucho con una cerveza fría, y recorre unos 3 kilómetros de lo mejor que se puede comer en Tokio.
@@ -87,7 +72,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </p>
 
             {/* Parada 1: Mercado exterior de Tsukiji */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Parada 1</span></div>
+            <h2 id="section-01-parada-1" className="scroll-mt-20">
               Parada 1: Mercado Exterior de Tsukiji (9:00 - 10:30)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -118,7 +104,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </p>
 
             {/* Parada 2: Zona del templo Tsukiji Honganji */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Parada 2</span></div>
+            <h2 id="section-02-parada-2" className="scroll-mt-20">
               Parada 2: Zona del Templo Tsukiji Honganji (10:30 - 11:00)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -143,7 +130,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </figure>
 
             {/* Desvío opcional: Jardines Hamarikyu */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Desvío Opcional: Jardines Hamarikyu (Añade 60</span></div>
+            <h2 id="section-03-desvío-opcional-jardines-hamarikyu-añade-60" className="scroll-mt-20">
               Desvío Opcional: Jardines Hamarikyu (Añade 60–90 min)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -186,7 +174,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </ul>
 
             {/* Parada 3: Caminata hacia las callejuelas de Ginza */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Parada 3</span></div>
+            <h2 id="section-04-parada-3" className="scroll-mt-20">
               Parada 3: Caminata Hacia las Callejuelas de Ginza (11:00 - 12:00)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -200,7 +189,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </p>
 
             {/* Parada 4: Callejón de izakayas en Yurakucho */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Parada 4</span></div>
+            <h2 id="section-05-parada-4" className="scroll-mt-20">
               Parada 4: Callejón de Izakayas en Yurakucho (16:00 en adelante)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -230,8 +220,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
                 Bajo las vías: los diminutos izakayas brillan bajo la línea elevada del JR entre Yurakucho y Shinbashi
               </figcaption>
             </figure>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Parada 5: Shinbashi</span></div>
+            <h2 id="section-06-parada-5-shinbashi" className="scroll-mt-20">
               Parada 5: Shinbashi — El Tramo Más Profundo (17:30 en adelante)
             </h2>
             <figure className="my-8">
@@ -278,7 +268,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </p>
 
             {/* Solo vs. Con un guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Solo vs. Con un Guía</span></div>
+            <h2 id="section-07-solo-vs-con-un-guía" className="scroll-mt-20">
               Solo vs. Con un Guía
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -303,7 +294,8 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             </ul>
 
             {/* Información práctica */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Información Práctica</span></div>
+            <h2 id="section-08-información-práctica" className="scroll-mt-20">
               Información Práctica
             </h2>
             <ul className="space-y-3 mb-8">
@@ -327,7 +319,7 @@ const EsRutaGastronomicaTsukijiGinza = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres la Versión con Guía?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -345,7 +337,11 @@ const EsRutaGastronomicaTsukijiGinza = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -413,7 +409,9 @@ const EsRutaGastronomicaTsukijiGinza = () => {
       3. Yakitori pricing (¥100-300 per skewer) — verify current Yurakucho prices
       4. Route matches actual food tour — confirm consistency
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

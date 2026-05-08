@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { QuickAnswer } from "@/components/blog/QuickAnswer";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsExcursionYokohamaDesdeTokio = () => {
   return (
@@ -25,59 +27,37 @@ const EsExcursionYokohamaDesdeTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/yokohama-minatomirai-hero.webp"
-          alt="Skyline de Yokohama Minato Mirai al atardecer con la Landmark Tower y la noria de Cosmo World"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Excursiones</p>
-            <h1 className="heading-display text-foreground">
-              Excursión a Yokohama desde Tokio: Lo Que De Verdad Merece el Viaje
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía-Intérprete Nacional con Licencia del Gobierno (全国通訳案内士), que ha acompañado a innumerables visitantes por la historia portuaria internacional de Yokohama y sus barrios más escondidos.
-            </p>
-            <p className="mt-2 text-xs text-muted-foreground">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/yokohama-minatomirai-hero.webp"
+        imageAlt="Skyline de Yokohama Minato Mirai al atardecer con la Landmark Tower y la noria de Cosmo World"
+        eyebrow="Guías de Excursiones"
+        title="Excursión a Yokohama desde Tokio: Lo Que De Verdad Merece el Viaje"
+        subtitle="Escrito por Manabu, Guía-Intérprete Nacional con Licencia del Gobierno (全国通訳案内士), que ha acompañado a innumerables visitantes por la historia portuaria internacional de Yokohama y sus barrios más escondidos."
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Qué es Yokohama", href: "#section-01-qué-es-yokohama" },
+          { num: "02", label: "Qué ver", href: "#section-02-qué-ver" },
+          { num: "03", label: "¿Cuánto tiempo necesitas…", href: "#section-03-cuánto-tiempo-necesitas-realmente" },
+          { num: "04", label: "Yokohama vs. Kamakura vs.…", href: "#section-04-yokohama-vs-kamakura-vs-kawagoe" },
+          { num: "05", label: "Cómo combinar Yokohama con…", href: "#section-05-cómo-combinar-yokohama-con-otros-destinos" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswer
               answer="Sí, Yokohama merece la visita: está a solo 30 minutos de Tokio y parece una ciudad completamente diferente. Lo ideal es combinarla con media jornada: mañana en Yokohama, tarde en Kamakura."
               hook="Pero la mayoría de visitantes pierden el tiempo en las atracciones equivocadas. Aquí te cuento exactamente qué ver y qué saltarte, desde la perspectiva de un guía que lleva clientes allí con regularidad."
@@ -94,7 +74,8 @@ const EsExcursionYokohamaDesdeTokio = () => {
             </p>
 
             {/* Qué es Yokohama */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Qué es Yokohama</span></div>
+            <h2 id="section-01-qué-es-yokohama" className="scroll-mt-20">
               Qué es Yokohama (y por qué es diferente de Tokio)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -111,11 +92,12 @@ const EsExcursionYokohamaDesdeTokio = () => {
             </p>
 
             {/* Qué ver */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Qué ver</span></div>
+            <h2 id="section-02-qué-ver" className="scroll-mt-20">
               Qué ver: Chinatown, el paseo marítimo y el jardín Sankeien
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Chinatown de Yokohama
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -130,7 +112,7 @@ const EsExcursionYokohamaDesdeTokio = () => {
 
             <InlineCTAEs href="/es/tours" message="¿Te gustaría explorar Yokohama con un guía local?" />
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Minato Mirai y el paseo marítimo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -140,7 +122,7 @@ const EsExcursionYokohamaDesdeTokio = () => {
               Recomiendo especialmente el Museo del Cup Noodles para familias o cualquier persona curiosa sobre la innovación en la cultura pop japonesa. Es genuinamente entretenido (diseñas tu propio vaso de noodles con ingredientes elegidos a mano) y cuenta la historia sorprendentemente apasionante de Momofuku Ando, que inventó el ramen instantáneo en 1958 y cambió literalmente la forma en que el mundo come. Reserva unas 90 minutos.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Jardín Sankeien
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -151,7 +133,8 @@ const EsExcursionYokohamaDesdeTokio = () => {
             </p>
 
             {/* Cuánto tiempo necesitas */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · ¿Cuánto tiempo necesitas realmente?</span></div>
+            <h2 id="section-03-cuánto-tiempo-necesitas-realmente" className="scroll-mt-20">
               ¿Cuánto tiempo necesitas realmente?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -173,7 +156,8 @@ const EsExcursionYokohamaDesdeTokio = () => {
             </p>
 
             {/* Comparativa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Yokohama vs. Kamakura vs. Kawagoe</span></div>
+            <h2 id="section-04-yokohama-vs-kamakura-vs-kawagoe" className="scroll-mt-20">
               Yokohama vs. Kamakura vs. Kawagoe: ¿Cuál elegir?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -197,7 +181,8 @@ const EsExcursionYokohamaDesdeTokio = () => {
             </p>
 
             {/* Cómo combinar */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cómo combinar Yokohama con otros destinos</span></div>
+            <h2 id="section-05-cómo-combinar-yokohama-con-otros-destinos" className="scroll-mt-20">
               Cómo combinar Yokohama con otros destinos
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -228,7 +213,7 @@ const EsExcursionYokohamaDesdeTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres una excursión guiada a Yokohama?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -242,47 +227,52 @@ const EsExcursionYokohamaDesdeTokio = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Preguntas frecuentes</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Preguntas frecuentes</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Merece la pena una excursión a Yokohama desde Tokio?</h3>
+                  <h3>¿Merece la pena una excursión a Yokohama desde Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Sí, especialmente si te interesa la gastronomía, la historia internacional o quieres un viaje fácil que no requiere madrugar. Yokohama está a solo 30 minutos de Tokio y ofrece una atmósfera notablemente diferente. El Chinatown por sí solo ya no tiene nada que ver con lo que encuentras en Tokio. Para una experiencia cultural completa incluyendo el jardín Sankeien, planifica un día entero. Para ver solo lo imprescindible, medio día funciona bien.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cómo llego de Tokio a Yokohama?</h3>
+                  <h3>¿Cómo llego de Tokio a Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Tienes varias opciones, todas rápidas: la línea JR Tokaido desde la estación de Tokio (25 minutos, incluida en el JR Pass), la línea JR Yokosuka desde Shinagawa (25 minutos) o la línea Tokyu Toyoko desde Shibuya (30 minutos, no incluida en el JR Pass pero muy cómoda si tu hotel está en la zona de Shibuya). La extensión de la línea Minatomirai te lleva directamente a la zona del paseo marítimo sin hacer transbordo.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Se pueden visitar Yokohama y Kamakura en el mismo día?</h3>
+                  <h3>¿Se pueden visitar Yokohama y Kamakura en el mismo día?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Sí, y combinan muy bien porque están en la misma línea de tren. Dedica la mañana a Yokohama (Chinatown, paseo marítimo) y la tarde a Kamakura (templos, Gran Buda), o al revés. Es un día completo de 8-9 horas, pero muy factible. El tren entre ambas tarda solo 25 minutos.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuánto tiempo necesito en Yokohama?</h3>
+                  <h3>¿Cuánto tiempo necesito en Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     De 3 a 4 horas para las atracciones principales (Chinatown, paseo marítimo, Museo del Ramen). Un día completo si añades el Museo del Cup Noodles, el jardín Sankeien o combinas con Kamakura.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Qué comer en el Chinatown de Yokohama?</h3>
+                  <h3>¿Qué comer en el Chinatown de Yokohama?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     El Chinatown de Yokohama es el gran atractivo gastronómico: nikuman (bollos de cerdo al vapor), xiaolongbao (dumplings de sopa), pato laqueado y pudin de mango. Fuera del Chinatown, prueba el estilo de ramen local de Yokohama, el Iekei ramen: una mezcla rica de tonkotsu y soja, más espesa y contundente que el ramen al estilo de Tokio. Para algo único, el Museo del Ramen de Shin-Yokohama tiene ocho restaurantes de ramen bajo un mismo techo, cada uno representando un estilo regional diferente.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Yokohama desde Tokio es fácil sin hablar japonés?</h3>
+                  <h3>¿Yokohama desde Tokio es fácil sin hablar japonés?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Totalmente. Yokohama es una de las ciudades más internacionales de Japón gracias a su historia portuaria. La señalización del tren y del metro está en japonés e inglés, los menús de Chinatown suelen tener fotos y muchos restaurantes tienen carta en inglés. Si aun así prefieres ir con alguien que te explique todo en español y te lleve a los rincones que no salen en las guías, para eso estoy yo.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -315,7 +305,9 @@ const EsExcursionYokohamaDesdeTokio = () => {
           { "@type": "Question", name: "¿Yokohama desde Tokio es fácil sin hablar japonés?", acceptedAnswer: { "@type": "Answer", text: "Totalmente. La señalización está en japonés e inglés, los menús de Chinatown suelen tener fotos y muchos restaurantes tienen carta en inglés. Es una de las ciudades más internacionales de Japón." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

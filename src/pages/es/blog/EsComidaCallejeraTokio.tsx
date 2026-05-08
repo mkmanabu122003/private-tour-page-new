@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsComidaCallejeraTokio = () => {
   return (
@@ -19,55 +21,35 @@ const EsComidaCallejeraTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/tsukiji-street-food.webp"
-          alt="Comida callejera en Tokio, puestos de street food"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Comida Callejera en Tokio</li>
-              </ol>
-            </nav>
-            <p className="text-label text-accent mb-3">Gastronomía Japonesa</p>
-            <h1 className="heading-display text-foreground">
-              Comida Callejera en Tokio: Lo Que Come un Guía Local (y Dónde Encontrarlo)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/tsukiji-street-food.webp"
+        imageAlt="Comida callejera en Tokio, puestos de street food"
+        eyebrow="Gastronomía Japonesa"
+        title="Comida Callejera en Tokio: Lo Que Come un Guía Local (y Dónde Encontrarlo)"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "¿Existe realmente la…", href: "#section-01-existe-realmente-la-comida-callejera-en-tokio" },
+          { num: "02", label: "Los mejores puestos en Asakusa", href: "#section-02-los-mejores-puestos-en-asakusa" },
+          { num: "03", label: "Yanaka Ginza", href: "#section-03-yanaka-ginza" },
+          { num: "04", label: "Qué pedir y cómo", href: "#section-04-qué-pedir-y-cómo" },
+          { num: "05", label: "Cuánto cuesta comer en la…", href: "#section-05-cuánto-cuesta-comer-en-la-calle-en-tokio" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Cuando mis invitados me preguntan por la comida callejera en Tokio, siempre noto la misma cara de sorpresa al decirles que en Japón, técnicamente, no se come por la calle. Bueno, no exactamente. La cultura japonesa tiene una relación curiosa con comer fuera de un restaurante: no es que esté prohibido, pero sí existe una etiqueta que conviene conocer. Y aun así, la comida callejera en Tokio existe, es deliciosa y puede convertirse en el mejor recuerdo gastronómico de tu viaje.
@@ -88,21 +70,22 @@ const EsComidaCallejeraTokio = () => {
             </p>
 
             {/* ¿Existe realmente la comida callejera en Tokio? */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · ¿Existe realmente la "comida callejera" en Tokio?</span></div>
+            <h2 id="section-01-existe-realmente-la-comida-callejera-en-tokio" className="scroll-mt-20">
               ¿Existe realmente la "comida callejera" en Tokio?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La respuesta corta es sí, pero con matices. Japón no tiene una cultura de comida callejera como la de Bangkok, Ciudad de México o Estambul, donde literalmente puedes cenar sentado en un taburete en la acera. Aquí la comida callejera funciona de otra manera, y entender esas diferencias hará que tu experiencia sea mucho más auténtica y respetuosa.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La regla de no comer caminando (y cuándo se puede ignorar)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En Japón existe el concepto de <strong className="text-foreground">tabearuki</strong> (literalmente "comer caminando"), y generalmente se considera de mala educación. La idea es que comer mientras caminas puede molestar a otros peatones, ensuciar la calle o mostrar falta de respeto hacia la comida. Los japoneses suelen comprar su snack y comérselo de pie junto al puesto, o buscar un banco cercano. Dicho esto, hay excepciones claras: en los festivales (matsuri), en las calles comerciales (shotengai) diseñadas para picotear, y en zonas turísticas como Nakamise-dori en Asakusa, comer mientras paseas es completamente aceptable. Mi consejo: compra tu comida, cómela cerca del puesto, tira la basura donde corresponda y estarás haciendo las cosas bien.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Matsuri vs. mercados vs. shotengai: tres tipos de comida callejera
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -110,28 +93,29 @@ const EsComidaCallejeraTokio = () => {
             </p>
 
             {/* Los mejores puestos en Asakusa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Los mejores puestos en Asakusa</span></div>
+            <h2 id="section-02-los-mejores-puestos-en-asakusa" className="scroll-mt-20">
               Los mejores puestos en Asakusa
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Asakusa es probablemente el barrio más asociado con la comida callejera en Tokio, y con razón. El área alrededor del templo Senso-ji lleva siglos siendo un centro de comercio y alimentación, y hoy mantiene esa tradición con docenas de puestos que van desde los más turísticos hasta auténticas joyas escondidas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Nakamise-dori: turístico pero con joyas escondidas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí, Nakamise-dori es la calle más turística de Tokio. Esas 250 metros de tiendas entre Kaminarimon y el templo están repletas de visitantes prácticamente todo el año. Pero eso no significa que debas evitarla. Entre los souvenirs repetitivos hay puestos que llevan generaciones haciendo lo mismo: los <strong className="text-foreground">ningyo-yaki</strong> (pastelitos con forma de paloma o linterna rellenos de pasta de judías) son el snack emblemático de Asakusa, y cuestan solo 300-500 yenes por una bolsa de 5-7 piezas. También encontrarás excelentes senbei (galletas de arroz) asados a la parrilla al momento y pincelados con salsa de soja. El truco es mirar las calles laterales: a solo un paso de Nakamise hay callejones con puestos menos conocidos y mucho más interesantes.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Hoppy-dori y los callejones traseros
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si Nakamise es la cara amable de Asakusa, Hoppy-dori es su alma. Esta calle estrecha, a pocos minutos caminando del templo, está bordeada de izakayas con mesas en la acera y humo de yakitori flotando en el aire. Aquí no estamos hablando de comida callejera refinada: esto son brochetas de pollo a 150 yenes cada una, kushikatsu (fritura en palito) a 100 yenes, y jarras de cerveza a precios que no encontrarás en ningún otro barrio de Tokio. Es como los pinchos morunos pero de pollo, servidos en un ambiente que me recuerda a los bares de tapas de España, pero en versión japonesa. Por la tarde-noche, Hoppy-dori se llena de trabajadores locales que vienen a relajarse, y la atmósfera es absolutamente genuina.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Qué pedir en Asakusa (mi lista personal)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -139,28 +123,29 @@ const EsComidaCallejeraTokio = () => {
             </p>
 
             {/* Yanaka Ginza */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Yanaka Ginza</span></div>
+            <h2 id="section-03-yanaka-ginza" className="scroll-mt-20">
               Yanaka Ginza: el mercado que los turistas aún no han invadido
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si Asakusa puede sentirse demasiado concurrido para tu gusto, Yanaka Ginza es la alternativa perfecta. Esta shotengai de unos 170 metros en el barrio de Yanaka conserva un ambiente de Tokio antiguo que es cada vez más difícil de encontrar: fachadas de madera, gatos callejeros dormidos en las esquinas, y comerciantes que conocen a sus clientes por nombre. Para mí, es uno de los mejores lugares de Tokio para experimentar la comida callejera como la viven los locales.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo llegar a Yanaka
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Yanaka Ginza está a 5 minutos caminando desde la salida norte de la estación JR Nippori. Si usas el Japan Rail Pass, no te costará nada extra, ya que Nippori está en la línea Yamanote. Desde la estación, sigue las señales hacia "Yanaka Ginza", hay indicaciones en inglés. El paseo desde la estación ya es bonito: calles residenciales tranquilas con pequeños templos escondidos entre las casas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los puestos imprescindibles
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Yanaka Ginza tiene menos de 60 tiendas, pero la concentración de comida callejera buena por metro cuadrado es impresionante. Mi favorito absoluto es el <strong className="text-foreground">menchi-katsu</strong> de la carnicería Suzuki: una croqueta de carne picada, empanada y frita al momento, jugosa por dentro y crujiente por fuera. Como las croquetas en España, es un snack que todo el mundo come, pero aquí la calidad de la carne lo eleva a otro nivel. Cuesta 250 yenes y merece cada yen. También recomiendo las <strong className="text-foreground">korokke</strong> (croquetas de patata) de la tienda contigua, los helados de sabores japoneses (sakura, sésamo negro, matcha) y los yakitori de la izakaya que está al final de la calle. Para algo dulce, hay un puesto de dorayaki (los favoritos de Doraemon: dos tortitas esponjosas con relleno de anko) que prepara cada pieza por encargo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El atardecer desde "Yuyake Dandan"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -168,14 +153,15 @@ const EsComidaCallejeraTokio = () => {
             </p>
 
             {/* Qué pedir y cómo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Qué pedir y cómo</span></div>
+            <h2 id="section-04-qué-pedir-y-cómo" className="scroll-mt-20">
               Qué pedir y cómo (sin hablar japonés)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Ahora que sabes dónde ir, hablemos de qué pedir. La comida callejera japonesa tiene sus propios clásicos, y conocerlos de antemano te ahorrará tiempo y te ayudará a no perderte nada importante.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los 8 clásicos de la comida callejera japonesa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -203,14 +189,14 @@ const EsComidaCallejeraTokio = () => {
               <strong className="text-foreground">8. Dango</strong> (150-300 yenes). Tres bolitas de mochi (arroz glutinoso) en un palito, normalmente con salsa mitarashi (dulce de soja) o cubiertas de pasta de judías. Es el snack más antiguo de Japón, y probarlo frente a un templo es una experiencia que conecta con siglos de tradición.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo pedir: señalar, sonreír y decir "kore kudasai"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No necesitas hablar japonés para disfrutar de la comida callejera en Tokio. La mayoría de los puestos tienen la comida a la vista, así que basta con señalar lo que quieres y decir <strong className="text-foreground">"kore kudasai"</strong> (esto, por favor). Si quieres especificar cantidad, muestra los dedos: uno, dos, tres. Para pagar, la mayoría de puestos tienen una bandejita donde dejas el dinero; no pases los billetes directamente a la mano del vendedor. Un "arigatou gozaimasu" (muchas gracias) al recoger tu comida siempre es apreciado. Y si ves un puesto con cola de japoneses, ponte en esa cola: ellos saben dónde está lo bueno.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Etiqueta callejera: dónde comer lo que compras
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -218,21 +204,22 @@ const EsComidaCallejeraTokio = () => {
             </p>
 
             {/* Cuánto cuesta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cuánto cuesta comer en la calle en Tokio</span></div>
+            <h2 id="section-05-cuánto-cuesta-comer-en-la-calle-en-tokio" className="scroll-mt-20">
               Cuánto cuesta comer en la calle en Tokio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una de las grandes ventajas de la comida callejera en Tokio es que es sorprendentemente asequible, sobre todo comparada con los restaurantes. Aquí te doy un presupuesto realista basado en lo que yo mismo gasto.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Presupuesto realista para un día de comida callejera
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Un día completo picoteando por Tokio (digamos almuerzo y merienda en Asakusa o Yanaka) te costará entre <strong className="text-foreground">1.500 y 3.000 yenes</strong> (aproximadamente 10-20 euros). Eso incluye 4-6 snacks diferentes y alguna bebida. Para que te hagas una idea: 6 takoyaki por 500 yenes, 2 yakitori por 300 yenes, un menchi-katsu por 250 yenes, un taiyaki por 250 yenes y una bebida por 150 yenes son 1.450 yenes, y estarás satisfecho. Si quieres darte un capricho con brochetas de wagyu o marisco a la parrilla, sube el presupuesto a 3.000-4.000 yenes, pero sinceramente no hace falta gastar más que eso.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Efectivo vs. tarjeta en puestos callejeros
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -240,39 +227,40 @@ const EsComidaCallejeraTokio = () => {
             </p>
 
             {/* FAQ */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+            <h2 id="section-06-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre comida callejera en Tokio
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Se puede comer por la calle en Japón?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sí, pero con matices. Comer caminando (tabearuki) no es habitual ni bien visto en la cultura japonesa. Lo normal es pararte junto al puesto donde compraste la comida y comerla allí. En festivales, mercados y zonas turísticas como Nakamise-dori la norma se relaja bastante, pero en calles residenciales o el transporte público, evita comer.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Cuánto cuesta la comida callejera?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La mayoría de snacks callejeros cuestan entre 150 y 500 yenes (1-3,50 euros aproximadamente). Con 2.000-3.000 yenes puedes pasar un día entero picoteando y quedar satisfecho. Es una de las formas más económicas de comer bien en Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Dónde hay comida callejera en Tokio?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los mejores lugares son Asakusa (Nakamise-dori y Hoppy-dori), Yanaka Ginza, el Mercado Exterior de Tsukiji, Ameyoko en Ueno, y Togoshi Ginza en Shinagawa. Durante los festivales (matsuri), prácticamente cualquier barrio monta yatai con comida callejera.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿La comida callejera en Japón es segura?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Absolutamente. Japón tiene unos estándares de higiene alimentaria de los más altos del mundo. Los puestos callejeros están sujetos a regulaciones estrictas y los vendedores mantienen una limpieza impecable. En más de diez años como guía, ninguno de mis invitados ha tenido un problema de salud por comer en puestos callejeros. Puedes comer con total confianza.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               ¿Hay opciones vegetarianas?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -281,7 +269,7 @@ const EsComidaCallejeraTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres descubrir la mejor comida callejera en Tokio con un guía local?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -296,7 +284,11 @@ const EsComidaCallejeraTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -330,7 +322,9 @@ const EsComidaCallejeraTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Actual Blog Text Preview</title>
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --muted: #56514a;
+        --soft: #eeeae0;
+        --line: #dcd4c2;
+        --gold: #b8943b;
+        --sage: #557160;
+        --clay: #9c563f;
+        --card: #fffdf8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        letter-spacing: 0;
+        line-height: 1;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.78;
+      }
+      .page {
+        width: 1440px;
+        min-height: 2200px;
+        margin: 0 auto;
+        background: var(--paper);
+      }
+      .nav {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 80px;
+        border-bottom: 1px solid rgba(0,0,0,.08);
+        background: rgba(248,247,241,.96);
+      }
+      .brand {
+        font-family: Georgia, serif;
+        letter-spacing: .18em;
+        font-weight: 700;
+        font-size: 22px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 34px;
+        align-items: center;
+        color: #4f4a43;
+        font-size: 14px;
+      }
+      .button {
+        background: linear-gradient(#d5b65e, #b8943b);
+        color: #fff7dd;
+        border-radius: 6px;
+        padding: 13px 20px;
+        font-weight: 700;
+        box-shadow: 0 9px 22px rgba(139, 115, 63, .22);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: 56px;
+        padding: 74px 80px 58px;
+        align-items: end;
+      }
+      .eyebrow {
+        color: var(--gold);
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .18em;
+        font-weight: 800;
+      }
+      h1 {
+        font-size: 72px;
+        max-width: 760px;
+        margin-top: 12px;
+      }
+      .deck {
+        font-size: 20px;
+        max-width: 680px;
+        margin-top: 22px;
+      }
+      .meta {
+        margin-top: 26px;
+        display: flex;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .hero-img {
+        height: 470px;
+        border-radius: 8px;
+        background: url("/images/blog/tsukiji-market-seafood-stalls.webp") center/cover;
+        box-shadow: 0 24px 60px rgba(0,0,0,.16);
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 210px 700px 220px;
+        gap: 36px;
+        padding: 54px 80px 100px;
+        align-items: start;
+      }
+      .toc, .guide-card, .decision, .choice-card, .fact-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+      .toc {
+        padding: 22px;
+      }
+      .toc h3, .guide-card h3, .fact-card h3 {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .16em;
+        margin: 0 0 12px;
+      }
+      .toc a {
+        display: block;
+        padding: 12px 0;
+        border-top: 1px solid #ece6d8;
+        color: #4e4a43;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      .guide-card {
+        padding: 20px;
+      }
+      .portrait {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: url("/src/assets/About_page_Manabu_team_photo.webp") center/cover;
+        margin-bottom: 14px;
+      }
+      .guide-card p {
+        font-size: 14px;
+        line-height: 1.68;
+      }
+      .content {
+        font-size: 18px;
+      }
+      .content > p {
+        margin-bottom: 24px;
+      }
+      .decision {
+        padding: 30px;
+        margin-bottom: 36px;
+      }
+      .decision h2 {
+        font-size: 44px;
+        margin: 8px 0 14px;
+      }
+      .decision p {
+        font-size: 18px;
+      }
+      .guide-note {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 20px;
+        margin: 34px 0;
+        padding-top: 28px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 28px;
+      }
+      .guide-note .small-portrait {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: url("/src/assets/About_page_Manabu_team_photo.webp") center/cover;
+      }
+      .guide-note h3 {
+        color: var(--clay);
+        font-size: 34px;
+        margin-bottom: 10px;
+      }
+      .guide-note p {
+        font-size: 17px;
+      }
+      .section-title {
+        font-size: 50px;
+        margin: 58px 0 22px;
+      }
+      .choice-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 32px 0 44px;
+      }
+      .choice-card {
+        padding: 24px;
+      }
+      .choice-card h3 {
+        font-size: 34px;
+        margin-bottom: 14px;
+      }
+      .choice-card ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .choice-card li {
+        margin-bottom: 12px;
+      }
+      .route {
+        margin: 34px 0;
+      }
+      .route-row {
+        display: grid;
+        grid-template-columns: 92px 1fr;
+        gap: 18px;
+        padding: 19px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .route-row:first-child {
+        border-top: 1px solid var(--line);
+      }
+      .route-row time {
+        font-weight: 800;
+        color: var(--ink);
+      }
+      .route-row p {
+        font-size: 17px;
+      }
+      .fact-card {
+        padding: 22px;
+        margin-bottom: 18px;
+      }
+      .fact-card strong {
+        color: var(--ink);
+      }
+      .fact-list {
+        margin-top: 14px;
+      }
+      .fact-list div {
+        padding: 12px 0;
+        border-top: 1px solid #ece6d8;
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .image-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 34px 0;
+      }
+      .image-pair figure {
+        margin: 0;
+      }
+      .image-pair .photo {
+        height: 230px;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center;
+      }
+      figcaption {
+        margin-top: 10px;
+        color: #8a806f;
+        font-size: 12px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+      .pullquote {
+        margin: 38px 0;
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        font-family: Georgia, serif;
+        font-size: 27px;
+        line-height: 1.45;
+        color: #2f2b25;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="nav">
+        <div class="brand">TANUKI TABI TRAVEL</div>
+        <div class="navlinks">
+          <span>Home</span><span>Tours</span><span>Blog</span><span>FAQ</span><span>About</span><span>Contact</span><span class="button">Request a Tour</span>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Food Guides</div>
+          <h1>Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?</h1>
+          <p class="deck">A local guide's honest comparison of Tokyo's two famous fish markets: street food, tuna auctions, timing, atmosphere, and how to combine both in one morning.</p>
+          <div class="meta">
+            <span>Manabu, Licensed Tour Guide</span>
+            <span>Last updated: March 2026</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+        <div class="hero-img"></div>
+      </section>
+
+      <section class="layout">
+        <aside class="toc">
+          <h3>On this page</h3>
+          <a href="#">Quick answer</a>
+          <a href="#">What moved in 2018</a>
+          <a href="#">Tsukiji vs Toyosu</a>
+          <a href="#">When Toyosu makes sense</a>
+          <a href="#">How to combine both</a>
+        </aside>
+
+        <article class="content">
+          <div class="decision">
+            <div class="eyebrow">Quick Decision</div>
+            <h2>For most visitors, go to Tsukiji.</h2>
+            <p><strong>It has better food variety, more atmosphere, and no reservation needed.</strong> Toyosu is worth it only if you specifically want to see the tuna auction, which requires winning a monthly lottery.</p>
+          </div>
+
+          <p>"Should I go to Tsukiji or Toyosu?" This is one of the most common questions I get from visitors planning their Tokyo itinerary, and I completely understand the confusion. The internet is full of contradictory advice. Some sites say Tsukiji is closed. Others say Toyosu replaced it. A few claim you need reservations for both. Almost none of them get the full picture right.</p>
+
+          <p>I'm Manabu, a nationally licensed tour guide, and I take clients to both markets regularly. I've walked through Tsukiji's narrow lanes hundreds of times and I've watched the Toyosu tuna auction more times than I can count. The short answer is that these are two fundamentally different experiences, and which one you should visit depends entirely on what kind of traveler you are.</p>
+
+          <div class="guide-note">
+            <div class="small-portrait"></div>
+            <div>
+              <div class="eyebrow">Manabu's take</div>
+              <h3>The honest answer is simple, but the reason matters.</h3>
+              <p>If you only have one morning, I would start with Tsukiji. Toyosu is fascinating for the auction, but Tsukiji gives most travelers more food, more atmosphere, and fewer logistics.</p>
+            </div>
+          </div>
+
+          <h2 class="section-title">The Confusion: What Actually Moved in 2018?</h2>
+          <p>To understand the Tsukiji vs Toyosu debate, you need to understand what happened in October 2018, because this is where all the confusion started. Tsukiji was never one single market. It was actually two distinct operations sharing the same neighborhood: the inner wholesale market and the outer retail market.</p>
+
+          <p>The inner wholesale market was the massive, professional-only floor where licensed wholesalers auctioned and sold seafood in bulk every morning before dawn. This was where the famous tuna auctions happened. After years of delays and political debates, the entire inner wholesale operation relocated to Toyosu, a modern facility built on a man-made island in Tokyo Bay.</p>
+
+          <p>The outer market was, and still is, a dense network of retail shops, restaurants, and street food stalls. These businesses served local chefs, neighborhood residents, and food-loving visitors. When the inner market moved, the outer market had no reason to follow. So it stayed.</p>
+
+          <div class="pullquote">The part of Tsukiji that most tourists actually enjoyed never moved. The wholesale floor is gone. The food neighborhood is still alive.</div>
+
+          <h2 class="section-title">Which Market Fits Your Trip?</h2>
+          <div class="choice-grid">
+            <div class="choice-card">
+              <h3>Choose Tsukiji if...</h3>
+              <ul>
+                <li>You want street food, breakfast, and old-school market atmosphere.</li>
+                <li>You do not want to deal with reservations or lottery timing.</li>
+                <li>You like browsing knives, ceramics, tea, pickles, and kitchen goods.</li>
+              </ul>
+            </div>
+            <div class="choice-card">
+              <h3>Choose Toyosu if...</h3>
+              <ul>
+                <li>You specifically want to see the tuna auction.</li>
+                <li>You prefer a clean, spacious, modern facility.</li>
+                <li>You already secured an auction viewing slot and can arrive early.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="section-title">A Simple Morning Route</h2>
+          <div class="route">
+            <div class="route-row"><time>7:45</time><p>Arrive near Tsukiji before the main crowd. Start with the outer market while stalls are active.</p></div>
+            <div class="route-row"><time>8:00</time><p>Eat your way through tamagoyaki, grilled seafood, sushi counters, tea shops, and seasonal snacks.</p></div>
+            <div class="route-row"><time>9:30</time><p>Move from food stalls to knife shops, ceramics, dried goods, or a walk toward Ginza.</p></div>
+            <div class="route-row"><time>Optional</time><p>Add Toyosu only if the auction or Senkyaku Banrai is a specific goal. Otherwise, Tsukiji alone is enough.</p></div>
+          </div>
+
+          <div class="image-pair">
+            <figure>
+              <div class="photo" style="background-image:url('/images/blog/tsukiji-tamagoyaki.webp')"></div>
+              <figcaption>Tsukiji: street-level food texture</figcaption>
+            </figure>
+            <figure>
+              <div class="photo" style="background-image:url('/images/blog/toyosu-senkyaku-banrai.webp')"></div>
+              <figcaption>Toyosu: modern market complex</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <aside>
+          <div class="guide-card">
+            <div class="portrait"></div>
+            <h3>Guide Note</h3>
+            <p>I take guests to both markets. My default plan is Tsukiji first, then Toyosu only when the auction is part of the morning.</p>
+          </div>
+
+          <div class="fact-card">
+            <h3>At a Glance</h3>
+            <div class="fact-list">
+              <div><strong>Best for food:</strong><br />Tsukiji Outer Market</div>
+              <div><strong>Best for auction:</strong><br />Toyosu Fish Market</div>
+              <div><strong>No reservation:</strong><br />Tsukiji</div>
+              <div><strong>Best time:</strong><br />Around 8:00 AM</div>
+            </div>
+          </div>
+
+          <div class="fact-card">
+            <h3>Design Intent</h3>
+            <p>Dense tables are replaced with a clear verdict, guide notes, route strips, and choice cards. Exact facts can still use compact tables later in the article.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

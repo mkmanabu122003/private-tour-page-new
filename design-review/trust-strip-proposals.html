@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trust Strip — Refinement Proposals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --background: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+    padding: 60px 0 80px;
+  }
+  .lining-nums { font-variant-numeric: lining-nums; }
+
+  .page-head {
+    max-width: 1280px;
+    margin: 0 auto 56px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+  .page-head code {
+    background: rgba(0,0,0,.04);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  /* Variant wrapper */
+  .variant {
+    max-width: 1280px;
+    margin: 0 auto 32px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+  .variant-foot {
+    padding: 16px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+
+  /* Hero strip placeholder (to show context) */
+  .hero-strip-context {
+    height: 80px;
+    background:
+      linear-gradient(95deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 62%, rgba(0,0,0,0.18) 100%),
+      url("../public/images/tour-photos/group-photo.webp") center/cover, #2b2823;
+    display: flex; align-items: center; padding: 0 40px;
+    color: rgba(255,255,255,.85);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  /* === Common trust-strip shell === */
+  .trust-shell {
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+  }
+  .trust-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* === CURRENT === */
+  .current .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 24px 0;
+    gap: 0;
+  }
+  .current .cell {
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 28px;
+    border-left: 1px solid var(--line);
+  }
+  .current .cell:first-child { border-left: 0; padding-left: 0; }
+  .current .cell:last-child { padding-right: 0; }
+  .current .icon {
+    width: 44px; height: 44px;
+    background: var(--paper);
+    border: 1px solid rgba(220,212,194,.8);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+    flex: 0 0 44px;
+  }
+  .current .label {
+    font-size: 10.9px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 0;
+  }
+  .current .value {
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  /* === PROPOSAL A: bump sizes + padding === */
+  .planA .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 36px 0;
+    gap: 0;
+  }
+  .planA .cell {
+    display: flex; align-items: center; gap: 18px;
+    padding: 0 28px;
+    border-left: 1px solid var(--line);
+  }
+  .planA .cell:first-child { border-left: 0; padding-left: 0; }
+  .planA .cell:last-child { padding-right: 0; }
+  .planA .icon {
+    width: 56px; height: 56px;
+    background: var(--paper);
+    border: 1.5px solid rgba(201,168,76,0.30);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+    flex: 0 0 56px;
+  }
+  .planA .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    margin: 0 0 6px;
+  }
+  .planA .value {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  /* === PROPOSAL B: Cormorant gold numerals on key cells === */
+  .planB .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 0;
+    gap: 0;
+  }
+  .planB .cell {
+    display: flex; align-items: center; gap: 20px;
+    padding: 0 32px;
+    border-left: 1px solid var(--line);
+  }
+  .planB .cell:first-child { border-left: 0; padding-left: 0; }
+  .planB .cell:last-child { padding-right: 0; }
+  .planB .icon {
+    width: 56px; height: 56px;
+    background: rgba(201,168,76,0.06);
+    border: 1.5px solid rgba(201,168,76,0.30);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+    flex: 0 0 56px;
+  }
+  .planB .label {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin: 0 0 4px;
+    letter-spacing: -0.005em;
+  }
+  .planB .value {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted-2);
+    line-height: 1.4;
+  }
+  .planB .star {
+    font-size: 22px;
+    margin-left: 2px;
+    vertical-align: 2px;
+    color: var(--gold);
+  }
+
+  /* === PROPOSAL C: editorial split — value + descriptor === */
+  .planC .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 48px 0;
+    gap: 0;
+  }
+  .planC .cell {
+    display: flex; flex-direction: column; gap: 14px;
+    padding: 0 32px;
+    border-left: 1px solid var(--line);
+  }
+  .planC .cell:first-child { border-left: 0; padding-left: 0; }
+  .planC .cell:last-child { padding-right: 0; }
+  .planC .top-row {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .planC .icon {
+    width: 44px; height: 44px;
+    background: rgba(201,168,76,0.08);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+    flex: 0 0 44px;
+  }
+  .planC .label-eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 0;
+  }
+  .planC .value {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .planC .desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0;
+  }
+  .planC .star {
+    font-size: 20px;
+    color: var(--gold);
+    margin-left: 2px;
+    vertical-align: 1px;
+  }
+
+  /* Marker for footer comparison row */
+  .meta-row {
+    display: flex; gap: 8px; align-items: center;
+    margin: 0 0 8px;
+    color: var(--muted-2);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+  }
+  .meta-row .h { color: var(--ink); }
+
+  .compact-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--gold);
+    background: rgba(201,168,76,.12);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Trust strip — refinement proposals</h1>
+  <p>
+    現状は <code>py-6 / 44px icon / 11px label / 16px value</code> で hero 直下に "薄く" 載っているだけになっています。
+    存在感を出す3パターンで比較。フッターに各案の判断ポイントを記載しています。実装場所：<code>src/pages/Index.tsx</code> Trust Signals セクション。
+  </p>
+</div>
+
+<!-- ============ CURRENT ============ -->
+<div class="variant current">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT</span>
+    <span class="variant-name">production · py-6 / icon 44 / value 16px</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div>
+            <p class="label">Licensed</p>
+            <p class="value">Government-certified guide</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div>
+            <p class="label lining-nums">4.86★</p>
+            <p class="value">Average guest rating</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div>
+            <p class="label">Private</p>
+            <p class="value">No mixed groups</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div>
+            <p class="label">24 hours</p>
+            <p class="value">Typical reply time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue：</strong>icon が小さく、value が <code>text-base</code> で hero ↔ next section の境界に "余韻" がない。Hero の高い演出が下で <span style="color:#9c563f;">途切れて</span> 見える。
+  </div>
+</div>
+
+<!-- ============ PLAN A ============ -->
+<div class="variant planA">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN A · Bigger same idiom</span>
+    <span class="variant-name">+50% padding · 56px icon · 18px value · gold-tint border</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div>
+            <p class="label">Licensed</p>
+            <p class="value">Government-certified guide</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div>
+            <p class="label lining-nums">4.86★ rating</p>
+            <p class="value">Average from 500+ guests</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div>
+            <p class="label">Private</p>
+            <p class="value">No mixed groups, ever</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div>
+            <p class="label lining-nums">24h reply</p>
+            <p class="value">Typical response time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>section padding <code>py-6 → py-9</code>（24→36px）／icon container 44 → <strong>56px</strong> + gold-tint border 1.5px／label 11→<strong>11px 0.18em 700</strong>／value 16→<strong>18px</strong>／cell gap 16→18px。<br>
+    <strong>効果：</strong>同じ idiom のまま <em>"高さ"</em> が出る。最も低リスク。実装30分。
+  </div>
+</div>
+
+<!-- ============ PLAN B ============ -->
+<div class="variant planB">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN B · Cormorant gold numerals</span>
+    <span class="variant-name">数値を Cormorant 32px gold で主役化 · about-meta と統一感</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+          <div>
+            <p class="label">Licensed</p>
+            <p class="value">Government certified</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+          <div>
+            <p class="label lining-nums">4.86<span class="star">★</span></p>
+            <p class="value">Average rating</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+          <div>
+            <p class="label lining-nums">1-on-1</p>
+            <p class="value">Private, no mixed groups</p>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+          <div>
+            <p class="label lining-nums">24h</p>
+            <p class="value">Typical reply time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>"label" を <strong>Cormorant 32px gold lining-nums</strong>（about-meta と同じ書体・色）、"value" を 12px Inter uppercase tracking 0.18em で descriptor 化／icon を <strong>circle 56px gold-wash</strong>。<br>
+    <strong>効果：</strong><em>about-meta と統一感</em> が生まれ、ページ全体の Plan A 一貫性 ↑。Cormorant 数字のエレガントさが ヒーロー直下に現れて高級感。
+  </div>
+</div>
+
+<!-- ============ PLAN C ============ -->
+<div class="variant planC">
+  <div class="variant-head">
+    <span class="variant-tag">PLAN C · Editorial split</span>
+    <span class="variant-name">value + descriptor · Cormorant 26px + Inter body 13px</span>
+  </div>
+  <div class="hero-strip-context">↑ Hero ends here ↓ Trust strip below</div>
+  <div class="trust-shell">
+    <div class="trust-container">
+      <div class="trust-grid">
+        <div class="cell">
+          <div class="top-row">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L20 6 V12 C20 17 16 20.5 12 21.5 C8 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15 10"/></svg></div>
+            <p class="label-eyebrow">Licensed</p>
+          </div>
+          <p class="value">Government-certified guide</p>
+          <p class="desc">National licensure (全国通訳案内士) since 2014.</p>
+        </div>
+        <div class="cell">
+          <div class="top-row">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14.5 9 L21 9.7 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.7 L9.5 9 Z"/></svg></div>
+            <p class="label-eyebrow">Highly rated</p>
+          </div>
+          <p class="value lining-nums">4.86<span class="star">★</span> average</p>
+          <p class="desc">From 500+ private tour reviews.</p>
+        </div>
+        <div class="cell">
+          <div class="top-row">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19 C3 15.5 5.5 13 9 13 C12.5 13 15 15.5 15 19"/><path d="M14 19 C14 17 15.5 15 17 15 C18.5 15 21 17 21 19"/></svg></div>
+            <p class="label-eyebrow">Private</p>
+          </div>
+          <p class="value">Just you, no mixed groups</p>
+          <p class="desc">Pace, language, and food set by you.</p>
+        </div>
+        <div class="cell">
+          <div class="top-row">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></div>
+            <p class="label-eyebrow">Quick reply</p>
+          </div>
+          <p class="value lining-nums">Within 24 hours</p>
+          <p class="desc">Direct from Manabu, not a booking desk.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>2-row layout — 上段 [icon + small gold eyebrow]、中段 <strong>Cormorant 26px ink value</strong>、下段 13px Inter muted descriptor／padding <code>py-12</code>（48px）／cell gap 14px。<br>
+    <strong>効果：</strong>各セルが <em>1-sentence証明</em> を持つ → <strong>"小さい統計" → "ストーリー"</strong> に格上げ。section 自体が editorial なミニ枠として独立して読める。最も substantial。
+  </div>
+</div>
+
+<!-- ============ DECISION GUIDE ============ -->
+<div style="max-width: 1280px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">どの案で進めるか</h2>
+  <table style="width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;">
+    <thead>
+      <tr style="background: var(--card);">
+        <th style="padding: 14px 18px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">観点</th>
+        <th style="padding: 14px 18px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">A · Bigger</th>
+        <th style="padding: 14px 18px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">B · Cormorant数値</th>
+        <th style="padding: 14px 18px; text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-2); border-bottom: 1px solid var(--line);">C · Editorial split</th>
+      </tr>
+    </thead>
+    <tbody style="font-size: 13px; color: var(--muted);">
+      <tr><td style="padding: 12px 18px; color: var(--ink); font-weight: 600;">存在感</td><td style="text-align: center;">○</td><td style="text-align: center;">◎</td><td style="text-align: center;">◎+</td></tr>
+      <tr><td style="padding: 12px 18px; color: var(--ink); font-weight: 600;">about-meta との一貫性</td><td style="text-align: center;">△</td><td style="text-align: center;">◎（Cormorant gold揃え）</td><td style="text-align: center;">○</td></tr>
+      <tr><td style="padding: 12px 18px; color: var(--ink); font-weight: 600;">情報量</td><td style="text-align: center;">同じ</td><td style="text-align: center;">同じ</td><td style="text-align: center;">+1行 descriptor</td></tr>
+      <tr><td style="padding: 12px 18px; color: var(--ink); font-weight: 600;">実装コスト</td><td style="text-align: center;">小（数値変更のみ）</td><td style="text-align: center;">中（書体差し替え）</td><td style="text-align: center;">中（descriptor文言要）</td></tr>
+      <tr><td style="padding: 12px 18px; color: var(--ink); font-weight: 600;">モバイル</td><td style="text-align: center;">2x2 そのまま</td><td style="text-align: center;">2x2 + 数値小さく</td><td style="text-align: center;">2x2 縦伸び要注意</td></tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top: 20px; color: var(--muted); font-size: 14px; line-height: 1.6;">
+    <strong style="color: var(--ink);">推奨：</strong>
+    <span class="compact-tag">B · Cormorant gold numerals</span>
+    が最も簡単に "しょぼさ" を解消できます。about-meta セクション（500+ / 4.86 / EN · ES）と Cormorant gold で揃うので、ページ全体の Plan A 一貫性が生まれ、Hero 直下の最初のシグナルとして強い印象を残します。
+  </p>
+  <p style="margin: 8px 0 0; color: var(--muted-2); font-size: 13px;">
+    descriptor を加えたい場合（例：「National licensure (全国通訳案内士) since 2014」）は C を選択。実装は約1時間。
+  </p>
+</div>
+
+</body>
+</html>

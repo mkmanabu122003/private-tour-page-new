@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 
 const EsPrimeraVezTokioGuiaLocal = () => {
@@ -18,56 +20,36 @@ const EsPrimeraVezTokioGuiaLocal = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/asakusa-kaminarimon-morning.webp"
-          alt="Puerta Kaminarimon en Asakusa, Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planifica tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              Primera Vez en Tokio: Lo Que Cambia Tener un Guía Local
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士), nacido en Kanazawa, criado en Kioto y afincado en Tokio.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/asakusa-kaminarimon-morning.webp"
+        imageAlt="Puerta Kaminarimon en Asakusa, Tokio"
+        eyebrow="Planifica tu Viaje"
+        title="Primera Vez en Tokio: Lo Que Cambia Tener un Guía Local"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士), nacido en Kanazawa, criado en Kioto y afincado en Tokio."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Un Día Real con Guía", href: "#section-01-un-día-real-con-guía" },
+          { num: "02", label: "El Valor Que No Se Ve", href: "#section-02-el-valor-que-no-se-ve" },
+          { num: "03", label: "Cuándo NO Necesitas un Guía", href: "#section-03-cuándo-no-necesitas-un-guía" },
+          { num: "04", label: "Cuándo un Guía Cambia Todo", href: "#section-04-cuándo-un-guía-cambia-todo" },
+          { num: "05", label: "Una Nota Personal", href: "#section-05-una-nota-personal" },
+          { num: "06", label: "¿Es Tu Primera Vez en Tokio?", href: "#section-06-es-tu-primera-vez-en-tokio" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               La pregunta que más me hacen no es sobre templos ni sushi. Es: "¿Qué hace un guía exactamente durante un tour?"
@@ -80,14 +62,15 @@ const EsPrimeraVezTokioGuiaLocal = () => {
             </p>
 
             {/* Un día real con guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Un Día Real con Guía</span></div>
+            <h2 id="section-01-un-día-real-con-guía" className="scroll-mt-20">
               Un Día Real con Guía (De Tsukiji a Asakusa)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Para que entiendas la diferencia, voy a comparar el mismo recorrido con guía y sin guía. Imagina que es tu primer día en Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mañana: Tsukiji (9:00 - 11:30)
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-4">
@@ -103,7 +86,7 @@ const EsPrimeraVezTokioGuiaLocal = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Mediodía: Callejones de Ginza (11:30 - 13:30)
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-4">
@@ -119,7 +102,7 @@ const EsPrimeraVezTokioGuiaLocal = () => {
               </p>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tarde: Asakusa (14:00 - 16:30)
             </h3>
             <div className="bg-secondary/30 rounded-lg p-6 mb-4">
@@ -136,11 +119,12 @@ const EsPrimeraVezTokioGuiaLocal = () => {
             </div>
 
             {/* El valor oculto */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · El Valor Que No Se Ve</span></div>
+            <h2 id="section-02-el-valor-que-no-se-ve" className="scroll-mt-20">
               El Valor Que No Se Ve
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Navegación (13 Líneas de Metro)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -148,21 +132,21 @@ const EsPrimeraVezTokioGuiaLocal = () => {
               Tokio tiene 13 líneas de metro, más líneas de JR, líneas privadas, y varias redes de autobuses. Google Maps funciona, pero no te dice cuál es la salida correcta de una estación con 15 salidas, ni que el andén del otro lado te ahorra 5 minutos de caminata. Un guía sabe estos atajos porque los usa cada día.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Acceso a Restaurantes
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Muchos de los mejores restaurantes de Tokio no tienen carta en inglés. Algunos ni siquiera tienen cartel visible desde la calle. Un guía te lleva a sitios donde no entrarías solo, pide por ti cuando es necesario, y te explica qué estás comiendo y por qué es especial.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Contexto Cultural
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japón tiene capas de significado que no son visibles a primera vista. ¿Por qué hay dos tipos de cuerda en los santuarios? ¿Por qué algunos restaurantes no aceptan reservas? ¿Por qué ese edificio aparentemente normal es en realidad un tesoro nacional? Un guía te da el "sistema operativo cultural" que hace que todo encaje.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ajustes en Tiempo Real
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -170,7 +154,8 @@ const EsPrimeraVezTokioGuiaLocal = () => {
             </p>
 
             {/* Cuándo NO necesitas un guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Cuándo NO Necesitas un Guía</span></div>
+            <h2 id="section-03-cuándo-no-necesitas-un-guía" className="scroll-mt-20">
               Cuándo NO Necesitas un Guía
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -192,7 +177,8 @@ const EsPrimeraVezTokioGuiaLocal = () => {
             </ul>
 
             {/* Cuándo un guía cambia todo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cuándo un Guía Cambia Todo</span></div>
+            <h2 id="section-04-cuándo-un-guía-cambia-todo" className="scroll-mt-20">
               Cuándo un Guía Cambia Todo
             </h2>
             <ul className="space-y-3 mb-8">
@@ -214,7 +200,8 @@ const EsPrimeraVezTokioGuiaLocal = () => {
             </ul>
 
             {/* Nota personal */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Una Nota Personal</span></div>
+            <h2 id="section-05-una-nota-personal" className="scroll-mt-20">
               Una Nota Personal
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -226,7 +213,8 @@ const EsPrimeraVezTokioGuiaLocal = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · ¿Es Tu Primera Vez en Tokio?</span></div>
+              <h2 id="section-06-es-tu-primera-vez-en-tokio" className="scroll-mt-20">
                 ¿Es Tu Primera Vez en Tokio?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -244,7 +232,11 @@ const EsPrimeraVezTokioGuiaLocal = () => {
               </Link>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -299,7 +291,9 @@ const EsPrimeraVezTokioGuiaLocal = () => {
       1. Fujin/Raijin statues at Kaminarimon — confirm correct names
       2. Kanazawa/Kyoto bio — confirm consistency with About page
       */}
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

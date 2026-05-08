@@ -105,8 +105,11 @@ export const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <nav className="container-section">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <Link to="/es" className="font-serif text-lg md:text-xl font-semibold tracking-[0.15em] text-foreground uppercase">
-              Tanuki Tabi Travel
+            <Link to="/es" className="flex items-center gap-3" aria-label="Tanuki Tabi Travel">
+              <img src="/images/logo-mark.webp" alt="" className="h-10 w-10 md:h-12 md:w-12" width={48} height={48} />
+              <span className="font-serif text-lg md:text-2xl font-medium tracking-[0.02em] text-foreground">
+                Tanuki Tabi Travel
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -464,8 +467,11 @@ export const Header = () => {
       <nav className="container-section">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="font-serif text-lg md:text-xl font-semibold tracking-[0.15em] text-foreground uppercase">
-            Tanuki Tabi Travel
+          <Link to="/" className="flex items-center gap-3" aria-label="Tanuki Tabi Travel">
+            <img src="/images/logo-mark.webp" alt="" className="h-10 w-10 md:h-12 md:w-12" width={48} height={48} />
+            <span className="font-serif text-lg md:text-2xl font-medium tracking-[0.02em] text-foreground">
+              Tanuki Tabi Travel
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

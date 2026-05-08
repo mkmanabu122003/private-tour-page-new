@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Table — Visibility Options (A / B / C)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --ink-soft: #2b2823;
+        --muted: #4f4a43;
+        --muted-2: #6a655c;
+        --soft: #eeeae0;
+        --line: #dcd4c2;
+        --line-2: #c4bba6;
+        --gold: #c9a84c;
+        --gold-soft: #f4e5b6;
+        --gold-deep: #a88930;
+        --clay: #9c563f;
+        --card: #fffdf8;
+        --green: #5a7a3a;
+        --green-soft: #e7eed7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-variant-numeric: lining-nums tabular-nums;
+      }
+      .toolbar {
+        position: sticky; top: 0; z-index: 10;
+        background: #1d1a14; color: #f8f7f1;
+        padding: 14px 24px;
+        display: flex; align-items: center; gap: 24px;
+        font-size: 13px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .toolbar .title { font-weight: 700; letter-spacing: .04em; }
+      .toolbar .meta { color: #c9c2b0; }
+
+      .stack { max-width: 980px; margin: 0 auto; padding: 32px 32px 80px; }
+
+      .opt {
+        background: var(--paper);
+        padding: 36px 40px 44px;
+        border-radius: 10px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      }
+      .opt-tag {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 4px;
+      }
+      .opt-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0 0 8px;
+      }
+      .opt-desc {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0 0 24px;
+        max-width: 640px;
+        line-height: 1.55;
+      }
+
+      .lead {
+        font-size: 16px;
+        color: var(--muted);
+        margin: 0 0 18px;
+        line-height: 1.6;
+      }
+
+      /* ============== CURRENT (BEFORE) ============== */
+      table.current {
+        width: 100%;
+        font-size: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      table.current thead { background: rgba(220, 212, 194, .35); }
+      table.current th {
+        text-align: left;
+        padding: 12px;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      table.current td {
+        padding: 12px;
+        color: var(--muted);
+        border-top: 1px solid var(--line);
+      }
+
+      /* ============== OPTION A — Editorial Ledger ============== */
+      .opt-a-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-variant-numeric: tabular-nums lining-nums;
+      }
+      .opt-a-table thead th {
+        text-align: left;
+        padding: 14px 16px 12px;
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+        color: var(--ink);
+        border-top: 2px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+        background: transparent;
+      }
+      .opt-a-table thead th.savings {
+        color: var(--gold-deep);
+      }
+      .opt-a-table tbody td {
+        padding: 16px;
+        font-size: 15px;
+        color: var(--ink);
+        border-bottom: 1px solid var(--line);
+        line-height: 1.4;
+      }
+      .opt-a-table tbody td.label {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .opt-a-table tbody td.savings {
+        color: var(--gold-deep);
+        font-weight: 700;
+      }
+      .opt-a-table tbody tr:last-child td {
+        border-bottom: 2px solid var(--ink);
+      }
+      .opt-a-cap {
+        font-size: 12px;
+        color: var(--muted-2);
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+      }
+
+      /* ============== OPTION B — Card with Highlight Column ============== */
+      .opt-b-wrap {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 6px 22px rgba(60, 50, 25, .08);
+      }
+      .opt-b-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-variant-numeric: tabular-nums lining-nums;
+      }
+      .opt-b-table thead th {
+        text-align: left;
+        padding: 14px 16px;
+        background: #1d1a14;
+        color: #f4e5b6;
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+      }
+      .opt-b-table thead th.savings {
+        background: var(--gold-deep);
+        color: #fffdf8;
+      }
+      .opt-b-table tbody td {
+        padding: 14px 16px;
+        font-size: 15px;
+        color: var(--ink-soft);
+        border-bottom: 1px solid var(--line);
+        line-height: 1.4;
+      }
+      .opt-b-table tbody td.label {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .opt-b-table tbody td.savings-cell {
+        background: var(--gold-soft);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .opt-b-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+      .opt-b-table tbody tr:nth-child(even) td:not(.savings-cell) {
+        background: rgba(220, 212, 194, .15);
+      }
+
+      /* ============== OPTION C — Comparison Winner Style ============== */
+      .opt-c-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-variant-numeric: tabular-nums lining-nums;
+        border-top: 1px solid var(--line);
+      }
+      .opt-c-table thead th {
+        text-align: left;
+        padding: 16px 14px 12px;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--ink);
+        border-bottom: 2px solid var(--gold);
+        background: transparent;
+      }
+      .opt-c-table thead th .sub {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--muted-2);
+        margin-top: 2px;
+      }
+      .opt-c-table thead th.haneda { color: var(--green); }
+      .opt-c-table thead th.haneda .sub { color: var(--green); }
+      .opt-c-table tbody td {
+        padding: 16px 14px;
+        font-size: 15px;
+        color: var(--ink-soft);
+        border-bottom: 1px solid var(--line);
+        line-height: 1.4;
+        vertical-align: middle;
+      }
+      .opt-c-table tbody td.scenario {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.25;
+      }
+      .opt-c-table tbody td.haneda-win {
+        background: var(--green-soft);
+        color: var(--green);
+        font-weight: 700;
+        position: relative;
+      }
+      .opt-c-table tbody td.haneda-win::before {
+        content: "✓";
+        margin-right: 6px;
+        font-weight: 700;
+      }
+      .opt-c-table tbody td.savings {
+        font-weight: 700;
+        color: var(--gold-deep);
+      }
+      .opt-c-table tbody td.muted-cell {
+        color: var(--muted-2);
+      }
+
+      .footnote {
+        font-size: 12px;
+        color: var(--muted-2);
+        margin-top: 14px;
+        line-height: 1.5;
+      }
+      .footnote strong { color: var(--ink); }
+
+      .compare-row {
+        display: flex; gap: 16px; flex-wrap: wrap;
+        margin-top: 14px; font-size: 13px; color: var(--muted-2);
+      }
+      .legend-dot {
+        display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+        vertical-align: middle; margin-right: 6px;
+      }
+      .legend-dot.gold { background: var(--gold-soft); }
+      .legend-dot.green { background: var(--green-soft); }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">BLOG TABLE — VISIBILITY OPTIONS</span>
+      <span class="meta">NaritaVsHaneda · Section 07 — The Real Cost</span>
+    </div>
+
+    <div class="stack">
+
+      <!-- ============== CURRENT (BEFORE) ============== -->
+      <section class="opt">
+        <div class="opt-tag">Before · 現状</div>
+        <h2 class="opt-name">Current — Plain Subdued Table</h2>
+        <p class="opt-desc">本文と同じ灰色 (text-muted-foreground)、薄いボーダー、ヘッダーも控えめ。情報密度はあるが視認性が弱い。</p>
+        <p class="lead">To put the difference in concrete terms, here's what transit costs for a party of two, round trip:</p>
+        <table class="current">
+          <thead>
+            <tr>
+              <th>Scenario (2 people, round trip)</th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Haneda savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Train (cheapest)</td><td>¥9,880 (Skyliner×4)</td><td>¥2,076 (Monorail×4)</td><td>¥7,800</td></tr>
+            <tr><td>N'EX / N'EX Round Trip deal</td><td>¥10,000 (N'EX RTT×2)</td><td>—</td><td>—</td></tr>
+            <tr><td>Limousine Bus (hotel-door)</td><td>¥12,800</td><td>¥5,600</td><td>¥7,200</td></tr>
+            <tr><td>Taxi (one-way only)</td><td>¥25,000-32,000</td><td>¥6,000-10,000</td><td>¥19,000-22,000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============== OPTION A ============== -->
+      <section class="opt">
+        <div class="opt-tag">Option A · 最小工数</div>
+        <h2 class="opt-name">Editorial Ledger — 新聞・経済記事風</h2>
+        <p class="opt-desc">上下に太線（黒2px）、ヘッダーは Inter uppercase eyebrow、数字は tabular-nums で縦に揃える、savings 列だけゴールド色。装飾を加えず "信頼感のあるデータ表" にする方向。Cormorant の権威性とも整合。</p>
+        <p class="lead">To put the difference in concrete terms, here's what transit costs for a party of two, round trip:</p>
+        <table class="opt-a-table">
+          <thead>
+            <tr>
+              <th>Scenario (2 people, round trip)</th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th class="savings">Haneda savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="label">Train (cheapest)</td>
+              <td>¥9,880 <span style="color:var(--muted-2); font-size:13px">(Skyliner×4)</span></td>
+              <td>¥2,076 <span style="color:var(--muted-2); font-size:13px">(Monorail×4)</span></td>
+              <td class="savings">¥7,800</td>
+            </tr>
+            <tr>
+              <td class="label">N'EX / N'EX Round Trip deal</td>
+              <td>¥10,000 <span style="color:var(--muted-2); font-size:13px">(N'EX RTT×2)</span></td>
+              <td>—</td>
+              <td class="savings">—</td>
+            </tr>
+            <tr>
+              <td class="label">Limousine Bus (hotel-door)</td>
+              <td>¥12,800</td>
+              <td>¥5,600</td>
+              <td class="savings">¥7,200</td>
+            </tr>
+            <tr>
+              <td class="label">Taxi (one-way only)</td>
+              <td>¥25,000–32,000</td>
+              <td>¥6,000–10,000</td>
+              <td class="savings">¥19,000–22,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="opt-a-cap">Source — 2026 fares · author research</p>
+      </section>
+
+      <!-- ============== OPTION B ============== -->
+      <section class="opt">
+        <div class="opt-tag">Option B · インパクト寄り</div>
+        <h2 class="opt-name">Card with Highlight Column — ガイドブック風</h2>
+        <p class="opt-desc">カード化＋影、ヘッダーは黒地ゴールド文字、savings 列はゴールド地で塗り、行の zebra striping。情報の "結論" が savings 列に集約されるので、答えだけ拾い読みするユーザーに強い。</p>
+        <p class="lead">To put the difference in concrete terms, here's what transit costs for a party of two, round trip:</p>
+        <div class="opt-b-wrap">
+          <table class="opt-b-table">
+            <thead>
+              <tr>
+                <th>Scenario (2 people, round trip)</th>
+                <th>Narita</th>
+                <th>Haneda</th>
+                <th class="savings">Haneda savings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="label">Train (cheapest)</td>
+                <td>¥9,880 <span style="color:var(--muted-2); font-size:13px">(Skyliner×4)</span></td>
+                <td>¥2,076 <span style="color:var(--muted-2); font-size:13px">(Monorail×4)</span></td>
+                <td class="savings-cell">¥7,800</td>
+              </tr>
+              <tr>
+                <td class="label">N'EX / N'EX Round Trip deal</td>
+                <td>¥10,000 <span style="color:var(--muted-2); font-size:13px">(N'EX RTT×2)</span></td>
+                <td>—</td>
+                <td class="savings-cell">—</td>
+              </tr>
+              <tr>
+                <td class="label">Limousine Bus (hotel-door)</td>
+                <td>¥12,800</td>
+                <td>¥5,600</td>
+                <td class="savings-cell">¥7,200</td>
+              </tr>
+              <tr>
+                <td class="label">Taxi (one-way only)</td>
+                <td>¥25,000–32,000</td>
+                <td>¥6,000–10,000</td>
+                <td class="savings-cell">¥19,000–22,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="compare-row">
+          <span><span class="legend-dot gold"></span>Haneda savings (highlight)</span>
+        </div>
+      </section>
+
+      <!-- ============== OPTION C ============== -->
+      <section class="opt">
+        <div class="opt-tag">Option C · 攻め</div>
+        <h2 class="opt-name">Comparison Winner — 勝ち負けが一目で分かる</h2>
+        <p class="opt-desc">勝った側のセルをグリーン地＋✓ で表示、savings 列はゴールド数字。「価格を比較して即断する」読者向けに、表＝判断の答えそのものになる。Narita vs Haneda の二項対立記事との相性が最も良い。</p>
+        <p class="lead">To put the difference in concrete terms, here's what transit costs for a party of two, round trip:</p>
+        <table class="opt-c-table">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita <span class="sub">total cost</span></th>
+              <th class="haneda">Haneda <span class="sub">total cost</span></th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scenario">Train<br><span style="font-family:Inter; font-size:12px; font-weight:400; color:var(--muted-2); text-transform:uppercase; letter-spacing:.1em">Cheapest</span></td>
+              <td class="muted-cell">¥9,880 <span style="font-size:12px">(Skyliner×4)</span></td>
+              <td class="haneda-win">¥2,076 <span style="font-weight:400; color:var(--green); font-size:12px; opacity:.85">(Monorail×4)</span></td>
+              <td class="savings">¥7,800</td>
+            </tr>
+            <tr>
+              <td class="scenario">N'EX Round Trip<br><span style="font-family:Inter; font-size:12px; font-weight:400; color:var(--muted-2); text-transform:uppercase; letter-spacing:.1em">Tourist deal</span></td>
+              <td class="muted-cell">¥10,000 <span style="font-size:12px">(N'EX RTT×2)</span></td>
+              <td class="muted-cell">—</td>
+              <td class="muted-cell">—</td>
+            </tr>
+            <tr>
+              <td class="scenario">Limousine Bus<br><span style="font-family:Inter; font-size:12px; font-weight:400; color:var(--muted-2); text-transform:uppercase; letter-spacing:.1em">Hotel-door</span></td>
+              <td class="muted-cell">¥12,800</td>
+              <td class="haneda-win">¥5,600</td>
+              <td class="savings">¥7,200</td>
+            </tr>
+            <tr>
+              <td class="scenario">Taxi<br><span style="font-family:Inter; font-size:12px; font-weight:400; color:var(--muted-2); text-transform:uppercase; letter-spacing:.1em">One-way only</span></td>
+              <td class="muted-cell">¥25,000–32,000</td>
+              <td class="haneda-win">¥6,000–10,000</td>
+              <td class="savings">¥19,000–22,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="compare-row">
+          <span><span class="legend-dot green"></span>Cheaper option (winner)</span>
+          <span style="color:var(--gold-deep)">¥0,000 = Round-trip savings vs Narita</span>
+        </div>
+      </section>
+
+      <!-- ============== Decision helper ============== -->
+      <section class="opt" style="background: #1d1a14; color: #f4e5b6;">
+        <div class="opt-tag" style="color: var(--gold)">どれを選ぶか</div>
+        <h2 class="opt-name" style="color: #f4e5b6">使い分けの目安</h2>
+        <table style="width:100%; color:#e0d8c0; font-size:14px; border-collapse:collapse; margin-top:8px;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">案</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">向いてる場面</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">注意点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">A · Editorial Ledger</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">記事の信頼感を最優先。装飾控えめに数字を読ませたい。サイト全体の他の記事にも横展開しやすい。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">「目立たせる」要件にはやや弱い。視認性 +25% 程度。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">B · Card + Highlight</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">記事の主役モジュールとして "見て欲しい"。savings の数字が記事の結論になっている時。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">他の記事への展開時に色設計を毎回する必要あり。やや重め。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">C · Winner</td>
+              <td style="padding:14px 12px; vertical-align:top; line-height:1.55;">"AかBを選ぶ" 比較記事専用。Narita vs Haneda、Tsukiji vs Toyosu、Narita vs Kamakura ガイドあり/なし、等。</td>
+              <td style="padding:14px 12px; vertical-align:top; line-height:1.55;">単純比較でないテーブル（時刻表など）には使えない。緑/ゴールド多色で個性が強い。</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </body>
+</html>

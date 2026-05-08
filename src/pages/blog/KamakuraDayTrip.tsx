@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const KamakuraDayTrip = () => {
   return (
@@ -14,52 +16,44 @@ const KamakuraDayTrip = () => {
         canonicalPath="/blog/kamakura-day-trip-from-tokyo"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/kamakura-great-buddha.webp"
-          alt="Great Buddha of Kamakura, a must-see day trip from Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trip Guides</p>
-            <h1 className="heading-display text-foreground">
-              Kamakura Day Trip from Tokyo: With or Without a Guide?
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided hundreds of Kamakura day trips.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/kamakura-great-buddha.webp"
+        imageAlt="Great Buddha of Kamakura, a must-see day trip from Tokyo"
+        eyebrow="Day Trip Guides"
+        title="Kamakura Day Trip from Tokyo: With or Without a Guide?"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who has guided hundreds of Kamakura day trips."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "What Kamakura Actually Is", href: "#section-01-what-kamakura-actually-is" },
+          { num: "02", label: "How to Get There from Tokyo", href: "#section-02-how-to-get-there-from-tokyo" },
+          { num: "03", label: "What to See", href: "#section-03-what-to-see" },
+          { num: "04", label: "The Honest Itinerary for…", href: "#section-04-the-honest-itinerary-for-one-day" },
+          { num: "05", label: "Do You Need a Guide for…", href: "#section-05-do-you-need-a-guide-for-kamakura" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "We saw the big Buddha and then... weren't sure what else to do." I hear some version of this from about one in three clients who visited Kamakura before booking a tour with me. They went, they saw the Great Buddha, they walked around Tsurugaoka Hachimangu shrine, they ate lunch, and they came back to Tokyo feeling like they'd missed something. They were right. They had. Because Kamakura isn't a city with a few temples. It was Japan's military capital for 150 years, and that history is written into every hillside, every trail, and every stone statue that most day-trippers walk right past.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's my complete guide to planning a Kamakura day trip from Tokyo, including the honest answer to whether you need a guide for it.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What Kamakura Actually Is</span></div>
+            <h2 id="section-01-what-kamakura-actually-is" className="scroll-mt-20">
               What Kamakura Actually Is (Most Visitors Don't Know)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -71,8 +65,8 @@ const KamakuraDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Understanding this transforms your Kamakura day trip from Tokyo. You're not just visiting temples. You're walking through the remains of a military capital that shaped Japanese history for centuries. The Buddha isn't just a statue; it's a survivor that lost its building to a tsunami in 1498 and has sat in the open air ever since. That's 500+ years of rain, earthquakes, and typhoons, and it's still there.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · How to Get There from Tokyo</span></div>
+            <h2 id="section-02-how-to-get-there-from-tokyo" className="scroll-mt-20">
               How to Get There from Tokyo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -91,31 +85,31 @@ const KamakuraDayTrip = () => {
             </ul>
 
             <InlineCTA message="Want a guided Kamakura day trip from Tokyo?" href="/tours/kamakura-day-trip" />
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What to See</span></div>
+            <h2 id="section-03-what-to-see" className="scroll-mt-20">
               What to See: Great Buddha, Engaku-ji, the Hiking Trails
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Kotoku-in (The Great Buddha)</h3>
+            <h3>Kotoku-in (The Great Buddha)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The 13-meter bronze Buddha is Kamakura's most famous attraction, and unlike many famous landmarks, it genuinely lives up to expectations. Cast in 1252, it originally sat inside a massive wooden hall. A tsunami in 1498 destroyed the building but left the Buddha standing, and it's been sitting in the open air ever since, weathering five centuries of elements with remarkable dignity. You can enter the hollow interior (¥50 extra) to see the centuries-old casting technique from the inside.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tsurugaoka Hachimangu Shrine</h3>
+            <h3>Tsurugaoka Hachimangu Shrine</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kamakura's most important shrine, founded by the first shogun Minamoto Yoritomo in 1180. The approach road (Wakamiya Oji) is a wide boulevard that runs from the beach to the shrine. It was designed as a ceremonial path and doubles as a defensive corridor. The shrine complex is extensive, with multiple buildings, a garden, and a museum. I explain the shrine to my clients as Kamakura's spiritual power center. Think of it as the White House chapel and the National Mall combined into one space.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Engaku-ji Temple</h3>
+            <h3>Engaku-ji Temple</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               One of Kamakura's Five Great Zen Temples, Engaku-ji was founded in 1282 to honor those who died during the Mongol invasions. It's the first thing you see when arriving at Kita-Kamakura Station. Literally, the temple gate is across the street from the platform. The temple grounds are vast, peaceful, and far less crowded than the Great Buddha. During autumn foliage season, it's arguably the most beautiful spot in Kamakura.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">The Hiking Trails</h3>
+            <h3>The Hiking Trails</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kamakura's hiking trails are its most underrated feature. The Daibutsu Hiking Course connects Kita-Kamakura Station to the Great Buddha through forested hills, about 90 minutes of moderate walking through the same mountain passes that samurai once guarded. Along the way, you'll pass small temples hidden in the woods, stone markers, and viewpoints over the city. The trail is well-maintained but involves some steep sections and natural surfaces, so wear proper shoes.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · The Honest Itinerary for One Day</span></div>
+            <h2 id="section-04-the-honest-itinerary-for-one-day" className="scroll-mt-20">
               The Honest Itinerary for One Day
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -135,8 +129,8 @@ const KamakuraDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               This itinerary covers Kamakura's highlights without rushing. Adjust based on your interests: skip the hiking trail if you prefer a more relaxed pace, or add Hokoku-ji's bamboo grove if you have extra time.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Do You Need a Guide for Kamakura?</span></div>
+            <h2 id="section-05-do-you-need-a-guide-for-kamakura" className="scroll-mt-20">
               Do You Need a Guide for Kamakura?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -173,7 +167,7 @@ const KamakuraDayTrip = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a guided Kamakura day trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -187,35 +181,40 @@ const KamakuraDayTrip = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How long does a Kamakura day trip from Tokyo take?</h3>
+                  <h3>How long does a Kamakura day trip from Tokyo take?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Plan for 7–8 hours total including transit (about 1 hour each way). You'll have 5–6 hours in Kamakura, which is enough to see the Great Buddha, 2–3 temples, do part of a hiking trail, and have lunch. Leaving Tokyo by 9 AM and returning by 5 PM is a comfortable schedule.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Kamakura better than Nikko for a day trip?</h3>
+                  <h3>Is Kamakura better than Nikko for a day trip?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     They're different experiences. Kamakura is closer (1 hour vs. 2 hours), more walkable, has hiking trails and a beach, and focuses on Zen Buddhism and samurai history. Nikko is farther but has Japan's most ornate shrine architecture and mountain scenery. Kamakura is better for active travelers; Nikko for those who want dramatic, elaborate temples.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Can I combine Kamakura with Hakone in one day?</h3>
+                  <h3>Can I combine Kamakura with Hakone in one day?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Technically possible but not recommended. Both deserve a full day. Rushing through Kamakura in the morning and Hakone in the afternoon means seeing neither properly. If you have two day trip days, do each separately. If you only have one day, choose one based on your interests: temples and hiking (Kamakura) or hot springs and Mt. Fuji views (Hakone).
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">What should I eat in Kamakura?</h3>
+                  <h3>What should I eat in Kamakura?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Kamakura is known for shirasu (whitebait), a tiny translucent fish served raw or fried over rice. Try it at a restaurant near Hase or Yuigahama Beach. Soba noodles are also excellent; several shops near the Great Buddha have been serving handmade soba for decades. On Komachi-dori, sample matcha sweets and fresh dango (rice dumplings).
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -239,7 +238,9 @@ const KamakuraDayTrip = () => {
           { "@type": "Question", name: "What should I eat in Kamakura?", acceptedAnswer: { "@type": "Answer", text: "Shirasu (whitebait) over rice, handmade soba noodles, and matcha sweets on Komachi-dori." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

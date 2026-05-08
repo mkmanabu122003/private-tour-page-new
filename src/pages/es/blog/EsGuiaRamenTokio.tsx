@@ -6,6 +6,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { foodFinderEsConfig } from "@/data/diagnostics/foodFinderEs";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaRamenTokio = () => {
   return (
@@ -21,68 +23,44 @@ const EsGuiaRamenTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/ramen-guide-hero.webp"
-          alt="Un bol de ramen de Tokio con sésamo, verduras y toppings"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Guía Ramen</li>
-              </ol>
-            </nav>
-            <p className="text-label text-accent mb-3">Gastronomía Japonesa</p>
-            <h1 className="heading-display text-foreground">
-              Guía de Ramen en Tokio: Lo Que Pide un Guía Local (y Dónde)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, un guía que come ramen al menos dos veces por semana desde hace 15 años y lleva a sus clientes a sus locales favoritos durante los tours.
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/ramen-guide-hero.webp"
+        imageAlt="Un bol de ramen de Tokio con sésamo, verduras y toppings"
+        eyebrow="Gastronomía Japonesa"
+        title="Guía de Ramen en Tokio: Lo Que Pide un Guía Local (y Dónde)"
+        subtitle="Escrito por Manabu, un guía que come ramen al menos dos veces por semana desde hace 15 años y lleva a sus clientes a sus locales favoritos durante los tours."
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Por Qué las Listas de…", href: "#section-01-por-qué-las-listas-de-mejor-ramen-en-tokio-están" },
+          { num: "02", label: "Los 4 Estilos Principales…", href: "#section-02-los-4-estilos-principales-de-ramen" },
+          { num: "03", label: "Mis Favoritos Personales…", href: "#section-03-mis-favoritos-personales-por-barrio" },
+          { num: "04", label: "Cómo Pedir Ramen en Japón…", href: "#section-04-cómo-pedir-ramen-en-japón-sin-hablar-japonés" },
+          { num: "05", label: "Qué Comer con tu Ramen", href: "#section-05-qué-comer-con-tu-ramen" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               El año pasado, un cliente de Nueva York (un tipo serio con la comida, tenía su propio restaurante, sabía de lo que hablaba) me pidió que lo llevara al "mejor ramen de Tokio". Me detuve un momento. "El mejor ramen de Tokio depende de qué tipo de ramen te refieras", le dije. "Es como pedir la mejor pizza de Nueva York sin especificar si quieres masa fina, siciliana o napolitana."
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Tokio tiene más de 10.000 ramen-ya (tiendas de ramen). Ninguna lista puede cubrirlos todos, y los artículos de "mejor ramen" que encuentras online suelen estar patrocinados, desactualizados o reflejan la preferencia de un solo escritor. Esta guía de ramen para Tokio es diferente: está organizada por estilos, basada en más de 15 años comiendo ramen en esta ciudad, y pensada para ayudarte a entender lo que estás pidiendo, no solo dónde hacer cola.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Por Qué las Listas de "Mejor Ramen en Tokio" Están</span></div>
+            <h2 id="section-01-por-qué-las-listas-de-mejor-ramen-en-tokio-están" className="scroll-mt-20">
               Por Qué las Listas de "Mejor Ramen en Tokio" Están (Casi Siempre) Equivocadas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -91,12 +69,12 @@ const EsGuiaRamenTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               El segundo problema: los locales famosos no siempre son los mejores. Algunas de las ramen-ya más populares de Tokio viven de su reputación de 2015. El local con 90 minutos de cola en Shinjuku puede servir buen ramen, pero el que está tres calles más allá sin cola puede servir uno mejor. Simplemente no tienen presencia viral en Instagram. En mis tours, llevo a los clientes a ambos tipos, y los locales "descubrimiento" casi siempre causan más impacto.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Los 4 Estilos Principales de Ramen</span></div>
+            <h2 id="section-02-los-4-estilos-principales-de-ramen" className="scroll-mt-20">
               Los 4 Estilos Principales de Ramen (y Qué Barrio de Tokio los Hace Mejor)
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Shoyu Ramen (a base de salsa de soja)</h3>
+            <h3>Shoyu Ramen (a base de salsa de soja)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Este es el estilo original de ramen de Tokio: un caldo transparente o ligeramente marrón, elaborado con fondo de pollo o marisco y sazonado con salsa de soja. El sabor es limpio, sabroso y deja que la calidad de los fideos brille por sí sola. Piensa en él como el ramen en su forma más refinada, sin sabores pesados detrás de los que esconderse. Los fideos son finos y ondulados.
             </p>
@@ -104,7 +82,7 @@ const EsGuiaRamenTokio = () => {
               <strong className="text-foreground">Mejores barrios:</strong> El lado este de Tokio (Asakusa, Ueno y las antiguas zonas de Shitamachi) es donde el shoyu ramen tiene sus raíces más profundas. Muchos locales aquí llevan sirviendo esencialmente la misma receta desde hace 40-60 años.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tonkotsu Ramen (caldo de hueso de cerdo)</h3>
+            <h3>Tonkotsu Ramen (caldo de hueso de cerdo)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El caldo espeso, cremoso y opaco que se obtiene hirviendo huesos de cerdo durante 12-20 horas. Nació en Fukuoka (Kyushu) y conquistó Tokio en los años 2000. El caldo es intenso, con sabor porcino y una textura casi láctea. Los fideos son finos y rectos, servidos firmes (kata) por defecto. Este es el estilo que la mayoría de extranjeros imaginan cuando piensan en "ramen".
             </p>
@@ -112,7 +90,7 @@ const EsGuiaRamenTokio = () => {
               <strong className="text-foreground">Mejores barrios:</strong> Ikebukuro y Shinjuku tienen la mayor concentración de tiendas de tonkotsu de calidad, muchas regentadas por chefs nacidos en Kyushu que trajeron sus recetas a Tokio.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Miso Ramen</h3>
+            <h3>Miso Ramen</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nació en Sapporo (Hokkaido) y viajó al sur hasta Tokio. El caldo es contundente, complejo y ligeramente dulce, con la pasta de miso aportando profundidad y umami. Se sirve a menudo con maíz, mantequilla y brotes de soja, toppings que reflejan sus orígenes norteños. Los fideos son gruesos y rizados para retener mejor el caldo denso.
             </p>
@@ -120,7 +98,7 @@ const EsGuiaRamenTokio = () => {
               <strong className="text-foreground">Mejores barrios:</strong> Las tiendas de miso ramen están repartidas por todo Tokio sin un centro geográfico claro. Algunas de las mejores están en barrios residenciales lejos de las zonas turísticas, el tipo de sitios que solo encontrarías con un guía local o con mucha investigación.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Tsukemen (ramen para mojar)</h3>
+            <h3>Tsukemen (ramen para mojar)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una invención propiamente tokiota. Los fideos y el caldo se sirven por separado. Mojas los fideos fríos o a temperatura ambiente en un caldo concentrado e intensamente sabroso. El caldo es más espeso y potente que el de un ramen normal porque está diseñado como salsa para mojar, no como sopa. Se inventó en los años 60 en Ikebukuro.
             </p>
@@ -133,8 +111,8 @@ const EsGuiaRamenTokio = () => {
               linkText="Descubre nuestros tours gastronómicos →"
               href="/es/tours"
             />
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Mis Favoritos Personales por Barrio</span></div>
+            <h2 id="section-03-mis-favoritos-personales-por-barrio" className="scroll-mt-20">
               Mis Favoritos Personales por Barrio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -154,8 +132,8 @@ const EsGuiaRamenTokio = () => {
                 <strong className="text-foreground">Ramen Street (Estación de Tokio):</strong> Una selección curada de ramen-ya famosas dentro de la Estación de Tokio. No es mala opción para un bol rápido cuando estás de paso, aunque las colas son más largas y el ambiente es más "food court" que "local auténtico de barrio".
               </li>
             </ul>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Cómo Pedir Ramen en Japón Sin Hablar Japonés</span></div>
+            <h2 id="section-04-cómo-pedir-ramen-en-japón-sin-hablar-japonés" className="scroll-mt-20">
               Cómo Pedir Ramen en Japón Sin Hablar Japonés
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -168,7 +146,7 @@ const EsGuiaRamenTokio = () => {
               <li className="text-muted-foreground leading-relaxed">Espera. Come. Vete. Sin propinas, sin conversación obligatoria.</li>
             </ol>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Personaliza tu Bol Como un Local</h3>
+            <h3>Personaliza tu Bol Como un Local</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Muchas tiendas te preguntarán sobre tres cosas que puedes personalizar. Aquí tienes las palabras clave que necesitas:
             </p>
@@ -189,8 +167,8 @@ const EsGuiaRamenTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Sorber está bien visto.</strong> En Japón, sorber los fideos no es mala educación. Es como se come el ramen. El sonido airea los fideos y el caldo, los enfría y potencia el sabor. Piensa en ello como agitar una copa de vino: funcional, no solo teatral.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Qué Comer con tu Ramen</span></div>
+            <h2 id="section-05-qué-comer-con-tu-ramen" className="scroll-mt-20">
               Qué Comer con tu Ramen (Los Extras que Nadie te Cuenta)
             </h2>
             <ul className="space-y-4 mb-8">
@@ -223,7 +201,7 @@ const EsGuiaRamenTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres un guía que sepa dónde se come de verdad?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -237,54 +215,59 @@ const EsGuiaRamenTokio = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Preguntas Frecuentes</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es la diferencia entre shoyu y tonkotsu ramen?</h3>
+                  <h3>¿Cuál es la diferencia entre shoyu y tonkotsu ramen?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     El shoyu (salsa de soja) tiene un caldo transparente o marrón claro hecho con fondo de pollo o marisco. Es limpio y sabroso. El tonkotsu (hueso de cerdo) tiene un caldo espeso, cremoso y blanco opaco, resultado de hervir huesos de cerdo durante más de 12 horas. Es intenso y contundente. Son experiencias completamente distintas. El shoyu es el whisky elegante; el tonkotsu es la cerveza artesanal.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuáles son los tipos de ramen en Japón?</h3>
+                  <h3>¿Cuáles son los tipos de ramen en Japón?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Los cuatro estilos principales son: shoyu (salsa de soja, caldo transparente), tonkotsu (hueso de cerdo, caldo cremoso y blanco), miso (pasta de miso, caldo espeso y complejo) y tsukemen (fideos para mojar en un caldo concentrado aparte). Cada estilo tiene su origen regional: el shoyu nació en Tokio, el tonkotsu en Fukuoka, el miso en Sapporo, y el tsukemen en Ikebukuro. Además existen variantes como shio (sal), tantanmen (picante con sésamo) y muchas más.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cómo pedir ramen en Japón si no hablo japonés?</h3>
+                  <h3>¿Cómo pedir ramen en Japón si no hablo japonés?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La mayoría de ramen-ya usan una máquina expendedora de tickets (shokkenki). Introduces dinero, pulsas el botón de tu ramen (el de arriba a la izquierda suele ser la especialidad de la casa), recoges el ticket y lo entregas al personal. Si te preguntan por la personalización, di "futsu" (normal) para todo. No hace falta hablar japonés; el sistema está diseñado para ser rápido y sencillo.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Se deja propina en los restaurantes de ramen en Tokio?</h3>
+                  <h3>¿Se deja propina en los restaurantes de ramen en Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No. La propina no se practica en ningún restaurante de Japón. El precio del ticket es el precio total. Sin cargo por servicio, sin propina esperada ni deseada. Para más información, lee mi artículo sobre{" "}
                     <Link to="/es/blog/propinas-en-japon" className="text-accent hover:underline">propinas en Japón</Link>.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Hay opciones de ramen vegetariano en Tokio?</h3>
+                  <h3>¿Hay opciones de ramen vegetariano en Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Sí, aunque son menos comunes que las opciones con carne. Varios locales se especializan en ramen con caldo de verduras (yasai ramen), y la oferta está creciendo. Algunos ofrecen caldos a base de leche de soja que son sorprendentemente ricos. Busca tiendas que anuncien opciones "vegan" o "shojin" (vegetariano budista). Existen en la mayoría de barrios principales.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuánto cuesta un bol de ramen en Tokio?</h3>
+                  <h3>¿Cuánto cuesta un bol de ramen en Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Un bol estándar cuesta entre 800 y 1.200 yenes. Los locales premium y los boles especiales pueden llegar a 1.500-2.000 yenes. Los toppings (huevo, chashu extra, nori) cuestan entre 100 y 300 yenes cada uno. Una comida completa de ramen con toppings y gyoza suele costar entre 1.200 y 1.800 yenes por persona, uno de los mejores precios de Tokio por lo que recibes.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es el mejor ramen de Tokio?</h3>
+                  <h3>¿Cuál es el mejor ramen de Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     No existe "el mejor ramen de Tokio" en singular, porque depende totalmente del estilo que prefieras. Si te gustan los caldos ligeros, el shoyu clásico de la zona de Asakusa es imbatible. Si prefieres algo cremoso e intenso, el tonkotsu de Ikebukuro o Shinjuku es tu mejor apuesta. Lo importante es saber qué estilo te atrae y luego buscar los mejores exponentes de ese estilo. En mis tours, te ayudo a descubrir tu favorito.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -314,7 +297,9 @@ const EsGuiaRamenTokio = () => {
           { "@type": "Question", name: "¿Cuál es el mejor ramen de Tokio?", acceptedAnswer: { "@type": "Answer", text: "Depende del estilo. Para caldos ligeros, el shoyu de Asakusa. Para cremoso e intenso, el tonkotsu de Ikebukuro o Shinjuku. Lo clave es saber qué estilo prefieres." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

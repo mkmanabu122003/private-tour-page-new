@@ -25,3 +25,5 @@ dist-ssr
 
 # Candidate images (raw source files)
 public/images/candidates/
+.aidesigner/*
+!.aidesigner/.gitkeep

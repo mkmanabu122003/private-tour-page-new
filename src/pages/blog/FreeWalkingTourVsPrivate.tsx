@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const FreeWalkingTourVsPrivate = () => {
   return (
@@ -18,56 +20,31 @@ const FreeWalkingTourVsPrivate = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/sumida-river-group-selfie.webp"
-          alt="Manabu with private tour guests along the Sumida River — a small private group experience in Tokyo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
+      {/* Hero — overlaid title */}
+      <BlogArticleHero
+        image="/images/tour-photos/sumida-river-group-selfie.webp"
+        imageAlt="Manabu with private tour guests along the Sumida River — a small private group experience in Tokyo"
+        eyebrow="Decision Helpers"
+        title="Free Walking Tour vs Private Guide in Tokyo: The Honest Math (2026)"
+        subtitle="When each option is actually the right call — from a guide who runs private tours in Tokyo full-time."
+        date="April 30, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Decision Helpers</p>
-            <h1 className="heading-display text-foreground">
-              Free Walking Tour vs Private Guide in Tokyo: The Honest Math (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                April 30, 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) who runs private tours in Tokyo full-time. This article doesn't pretend free walking tours are bad — they're often great. It explains when each option is actually the right call.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Article Content */}
       <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+              { num: "01", label: "What each costs", href: "#section-01-what-each-option-actually-costs" },
+              { num: "02", label: "Math by group size", href: "#section-02-the-math-by-group-size" },
+              { num: "03", label: "What \"free\" buys", href: "#section-03-what-free-actually-buys-you" },
+              { num: "04", label: "What private buys", href: "#section-04-what-a-private-tour-actually-buys-you" },
+              { num: "05", label: "When free is right", href: "#section-05-when-a-free-walking-tour-is-the-right-call" },
+              { num: "06", label: "When private is right", href: "#section-06-when-a-private-guide-is-the-right-call" },
+            ]} />
+          <article>
             {/* Direct Answer */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Let me be honest upfront: on raw cost, a free walking tour will almost always beat a private guide. That's not a comparison private tours can win, and I'm not going to pretend otherwise.
@@ -83,14 +60,15 @@ const FreeWalkingTourVsPrivate = () => {
             </p>
 
             {/* Section 1: What Each Option Costs */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · What Each Option Actually Costs</span></div>
+            <h2 id="section-01-what-each-option-actually-costs" className="scroll-mt-20">
               What Each Option Actually Costs
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokyo has three main tiers of guided walking tour. The price gap between them is real, but so is the experience gap. Here's what you're actually buying at each level.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Free Walking Tours: ¥1,000–2,000 per person (in tips)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -103,7 +81,7 @@ const FreeWalkingTourVsPrivate = () => {
               Tours typically run 2 to 2.5 hours. Group sizes vary by operator — Tokyo Free Walking Tour aims for fewer than five guests per guide, while Tokyo Localized tours can run larger, sometimes 15 or more depending on the season and slot. Tokyo Free Guide pairs you one-on-one (or one volunteer per small group), which is closer to a private experience.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               OTA Platform Tours: ¥5,000–25,000 per person
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -118,7 +96,7 @@ const FreeWalkingTourVsPrivate = () => {
 
             <InlineCTA message="Curious how a tour with a licensed guide actually goes?" href="/tours" />
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Direct Licensed Private Tours: ¥40,000–80,000 per group
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -136,7 +114,8 @@ const FreeWalkingTourVsPrivate = () => {
             </p>
 
             {/* Section 2: The Math by Group Size */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · The Math by Group Size</span></div>
+            <h2 id="section-02-the-math-by-group-size" className="scroll-mt-20">
               The Math by Group Size
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -187,7 +166,8 @@ const FreeWalkingTourVsPrivate = () => {
             </p>
 
             {/* Section 3: What Free Tours Actually Buy You */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What "Free" Actually Buys You</span></div>
+            <h2 id="section-03-what-free-actually-buys-you" className="scroll-mt-20">
               What "Free" Actually Buys You
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -210,7 +190,8 @@ const FreeWalkingTourVsPrivate = () => {
             </p>
 
             {/* Section 4: What Private Buys You */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · What a Private Tour Actually Buys You</span></div>
+            <h2 id="section-04-what-a-private-tour-actually-buys-you" className="scroll-mt-20">
               What a Private Tour Actually Buys You
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -236,7 +217,8 @@ const FreeWalkingTourVsPrivate = () => {
             </p>
 
             {/* Section 5: When Free Is the Right Call */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · When a Free Walking Tour Is the Right Call</span></div>
+            <h2 id="section-05-when-a-free-walking-tour-is-the-right-call" className="scroll-mt-20">
               When a Free Walking Tour Is the Right Call
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -261,7 +243,8 @@ const FreeWalkingTourVsPrivate = () => {
             </ul>
 
             {/* Section 6: When Private Is the Right Call */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · When a Private Guide Is the Right Call</span></div>
+            <h2 id="section-06-when-a-private-guide-is-the-right-call" className="scroll-mt-20">
               When a Private Guide Is the Right Call
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -292,7 +275,8 @@ const FreeWalkingTourVsPrivate = () => {
             </ul>
 
             {/* Section 7: The Trap in the Middle */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · The Trap in the Middle</span></div>
+            <h2>
               The Trap in the Middle: OTA Platform Tours
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -309,7 +293,8 @@ const FreeWalkingTourVsPrivate = () => {
             </p>
 
             {/* Section 8: My Honest Recommendation */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · My Honest Recommendation by Scenario</span></div>
+            <h2>
               My Honest Recommendation by Scenario
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -345,7 +330,7 @@ const FreeWalkingTourVsPrivate = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Thinking about a private tour for your trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -361,8 +346,11 @@ const FreeWalkingTourVsPrivate = () => {
               </div>
             </div>
           </article>
+          <BlogArticleAside />
+          </div>
         </div>
       </section>
+      </div>
 
       <RelatedTourCards tourIds={["asakusa", "yanaka", "tsukiji-ginza"]} showViewAll />
 

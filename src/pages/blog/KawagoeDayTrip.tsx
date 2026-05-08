@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const KawagoeDayTrip = () => {
   return (
@@ -23,44 +25,36 @@ const KawagoeDayTrip = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/kawagoe-kurazukuri-hero.webp"
-          alt="Historic kurazukuri warehouse street in Kawagoe, Little Edo"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Day Trip Guides</p>
-            <h1 className="heading-display text-foreground">
-              Kawagoe Day Trip from Tokyo: Little Edo That Most Tourists Skip
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Licensed Tour Guide</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />March 7, 2026</span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/kawagoe-kurazukuri-hero.webp"
+        imageAlt="Historic kurazukuri warehouse street in Kawagoe, Little Edo"
+        eyebrow="Day Trip Guides"
+        title="Kawagoe Day Trip from Tokyo: Little Edo That Most Tourists Skip"
+        subtitle="Written by Manabu, a National Government Licensed Guide Interpreter (全国通訳案内士) with 500+ private tours completed."
+        date="March 7, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Why Kawagoe Is Called…", href: "#section-01-why-kawagoe-is-called-little-edo" },
+          { num: "02", label: "How to Get There", href: "#section-02-how-to-get-there" },
+          { num: "03", label: "What to See", href: "#section-03-what-to-see" },
+          { num: "04", label: "What to Eat in Kawagoe", href: "#section-04-what-to-eat-in-kawagoe" },
+          { num: "05", label: "Kawagoe vs. Nikko vs. Kamakura", href: "#section-05-kawagoe-vs-nikko-vs-kamakura" },
+          { num: "06", label: "FAQ", href: "#section-06-faq" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Thirty minutes. That's all it takes to get from the chaos of Ikebukuro Station to a street that looks like 1850s Japan. No bullet train ticket, no complex transfers, no full-day commitment. Just a direct train on the Tobu Tojo Line, and suddenly you're standing in front of clay-walled warehouses that Edo-period merchants built to protect their goods from fire, and that still stand today because they worked.
             </p>
@@ -70,8 +64,8 @@ const KawagoeDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Here's everything you need to know to plan a Kawagoe day trip from Tokyo, from a guide who brings clients here regularly and keeps discovering new reasons to come back.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Why Kawagoe Is Called "Little Edo"</span></div>
+            <h2 id="section-01-why-kawagoe-is-called-little-edo" className="scroll-mt-20">
               Why Kawagoe Is Called "Little Edo"
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -83,8 +77,8 @@ const KawagoeDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               I explain it to my clients this way: if you want to understand what Edo-period Tokyo actually looked like, the merchant streets, the commerce, the architecture, Kawagoe is the closest you'll get. Tokyo itself has moved on. Kawagoe remembered.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · How to Get There</span></div>
+            <h2 id="section-02-how-to-get-there" className="scroll-mt-20">
               How to Get There (And Which Train to Take)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -104,11 +98,11 @@ const KawagoeDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Guide's tip:</strong> The Kawagoe Discount Pass (¥700 from Tobu) gives you round-trip train fare plus unlimited bus rides in Kawagoe. It's worth it if you want to take the loop bus between the warehouse district and the temple area. If you're a walker, skip the pass. The whole town is comfortably walkable.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · What to See</span></div>
+            <h2 id="section-03-what-to-see" className="scroll-mt-20">
               What to See: The Warehouse District, the Bell Tower, the Candy Lane
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">The Kurazukuri Warehouse District</h3>
+            <h3>The Kurazukuri Warehouse District</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is the main attraction and the reason to make a Kawagoe day trip from Tokyo. About thirty kurazukuri warehouses line Ichibangai Street, most of them converted into shops, cafes, and galleries while keeping their original exteriors. The effect is like walking through a living museum. The buildings are genuine Edo-Meiji era structures, but they're functioning businesses, not exhibits behind glass.
             </p>
@@ -116,22 +110,22 @@ const KawagoeDayTrip = () => {
               Look for the details: the fireproof shutters that could be sealed during blazes, the family crests (kamon) carved above doorways, and the variations in wall thickness that tell you how wealthy each merchant was. The thicker the walls, the richer the family. Fire insurance measured in clay.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Toki no Kane (The Bell Tower)</h3>
+            <h3>Toki no Kane (The Bell Tower)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kawagoe's iconic wooden bell tower has been ringing the hours since the 1600s, and it still chimes four times daily (6 AM, noon, 3 PM, 6 PM). The current structure was rebuilt after a fire in 1893, but the tradition is unbroken. It's Kawagoe's symbol, and hearing it ring while standing among the warehouses is one of those moments where the centuries collapse and you feel genuinely connected to the past.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Kashiya Yokocho (Candy Lane)</h3>
+            <h3>Kashiya Yokocho (Candy Lane)</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A narrow alley of about twenty shops selling traditional Japanese sweets: handmade hard candies, rice crackers, karinto, and the famously oversized ¥200 lollipops that are a Kawagoe institution. This isn't a tourist fabrication; Kawagoe has been a candy-making center since the Meiji era, when Tokyo's great fire of 1923 disrupted the capital's candy industry and Kawagoe stepped in to fill the gap. The shops here are the descendants of that era.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">Kitain Temple</h3>
+            <h3>Kitain Temple</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Often overlooked by day-trippers focused on the warehouse district, Kitain is one of the most historically significant temples in the Kanto region. It contains the only surviving rooms from the original Edo Castle, moved here in the 1600s after a fire destroyed the castle. This means you're walking through rooms where Tokugawa Iemitsu, the third shogun, was born. Let that sink in: the rooms are gone from Tokyo, but they exist in Kawagoe. Kitain also has 540 unique stone rakan (disciple) statues, each with a different facial expression. Finding the one that "looks like someone you know" is a beloved tradition.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · What to Eat in Kawagoe</span></div>
+            <h2 id="section-04-what-to-eat-in-kawagoe" className="scroll-mt-20">
               What to Eat in Kawagoe (Sweet Potato Everything)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -143,8 +137,8 @@ const KawagoeDayTrip = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               In my tours, I always schedule time for eating in Kawagoe because the food culture here is different from Tokyo: slower, more traditional, and deeply connected to the local agriculture. It's a taste of how Japan ate before convenience stores and chain restaurants.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Kawagoe vs. Nikko vs. Kamakura</span></div>
+            <h2 id="section-05-kawagoe-vs-nikko-vs-kamakura" className="scroll-mt-20">
               Kawagoe vs. Nikko vs. Kamakura: Which Day Trip Is Right for You?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -167,7 +161,7 @@ const KawagoeDayTrip = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 Want a guide for your Kawagoe day trip?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -181,35 +175,40 @@ const KawagoeDayTrip = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Frequently Asked Questions</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">How long do I need for a Kawagoe day trip from Tokyo?</h3>
+                  <h3>How long do I need for a Kawagoe day trip from Tokyo?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     A half day (4–5 hours including transit) covers the warehouse district, bell tower, and Candy Lane comfortably. A full day (6–8 hours) lets you add Kitain Temple, explore backstreets, and eat without rushing. Most of my clients do a half-day visit and feel satisfied.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is the JR Pass valid for getting to Kawagoe?</h3>
+                  <h3>Is the JR Pass valid for getting to Kawagoe?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes, the JR Kawagoe Line covers the route from Shinjuku (via Saikyo Line) to Kawagoe Station. However, the Tobu Tojo Line from Ikebukuro is faster and not covered by JR Pass. Unless you're actively using the JR Pass that day, the Tobu Line is the better choice.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">When is the best time to visit Kawagoe?</h3>
+                  <h3>When is the best time to visit Kawagoe?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Weekday mornings are ideal for avoiding crowds. Autumn (October–November) is perfect for weather and sweet potato season. The Kawagoe Festival in mid-October, one of Japan's most impressive float festivals, is spectacular but draws massive crowds. Spring and winter are also fine; summer is hot but manageable.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">Is Kawagoe worth visiting if I'm already going to Kamakura?</h3>
+                  <h3>Is Kawagoe worth visiting if I'm already going to Kamakura?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Yes, they're completely different experiences. Kamakura is about temples, nature, and the Great Buddha. Kawagoe is about merchant culture, Edo-period architecture, and food. They complement each other perfectly. Many of my clients do both on different days and say Kawagoe was the unexpected highlight.
                   </p>
                 </div>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -233,7 +232,9 @@ const KawagoeDayTrip = () => {
           { "@type": "Question", name: "Is Kawagoe worth visiting if I'm also going to Kamakura?", acceptedAnswer: { "@type": "Answer", text: "Yes, completely different experiences. Kamakura is temples and nature; Kawagoe is merchant culture and food. They complement each other." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

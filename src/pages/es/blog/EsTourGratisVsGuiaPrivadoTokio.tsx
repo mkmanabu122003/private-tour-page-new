@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsTourGratisVsGuiaPrivadoTokio = () => {
   return (
@@ -19,56 +21,39 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
         ]}
       />
 
-      {/* Imagen Principal */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/sumida-river-group-selfie.webp"
-          alt="Manabu con un grupo privado a orillas del río Sumida — la experiencia de un tour privado en Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías Útiles</p>
-            <h1 className="heading-display text-foreground">
-              Tour Gratis vs Guía Privado en Tokio: Las Cuentas Reales (2026)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                30 de abril de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que trabaja a tiempo completo en Tokio. Este artículo no pretende decir que los tours gratis sean malos — a menudo son una buena opción. Lo que hace es explicar honestamente cuándo cada formato es la elección correcta.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/sumida-river-group-selfie.webp"
+        imageAlt="Manabu con un grupo privado a orillas del río Sumida — la experiencia de un tour privado en Tokio"
+        eyebrow="Guías Útiles"
+        title="Tour Gratis vs Guía Privado en Tokio: Las Cuentas Reales (2026)"
+        subtitle="Escrito por Manabu, guía-intérprete con licencia nacional (全国通訳案内士) que trabaja a tiempo completo en Tokio. Este artículo no pretende decir que los tours gratis sean malos — a menudo son una buena opción. Lo que hace es "
+        date="30 de abril de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Cuánto Cuesta Realmente…", href: "#section-01-cuánto-cuesta-realmente-cada-opción" },
+          { num: "02", label: "Las Cuentas Según el Tamaño…", href: "#section-02-las-cuentas-según-el-tamaño-del-grupo" },
+          { num: "03", label: "Lo que un Tour \"Gratis\" Te…", href: "#section-03-lo-que-un-tour-gratis-te-da-realmente" },
+          { num: "04", label: "Lo que un Tour Privado Te…", href: "#section-04-lo-que-un-tour-privado-te-da-realmente" },
+          { num: "05", label: "Cuándo un Tour Gratis Es la…", href: "#section-05-cuándo-un-tour-gratis-es-la-opción-correcta" },
+          { num: "06", label: "Cuándo un Guía Privado Es…", href: "#section-06-cuándo-un-guía-privado-es-la-opción-correcta" },
+          { num: "07", label: "La Trampa Intermedia", href: "#section-07-la-trampa-intermedia" },
+          { num: "08", label: "Mi Recomendación Honesta…", href: "#section-08-mi-recomendación-honesta-por-escenario" }
+            ]} />
+
+            <article>
+
             {/* Respuesta directa */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Voy a ser honesto desde el principio: en coste puro, un tour gratis casi siempre va a ganar a un guía privado. Esa no es una comparación que un tour privado pueda ganar, y no voy a pretender lo contrario.
@@ -84,14 +69,15 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </p>
 
             {/* Sección 1: Cuánto cuesta cada opción */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Cuánto Cuesta Realmente Cada Opción</span></div>
+            <h2 id="section-01-cuánto-cuesta-realmente-cada-opción" className="scroll-mt-20">
               Cuánto Cuesta Realmente Cada Opción
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               En Tokio hay tres niveles principales de tours guiados a pie. La diferencia de precio entre ellos es real, pero también lo es la diferencia de experiencia. Esto es lo que estás comprando en cada nivel.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tours gratis: ¥1,000–2,000 por persona (en propina)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -104,7 +90,7 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
               Los tours suelen durar entre 2 y 2,5 horas. El tamaño de los grupos varía según el operador: Tokyo Free Walking Tour intenta tener menos de cinco huéspedes por guía, mientras que los tours de Tokyo Localized pueden ser bastante mayores, a veces 15 personas o más en temporada alta. Tokyo Free Guide te empareja uno a uno (o un voluntario por grupo pequeño), lo que se acerca a una experiencia privada.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tours en plataformas (OTA): ¥5,000–25,000 por persona
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -119,7 +105,7 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
 
             <InlineCTAEs message="¿Quieres saber cómo es realmente un tour con un guía con licencia?" href="/es/tours" />
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Tours privados directos con guía con licencia: ¥40,000–80,000 por grupo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -137,7 +123,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </p>
 
             {/* Sección 2: Las cuentas por tamaño de grupo */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Las Cuentas Según el Tamaño del Grupo</span></div>
+            <h2 id="section-02-las-cuentas-según-el-tamaño-del-grupo" className="scroll-mt-20">
               Las Cuentas Según el Tamaño del Grupo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -188,7 +175,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </p>
 
             {/* Sección 3: Lo que el tour gratis te da */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Lo que un Tour "Gratis" Te Da Realmente</span></div>
+            <h2 id="section-03-lo-que-un-tour-gratis-te-da-realmente" className="scroll-mt-20">
               Lo que un Tour "Gratis" Te Da Realmente
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -211,7 +199,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </p>
 
             {/* Sección 4: Lo que el privado te da */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Lo que un Tour Privado Te Da Realmente</span></div>
+            <h2 id="section-04-lo-que-un-tour-privado-te-da-realmente" className="scroll-mt-20">
               Lo que un Tour Privado Te Da Realmente
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -237,7 +226,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </p>
 
             {/* Sección 5: Cuándo el tour gratis es la opción correcta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Cuándo un Tour Gratis Es la Opción Correcta</span></div>
+            <h2 id="section-05-cuándo-un-tour-gratis-es-la-opción-correcta" className="scroll-mt-20">
               Cuándo un Tour Gratis Es la Opción Correcta
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -262,7 +252,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </ul>
 
             {/* Sección 6: Cuándo el privado es la opción correcta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Cuándo un Guía Privado Es la Opción Correcta</span></div>
+            <h2 id="section-06-cuándo-un-guía-privado-es-la-opción-correcta" className="scroll-mt-20">
               Cuándo un Guía Privado Es la Opción Correcta
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -293,7 +284,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </ul>
 
             {/* Sección 7: La trampa intermedia */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · La Trampa Intermedia</span></div>
+            <h2 id="section-07-la-trampa-intermedia" className="scroll-mt-20">
               La Trampa Intermedia: Tours en Plataformas OTA
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -310,7 +302,8 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </p>
 
             {/* Sección 8: Mi recomendación honesta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 08 · Mi Recomendación Honesta por Escenario</span></div>
+            <h2 id="section-08-mi-recomendación-honesta-por-escenario" className="scroll-mt-20">
               Mi Recomendación Honesta por Escenario
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -346,7 +339,7 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Te planteas un tour privado para tu viaje?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -361,7 +354,11 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -395,7 +392,9 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

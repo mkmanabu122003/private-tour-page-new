@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaAsakusaNueva = () => {
   return (
@@ -19,58 +21,37 @@ const EsGuiaAsakusaNueva = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/asakusa-guide-hero.webp"
-          alt="Amanecer en el Templo Senso-ji en Asakusa antes de la llegada de las multitudes"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-                <li><Link to="/es" className="hover:text-foreground transition-colors">Home</Link></li>
-                <li>/</li>
-                <li><Link to="/es/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-                <li>/</li>
-                <li className="text-foreground">Guía Asakusa</li>
-              </ol>
-            </nav>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Guía de Asakusa: Qué Ver, Qué Evitar y Cómo Visitarlo Antes de las 9
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                7 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/asakusa-guide-hero.webp"
+        imageAlt="Amanecer en el Templo Senso-ji en Asakusa antes de la llegada de las multitudes"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Guía de Asakusa: Qué Ver, Qué Evitar y Cómo Visitarlo Antes de las 9"
+        subtitle="Última actualización: abril 2026"
+        date="7 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Mejores Horarios para…", href: "#section-01-mejores-horarios-para-visitar-asakusa" },
+          { num: "02", label: "Por Qué Siempre Empiezo los…", href: "#section-02-por-qué-siempre-empiezo-los-tours-a-las-7-de" },
+          { num: "03", label: "Senso-ji", href: "#section-03-senso-ji" },
+          { num: "04", label: "Más Allá del Templo", href: "#section-04-más-allá-del-templo" },
+          { num: "05", label: "Dónde Comer en Asakusa", href: "#section-05-dónde-comer-en-asakusa" },
+          { num: "06", label: "Asakusa en Cada Estación…", href: "#section-06-asakusa-en-cada-estación-del-año" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Asakusa es el barrio que mejor conozco de todo Tokio. Llevo tours aquí casi a diario, y después de cientos de visitas sigo descubriendo cosas nuevas: la forma en que la luz de la mañana atraviesa el humo del incienso en Senso-ji, o un taller de artesanía que de algún modo nunca había visto. Pero también veo el mismo error repetirse entre los visitantes todos los días: llegan al mediodía, siguen a la multitud por la calle principal, se hacen una foto con el gran farolillo rojo y se van a los 45 minutos creyendo que ya "conocen" Asakusa. No han arañado ni la superficie.
@@ -80,7 +61,8 @@ const EsGuiaAsakusaNueva = () => {
             </p>
 
             {/* Best Times Table */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Mejores Horarios para Visitar Asakusa</span></div>
+            <h2 id="section-01-mejores-horarios-para-visitar-asakusa" className="scroll-mt-20">
               Mejores Horarios para Visitar Asakusa
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -126,7 +108,8 @@ const EsGuiaAsakusaNueva = () => {
             </p>
 
             {/* Section 1: Why I Always Start Tours at 7am */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Por Qué Siempre Empiezo los Tours a las 7 de</span></div>
+            <h2 id="section-02-por-qué-siempre-empiezo-los-tours-a-las-7-de" className="scroll-mt-20">
               Por Qué Siempre Empiezo los Tours a las 7 de la Mañana
             </h2>
             <figure className="my-8">
@@ -156,7 +139,8 @@ const EsGuiaAsakusaNueva = () => {
             </p>
 
             {/* Section 2: Senso-ji */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Senso-ji</span></div>
+            <h2 id="section-03-senso-ji" className="scroll-mt-20">
               Senso-ji: Lo Que Realmente Estás Viendo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -175,7 +159,8 @@ const EsGuiaAsakusaNueva = () => {
             <InlineCTAEs message="¿Quieres descubrir las historias detrás de los templos de Asakusa?" href="/es/tours" />
 
             {/* Section 3: Beyond the Temple - What Most Tourists Miss */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Más Allá del Templo</span></div>
+            <h2 id="section-04-más-allá-del-templo" className="scroll-mt-20">
               Más Allá del Templo: Las Calles Que la Mayoría Se Pierde
             </h2>
             <figure className="my-8">
@@ -212,7 +197,8 @@ const EsGuiaAsakusaNueva = () => {
             <InlineCTAEs message="¿Quieres conocer los rincones que no salen en ninguna guía?" href="/es/tours" />
 
             {/* Section 4: Where to Eat */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Dónde Comer en Asakusa</span></div>
+            <h2 id="section-05-dónde-comer-en-asakusa" className="scroll-mt-20">
               Dónde Comer en Asakusa (Mis Recomendaciones Reales)
             </h2>
             <figure className="my-8">
@@ -245,7 +231,8 @@ const EsGuiaAsakusaNueva = () => {
             </p>
 
             {/* Section 5: Asakusa in Different Seasons */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Asakusa en Cada Estación del Año</span></div>
+            <h2 id="section-06-asakusa-en-cada-estación-del-año" className="scroll-mt-20">
               Asakusa en Cada Estación del Año
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -269,12 +256,13 @@ const EsGuiaAsakusaNueva = () => {
             </p>
 
             {/* FAQ Section */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+            <h2 id="section-07-faq" className="scroll-mt-20">
               Preguntas Frecuentes sobre Asakusa
             </h2>
             <div className="space-y-6 mb-8">
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-3">
+                <h3>
                   ¿Cuánto tiempo debería dedicar a Asakusa?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -282,7 +270,7 @@ const EsGuiaAsakusaNueva = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-3">
+                <h3>
                   ¿Merece la pena visitar Asakusa si solo tengo un día en Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -290,7 +278,7 @@ const EsGuiaAsakusaNueva = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-3">
+                <h3>
                   ¿Cuál es la mejor forma de llegar a Asakusa?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -298,7 +286,7 @@ const EsGuiaAsakusaNueva = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-3">
+                <h3>
                   ¿Qué ver en Asakusa aparte de Senso-ji?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -306,7 +294,7 @@ const EsGuiaAsakusaNueva = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-3">
+                <h3>
                   ¿Se puede visitar el Templo Senso-ji de noche?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -314,7 +302,7 @@ const EsGuiaAsakusaNueva = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-medium text-foreground mb-3">
+                <h3>
                   ¿Necesito un guía para Asakusa o puedo explorarlo por mi cuenta?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -329,7 +317,7 @@ const EsGuiaAsakusaNueva = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Listo para Descubrir el Asakusa Que la Mayoría de Turistas Nunca Ve?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -344,7 +332,11 @@ const EsGuiaAsakusaNueva = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -440,7 +432,9 @@ const EsGuiaAsakusaNueva = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

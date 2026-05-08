@@ -7,6 +7,8 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderEsConfig } from "@/data/diagnostics/neighborhoodFinderEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsGuiaShibuyaHarajuku = () => {
   return (
@@ -22,51 +24,35 @@ const EsGuiaShibuyaHarajuku = () => {
         ]}
       />
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Guías de Barrios de Tokio</p>
-            <h1 className="heading-display text-foreground">
-              Shibuya y Harajuku: Guía Local del Tokio Moderno
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                25 de febrero de 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="prose-editorial">
 
-      {/* Imagen Principal */}
-      <div className="w-full h-[300px] md:h-[400px]">
-        <img
-          src="/images/blog/shibuya-harajuku-guide-hero.webp"
-          alt="Guía de Shibuya y Harajuku - el lado moderno de Tokio"
-          className="w-full h-full object-cover"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-      </div>
+      
+
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/shibuya-harajuku-guide-hero.webp"
+        imageAlt="Guía de Shibuya y Harajuku - el lado moderno de Tokio"
+        eyebrow="Guías de Barrios de Tokio"
+        title="Shibuya y Harajuku: Guía Local del Tokio Moderno"
+        date="25 de febrero de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Cruce de Shibuya", href: "#section-01-cruce-de-shibuya" },
+          { num: "02", label: "Más Allá del Cruce", href: "#section-02-más-allá-del-cruce" },
+          { num: "03", label: "Harajuku", href: "#section-03-harajuku" },
+          { num: "04", label: "Dónde Comer", href: "#section-04-dónde-comer" },
+          { num: "05", label: "Planes Nocturnos", href: "#section-05-planes-nocturnos" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Si Asakusa representa el viejo Tokio, los templos, las tradiciones, los rituales tranquilos de otra era, entonces Shibuya y Harajuku son el pulso creativo de la ciudad. Estos distritos vecinos se encuentran en el lado oeste del centro de Tokio, conectados por un corto paseo o una sola parada de tren, y sin embargo cada uno transmite una energía completamente diferente. Shibuya es frenético, comercial y vibrante con neón y ruido. Harajuku es un lugar de subculturas, experimentos de moda y declaraciones arquitectónicas. Juntos forman lo que muchos visitantes imaginan cuando piensan en el Tokio moderno.
@@ -76,7 +62,8 @@ const EsGuiaShibuyaHarajuku = () => {
             </p>
 
             {/* Cruce de Shibuya */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Cruce de Shibuya</span></div>
+            <h2 id="section-01-cruce-de-shibuya" className="scroll-mt-20">
               Cruce de Shibuya: Cómo Disfrutarlo de Verdad
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -106,35 +93,36 @@ const EsGuiaShibuyaHarajuku = () => {
             </p>
 
             {/* Más Allá del Cruce */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Más Allá del Cruce</span></div>
+            <h2 id="section-02-más-allá-del-cruce" className="scroll-mt-20">
               Más Allá del Cruce: Los Secretos Mejor Guardados de Shibuya
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               La mayoría de visitantes nunca se aventura más allá de una o dos manzanas del cruce, lo que significa que se pierden los barrios que le dan a Shibuya su verdadero carácter. Aquí están los lugares a los que llevo a la gente en mis tours, los sitios que premian la curiosidad y la disposición a explorar.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Nonbei Yokocho: El Callejón de los Bebedores
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Escondido detrás de las vías del tren a solo dos minutos a pie de la salida norte de la estación de Shibuya, Nonbei Yokocho es una estrecha callejuela de diminutos bares que parece pertenecer a otra década. Piensa en él como la respuesta de Shibuya al Golden Gai de Shinjuku: pequeños y atmosféricos establecimientos de bebidas con capacidad para unas seis u ocho personas cada uno. La diferencia es que Nonbei Yokocho es mucho menos turístico y tiene un ambiente más relajado y acogedor. Algunos de estos bares han sido regentados por los mismos propietarios durante 40 o 50 años. Las noches son el mejor momento para visitarlo, y no tengas miedo de entrar en un lugar que te llame la atención. La mayoría da la bienvenida a los recién llegados, incluso a los que no hablan japonés. Un simple "osusume kudasai" (su recomendación, por favor) te pondrá en marcha.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Center-gai y las Calles Laterales
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Center-gai (oficialmente renombrada "Basketball Street", aunque nadie la llama así) es la principal calle peatonal comercial de Shibuya, ruidosa y concurrida con cadenas de comida rápida y tiendas de ropa. Merece un paseo por el ambiente, pero los verdaderos hallazgos están en las estrechas calles laterales que se ramifican desde ella. Estos callejones más pequeños esconden izakayas con menús escritos a mano, diminutas barras de ramen con colas hasta la puerta, y tiendas de ropa vintage donde puedes encontrar piezas únicas. La regla general en Shibuya es simple: si una calle parece demasiado estrecha para molestarse, probablemente merezca la pena explorarla.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Shibuya Stream y la Zona del Río
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una de las transformaciones más dramáticas recientes de Shibuya es la zona alrededor del río Shibuya, al sur de la estación. El complejo Shibuya Stream se inauguró en 2018 y convirtió lo que era un cauce oculto cubierto de hormigón en un paseo ribereño al aire libre con restaurantes, cafeterías y zonas de descanso público. Es donde los oficinistas almuerzan y donde las parejas pasean los fines de semana por la tarde. La vibra es completamente diferente del caos del cruce: moderna, relajada, casi europea en sensación. Sigue el paseo del río hacia el sur y te encontrarás en una zona residencial sorprendentemente tranquila que la mayoría de turistas ni sabe que existe.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Dogenzaka: Más de lo que Aparenta
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -157,14 +145,15 @@ const EsGuiaShibuyaHarajuku = () => {
             <InlineCTAEs href="/es/tours/shibuya-harajuku" />
 
             {/* Harajuku */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Harajuku</span></div>
+            <h2 id="section-03-harajuku" className="scroll-mt-20">
               Harajuku: Más que la Calle Takeshita
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Harajuku es sinónimo de cultura juvenil japonesa, y para muchos visitantes es el barrio que más les entusiasma ver. Pero Harajuku es mucho más que la única calle que la mayoría visita. Permíteme desglosar lo que hay aquí y cómo sacarle el máximo partido.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Calle Takeshita: Un Baño de Realidad
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -184,7 +173,7 @@ const EsGuiaShibuyaHarajuku = () => {
                 Cat Street, la verdadera calle de la moda de Harajuku, lejos de las multitudes de Takeshita
               </figcaption>
             </figure>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cat Street: La Verdadera Calle de la Moda
             </h3>
             <figure className="my-8">
@@ -204,7 +193,7 @@ const EsGuiaShibuyaHarajuku = () => {
               Corriendo aproximadamente paralela a la calle Takeshita pero una manzana al sur, Cat Street (Kyuushibuya-gawa Yuuhodou) es donde los locales de Harajuku con conciencia de la moda realmente compran. Construida a lo largo de un antiguo cauce fluvial, es una calle sinuosa flanqueada por árboles con boutiques independientes, tiendas insignia de diseñadores, tiendas vintage y algunos de los mejores cafés de la zona. La atmósfera es completamente diferente de Takeshita: relajada, cuidada y genuinamente estilosa. Aquí es donde las marcas japonesas de streetwear prueban nuevos conceptos, donde diseñadores emergentes abren sus primeras tiendas, y donde verás locales vanguardistas montando conjuntos que no desentonarían en una revista. Si solo tienes tiempo para una calle de Harajuku, que sea Cat Street.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Omotesando: Un Paseo Arquitectónico
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -224,14 +213,14 @@ const EsGuiaShibuyaHarajuku = () => {
                 El camino arbolado hacia el Santuario Meiji, un mundo aparte de las multitudes de Harajuku
               </figcaption>
             </figure>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Santuario Meiji: Un Contraste Apacible
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               A solo cinco minutos a pie del caos neón de la calle Takeshita, el Santuario Meiji (Meiji Jingu) se encuentra dentro de un parque boscoso de 70 hectáreas que parece un mundo completamente diferente. Dedicado al Emperador Meiji y a la Emperatriz Shoken, el santuario es uno de los sitios sintoístas más importantes de Tokio. La transición del exceso de cultura pop de Harajuku a los imponentes torii y los caminos de grava del santuario es uno de los contrastes más dramáticos de todo Tokio, y captura perfectamente lo que hace a esta ciudad tan interminablemente fascinante. Llega temprano por la mañana para la experiencia más serena, y estate atento a las procesiones nupciales tradicionales los fines de semana.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Parque Yoyogi: El Salón de Tokio
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -246,21 +235,22 @@ const EsGuiaShibuyaHarajuku = () => {
             </p>
 
             {/* Dónde Comer */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Dónde Comer</span></div>
+            <h2 id="section-04-dónde-comer" className="scroll-mt-20">
               Dónde Comer
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Una de las mejores cosas de Shibuya y Harajuku es la enorme densidad de opciones gastronómicas, desde aperitivos callejeros baratos hasta restaurantes de primer nivel. Aquí están mis recomendaciones para visitantes que quieren comer bien sin depender de los primeros resultados de Google (que tienden a llevarte a trampas para turistas).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Comida Callejera de Harajuku: Los Clásicos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los crepes de Harajuku son una institución tokiota. Los crepes finos y doblados, rellenos de nata montada, fruta fresca, chocolate y helado, han sido un pilar de la calle Takeshita desde los años 70. Marion Crepes y Angels Heart son los originales, y siguen siendo buenos. Las tiendas de algodón de azúcar han explotado en popularidad en los últimos años, con locales que ofrecen enormes nubes coloridas de azúcar hilado que son tanto por la foto de Instagram como por el sabor. Son divertidas, efímeras y perfectamente Harajuku. Para algo más sustancioso, las calles laterales alrededor de Takeshita esconden excelentes puestos de takoyaki (bolas de pulpo) y pequeños restaurantes de curry que atienden a locales hambrientos en lugar de turistas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Ramen de Shibuya y Más
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -268,28 +258,29 @@ const EsGuiaShibuyaHarajuku = () => {
             </p>
 
             {/* Planes Nocturnos */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Planes Nocturnos</span></div>
+            <h2 id="section-05-planes-nocturnos" className="scroll-mt-20">
               Planes Nocturnos
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Shibuya se transforma después del anochecer. El neón se intensifica, las multitudes pasan de compradores a juerguistas, y la energía del barrio cambia por completo. Si quieres vivir la vida nocturna de Tokio, Shibuya es uno de los mejores puntos de partida, y así es como disfrutarla de forma segura y agradable.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Puntos de Partida para la Vida Nocturna en Shibuya
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Para una velada relajada, empieza en Nonbei Yokocho (el callejón que mencioné antes) o en uno de los bares de cerveza artesanal cerca de la estación. Shibuya tiene una excelente escena de cerveza artesanal, con locales como Mikkeller Tokyo y Goodbeer Faucets que ofrecen microcervecerías japonesas e internacionales en ambientes con estilo. Si buscas algo más animado, las calles alrededor de Center-gai tienen docenas de izakayas donde puedes pedir rondas de bebidas y pequeños platos al clásico estilo japonés de beber. Para ir de clubs, Shibuya alberga algunos de los locales más emblemáticos de Tokio, aunque la escena empieza tarde, típicamente después de medianoche.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Consejos de Seguridad para Ir de Bares como Turista
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Tokio es una de las ciudades más seguras del mundo para la vida nocturna, pero unos pocos consejos de sentido común mejorarán tu experiencia. Quédate en lugares con menús visibles y precios publicados; esto evita cualquier cargo sorpresa. Ten cuidado con los captadores en la calle que te invitan a bares "especiales"; los establecimientos legítimos no necesitan reclutar clientes desde la acera. Muchos bares pequeños tienen un cargo por mesa (otoshi) de 300 a 500 yenes por persona, que típicamente incluye un pequeño aperitivo. Esto es práctica estándar, no una estafa. Si no estás seguro de un lugar, pregunta en la recepción de tu hotel o busca sitios con reseñas en inglés en Google Maps.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Último Tren: Conoce Tus Límites
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -298,7 +289,7 @@ const EsGuiaShibuyaHarajuku = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Quieres explorar Shibuya y Harajuku con un local que conoce cada callejón?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -313,7 +304,11 @@ const EsGuiaShibuyaHarajuku = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -347,7 +342,9 @@ const EsGuiaShibuyaHarajuku = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

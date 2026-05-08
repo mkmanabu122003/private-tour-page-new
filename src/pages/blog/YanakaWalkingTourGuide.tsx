@@ -5,6 +5,8 @@ import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { DiagnosticTrigger } from "@/components/blog/DiagnosticTrigger";
 import { neighborhoodFinderConfig } from "@/data/diagnostics/neighborhoodFinder";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const YanakaWalkingTourGuide = () => {
   return (
@@ -15,53 +17,35 @@ const YanakaWalkingTourGuide = () => {
         canonicalPath="/blog/yanaka-walking-tour-guide"
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/yanaka-ginza-shopping-street.webp"
-          alt="Yanaka Ginza shopping street viewed from the Yuyake Dandan stairs"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Tokyo Area Guides</p>
-            <h1 className="heading-display text-foreground">
-              Yanaka Walking Tour: Tokyo's Hidden Neighborhood
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Licensed Tour Guide
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                March 8, 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/yanaka-ginza-shopping-street.webp"
+        imageAlt="Yanaka Ginza shopping street viewed from the Yuyake Dandan stairs"
+        eyebrow="Tokyo Area Guides"
+        title="Yanaka Walking Tour: Tokyo's Hidden Neighborhood"
+        date="March 8, 2026"
+        backHref="/blog"
+        backLabel="Back to Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Why Yanaka Feels Different…", href: "#section-01-why-yanaka-feels-different-from-the-rest-of-tokyo" },
+          { num: "02", label: "Yanaka Walking Tour Route", href: "#section-02-yanaka-walking-tour-route" },
+          { num: "03", label: "Top Spots Not to Miss in…", href: "#section-03-top-spots-not-to-miss-in-yanaka" },
+          { num: "04", label: "Best Food and Drinks in…", href: "#section-04-best-food-and-drinks-in-yanaka-ginza" },
+          { num: "05", label: "Getting to Yanaka from…", href: "#section-05-getting-to-yanaka-from-central-tokyo" },
+          { num: "06", label: "Explore Yanaka with a…", href: "#section-06-explore-yanaka-with-a-private-guide" }
+            ]} />
+
+            <article>
+
             {/* Introduction */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Most visitors to Tokyo never hear the name Yanaka. It does not appear on the standard sightseeing lists, the hop-on hop-off bus routes do not stop here, and the big travel agencies have never figured out how to package it into a half-day itinerary. That is precisely what makes it one of the most rewarding neighborhoods in the entire city. Yanaka is old Tokyo, the real thing, not a reconstruction or a theme park version but an actual living neighborhood where wooden houses lean against one another on narrow lanes, where temple bells mark the hours, and where a shopping street that has been feeding the community for generations still does exactly that every single day.
@@ -71,7 +55,8 @@ const YanakaWalkingTourGuide = () => {
             </p>
 
             {/* Why Yanaka Feels Different */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Why Yanaka Feels Different from the Rest of Tokyo</span></div>
+            <h2 id="section-01-why-yanaka-feels-different-from-the-rest-of-tokyo" className="scroll-mt-20">
               Why Yanaka Feels Different from the Rest of Tokyo
             </h2>
             <figure className="my-8">
@@ -98,7 +83,8 @@ const YanakaWalkingTourGuide = () => {
             </p>
 
             {/* Walking Tour Route */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Yanaka Walking Tour Route</span></div>
+            <h2 id="section-02-yanaka-walking-tour-route" className="scroll-mt-20">
               Yanaka Walking Tour Route (2 to 3 Hours)
             </h2>
             <figure className="my-8">
@@ -125,7 +111,8 @@ const YanakaWalkingTourGuide = () => {
             </p>
 
             {/* Top Spots */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Top Spots Not to Miss in Yanaka</span></div>
+            <h2 id="section-03-top-spots-not-to-miss-in-yanaka" className="scroll-mt-20">
               Top Spots Not to Miss in Yanaka
             </h2>
             <figure className="my-8">
@@ -152,7 +139,8 @@ const YanakaWalkingTourGuide = () => {
             </p>
 
             {/* Food & Drinks */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · Best Food and Drinks in Yanaka Ginza</span></div>
+            <h2 id="section-04-best-food-and-drinks-in-yanaka-ginza" className="scroll-mt-20">
               Best Food and Drinks in Yanaka Ginza Shopping Street
             </h2>
             <figure className="my-8">
@@ -179,7 +167,8 @@ const YanakaWalkingTourGuide = () => {
             </p>
 
             {/* Getting There */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Getting to Yanaka from Central Tokyo</span></div>
+            <h2 id="section-05-getting-to-yanaka-from-central-tokyo" className="scroll-mt-20">
               Getting to Yanaka from Central Tokyo
             </h2>
             <figure className="my-8">
@@ -208,7 +197,8 @@ const YanakaWalkingTourGuide = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <div className="section-eyebrow"><span>Section 06 · Explore Yanaka with a Private Guide</span></div>
+              <h2 id="section-06-explore-yanaka-with-a-private-guide" className="scroll-mt-20">
                 Explore Yanaka with a Private Guide
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -223,7 +213,11 @@ const YanakaWalkingTourGuide = () => {
                 </Link>
               </div>
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -260,7 +254,9 @@ const YanakaWalkingTourGuide = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

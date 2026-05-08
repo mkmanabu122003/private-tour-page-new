@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tour Comparison & Pricing — Design Improvements</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --card: #fffdf8;
+    --ink: #171717;
+    --ink-soft: #2b2823;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --clay: #9c563f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, sans-serif;
+    padding: 60px 0 80px;
+    font-variant-numeric: lining-nums;
+  }
+
+  .page-head {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 40px;
+  }
+  .page-head h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 8px;
+  }
+  .page-head p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 760px;
+  }
+
+  .variant {
+    max-width: 1200px;
+    margin: 0 auto 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .variant-head {
+    padding: 14px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+  }
+  .variant-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .variant-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(248,247,241,.85);
+  }
+  .variant-body { padding: 56px 48px; background: var(--paper); }
+  .variant-foot {
+    padding: 16px 32px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .variant-foot strong { color: var(--ink); font-weight: 700; }
+
+  /* Section header (mimics current site) */
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+  }
+  .section-head .eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 0 0 12px;
+  }
+  .section-head h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .section-head p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* === CURRENT comparison (baseline) === */
+  .cmp-current { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .cmp-current .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 32px;
+  }
+  .cmp-current .card.recommended {
+    border-color: var(--gold);
+    border-width: 2px;
+    position: relative;
+  }
+  .cmp-current .badge {
+    position: absolute; top: -12px; right: 22px;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 10px; font-weight: 700;
+    padding: 4px 10px; border-radius: 4px;
+    text-transform: uppercase; letter-spacing: 0.14em;
+  }
+  .cmp-current h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--clay);
+    margin: 0 0 18px;
+  }
+  .cmp-current .row { display: flex; gap: 10px; padding: 7px 0; font-size: 14px; }
+  .cmp-current .row .x { color: var(--muted-2); }
+  .cmp-current .row .check { color: var(--gold); }
+  .cmp-current .row strong { color: var(--ink); font-weight: 700; }
+  .cmp-current .row .v { color: var(--muted); }
+
+  /* === PROPOSAL A: Editorial weighted comparison === */
+  .cmpA { display: grid; grid-template-columns: 0.85fr 1fr; gap: 28px; align-items: stretch; }
+  .cmpA .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 32px 36px;
+    position: relative;
+  }
+  .cmpA .card.basic {
+    background: rgba(0,0,0,.02);
+    color: var(--muted);
+  }
+  .cmpA .card.recommended {
+    background: linear-gradient(180deg, #fffdf8 0%, #faf5e1 100%);
+    border: 2px solid var(--gold);
+    box-shadow: 0 14px 40px -10px rgba(201,168,76,.32);
+  }
+  .cmpA .badge {
+    position: absolute; top: -14px; right: 28px;
+    background: var(--ink);
+    color: var(--gold);
+    font-size: 10.5px; font-weight: 700;
+    padding: 6px 12px; border-radius: 999px;
+    text-transform: uppercase; letter-spacing: 0.18em;
+    box-shadow: 0 4px 14px rgba(0,0,0,.20);
+  }
+  .cmpA .card-head {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .cmpA .card-head .icon {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex: 0 0 44px;
+  }
+  .cmpA .card.basic .icon {
+    background: rgba(0,0,0,.06);
+    color: var(--muted-2);
+  }
+  .cmpA .card.recommended .icon {
+    background: rgba(201,168,76,.18);
+    color: var(--gold);
+  }
+  .cmpA h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .cmpA .card.basic h3 { color: var(--muted); }
+  .cmpA .card.recommended h3 { color: var(--ink); }
+  .cmpA .card-sub {
+    font-size: 12px;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .cmpA .row {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(220,212,194,.5);
+    font-size: 14px;
+    align-items: start;
+  }
+  .cmpA .row:last-child { border-bottom: 0; }
+  .cmpA .row .icon-mark {
+    width: 24px; height: 24px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    flex: 0 0 24px;
+    font-size: 13px;
+    line-height: 1;
+  }
+  .cmpA .card.basic .icon-mark {
+    background: rgba(0,0,0,.05);
+    color: var(--muted-2);
+  }
+  .cmpA .card.recommended .icon-mark {
+    background: rgba(201,168,76,.15);
+    color: var(--gold);
+  }
+  .cmpA .row strong { display: block; color: var(--ink); font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+  .cmpA .card.basic .row strong { color: var(--muted); }
+  .cmpA .row .v { font-size: 13.5px; line-height: 1.45; }
+  .cmpA .card.basic .row .v { color: var(--muted-2); }
+  .cmpA .card.recommended .row .v { color: var(--ink-soft); }
+
+  /* === PROPOSAL B: Single-card decision === */
+  .cmpB {
+    background: linear-gradient(135deg, #fffdf8 0%, #fbf6e6 100%);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 40px 48px;
+    box-shadow: 0 14px 40px -10px rgba(201,168,76,.25);
+  }
+  .cmpB .answer {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 8px;
+    text-align: center;
+  }
+  .cmpB .answer .hl { color: var(--gold); }
+  .cmpB .lead {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 32px;
+  }
+  .cmpB-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .cmpB-grid > div {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .cmpB-grid .lbl {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted-2);
+  }
+  .cmpB-grid .basic-col {
+    color: var(--muted);
+    background: rgba(0,0,0,.02);
+  }
+  .cmpB-grid .private-col {
+    color: var(--ink);
+    background: rgba(201,168,76,.06);
+    font-weight: 500;
+  }
+  .cmpB-grid .head {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 18px;
+  }
+  .cmpB-grid .head.gold { background: var(--gold); color: var(--ink); }
+
+  /* ============ PRICING ============ */
+  /* === CURRENT pricing table === */
+  .price-current {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .price-current .title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 28px;
+  }
+  .price-current table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .price-current th, .price-current td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid var(--line);
+  }
+  .price-current th { font-size: 13px; color: var(--muted); font-weight: 700; }
+  .price-current td:last-child, .price-current th:last-child { text-align: right; }
+  .price-current .note { text-align: center; font-size: 13px; color: var(--muted); margin-top: 16px; }
+
+  /* === PROPOSAL A: Bar chart pricing === */
+  .priceA-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 36px 40px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .priceA-card .title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 6px;
+  }
+  .priceA-card .lead {
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  .priceA-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 130px;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(220,212,194,.6);
+  }
+  .priceA-row:last-child { border-bottom: 0; }
+  .priceA-row.best { background: rgba(201,168,76,.06); margin: 0 -14px; padding-left: 14px; padding-right: 14px; border-radius: 6px; }
+  .priceA-row .who {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .priceA-row .who .num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-right: 4px;
+  }
+  .priceA-row .bar-wrap {
+    height: 26px;
+    background: rgba(0,0,0,.04);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .priceA-row .bar {
+    height: 100%;
+    background: linear-gradient(90deg, #d4b65e 0%, #b8943b 100%);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: flex-end;
+    padding-right: 10px;
+    color: rgba(0,0,0,.65);
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .priceA-row.best .bar {
+    background: linear-gradient(90deg, var(--gold) 0%, #a3863a 100%);
+  }
+  .priceA-row .price {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--ink);
+    text-align: right;
+    line-height: 1;
+  }
+  .priceA-row .price small {
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .priceA-row.best .price { color: var(--gold); }
+  .priceA-best-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 9.5px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-left: 8px;
+    vertical-align: 2px;
+  }
+  .priceA-card .footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .priceA-card .footer strong { color: var(--ink); }
+
+  /* === PROPOSAL B: Pricing card grid (no table) === */
+  .priceB-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .priceB-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px 18px;
+    text-align: center;
+    position: relative;
+  }
+  .priceB-card.best {
+    border: 2px solid var(--gold);
+    background: linear-gradient(180deg, #fffdf8, #faf5e1);
+    box-shadow: 0 8px 24px -8px rgba(201,168,76,.28);
+  }
+  .priceB-card .who {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin: 0 0 6px;
+  }
+  .priceB-card .price {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+    margin: 0 0 4px;
+  }
+  .priceB-card.best .price { color: var(--gold); }
+  .priceB-card .per {
+    font-size: 11px;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+  }
+  .priceB-card .badge-best {
+    position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 9.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+  }
+
+  /* Recommendation tag */
+  .rec {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--gold);
+    background: rgba(201,168,76,.12);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Tour Comparison & Pricing — Design improvements</h1>
+  <p>
+    "Is a Private Tour Worth It?"（比較）と "Yanaka Private Walking Tour: ¥50,000..."（料金表）の2セクション。
+    Editorial luxury 路線で改善案を3パターンずつ。
+  </p>
+</div>
+
+<!-- ============ CURRENT — comparison ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT · Comparison</span>
+    <span class="variant-name">対称な card 2つ・gold border + RECOMMENDED badge</span>
+  </div>
+  <div class="variant-body">
+    <div class="section-head">
+      <p class="eyebrow">Why Private?</p>
+      <h2>Is a Private Tour Worth It?</h2>
+      <p>A private tour isn't just a smaller group — it's an entirely different experience.</p>
+    </div>
+    <div class="cmp-current">
+      <div class="card">
+        <h3>Typical Group Tour</h3>
+        <div class="row"><span class="x">✕</span><div><strong>Group size:</strong> <span class="v">10–20 strangers</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>Route:</strong> <span class="v">Fixed itinerary</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>Pace:</strong> <span class="v">Rushed to stay on schedule</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>Guide credentials:</strong> <span class="v">Varies</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>Dietary needs:</strong> <span class="v">Not accommodated</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>Pre-tour planning:</strong> <span class="v">None</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>Scheduling:</strong> <span class="v">Fixed departure times</span></div></div>
+        <div class="row"><span class="x">✕</span><div><strong>After-tour support:</strong> <span class="v">None</span></div></div>
+      </div>
+      <div class="card recommended">
+        <span class="badge">RECOMMENDED</span>
+        <h3 style="color: var(--clay);">Private Tour</h3>
+        <div class="row"><span class="check">✓</span><div><strong>Group size:</strong> <span class="v">Just your group (1–6)</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>Route:</strong> <span class="v">Fully customized to your interests</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>Pace:</strong> <span class="v">Your pace — stop whenever you like</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>Guide credentials:</strong> <span class="v">National Government Licensed Guide</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>Dietary needs:</strong> <span class="v">Fully customized</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>Pre-tour planning:</strong> <span class="v">Personal itinerary by email</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>Scheduling:</strong> <span class="v">Any date, any start time</span></div></div>
+        <div class="row"><span class="check">✓</span><div><strong>After-tour support:</strong> <span class="v">Restaurant tips & help during your stay</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue:</strong> 2 card が同サイズ・同 weight なので比較というより並列に見える。RECOMMENDED badge は gold だが card 全体が "勝者" として機能する仕掛けが弱い。
+  </div>
+</div>
+
+<!-- ============ PROPOSAL A — weighted cards ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">A · Weighted Cards</span>
+    <span class="variant-name">basic を muted に格下げ・private に gold gradient + ink badge + glow shadow</span>
+  </div>
+  <div class="variant-body">
+    <div class="section-head">
+      <p class="eyebrow">Why Private?</p>
+      <h2>Is a Private Tour Worth It?</h2>
+      <p>A private tour isn't just a smaller group — it's an entirely different experience.</p>
+    </div>
+    <div class="cmpA">
+      <div class="card basic">
+        <div class="card-head">
+          <div class="icon">⊟</div>
+          <div>
+            <h3>Typical Group Tour</h3>
+            <p class="card-sub">What most travelers settle for</p>
+          </div>
+        </div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Group size</strong><span class="v">10–20 strangers</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Route</strong><span class="v">Fixed itinerary</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Pace</strong><span class="v">Rushed to stay on schedule</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Guide credentials</strong><span class="v">Varies</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Dietary needs</strong><span class="v">Not accommodated</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Pre-tour planning</strong><span class="v">None</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>Scheduling</strong><span class="v">Fixed departure times</span></div></div>
+        <div class="row"><span class="icon-mark">✕</span><div><strong>After-tour support</strong><span class="v">None</span></div></div>
+      </div>
+      <div class="card recommended">
+        <span class="badge">★ Recommended</span>
+        <div class="card-head">
+          <div class="icon">✦</div>
+          <div>
+            <h3>Private Tour with Manabu</h3>
+            <p class="card-sub" style="color: var(--gold);">Licensed guide · 500+ tours · 4.86★</p>
+          </div>
+        </div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Group size</strong><span class="v">Just your group (1–6)</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Route</strong><span class="v">Fully customized to your interests</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Pace</strong><span class="v">Your pace — stop whenever you like</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Guide credentials</strong><span class="v">National Government Licensed (全国通訳案内士)</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Dietary needs</strong><span class="v">Fully customized · vegetarian / halal / gluten-free</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Pre-tour planning</strong><span class="v">Personal itinerary by email before you arrive</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>Scheduling</strong><span class="v">Any date, any start time</span></div></div>
+        <div class="row"><span class="icon-mark">✓</span><div><strong>After-tour support</strong><span class="v">Restaurant tips & help during your stay</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>basic card は <code>opacity 抑え + muted color + 細 padding</code>。Private card は <code>gold gradient bg + 2px gold border + ink badge with star + gold glow shadow</code>。subtitle で credentials を即提示（4.86★ 等）。<span class="rec">推奨</span>
+  </div>
+</div>
+
+<!-- ============ PROPOSAL B — single decision card ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">B · Single Decision</span>
+    <span class="variant-name">2 column → 結論 + コンパクト table の単一カード</span>
+  </div>
+  <div class="variant-body">
+    <div class="section-head">
+      <p class="eyebrow">Why Private?</p>
+      <h2>Is a Private Tour Worth It?</h2>
+      <p>A private tour isn't just a smaller group — it's an entirely different experience.</p>
+    </div>
+    <div class="cmpB">
+      <p class="answer">For most travelers, <span class="hl">private wins on every front</span> that matters.</p>
+      <p class="lead">Same time, same neighborhoods — completely different experience. Compare side-by-side:</p>
+      <div class="cmpB-grid">
+        <div class="head"></div>
+        <div class="head">Typical Group Tour</div>
+        <div class="head gold">Private Tour</div>
+
+        <div class="lbl">Group size</div>
+        <div class="basic-col">10–20 strangers</div>
+        <div class="private-col">Just your group (1–6)</div>
+
+        <div class="lbl">Route</div>
+        <div class="basic-col">Fixed itinerary</div>
+        <div class="private-col">Fully customized</div>
+
+        <div class="lbl">Pace</div>
+        <div class="basic-col">Rushed</div>
+        <div class="private-col">Your pace</div>
+
+        <div class="lbl">Guide credentials</div>
+        <div class="basic-col">Varies</div>
+        <div class="private-col">National Government Licensed</div>
+
+        <div class="lbl">Dietary needs</div>
+        <div class="basic-col">Not accommodated</div>
+        <div class="private-col">Vegetarian / halal / GF</div>
+
+        <div class="lbl">Pre-tour planning</div>
+        <div class="basic-col">None</div>
+        <div class="private-col">Personal itinerary by email</div>
+
+        <div class="lbl">Scheduling</div>
+        <div class="basic-col">Fixed departure times</div>
+        <div class="private-col">Any date, any time</div>
+
+        <div class="lbl">After-tour support</div>
+        <div class="basic-col">None</div>
+        <div class="private-col">Tips & help during your stay</div>
+      </div>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>card 2分割を排除し、<em>"結論一文 + 比較 table"</em> の単一カードに統合。stripe バックグラウンド + 各行 left label。table head は ink/gold 反転 で hierarchy 出す。
+  </div>
+</div>
+
+<!-- ====================== PRICING ====================== -->
+<div class="page-head" style="margin-top: 80px;">
+  <h1 style="font-size: 28px;">Pricing — Design improvements</h1>
+</div>
+
+<!-- ============ CURRENT pricing ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">CURRENT · Pricing</span>
+    <span class="variant-name">プレーンな table</span>
+  </div>
+  <div class="variant-body">
+    <div class="price-current">
+      <p class="title">Yanaka Private Walking Tour: ¥50,000 for your entire group</p>
+      <table>
+        <thead><tr><th>Group size</th><th>Per person</th></tr></thead>
+        <tbody>
+          <tr><td>1 person</td><td>¥50,000/person</td></tr>
+          <tr><td>2 people</td><td>¥25,000/person</td></tr>
+          <tr><td>3 people</td><td>¥16,667/person</td></tr>
+          <tr><td>4 people</td><td>¥12,500/person</td></tr>
+          <tr><td>5 people</td><td>¥10,000/person</td></tr>
+          <tr><td>6 people</td><td>¥8,334/person</td></tr>
+        </tbody>
+      </table>
+      <p class="note">The tour price is fixed per group — the more people you bring, the better value per person.</p>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>Issue:</strong> 価格の "下がっていく" 動きが視覚化されていない。"Best value" の心理的トリガーがない。Cormorant 数字の <em>editorial luxury</em> 路線も活かせていない。
+  </div>
+</div>
+
+<!-- ============ PROPOSAL A — bar chart pricing ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">A · Bar chart pricing</span>
+    <span class="variant-name">価格バーで "下がる" を視覚化 · Cormorant gold 数字</span>
+  </div>
+  <div class="variant-body">
+    <div class="priceA-card">
+      <p class="title">Yanaka Private Walking Tour</p>
+      <p class="lead">¥50,000 fixed for your entire group · the more you bring, the better the per-person value.</p>
+
+      <div class="priceA-row">
+        <div class="who"><span class="num">1</span> person</div>
+        <div class="bar-wrap"><div class="bar" style="width: 100%;">¥50,000</div></div>
+        <div class="price">¥50,000<small>per person</small></div>
+      </div>
+      <div class="priceA-row">
+        <div class="who"><span class="num">2</span> people</div>
+        <div class="bar-wrap"><div class="bar" style="width: 50%;">¥25,000</div></div>
+        <div class="price">¥25,000<small>per person</small></div>
+      </div>
+      <div class="priceA-row">
+        <div class="who"><span class="num">3</span> people</div>
+        <div class="bar-wrap"><div class="bar" style="width: 33%;">¥16,667</div></div>
+        <div class="price">¥16,667<small>per person</small></div>
+      </div>
+      <div class="priceA-row best">
+        <div class="who"><span class="num">4</span> people <span class="priceA-best-tag">Sweet spot</span></div>
+        <div class="bar-wrap"><div class="bar" style="width: 25%;">¥12,500</div></div>
+        <div class="price">¥12,500<small>per person</small></div>
+      </div>
+      <div class="priceA-row best">
+        <div class="who"><span class="num">5</span> people</div>
+        <div class="bar-wrap"><div class="bar" style="width: 20%;">¥10,000</div></div>
+        <div class="price">¥10,000<small>per person</small></div>
+      </div>
+      <div class="priceA-row best">
+        <div class="who"><span class="num">6</span> people <span class="priceA-best-tag">Best value</span></div>
+        <div class="bar-wrap"><div class="bar" style="width: 16.7%;">¥8,334</div></div>
+        <div class="price">¥8,334<small>per person</small></div>
+      </div>
+
+      <p class="footer">
+        <strong>Tip:</strong> Most guests bring 2–4 people. Splitting with friends or family makes it the same price as a public tour — but private.
+      </p>
+    </div>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>各行に <strong>gold gradient bar</strong>（per-person 価格を視覚化）／4-6人を <em>"best value"</em> ゾーンとして gold tint highlight ＋ "Sweet spot" / "Best value" pill badge／Cormorant 24px の per-person 価格 + Inter uppercase "PER PERSON" suffix。<span class="rec">推奨</span>
+  </div>
+</div>
+
+<!-- ============ PROPOSAL B — card grid ============ -->
+<div class="variant">
+  <div class="variant-head">
+    <span class="variant-tag">B · Card grid</span>
+    <span class="variant-name">table を捨てて 6 価格カードを 3列 × 2行 grid で</span>
+  </div>
+  <div class="variant-body">
+    <div class="section-head">
+      <p class="eyebrow">Pricing</p>
+      <h2>Yanaka Private Walking Tour</h2>
+      <p>¥50,000 fixed for your entire group — the per-person price drops with more people.</p>
+    </div>
+    <div class="priceB-grid">
+      <div class="priceB-card">
+        <p class="who">1 person</p>
+        <p class="price">¥50,000</p>
+        <p class="per">per person</p>
+      </div>
+      <div class="priceB-card">
+        <p class="who">2 people</p>
+        <p class="price">¥25,000</p>
+        <p class="per">per person</p>
+      </div>
+      <div class="priceB-card">
+        <p class="who">3 people</p>
+        <p class="price">¥16,667</p>
+        <p class="per">per person</p>
+      </div>
+      <div class="priceB-card best">
+        <span class="badge-best">Sweet spot</span>
+        <p class="who">4 people</p>
+        <p class="price">¥12,500</p>
+        <p class="per">per person</p>
+      </div>
+      <div class="priceB-card best">
+        <p class="who">5 people</p>
+        <p class="price">¥10,000</p>
+        <p class="per">per person</p>
+      </div>
+      <div class="priceB-card best">
+        <span class="badge-best">Best value</span>
+        <p class="who">6 people</p>
+        <p class="price">¥8,334</p>
+        <p class="per">per person</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 28px; font-size: 13.5px; color: var(--muted);">
+      <strong style="color: var(--ink);">Tip:</strong> Most guests bring 2–4 people. Splitting with friends or family makes it almost the same price as a public tour — but private.
+    </p>
+  </div>
+  <div class="variant-foot">
+    <strong>変更点：</strong>table → <strong>3列 × 2行 grid card</strong>。各 card：Inter uppercase eyebrow + Cormorant 36px price + "per person" 小ラベル。4-6 人カードを gold border + tinted bg + "Sweet spot"/"Best value" floating badge。
+  </div>
+</div>
+
+<!-- ============ DECISION ============ -->
+<div style="max-width: 1200px; margin: 56px auto 0; padding: 0 40px;">
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 28px; margin: 0 0 16px;">推奨</h2>
+  <ul style="color: var(--muted); font-size: 14px; line-height: 1.75; padding-left: 22px; margin: 0;">
+    <li>
+      <strong style="color: var(--ink);">Comparison：</strong>
+      <span class="rec">A · Weighted Cards</span> — basic を muted に格下げ、private を gold gradient + glow + Recommended badge で<em>"明確な勝者"</em>として表現。心理的影響最大。
+    </li>
+    <li style="margin-top: 8px;">
+      <strong style="color: var(--ink);">Pricing：</strong>
+      <span class="rec">A · Bar chart</span> — 価格 bar が "下がっていく" を視覚化、4-6人ゾーンが "best value" として gold tint で浮き上がる。CV を group bring に向ける効果あり。
+    </li>
+  </ul>
+  <p style="margin-top: 14px; color: var(--muted-2); font-size: 13px;">
+    どの組み合わせで進めますか？ Comparison A + Pricing A の組み合わせが editorial 路線で最も強力です。
+  </p>
+</div>
+
+</body>
+</html>

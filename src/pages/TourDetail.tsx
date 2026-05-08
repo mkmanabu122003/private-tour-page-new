@@ -687,11 +687,9 @@ const TourDetail = () => {
         }
       />
 
-      {/* Hero Carousel with Thumbnails */}
-      <section className="relative h-[50vh] md:h-[60vh] min-h-[400px] md:min-h-[500px]">
-        {/* Main Image — clicking scrolls to the inline booking CTA, capturing
-            the dead-click intent surfaced in Clarity (PC dead click 50% on
-            /tours/tsukiji-ginza in the 2026-04-26 window). */}
+      {/* Hero — image carousel with overlaid title (BlogArticleHero pattern) */}
+      <section className="relative w-full h-[540px] md:h-[620px] lg:h-[660px] overflow-hidden">
+        {/* Carousel — clicking scrolls to the inline booking CTA */}
         <div className="overflow-hidden h-full" ref={emblaRef}>
           <div className="flex h-full">
             {tour.images.map((image, index) => (
@@ -721,19 +719,49 @@ const TourDetail = () => {
           </div>
         </div>
 
-        {/* Tour Info - Below Image */}
-        <div className="absolute bottom-16 md:bottom-20 left-0 right-0 container-section pointer-events-none">
-          <Link
-            to="/tours"
-            className="inline-flex items-center gap-2 text-sm text-white/90 hover:text-white mb-2 md:mb-4 transition-colors pointer-events-auto drop-shadow-md"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Tours
-          </Link>
+        {/* Gradient overlay for text readability */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15 pointer-events-none"
+          aria-hidden="true"
+        />
+
+        {/* Floating back link (top) */}
+        <div className="absolute top-6 left-0 right-0 z-10">
+          <div className="container-section">
+            <Link
+              to="/tours"
+              className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors backdrop-blur-sm bg-black/25 px-3 py-1.5 rounded-md"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Tours
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom-aligned hero text overlay */}
+        <div className="absolute inset-x-0 bottom-0 pb-24 md:pb-28 z-10 pointer-events-none">
+          <div className="container-section">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent mb-4">
+                {tour.difficulty} · {tour.duration}
+              </p>
+              <h1
+                className="text-white font-semibold leading-[1.05] tracking-tight text-4xl md:text-5xl lg:text-6xl"
+                style={{ textShadow: "0 2px 32px rgba(0,0,0,0.45)" }}
+              >
+                {seo.h1}
+              </h1>
+              {tour.subtitle && (
+                <p className="mt-6 text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
+                  {tour.subtitle}
+                </p>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Thumbnail Navigation */}
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-8 flex items-center gap-1 md:gap-2 pointer-events-auto">
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-8 flex items-center gap-1 md:gap-2 z-20">
           <button
             onClick={scrollPrev}
             className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors"
@@ -773,21 +801,12 @@ const TourDetail = () => {
         </div>
       </section>
 
-      {/* Tour Title Section */}
-      <section className="py-8 md:py-12 bg-secondary/30">
-        <div className="container-section">
-          <p className="text-label text-accent mb-1 md:mb-2">{tour.difficulty} · {tour.duration}</p>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-foreground">{seo.h1}</h1>
-          <p className="text-sm md:text-lg text-muted-foreground mt-1 md:mt-2">{tour.subtitle}</p>
-        </div>
-      </section>
-
       {/* Content */}
       <section className="py-16">
         <div className="container-section">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-12">
+            {/* Main Content — blog-style typography */}
+            <div className="lg:col-span-2 space-y-12 prose-editorial">
               {/* Overview */}
               <div>
                 <h2 className="heading-card text-foreground mb-4">About This Tour</h2>
@@ -1001,10 +1020,10 @@ const TourDetail = () => {
               Let's create an unforgettable day trip experience. Contact us to book your private guided tour or customize the itinerary.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" data-cta="book-now-tour-footer" className="btn-accent" onClick={() => trackBookNowClick("Book This Tour", "tour-footer")}>
+              <Link to="/contact" data-cta="book-now-tour-footer" className="btn-accent-on-dark" onClick={() => trackBookNowClick("Book This Tour", "tour-footer")}>
                 Book This Tour
               </Link>
-              <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-md transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
+              <Link to="/tours/custom" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full transition-all duration-300 ease-out hover:bg-primary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground/50">
                 Customize This Trip
               </Link>
             </div>

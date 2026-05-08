@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Article Redesign Concepts</title>
+    <script>
+      const concept = new URLSearchParams(location.search).get("concept");
+      if (concept) document.documentElement.dataset.concept = concept;
+    </script>
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --muted: #66625a;
+        --line: #ded9cb;
+        --gold: #b8943b;
+        --sage: #557160;
+        --clay: #9c563f;
+        --blue: #2f5f78;
+        --card: #fffdf7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        line-height: .98;
+        letter-spacing: 0;
+        margin: 0;
+      }
+      p { margin: 0; color: var(--muted); line-height: 1.75; }
+      .concept {
+        width: 1440px;
+        min-height: 1800px;
+        margin: 0 auto 60px;
+        background: var(--paper);
+        overflow: hidden;
+        position: relative;
+      }
+      [data-concept="a"] .concept:not(.concept-a),
+      [data-concept="b"] .concept:not(.concept-b),
+      [data-concept="c"] .concept:not(.concept-c) {
+        display: none;
+      }
+      .nav {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 112px;
+        border-bottom: 1px solid rgba(0,0,0,.08);
+        background: rgba(248,247,241,.94);
+      }
+      .brand {
+        font-family: Georgia, serif;
+        letter-spacing: .18em;
+        font-weight: 700;
+        font-size: 22px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 34px;
+        align-items: center;
+        color: #4f4a43;
+        font-size: 14px;
+      }
+      .button {
+        background: linear-gradient(#d5b65e, #b8943b);
+        color: #fff7dd;
+        border-radius: 6px;
+        padding: 13px 20px;
+        font-weight: 700;
+        box-shadow: 0 9px 22px rgba(139, 115, 63, .22);
+      }
+      .label {
+        color: var(--gold);
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .18em;
+        font-weight: 700;
+      }
+      .meta { color: var(--muted); font-size: 14px; display: flex; gap: 18px; flex-wrap: wrap; }
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 13px;
+        color: #514b42;
+        background: rgba(255,255,255,.48);
+        font-size: 13px;
+      }
+      .body-copy {
+        font-size: 18px;
+        line-height: 1.86;
+        color: #4e4b46;
+      }
+      .body-copy p { margin-bottom: 24px; }
+      .note {
+        border-left: 4px solid var(--gold);
+        background: #fffbf0;
+        padding: 22px 24px;
+        border-radius: 0 8px 8px 0;
+      }
+      .note strong { color: var(--ink); }
+      .image {
+        background-size: cover;
+        background-position: center;
+      }
+      .concept-a .hero {
+        display: grid;
+        grid-template-columns: 1fr 520px;
+        gap: 70px;
+        padding: 78px 112px 56px;
+        align-items: end;
+      }
+      .concept-a h1 { font-size: 78px; max-width: 730px; }
+      .concept-a .hero-img {
+        height: 510px;
+        border-radius: 8px;
+        background-image: url("/images/blog/tsukiji-market-seafood-stalls.webp");
+        box-shadow: 0 24px 60px rgba(0,0,0,.16);
+      }
+      .concept-a .intro-grid {
+        display: grid;
+        grid-template-columns: 255px 720px 245px;
+        gap: 46px;
+        padding: 48px 112px 90px;
+        align-items: start;
+      }
+      .toc, .author, .facts, .compare-card, .cta-panel {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+      .toc { padding: 22px; position: sticky; top: 20px; }
+      .toc h3, .author h3, .facts h3 { font-family: Inter, sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
+      .toc div { padding: 12px 0; border-top: 1px solid #ece6d8; color: #4e4a43; font-size: 14px; }
+      .author { padding: 20px; }
+      .author .portrait { width: 64px; height: 64px; border-radius: 50%; background-image: url("/src/assets/About_page_Manabu_team_photo.webp"); margin-bottom: 14px; }
+      .facts { padding: 24px; margin-bottom: 28px; }
+      .fact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+      .fact-row div { border-top: 1px solid #e9e1d0; padding-top: 12px; font-size: 14px; color: #4d4840; }
+      .compare-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 34px 0; }
+      .compare-card { padding: 22px; }
+      .compare-card h3 { font-size: 30px; margin-bottom: 14px; }
+      .compare-card li { margin: 14px 0; color: #514d47; line-height: 1.55; }
+      .concept-b .hero {
+        padding: 70px 112px 36px;
+        background:
+          linear-gradient(90deg, rgba(248,247,241,.96) 0%, rgba(248,247,241,.86) 45%, rgba(248,247,241,.18) 100%),
+          url("/images/tours/tsukiji-street-food.webp") center/cover;
+        min-height: 610px;
+        display: flex;
+        align-items: center;
+      }
+      .concept-b h1 { font-size: 72px; max-width: 780px; }
+      .concept-b .decision {
+        width: 1216px;
+        margin: -60px auto 0;
+        background: #171717;
+        color: white;
+        border-radius: 8px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1.15fr 1fr 1fr;
+        gap: 22px;
+        box-shadow: 0 24px 70px rgba(0,0,0,.22);
+      }
+      .decision h2 { font-size: 42px; color: white; }
+      .decision p, .decision li { color: #d8d3c8; }
+      .decision-card { border: 1px solid rgba(255,255,255,.16); border-radius: 8px; padding: 20px; background: rgba(255,255,255,.05); }
+      .concept-b .content {
+        width: 1216px;
+        margin: 70px auto 0;
+        display: grid;
+        grid-template-columns: 780px 360px;
+        gap: 76px;
+      }
+      .route {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin: 34px 0;
+      }
+      .route div {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+        background: #fffdf7;
+      }
+      .route b { display: block; margin-bottom: 8px; color: var(--ink); }
+      .sidebar-card {
+        padding: 24px;
+        background: #fffdf7;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-bottom: 18px;
+      }
+      .concept-c .hero-img {
+        height: 430px;
+        background-image: url("/images/tours/tsukiji-outer-market.webp");
+        position: relative;
+      }
+      .concept-c .hero-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.52));
+      }
+      .concept-c .hero-text {
+        position: absolute;
+        left: 112px;
+        bottom: 54px;
+        width: 770px;
+        color: white;
+        z-index: 1;
+      }
+      .concept-c h1 { font-size: 76px; color: white; text-shadow: 0 3px 24px rgba(0,0,0,.35); }
+      .concept-c .field {
+        width: 1216px;
+        margin: 54px auto 0;
+        display: grid;
+        grid-template-columns: 760px 380px;
+        gap: 76px;
+      }
+      .guide-note {
+        background: #f0efe5;
+        border-radius: 8px;
+        padding: 28px;
+        margin: 30px 0;
+        border: 1px solid #d8d2c0;
+      }
+      .guide-note h3 { font-size: 34px; margin-bottom: 12px; color: var(--clay); }
+      .photo-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 32px 0;
+      }
+      .photo-pair .image { height: 230px; border-radius: 8px; }
+      .timeline {
+        border-left: 2px solid var(--sage);
+        padding-left: 22px;
+        margin-top: 18px;
+      }
+      .timeline div { margin-bottom: 22px; }
+      .timeline b { color: var(--ink); display: block; margin-bottom: 6px; }
+      .quote {
+        font-family: Georgia, serif;
+        font-size: 25px;
+        line-height: 1.45;
+        color: #2f2c28;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 26px 0;
+        margin: 34px 0;
+      }
+      .caption {
+        font-size: 12px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: #8a806e;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="concept concept-a" id="concept-a">
+      <div class="nav">
+        <div class="brand">TANUKI TABI TRAVEL</div>
+        <div class="navlinks"><span>Home</span><span>Tours</span><span>Blog</span><span>FAQ</span><span>About</span><span>Contact</span><span class="button">Request a Tour</span></div>
+      </div>
+      <div class="hero">
+        <div>
+          <div class="label">Food Guides</div>
+          <h1>Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?</h1>
+          <div class="meta" style="margin-top:28px"><span>Manabu, Licensed Tour Guide</span><span>Last updated: March 2026</span><span>8 min read</span></div>
+          <div style="display:flex; gap:10px; margin-top:28px"><span class="pill">Best for first-time visitors</span><span class="pill">No reservation needed</span><span class="pill">Local guide perspective</span></div>
+        </div>
+        <div class="image hero-img"></div>
+      </div>
+      <div class="intro-grid">
+        <aside class="toc">
+          <h3>On this page</h3>
+          <div>Quick answer</div><div>What moved in 2018</div><div>Tsukiji vs Toyosu</div><div>Who should choose each</div><div>Suggested morning route</div>
+        </aside>
+        <main class="body-copy">
+          <div class="facts">
+            <h3>Quick Decision</h3>
+            <h2 style="font-size:42px;margin-bottom:14px">For most visitors, start with Tsukiji.</h2>
+            <p>It has better food variety, more atmosphere, and no reservation needed. Toyosu is worth it when the tuna auction is the main reason for your morning.</p>
+            <div class="fact-row"><div><b>Tsukiji</b><br/>Food stalls, shops, old Tokyo texture</div><div><b>Toyosu</b><br/>Auction viewing, modern market facility</div></div>
+          </div>
+          <p>"Should I go to Tsukiji or Toyosu?" This is one of the most common questions I get from visitors planning their Tokyo itinerary. The internet is full of contradictory advice because one part of Tsukiji moved and another part stayed.</p>
+          <p>The new structure makes the article feel more guided: a clear recommendation, then the nuance. Long paragraphs are broken by decision modules that answer the traveler's next question before fatigue sets in.</p>
+          <div class="compare-cards">
+            <div class="compare-card"><h3>Choose Tsukiji if...</h3><ul><li>You want breakfast, snacks, and street-level atmosphere.</li><li>You have limited time and want fewer logistics.</li><li>You enjoy shops, knives, tea, and ceramics.</li></ul></div>
+            <div class="compare-card"><h3>Choose Toyosu if...</h3><ul><li>You care about the tuna auction more than browsing.</li><li>You prefer clean, spacious facilities.</li><li>You already secured an auction viewing slot.</li></ul></div>
+          </div>
+          <h2 style="font-size:48px;margin:50px 0 18px">What Actually Moved in 2018?</h2>
+          <p>The wholesale market moved to Toyosu. The outer market, where most visitors eat and shop, stayed in Tsukiji. This section should use one tight diagram-like sentence block, not a dense history lesson.</p>
+        </main>
+        <aside class="author">
+          <div class="image portrait"></div>
+          <h3>Guide Note</h3>
+          <p style="font-size:14px">I take guests to both markets. My default plan is Tsukiji first, then Toyosu only when the auction is part of the morning.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="concept concept-b" id="concept-b">
+      <div class="nav">
+        <div class="brand">TANUKI TABI TRAVEL</div>
+        <div class="navlinks"><span>Home</span><span>Tours</span><span>Blog</span><span>FAQ</span><span>About</span><span>Contact</span><span class="button">Request a Tour</span></div>
+      </div>
+      <div class="hero">
+        <div>
+          <div class="label">Tokyo Food Planning</div>
+          <h1>Tsukiji or Toyosu? A Local Guide's Decision Map</h1>
+          <p style="font-size:20px;max-width:650px;margin-top:26px;color:#4b4740">A practical article layout for visitors who need a fast answer first, then proof, timing, and route advice.</p>
+          <div class="meta" style="margin-top:26px"><span>Updated March 2026</span><span>Best read before booking breakfast plans</span></div>
+        </div>
+      </div>
+      <div class="decision">
+        <div><div class="label">Start Here</div><h2>Answer the travel question before the article begins.</h2></div>
+        <div class="decision-card"><b>Most travelers</b><p style="margin-top:10px">Go to Tsukiji at 8:00 AM. Eat, browse, then walk toward Ginza.</p></div>
+        <div class="decision-card"><b>Auction-focused travelers</b><p style="margin-top:10px">Apply for Toyosu viewing first. Add Tsukiji afterward if time allows.</p></div>
+      </div>
+      <div class="content">
+        <main class="body-copy">
+          <h2 style="font-size:52px;margin-bottom:18px">Why This Reads Better</h2>
+          <p>This direction treats the article like a planning tool, not a magazine essay. Dense comparison tables become scannable choice cards, and every section starts with the decision it supports.</p>
+          <div class="route">
+            <div><b>1. Decide</b><p>Tsukiji, Toyosu, or both.</p></div>
+            <div><b>2. Time it</b><p>Best arrival window and closed days.</p></div>
+            <div><b>3. Route it</b><p>Station, walking flow, and next stop.</p></div>
+          </div>
+          <div class="note"><strong>Replace broad tables with compact modules.</strong><br/>Tables look AI-generated when every row is equally weighted. Use them only for exact data. For judgment calls, cards feel more human and easier to scan.</div>
+          <h2 style="font-size:46px;margin:54px 0 18px">The Comparison</h2>
+          <p>Instead of a 12-row table, show four high-impact comparisons: atmosphere, food variety, booking difficulty, and time needed. Each block should contain a guide verdict, not just neutral labels.</p>
+        </main>
+        <aside>
+          <div class="sidebar-card"><div class="label">Traveler Fit</div><h3 style="font-size:34px;margin:12px 0">Best for first-timers</h3><p>Tsukiji, because it gives more sensory payoff with less planning.</p></div>
+          <div class="sidebar-card"><div class="label">Avoid</div><h3 style="font-size:34px;margin:12px 0">Midday arrival</h3><p>By lunch, the market is crowded and many food stalls are already winding down.</p></div>
+          <div class="sidebar-card"><div class="label">CTA</div><h3 style="font-size:34px;margin:12px 0">Want the route handled?</h3><p>Place the tour CTA after the first complete answer, not only after the full article.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="concept concept-c" id="concept-c">
+      <div class="nav">
+        <div class="brand">TANUKI TABI TRAVEL</div>
+        <div class="navlinks"><span>Home</span><span>Tours</span><span>Blog</span><span>FAQ</span><span>About</span><span>Contact</span><span class="button">Request a Tour</span></div>
+      </div>
+      <div class="hero-img image">
+        <div class="hero-text">
+          <div class="label" style="color:#e4c46a">Field Notes</div>
+          <h1>Tsukiji vs Toyosu, Explained from the Street</h1>
+          <div class="meta" style="margin-top:24px;color:#eee"><span>Manabu's market route</span><span>Last updated: March 2026</span><span>With practical timing notes</span></div>
+        </div>
+      </div>
+      <div class="field">
+        <main class="body-copy">
+          <div class="guide-note">
+            <h3>My honest answer</h3>
+            <p>When a guest only has one morning, I choose Tsukiji. Toyosu is fascinating when the auction matters, but Tsukiji gives more of Tokyo in less time.</p>
+          </div>
+          <p>This direction leans into Manabu's credibility. It removes generic infographic energy and makes the page feel reported: real photos, field notes, timings, and short route recommendations.</p>
+          <div class="photo-pair">
+            <div><div class="image" style="background-image:url('/images/blog/tsukiji-tamagoyaki.webp')"></div><div class="caption">Food texture instead of illustration</div></div>
+            <div><div class="image" style="background-image:url('/images/blog/toyosu-senkyaku-banrai.webp')"></div><div class="caption">Context photo for Toyosu</div></div>
+          </div>
+          <div class="quote">"The part most travelers loved at Tsukiji did not disappear. It changed role: less wholesale theater, more food neighborhood."</div>
+          <h2 style="font-size:50px;margin-bottom:18px">What I Would Change</h2>
+          <p>Use fewer full-width table blocks, fewer generic callouts, and more annotated photos. If a section needs data, make the data secondary to the guide's recommendation.</p>
+        </main>
+        <aside>
+          <div class="sidebar-card">
+            <div class="label">Morning Route</div>
+            <div class="timeline">
+              <div><b>7:45</b><p>Arrive near Tsukiji before the main wave.</p></div>
+              <div><b>8:00</b><p>Snack route through the outer market.</p></div>
+              <div><b>9:30</b><p>Knife shops, tea, ceramics, or Ginza walk.</p></div>
+              <div><b>Optional</b><p>Add Toyosu only if auction viewing is planned.</p></div>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <div class="label">Design Rule</div>
+            <h3 style="font-size:34px;margin:12px 0">Real beats decorative</h3>
+            <p>For a guide site, personal observations and documentary photos create trust faster than illustrations or generic comparison graphics.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </body>
+</html>

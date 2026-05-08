@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How It Works — Improvement Mockups (Plan A)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f8f7f1;
+    --ink: #171717;
+    --ink-soft: #2b2823;
+    --muted: #4f4a43;
+    --muted-2: #6a655c;
+    --soft: #eeeae0;
+    --line: #dcd4c2;
+    --gold: #c9a84c;
+    --gold-soft: #f4e5b6;
+    --clay: #9c563f;
+    --card: #fffdf8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #e9e4d8;
+    color: var(--ink);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  /* ==== Plan A typography ==== */
+  h1, h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ink);
+  }
+  p { margin: 0 0 22px; color: var(--muted); font-size: 18px; line-height: 1.7; }
+  p strong { color: var(--ink); font-weight: 700; }
+
+  /* Gold highlighter — selective only */
+  .hl {
+    background: linear-gradient(transparent 62%, var(--gold-soft) 62%);
+    padding: 0 2px;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* Section eyebrow with gold rule */
+  .section-eyebrow {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 14px;
+  }
+  .section-eyebrow::before {
+    content: "";
+    width: 56px; height: 2px;
+    background: var(--gold);
+    flex: 0 0 auto;
+  }
+  .section-eyebrow span {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .section-title {
+    font-size: 44px;
+    line-height: 1.15;
+    margin-bottom: 28px;
+  }
+  .section-deck {
+    font-size: 18px;
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 36px;
+    max-width: 640px;
+    line-height: 1.65;
+  }
+
+  /* Top banner annotation */
+  .top-banner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 14px 80px;
+    background: #171717;
+    color: #f3ecd6;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .top-banner b { color: var(--gold); letter-spacing: 0.18em; text-transform: uppercase; font-size: 11px; }
+
+  /* Page intro */
+  .page-intro {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 56px 80px 24px;
+  }
+  .page-intro h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .page-intro p {
+    max-width: 760px;
+    font-size: 17px;
+  }
+
+  /* Variant tags */
+  .variant-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+  .tag-before { background: rgba(23,23,23,.08); color: #4f4a43; }
+  .tag-p0 { background: rgba(156,86,63,.12); color: var(--clay); }
+  .tag-p1 { background: rgba(201,168,76,.18); color: #8a7325; }
+  .tag-p2 { background: rgba(23,23,23,.85); color: var(--gold); }
+
+  /* Mockup wrapper — matches Plan A page surface */
+  .mockup-wrap {
+    max-width: 1440px;
+    margin: 0 auto 56px;
+    padding: 0 80px;
+  }
+  .mockup-meta {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+    color: var(--muted-2);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .mockup-meta code {
+    font-family: ui-monospace, SF Mono, Menlo, monospace;
+    font-size: 12px;
+    color: var(--ink);
+    background: rgba(255,255,255,.5);
+    padding: 2px 8px; border-radius: 4px;
+  }
+  .mockup {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px -8px rgba(23,23,23,.12);
+  }
+  .mockup-footnote {
+    background: var(--soft);
+    border-top: 1px solid var(--line);
+    padding: 18px 56px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .mockup-footnote strong { color: var(--ink); font-weight: 700; }
+
+  /* === Section base layout (all variants share this) === */
+  .how {
+    padding: 72px 56px 80px;
+  }
+  .how-head { max-width: 760px; margin-bottom: 40px; }
+
+  /* === LIVE-SITE accurate render (Before only) ===
+     Mirrors src/index.css `.heading-section` / `.text-label` and
+     Index.tsx:507-555 Tailwind classes. Overrides Plan A scale so the
+     Before reflects http://127.0.0.1:8081/ exactly. */
+  .live-site {
+    padding: 80px 56px 112px; /* py-20 md:py-28 */
+    background: rgba(201,168,76,.05);  /* bg-accent/5 */
+    border-top: 1px solid rgba(201,168,76,.10);
+    border-bottom: 1px solid rgba(201,168,76,.10);
+  }
+  .live-site .live-head {
+    text-align: center;
+    max-width: 42rem;
+    margin: 0 auto 56px;
+  }
+  .live-site .live-eyebrow {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 500;             /* font-medium (NOT 700) */
+    letter-spacing: 0.1em;        /* tracking-widest */
+    text-transform: uppercase;
+    color: var(--gold);           /* text-accent */
+    margin: 0 0 16px;
+  }
+  .live-site .live-rule {
+    width: 40px; height: 1px;
+    background: var(--gold);
+    margin: 0 auto 24px;
+  }
+  .live-site h2.live-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 30px;              /* text-3xl */
+    font-weight: 600;             /* font-semibold */
+    letter-spacing: -0.025em;     /* tracking-tight */
+    line-height: 1.2;
+    color: var(--ink);            /* text-foreground */
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .live-site h2.live-title { font-size: 36px; } /* md:text-4xl */
+  }
+  .live-site .live-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+  }
+  @media (max-width: 767px) {
+    .live-site .live-grid { grid-template-columns: 1fr; }
+  }
+  .live-site .live-step { text-align: center; }
+  .live-site .live-icon {
+    width: 40px; height: 40px;    /* w-10 h-10 */
+    border-radius: 50%;
+    background: rgba(201,168,76,.10);  /* bg-accent/10 */
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+  }
+  .live-site .live-step-eyebrow {
+    font-family: Inter, sans-serif;
+    font-size: 12px;              /* text-xs */
+    font-weight: 600;             /* font-semibold */
+    letter-spacing: 0.1em;        /* tracking-widest */
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 8px;
+  }
+  .live-site h3.live-step-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 20px;              /* text-xl */
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .live-site .live-step-body {
+    font-family: Inter, sans-serif;
+    font-size: 14px;              /* text-sm */
+    line-height: 1.625;           /* leading-relaxed */
+    color: var(--muted);          /* text-muted-foreground */
+    margin: 0;
+  }
+
+  /* === BEFORE: 3-column icon cards === */
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 56px;
+  }
+  .icon-step { text-align: center; }
+  .icon-circle {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(201,168,76,.14);
+    margin: 0 auto 18px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+  }
+  .step-eyebrow {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .icon-step h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .icon-step p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* === Decision card (Quick answer) === */
+  .decision {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px 8px 8px 4px;
+    padding: 26px 32px;
+    margin-bottom: 40px;
+    max-width: 760px;
+  }
+  .decision .decision-eyebrow {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .decision h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .decision p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.6;
+  }
+  .decision p + p { margin-top: 10px; color: var(--muted); font-size: 15px; }
+
+  /* === Route timeline (Plan A) === */
+  .route { margin: 0 0 40px; }
+  .route-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .route-row:first-child { border-top: 1px solid var(--line); }
+  .route-row .timing {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+  .route-row .timing .num {
+    display: block;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--gold);
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 6px;
+  }
+  .route-row h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .route-row p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Route with thumbnail (P2) */
+  .route-row.with-thumb { grid-template-columns: 110px 140px 1fr; }
+  .route-row .thumb {
+    width: 140px; height: 100px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #d6c9a8, #c8b88a);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .route-row .thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    inset: auto 6px 6px;
+    font-size: 9px;
+    color: rgba(23,23,23,.55);
+    background: rgba(255,253,248,.9);
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* === Manabu's take (guide-note) === */
+  .guide-note {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 22px;
+    margin: 40px 0;
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .guide-note .small-portrait {
+    width: 76px; height: 76px;
+    border-radius: 50%;
+    background:
+      linear-gradient(135deg, #c8b88a, #a89765);
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: var(--paper);
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .guide-note .label {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--clay);
+    margin-bottom: 8px;
+  }
+  .guide-note h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 10px;
+  }
+  .guide-note p {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* === Choice grid (FAQ shortcuts) === */
+  .choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 36px 0 40px;
+  }
+  .choice-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 18px 20px;
+    text-decoration: none;
+    transition: border-color .2s ease, transform .2s ease;
+    display: block;
+  }
+  .choice-card:hover { border-color: var(--gold); transform: translateY(-1px); }
+  .choice-card .label {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .choice-card .q {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0;
+  }
+  .choice-card .arrow {
+    margin-top: 10px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* === CTA strip === */
+  .cta-strip {
+    margin-top: 24px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .reassurance {
+    display: flex; flex-direction: column; gap: 6px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .reassurance .check { color: var(--gold); font-weight: 700; margin-right: 6px; }
+  .button-gold {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(#d5b65e, #b8943b);
+    color: #fff7dd;
+    border-radius: 6px;
+    padding: 14px 24px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 9px 22px rgba(139, 115, 63, .22);
+    letter-spacing: 0.02em;
+  }
+  .button-gold:hover { filter: brightness(1.05); }
+
+  /* Tiny ETA badge inside step heading */
+  .eta {
+    display: inline-flex;
+    margin-left: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    vertical-align: middle;
+  }
+
+  /* === Summary card === */
+  .summary {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 36px 48px 40px;
+    max-width: 1280px;
+    margin: 24px auto 80px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    margin-top: 24px;
+  }
+  .summary-grid h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 12px 0 8px;
+    color: var(--ink);
+  }
+  .summary-grid p { font-size: 15px; line-height: 1.6; margin: 0; }
+  .summary-foot {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted-2);
+  }
+  .summary-foot a { color: var(--gold); text-decoration: none; font-weight: 600; }
+  .summary-foot a:hover { text-decoration: underline; }
+  .summary-foot code {
+    font-family: ui-monospace, SF Mono, Menlo, monospace;
+    background: var(--soft);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: var(--ink);
+  }
+
+  /* === Visual system: custom thin-line illustrations === */
+  .illust-lg { width: 64px; height: 64px; flex: 0 0 64px; }
+  .illust-md { width: 48px; height: 48px; flex: 0 0 48px; }
+  .illust-sm { width: 36px; height: 36px; flex: 0 0 36px; }
+
+  /* Three-col with custom illustration replacement */
+  .icon-step-illust {
+    text-align: center;
+  }
+  .icon-step-illust .illust-wrap {
+    width: 84px; height: 84px;
+    margin: 0 auto 18px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .icon-step-illust:hover .illust-wrap {
+    border-color: var(--gold);
+    transform: translateY(-1px);
+  }
+  .icon-step-illust h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .icon-step-illust p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Ornament divider for route timeline */
+  .ornament-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 12px 0;
+  }
+  .ornament-row svg { display: block; }
+
+  /* Section title flourish — small ornament under section-title */
+  .title-flourish {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 24px;
+    color: var(--gold);
+  }
+  .title-flourish::before, .title-flourish::after {
+    content: "";
+    flex: 0 0 32px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .title-flourish .diamond {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    flex: 0 0 6px;
+  }
+
+  /* Route row updated to support a right-side illustration column */
+  .route-row.with-illust { grid-template-columns: 110px 1fr 64px; }
+  .route-row .illust-side {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+    opacity: 0.85;
+  }
+
+  /* Icon-system reference panel (for design review only) */
+  .icon-system {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 36px 32px;
+    max-width: 1280px;
+    margin: 0 auto 40px;
+  }
+  .icon-system h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+  .icon-system .label-row {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .icon-system-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .icon-system-cell {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 18px 12px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .icon-system-cell .name {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .icon-system-cell .meta {
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+
+  /* Sticky variant nav */
+  .variant-nav {
+    position: sticky; top: 0;
+    background: rgba(248,247,241,.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+    padding: 12px 80px;
+    display: flex; gap: 14px; align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .variant-nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.5);
+    border: 1px solid var(--line);
+    font-weight: 600;
+  }
+  .variant-nav a:hover { border-color: var(--gold); color: var(--gold); }
+  .variant-nav .label {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: var(--muted-2);
+    margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- =================================================================== -->
+<!-- SVG SYMBOL SPRITE — custom thin-line illustrations (reusable) -->
+<!-- =================================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- 01 · Envelope (Inquire) -->
+    <symbol id="ic-inquire" viewBox="0 0 64 64">
+      <rect x="10" y="18" width="44" height="30" rx="1.5" fill="none" stroke="#c9a84c" stroke-width="1.25"/>
+      <path d="M10 19 L32 36 L54 19" fill="none" stroke="#c9a84c" stroke-width="1.25" stroke-linejoin="round"/>
+      <path d="M10 47 L24 32" fill="none" stroke="#c9a84c" stroke-width="0.9" opacity="0.5"/>
+      <path d="M54 47 L40 32" fill="none" stroke="#c9a84c" stroke-width="0.9" opacity="0.5"/>
+      <circle cx="46" cy="14" r="3" fill="#f4e5b6" stroke="#c9a84c" stroke-width="0.9"/>
+    </symbol>
+
+    <!-- 02 · Itinerary scroll (Plan) -->
+    <symbol id="ic-plan" viewBox="0 0 64 64">
+      <rect x="14" y="9" width="36" height="46" rx="1.5" fill="none" stroke="#c9a84c" stroke-width="1.25"/>
+      <line x1="20" y1="20" x2="44" y2="20" stroke="#c9a84c" stroke-width="1"/>
+      <line x1="20" y1="27" x2="44" y2="27" stroke="#c9a84c" stroke-width="1"/>
+      <line x1="20" y1="34" x2="36" y2="34" stroke="#c9a84c" stroke-width="1"/>
+      <line x1="20" y1="41" x2="40" y2="41" stroke="#c9a84c" stroke-width="1"/>
+      <circle cx="42" cy="50" r="5.5" fill="#f4e5b6" stroke="#c9a84c" stroke-width="1.25"/>
+      <path d="M39.2 50 L41.2 52 L45 47.5" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- 03 · Seal / Stamp (Confirm) -->
+    <symbol id="ic-confirm" viewBox="0 0 64 64">
+      <circle cx="32" cy="28" r="16" fill="none" stroke="#c9a84c" stroke-width="1.25"/>
+      <circle cx="32" cy="28" r="11" fill="none" stroke="#c9a84c" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
+      <path d="M25 28 L30 33 L40 22" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M22 42 L28 56 L32 50 L36 56 L42 42" fill="#f4e5b6" stroke="#c9a84c" stroke-width="1" stroke-linejoin="round" fill-opacity="0.55"/>
+    </symbol>
+
+    <!-- 04 · Compass (Tour) -->
+    <symbol id="ic-tour" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="20" fill="none" stroke="#c9a84c" stroke-width="1.25"/>
+      <circle cx="32" cy="32" r="14" fill="none" stroke="#c9a84c" stroke-width="0.75" stroke-dasharray="1.5 2"/>
+      <path d="M32 16 L36 30 L32 32 L28 30 Z" fill="#c9a84c"/>
+      <path d="M32 48 L28 34 L32 32 L36 34 Z" fill="#f4e5b6" stroke="#c9a84c" stroke-width="0.9"/>
+      <circle cx="32" cy="32" r="1.6" fill="#c9a84c"/>
+      <text x="32" y="13.5" text-anchor="middle" font-size="5.5" fill="#c9a84c" font-family="Inter, sans-serif" font-weight="700">N</text>
+    </symbol>
+
+    <!-- Ornamental divider — diamond between rules -->
+    <symbol id="orn-divider" viewBox="0 0 200 14">
+      <line x1="0" y1="7" x2="86" y2="7" stroke="#dcd4c2" stroke-width="0.75"/>
+      <line x1="114" y1="7" x2="200" y2="7" stroke="#dcd4c2" stroke-width="0.75"/>
+      <path d="M100 1 L106 7 L100 13 L94 7 Z" fill="none" stroke="#c9a84c" stroke-width="0.75"/>
+      <circle cx="100" cy="7" r="1.4" fill="#c9a84c"/>
+      <line x1="88" y1="7" x2="92" y2="7" stroke="#c9a84c" stroke-width="0.75"/>
+      <line x1="108" y1="7" x2="112" y2="7" stroke="#c9a84c" stroke-width="0.75"/>
+    </symbol>
+
+    <!-- Title flourish — small ornament -->
+    <symbol id="orn-flourish" viewBox="0 0 80 16">
+      <line x1="0" y1="8" x2="32" y2="8" stroke="#c9a84c" stroke-width="0.9" opacity="0.5"/>
+      <path d="M40 4 L46 8 L40 12 L34 8 Z" fill="none" stroke="#c9a84c" stroke-width="0.9"/>
+      <circle cx="40" cy="8" r="1.3" fill="#c9a84c"/>
+      <line x1="48" y1="8" x2="80" y2="8" stroke="#c9a84c" stroke-width="0.9" opacity="0.5"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="top-banner">
+  <b>How It Works · Plan A — Editorial Trust + Custom Visual System</b> &nbsp;·&nbsp;
+  Cormorant section-title 44px · gold-rule eyebrow · route timeline · decision card · gold highlighter · Manabu's take ·
+  <span style="color:var(--gold);">custom thin-line gold SVG (Envelope / Scroll / Seal / Compass) · diamond ornament dividers</span>
+</div>
+
+<div class="variant-nav">
+  <span class="label">Jump to</span>
+  <a href="#system">Visual System</a>
+  <a href="#before">Before</a>
+  <a href="#p0">P0 · Copy + Icons</a>
+  <a href="#p1">P1 · Route + Illust</a>
+  <a href="#p2">P2 · Photos</a>
+  <a href="#summary">Summary</a>
+</div>
+
+<div class="page-intro">
+  <h1>How It Works — improvement mockups</h1>
+  <p>Plan A "Editorial Trust" のデザイントークンに統一。<span class="hl">Section-eyebrow with gold rule, Cormorant 44px, route timeline pattern, decision card</span> を流用し、Beforeから3段階で改善。</p>
+  <p style="font-size:15px; color: var(--muted-2); margin-top:0;">
+    <strong style="color:var(--ink);">競合リサーチ（5サイト）：</strong>
+    Hello Tokyo Tours / Backstreet Guides / Keikaku Japan は How It Works が <em>テキストのみ or 不在</em>。
+    City Unscripted のみが <strong style="color:var(--ink);">5ステップ × 大型番号 + 実物スクショ + 実写ホスト×ゲスト</strong>で唯一視覚的に強い。
+    → 視覚リッチ化そのものが差別化要因になる領域。Plan A editorial 制約内で <strong style="color:var(--ink);">細線ゴールドSVG / オーナメントディバイダー / 実写サムネ</strong> を統合。
+  </p>
+</div>
+
+<!-- =================================================================== -->
+<!-- VISUAL SYSTEM — icon set reference -->
+<!-- =================================================================== -->
+<div id="system" class="mockup-wrap" style="margin-bottom:32px;">
+  <div class="icon-system">
+    <p class="label-row">Visual system · Custom thin-line gold</p>
+    <h3>4-step iconography &amp; ornament</h3>
+    <p style="font-size:14px; color:var(--muted); max-width:740px; margin:8px 0 0;">
+      lucide-react の汎用 stroke icons を、<span class="hl">この4ステップ専用のカスタム細線SVG</span> に置換。
+      stroke 1.25px / gold #c9a84c / soft-fill #f4e5b6 でアクセント。Aman / Belmond / Mr &amp; Mrs Smith 系の editorial luxury idiom。
+    </p>
+    <div class="icon-system-grid">
+      <div class="icon-system-cell">
+        <svg class="illust-lg"><use href="#ic-inquire"/></svg>
+        <p class="name">Envelope</p>
+        <p class="meta">01 · Inquire</p>
+      </div>
+      <div class="icon-system-cell">
+        <svg class="illust-lg"><use href="#ic-plan"/></svg>
+        <p class="name">Itinerary scroll</p>
+        <p class="meta">02 · Plan</p>
+      </div>
+      <div class="icon-system-cell">
+        <svg class="illust-lg"><use href="#ic-confirm"/></svg>
+        <p class="name">Seal &amp; ribbon</p>
+        <p class="meta">03 · Confirm</p>
+      </div>
+      <div class="icon-system-cell">
+        <svg class="illust-lg"><use href="#ic-tour"/></svg>
+        <p class="name">Compass</p>
+        <p class="meta">04 · Tour</p>
+      </div>
+    </div>
+    <div style="margin-top:24px; padding-top:18px; border-top:1px solid var(--line); display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+      <p style="margin:0; font-size:12px; text-transform:uppercase; letter-spacing:0.18em; font-weight:700; color:var(--muted-2);">Ornament divider</p>
+      <svg viewBox="0 0 200 14" width="280" height="14" aria-hidden="true"><use href="#orn-divider"/></svg>
+      <p style="margin:0; font-size:13px; color:var(--muted);">行間の "金箔ダイヤモンド" — route timeline の各row間で使用</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================================================================== -->
+<!-- BEFORE — LIVE SITE STYLES (mirrors http://127.0.0.1:8081/) -->
+<!-- ==================================================================== -->
+<section id="before" class="mockup-wrap">
+  <div class="mockup-meta">
+    <span class="variant-tag tag-before">Before · Current Live</span>
+    <code>src/pages/Index.tsx:507-555 · http://127.0.0.1:8081/</code>
+  </div>
+  <div class="mockup">
+    <div class="live-site">
+      <div class="live-head">
+        <p class="live-eyebrow">Simple Booking</p>
+        <div class="live-rule"></div>
+        <h2 class="live-title">How It Works</h2>
+      </div>
+      <div class="live-grid">
+        <div class="live-step">
+          <div class="live-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <p class="live-step-eyebrow">Step 1</p>
+          <h3 class="live-step-title">Send Your Request</h3>
+          <p class="live-step-body">Tell me your dates and what excites you about Tokyo. Takes 2 minutes.</p>
+        </div>
+        <div class="live-step">
+          <div class="live-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <p class="live-step-eyebrow">Step 2</p>
+          <h3 class="live-step-title">Get Your Custom Plan</h3>
+          <p class="live-step-body">I reply within 24 hours with a personalized itinerary and quote.</p>
+        </div>
+        <div class="live-step">
+          <div class="live-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <p class="live-step-eyebrow">Step 3</p>
+          <h3 class="live-step-title">Confirm &amp; Pay</h3>
+          <p class="live-step-body">Secure your tour with payment, then meet me in Tokyo for your day.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mockup-footnote">
+      <strong>Status:</strong> 実サイトの忠実な再現（<code>http://127.0.0.1:8081/</code> 状態）。
+      <code>.heading-section</code> 30px md:36px / font-semibold 600 / tracking-tight、
+      <code>.text-label</code> 12px / font-medium 500 / tracking-widest 0.1em / muted、
+      <code>bg-accent/5</code> 背景＋40px gold rule のセンター eyebrow、各ステップ <code>w-10 h-10</code> circle icon。
+      Index.tsx:507-555 と src/index.css のクラス値そのまま。
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- P0 -->
+<!-- ==================================================================== -->
+<section id="p0" class="mockup-wrap">
+  <div class="mockup-meta">
+    <span class="variant-tag tag-p0">P0 · Copy + Section eyebrow + Decision card · ~30 min</span>
+    <code>copy-only change</code>
+  </div>
+  <div class="mockup">
+    <div class="how">
+      <div class="how-head">
+        <div class="section-eyebrow"><span>How It Works · From Inquiry to Tour Day</span></div>
+        <h2 class="section-title">Three steps. <span class="hl">No commitment</span> until you approve.</h2>
+        <p class="section-deck">Most guests' biggest worry is "what if the plan doesn't fit?" That's why I let you adjust the itinerary as much as you want before paying.</p>
+      </div>
+
+      <div class="decision">
+        <p class="decision-eyebrow">Quick answer</p>
+        <h3>You can ask anything before paying anything.</h3>
+        <p>Send me your dates and interests, get a custom plan within 24 hours, adjust as much as you want — and pay only when the plan is exactly right.</p>
+        <p>No deposit, no commitment until you approve.</p>
+      </div>
+
+      <div class="three-col">
+        <div class="icon-step-illust">
+          <div class="illust-wrap">
+            <svg class="illust-lg"><use href="#ic-inquire"/></svg>
+          </div>
+          <p class="step-eyebrow">Step 1 · 2 min</p>
+          <h3>Send Your Request</h3>
+          <p>Tell me your dates and what excites you about Tokyo. <span class="hl">Free to ask anything — no commitment.</span></p>
+        </div>
+        <div class="icon-step-illust">
+          <div class="illust-wrap">
+            <svg class="illust-lg"><use href="#ic-plan"/></svg>
+          </div>
+          <p class="step-eyebrow">Step 2 · within 24h</p>
+          <h3>Get Your Custom Plan</h3>
+          <p>I reply within 24 hours with a personalized itinerary and quote. Adjust as much as you want before paying.</p>
+        </div>
+        <div class="icon-step-illust">
+          <div class="illust-wrap">
+            <svg class="illust-lg"><use href="#ic-confirm"/></svg>
+          </div>
+          <p class="step-eyebrow">Step 3 · Tour Day</p>
+          <h3>Confirm Your Day</h3>
+          <p>Approve the plan, <span class="hl">pay only when you're ready,</span> then meet me in Tokyo.</p>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <div class="reassurance">
+          <span><span class="check">✓</span> Reply within 24 hours</span>
+          <span><span class="check">✓</span> No deposit until you approve</span>
+        </div>
+        <a href="#" class="button-gold">Start with Step 1 — Send a message →</a>
+      </div>
+    </div>
+    <div class="mockup-footnote">
+      <strong>変更点：</strong>section-eyebrow に gold rule 追加 / section-title を Cormorant 44px に格上げし <code>.hl</code> マーカー / Decision card（Quick answer）を冒頭に / 各ステップ copy にリスクリバーサル文言と <code>.hl</code> /
+      <strong style="color:var(--ink);">アイコンを汎用 lucide stroke icon → カスタム細線ゴールドSVG（Envelope / Itinerary / Seal）に置換、84×84 paper-card + ring 仕上げ。</strong>
+      CTA strip を末尾に追加。
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- P1 -->
+<!-- ==================================================================== -->
+<section id="p1" class="mockup-wrap">
+  <div class="mockup-meta">
+    <span class="variant-tag tag-p1">P1 · Route timeline + Manabu's take · ~half day</span>
+    <code>layout change</code>
+  </div>
+  <div class="mockup">
+    <div class="how">
+      <div class="how-head">
+        <div class="section-eyebrow"><span>How It Works · From Inquiry to Tour Day</span></div>
+        <h2 class="section-title">Four steps, four moments.</h2>
+        <p class="section-deck">Each step has a clear timing and a clear "no-pressure" rule. <span class="hl">You can stop or adjust at any point</span> before payment.</p>
+      </div>
+
+      <div class="decision">
+        <p class="decision-eyebrow">Quick answer</p>
+        <h3>You're never locked in until Step 03.</h3>
+        <p>Steps 01 and 02 are conversation. Step 03 is when you decide. Step 04 is the tour itself.</p>
+      </div>
+
+      <div class="route">
+        <div class="route-row with-illust">
+          <div class="timing">
+            <span class="num">01</span>
+            2 min
+          </div>
+          <div>
+            <h3>Send Your Request</h3>
+            <p>Tell me your dates, group size, and what excites you about Tokyo. <span class="hl">Free to ask anything — no commitment.</span></p>
+          </div>
+          <div class="illust-side">
+            <svg class="illust-lg"><use href="#ic-inquire"/></svg>
+          </div>
+        </div>
+        <div class="ornament-row" aria-hidden="true">
+          <svg viewBox="0 0 200 14" width="200" height="12"><use href="#orn-divider"/></svg>
+        </div>
+        <div class="route-row with-illust">
+          <div class="timing">
+            <span class="num">02</span>
+            Within 24h
+          </div>
+          <div>
+            <h3>Plan Together</h3>
+            <p>I reply with a personalized itinerary and a flat quote. Adjust the plan as many times as you want — vegetarian-friendly stops, slower pace, kid-friendly route, anything.</p>
+          </div>
+          <div class="illust-side">
+            <svg class="illust-lg"><use href="#ic-plan"/></svg>
+          </div>
+        </div>
+        <div class="ornament-row" aria-hidden="true">
+          <svg viewBox="0 0 200 14" width="200" height="12"><use href="#orn-divider"/></svg>
+        </div>
+        <div class="route-row with-illust">
+          <div class="timing">
+            <span class="num">03</span>
+            No rush
+          </div>
+          <div>
+            <h3>Approve &amp; Pay</h3>
+            <p><span class="hl">Pay only when the plan is exactly right.</span> Secure card payment, simple receipt, free cancellation up to 7 days before.</p>
+          </div>
+          <div class="illust-side">
+            <svg class="illust-lg"><use href="#ic-confirm"/></svg>
+          </div>
+        </div>
+        <div class="ornament-row" aria-hidden="true">
+          <svg viewBox="0 0 200 14" width="200" height="12"><use href="#orn-divider"/></svg>
+        </div>
+        <div class="route-row with-illust">
+          <div class="timing">
+            <span class="num">04</span>
+            4–8 hrs
+          </div>
+          <div>
+            <h3>Walk Tokyo Together</h3>
+            <p>Meet at your hotel or station. I adapt the day in real time — slower if you're tired, deeper if you're curious, lunch wherever the plan takes us.</p>
+          </div>
+          <div class="illust-side">
+            <svg class="illust-lg"><use href="#ic-tour"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-note">
+        <div class="small-portrait">M</div>
+        <div>
+          <p class="label">Manabu's take</p>
+          <h3>The plan is yours, not mine.</h3>
+          <p>Most travelers worry "what if the plan doesn't fit?" — that's why I keep the conversation open before any payment. If it doesn't feel right after Step 02, you simply don't book. No awkwardness, no pressure.</p>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <div class="reassurance">
+          <span><span class="check">✓</span> Free cancellation up to 7 days before</span>
+          <span><span class="check">✓</span> Vegetarian / halal / allergies — just tell me</span>
+          <span><span class="check">✓</span> Replies in English within 24 hours</span>
+        </div>
+        <a href="#" class="button-gold">Start Step 01 →</a>
+      </div>
+    </div>
+    <div class="mockup-footnote">
+      <strong>変更点：</strong>3-step icon cards → 4-row route timeline（110px gold-num / 1fr / 64px illust）／Step 04「当日」を新設／
+      <strong style="color:var(--ink);">各row右端にカスタム細線SVG（Envelope / Scroll / Seal / Compass）／row間に金箔ダイヤモンド ornament divider</strong> を挿入／Manabu's take guide-note を末尾に追加（clay color label）／reassurance 3項目に拡張。
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- P2 -->
+<!-- ==================================================================== -->
+<section id="p2" class="mockup-wrap">
+  <div class="mockup-meta">
+    <span class="variant-tag tag-p2">P2 · Route + Thumbs + FAQ choice-grid · ~1-2 days</span>
+    <code>visuals + FAQ</code>
+  </div>
+  <div class="mockup">
+    <div class="how">
+      <div class="how-head">
+        <div class="section-eyebrow"><span>How It Works · From Inquiry to Tour Day</span></div>
+        <h2 class="section-title">What it looks like, step by step.</h2>
+        <p class="section-deck">Real previews from past guests — the message form, the itinerary email, the receipt, and the walk itself.</p>
+      </div>
+
+      <div class="decision">
+        <p class="decision-eyebrow">Quick answer</p>
+        <h3>Four steps. Two of them have no money attached.</h3>
+        <p>Steps 01 and 02 are free conversation. Step 03 is the only moment money is involved. Step 04 is the tour.</p>
+      </div>
+
+      <div class="route">
+        <div class="route-row with-thumb">
+          <div class="timing">
+            <svg class="illust-sm" style="margin-bottom:8px;"><use href="#ic-inquire"/></svg>
+            <span class="num">01</span>
+            2 min
+          </div>
+          <div class="thumb" data-label="Contact form" style="background:linear-gradient(135deg,#f0e6c8,#dccfa8);"></div>
+          <div>
+            <h3>Send Your Request</h3>
+            <p>The contact form takes 2 minutes — dates, group size, interests. <span class="hl">No commitment.</span></p>
+          </div>
+        </div>
+        <div class="ornament-row" aria-hidden="true">
+          <svg viewBox="0 0 200 14" width="200" height="12"><use href="#orn-divider"/></svg>
+        </div>
+        <div class="route-row with-thumb">
+          <div class="timing">
+            <svg class="illust-sm" style="margin-bottom:8px;"><use href="#ic-plan"/></svg>
+            <span class="num">02</span>
+            Within 24h
+          </div>
+          <div class="thumb" data-label="Sample itinerary" style="background:linear-gradient(135deg,#e8dcc4,#cfbf96);"></div>
+          <div>
+            <h3>Plan Together</h3>
+            <p>You'll receive an email with a hour-by-hour itinerary and a flat quote. Adjust freely.</p>
+          </div>
+        </div>
+        <div class="ornament-row" aria-hidden="true">
+          <svg viewBox="0 0 200 14" width="200" height="12"><use href="#orn-divider"/></svg>
+        </div>
+        <div class="route-row with-thumb">
+          <div class="timing">
+            <svg class="illust-sm" style="margin-bottom:8px;"><use href="#ic-confirm"/></svg>
+            <span class="num">03</span>
+            No rush
+          </div>
+          <div class="thumb" data-label="Secure payment" style="background:linear-gradient(135deg,#dccfa8,#bca87a);"></div>
+          <div>
+            <h3>Approve &amp; Pay</h3>
+            <p><span class="hl">Only when the plan is right.</span> Stripe card payment, instant receipt, free cancellation up to 7 days before.</p>
+          </div>
+        </div>
+        <div class="ornament-row" aria-hidden="true">
+          <svg viewBox="0 0 200 14" width="200" height="12"><use href="#orn-divider"/></svg>
+        </div>
+        <div class="route-row with-thumb">
+          <div class="timing">
+            <svg class="illust-sm" style="margin-bottom:8px;"><use href="#ic-tour"/></svg>
+            <span class="num">04</span>
+            4–8 hrs
+          </div>
+          <div class="thumb" data-label="Real photo" style="background:linear-gradient(135deg,#c9b896,#a89765);"></div>
+          <div>
+            <h3>Walk Tokyo Together</h3>
+            <p>Meet at your hotel or station. I adapt the day in real time as we go.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-note">
+        <div class="small-portrait">M</div>
+        <div>
+          <p class="label">Manabu's take</p>
+          <h3>The plan is yours, not mine.</h3>
+          <p>Before booking, most guests have one of three small worries — weather, food restrictions, or cancellation. Here are the answers most-asked. If something else is on your mind, just write it in your first message.</p>
+        </div>
+      </div>
+
+      <div class="choice-grid">
+        <a href="#" class="choice-card">
+          <p class="label">Common · Weather</p>
+          <p class="q">What if it rains on the day?</p>
+          <p class="arrow">Read answer →</p>
+        </a>
+        <a href="#" class="choice-card">
+          <p class="label">Common · Food</p>
+          <p class="q">Vegetarian, halal, allergies?</p>
+          <p class="arrow">Read answer →</p>
+        </a>
+        <a href="#" class="choice-card">
+          <p class="label">Common · Booking</p>
+          <p class="q">What's your cancellation policy?</p>
+          <p class="arrow">Read answer →</p>
+        </a>
+      </div>
+
+      <div class="cta-strip">
+        <div class="reassurance">
+          <span><span class="check">✓</span> See all 20+ FAQs on the FAQ page</span>
+          <span><span class="check">✓</span> Replies in English within 24 hours</span>
+        </div>
+        <a href="#" class="button-gold">Start Step 01 →</a>
+      </div>
+    </div>
+    <div class="mockup-footnote">
+      <strong>変更点：</strong>P1 をベースに各 route-row に <code>140×100 thumbnail</code>（Form / Itinerary / Receipt / Real photo）／<strong style="color:var(--ink);">timing column 上に小さい custom icon（36×36）を重ねて二段アンカー化（icon → 01 → 2 min）</strong>／<strong style="color:var(--ink);">行間に金箔ダイヤモンド ornament divider</strong>／FAQ choice-grid 3件を guide-note の直下に配置（Plan A の choice-grid パターン流用）／FAQ ページへの誘導を reassurance に追加。
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- SUMMARY -->
+<!-- ==================================================================== -->
+<section id="summary" class="mockup-wrap">
+  <div class="summary">
+    <div class="section-eyebrow"><span>Implementation priority</span></div>
+    <h2 class="section-title" style="font-size:36px; margin-bottom:12px;">Stage by stage</h2>
+    <p style="max-width:760px; margin-bottom:0;">Plan A の editorial パターンに統一。<span class="hl">P0 だけでも翌日の Clarity に効果が出る</span> 最小ステップから、写真素材を要するP2まで段階導入可能。</p>
+
+    <div class="summary-grid">
+      <div>
+        <span class="variant-tag tag-p0">P0 · 30 min + 2h SVG</span>
+        <h3>Copy + Decision + Custom icons</h3>
+        <p>section-eyebrow with gold rule、section-title 44px、decision card、<code>.hl</code> spans。<strong style="color:var(--ink);">汎用 lucide icons → custom thin-line gold SVG (Envelope / Scroll / Seal)</strong> に置換。レイアウトは現状維持。</p>
+      </div>
+      <div>
+        <span class="variant-tag tag-p1">P1 · half day</span>
+        <h3>Route + Illust + Ornament</h3>
+        <p>4-row route timeline（Step 04「当日」追加）、Manabu's take。<strong style="color:var(--ink);">右端 64×64 custom illust 列 + 行間に diamond ornament divider</strong>。シニアデザイナー視点で editorial らしい "金箔" 感。</p>
+      </div>
+      <div>
+        <span class="variant-tag tag-p2">P2 · 1-2 days</span>
+        <h3>Photos + Icons + FAQ</h3>
+        <p>route-row に photo thumbnail（Form / Itinerary / Receipt / Real）。<strong style="color:var(--ink);">timing column に icon overlay（icon → 01 → 2 min の三段アンカー）+ ornament divider。</strong>FAQ choice-grid 3件。</p>
+      </div>
+    </div>
+
+    <div class="summary-foot">
+      <strong style="color:var(--ink);">Files:</strong>
+      <a href="../docs/homepage-redesign-proposal-2026-05.md">docs/homepage-redesign-proposal-2026-05.md</a>
+      &nbsp;·&nbsp;
+      <a href="./blog-typography-A.html">design-review/blog-typography-A.html</a>
+      &nbsp;·&nbsp; Implementation: <code>src/pages/Index.tsx:507-555</code>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

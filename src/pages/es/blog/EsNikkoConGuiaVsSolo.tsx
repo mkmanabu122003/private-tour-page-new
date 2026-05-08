@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { QuickAnswerEs } from "@/components/blog/QuickAnswer";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsNikkoConGuiaVsSolo = () => {
   return (
@@ -25,57 +27,37 @@ const EsNikkoConGuiaVsSolo = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/blog/nikko-toshogu-hero.webp"
-          alt="Puerta Yomeimon del santuario Toshogu de Nikko entre cedros centenarios"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Excursiones de un Día</p>
-            <h1 className="heading-display text-foreground">
-              Nikko desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                20 de abril de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía-Intérprete con Licencia Nacional (全国通訳案内士) que lleva regularmente excursiones a Nikko desde Tokio.
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">Última actualización: abril de 2026</p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/blog/nikko-toshogu-hero.webp"
+        imageAlt="Puerta Yomeimon del santuario Toshogu de Nikko entre cedros centenarios"
+        eyebrow="Excursiones de un Día"
+        title="Nikko desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real"
+        subtitle="Escrito por Manabu, Guía-Intérprete con Licencia Nacional (全国通訳案内士) que lleva regularmente excursiones a Nikko desde Tokio."
+        date="20 de abril de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Qué hay en Nikko", href: "#section-01-qué-hay-en-nikko" },
+          { num: "02", label: "Por tu cuenta vs con guía", href: "#section-02-por-tu-cuenta-vs-con-guía" },
+          { num: "03", label: "La ruta por tu cuenta", href: "#section-03-la-ruta-por-tu-cuenta" },
+          { num: "04", label: "La ruta con guía", href: "#section-04-la-ruta-con-guía" },
+          { num: "05", label: "Qué opción te conviene", href: "#section-05-qué-opción-te-conviene" },
+          { num: "06", label: "Nota sobre el invierno", href: "#section-06-nota-sobre-el-invierno" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
+            ]} />
+
+            <article>
+
             <QuickAnswerEs
               answer="Por tu cuenta funciona si tienes 8 horas o más, soltura navegando en transporte público y solo quieres los santuarios (Toshogu, Futarasan, Rinno-ji). Con guía compensa si quieres combinar los santuarios con el Lago Chuzenji y la Cascada Kegon en un solo día, o si viajas entre noviembre y abril, cuando la carretera Irohazaka se complica por el clima."
               hook="En coste: por tu cuenta en transporte público salen unos ¥12,000 por persona; con guía privado son ¥80,000 por tour (hasta 4 personas). Abajo tienes el desglose real — más los 3 errores que suelen cometer los que van solos y que les hacen perder las 2 mejores horas del día."
@@ -92,7 +74,8 @@ const EsNikkoConGuiaVsSolo = () => {
             </p>
 
             {/* Las dos mitades */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Qué hay en Nikko</span></div>
+            <h2 id="section-01-qué-hay-en-nikko" className="scroll-mt-20">
               Qué hay en Nikko: las dos mitades
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -106,7 +89,8 @@ const EsNikkoConGuiaVsSolo = () => {
             </p>
 
             {/* Tabla comparativa */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Por tu cuenta vs con guía</span></div>
+            <h2 id="section-02-por-tu-cuenta-vs-con-guía" className="scroll-mt-20">
               Por tu cuenta vs con guía: de un vistazo
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -164,10 +148,11 @@ const EsNikkoConGuiaVsSolo = () => {
             </div>
 
             {/* Ruta por tu cuenta */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · La ruta por tu cuenta</span></div>
+            <h2 id="section-03-la-ruta-por-tu-cuenta" className="scroll-mt-20">
               La ruta por tu cuenta (transporte público desde Tokio)
             </h2>
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo llegar
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -185,7 +170,7 @@ const EsNikkoConGuiaVsSolo = () => {
               Si no tienes JR Pass, la opción Tobu suele ganar en precio, tiempo y comodidad.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo moverte una vez allí
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -198,7 +183,7 @@ const EsNikkoConGuiaVsSolo = () => {
               Precios y frecuencias pueden cambiar según la temporada — conviene revisar las tarifas y horarios actuales de Tobu Bus Nikko la semana de tu viaje.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desglose de coste (1 persona, sin rail pass)
             </h3>
             <div className="overflow-x-auto mb-8">
@@ -232,7 +217,7 @@ const EsNikkoConGuiaVsSolo = () => {
               </table>
             </div>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Los 3 errores típicos de quien va por su cuenta
             </h3>
             <ol className="space-y-3 mb-8 list-decimal list-inside">
@@ -248,7 +233,8 @@ const EsNikkoConGuiaVsSolo = () => {
             </ol>
 
             {/* Ruta con guía */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · La ruta con guía</span></div>
+            <h2 id="section-04-la-ruta-con-guía" className="scroll-mt-20">
               La ruta con guía (qué pagas realmente)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -285,7 +271,8 @@ const EsNikkoConGuiaVsSolo = () => {
             </ul>
 
             {/* Marco de decisión */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Qué opción te conviene</span></div>
+            <h2 id="section-05-qué-opción-te-conviene" className="scroll-mt-20">
               Qué opción te conviene
             </h2>
             <div className="overflow-x-auto mb-8">
@@ -326,7 +313,8 @@ const EsNikkoConGuiaVsSolo = () => {
             </div>
 
             {/* Nota estacional */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Nota sobre el invierno</span></div>
+            <h2 id="section-06-nota-sobre-el-invierno" className="scroll-mt-20">
               Nota sobre el invierno
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -337,7 +325,7 @@ const EsNikkoConGuiaVsSolo = () => {
             </p>
 
             {/* Relacionado */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <h2>
               ¿Todavía dudando entre excursiones?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -354,7 +342,7 @@ const EsNikkoConGuiaVsSolo = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Estás planeando una excursión a Nikko?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -374,34 +362,35 @@ const EsNikkoConGuiaVsSolo = () => {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">Preguntas frecuentes</h2>
-              <div className="space-y-8">
+              <div className="section-eyebrow"><span>Section 07 · FAQ</span></div>
+              <h2 id="section-07-faq" className="scroll-mt-20">Preguntas frecuentes</h2>
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede ir a Nikko en un día desde Tokio?</h3>
+                  <h3>¿Se puede ir a Nikko en un día desde Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Sí. Nikko está a 1 hora 50 minutos de Asakusa en tren limitado Tobu, o alrededor de 2 horas vía shinkansen Tohoku de JR + línea JR Nikko. Un día completo da para los santuarios UNESCO y, si empiezas pronto, también el Lago Chuzenji.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Compensa el Japan Rail Pass para Nikko?</h3>
+                  <h3>¿Compensa el Japan Rail Pass para Nikko?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La ruta JR (Tokio → Utsunomiya → JR Nikko) está totalmente cubierta por el JR Pass, pero es unos 10 minutos más lenta y te deja un poco más lejos de los santuarios que la ruta de Tobu. Si ya tienes JR Pass, úsalo. Si no, la ruta Tobu desde Asakusa suele ser más barata y más rápida.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Hace falta reservar con antelación?</h3>
+                  <h3>¿Hace falta reservar con antelación?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Para visitar los santuarios no hace falta reservar nada. Los billetes de tren y bus se pueden comprar la misma mañana. Para los asientos reservados del Tobu Spacia X conviene reservar unos días antes en temporadas de cerezos, otoño y Golden Week.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Vale la pena Nikko en invierno?</h3>
+                  <h3>¿Vale la pena Nikko en invierno?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Los santuarios en invierno son espectaculares, sobre todo tras una nevada fresca. El Lago Chuzenji es menos fiable: la carretera Irohazaka puede verse afectada por la nieve, y las restricciones de cadenas pueden ralentizar el bus o interrumpirlo. Si solo vas por los santuarios, el invierno es una opción estupenda y con menos turistas. Si también quieres el Lago Chuzenji, una excursión con guía gestiona mejor las condiciones de la carretera.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">¿Cuánto tiempo hace falta en Nikko?</h3>
+                  <h3>¿Cuánto tiempo hace falta en Nikko?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Los santuarios UNESCO (Toshogu, Futarasan, Rinno-ji) son de 3 a 4 horas a un ritmo cómodo. Añadir el Lago Chuzenji y la Cascada Kegon suma unas 4 horas más incluyendo el bus arriba y abajo por la Irohazaka. Una excursión de un día completo desde Tokio sale entre 10 y 12 horas puerta a puerta por tu cuenta, o 9–10 horas con guía y transporte directo.
                   </p>
@@ -409,7 +398,11 @@ const EsNikkoConGuiaVsSolo = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -450,7 +443,9 @@ const EsNikkoConGuiaVsSolo = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

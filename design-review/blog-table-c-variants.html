@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog Table — Option C Variants (Winner-style)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --paper: #f8f7f1;
+        --ink: #171717;
+        --ink-soft: #2b2823;
+        --muted: #4f4a43;
+        --muted-2: #6a655c;
+        --soft: #eeeae0;
+        --line: #dcd4c2;
+        --line-2: #c4bba6;
+        --gold: #c9a84c;
+        --gold-soft: #f4e5b6;
+        --gold-deep: #a88930;
+        --clay: #9c563f;
+        --card: #fffdf8;
+        --green: #5a7a3a;
+        --green-soft: #e7eed7;
+        --green-deep: #3d5526;
+        --red: #b04a3d;
+        --red-soft: #f4d9d3;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #e9e4d8;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-variant-numeric: lining-nums tabular-nums;
+      }
+
+      .toolbar {
+        position: sticky; top: 0; z-index: 10;
+        background: #1d1a14; color: #f8f7f1;
+        padding: 14px 24px;
+        display: flex; align-items: center; gap: 24px;
+        font-size: 13px;
+        border-bottom: 2px solid var(--gold);
+      }
+      .toolbar .title { font-weight: 700; letter-spacing: .04em; }
+      .toolbar .meta { color: #c9c2b0; }
+
+      .stack { max-width: 1000px; margin: 0 auto; padding: 32px 32px 80px; }
+
+      .opt {
+        background: var(--paper);
+        padding: 32px 36px 40px;
+        border-radius: 10px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      }
+      .opt-tag {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 4px;
+      }
+      .opt-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0 0 8px;
+      }
+      .opt-desc {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0 0 22px;
+        max-width: 720px;
+        line-height: 1.55;
+      }
+
+      /* ====== Common base ====== */
+      table.t {
+        width: 100%;
+        border-collapse: collapse;
+        font-variant-numeric: tabular-nums lining-nums;
+      }
+      table.t thead th {
+        text-align: left;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--ink);
+        padding: 14px 14px 10px;
+        line-height: 1.2;
+      }
+      table.t thead th .sub {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--muted-2);
+        margin-top: 3px;
+      }
+      table.t tbody td {
+        padding: 16px 14px;
+        font-size: 15px;
+        color: var(--ink-soft);
+        line-height: 1.4;
+        vertical-align: middle;
+      }
+      table.t tbody td.scenario {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.25;
+      }
+      table.t tbody td.scenario .tag {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--muted-2);
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        margin-top: 2px;
+      }
+
+      /* ============== C1 — Original (✓ + green bg) ============== */
+      .c1 thead th { border-bottom: 2px solid var(--gold); }
+      .c1 thead th.win { color: var(--green); }
+      .c1 tbody td { border-bottom: 1px solid var(--line); }
+      .c1 tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+      .c1 tbody td.win-cell {
+        background: var(--green-soft);
+        color: var(--green);
+        font-weight: 700;
+      }
+      .c1 tbody td.win-cell::before {
+        content: "✓ ";
+        font-weight: 700;
+      }
+      .c1 tbody td.lose-cell { color: var(--muted-2); }
+      .c1 tbody td.savings { color: var(--gold-deep); font-weight: 700; }
+
+      /* ============== C2 — Strikethrough loser ============== */
+      .c2 thead th { border-bottom: 1px solid var(--line); }
+      .c2 tbody td { border-bottom: 1px solid var(--line); }
+      .c2 tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+      .c2 tbody td.lose-cell {
+        color: var(--muted-2);
+        text-decoration: line-through;
+        text-decoration-color: rgba(0,0,0,.25);
+        font-weight: 400;
+      }
+      .c2 tbody td.win-cell {
+        color: var(--ink);
+        font-weight: 700;
+        font-size: 17px;
+      }
+      .c2 tbody td.win-cell::after {
+        content: " · best";
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--gold-deep);
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        vertical-align: middle;
+      }
+      .c2 tbody td.savings {
+        color: var(--gold-deep);
+        font-weight: 700;
+      }
+
+      /* ============== C3 — Inline bar chart ============== */
+      .c3 thead th { border-bottom: 1px solid var(--line); }
+      .c3 tbody td { border-bottom: 1px solid var(--line); }
+      .c3 tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+      .c3 .bar-cell {
+        position: relative;
+        padding: 14px 16px;
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 15px;
+        min-width: 180px;
+      }
+      .c3 .bar {
+        display: block;
+        height: 6px;
+        background: rgba(199, 168, 76, .22);
+        border-radius: 3px;
+        margin-top: 8px;
+        position: relative;
+        overflow: hidden;
+      }
+      .c3 .bar > i {
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        background: var(--gold);
+        border-radius: 3px;
+      }
+      .c3 .bar-cell.win .bar > i { background: var(--green); }
+      .c3 .bar-cell.win { color: var(--green-deep); }
+      .c3 .bar-cell .meta {
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--muted-2);
+        margin-left: 6px;
+      }
+      .c3 td.savings {
+        font-weight: 700;
+        color: var(--gold-deep);
+        font-size: 16px;
+      }
+
+      /* ============== C4 — Battle card (no table) ============== */
+      .battles { display: grid; gap: 14px; margin-top: 10px; }
+      .battle {
+        display: grid;
+        grid-template-columns: 200px 1fr 1fr 130px;
+        gap: 14px;
+        align-items: center;
+        padding: 18px 20px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        position: relative;
+      }
+      .battle .label {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--ink);
+      }
+      .battle .label .tag {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--muted-2);
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        margin-top: 3px;
+      }
+      .battle .side {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 8px 12px;
+        border-radius: 6px;
+      }
+      .battle .side .which {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--muted-2);
+      }
+      .battle .side .price {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ink-soft);
+        line-height: 1.1;
+      }
+      .battle .side .note {
+        font-size: 11px;
+        color: var(--muted-2);
+        margin-top: 1px;
+      }
+      .battle .side.win {
+        background: var(--green-soft);
+      }
+      .battle .side.win .which {
+        color: var(--green);
+      }
+      .battle .side.win .price {
+        color: var(--green-deep);
+        font-weight: 700;
+      }
+      .battle .side.lose .price {
+        color: var(--muted-2);
+      }
+      .battle .savings {
+        text-align: right;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--gold-deep);
+        line-height: 1.1;
+      }
+      .battle .savings .label {
+        display: block;
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--muted-2);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        margin-bottom: 3px;
+      }
+      .battle.tie .side { background: transparent; }
+      .battle.tie .side .price { color: var(--muted-2); }
+      .battle.tie .savings { color: var(--muted-2); font-weight: 500; font-size: 14px; }
+      .battle-head {
+        display: grid;
+        grid-template-columns: 200px 1fr 1fr 130px;
+        gap: 14px;
+        padding: 0 20px 8px;
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        color: var(--muted-2);
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 6px;
+      }
+      .battle-head .right { text-align: right; }
+
+      /* ============== C5 — Score badge per row ============== */
+      .c5 thead th { border-bottom: 2px solid var(--ink); }
+      .c5 tbody td { border-bottom: 1px solid var(--line); }
+      .c5 tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
+      .c5 td.lose-cell { color: var(--muted-2); }
+      .c5 td.win-cell {
+        font-weight: 700;
+        color: var(--ink);
+        position: relative;
+      }
+      .c5 .badge {
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        background: linear-gradient(#d5b65e, #b8943b);
+        color: #fff7dd;
+        padding: 3px 7px;
+        border-radius: 3px;
+        margin-left: 8px;
+        vertical-align: 2px;
+        box-shadow: 0 2px 6px rgba(168, 137, 48, .35);
+      }
+      .c5 td.savings {
+        font-weight: 700;
+        color: var(--gold-deep);
+      }
+      .c5 thead th.haneda {
+        background: rgba(218, 198, 130, .15);
+      }
+      .c5 td.haneda-col {
+        background: rgba(218, 198, 130, .08);
+      }
+
+      .legend {
+        display: flex; gap: 14px; flex-wrap: wrap;
+        margin-top: 14px; font-size: 12px; color: var(--muted-2);
+      }
+      .legend .dot {
+        display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+        vertical-align: middle; margin-right: 6px;
+      }
+      .legend .dot.gold { background: var(--gold); }
+      .legend .dot.green { background: var(--green-soft); }
+      .legend .dot.gold-soft { background: var(--gold-soft); }
+
+      .lead {
+        font-size: 15px;
+        color: var(--muted);
+        margin: 0 0 14px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="title">TABLE — OPTION C VARIANTS</span>
+      <span class="meta">Winner-style approaches · NaritaVsHaneda Section 07</span>
+    </div>
+
+    <div class="stack">
+
+      <!-- ============== C1 — Original ============== -->
+      <section class="opt">
+        <div class="opt-tag">C1 · Original (前回提示)</div>
+        <h2 class="opt-name">✓ Check + Green Cell — クリーン</h2>
+        <p class="opt-desc">勝ち側セルをグリーン地＋ ✓、savings 列はゴールド数字。比較記事では分かりやすいが、表全体がやや賑やかになる。</p>
+        <table class="t c1">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita <span class="sub">total cost</span></th>
+              <th class="win">Haneda <span class="sub">total cost</span></th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scenario">Train<span class="tag">Cheapest</span></td>
+              <td class="lose-cell">¥9,880</td>
+              <td class="win-cell">¥2,076</td>
+              <td class="savings">¥7,800</td>
+            </tr>
+            <tr>
+              <td class="scenario">N'EX Round Trip<span class="tag">Tourist deal</span></td>
+              <td>¥10,000</td>
+              <td class="lose-cell">—</td>
+              <td class="lose-cell">—</td>
+            </tr>
+            <tr>
+              <td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td>
+              <td class="lose-cell">¥12,800</td>
+              <td class="win-cell">¥5,600</td>
+              <td class="savings">¥7,200</td>
+            </tr>
+            <tr>
+              <td class="scenario">Taxi<span class="tag">One-way only</span></td>
+              <td class="lose-cell">¥25,000–32,000</td>
+              <td class="win-cell">¥6,000–10,000</td>
+              <td class="savings">¥19,000–22,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="legend">
+          <span><span class="dot green"></span>Cheaper option (winner)</span>
+          <span><span class="dot gold"></span>Round-trip savings</span>
+        </div>
+      </section>
+
+      <!-- ============== C2 — Strikethrough loser ============== -->
+      <section class="opt">
+        <div class="opt-tag">C2 · ミニマル</div>
+        <h2 class="opt-name">Strikethrough Loser — 静かに勝敗を見せる</h2>
+        <p class="opt-desc">負け側に取消線、勝ち側は太字＋小さなゴールドの "best" タグ。色を増やさず印刷物のような落ち着き。Plan A の Editorial Trust と最も整合する。</p>
+        <table class="t c2">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Savings <span class="sub">picking Haneda</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scenario">Train<span class="tag">Cheapest</span></td>
+              <td class="lose-cell">¥9,880</td>
+              <td class="win-cell">¥2,076</td>
+              <td class="savings">¥7,800</td>
+            </tr>
+            <tr>
+              <td class="scenario">N'EX Round Trip<span class="tag">Tourist deal</span></td>
+              <td>¥10,000</td>
+              <td style="color:var(--muted-2)">—</td>
+              <td style="color:var(--muted-2)">—</td>
+            </tr>
+            <tr>
+              <td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td>
+              <td class="lose-cell">¥12,800</td>
+              <td class="win-cell">¥5,600</td>
+              <td class="savings">¥7,200</td>
+            </tr>
+            <tr>
+              <td class="scenario">Taxi<span class="tag">One-way only</span></td>
+              <td class="lose-cell">¥25,000–32,000</td>
+              <td class="win-cell">¥6,000–10,000</td>
+              <td class="savings">¥19,000–22,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============== C3 — Bar chart ============== -->
+      <section class="opt">
+        <div class="opt-tag">C3 · データ可視化</div>
+        <h2 class="opt-name">Inline Bar Chart — 価格差が一目で分かる</h2>
+        <p class="opt-desc">数字の下に細いバーを置き、長さで価格差を可視化。勝ち側はグリーン、負け側はゴールド。タクシー行のように 3〜4倍の差がある場合に効果が劇的。新聞のインフォグラフィック寄りの印象。</p>
+        <table class="t c3">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita</th>
+              <th>Haneda</th>
+              <th>Savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scenario">Train<span class="tag">Cheapest</span></td>
+              <td class="bar-cell">¥9,880<span class="meta">(Skyliner×4)</span><span class="bar"><i style="width: 100%"></i></span></td>
+              <td class="bar-cell win">¥2,076<span class="meta">(Monorail×4)</span><span class="bar"><i style="width: 21%"></i></span></td>
+              <td class="savings">¥7,800</td>
+            </tr>
+            <tr>
+              <td class="scenario">N'EX Round Trip<span class="tag">Tourist deal</span></td>
+              <td class="bar-cell">¥10,000<span class="meta">(N'EX RTT×2)</span><span class="bar"><i style="width: 100%"></i></span></td>
+              <td class="bar-cell" style="color:var(--muted-2)">—</td>
+              <td style="color:var(--muted-2)">—</td>
+            </tr>
+            <tr>
+              <td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td>
+              <td class="bar-cell">¥12,800<span class="bar"><i style="width: 100%"></i></span></td>
+              <td class="bar-cell win">¥5,600<span class="bar"><i style="width: 44%"></i></span></td>
+              <td class="savings">¥7,200</td>
+            </tr>
+            <tr>
+              <td class="scenario">Taxi<span class="tag">One-way only</span></td>
+              <td class="bar-cell">¥25,000–32,000<span class="bar"><i style="width: 100%"></i></span></td>
+              <td class="bar-cell win">¥6,000–10,000<span class="bar"><i style="width: 28%"></i></span></td>
+              <td class="savings">¥19,000–22,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="legend">
+          <span><span class="dot gold"></span>Narita (baseline 100%)</span>
+          <span><span class="dot green"></span>Haneda (relative)</span>
+        </div>
+      </section>
+
+      <!-- ============== C4 — Battle card ============== -->
+      <section class="opt">
+        <div class="opt-tag">C4 · 大胆</div>
+        <h2 class="opt-name">Battle Card — 行ごとに対決させる</h2>
+        <p class="opt-desc">テーブルではなくカード型。各行が独立した "対決" として読める。モバイルでも崩れにくい (table の overflow-x なしで成立)。賑やかなので記事の主役モジュールになる。</p>
+        <div class="battle-head">
+          <span>Scenario</span>
+          <span>Narita</span>
+          <span>Haneda</span>
+          <span class="right">Save</span>
+        </div>
+        <div class="battles">
+          <div class="battle">
+            <div class="label">Train<span class="tag">Cheapest mode</span></div>
+            <div class="side lose"><span class="which">Narita</span><span class="price">¥9,880</span><span class="note">Skyliner × 4</span></div>
+            <div class="side win"><span class="which">Haneda</span><span class="price">¥2,076</span><span class="note">Monorail × 4</span></div>
+            <div class="savings"><span class="label">save</span>¥7,800</div>
+          </div>
+          <div class="battle tie">
+            <div class="label">N'EX Round Trip<span class="tag">Tourist deal</span></div>
+            <div class="side lose"><span class="which">Narita</span><span class="price">¥10,000</span><span class="note">N'EX RTT × 2</span></div>
+            <div class="side"><span class="which">Haneda</span><span class="price">—</span><span class="note">not available</span></div>
+            <div class="savings">n/a</div>
+          </div>
+          <div class="battle">
+            <div class="label">Limousine Bus<span class="tag">Hotel-door</span></div>
+            <div class="side lose"><span class="which">Narita</span><span class="price">¥12,800</span><span class="note">Shinjuku-area</span></div>
+            <div class="side win"><span class="which">Haneda</span><span class="price">¥5,600</span><span class="note">Shinjuku-area</span></div>
+            <div class="savings"><span class="label">save</span>¥7,200</div>
+          </div>
+          <div class="battle">
+            <div class="label">Taxi<span class="tag">One-way</span></div>
+            <div class="side lose"><span class="which">Narita</span><span class="price">¥25k–32k</span><span class="note">+ tolls, surcharge</span></div>
+            <div class="side win"><span class="which">Haneda</span><span class="price">¥6k–10k</span><span class="note">+ tolls, surcharge</span></div>
+            <div class="savings"><span class="label">save</span>¥19k–22k</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== C5 — Highlighted column + best badge ============== -->
+      <section class="opt">
+        <div class="opt-tag">C5 · 推し列</div>
+        <h2 class="opt-name">Haneda Column Highlight + Best Badge — 結論を1列に集約</h2>
+        <p class="opt-desc">記事の結論 "Haneda の方が安い" を表現するため、Haneda 列全体を薄いゴールド地で塗り、勝った行だけゴールドの "BEST" バッジ。横スクロールに強く、列ごとの読みやすさも保つ。</p>
+        <table class="t c5">
+          <thead>
+            <tr>
+              <th>Scenario <span class="sub">2 people · round trip</span></th>
+              <th>Narita</th>
+              <th class="haneda">Haneda <span class="sub">recommended</span></th>
+              <th>Savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scenario">Train<span class="tag">Cheapest</span></td>
+              <td class="lose-cell">¥9,880</td>
+              <td class="haneda-col win-cell">¥2,076 <span class="badge">Best</span></td>
+              <td class="savings">¥7,800</td>
+            </tr>
+            <tr>
+              <td class="scenario">N'EX Round Trip<span class="tag">Tourist deal</span></td>
+              <td>¥10,000</td>
+              <td class="haneda-col" style="color:var(--muted-2)">—</td>
+              <td style="color:var(--muted-2)">—</td>
+            </tr>
+            <tr>
+              <td class="scenario">Limousine Bus<span class="tag">Hotel-door</span></td>
+              <td class="lose-cell">¥12,800</td>
+              <td class="haneda-col win-cell">¥5,600 <span class="badge">Best</span></td>
+              <td class="savings">¥7,200</td>
+            </tr>
+            <tr>
+              <td class="scenario">Taxi<span class="tag">One-way only</span></td>
+              <td class="lose-cell">¥25,000–32,000</td>
+              <td class="haneda-col win-cell">¥6,000–10,000 <span class="badge">Best</span></td>
+              <td class="savings">¥19,000–22,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============== Decision helper ============== -->
+      <section class="opt" style="background: #1d1a14; color: #f4e5b6;">
+        <div class="opt-tag" style="color: var(--gold)">使い分けの目安</div>
+        <h2 class="opt-name" style="color: #f4e5b6">どれが向いているか</h2>
+        <table style="width:100%; color:#e0d8c0; font-size:14px; border-collapse:collapse; margin-top:8px;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">案</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">向き</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid #4a4030; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:11px;">注意</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">C1 · ✓ + Green</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">勝敗を最も明示的に。読者が即決できる。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">緑が強く、サイト全体の暖色トーンとやや乖離。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">C2 · Strike</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">Plan A Editorial Trust と最も整合。色を増やさず勝敗を伝える。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">取消線は人によっては読みにくい。アクセシビリティ要注意。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">C3 · Bar</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">価格差が3-5倍級ある場合に最強。データ記事のような信頼感。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">差が小さい比較（2倍以内）では効果が薄い。実装やや重い。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">C4 · Battle Card</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">モバイル対応が一番強い。記事の主役モジュールになる。</td>
+              <td style="padding:14px 12px; border-bottom:1px solid #2e2820; vertical-align:top; line-height:1.55;">情報密度が下がる（行数増）。3〜5項目以下向き。</td>
+            </tr>
+            <tr>
+              <td style="padding:14px 12px; vertical-align:top; font-family:Cormorant Garamond, serif; font-size:18px; color:#f4e5b6; font-weight:600;">C5 · Column Highlight</td>
+              <td style="padding:14px 12px; vertical-align:top; line-height:1.55;">"こっちが勝者" を1列で示せる。Best バッジで個別行も強調。</td>
+              <td style="padding:14px 12px; vertical-align:top; line-height:1.55;">列丸ごと推す前提なので、勝敗が混在する表には向かない。</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </body>
+</html>

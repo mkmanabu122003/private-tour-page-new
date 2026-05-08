@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsQueEsperarTourPrivado = () => {
   return (
@@ -24,59 +26,39 @@ const EsQueEsperarTourPrivado = () => {
         ]}
       />
 
-      {/* Imagen Hero */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tour-photos/tour-photo-1.webp"
-          alt="Guía liderando un tour privado a pie por las calles de Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Encabezado del Artículo */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link
-              to="/es/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Consejos de Viaje</p>
-            <h1 className="heading-display text-foreground">
-              Qué Esperar en un Tour Privado en Tokio (Contado por Tu Guía)
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Manabu, Guía con Licencia Nacional
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                14 de marzo de 2026
-              </span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional de Japón (全国通訳案内士), con más de 500 tours privados completados en Tokio.
-            </p>
-            <p className="mt-2 text-xs text-muted-foreground">
-              Última actualización: abril 2026
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tour-photos/tour-photo-1.webp"
+        imageAlt="Guía liderando un tour privado a pie por las calles de Tokio"
+        eyebrow="Consejos de Viaje"
+        title="Qué Esperar en un Tour Privado en Tokio (Contado por Tu Guía)"
+        subtitle="Escrito por Manabu, Guía Intérprete con Licencia del Gobierno Nacional de Japón (全国通訳案内士), con más de 500 tours privados completados en Tokio."
+        date="14 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
+
+      
 
       {/* Contenido del Artículo */}
-      <section className="py-16">
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Antes del Tour", href: "#section-01-antes-del-tour" },
+          { num: "02", label: "La Mañana del Tour", href: "#section-02-la-mañana-del-tour" },
+          { num: "03", label: "Durante el Tour", href: "#section-03-durante-el-tour" },
+          { num: "04", label: "El Factor Flexibilidad", href: "#section-04-el-factor-flexibilidad" },
+          { num: "05", label: "Lo que No Hago", href: "#section-05-lo-que-no-hago" },
+          { num: "06", label: "Después del Tour", href: "#section-06-después-del-tour" },
+          { num: "07", label: "Dudas Habituales", href: "#section-07-dudas-habituales" },
+          { num: "08", label: "FAQ", href: "#section-08-faq" }
+            ]} />
+
+            <article>
+
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Has decidido reservar un tour privado en Tokio. Pero, ¿qué pasa exactamente? ¿Dónde te encuentras con tu guía? ¿A qué ritmo se camina? ¿Y si llueve? ¿Y si necesitas un descanso o un baño?
@@ -86,11 +68,12 @@ const EsQueEsperarTourPrivado = () => {
             </p>
 
             {/* Antes del Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Antes del Tour</span></div>
+            <h2 id="section-01-antes-del-tour" className="scroll-mt-20">
               Antes del Tour
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cómo Funciona la Reserva
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -100,7 +83,7 @@ const EsQueEsperarTourPrivado = () => {
               Con tus respuestas, te sugiero un formato de tour y creo un itinerario personalizado. No es una ruta estándar. Si te apasiona la gastronomía, dedicamos tiempo a restaurantes de callejón. Si te interesa la historia, profundizamos en los barrios de templos. Si viajas con niños, incluyo tiempo de juego y paradas para picar algo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Lo que Preparo Entre Bastidores
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -114,18 +97,19 @@ const EsQueEsperarTourPrivado = () => {
             />
 
             {/* La Mañana del Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · La Mañana del Tour</span></div>
+            <h2 id="section-02-la-mañana-del-tour" className="scroll-mt-20">
               La Mañana del Tour
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Dónde Nos Encontramos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Normalmente en el vestíbulo de tu hotel o en una estación cercana. Elijo puntos de encuentro que sean fáciles de identificar y que no resulten agobiantes. Si empezamos en una zona concreta como Asakusa, te propongo quedar junto a un punto de referencia visible cerca de la estación, no dentro de la estación en sí (las estaciones de tren en Tokio pueden ser auténticos laberintos).
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Qué Llevar
             </h3>
             <ul className="space-y-2 mb-4">
@@ -143,7 +127,7 @@ const EsQueEsperarTourPrivado = () => {
               </li>
             </ul>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               De Lo que NO Tienes que Preocuparte
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -151,11 +135,12 @@ const EsQueEsperarTourPrivado = () => {
             </p>
 
             {/* Durante el Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Durante el Tour</span></div>
+            <h2 id="section-03-durante-el-tour" className="scroll-mt-20">
               Durante el Tour
             </h2>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               El Ritmo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -165,7 +150,7 @@ const EsQueEsperarTourPrivado = () => {
               Esto es algo que mis clientes destacan una y otra vez: la diferencia entre un tour privado y un tour grupal es que aquí nadie te mete prisa. Si tus hijos necesitan un descanso, paramos. Si tus padres prefieren un ritmo más pausado, nos adaptamos. El tour se construye alrededor de ti, no al revés.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               La Comida
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -175,14 +160,14 @@ const EsQueEsperarTourPrivado = () => {
               ¿Tienes alergia al marisco? ¿Eres vegetariano? ¿Viajas con alguien celíaco? No hay problema. Conozco los ingredientes de los platos locales y puedo comunicarme directamente con la cocina en japonés para asegurarme de que todo esté bien. Es una de las ventajas menos obvias de ir con un guía local.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Baños y Cuestiones Prácticas
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Sé dónde está cada baño limpio a lo largo de nuestra ruta. Los baños públicos de Tokio son en general excelentes (especialmente en los grandes almacenes y las estaciones de tren), pero algunos son más fáciles de encontrar que otros. Incluyo pausas naturales en el itinerario para que nadie tenga que pedirlo con incomodidad.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Fotos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -196,28 +181,29 @@ const EsQueEsperarTourPrivado = () => {
             />
 
             {/* Flexibilidad */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 04 · El Factor Flexibilidad</span></div>
+            <h2 id="section-04-el-factor-flexibilidad" className="scroll-mt-20">
               El Factor Flexibilidad
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Esta es la mayor diferencia entre un tour privado y cualquier otro tipo de tour. Todo puede cambiar, y ese es precisamente el objetivo.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Plan de Lluvia
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Si empieza a llover, tengo rutas alternativas para cada tour que priorizan zonas cubiertas: calles comerciales con techo, los pisos subterráneos de alimentación de los grandes almacenes (depachika), pasillos cubiertos de templos y mercados interiores. Algunos de mis mejores tours han sido en días lluviosos, porque las alternativas suelen ser más locales y menos turísticas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Cierres Inesperados
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Japón tiene muchos festivos irregulares, y los lugares populares a veces cierran sin previo aviso por eventos o mantenimiento. Verifico todo la mañana del tour, pero si algo está cerrado cuando llegamos, cambio de plan al instante. Nunca te quedarás frente a una puerta cerrada preguntándote qué hacer.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               Desvíos Espontáneos
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -238,7 +224,8 @@ const EsQueEsperarTourPrivado = () => {
             </figure>
 
             {/* Lo que No Hago */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 05 · Lo que No Hago</span></div>
+            <h2 id="section-05-lo-que-no-hago" className="scroll-mt-20">
               Lo que No Hago
             </h2>
             <ul className="space-y-4 mb-8">
@@ -257,7 +244,8 @@ const EsQueEsperarTourPrivado = () => {
             </ul>
 
             {/* Después del Tour */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 06 · Después del Tour</span></div>
+            <h2 id="section-06-después-del-tour" className="scroll-mt-20">
               Después del Tour
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -279,35 +267,36 @@ const EsQueEsperarTourPrivado = () => {
             </ul>
 
             {/* Objeciones comunes */}
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 07 · Dudas Habituales</span></div>
+            <h2 id="section-07-dudas-habituales" className="scroll-mt-20">
               Dudas Habituales (y Mis Respuestas Directas)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Después de más de 500 tours, estas son las preguntas que más me hacen antes de reservar. Te las respondo con total transparencia.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               "¿Y si no hablo nada de japonés?"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               No necesitas hablar japonés. Yo soy tu puente lingüístico. Pido en restaurantes, pregunto en tiendas, negocio en mercados y traduzco carteles, menús y señalizaciones. Muchos de mis clientes me dicen que lo que más valoran es poder relajarse sabiendo que alguien se encarga de la comunicación. Es una de esas cosas que no aprecias hasta que la experimentas.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               "¿El tour es apto para niños?"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Absolutamente. Adapto el tour a la edad de los niños: historias de samuráis y ninjas para los más pequeños, detalles de cultura pop y tecnología para los adolescentes. Incluyo paradas en parques, tiendas de gachapon (las máquinas de cápsulas que les fascinan) y snacks divertidos. Además, conozco todos los baños y zonas de descanso de la ruta, que con niños es información imprescindible.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               "¿Qué pasa si alguien del grupo tiene movilidad reducida?"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Diseño rutas accesibles. Tokio tiene ascensores en la mayoría de estaciones y muchas zonas son planas. Ajusto el itinerario para minimizar escaleras, cuestas y distancias largas sin sacrificar la experiencia. Dímelo al reservar y lo planifico todo con antelación.
             </p>
 
-            <h3 className="text-xl font-medium text-foreground mt-8 mb-4">
+            <h3>
               "¿Y si queremos cambiar el plan a mitad de tour?"
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -316,12 +305,13 @@ const EsQueEsperarTourPrivado = () => {
 
             {/* Preguntas Frecuentes */}
             <div className="mt-16">
-              <h2 className="heading-section text-foreground mb-8">
+              <div className="section-eyebrow"><span>Section 08 · FAQ</span></div>
+              <h2 id="section-08-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
-              <div className="space-y-8">
+              <div className="faq-block space-y-8">
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Qué incluye un tour privado en Tokio?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -333,7 +323,7 @@ const EsQueEsperarTourPrivado = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cómo es la experiencia con un guía privado en Tokio?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -341,7 +331,7 @@ const EsQueEsperarTourPrivado = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Cuánto se camina en un tour privado?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -349,7 +339,7 @@ const EsQueEsperarTourPrivado = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Puedo reservar un tour para un solo día?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -357,7 +347,7 @@ const EsQueEsperarTourPrivado = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Qué pasa si llueve el día del tour?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -365,7 +355,7 @@ const EsQueEsperarTourPrivado = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">
+                  <h3>
                     ¿Necesito hablar japonés o inglés para el tour?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -377,7 +367,7 @@ const EsQueEsperarTourPrivado = () => {
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
-              <h2 className="text-2xl font-medium text-foreground mb-4">
+              <h2>
                 ¿Listo para Vivir Tokio Así?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -399,7 +389,11 @@ const EsQueEsperarTourPrivado = () => {
               </div>
             </div>
 
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -496,7 +490,9 @@ const EsQueEsperarTourPrivado = () => {
           }),
         }}
       />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 

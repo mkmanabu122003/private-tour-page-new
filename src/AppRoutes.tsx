@@ -48,6 +48,7 @@ import NikkoDayTripGuideVsSolo from "./pages/blog/NikkoDayTripGuideVsSolo";
 import KamakuraDayTripGuideVsSolo from "./pages/blog/KamakuraDayTripGuideVsSolo";
 import LicensedVsUnlicensedTourGuidesJapan from "./pages/blog/LicensedVsUnlicensedTourGuidesJapan";
 import TsukijiToGinzaFoodWalk from "./pages/blog/TsukijiToGinzaFoodWalk";
+import GinzaToTsukijiWalkingRoute from "./pages/blog/GinzaToTsukijiWalkingRoute";
 import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
 import TsukijiVsToyosu from "./pages/blog/TsukijiVsToyosu";
@@ -174,6 +175,7 @@ const AppRoutes = () => (
         <Route path="/blog/kamakura-day-trip-guide-vs-solo" element={<KamakuraDayTripGuideVsSolo />} />
         <Route path="/blog/licensed-vs-unlicensed-tour-guides-japan" element={<LicensedVsUnlicensedTourGuidesJapan />} />
         <Route path="/blog/tsukiji-to-ginza-food-walk" element={<TsukijiToGinzaFoodWalk />} />
+        <Route path="/blog/ginza-to-tsukiji-walking-route" element={<GinzaToTsukijiWalkingRoute />} />
         <Route path="/blog/first-time-tokyo-local-guide" element={<FirstTimeTokyoLocalGuide />} />
         <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
         <Route path="/blog/tsukiji-vs-toyosu" element={<TsukijiVsToyosu />} />

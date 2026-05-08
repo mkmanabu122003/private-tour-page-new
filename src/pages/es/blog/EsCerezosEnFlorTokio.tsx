@@ -4,6 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
+import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
+import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
 
 const EsCerezosEnFlorTokio = () => {
   return (
@@ -19,55 +21,41 @@ const EsCerezosEnFlorTokio = () => {
         ]}
       />
 
-      {/* Hero Image */}
-      <section className="relative h-[40vh] md:h-[50vh] min-h-[300px]">
-        <img
-          src="/images/tours/senso-ji-temple-tokyo.webp"
-          alt="Cerezos en flor cerca del templo Senso-ji en Tokio"
-          className="w-full h-full object-cover"
-          loading="eager"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </section>
+      <div className="prose-editorial">
 
-      {/* Article Header */}
-      <section className="pt-16 pb-12 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl">
-            <Link to="/es/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Volver al Blog
-            </Link>
-            <p className="text-label text-accent mb-3">Planifica tu Viaje</p>
-            <h1 className="heading-display text-foreground">
-              Cerezos en Flor en Tokio 2026: Los Mejores Lugares Según un Guía Local
-            </h1>
-            <div className="mt-6 flex items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><User className="w-4 h-4" />Manabu, Guía con Licencia</span>
-              <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />22 de marzo de 2026</span>
-            </div>
-            <p className="mt-2 text-sm text-muted-foreground">Última actualización: marzo 2026</p>
-            <p className="mt-4 text-sm text-muted-foreground italic">
-              Escrito por Manabu, Guía Nacional con Licencia (全国通訳案内士) con más de 500 tours privados realizados en Tokio.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* Hero — overlaid title (BlogArticleHero) */}
+      <BlogArticleHero
+        image="/images/tours/senso-ji-temple-tokyo.webp"
+        imageAlt="Cerezos en flor cerca del templo Senso-ji en Tokio"
+        eyebrow="Planifica tu Viaje"
+        title="Cerezos en Flor en Tokio 2026: Los Mejores Lugares Según un Guía Local"
+        subtitle="Escrito por Manabu, Guía Nacional con Licencia (全国通訳案内士) con más de 500 tours privados realizados en Tokio."
+        date="22 de marzo de 2026"
+        backHref="/es/blog"
+        backLabel="Volver al Blog"
+      />
 
-      {/* Article Content */}
-      <section className="py-16">
+      
+
+            <section className="py-16">
         <div className="container-section">
-          <article className="max-w-3xl mx-auto prose-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
+            <BlogArticleToc items={[
+          { num: "01", label: "Pronóstico de Cerezos en…", href: "#section-01-pronóstico-de-cerezos-en-flor-en-tokio-2026" },
+          { num: "02", label: "Los 7 Mejores Lugares para…", href: "#section-02-los-7-mejores-lugares-para-ver-cerezos-en-tokio" },
+          { num: "03", label: "Consejos Prácticos para la…", href: "#section-03-consejos-prácticos-para-la-temporada-de-cerezos" }
+            ]} />
+
+            <article>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Cada primavera, mis clientes llegan a Tokio con la misma pregunta: "¿Llegamos demasiado pronto? ¿Demasiado tarde? ¿Adónde debemos ir?" La temporada del cerezo en Tokio es preciosa, pero también impredecible, abarrotada y sorprendentemente corta. La ventana entre la primera floración y la caída del último pétalo dura unas dos semanas, y el momento "perfecto" apenas cuatro o cinco días.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Después de guiar a cientos de visitantes durante la temporada del sakura, he aprendido que la diferencia entre una experiencia mágica y una frustrante se reduce a tres factores: el momento, el lugar y la hora del día. Esta guía cubre los tres.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 01 · Pronóstico de Cerezos en Flor en Tokio 2026</span></div>
+            <h2 id="section-01-pronóstico-de-cerezos-en-flor-en-tokio-2026" className="scroll-mt-20">
               Pronóstico de Cerezos en Flor en Tokio 2026
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -82,12 +70,12 @@ const EsCerezosEnFlorTokio = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Este año la floración es más temprana de lo habitual debido a temperaturas más cálidas en febrero. Si llegas a finales de marzo o principios de abril, estarás en el momento ideal. Si vienes después del 5 de abril, probablemente verás el final de la temporada — sigue siendo hermoso, especialmente con los pétalos flotando en ríos y estanques.
             </p>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 02 · Los 7 Mejores Lugares para Ver Cerezos en Tokio</span></div>
+            <h2 id="section-02-los-7-mejores-lugares-para-ver-cerezos-en-tokio" className="scroll-mt-20">
               Los 7 Mejores Lugares para Ver Cerezos en Tokio
             </h2>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               1. Río Meguro (目黒川) — La Mejor Experiencia General
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -112,7 +100,7 @@ const EsCerezosEnFlorTokio = () => {
               </figcaption>
             </figure>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               2. Chidorigafuchi (千鳥ヶ淵) — El Más Fotogénico
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -130,7 +118,7 @@ const EsCerezosEnFlorTokio = () => {
               tourName="Tour Personalizado de Primavera"
             />
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               3. Shinjuku Gyoen (新宿御苑) — El Mejor para Familias y Pícnic
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -142,7 +130,7 @@ const EsCerezosEnFlorTokio = () => {
               <li><strong>Acceso:</strong> Estación Shinjuku-Gyoenmae (Línea Marunouchi)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               4. Parque Ueno (上野公園) — El Mejor Ambiente Festivo
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -153,7 +141,7 @@ const EsCerezosEnFlorTokio = () => {
               <li><strong>Acceso:</strong> Estación Ueno (JR / Líneas Ginza / Hibiya)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               5. Río Sumida (隅田川) — El Mejor Combinado con Asakusa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -166,7 +154,7 @@ const EsCerezosEnFlorTokio = () => {
               <li><strong>Acceso:</strong> Estación Asakusa (Líneas Ginza / Asakusa)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               6. Cementerio de Yanaka (谷中霊園) — La Joya Escondida
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -179,7 +167,7 @@ const EsCerezosEnFlorTokio = () => {
               <li><strong>Acceso:</strong> Estación Nippori (Línea JR Yamanote)</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">
+            <h3>
               7. Jardín Rikugien (六義園) — La Mejor Iluminación Nocturna
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -190,8 +178,8 @@ const EsCerezosEnFlorTokio = () => {
               <li><strong>Entrada:</strong> ¥300</li>
               <li><strong>Acceso:</strong> Estación Komagome (Línea JR Yamanote / Línea Namboku)</li>
             </ul>
-
-            <h2 className="heading-section text-foreground mt-12 mb-6">
+            <div className="section-eyebrow"><span>Section 03 · Consejos Prácticos para la Temporada de Cerezos</span></div>
+            <h2 id="section-03-consejos-prácticos-para-la-temporada-de-cerezos" className="scroll-mt-20">
               Consejos Prácticos para la Temporada de Cerezos
             </h2>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
@@ -225,7 +213,11 @@ const EsCerezosEnFlorTokio = () => {
             <div className="mt-12">
               <RelatedTourCards tourIds={["asakusa", "custom"]} lang="es" />
             </div>
-          </article>
+          
+            </article>
+
+            <BlogArticleAside />
+          </div>
         </div>
       </section>
 
@@ -248,7 +240,9 @@ const EsCerezosEnFlorTokio = () => {
           { "@type": "Question", name: "¿Cuál es el lugar menos masificado para ver cerezos en Tokio?", acceptedAnswer: { "@type": "Answer", text: "El cementerio de Yanaka es el secreto mejor guardado. El camino principal tiene cerezos magníficos con mucha menos gente que Ueno o Meguro." }}
         ]
       })}} />
-    </Layout>
+    </div>
+
+      </Layout>
   );
 };
 
