@@ -323,6 +323,73 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About / Meet Manabu — moved up to put the personal-brand differentiator
+          right after Trust strip. Funnel: brand → credentials → person → voice
+          (testimonials) → product. */}
+      <section className="py-20 md:py-28">
+        <div className="container-section">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+                <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+                Your Guide
+              </p>
+              <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+                Meet Manabu, Your Licensed Tokyo Guide
+              </h2>
+              <p className="mt-4 text-body">
+                I'm Manabu, a National Government Licensed Guide Interpreter
+                (全国通訳案内士) with over 500 tours completed and a 4.86-star
+                average rating. Born in Kanazawa, raised in Kyoto, and now based
+                in Tokyo, I bring insights from across Japan's rich cultural
+                regions.
+              </p>
+              <p className="mt-4 text-body">
+                My approach is simple: in the first 30 minutes, I learn what
+                excites you, then{" "}
+                <span className="font-semibold text-foreground" style={highlightStyle}>
+                  I adapt the tour in real time.
+                </span>{" "}
+                It's not a lecture. It's a conversation.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-x-12 gap-y-5 py-5 border-y border-border">
+                <div>
+                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5 lining-nums">500+</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Private tours</p>
+                </div>
+                <div>
+                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5">Native</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Japanese guide</p>
+                </div>
+                <div>
+                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5">EN · ES</p>
+                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Languages</p>
+                </div>
+              </div>
+
+              <Link to="/about" className="btn-outline mt-8 inline-flex">
+                Learn more about your guide
+                <ArrowRight className="btn-arrow" />
+              </Link>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
+                <img
+                  src={guidePortrait}
+                  alt="Manabu, government-licensed Tokyo tour guide, ready to lead a private walking tour"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={600}
+                  height={800}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials — moved up from below Featured Tours so credibility
           via real guest words reaches users before the 30% scroll dropoff
           observed in Clarity. Replaces the Trust Signals stat row, whose
@@ -403,6 +470,69 @@ const Index = () => {
           <p className="mt-8 text-center text-sm text-muted-foreground">
             500+ five-star reviews from travelers worldwide
           </p>
+        </div>
+      </section>
+
+      {/* How It Works — moved up so the booking process appears before product
+          discovery, removing friction ("is this complicated?") before users
+          invest in evaluating tours. */}
+      <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
+        <div className="container-section">
+          <div className="mb-14 max-w-3xl">
+            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
+              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
+              Simple Booking
+            </p>
+            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
+              How It Works
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
+                <InquireIcon />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Step 1 · 2 min</p>
+              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
+                Send Your Request
+              </h3>
+              <p className="text-base text-muted-foreground leading-[1.65]">
+                Tell me your dates and what excites you about Tokyo.{" "}
+                <span className="font-semibold text-foreground" style={highlightStyle}>
+                  Free to ask anything — no commitment.
+                </span>
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
+                <PlanIcon />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Step 2 · Within 24h</p>
+              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
+                Get Your Custom Plan
+              </h3>
+              <p className="text-base text-muted-foreground leading-[1.65]">
+                I reply within 24 hours with a personalized itinerary and quote. Adjust as much as you want before paying.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
+                <ConfirmIcon />
+              </div>
+              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Step 3 · Tour Day</p>
+              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
+                Confirm Your Day
+              </h3>
+              <p className="text-base text-muted-foreground leading-[1.65]">
+                Approve the plan,{" "}
+                <span className="font-semibold text-foreground" style={highlightStyle}>
+                  pay only when you're ready,
+                </span>{" "}
+                then meet me in Tokyo.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -564,135 +694,6 @@ const Index = () => {
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 md:py-28 bg-accent/5 border-y border-accent/10">
-        <div className="container-section">
-          <div className="mb-14 max-w-3xl">
-            <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
-              <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
-              Simple Booking
-            </p>
-            <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
-              How It Works
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
-                <InquireIcon />
-              </div>
-              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Step 1 · 2 min</p>
-              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
-                Send Your Request
-              </h3>
-              <p className="text-base text-muted-foreground leading-[1.65]">
-                Tell me your dates and what excites you about Tokyo.{" "}
-                <span className="font-semibold text-foreground" style={highlightStyle}>
-                  Free to ask anything — no commitment.
-                </span>
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
-                <PlanIcon />
-              </div>
-              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Step 2 · Within 24h</p>
-              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
-                Get Your Custom Plan
-              </h3>
-              <p className="text-base text-muted-foreground leading-[1.65]">
-                I reply within 24 hours with a personalized itinerary and quote. Adjust as much as you want before paying.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-24 h-24 rounded-full bg-accent/[0.06] border-[1.5px] border-accent/30 mx-auto mb-6 flex items-center justify-center shadow-[0_0_0_6px_rgba(201,168,76,0.05)]">
-                <ConfirmIcon />
-              </div>
-              <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">Step 3 · Tour Day</p>
-              <h3 className="font-serif text-2xl md:text-[1.625rem] font-semibold leading-[1.2] tracking-tight text-foreground mb-4">
-                Confirm Your Day
-              </h3>
-              <p className="text-base text-muted-foreground leading-[1.65]">
-                Approve the plan,{" "}
-                <span className="font-semibold text-foreground" style={highlightStyle}>
-                  pay only when you're ready,
-                </span>{" "}
-                then meet me in Tokyo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section (short) */}
-      <section className="py-20 md:py-28">
-        <div className="container-section">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="inline-flex items-center gap-3.5 text-[12px] font-bold uppercase tracking-[0.18em] text-accent mb-4">
-                <span className="inline-block h-0.5 w-14 bg-accent" aria-hidden="true" />
-                Your Guide
-              </p>
-              <h2 className="font-serif text-[2rem] md:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-foreground">
-                Meet Manabu, Your Licensed Tokyo Guide
-              </h2>
-              <p className="mt-4 text-body">
-                I'm Manabu, a National Government Licensed Guide Interpreter
-                (全国通訳案内士) with over 500 tours completed and a 4.86-star
-                average rating. Born in Kanazawa, raised in Kyoto, and now based
-                in Tokyo, I bring insights from across Japan's rich cultural
-                regions.
-              </p>
-              <p className="mt-4 text-body">
-                My approach is simple: in the first 30 minutes, I learn what
-                excites you, then{" "}
-                <span className="font-semibold text-foreground" style={highlightStyle}>
-                  I adapt the tour in real time.
-                </span>{" "}
-                It's not a lecture. It's a conversation.
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-x-12 gap-y-5 py-5 border-y border-border">
-                <div>
-                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5 lining-nums">500+</p>
-                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Private tours</p>
-                </div>
-                <div>
-                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5 lining-nums">4.86</p>
-                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">
-                    <span className="text-accent text-sm mr-1.5 align-[-1px]">★</span>
-                    Average rating
-                  </p>
-                </div>
-                <div>
-                  <p className="font-serif text-[2.25rem] font-semibold text-accent leading-none tracking-tight mb-1.5">EN · ES</p>
-                  <p className="text-[11px] uppercase tracking-[0.18em] font-bold text-muted-foreground">Languages</p>
-                </div>
-              </div>
-
-              <Link to="/about" className="btn-outline mt-8 inline-flex">
-                Learn more about your guide
-                <ArrowRight className="btn-arrow" />
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-[var(--shadow-medium)]">
-                <img
-                  src={guidePortrait}
-                  alt="Manabu, government-licensed Tokyo tour guide, ready to lead a private walking tour"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={600}
-                  height={800}
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
