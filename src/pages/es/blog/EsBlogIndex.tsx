@@ -325,6 +325,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/tsukiji-food-guide-hero.webp",
   },
   {
+    slug: "de-ginza-a-tsukiji-a-pie",
+    title: "De Ginza a Tsukiji a Pie 2026: 3 Rutas Comparadas",
+    description:
+      "Camina de Ginza a Tsukiji en 15 min por Harumi-dori, pasando por el Teatro Kabukiza y Tsukiji Hongan-ji. Guía local con 3 rutas, salidas y horarios.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/ginza-shopping-street.webp",
+  },
+  {
     slug: "tour-gastronomico-tokio",
     title: "Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta (Guía Local)",
     description:

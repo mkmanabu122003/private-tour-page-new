@@ -60,7 +60,7 @@ const EsGuiaTsukiji = () => {
                 <li><strong className="text-foreground">Horario:</strong> Aprox. 9:00–14:00 (la mayoría de puestos cierran entre 13:00 y 14:00)</li>
                 <li><strong className="text-foreground">Cerrado:</strong> Domingos y algunos miércoles (sigue el calendario del mercado mayorista)</li>
                 <li><strong className="text-foreground">Mejores días:</strong> Martes, jueves y viernes por la mañana</li>
-                <li><strong className="text-foreground">Acceso:</strong> Estación Tsukiji (Línea Hibiya) — 1 minuto a pie</li>
+                <li><strong className="text-foreground">Acceso:</strong> Estación Tsukiji (Línea Hibiya) — 1 minuto a pie. ¿Te alojas en Ginza? También puedes <Link to="/es/blog/de-ginza-a-tsukiji-a-pie" className="text-accent hover:underline">caminar de Ginza a Tsukiji en unos 15 minutos</Link> por Harumi-dori.</li>
               </ul>
             </div>
 

@@ -63,12 +63,19 @@ const EsRutaGastronomicaTsukijiGinza = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Puedes hacer este recorrido por tu cuenta usando este artículo como guía. No me guardo nada. Pero también te cuento en qué momentos contar con un guía (como yo) aporta algo que no puedes replicar solo.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Para una mirada más detallada al mercado en sí, consulta mi{" "}
               <Link to="/es/blog/guia-tsukiji" className="text-accent hover:underline">
                 guía del mercado de Tsukiji
               </Link>
               .
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              ¿Vas en sentido <em>contrario</em>? Mira mi{" "}
+              <Link to="/es/blog/de-ginza-a-tsukiji-a-pie" className="text-accent hover:underline">
+                guía de Ginza a Tsukiji a pie
+              </Link>
+              {" "}para la ruta matutina desde los hoteles de Ginza hasta el mercado.
             </p>
 
             {/* Parada 1: Mercado exterior de Tsukiji */}

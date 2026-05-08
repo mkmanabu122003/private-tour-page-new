@@ -106,6 +106,7 @@ import EsTourGastronomicoTokio from "./pages/es/blog/EsTourGastronomicoTokio";
 import EsCerezosEnFlorTokio from "./pages/es/blog/EsCerezosEnFlorTokio";
 import EsTesorosOcultosTokio from "./pages/es/blog/EsTesorosOcultosTokio";
 import EsRutaGastronomicaTsukijiGinza from "./pages/es/blog/EsRutaGastronomicaTsukijiGinza";
+import EsDeGinzaATsukijiAPie from "./pages/es/blog/EsDeGinzaATsukijiAPie";
 import EsExcursionHakoneDesdeTokio from "./pages/es/blog/EsExcursionHakoneDesdeTokio";
 import EsNikkoConGuiaVsSolo from "./pages/es/blog/EsNikkoConGuiaVsSolo";
 import EsKamakuraConGuiaVsSolo from "./pages/es/blog/EsKamakuraConGuiaVsSolo";
@@ -234,6 +235,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/cerezos-en-flor-tokio" element={<EsCerezosEnFlorTokio />} />
         <Route path="/es/blog/tesoros-ocultos-tokio" element={<EsTesorosOcultosTokio />} />
         <Route path="/es/blog/ruta-gastronomica-tsukiji-ginza" element={<EsRutaGastronomicaTsukijiGinza />} />
+        <Route path="/es/blog/de-ginza-a-tsukiji-a-pie" element={<EsDeGinzaATsukijiAPie />} />
         <Route path="/es/blog/excursion-hakone-desde-tokio" element={<EsExcursionHakoneDesdeTokio />} />
         <Route path="/es/blog/nikko-con-guia-vs-solo" element={<EsNikkoConGuiaVsSolo />} />
         <Route path="/es/blog/kamakura-con-guia-vs-solo" element={<EsKamakuraConGuiaVsSolo />} />

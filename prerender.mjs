@@ -117,6 +117,7 @@ const routes = [
   "/es/blog/cerezos-en-flor-tokio",
   "/es/blog/tesoros-ocultos-tokio",
   "/es/blog/ruta-gastronomica-tsukiji-ginza",
+  "/es/blog/de-ginza-a-tsukiji-a-pie",
   "/es/blog/excursion-hakone-desde-tokio",
   "/es/blog/nikko-con-guia-vs-solo",
   "/es/blog/kamakura-con-guia-vs-solo",

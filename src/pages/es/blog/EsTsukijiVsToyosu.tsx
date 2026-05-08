@@ -277,7 +277,7 @@ const EsTsukijiVsToyosu = () => {
                 <strong className="text-foreground">8:30 - 11:00 — Ruta gastronómica por Tsukiji.</strong> Aquí es donde empieza la comida de verdad. Picotea por el mercado exterior a tu ritmo: tamagoyaki, uni fresco, vieiras a la brasa, sushi de barra, encurtidos japoneses, matcha. Tómate tu tiempo, habla con los vendedores y come hasta que no puedas más.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">11:00 — Paseo hasta Ginza para comer o comprar.</strong> Tsukiji está a 15 minutos a pie de Ginza, el distrito de compras de lujo de Tokio. Es la siguiente parada natural y supone una transición muy satisfactoria de la energía castiza del mercado a la elegancia pulida de Ginza.
+                <strong className="text-foreground">11:00 — Paseo hasta Ginza para comer o comprar.</strong> Tsukiji está a 15 minutos a pie de Ginza, el distrito de compras de lujo de Tokio. Es la siguiente parada natural y supone una transición muy satisfactoria de la energía castiza del mercado a la elegancia pulida de Ginza. (Para el trayecto inverso —<em>caminar a</em> Tsukiji desde un hotel de Ginza— consulta mi <Link to="/es/blog/de-ginza-a-tsukiji-a-pie" className="text-accent hover:underline">guía de Ginza a Tsukiji a pie</Link>.)
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">

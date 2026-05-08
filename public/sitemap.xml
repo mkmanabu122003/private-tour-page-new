@@ -632,6 +632,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/blog/de-ginza-a-tsukiji-a-pie</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Info Pages -->
   <url>

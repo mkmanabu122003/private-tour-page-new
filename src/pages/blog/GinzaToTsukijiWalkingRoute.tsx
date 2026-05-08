@@ -15,6 +15,7 @@ const GinzaToTsukijiWalkingRoute = () => {
         canonicalPath="/blog/ginza-to-tsukiji-walking-route"
         hreflang={[
           { lang: "en", path: "/blog/ginza-to-tsukiji-walking-route" },
+          { lang: "es", path: "/es/blog/de-ginza-a-tsukiji-a-pie" },
           { lang: "x-default", path: "/blog/ginza-to-tsukiji-walking-route" },
         ]}
       />
