@@ -145,6 +145,19 @@ const TsukijiMarketGuide = () => {
               No hype, no "must-eat" listicles. Just the same walkthrough I give my own clients.
             </p>
 
+            {/* Disambiguation: "Tsuki Market" / "Tsuki Fish Market" are common typos
+                for "Tsukiji" — Ahrefs shows this article ranks pos 5 for those queries
+                with zero clicks because the SERP snippet doesn't contain the typo. */}
+            <div className="faq-block space-y-8 mb-10">
+              <div>
+                <h3>Is "Tsuki Market" the Same as Tsukiji Market?</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Yes — "Tsuki Market" and "Tsuki Fish Market" are common typos for{" "}
+                  <strong className="text-foreground">Tsukiji Market</strong> (築地市場). The full name is Tsukiji (pronounced "tsoo-kee-jee"), and that's the spelling you'll see on station signs, Google Maps, and every local source. If you searched for "Tsuki Market" you've landed on the right page — this guide covers Tsukiji Outer Market in full.
+                </p>
+              </div>
+            </div>
+
             {/* Section: Tsukiji Market Hours — exact-match for top GSC queries */}
             <div className="section-eyebrow"><span>Section 01 · Tsukiji Outer Market Hours</span></div>
             <h2 id="hours" className="scroll-mt-20">
@@ -515,6 +528,12 @@ const TsukijiMarketGuide = () => {
                     Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a two-minute walk from the station. Alternatively, the Oedo Line stops at Tsukiji-shijo Station. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
                   </p>
                 </div>
+                <div>
+                  <h3>Why do some sites call it "Tsuki Market" or "Tsuki Fish Market"?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Those are typos. The correct name is Tsukiji (築地, "tsoo-kee-jee"), not Tsuki. You'll see "Tsuki Market" or "Tsuki Fish Market" in old travel forums and auto-corrected search results, but no signage, station name, or local source uses that spelling. If you're navigating to the "Tsuki market," you're heading to the same place described above.
+                  </p>
+                </div>
               </div>
             </div>
           
@@ -550,7 +569,8 @@ const TsukijiMarketGuide = () => {
           { "@type": "Question", name: "What time should I arrive at Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Aim for 8:00 AM. Stalls are fully stocked, grills are hot, and crowds are manageable. Most stalls close by 1-2 PM." }},
           { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best. Check the official market calendar." }},
           { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},
-          { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }}
+          { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }},
+          { "@type": "Question", name: "Is 'Tsuki Market' the same as Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Yes. 'Tsuki Market' and 'Tsuki Fish Market' are common typos for Tsukiji Market (築地市場). The correct name is Tsukiji ('tsoo-kee-jee'), as shown on station signs and maps. This guide covers Tsukiji Outer Market in full." }}
         ]
       })}} />
     </div>

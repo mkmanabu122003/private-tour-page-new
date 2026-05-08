@@ -75,6 +75,19 @@ const EsGuiaTsukiji = () => {
               Esta guía es todo lo que les cuento a mis invitados del tour antes de recorrer el mercado juntos. Cubriré qué comer, qué saltarse, cuándo ir y cómo combinar Tsukiji con un paseo por la cercana Ginza para un día gastronómico perfecto en Tokio.
             </p>
 
+            {/* Aclaración para usuarios que llegan buscando el error tipográfico
+                "Tsuki Market" en lugar de "Tsukiji". */}
+            <div className="faq-block space-y-8 mb-10">
+              <div>
+                <h3>¿Es "Tsuki Market" lo Mismo que el Mercado Tsukiji?</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sí — "Tsuki Market" y "Tsuki Fish Market" son errores tipográficos frecuentes al buscar el{" "}
+                  <strong className="text-foreground">Mercado Tsukiji</strong>{" "}
+                  (築地市場). El nombre correcto lleva una "j": Tsukiji, y así aparece en señales, estaciones de metro y mapas. Si llegaste aquí buscando "Tsuki Market" o "tsuki fish market", estás en la página correcta — esta guía cubre el Mercado Exterior de Tsukiji en detalle.
+                </p>
+              </div>
+            </div>
+
             {/* Tsukiji vs Toyosu */}
             <div className="section-eyebrow"><span>Section 01 · Tsukiji vs Toyosu</span></div>
             <h2 id="section-01-tsukiji-vs-toyosu" className="scroll-mt-20">
