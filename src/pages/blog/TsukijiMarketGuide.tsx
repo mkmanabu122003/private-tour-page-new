@@ -271,10 +271,10 @@ const TsukijiMarketGuide = () => {
                     <td className="p-3 text-muted-foreground">Sun, holidays, some Wed</td>
                   </tr>
                   <tr>
-                    <td className="p-3 text-foreground">Tsukiji Daidai</td>
-                    <td className="p-3 text-muted-foreground">Tamagoyaki (wholesale + retail)</td>
-                    <td className="p-3 text-muted-foreground">6:00 AM – 12:30 PM</td>
-                    <td className="p-3 text-muted-foreground">Sun, holidays, some Wed</td>
+                    <td className="p-3 text-foreground">Tamahachi</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">5:00 AM – 2:30 PM</td>
+                    <td className="p-3 text-muted-foreground">Market closure days</td>
                   </tr>
                 </tbody>
               </table>
@@ -395,7 +395,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers, in some cases from the same families who used to work the inner market floor, and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 2,000 to 3,000 yen, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots like Sushi Dai have two-hour queues and international reputations, but honestly, the lesser-known standing counters serve fish that's just as fresh at half the wait. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
+              Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers, in some cases from the same families who used to work the inner market floor, and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 2,000 to 3,000 yen, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots that built Tsukiji's sushi reputation — Sushi Dai and Daiwa Sushi — actually relocated to Toyosu with the inner market in 2018, so any "Tsukiji Sushi Dai" listings you find online are out of date. The standing counters that remain in the outer market serve fish that's just as fresh, with no hours-long queue. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
               <Link to="/blog/sushi-guide-tokyo" className="text-accent hover:underline">
                 sushi guide for Tokyo
               </Link>{" "}
@@ -506,7 +506,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Tsukiji Outer Market</strong> is about food, atmosphere, and sensory immersion. You walk through narrow lanes, eat from stalls, interact with vendors, and experience the market on a human scale. It's tactile, immediate, and deeply satisfying. No reservation is needed. You show up, you eat, you explore. The experience is organic and personal. Every visit is slightly different depending on what's in season, what catches your eye, and which vendor decides to offer you a free sample of their best uni.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Toyosu Market</strong> is about spectacle and scale. The main attraction is the tuna auction, which takes place at dawn and is genuinely impressive. Watching auctioneers sell multi-million-yen bluefin tuna in a matter of seconds is unlike anything else in the world. But the experience is observed from behind glass on elevated walkways. You're watching, not participating. The auction requires winning a <strong className="text-foreground">monthly lottery</strong> (applied online, with winners chosen at random — not first-come-first-served). Only about 100 visitors are admitted per day, and applications open roughly one month in advance. The market itself is a modern, sterile facility that lacks the atmospheric charm of Tsukiji's weathered lanes.
+              <strong className="text-foreground">Toyosu Market</strong> is about spectacle and scale. The main attraction is the tuna auction, which takes place at dawn and is genuinely impressive. Watching auctioneers sell multi-million-yen bluefin tuna in a matter of seconds is unlike anything else in the world. But the experience is observed from behind glass on elevated walkways. You're watching, not participating. The auction requires winning a <strong className="text-foreground">monthly lottery</strong> (applied online, with winners chosen at random — not first-come-first-served). About 120 visitors are admitted per day to the premium observation deck — three groups of 40, rotating every 10 minutes between roughly 5:45 and 6:15 AM — and applications open roughly one month in advance. The market itself is a modern, sterile facility that lacks the atmospheric charm of Tsukiji's weathered lanes.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               My honest recommendation: <strong className="text-foreground">if you only have time for one, choose Tsukiji</strong>. The food is better for visitors, the atmosphere is richer, and the experience requires zero advance planning. If you're a serious seafood enthusiast and can secure a Toyosu auction reservation, do both: Toyosu at dawn for the auction, then Tsukiji by 8 AM for breakfast. It makes for an unforgettable morning, though an exhausting one.

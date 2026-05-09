@@ -142,7 +142,7 @@ const EsGuiaTsukiji = () => {
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Los restaurantes con asiento ofrecen una experiencia más relajada con selecciones de mayor nivel. Espera pagar de 3.000 a 6.000 yenes por un set omakase (a elección del chef). Algunos de estos restaurantes, como Sushi Dai y Daiwa Sushi, se hicieron famosos mundialmente y pueden tener colas de dos horas o más. Honestamente, la diferencia de calidad entre los locales famosos y las barras menos conocidas es marginal; estás pagando por el nombre, no por el pescado. Compartiré qué puestos específicos recomiendo durante nuestro tour a pie.
+              Los restaurantes con asiento ofrecen una experiencia más relajada con selecciones de mayor nivel. Espera pagar de 3.000 a 6.000 yenes por un set omakase (a elección del chef). Aclaración importante: los locales más famosos que dieron fama a Tsukiji — Sushi Dai y Daiwa Sushi — se trasladaron al nuevo mercado de Toyosu en 2018 junto con el mercado interior, así que cualquier listado online que los sitúe en Tsukiji está desactualizado. Las barras de sushi del mercado exterior siguen sirviendo pescado igual de fresco, sin colas de horas. Compartiré qué puestos específicos recomiendo durante nuestro tour a pie.
             </p>
 
             <h3>
@@ -303,10 +303,10 @@ const EsGuiaTsukiji = () => {
                     <td className="p-3 text-muted-foreground">Dom, festivos, algunos miércoles</td>
                   </tr>
                   <tr>
-                    <td className="p-3 text-foreground">Tsukiji Daidai</td>
-                    <td className="p-3 text-muted-foreground">Tamagoyaki (mayorista + minorista)</td>
-                    <td className="p-3 text-muted-foreground">6:00 – 12:30</td>
-                    <td className="p-3 text-muted-foreground">Dom, festivos, algunos miércoles</td>
+                    <td className="p-3 text-foreground">Tamahachi</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:30</td>
+                    <td className="p-3 text-muted-foreground">Días de cierre del mercado</td>
                   </tr>
                 </tbody>
               </table>
@@ -371,7 +371,7 @@ const EsGuiaTsukiji = () => {
               Si eres un entusiasta serio del marisco y la subasta de atún está en tu lista de deseos, el Mercado de Toyosu vale el esfuerzo, pero requiere planificación. El mercado está ubicado en una isla artificial en la Bahía de Tokio, accesible a través de la Línea Yurikamome (baja en la estación Shijo-mae). Todo el trayecto desde el centro de Tokio toma unos 30 a 40 minutos dependiendo de tu punto de partida.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La <strong className="text-foreground">observación de la subasta de atún</strong> es la razón principal para visitar. Tiene lugar en las primeras horas de la mañana, normalmente comenzando alrededor de las 5:30 AM, y los visitantes observan desde una plataforma de observación cerrada con cristal sobre el piso de la subasta. El acceso se asigna mediante un <strong className="text-foreground">sorteo mensual</strong> (se solicita online a través del sitio web del Gobierno Metropolitano de Tokio, y los ganadores se eligen al azar, no por orden de llegada). Solo se admiten unos 100 visitantes al día, por lo que la demanda supera con creces las plazas disponibles. Sin reserva, aún puedes visitar los corredores de observación del mercado para ver las operaciones mayoristas a través de paredes de cristal, pero no verás la subasta en sí.
+              La <strong className="text-foreground">observación de la subasta de atún</strong> es la razón principal para visitar. Tiene lugar en las primeras horas de la mañana, normalmente comenzando alrededor de las 5:30 AM, y los visitantes observan desde una plataforma de observación cerrada con cristal sobre el piso de la subasta. El acceso se asigna mediante un <strong className="text-foreground">sorteo mensual</strong> (se solicita online a través del sitio web del Gobierno Metropolitano de Tokio, y los ganadores se eligen al azar, no por orden de llegada). Se admiten unos 120 visitantes al día a la plataforma de observación premium — tres grupos de 40 personas que rotan cada 10 minutos entre las 5:45 y las 6:15 AM — por lo que la demanda supera con creces las plazas disponibles. Sin reserva, aún puedes visitar los corredores de observación del mercado para ver las operaciones mayoristas a través de paredes de cristal, pero no verás la subasta en sí.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Toyosu también tiene un área de restaurantes con locales de sushi y restaurantes de marisco que generalmente son muy buenos; muchos están dirigidos por las mismas familias que operaban en el antiguo mercado interior de Tsukiji. Sin embargo, la atmósfera es estéril e institucional comparada con el encanto orgánico de Tsukiji. Si solo tienes tiempo para uno, elige Tsukiji. Si tienes tiempo para ambos, haz la subasta de Toyosu al amanecer y Tsukiji para el brunch. Es una mañana gastronómica inolvidable.
