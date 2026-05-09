@@ -15,7 +15,7 @@ const EsGuiaTsukiji = () => {
     <Layout>
       <SEO
         title="Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)"
-        description="Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia."
+        description="Horarios del Mercado de Tsukiji 2026: 5:00-14:00, cerrado domingos y Año Nuevo. Más de 460 puestos, qué comer y cómo visitarlo con un guía local."
         canonicalPath="/es/blog/guia-tsukiji"
         hreflang={[
           { lang: "en", path: "/blog/tsukiji-market-guide" },
@@ -45,9 +45,10 @@ const EsGuiaTsukiji = () => {
             <BlogArticleToc items={[
           { num: "01", label: "Tsukiji vs Toyosu", href: "#section-01-tsukiji-vs-toyosu" },
           { num: "02", label: "Qué Comer en Tsukiji", href: "#section-02-qué-comer-en-tsukiji" },
-          { num: "03", label: "Cuándo Ir", href: "#section-03-cuándo-ir" },
+          { num: "03", label: "Horarios y Cuándo Visitar", href: "#section-03-cuándo-ir" },
           { num: "04", label: "Combínalo con Ginza para la…", href: "#section-04-combínalo-con-ginza-para-la-media-jornada-perfecta" },
-          { num: "05", label: "Mercado de Toyosu", href: "#section-05-mercado-de-toyosu" }
+          { num: "05", label: "Mercado de Toyosu", href: "#section-05-mercado-de-toyosu" },
+          { num: "06", label: "Preguntas Frecuentes", href: "#section-06-faq" }
             ]} />
 
             <article>
@@ -201,11 +202,123 @@ const EsGuiaTsukiji = () => {
 
             <InlineCTAEs href="/es/tours/tsukiji-ginza" />
 
-            {/* Cuándo Ir */}
-            <div className="section-eyebrow"><span>Section 03 · Cuándo Ir</span></div>
+            {/* Horarios y Cuándo Ir — sección reforzada para capturar variantes
+                "horarios mercado tsukiji", "tsukiji opening hours" en ES SERPs. */}
+            <div className="section-eyebrow"><span>Sección 03 · Horarios del Mercado de Tsukiji</span></div>
             <h2 id="section-03-cuándo-ir" className="scroll-mt-20">
-              Cuándo Ir
+              Horarios del Mercado de Tsukiji 2026: Cuándo Visitar
             </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Una aclaración antes de la tabla: el antiguo <strong className="text-foreground">mercado mayorista interior de Tsukiji</strong> cerró en 2018 y se trasladó a Toyosu. Por tanto, los "horarios del mercado de pescado de Tsukiji" que aún circulan en algunas guías para el piso de subastas están desactualizados. El <strong className="text-foreground">Mercado Exterior de Tsukiji</strong> (場外市場), con sus más de 460 tiendas y puestos, sigue abierto y es lo que los visitantes pueden recorrer. Todos los horarios siguientes se refieren al mercado exterior.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Según la <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">página oficial del mercado</a>, el día se divide en tres franjas: <strong className="text-foreground">6:00–9:00 para compradores profesionales</strong> (chefs, mayoristas), <strong className="text-foreground">9:00–14:00 para el público general</strong>, y horario flexible a partir de las 14:00. En la práctica, los puestos individuales abren desde las 4:00 y la mayoría empieza a cerrar hacia la 13:00.
+            </p>
+
+            <div className="overflow-x-auto my-6">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-secondary/40">
+                    <th className="text-left p-3 font-medium text-foreground">Día</th>
+                    <th className="text-left p-3 font-medium text-foreground">Horario general</th>
+                    <th className="text-left p-3 font-medium text-foreground">Notas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Lunes</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:00</td>
+                    <td className="p-3 text-muted-foreground">Abierto</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Martes</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:00</td>
+                    <td className="p-3 text-muted-foreground">Abierto (mejor día)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Miércoles</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:00</td>
+                    <td className="p-3 text-muted-foreground">Abierto la mayoría de semanas; cerrado en fechas concretas (ver calendario)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Jueves</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:00</td>
+                    <td className="p-3 text-muted-foreground">Abierto (mejor día)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Viernes</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:00</td>
+                    <td className="p-3 text-muted-foreground">Abierto (mejor día)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Sábado</td>
+                    <td className="p-3 text-muted-foreground">5:00 – 14:00</td>
+                    <td className="p-3 text-muted-foreground">Abierto pero muy concurrido a partir de las 9:00</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 text-foreground"><strong>Domingo</strong></td>
+                    <td className="p-3 text-muted-foreground"><strong>Cerrado</strong></td>
+                    <td className="p-3 text-muted-foreground">La mayoría de tiendas cerradas; algunas cafeterías abren</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Horarios de tiendas destacadas del Mercado Tsukiji</strong> (verificados en mayo de 2026 desde tsukiji.or.jp):
+            </p>
+            <div className="overflow-x-auto my-6">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-secondary/40">
+                    <th className="text-left p-3 font-medium text-foreground">Tienda</th>
+                    <th className="text-left p-3 font-medium text-foreground">Especialidad</th>
+                    <th className="text-left p-3 font-medium text-foreground">Horario</th>
+                    <th className="text-left p-3 font-medium text-foreground">Cierre</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Tsukiji Yamachou</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">6:00 – 15:30</td>
+                    <td className="p-3 text-muted-foreground">Abierto los 365 días</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Tsukiji Shouro</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">4:00 – 15:00</td>
+                    <td className="p-3 text-muted-foreground">Dom, festivos, algunos miércoles</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Marutake</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">4:00 – 14:30</td>
+                    <td className="p-3 text-muted-foreground">Algunos domingos (en/ago), festivos, algunos miércoles</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Kitsuneya</td>
+                    <td className="p-3 text-muted-foreground">Gyu-don / horumon-don</td>
+                    <td className="p-3 text-muted-foreground">6:30 – 13:30</td>
+                    <td className="p-3 text-muted-foreground">Dom, festivos, algunos miércoles</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 text-foreground">Tsukiji Daidai</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki (mayorista + minorista)</td>
+                    <td className="p-3 text-muted-foreground">6:00 – 12:30</td>
+                    <td className="p-3 text-muted-foreground">Dom, festivos, algunos miércoles</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-muted-foreground italic mb-6">
+              Horarios obtenidos del listado oficial de cada tienda en tsukiji.or.jp. Pueden variar por reformas, festivos o estacionalidad. Comprueba siempre el <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">calendario oficial</a> antes de planificar tu visita.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">Cierre de fin de año:</strong> el Mercado de Tsukiji cierra durante las fiestas de Año Nuevo, normalmente <strong className="text-foreground">del 30 de diciembre al 4 de enero</strong>. La semana previa (28–30 de diciembre) es la más concurrida del año entero, ya que los locales compran ingredientes tradicionales (osechi, marisco fresco, tamagoyaki). Si viajas en esas fechas, planifica tu visita a partir del 5 de enero.
+            </p>
+
             <p className="text-muted-foreground leading-relaxed mb-4">
               El horario importa enormemente en Tsukiji. El mercado exterior es un mercado en funcionamiento, no un parque temático, y sus ritmos reflejan la industria pesquera que lo creó. <strong className="text-foreground">El mejor momento para visitar es entre semana por la mañana, entre las 9:00 y las 11:00 AM.</strong> A esa hora, todos los puestos están abiertos y completamente abastecidos, las parrillas están calientes, el pescado está en su máxima frescura, y las multitudes aún no han alcanzado su pico del mediodía. Tendrás espacio para curiosear, hacer preguntas y comer sin sentirte apresurado.
             </p>
@@ -264,6 +377,50 @@ const EsGuiaTsukiji = () => {
               Toyosu también tiene un área de restaurantes con locales de sushi y restaurantes de marisco que generalmente son muy buenos; muchos están dirigidos por las mismas familias que operaban en el antiguo mercado interior de Tsukiji. Sin embargo, la atmósfera es estéril e institucional comparada con el encanto orgánico de Tsukiji. Si solo tienes tiempo para uno, elige Tsukiji. Si tienes tiempo para ambos, haz la subasta de Toyosu al amanecer y Tsukiji para el brunch. Es una mañana gastronómica inolvidable.
             </p>
 
+            {/* FAQ */}
+            <div className="mt-16">
+              <div className="section-eyebrow"><span>Sección 06 · Preguntas Frecuentes</span></div>
+              <h2 id="section-06-faq" className="scroll-mt-20">Preguntas Frecuentes</h2>
+              <div className="faq-block space-y-8">
+                <div>
+                  <h3>¿Cuáles son los horarios del Mercado de Tsukiji?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Según el sitio oficial, el Mercado Exterior de Tsukiji se divide en tres franjas: 6:00–9:00 para compradores profesionales (chefs, mayoristas), 9:00–14:00 para el público general, y horario flexible a partir de las 14:00. En la práctica, los puestos individuales abren desde las 4:00 y la mayoría empieza a cerrar hacia la 13:00. La mejor franja para visitar es entre las 9:00 y las 11:00.
+                  </p>
+                </div>
+                <div>
+                  <h3>¿A qué hora cierra el Mercado de Tsukiji?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    La mayoría de los puestos cierran entre la 13:00 y las 14:00, y a las 15:00 el mercado está prácticamente cerrado. El antiguo mercado mayorista de pescado se trasladó a Toyosu en 2018, así que cuando se habla de "horarios del mercado de pescado de Tsukiji" hoy en día se hace referencia al mercado exterior, pensado para visitantes y no para subastas profesionales.
+                  </p>
+                </div>
+                <div>
+                  <h3>¿Está abierto el Mercado de Tsukiji los domingos?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. El Mercado Exterior de Tsukiji está cerrado todos los domingos: la mayoría de los puestos, restaurantes y tiendas no abren. Algunas cafeterías cercanas pueden estar abiertas, pero la visita pierde sentido. Planifica para martes, jueves o viernes por la mañana.
+                  </p>
+                </div>
+                <div>
+                  <h3>¿Está abierto durante las fiestas de Año Nuevo?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. El Mercado de Tsukiji cierra durante el periodo de Año Nuevo, normalmente del 30 de diciembre al 4 de enero. La semana previa (28–30 de diciembre) es la más concurrida del año. Si viajas a Tokio a principios de enero, planifica tu visita a partir del 5 de enero y consulta el calendario oficial para confirmar la fecha exacta de reapertura.
+                  </p>
+                </div>
+                <div>
+                  <h3>¿Es "Tsuki Market" lo mismo que el Mercado Tsukiji?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Sí. "Tsuki Market" y "Tsuki Fish Market" son errores tipográficos frecuentes al buscar el Mercado Tsukiji (築地市場). El nombre correcto lleva una "j" final: Tsukiji. Si llegaste aquí buscando "Tsuki Market", estás en la página correcta.
+                  </p>
+                </div>
+                <div>
+                  <h3>¿Cómo llego al Mercado de Tsukiji?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Toma la línea Hibiya del metro de Tokio hasta la estación Tsukiji (salida 1). El mercado exterior está a 2 minutos a pie. Alternativamente, la línea Oedo se detiene en la estación Tsukiji-shijo. Desde la mayoría de hoteles del centro, el trayecto dura entre 15 y 25 minutos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
               <h2>
@@ -301,7 +458,7 @@ const EsGuiaTsukiji = () => {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": "Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)",
-            "description": "Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia.",
+            "description": "Horarios del Mercado de Tsukiji 2026: 5:00-14:00, cerrado domingos y Año Nuevo. Más de 460 puestos, qué comer y cómo visitarlo con un guía local.",
             "author": {
               "@type": "Person",
               "name": "Manabu",
@@ -319,6 +476,18 @@ const EsGuiaTsukiji = () => {
           }),
         }}
       />
+      {/* FAQPage Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "FAQPage",
+        mainEntity: [
+          { "@type": "Question", name: "¿Cuáles son los horarios del Mercado de Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Según el sitio oficial, el Mercado Exterior de Tsukiji se divide en tres franjas: 6:00-9:00 para compradores profesionales, 9:00-14:00 para el público general, y horario flexible a partir de las 14:00. Los puestos individuales abren desde las 4:00 y la mayoría empieza a cerrar hacia la 13:00. La mejor franja para visitar es entre las 9:00 y las 11:00." }},
+          { "@type": "Question", name: "¿A qué hora cierra el Mercado de Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "La mayoría de los puestos cierran entre la 13:00 y las 14:00, y a las 15:00 el mercado está prácticamente cerrado. El antiguo mercado mayorista se trasladó a Toyosu en 2018, así que los 'horarios del mercado de pescado de Tsukiji' hoy se refieren al mercado exterior." }},
+          { "@type": "Question", name: "¿Está abierto el Mercado de Tsukiji los domingos?", acceptedAnswer: { "@type": "Answer", text: "No. El Mercado Exterior de Tsukiji está cerrado todos los domingos. Planifica para martes, jueves o viernes por la mañana." }},
+          { "@type": "Question", name: "¿Está abierto el Mercado de Tsukiji durante Año Nuevo?", acceptedAnswer: { "@type": "Answer", text: "No. El Mercado cierra durante el periodo de Año Nuevo, normalmente del 30 de diciembre al 4 de enero. La semana previa (28-30 de diciembre) es la más concurrida del año." }},
+          { "@type": "Question", name: "¿Es 'Tsuki Market' lo mismo que el Mercado Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Sí. 'Tsuki Market' y 'Tsuki Fish Market' son errores tipográficos frecuentes. El nombre correcto es Tsukiji (築地市場), con 'j' final." }},
+          { "@type": "Question", name: "¿Cómo llego al Mercado de Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Toma la línea Hibiya del metro de Tokio hasta la estación Tsukiji (salida 1). El mercado exterior está a 2 minutos a pie. Desde el centro de Tokio el trayecto dura 15-25 minutos." }}
+        ]
+      })}} />
     </div>
 
       </Layout>

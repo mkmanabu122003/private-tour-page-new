@@ -158,13 +158,18 @@ const TsukijiMarketGuide = () => {
               </div>
             </div>
 
-            {/* Section: Tsukiji Market Hours — exact-match for top GSC queries */}
-            <div className="section-eyebrow"><span>Section 01 · Tsukiji Outer Market Hours</span></div>
+            {/* Section: Tsukiji Market Opening Hours — exact-match for top GSC queries
+                including "tsukiji market opening hours" (700/mo), "tsukiji fish market
+                opening hours" (1,400/mo), "what time does tsukiji market close". */}
+            <div className="section-eyebrow"><span>Section 01 · Tsukiji Market Opening Hours</span></div>
             <h2 id="hours" className="scroll-mt-20">
-              Tsukiji Outer Market Hours (2026)
+              Tsukiji Market Opening Hours (2026): The Complete Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji Outer Market doesn't have a single official opening time — each shop sets its own. But the practical rhythm has been consistent for decades, and these are the hours I tell my own clients to plan around.
+              Quick orientation before the table: the original <strong className="text-foreground">Tsukiji inner wholesale market</strong> closed in 2018 and relocated to Toyosu, so any "Tsukiji fish market opening hours" you read for the wholesale auction floor are out of date. The <strong className="text-foreground">Tsukiji Outer Market</strong> (場外市場) — with its 460+ retail shops, restaurants, and food stalls — is what's still open and what visitors actually walk through. Every set of hours below refers to the outer market.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official Tsukiji Outer Market site</a> divides the day into three windows: <strong className="text-foreground">6:00–9:00 AM for professional buyers</strong> (chefs, wholesalers), <strong className="text-foreground">9:00 AM–2:00 PM for the general public</strong>, and flexible hours after 2:00 PM. In practice, individual shops open as early as 4:00 AM and most start closing by 1:00 PM, so the table below shows the real visitor-facing rhythm rather than a single posted time.
             </p>
 
             <div className="overflow-x-auto my-6">
@@ -228,7 +233,61 @@ const TsukijiMarketGuide = () => {
             </ul>
 
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">When Tsukiji Market is closed:</strong> Sundays (every week) and a handful of Wednesdays each year that follow the Tokyo Central Wholesale Market holiday calendar. New Year's (Dec 30 – Jan 4) is also closed. Always cross-check with the{" "}
+              <strong className="text-foreground">Hours of major Tsukiji shops:</strong> Each shop sets its own opening hours, and they vary widely. Here are verified hours for some of the market's most popular stalls — sourced directly from each shop's listing on the Tsukiji Outer Market official site.
+            </p>
+            <div className="overflow-x-auto my-6">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-secondary/40">
+                    <th className="text-left p-3 font-medium text-foreground">Shop</th>
+                    <th className="text-left p-3 font-medium text-foreground">Specialty</th>
+                    <th className="text-left p-3 font-medium text-foreground">Hours</th>
+                    <th className="text-left p-3 font-medium text-foreground">Closed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Tsukiji Yamachou</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">6:00 AM – 3:30 PM</td>
+                    <td className="p-3 text-muted-foreground">Open 365 days</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Tsukiji Shouro</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">4:00 AM – 3:00 PM</td>
+                    <td className="p-3 text-muted-foreground">Sun, holidays, some Wed</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Marutake</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki</td>
+                    <td className="p-3 text-muted-foreground">4:00 AM – 2:30 PM</td>
+                    <td className="p-3 text-muted-foreground">Some Sundays (Jan/Aug), holidays, some Wed</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="p-3 text-foreground">Kitsuneya</td>
+                    <td className="p-3 text-muted-foreground">Gyu-don / horumon-don</td>
+                    <td className="p-3 text-muted-foreground">6:30 AM – 1:30 PM</td>
+                    <td className="p-3 text-muted-foreground">Sun, holidays, some Wed</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 text-foreground">Tsukiji Daidai</td>
+                    <td className="p-3 text-muted-foreground">Tamagoyaki (wholesale + retail)</td>
+                    <td className="p-3 text-muted-foreground">6:00 AM – 12:30 PM</td>
+                    <td className="p-3 text-muted-foreground">Sun, holidays, some Wed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-muted-foreground italic mb-4">
+              Hours sourced from each shop's official listing on tsukiji.or.jp (verified May 2026). Hours can change for renovations, holidays, or seasonal patterns — always confirm via the shop's listing or the <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official market calendar</a> before planning your visit.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">When Tsukiji Market is closed:</strong> Sundays (every week) and a handful of Wednesdays each year that follow the Tokyo Central Wholesale Market holiday calendar. The market also <strong className="text-foreground">closes for the New Year period — typically December 30 through January 4</strong>. Late December (December 28–30) is the busiest stretch of the entire year as locals stock up on traditional New Year ingredients (osechi, fresh seafood, tamagoyaki); the market authority itself asks tourists to consider visiting outside those days.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong className="text-foreground">What time does Tsukiji Market close?</strong> Most food stalls and tamagoyaki shops finish around 1:00–2:00 PM. A handful of sit-down restaurants stay open later, but by 3:00 PM the outer market is effectively done for the day. If you want to actually eat your way through the stalls, plan to arrive no later than 11:00 AM. Always cross-check with the{" "}
               <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                 official market calendar
               </a>
@@ -534,6 +593,24 @@ const TsukijiMarketGuide = () => {
                     Those are typos. The correct name is Tsukiji (築地, "tsoo-kee-jee"), not Tsuki. You'll see "Tsuki Market" or "Tsuki Fish Market" in old travel forums and auto-corrected search results, but no signage, station name, or local source uses that spelling. If you're navigating to the "Tsuki market," you're heading to the same place described above.
                   </p>
                 </div>
+                <div>
+                  <h3>What are the official Tsukiji Market opening hours?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Per the official Tsukiji Outer Market site, the market operates in three windows: 6:00–9:00 AM for professional buyers (chefs, wholesalers), 9:00 AM–2:00 PM for the general public, and flexible hours after 2:00 PM. In practice, individual shops open as early as 4:00 AM and most begin closing by 1:00 PM. The visitor sweet spot is 7:00–11:00 AM, when everything is open and stocked.
+                  </p>
+                </div>
+                <div>
+                  <h3>What time does Tsukiji Fish Market close?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most stalls at Tsukiji Outer Market close between 1:00 PM and 2:00 PM, and by 3:00 PM the market is effectively shut down. The original Tsukiji fish market — meaning the wholesale auction floor — moved to Toyosu in 2018, so today's "Tsukiji fish market opening hours" actually refer to the outer market, which is built for visitors rather than professional auctions.
+                  </p>
+                </div>
+                <div>
+                  <h3>Is Tsukiji Market open during the New Year holiday?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. The Tsukiji Outer Market closes for the New Year holiday, typically from December 30 through January 4. The week leading up to that closure (December 28–30) is the single busiest period of the year. If your Tokyo trip falls in early January, plan to visit from January 5 onward, and check the official calendar for that year's exact reopening date.
+                  </p>
+                </div>
               </div>
             </div>
           
@@ -570,7 +647,10 @@ const TsukijiMarketGuide = () => {
           { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best. Check the official market calendar." }},
           { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},
           { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }},
-          { "@type": "Question", name: "Is 'Tsuki Market' the same as Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Yes. 'Tsuki Market' and 'Tsuki Fish Market' are common typos for Tsukiji Market (築地市場). The correct name is Tsukiji ('tsoo-kee-jee'), as shown on station signs and maps. This guide covers Tsukiji Outer Market in full." }}
+          { "@type": "Question", name: "Is 'Tsuki Market' the same as Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Yes. 'Tsuki Market' and 'Tsuki Fish Market' are common typos for Tsukiji Market (築地市場). The correct name is Tsukiji ('tsoo-kee-jee'), as shown on station signs and maps. This guide covers Tsukiji Outer Market in full." }},
+          { "@type": "Question", name: "What are the official Tsukiji Market opening hours?", acceptedAnswer: { "@type": "Answer", text: "Per the official Tsukiji Outer Market site, the market operates in three windows: 6:00-9:00 AM for professional buyers, 9:00 AM-2:00 PM for the general public, and flexible hours after 2:00 PM. Individual shops open as early as 4:00 AM and most begin closing by 1:00 PM. Visitor sweet spot: 7:00-11:00 AM." }},
+          { "@type": "Question", name: "What time does Tsukiji Fish Market close?", acceptedAnswer: { "@type": "Answer", text: "Most stalls at Tsukiji Outer Market close between 1:00 PM and 2:00 PM, and by 3:00 PM the market is effectively shut down. The wholesale auction floor moved to Toyosu in 2018, so today's 'Tsukiji fish market opening hours' refer to the outer market." }},
+          { "@type": "Question", name: "Is Tsukiji Market open during the New Year holiday?", acceptedAnswer: { "@type": "Answer", text: "No. The Tsukiji Outer Market closes for the New Year holiday, typically from December 30 through January 4. The week before that closure (December 28-30) is the single busiest period of the year." }}
         ]
       })}} />
     </div>
