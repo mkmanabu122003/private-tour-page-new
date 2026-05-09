@@ -323,7 +323,7 @@ const EsValeLaPenaGuia = () => {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Las diferencias de licencia se cubren en la siguiente sección. Brevemente: Japón cuenta con 27.950 guías intérpretes con licencia nacional registrados a fecha de abril de 2025 (la cualificación 全国通訳案内士 administrada por la Agencia de Turismo de Japón), y las plataformas no requieren esta credencial.
+              Las diferencias de licencia se cubren en la siguiente sección. Brevemente: a fecha de abril de 2025, el registro de Guía Intérprete con Licencia del Gobierno Nacional (全国通訳案内士) de Japón contaba con 27.950 registros lingüísticos sumando todas las lenguas extranjeras (administrado por la Agencia de Turismo de Japón), y las plataformas no requieren esta credencial.
             </p>
 
             <h3>
@@ -544,7 +544,7 @@ const EsValeLaPenaGuia = () => {
                     ¿Hay guías turísticos en español en Tokio?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Sí, aunque los guías hispanohablantes son menos comunes que los anglófonos. La licencia oficial de Guía Intérprete del Gobierno Nacional (全国通訳案内士) reconoce el español entre sus idiomas examinados, así que cuando reservas un guía con licencia en español, su nivel está verificado oficialmente, no es auto-declarado. A fecha de abril de 2025 había 27.950 guías intérpretes con licencia registrados a nivel nacional; la mayoría trabajan en inglés, pero el grupo de hispanohablantes con licencia está creciendo, especialmente en Tokio.
+                    Sí, aunque los guías hispanohablantes son menos comunes que los anglófonos. La licencia oficial de Guía Intérprete del Gobierno Nacional (全国通訳案内士) reconoce el español entre sus idiomas examinados, así que cuando reservas un guía con licencia en español, su nivel está verificado oficialmente, no es auto-declarado. A fecha de abril de 2025, el registro nacional contaba con 27.950 registros lingüísticos sumando todas las lenguas extranjeras; la mayoría son del inglés, pero el grupo de hispanohablantes con licencia está creciendo, especialmente en Tokio.
                   </p>
                 </div>
                 <div>
@@ -650,7 +650,7 @@ const EsValeLaPenaGuia = () => {
                 "name": "¿Hay guías turísticos en español en Tokio?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sí, aunque los guías hispanohablantes son menos comunes que los anglófonos. La licencia oficial de Guía Intérprete del Gobierno Nacional (全国通訳案内士) reconoce el español entre sus idiomas examinados. A fecha de abril de 2025 había 27.950 guías intérpretes con licencia registrados a nivel nacional, y el grupo de hispanohablantes con licencia está creciendo, especialmente en Tokio.",
+                  "text": "Sí, aunque los guías hispanohablantes son menos comunes que los anglófonos. La licencia oficial de Guía Intérprete del Gobierno Nacional (全国通訳案内士) reconoce el español entre sus idiomas examinados. A fecha de abril de 2025, el registro nacional contaba con 27.950 registros lingüísticos sumando todas las lenguas extranjeras, y el grupo de hispanohablantes con licencia está creciendo, especialmente en Tokio.",
                 },
               },
               {

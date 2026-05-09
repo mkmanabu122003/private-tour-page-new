@@ -319,7 +319,7 @@ const IsItWorthHiringGuide = () => {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Licensing differences are covered in the next section. Briefly: Japan has 27,950 nationally registered licensed guide-interpreters as of April 2025 (the 全国通訳案内士 qualification administered by the Japan Tourism Agency), and platforms don't require this credential.
+              Licensing differences are covered in the next section. Briefly: as of April 2025, Japan's National Government Licensed Guide Interpreter (全国通訳案内士) registry held 27,950 language registrations across all foreign languages, administered by the Japan Tourism Agency, and platforms don't require this credential.
             </p>
 
             <h3>
@@ -535,7 +535,7 @@ const IsItWorthHiringGuide = () => {
                     Are English-speaking tour guides available in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Yes. English-speaking tour guides are widely available in Tokyo, especially through the National Government Licensed Guide Interpreter (全国通訳案内士) registry, where English is by far the most common foreign language. The license itself requires demonstrated English proficiency before certification — you're not relying on self-reported fluency. As of April 2025, 27,950 licensed guide-interpreters were registered nationally, with the majority working in English.
+                    Yes. English-speaking tour guides are widely available in Tokyo, especially through the National Government Licensed Guide Interpreter (全国通訳案内士) registry, where English is by far the most common foreign language. The license itself requires demonstrated English proficiency before certification — you're not relying on self-reported fluency. As of April 2025, the registry held 27,950 language registrations across all foreign languages combined, with English accounting for the majority.
                   </p>
                 </div>
                 <div>
@@ -641,7 +641,7 @@ const IsItWorthHiringGuide = () => {
                 "name": "Are English-speaking tour guides available in Tokyo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. English-speaking tour guides are widely available in Tokyo, especially through the National Government Licensed Guide Interpreter (全国通訳案内士) registry, where English is by far the most common foreign language. The license itself requires demonstrated English proficiency before certification. As of April 2025, 27,950 licensed guide-interpreters were registered nationally, with the majority working in English.",
+                  "text": "Yes. English-speaking tour guides are widely available in Tokyo, especially through the National Government Licensed Guide Interpreter (全国通訳案内士) registry, where English is by far the most common foreign language. The license itself requires demonstrated English proficiency before certification. As of April 2025, the registry held 27,950 language registrations across all foreign languages combined, with English accounting for the majority.",
                 },
               },
               {
