@@ -46,11 +46,12 @@ const EsValeLaPenaGuia = () => {
           { num: "02", label: "Cuándo Podrías No Necesitar…", href: "#section-02-cuándo-podrías-no-necesitar-un-guía" },
           { num: "03", label: "Lo que un Guía con Licencia…", href: "#section-03-lo-que-un-guía-con-licencia-ofrece-y-google" },
           { num: "04", label: "¿Cuánto Cuesta un Guía…", href: "#section-04-cuánto-cuesta-un-guía-privado-en-tokio" },
-          { num: "05", label: "Lo que Realmente Obtienes…", href: "#section-05-lo-que-realmente-obtienes-con-un-guía-con" },
-          { num: "06", label: "Experiencias Reales de…", href: "#section-06-experiencias-reales-de-huéspedes" },
-          { num: "07", label: "Cuándo No Necesitas un Guía", href: "#section-07-cuándo-no-necesitas-un-guía" },
-          { num: "08", label: "Cómo Elegir el Guía…", href: "#section-08-cómo-elegir-el-guía-adecuado-en-tokio" },
-          { num: "09", label: "FAQ", href: "#section-09-faq" }
+          { num: "05", label: "Guía Privado vs Plataformas…", href: "#section-05-guía-privado-vs-plataformas-de-reserva" },
+          { num: "06", label: "Lo que Realmente Obtienes…", href: "#section-06-lo-que-realmente-obtienes-con-un-guía-con" },
+          { num: "07", label: "Experiencias Reales de…", href: "#section-07-experiencias-reales-de-huéspedes" },
+          { num: "08", label: "Cuándo No Necesitas un Guía", href: "#section-08-cuándo-no-necesitas-un-guía" },
+          { num: "09", label: "Cómo Elegir el Guía…", href: "#section-09-cómo-elegir-el-guía-adecuado-en-tokio" },
+          { num: "10", label: "FAQ", href: "#section-10-faq" }
             ]} />
 
             <article>
@@ -261,9 +262,121 @@ const EsValeLaPenaGuia = () => {
               Los viajeros que obtienen más valor son aquellos que tratan la tarifa del guía no como un gasto, sino como una inversión en la calidad de su experiencia. El tiempo es lo más valioso que tienes en vacaciones, y un guía te ayuda a aprovechar al máximo cada hora.
             </p>
 
+            {/* Guía Privado vs Plataformas de Reserva */}
+            <div className="section-eyebrow"><span>Section 05 · Guía Privado vs Plataformas de Reserva</span></div>
+            <h2 id="section-05-guía-privado-vs-plataformas-de-reserva" className="scroll-mt-20">
+              Guía Privado vs Plataformas de Reserva: GoWithGuide, Magical Trip, Viator, GetYourGuide
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Muchos viajeros encuentran guías de Tokio a través de plataformas de reserva en lugar de contactar directamente con un guía. Son cómodas, tienen muchas reseñas y resultan más seguras para quienes reservan por primera vez. Habiendo visto la industria desde dentro, aquí tienes una comparación honesta — incluyendo cuándo estas plataformas son realmente la mejor opción para tu viaje.
+            </p>
+
+            <h3>
+              Qué Es Realmente Cada Plataforma
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">GoWithGuide:</strong> Un marketplace donde los guías individuales fijan sus propios precios y disponibilidad. Las tarifas en Tokio suelen oscilar entre 100 $ y 600 $ por grupo (35-45 $ por hora de media). Los guías de la plataforma son una mezcla de licenciados y sin licencia. La plataforma cobra una comisión de aproximadamente el 20-30% sobre cada reserva.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Magical Trip:</strong> Una empresa de tours (no solo un agregador) centrada en tours de pequeños grupos de comida, vida nocturna y caminatas. El precio típico es de 76-168 $ por persona, con algunos tours de hasta 271 $. Recientemente han añadido opciones privadas. A menos que reserves una versión privada, normalmente te unirás a 6-10 desconocidos.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Viator:</strong> Un agregador propiedad de Tripadvisor. Los tours privados personalizados en Tokio suelen costar entre 100 $ y 150 $ por persona, aunque el catálogo incluye desde caminatas en grupo de 8 $ hasta experiencias privadas de más de 400 $. La calidad y las licencias varían enormemente según el operador.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">GetYourGuide:</strong> Otro gran agregador. Los tours privados a pie en Tokio empiezan en torno a 140 $ por persona con cancelación gratuita hasta 24 horas antes. Como Viator, los anuncios provienen de muchos operadores diferentes con estándares distintos.
+              </li>
+            </ul>
+
+            <h3>
+              En Qué se Diferencia Reservar a Través de una Plataforma de Reservar Directamente
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              La mayor diferencia práctica no es el precio; es cómo funciona realmente la reserva.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Comisión:</strong> Cuando reservas a través de una plataforma, aproximadamente el 20-30% de lo que pagas es comisión de la plataforma, no tarifa del guía. Ese dinero financia el marketing y la infraestructura de reseñas de la plataforma, pero también significa que o bien el guía se lleva menos, o el precio que ves está marcado al alza para compensarlo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Comunicación:</strong> En la mayoría de las plataformas reservas mediante un formulario, recibes una confirmación y conoces a tu guía el día del tour. Cuando reservas directamente, la planificación ocurre por correo o mensaje antes del tour: describes lo que te interesa, lo que quieres saltarte, necesidades dietéticas, edades de los niños, y el guía construye el día en torno a ti.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Personalización:</strong> Las plataformas estandarizan los anuncios en duraciones predefinidas y opciones desplegables para que la reserva sea sin fricción. Eso funciona bien si quieres un itinerario fijo. Funciona menos bien si tienes intereses específicos — una ruta gastronómica vegetariana, una caminata centrada en la historia de los videojuegos, medio día con un bebé — que no encajan en una plantilla.
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Las diferencias de licencia se cubren en la siguiente sección. Brevemente: Japón cuenta con aproximadamente 27.000 guías intérpretes con licencia nacional registrados (la cualificación 全国通訳案内士 administrada por la Agencia de Turismo de Japón), y las plataformas no requieren esta credencial.
+            </p>
+
+            <h3>
+              Cuándo una Plataforma de Reserva Es la Mejor Opción
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Sé honesto contigo mismo. Una plataforma puede ser la decisión correcta si:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Eres un viajero solo con un presupuesto ajustado.</strong> Un tour a pie en pequeño grupo a través de Magical Trip o Viator a 8.000-15.000 ¥ por persona será más barato que cualquier tour privado directo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Reservas con menos de 48 horas de antelación.</strong> Las plataformas suelen tener mejor disponibilidad de última hora que los guías independientes.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Prefieres itinerarios fijos.</strong> A algunos viajeros les resulta estresante planificar previamente un tour y prefieren simplemente presentarse.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Quieres leer cientos de reseñas</strong> y comparar muchas opciones antes de decidir.
+              </li>
+            </ul>
+
+            <h3>
+              Cuándo Reservar Directamente Tiene Más Sentido
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Grupos de 2 a 6 personas.</strong> El precio por grupo significa que el coste por persona baja rápido. Un tour de medio día de 30.000 ¥ son 7.500 ¥ por persona con cuatro personas — ya más barato que la mayoría de los tours privados de plataforma.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Intereses específicos que no encajan en una plantilla:</strong> rutas gastronómicas vegetarianas o halal, viajar con niños, necesidades de accesibilidad, enfoque en historia del arte, o atención a clientes de empresa.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Viajes de varios días</strong> donde el mismo guía durante 2-3 días te ahorra volver a explicar tus preferencias cada mañana.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Cuando la tarifa íntegra debe ir al guía.</strong> Reservar directamente elimina por completo la comisión del 20-30% de la plataforma.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Cuando quieres verificar las credenciales antes de reservar.</strong> Un guía directo puede mostrarte su número de licencia y tarjeta de registro prefectural; un anuncio de plataforma normalmente no.
+              </li>
+            </ul>
+
+            <h3>
+              Cinco Preguntas que Hacer Antes de Reservar (en Cualquier Sitio)
+            </h3>
+            <ol className="space-y-3 mb-8 list-decimal list-inside">
+              <li className="text-muted-foreground leading-relaxed">¿Es un <strong className="text-foreground">tour privado</strong>, o me uno a desconocidos?</li>
+              <li className="text-muted-foreground leading-relaxed">¿El guía tiene la cualificación de <strong className="text-foreground">Guía Intérprete con Licencia Nacional</strong> (全国通訳案内士)?</li>
+              <li className="text-muted-foreground leading-relaxed">¿El precio se cotiza <strong className="text-foreground">por grupo o por persona</strong>?</li>
+              <li className="text-muted-foreground leading-relaxed">¿Cuán <strong className="text-foreground">personalizable</strong> es la ruta una vez reservado?</li>
+              <li className="text-muted-foreground leading-relaxed">¿Puedo <strong className="text-foreground">escribir directamente al guía</strong> antes del tour, o solo a la plataforma?</li>
+            </ol>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Si quieres reservar un tour directamente conmigo, puedes{" "}
+              <Link to="/es/tours" className="text-accent hover:underline">
+                explorar mis tours privados de Tokio
+              </Link>
+              {" "}o ponerte en contacto a través de la{" "}
+              <Link to="/es/contacto" className="text-accent hover:underline">
+                página de contacto
+              </Link>
+              .
+            </p>
+
             {/* Guía con Licencia vs. sin Licencia */}
-            <div className="section-eyebrow"><span>Section 05 · Lo que Realmente Obtienes con un Guía con</span></div>
-            <h2 id="section-05-lo-que-realmente-obtienes-con-un-guía-con" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 06 · Lo que Realmente Obtienes con un Guía con</span></div>
+            <h2 id="section-06-lo-que-realmente-obtienes-con-un-guía-con" className="scroll-mt-20">
               Lo que Realmente Obtienes con un Guía con Licencia vs. uno sin Licencia
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -304,8 +417,8 @@ const EsValeLaPenaGuia = () => {
             </ul>
 
             {/* Experiencias Reales de Huéspedes */}
-            <div className="section-eyebrow"><span>Section 06 · Experiencias Reales de Huéspedes</span></div>
-            <h2 id="section-06-experiencias-reales-de-huéspedes" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 07 · Experiencias Reales de Huéspedes</span></div>
+            <h2 id="section-07-experiencias-reales-de-huéspedes" className="scroll-mt-20">
               Experiencias Reales de Huéspedes: Cuando un Guía Marcó la Diferencia
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -328,8 +441,8 @@ const EsValeLaPenaGuia = () => {
             </div>
 
             {/* Cuándo No Necesitas un Guía */}
-            <div className="section-eyebrow"><span>Section 07 · Cuándo No Necesitas un Guía</span></div>
-            <h2 id="section-07-cuándo-no-necesitas-un-guía" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 08 · Cuándo No Necesitas un Guía</span></div>
+            <h2 id="section-08-cuándo-no-necesitas-un-guía" className="scroll-mt-20">
               Cuándo No Necesitas un Guía
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -351,8 +464,8 @@ const EsValeLaPenaGuia = () => {
             </p>
 
             {/* Cómo Elegir el Guía Adecuado */}
-            <div className="section-eyebrow"><span>Section 08 · Cómo Elegir el Guía Adecuado en Tokio</span></div>
-            <h2 id="section-08-cómo-elegir-el-guía-adecuado-en-tokio" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 09 · Cómo Elegir el Guía Adecuado en Tokio</span></div>
+            <h2 id="section-09-cómo-elegir-el-guía-adecuado-en-tokio" className="scroll-mt-20">
               Cómo Elegir el Guía Adecuado en Tokio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -397,8 +510,8 @@ const EsValeLaPenaGuia = () => {
 
             {/* Sección de Preguntas Frecuentes */}
             <div className="mt-16">
-              <div className="section-eyebrow"><span>Section 09 · FAQ</span></div>
-              <h2 id="section-09-faq" className="scroll-mt-20">
+              <div className="section-eyebrow"><span>Section 10 · FAQ</span></div>
+              <h2 id="section-10-faq" className="scroll-mt-20">
                 Preguntas Frecuentes
               </h2>
               <div className="faq-block space-y-8">
@@ -462,7 +575,7 @@ const EsValeLaPenaGuia = () => {
               "url": "https://tanuki-tabi-travel.com/es/about",
             },
             "datePublished": "2026-02-25",
-            "dateModified": "2026-03-07",
+            "dateModified": "2026-05-09",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",

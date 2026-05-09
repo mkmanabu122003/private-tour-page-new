@@ -39,11 +39,12 @@ const IsItWorthHiringGuide = () => {
           { num: "02", label: "When You Might Not Need a…", href: "#section-02-when-you-might-not-need-a-guide" },
           { num: "03", label: "What a Licensed Guide…", href: "#section-03-what-a-licensed-guide-provides-that-google-cant" },
           { num: "04", label: "How Much Does a Private…", href: "#section-04-how-much-does-a-private-guide-cost-in-tokyo" },
-          { num: "05", label: "What You Actually Get With…", href: "#section-05-what-you-actually-get-with-a-licensed-guide" },
-          { num: "06", label: "Real Guest Experiences", href: "#section-06-real-guest-experiences" },
-          { num: "07", label: "When You Don't Need a Guide", href: "#section-07-when-you-dont-need-a-guide" },
-          { num: "08", label: "How to Choose the Right…", href: "#section-08-how-to-choose-the-right-guide-in-tokyo" },
-          { num: "09", label: "FAQ", href: "#section-09-faq" }
+          { num: "05", label: "Private Guide vs Booking…", href: "#section-05-private-guide-vs-booking-platforms" },
+          { num: "06", label: "What You Actually Get With…", href: "#section-06-what-you-actually-get-with-a-licensed-guide" },
+          { num: "07", label: "Real Guest Experiences", href: "#section-07-real-guest-experiences" },
+          { num: "08", label: "When You Don't Need a Guide", href: "#section-08-when-you-dont-need-a-guide" },
+          { num: "09", label: "How to Choose the Right…", href: "#section-09-how-to-choose-the-right-guide-in-tokyo" },
+          { num: "10", label: "FAQ", href: "#section-10-faq" }
             ]} />
 
             <article>
@@ -257,9 +258,121 @@ const IsItWorthHiringGuide = () => {
               The travelers who get the most value are those who treat the guide fee not as an expense, but as an investment in the quality of their experience. Time is the most valuable thing you have on vacation, and a guide helps you make the most of every hour.
             </p>
 
+            {/* Private Guide vs Booking Platforms */}
+            <div className="section-eyebrow"><span>Section 05 · Private Guide vs Booking Platforms</span></div>
+            <h2 id="section-05-private-guide-vs-booking-platforms" className="scroll-mt-20">
+              Private Guide vs Booking Platforms: GoWithGuide, Magical Trip, Viator, GetYourGuide
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Many travelers find Tokyo guides through booking platforms rather than reaching out to a guide directly. They're convenient, have lots of reviews, and feel safer for first-time bookers. Having seen the industry from inside, here's an honest comparison — including when these platforms are actually the better choice for your trip.
+            </p>
+
+            <h3>
+              What Each Platform Actually Is
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">GoWithGuide:</strong> A marketplace where individual guides set their own prices and availability. Tokyo group rates typically run $100–$600 per group ($35–$45 per hour average). Guides on the platform are a mix of licensed and unlicensed. The platform takes a commission of roughly 20–30% on each booking.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Magical Trip:</strong> A tour operator (not just an aggregator) that focuses on small-group tours for food, nightlife, and walking. Typical pricing is $76–$168 per person, with some tours up to $271. They've added private options recently. Unless you book a private upgrade, you're usually joining 6–10 strangers.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Viator:</strong> An aggregator owned by Tripadvisor. Tokyo private custom tours typically run $100–$150 per person, though the catalog includes everything from $8 group walks to $400+ private experiences. Quality and licensing vary widely by individual operator.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">GetYourGuide:</strong> Another large aggregator. Tokyo private walking tours start at around $140 per person with free 24-hour cancellation. Like Viator, listings come from many different operators with different standards.
+              </li>
+            </ul>
+
+            <h3>
+              How Booking Through a Platform Differs From Booking Direct
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The biggest practical difference isn't price; it's how the booking actually works.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Commission:</strong> When you book through a platform, roughly 20–30% of what you pay is platform commission, not guide fee. That money funds the platform's marketing and reviews infrastructure, but it also means either the guide is taking home less, or the price you see is marked up to compensate.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Communication:</strong> On most platforms you book through a form, get a confirmation, and meet your guide on the day. When you book directly, the planning happens by email or message before the tour: you describe what you're interested in, what to skip, dietary needs, kids' ages, and the guide builds the day around you.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Customization:</strong> Platforms standardize listings into preset durations and dropdown options to make booking frictionless. That works well if you want a fixed itinerary. It works less well if you have specific interests — a vegetarian foodie route, a JRPG history walk, a half-day with a baby — that don't fit a template.
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Licensing differences are covered in the next section. Briefly: Japan has roughly 27,000 nationally registered licensed guide-interpreters (the 全国通訳案内士 qualification administered by the Japan Tourism Agency), and platforms don't require this credential.
+            </p>
+
+            <h3>
+              When a Booking Platform Is the Better Choice
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Be honest with yourself. A platform may be the right call if:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">You're a solo traveler on a tight budget.</strong> A small-group walking tour through Magical Trip or Viator at ¥8,000–¥15,000 per person will be cheaper than any direct private tour.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">You're booking less than 48 hours out.</strong> Platforms often have better same-week availability than independent guides.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">You prefer fixed itineraries.</strong> Some travelers find pre-planning a tour stressful and want to just show up.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">You want to read hundreds of reviews</strong> and compare many options at once before deciding.
+              </li>
+            </ul>
+
+            <h3>
+              When Direct Booking Makes More Sense
+            </h3>
+            <ul className="space-y-4 mb-8">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Groups of 2–6 people.</strong> Per-group pricing means per-person cost drops fast. A ¥45,000 half-day tour is ¥7,500/person at four people — already cheaper than most platform private tours.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Specific interests that don't fit a template:</strong> vegetarian or halal food routes, traveling with kids, accessibility needs, art-history focus, or business client hosting.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Multi-day trips</strong> where the same guide for 2–3 days saves you re-explaining your preferences each morning.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">When the full fee should go to the guide.</strong> Booking direct removes the 20–30% platform commission entirely.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">When you want to verify the credential before booking.</strong> A direct guide can show you their license number and prefectural registration card; a platform listing usually can't.
+              </li>
+            </ul>
+
+            <h3>
+              Five Questions to Ask Before You Book (Anywhere)
+            </h3>
+            <ol className="space-y-3 mb-8 list-decimal list-inside">
+              <li className="text-muted-foreground leading-relaxed">Is this a <strong className="text-foreground">private tour</strong>, or am I joining strangers?</li>
+              <li className="text-muted-foreground leading-relaxed">Does the guide hold the <strong className="text-foreground">National Licensed Guide Interpreter</strong> qualification (全国通訳案内士)?</li>
+              <li className="text-muted-foreground leading-relaxed">Is the price quoted <strong className="text-foreground">per group or per person</strong>?</li>
+              <li className="text-muted-foreground leading-relaxed">How <strong className="text-foreground">customizable</strong> is the route once it's booked?</li>
+              <li className="text-muted-foreground leading-relaxed">Can I <strong className="text-foreground">email the guide directly</strong> before the tour, or only the platform?</li>
+            </ol>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              If you'd like to book a tour directly with me, you can{" "}
+              <Link to="/tours" className="text-accent hover:underline">
+                browse my private Tokyo tours
+              </Link>
+              {" "}or reach out via the{" "}
+              <Link to="/contact" className="text-accent hover:underline">
+                contact page
+              </Link>
+              .
+            </p>
+
             {/* Licensed vs Unlicensed */}
-            <div className="section-eyebrow"><span>Section 05 · What You Actually Get With a Licensed Guide</span></div>
-            <h2 id="section-05-what-you-actually-get-with-a-licensed-guide" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 06 · What You Actually Get With a Licensed Guide</span></div>
+            <h2 id="section-06-what-you-actually-get-with-a-licensed-guide" className="scroll-mt-20">
               What You Actually Get With a Licensed Guide vs. an Unlicensed One
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -293,8 +406,8 @@ const IsItWorthHiringGuide = () => {
             </ul>
 
             {/* Real Guest Experiences */}
-            <div className="section-eyebrow"><span>Section 06 · Real Guest Experiences</span></div>
-            <h2 id="section-06-real-guest-experiences" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 07 · Real Guest Experiences</span></div>
+            <h2 id="section-07-real-guest-experiences" className="scroll-mt-20">
               Real Guest Experiences: When a Guide Made the Difference
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -317,8 +430,8 @@ const IsItWorthHiringGuide = () => {
             </div>
 
             {/* When You Don't Need a Guide */}
-            <div className="section-eyebrow"><span>Section 07 · When You Don't Need a Guide</span></div>
-            <h2 id="section-07-when-you-dont-need-a-guide" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 08 · When You Don't Need a Guide</span></div>
+            <h2 id="section-08-when-you-dont-need-a-guide" className="scroll-mt-20">
               When You Don't Need a Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -340,8 +453,8 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             {/* How to Choose the Right Guide */}
-            <div className="section-eyebrow"><span>Section 08 · How to Choose the Right Guide in Tokyo</span></div>
-            <h2 id="section-08-how-to-choose-the-right-guide-in-tokyo" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 09 · How to Choose the Right Guide in Tokyo</span></div>
+            <h2 id="section-09-how-to-choose-the-right-guide-in-tokyo" className="scroll-mt-20">
               How to Choose the Right Guide in Tokyo
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -388,8 +501,8 @@ const IsItWorthHiringGuide = () => {
 
             {/* FAQ Section */}
             <div className="mt-16">
-              <div className="section-eyebrow"><span>Section 09 · FAQ</span></div>
-              <h2 id="section-09-faq" className="scroll-mt-20">
+              <div className="section-eyebrow"><span>Section 10 · FAQ</span></div>
+              <h2 id="section-10-faq" className="scroll-mt-20">
                 Frequently Asked Questions
               </h2>
               <div className="faq-block space-y-8">
@@ -453,7 +566,7 @@ const IsItWorthHiringGuide = () => {
               "url": "https://tanuki-tabi-travel.com/about",
             },
             "datePublished": "2026-02-25",
-            "dateModified": "2026-03-07",
+            "dateModified": "2026-05-09",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
