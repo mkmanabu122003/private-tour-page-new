@@ -271,7 +271,7 @@ const EsTsukijiVsToyosu = () => {
                 <strong className="text-foreground">7:00 — Desayuno en Toyosu (opcional).</strong> Si tienes hambre, puedes tomar un sushi rápido en uno de los restaurantes. Pero sinceramente, te recomendaría guardar el apetito para Tsukiji.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">8:00 — Dirección Tsukiji.</strong> Toma la línea Yurikamome desde la estación Shijo-mae hasta Shimbashi, luego haz trasbordo a la línea Hibiya una parada hasta la estación Tsukiji. El trayecto completo dura unos 20 minutos.
+                <strong className="text-foreground">8:00 — Dirección Tsukiji.</strong> Lo más rápido es un taxi directo desde el mercado al Mercado Exterior de Tsukiji — unos 10–15 minutos y ¥1.500–2.000. En metro: Yurikamome desde Shijo-mae a Toyosu (1 parada, ~3 min) → Tokyo Metro línea Yurakucho a Shintomicho (2 paradas, ~5 min) → 7 min andando hasta Tsukiji. Tiempo total en metro 20–25 minutos.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">8:30 - 11:00 — Ruta gastronómica por Tsukiji.</strong> Aquí es donde empieza la comida de verdad. Picotea por el mercado exterior a tu ritmo: tamagoyaki, uni fresco, vieiras a la brasa, sushi de barra, encurtidos japoneses, matcha. Tómate tu tiempo, habla con los vendedores y come hasta que no puedas más.

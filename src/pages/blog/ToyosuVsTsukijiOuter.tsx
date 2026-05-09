@@ -101,7 +101,7 @@ const ToyosuVsTsukijiOuter = () => {
                   Toyosu opened in October 2018 on a man-made island in Tokyo Bay and is now Tokyo's official wholesale fish market. It's a massive complex of three buildings connected by elevated covered walkways from Shijo-mae Station on the Yurikamome Line. The visitor experience runs through enclosed glass-walled corridors above the wholesale floor, plus a row of about 40 sit-down restaurants and a famous tuna-auction viewing deck.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  General visitor hours are roughly 5:00 AM to 5:00 PM, Monday through Saturday, with closures on Sundays, public holidays, and select Wednesdays following the wholesale calendar. The auction itself happens from about 5:30 AM to 6:30 AM on business days; <span className="hl-gold">viewing the auction requires winning a monthly online lottery</span> with only around 100 spots per day. In February 2024, a new visitor complex called <em>Senkyaku Banrai</em> opened across the street with 60+ restaurants and shops plus a hot-spring spa, giving Toyosu more reason to visit even without an auction ticket.
+                  General visitor hours are roughly 5:00 AM to 5:00 PM, Monday through Saturday, with closures on Sundays, public holidays, and select Wednesdays following the wholesale calendar. The auction itself happens from about 5:30 AM to 6:30 AM on business days; <span className="hl-gold">viewing the auction requires winning a monthly online lottery</span> with only around 100 spots per day. In February 2024, a new visitor complex called <em>Senkyaku Banrai</em> opened across the street with around 70 restaurants and shops plus a hot-spring spa, giving Toyosu more reason to visit even without an auction ticket.
                 </p>
 
                 <h3 className="scroll-mt-20">Tsukiji Outer Market — retail, street food, traditional</h3>
@@ -239,7 +239,7 @@ const ToyosuVsTsukijiOuter = () => {
                   <div className="route-row">
                     <div className="route-time">6:45 AM</div>
                     <p className="route-desc">
-                      <strong>Move to Tsukiji.</strong> Yurikamome from Shijo-mae to Shimbashi (~12 min), then transfer to the Hibiya Line for one stop to Tsukiji Station. Total transit time around 20 minutes.
+                      <strong>Move to Tsukiji.</strong> The fastest option this early is a taxi direct from the auction to Tsukiji Outer Market — about 10–15 minutes and ¥1,500–2,000. Most subway lines aren't fully running yet at 6:45 AM. Later in the day the subway route is Yurikamome from Shijo-mae to Toyosu (1 stop, ~3 min) → Tokyo Metro Yurakucho Line to Shintomicho (2 stops, ~5 min) → 7-min walk to Tsukiji Outer Market.
                     </p>
                   </div>
                   <div className="route-row">

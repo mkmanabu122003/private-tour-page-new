@@ -108,7 +108,7 @@ const EsToyosuVsTsukijiExterior = () => {
                   Toyosu abrió en octubre de 2018 sobre una isla artificial en la bahía de Tokio y es ahora el mercado mayorista oficial de pescado de la ciudad. Es un complejo enorme de tres edificios conectados por pasarelas elevadas y cubiertas desde la estación Shijo-mae de la línea Yurikamome. La experiencia del visitante transcurre por pasillos cerrados con paredes de cristal sobre la planta mayorista, además de unos 40 restaurantes para sentarse y la famosa plataforma de observación de la subasta de atún.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  El horario general para visitantes es aproximadamente de 5:00 a 17:00 de lunes a sábado, con cierres los domingos, festivos y ciertos miércoles según el calendario mayorista. La subasta en sí ocurre entre las 5:30 y las 6:30 los días laborables; <span className="hl-gold">verla requiere ganar una lotería online mensual</span> con solo unas 100 plazas al día. En febrero de 2024 abrió un nuevo complejo para visitantes llamado <em>Senkyaku Banrai</em> al otro lado de la calle, con más de 60 restaurantes y tiendas además de un onsen, lo que da más razones para visitar Toyosu incluso sin entrada para la subasta.
+                  El horario general para visitantes es aproximadamente de 5:00 a 17:00 de lunes a sábado, con cierres los domingos, festivos y ciertos miércoles según el calendario mayorista. La subasta en sí ocurre entre las 5:30 y las 6:30 los días laborables; <span className="hl-gold">verla requiere ganar una lotería online mensual</span> con solo unas 100 plazas al día. En febrero de 2024 abrió un nuevo complejo para visitantes llamado <em>Senkyaku Banrai</em> al otro lado de la calle, con alrededor de 70 restaurantes y tiendas además de un onsen, lo que da más razones para visitar Toyosu incluso sin entrada para la subasta.
                 </p>
 
                 <h3 className="scroll-mt-20">Mercado Exterior de Tsukiji — minorista, comida callejera, tradicional</h3>
@@ -246,7 +246,7 @@ const EsToyosuVsTsukijiExterior = () => {
                   <div className="route-row">
                     <div className="route-time">6:45</div>
                     <p className="route-desc">
-                      <strong>Traslado a Tsukiji.</strong> Yurikamome desde Shijo-mae a Shimbashi (~12 min), después transbordo a la línea Hibiya una parada hasta la estación Tsukiji. Tiempo total de unos 20 minutos.
+                      <strong>Traslado a Tsukiji.</strong> A esta hora lo más rápido es un taxi directo desde la subasta hasta el Mercado Exterior de Tsukiji — unos 10–15 minutos y ¥1.500–2.000. La mayoría de las líneas de metro aún no funcionan plenamente a las 6:45. Más tarde en el día la ruta de metro es Yurikamome desde Shijo-mae a Toyosu (1 parada, ~3 min) → Tokyo Metro línea Yurakucho a Shintomicho (2 paradas, ~5 min) → 7 min andando hasta el Mercado Exterior de Tsukiji.
                     </p>
                   </div>
                   <div className="route-row">

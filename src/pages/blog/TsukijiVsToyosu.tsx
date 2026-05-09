@@ -389,7 +389,7 @@ const TsukijiVsToyosu = () => {
               <div className="route-row">
                 <div className="route-time">8:00 AM</div>
                 <p className="route-desc">
-                  <strong>Head to Tsukiji.</strong> Take the Yurikamome Line from Shijo-mae Station to Shimbashi, then transfer to the Hibiya Line for one stop to Tsukiji Station. The whole journey takes about 20 minutes.
+                  <strong>Head to Tsukiji.</strong> The fastest route is a taxi direct from the market to Tsukiji Outer Market — about 10–15 minutes and ¥1,500–2,000. By subway: Yurikamome from Shijo-mae to Toyosu (1 stop, ~3 min) → Tokyo Metro Yurakucho Line to Shintomicho (2 stops, ~5 min) → 7-min walk to Tsukiji. Total subway time around 20–25 minutes.
                 </p>
               </div>
               <div className="route-row">
