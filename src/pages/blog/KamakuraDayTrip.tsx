@@ -74,7 +74,7 @@ const KamakuraDayTrip = () => {
             </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">JR Yokosuka Line from Tokyo or Shinagawa Station:</strong> Direct, about 55–60 minutes, ¥940. This is the simplest option and covered by JR Pass. Arrives at Kamakura Station in the center of town.
+                <strong className="text-foreground">JR Yokosuka Line from Tokyo or Shinagawa Station:</strong> Direct, about 55–60 minutes, around ¥950 one-way. This is the simplest option and covered by JR Pass. Arrives at Kamakura Station in the center of town.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">JR Shonan-Shinjuku Line from Shinjuku or Shibuya:</strong> Also direct, similar time, same price. More convenient if you're staying in western Tokyo.

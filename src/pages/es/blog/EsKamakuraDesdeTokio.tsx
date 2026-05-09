@@ -100,7 +100,7 @@ const EsKamakuraDesdeTokio = () => {
               JR Yokosuka Line desde Tokio/Shinagawa
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La forma más directa y económica es la <strong className="text-foreground">JR Yokosuka Line</strong>, que sale de las estaciones de Tokio y Shinagawa. El trayecto dura aproximadamente una hora desde Tokio Station y unos 50 minutos desde Shinagawa. No necesitas reservar asiento, es un tren local con asientos libres. Si tienes el Japan Rail Pass, este trayecto está incluido, lo cual convierte esta <strong className="text-foreground">excursión Kamakura desde Tokio</strong> en básicamente gratuita en transporte. Sin JR Pass, el billete de ida cuesta alrededor de 940 yenes.
+              La forma más directa y económica es la <strong className="text-foreground">JR Yokosuka Line</strong>, que sale de las estaciones de Tokio y Shinagawa. El trayecto dura aproximadamente una hora desde Tokio Station y unos 50 minutos desde Shinagawa. No necesitas reservar asiento, es un tren local con asientos libres. Si tienes el Japan Rail Pass, este trayecto está incluido, lo cual convierte esta <strong className="text-foreground">excursión Kamakura desde Tokio</strong> en básicamente gratuita en transporte. Sin JR Pass, el billete de ida cuesta alrededor de 950 yenes.
             </p>
 
             <h3>
@@ -114,7 +114,7 @@ const EsKamakuraDesdeTokio = () => {
               Precios y tiempos reales 2026
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Para que puedas planificar tu presupuesto con datos actuales: el trayecto JR Yokosuka Line desde Tokio Station cuesta 940 yenes por trayecto (incluido en el JR Pass). El Enoden cuesta 200-310 yenes por trayecto individual o 800 yenes el pase de día. El tren Shonan-Shinjuku Line desde Shinjuku es otra opción, con un tiempo similar y precio comparable. En total, el transporte de ida y vuelta te costará entre 1.880 y 2.500 yenes sin JR Pass. Con JR Pass, solo pagarás el Enoden local.
+              Para que puedas planificar tu presupuesto con datos actuales: el trayecto JR Yokosuka Line desde Tokio Station cuesta unos 950 yenes por trayecto (tarifa actualizada tras la subida de marzo de 2026, incluido en el JR Pass). El Enoden cuesta 200-310 yenes por trayecto individual o 800 yenes el pase de día. El tren Shonan-Shinjuku Line desde Shinjuku es otra opción, con un tiempo similar y precio comparable. En total, el transporte de ida y vuelta te costará entre 1.900 y 2.500 yenes sin JR Pass. Con JR Pass, solo pagarás el Enoden local.
             </p>
 
             <InlineCTAEs href="/es/tours/kamakura" />
@@ -245,7 +245,7 @@ const EsKamakuraDesdeTokio = () => {
                   ¿Cuánto cuesta la excursión Kamakura desde Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  El presupuesto total para un día en Kamakura, incluyendo transporte, entradas y comida, ronda los 5.000-8.000 yenes por persona. Transporte ida y vuelta: 1.880-2.500 yenes (gratis con JR Pass hasta Kamakura). Entradas: entre 700 y 1.000 yenes para los templos principales. Comida: 2.000-4.000 yenes dependiendo de dónde comas. Es una de las excursiones más asequibles desde Tokio.
+                  El presupuesto total para un día en Kamakura, incluyendo transporte, entradas y comida, ronda los 5.000-8.000 yenes por persona. Transporte ida y vuelta: 1.900-2.500 yenes (gratis con JR Pass hasta Kamakura). Entradas: entre 700 y 1.000 yenes para los templos principales. Comida: 2.000-4.000 yenes dependiendo de dónde comas. Es una de las excursiones más asequibles desde Tokio.
                 </p>
               </div>
 
