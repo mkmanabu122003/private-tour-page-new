@@ -61,7 +61,7 @@ const EsGuiaTsukiji = () => {
                 <li><strong className="text-foreground">Horario:</strong> Aprox. 9:00–14:00 (la mayoría de puestos cierran entre 13:00 y 14:00)</li>
                 <li><strong className="text-foreground">Cerrado:</strong> Domingos y algunos miércoles (sigue el calendario del mercado mayorista)</li>
                 <li><strong className="text-foreground">Mejores días:</strong> Martes, jueves y viernes por la mañana</li>
-                <li><strong className="text-foreground">Acceso:</strong> Estación Tsukiji (Línea Hibiya) — 1 minuto a pie. ¿Te alojas en Ginza? También puedes <Link to="/es/blog/de-ginza-a-tsukiji-a-pie" className="text-accent hover:underline">caminar de Ginza a Tsukiji en unos 15 minutos</Link> por Harumi-dori.</li>
+                <li><strong className="text-foreground">Acceso:</strong> Estación Tsukiji (Línea Hibiya, salida 1) — 2-3 minutos a pie. ¿Te alojas en Ginza? También puedes <Link to="/es/blog/de-ginza-a-tsukiji-a-pie" className="text-accent hover:underline">caminar de Ginza a Tsukiji en unos 15 minutos</Link> por Harumi-dori.</li>
               </ul>
             </div>
 
@@ -126,7 +126,7 @@ const EsGuiaTsukiji = () => {
               Sushi Fresco: De Pie vs Sentado
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji tiene tanto barras de sushi de pie como restaurantes de sushi con asiento, y ambos pueden ser excelentes. Los locales de pie (tachigui-zushi) tienden a ser más rápidos y baratos; pagarás alrededor de 2.000 a 3.000 yenes por un buen conjunto de 8 a 10 piezas. La experiencia es quintaesencialmente japonesa: codo con codo con oficinistas en su descanso para almorzar, viendo al itamae (chef de sushi) dar forma a cada pieza a mano a centímetros de tu cara. El pescado es absurdamente fresco porque muchos de estos restaurantes se abastecen directamente de los mayoristas del mercado cada mañana.
+              Tsukiji tiene tanto barras de sushi de pie como restaurantes de sushi con asiento, y ambos pueden ser excelentes. Los locales de pie (tachigui-zushi) tienden a ser más rápidos y baratos; pagarás alrededor de 1.500 a 3.000 yenes por un buen conjunto de 8 a 10 piezas según los cortes. La experiencia es quintaesencialmente japonesa: codo con codo con oficinistas en su descanso para almorzar, viendo al itamae (chef de sushi) dar forma a cada pieza a mano a centímetros de tu cara. El pescado es absurdamente fresco porque muchos de estos restaurantes se abastecen directamente de los mayoristas del mercado cada mañana.
             </p>
             <figure className="my-8">
               <img
@@ -149,7 +149,7 @@ const EsGuiaTsukiji = () => {
               Tamagoyaki (Tortilla Japonesa de Huevo)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              El tamagoyaki de Tsukiji es legendario, y con razón. Estas gruesas tortillas japonesas ligeramente dulces se asan en sartenes rectangulares especiales justo frente a ti, capa por capa, resultando en un bloque de huevo esponjoso y caramelizado que no tiene nada que ver con lo que encontrarías en una cocina occidental. Las dos tiendas más famosas, Yamachou y Shouro, llevan décadas perfeccionando sus recetas. Yamachou tiende hacia un estilo más dulce, tipo postre, mientras que Shouro ofrece una versión más salada, con más dashi. Prueba ambas si puedes. Un palito de tamagoyaki cuesta alrededor de 100 a 200 yenes, lo que lo convierte en una de las mejores gangas de todo el mercado.
+              El tamagoyaki de Tsukiji es legendario, y con razón. Estas gruesas tortillas japonesas ligeramente dulces se asan en sartenes rectangulares especiales justo frente a ti, capa por capa, resultando en un bloque de huevo esponjoso y caramelizado que no tiene nada que ver con lo que encontrarías en una cocina occidental. Las dos tiendas más famosas, Yamachou y Shouro, llevan décadas perfeccionando sus recetas. Yamachou tiende hacia un estilo más dulce, tipo postre, mientras que Shouro ofrece una versión más salada, con más dashi. Prueba ambas si puedes. Un palito de tamagoyaki cuesta normalmente unos 200 yenes, lo que lo convierte en una de las mejores gangas de todo el mercado.
             </p>
             <figure className="my-8">
               <img
@@ -415,7 +415,7 @@ const EsGuiaTsukiji = () => {
                 <div>
                   <h3>¿Cómo llego al Mercado de Tsukiji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Toma la línea Hibiya del metro de Tokio hasta la estación Tsukiji (salida 1). El mercado exterior está a 2 minutos a pie. Alternativamente, la línea Oedo se detiene en la estación Tsukiji-shijo. Desde la mayoría de hoteles del centro, el trayecto dura entre 15 y 25 minutos.
+                    Toma la línea Hibiya del metro de Tokio hasta la estación Tsukiji (salida 1). El mercado exterior está a 2-3 minutos a pie. Alternativamente, la línea Toei Oedo se detiene en la estación Tsukiji-shijo (salida A1, ~1 minuto a pie). Desde la mayoría de hoteles del centro, el trayecto dura entre 15 y 25 minutos.
                   </p>
                 </div>
               </div>
@@ -485,7 +485,7 @@ const EsGuiaTsukiji = () => {
           { "@type": "Question", name: "¿Está abierto el Mercado de Tsukiji los domingos?", acceptedAnswer: { "@type": "Answer", text: "No. El Mercado Exterior de Tsukiji está cerrado todos los domingos. Planifica para martes, jueves o viernes por la mañana." }},
           { "@type": "Question", name: "¿Está abierto el Mercado de Tsukiji durante Año Nuevo?", acceptedAnswer: { "@type": "Answer", text: "No. El Mercado cierra durante el periodo de Año Nuevo, normalmente del 30 de diciembre al 4 de enero. La semana previa (28-30 de diciembre) es la más concurrida del año." }},
           { "@type": "Question", name: "¿Es 'Tsuki Market' lo mismo que el Mercado Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Sí. 'Tsuki Market' y 'Tsuki Fish Market' son errores tipográficos frecuentes. El nombre correcto es Tsukiji (築地市場), con 'j' final." }},
-          { "@type": "Question", name: "¿Cómo llego al Mercado de Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Toma la línea Hibiya del metro de Tokio hasta la estación Tsukiji (salida 1). El mercado exterior está a 2 minutos a pie. Desde el centro de Tokio el trayecto dura 15-25 minutos." }}
+          { "@type": "Question", name: "¿Cómo llego al Mercado de Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Toma la línea Hibiya del metro de Tokio hasta la estación Tsukiji (salida 1). El mercado exterior está a 2-3 minutos a pie. Alternativamente, la línea Toei Oedo se detiene en Tsukiji-shijo (salida A1, ~1 minuto a pie). Desde el centro de Tokio el trayecto dura 15-25 minutos." }}
         ]
       })}} />
     </div>

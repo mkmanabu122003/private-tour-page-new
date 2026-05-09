@@ -306,7 +306,7 @@ const TsukijiMarketGuide = () => {
               By the 2000s, the inner market's facilities were aging badly. The buildings were decades past their intended lifespan, sanitation standards were difficult to maintain, and the narrow lanes made modern refrigerated logistics nearly impossible. After years of political debate and delays, the inner wholesale market officially relocated to Toyosu, a modern facility on a man-made island in Tokyo Bay, in October 2018.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              But here's the crucial distinction that gets lost in the retelling: the inner market and the outer market were always two separate entities. The inner market was the wholesale floor, professionals only, with limited tourist access. The outer market was (and remains) a dense network of retail shops, restaurants, and food stalls that grew up around the wholesale operation over decades. When the inner market moved, the outer market stayed put. The roughly 400 shops and restaurants that line Tsukiji's narrow streets had no reason to leave. Their customers were locals, chefs, and food-loving visitors, not wholesale buyers.
+              But here's the crucial distinction that gets lost in the retelling: the inner market and the outer market were always two separate entities. The inner market was the wholesale floor, professionals only, with limited tourist access. The outer market was (and remains) a dense network of retail shops, restaurants, and food stalls that grew up around the wholesale operation over decades. When the inner market moved, the outer market stayed put. The roughly 460 shops and restaurants that line Tsukiji's narrow streets had no reason to leave. Their customers were locals, chefs, and food-loving visitors, not wholesale buyers.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               So if someone tells you "Tsukiji is closed," they're repeating a half-truth. The wholesale floor is gone. The soul of the market, the part you can actually taste, touch, and experience as a visitor, is very much alive. And in some ways, it's better than before. With the wholesale operation gone, the outer market has leaned even further into its identity as a food destination. New shops have opened, existing ones have expanded, and the overall experience is more visitor-friendly than it was a decade ago. Any good tsukiji guide will tell you the same thing: the outer market is the real draw.
@@ -318,7 +318,7 @@ const TsukijiMarketGuide = () => {
               What's Still There: The Outer Market
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The outer market occupies a compact grid of narrow lanes just south of the former inner market site. It's walkable in 20 minutes if you're in a hurry, but I've never met anyone who could get through it that fast. There's too much to see, smell, and taste. Over 400 shops and restaurants are packed into these few blocks, and the density is part of the charm. You'll turn a corner and find yourself face-to-face with a vendor slicing a tuna head the size of a small dog, or a grandmother grilling tamagoyaki on a rectangular pan that's older than you are.
+              The outer market occupies a compact grid of narrow lanes just south of the former inner market site. It's walkable in 20 minutes if you're in a hurry, but I've never met anyone who could get through it that fast. There's too much to see, smell, and taste. Roughly 460 shops and restaurants are packed into these few blocks, and the density is part of the charm. You'll turn a corner and find yourself face-to-face with a vendor slicing a tuna head the size of a small dog, or a grandmother grilling tamagoyaki on a rectangular pan that's older than you are.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The types of businesses here fall into a few categories. <strong className="text-foreground">Fresh seafood shops</strong> sell everything from whole fish to prepared sashimi, uni boxes, and dried goods like katsuobushi (bonito flakes) and kombu (kelp). <strong className="text-foreground">Kitchen supply stores</strong> carry Japanese knives, ceramics, lacquerware, and cooking tools. Many of these shops have been supplying professional chefs for generations. <strong className="text-foreground">Food stalls and street vendors</strong> grill scallops, squid, and wagyu skewers to order, fill paper cups with fresh uni and ikura, and hand you sticks of golden tamagoyaki still warm from the pan. And then there are the <strong className="text-foreground">sit-down restaurants</strong>, ranging from tiny sushi counters with six seats to proper seafood restaurants serving elaborate kaisendon (seafood rice bowls) and set meals.
@@ -336,12 +336,12 @@ const TsukijiMarketGuide = () => {
                 height={533}
               />
               <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                The outer market's narrow lanes, over 400 shops packed into a few walkable blocks
+                The outer market's narrow lanes, roughly 460 shops packed into a few walkable blocks
               </figcaption>
             </figure>
 
             <InlineCTA
-              message="400 shops in a few blocks is a lot to navigate alone — want help?"
+              message="460 shops in a few blocks is a lot to navigate alone — want help?"
               linkText="See the Tsukiji + Ginza tour →"
               href="/tours/tsukiji-ginza"
             />
@@ -359,7 +359,7 @@ const TsukijiMarketGuide = () => {
               Tamagoyaki: The Icon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If Tsukiji has a signature food, it's tamagoyaki, the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick costs around 100 to 200 yen, and watching the cook build it layer by layer (pouring batter, rolling, pouring again) is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.{" "}
+              If Tsukiji has a signature food, it's tamagoyaki, the thick, layered Japanese egg omelette cooked in a rectangular pan. Two shops dominate the tamagoyaki scene: Yamachou and Shouro. Yamachou's version is sweeter, almost dessert-like, with a caramelized exterior that cracks slightly when you bite into it. Shouro's is more savory, with a prominent dashi flavor that appeals to people who find the sweet version too much. A stick is typically around 200 yen, and watching the cook build it layer by layer (pouring batter, rolling, pouring again) is half the experience. I eat tamagoyaki almost every time I'm at the market. It never gets old.{" "}
               <Link to="/tours/tsukiji-ginza" className="text-accent hover:underline font-medium">
                 Try Yamachou's tamagoyaki on the Tsukiji + Ginza tour →
               </Link>
@@ -395,7 +395,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers, in some cases from the same families who used to work the inner market floor, and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 2,000 to 3,000 yen, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots that built Tsukiji's sushi reputation — Sushi Dai and Daiwa Sushi — actually relocated to Toyosu with the inner market in 2018, so any "Tsukiji Sushi Dai" listings you find online are out of date. The standing counters that remain in the outer market serve fish that's just as fresh, with no hours-long queue. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
+              Tsukiji's standing sushi counters (tachigui-zushi) are where I send every visitor who asks me about sushi in Tokyo. The fish is sourced directly from wholesalers, in some cases from the same families who used to work the inner market floor, and the quality is extraordinary for the price. A set of 8 to 10 pieces runs about 1,500 to 3,000 yen depending on the cuts, and you're eating elbow-to-elbow with salarymen and local chefs on their day off. The famous sit-down spots that built Tsukiji's sushi reputation — Sushi Dai and Daiwa Sushi — actually relocated to Toyosu with the inner market in 2018, so any "Tsukiji Sushi Dai" listings you find online are out of date. The standing counters that remain in the outer market serve fish that's just as fresh, with no hours-long queue. If you want deeper recommendations on sushi across the city, I've written a separate{" "}
               <Link to="/blog/sushi-guide-tokyo" className="text-accent hover:underline">
                 sushi guide for Tokyo
               </Link>{" "}
@@ -475,7 +475,7 @@ const TsukijiMarketGuide = () => {
               <strong className="text-foreground">Arrive by 8:00 AM.</strong> This is the sweet spot. The stalls are fully set up and stocked, the grills are fired up, the fish is at peak freshness, and the crowds haven't yet built to their midday density. By 8 AM, you'll have room to browse, ask questions, take photos, and eat without feeling rushed. Between 9 and 10 AM is still good but noticeably busier. After 11 AM, you're competing with lunch crowds. By 1 to 2 PM, many stalls begin closing, and by 3 PM the market is largely shut down for the day.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway. Staying in Ginza? You can also <Link to="/blog/ginza-to-tsukiji-walking-route" className="text-accent hover:underline">walk from Ginza to Tsukiji in about 15 minutes</Link> along Harumi-dori &mdash; flat, scenic, and past Kabukiza Theatre.
+              <strong className="text-foreground">Getting there:</strong> The easiest route is the <strong className="text-foreground">Tokyo Metro Hibiya Line</strong> to Tsukiji Station (Exit 1). You'll be at the market's edge in a two-to-three-minute walk. Alternatively, the Oedo Line stops at Tsukiji-shijo Station, which is slightly closer to the former inner market site. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway. Staying in Ginza? You can also <Link to="/blog/ginza-to-tsukiji-walking-route" className="text-accent hover:underline">walk from Ginza to Tsukiji in about 15 minutes</Link> along Harumi-dori &mdash; flat, scenic, and past Kabukiza Theatre.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Best days to visit:</strong> Weekday mornings are ideal. Tuesday, Thursday, and Friday give you the best combination of full stock and manageable crowds. Saturdays are doable but significantly more crowded, especially after 9 AM. <strong className="text-foreground">Avoid Sundays and select Wednesdays</strong>. Most stalls are closed on Sundays and on certain Wednesdays that follow the Tokyo Central Wholesale Market calendar (not every Wednesday). Always check the <a href="https://www.tsukiji.or.jp/english/calendar/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">market's official calendar</a> before your visit, as additional closure days occur around holidays. If you only have one morning in Tokyo for food, make it a Tuesday, Thursday, or Friday at Tsukiji.
@@ -548,7 +548,7 @@ const TsukijiMarketGuide = () => {
                 <div>
                   <h3>Is Tsukiji Market still open in 2026?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market, with over 400 shops, restaurants, and food stalls, remains open and thriving. It's one of the best food destinations in Tokyo and well worth a morning visit.
+                    Yes. The inner wholesale market moved to Toyosu in 2018, but the outer market, with roughly 460 shops, restaurants, and food stalls, remains open and thriving. It's one of the best food destinations in Tokyo and well worth a morning visit.
                   </p>
                 </div>
                 <div>
@@ -584,7 +584,7 @@ const TsukijiMarketGuide = () => {
                 <div>
                   <h3>How do I get to Tsukiji Market?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a two-minute walk from the station. Alternatively, the Oedo Line stops at Tsukiji-shijo Station. From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
+                    Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a two-to-three-minute walk from the station. Alternatively, the Toei Oedo Line stops at Tsukiji-shijo Station (Exit A1, about 1 minute on foot). From most central Tokyo hotels, the journey takes 15 to 25 minutes by subway.
                   </p>
                 </div>
                 <div>
@@ -640,13 +640,13 @@ const TsukijiMarketGuide = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "FAQPage",
         mainEntity: [
-          { "@type": "Question", name: "Is Tsukiji Outer Market still open after the Toyosu move?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but Tsukiji Outer Market with over 400 shops, restaurants, and food stalls remains open and thriving in 2026." }},
+          { "@type": "Question", name: "Is Tsukiji Outer Market still open after the Toyosu move?", acceptedAnswer: { "@type": "Answer", text: "Yes. The inner wholesale market moved to Toyosu in 2018, but Tsukiji Outer Market with roughly 460 shops, restaurants, and food stalls remains open and thriving in 2026." }},
           { "@type": "Question", name: "What time does Tsukiji Outer Market open and close?", acceptedAnswer: { "@type": "Answer", text: "Most shops at Tsukiji Outer Market open around 5:00 AM and close by 2:00 PM. The peak window for visitors is 7:00-11:00 AM, when everything is open and stocked. After 2:00 PM the market is effectively shut down for the day." }},
           { "@type": "Question", name: "Is Tsukiji Outer Market open on Sundays?", acceptedAnswer: { "@type": "Answer", text: "No. Tsukiji Outer Market is closed every Sunday — most shops, food stalls, and restaurants are shut. Plan for Tuesday, Thursday, or Friday morning instead." }},
           { "@type": "Question", name: "What time should I arrive at Tsukiji?", acceptedAnswer: { "@type": "Answer", text: "Aim for 8:00 AM. Stalls are fully stocked, grills are hot, and crowds are manageable. Most stalls close by 1-2 PM." }},
           { "@type": "Question", name: "Is Tsukiji open on weekends?", acceptedAnswer: { "@type": "Answer", text: "Saturday mornings are open but crowded. Most stalls are closed on Sundays and select Wednesdays. Weekday mornings (Tuesday, Thursday, Friday) are best. Check the official market calendar." }},
           { "@type": "Question", name: "Should I visit Tsukiji or Toyosu?", acceptedAnswer: { "@type": "Answer", text: "For most visitors, Tsukiji is the better choice for food variety and atmosphere. Toyosu is worth it only for the tuna auction, which requires winning a monthly lottery." }},
-          { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-minute walk. Journey from central Tokyo: 15-25 minutes." }},
+          { "@type": "Question", name: "How do I get to Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Take the Tokyo Metro Hibiya Line to Tsukiji Station (Exit 1). The outer market is a 2-3 minute walk. Alternatively, Toei Oedo Line stops at Tsukiji-shijo Station (Exit A1, ~1 minute walk). Journey from central Tokyo: 15-25 minutes." }},
           { "@type": "Question", name: "Is 'Tsuki Market' the same as Tsukiji Market?", acceptedAnswer: { "@type": "Answer", text: "Yes. 'Tsuki Market' and 'Tsuki Fish Market' are common typos for Tsukiji Market (築地市場). The correct name is Tsukiji ('tsoo-kee-jee'), as shown on station signs and maps. This guide covers Tsukiji Outer Market in full." }},
           { "@type": "Question", name: "What are the official Tsukiji Market opening hours?", acceptedAnswer: { "@type": "Answer", text: "Per the official Tsukiji Outer Market site, the market operates in three windows: 6:00-9:00 AM for professional buyers, 9:00 AM-2:00 PM for the general public, and flexible hours after 2:00 PM. Individual shops open as early as 4:00 AM and most begin closing by 1:00 PM. Visitor sweet spot: 7:00-11:00 AM." }},
           { "@type": "Question", name: "What time does Tsukiji Fish Market close?", acceptedAnswer: { "@type": "Answer", text: "Most stalls at Tsukiji Outer Market close between 1:00 PM and 2:00 PM, and by 3:00 PM the market is effectively shut down. The wholesale auction floor moved to Toyosu in 2018, so today's 'Tsukiji fish market opening hours' refer to the outer market." }},
