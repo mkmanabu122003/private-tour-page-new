@@ -427,6 +427,36 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/toyosu-senkyaku-banrai.webp",
   },
   {
+    slug: "toyosu-vs-ueno-fish-market",
+    title: "Toyosu vs Ueno Market: Which Tokyo Fish Market Should You Visit?",
+    description:
+      "Toyosu (real wholesale market with tuna auction) vs Ueno's Ameyoko (open-air street with seafood stalls and izakaya). A licensed Tokyo guide compares both.",
+    date: "May 9, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food & Drink",
+    image: "/images/blog/toyosu-senkyaku-banrai.webp",
+  },
+  {
+    slug: "tsukiji-outer-vs-inner-market",
+    title: "Tsukiji Outer vs Inner Market: What's the Difference?",
+    description:
+      "The Inner Market moved to Toyosu in October 2018; the Outer Market with 460+ stalls is still in Tsukiji. A licensed Tokyo guide explains what changed.",
+    date: "May 9, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food & Drink",
+    image: "/images/blog/tsukiji-outer-market-entrance.webp",
+  },
+  {
+    slug: "toyosu-vs-tsukiji-outer",
+    title: "Toyosu vs Tsukiji Outer Market: Which to Visit in 2026?",
+    description:
+      "Toyosu (modern wholesale market with tuna auction) vs Tsukiji Outer Market (460+ retail stalls in 2026). A guide's comparison with hours, costs, and a same-morning combo.",
+    date: "May 9, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Food & Drink",
+    image: "/images/blog/tsukiji-fresh-tuna-display.webp",
+  },
+  {
     slug: "tsukiji-to-ginza-food-walk",
     title: "Tsukiji to Ginza: The Food Walk Tokyo Locals Do on Their Day Off",
     description:

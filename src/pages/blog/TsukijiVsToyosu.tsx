@@ -468,7 +468,7 @@ const TsukijiVsToyosu = () => {
                 <div>
                   <h3 className="text-foreground">Did Tsukiji Market close?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Only partially. The inner wholesale market (tuna auctions, wholesale vendors) moved to Toyosu in October 2018. But the outer market — with over 460 shops, restaurants, and food stalls — never closed. It remains one of Tokyo's best food destinations and is fully open in 2026. The outer market is the part that most tourists visited and enjoyed, and it's still exactly where it's always been.
+                    Only partially. The inner wholesale market (tuna auctions, wholesale vendors) moved to Toyosu in October 2018. But the outer market — with over 460 shops, restaurants, and food stalls — never closed. It remains one of Tokyo's best food destinations and is fully open in 2026. For the full breakdown of what moved versus what stayed, see my <Link to="/blog/tsukiji-outer-vs-inner-market" className="text-accent hover:underline">Tsukiji Outer vs Inner Market guide</Link>. For a 2026-specific decision focused only on what's open today, see <Link to="/blog/toyosu-vs-tsukiji-outer" className="text-accent hover:underline">Toyosu vs Tsukiji Outer Market</Link>.
                   </p>
                 </div>
                 <div>

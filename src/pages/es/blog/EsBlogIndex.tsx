@@ -344,6 +344,36 @@ const blogPosts: BlogPost[] = [
     category: "Gastronomía Japonesa",
     image: "/images/tours/food-tour-tsukiji.webp",
   },
+  {
+    slug: "toyosu-vs-ueno-mercado-pescado",
+    title: "Toyosu vs Mercado de Ueno: ¿Qué Mercado de Pescado de Tokio Visitar?",
+    description:
+      "Toyosu (mercado mayorista real con subasta de atún) vs Ameyoko en Ueno (calle abierta con puestos de marisco e izakayas). Un guía con licencia compara ambos.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/toyosu-senkyaku-banrai.webp",
+  },
+  {
+    slug: "tsukiji-mercado-exterior-vs-interior",
+    title: "Mercado Exterior vs Interior de Tsukiji: ¿Cuál Es la Diferencia?",
+    description:
+      "El mercado interior se trasladó a Toyosu en octubre de 2018; el exterior con 460+ puestos sigue en Tsukiji. Un guía con licencia explica qué cambió.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-outer-market-entrance.webp",
+  },
+  {
+    slug: "toyosu-vs-tsukiji-exterior",
+    title: "Mercado de Toyosu vs Mercado Exterior de Tsukiji: ¿Cuál Visitar en 2026?",
+    description:
+      "Toyosu (mayorista moderno con subasta de atún) vs Mercado Exterior de Tsukiji (460+ puestos en 2026). Comparativa con horarios, precios y plan de mañana combinada.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-fresh-tuna-display.webp",
+  },
 ];
 
 // Orden = etapa del embudo. Decisión primero (mayor CV según inventario),

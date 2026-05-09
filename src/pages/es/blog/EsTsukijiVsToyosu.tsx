@@ -350,7 +350,7 @@ const EsTsukijiVsToyosu = () => {
                 <div>
                   <h3>¿El mercado de Tsukiji está cerrado?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Solo parcialmente. El mercado mayorista interior (subastas de atún, vendedores al por mayor) se trasladó a Toyosu en octubre de 2018. Pero el mercado exterior — con más de 460 tiendas, restaurantes y puestos de comida — nunca cerró. Sigue siendo uno de los mejores destinos gastronómicos de Tokio y está completamente abierto en 2026. El mercado exterior es la parte que la mayoría de los turistas visitaban y disfrutaban, y sigue exactamente donde siempre estuvo.
+                    Solo parcialmente. El mercado mayorista interior (subastas de atún, vendedores al por mayor) se trasladó a Toyosu en octubre de 2018. Pero el mercado exterior — con más de 460 tiendas, restaurantes y puestos de comida — nunca cerró. Sigue siendo uno de los mejores destinos gastronómicos de Tokio y está completamente abierto en 2026. Para el desglose completo de qué se mudó y qué se quedó, mira mi guía <Link to="/es/blog/tsukiji-mercado-exterior-vs-interior" className="text-accent hover:underline">Mercado Exterior vs Interior de Tsukiji</Link>. Para una decisión específica de 2026 entre lo que está abierto hoy, mira <Link to="/es/blog/toyosu-vs-tsukiji-exterior" className="text-accent hover:underline">Toyosu vs Tsukiji Exterior</Link>.
                   </p>
                 </div>
                 <div>

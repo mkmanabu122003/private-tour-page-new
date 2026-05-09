@@ -68,6 +68,9 @@ const routes = [
   "/blog/harajuku-vs-shibuya-vs-shinjuku",
   "/blog/narita-vs-haneda",
   "/blog/onsen-day-trips-beyond-hakone",
+  "/blog/toyosu-vs-ueno-fish-market",
+  "/blog/tsukiji-outer-vs-inner-market",
+  "/blog/toyosu-vs-tsukiji-outer",
   // Spanish pages
   "/es",
   "/es/tours",
@@ -132,6 +135,9 @@ const routes = [
   "/es/blog/que-esperar-tour-privado-tokio",
   "/es/blog/guia-asakusa-completa",
   "/es/blog/guia-izakayas-tokio",
+  "/es/blog/toyosu-vs-ueno-mercado-pescado",
+  "/es/blog/tsukiji-mercado-exterior-vs-interior",
+  "/es/blog/toyosu-vs-tsukiji-exterior",
 ];
 
 async function prerender() {

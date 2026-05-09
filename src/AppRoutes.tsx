@@ -56,6 +56,9 @@ import MountFujiFromTokyo from "./pages/blog/MountFujiFromTokyo";
 import HarajukuVsShibuyaVsShinjuku from "./pages/blog/HarajukuVsShibuyaVsShinjuku";
 import NaritaVsHaneda from "./pages/blog/NaritaVsHaneda";
 import OnsenDayTripsBeyondHakone from "./pages/blog/OnsenDayTripsBeyondHakone";
+import ToyosuVsUenoFishMarket from "./pages/blog/ToyosuVsUenoFishMarket";
+import TsukijiOuterVsInnerMarket from "./pages/blog/TsukijiOuterVsInnerMarket";
+import ToyosuVsTsukijiOuter from "./pages/blog/ToyosuVsTsukijiOuter";
 import CancellationPolicy from "./pages/CancellationPolicy";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
@@ -121,6 +124,9 @@ import EsTokioConPresupuesto from "./pages/es/blog/EsTokioConPresupuesto";
 import EsQueEsperarTourPrivado from "./pages/es/blog/EsQueEsperarTourPrivado";
 import EsGuiaAsakusaNueva from "./pages/es/blog/EsGuiaAsakusaNueva";
 import EsGuiaIzakayasTokio from "./pages/es/blog/EsGuiaIzakayasTokio";
+import EsToyosuVsUenoMercadoPescado from "./pages/es/blog/EsToyosuVsUenoMercadoPescado";
+import EsTsukijiExteriorVsInterior from "./pages/es/blog/EsTsukijiExteriorVsInterior";
+import EsToyosuVsTsukijiExterior from "./pages/es/blog/EsToyosuVsTsukijiExterior";
 import EsCancellationPolicy from "./pages/es/EsCancellationPolicy";
 
 const queryClient = new QueryClient();
@@ -184,6 +190,9 @@ const AppRoutes = () => (
         <Route path="/blog/harajuku-vs-shibuya-vs-shinjuku" element={<HarajukuVsShibuyaVsShinjuku />} />
         <Route path="/blog/narita-vs-haneda" element={<NaritaVsHaneda />} />
         <Route path="/blog/onsen-day-trips-beyond-hakone" element={<OnsenDayTripsBeyondHakone />} />
+        <Route path="/blog/toyosu-vs-ueno-fish-market" element={<ToyosuVsUenoFishMarket />} />
+        <Route path="/blog/tsukiji-outer-vs-inner-market" element={<TsukijiOuterVsInnerMarket />} />
+        <Route path="/blog/toyosu-vs-tsukiji-outer" element={<ToyosuVsTsukijiOuter />} />
         <Route path="/cancellation-policy" element={<CancellationPolicy />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
@@ -250,6 +259,9 @@ const AppRoutes = () => (
         <Route path="/es/blog/que-esperar-tour-privado-tokio" element={<EsQueEsperarTourPrivado />} />
         <Route path="/es/blog/guia-asakusa-completa" element={<EsGuiaAsakusaNueva />} />
         <Route path="/es/blog/guia-izakayas-tokio" element={<EsGuiaIzakayasTokio />} />
+        <Route path="/es/blog/toyosu-vs-ueno-mercado-pescado" element={<EsToyosuVsUenoMercadoPescado />} />
+        <Route path="/es/blog/tsukiji-mercado-exterior-vs-interior" element={<EsTsukijiExteriorVsInterior />} />
+        <Route path="/es/blog/toyosu-vs-tsukiji-exterior" element={<EsToyosuVsTsukijiExterior />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

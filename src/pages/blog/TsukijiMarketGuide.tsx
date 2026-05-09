@@ -519,7 +519,7 @@ const TsukijiMarketGuide = () => {
               <Link to="/blog/tsukiji-vs-toyosu" className="text-accent hover:underline font-medium">
                 Tsukiji vs Toyosu: Which Tokyo Fish Market Should You Visit?
               </Link>{" "}
-              — with a comparison table covering hours, access, food options, and the Toyosu tuna-auction lottery.
+              — with a comparison table covering hours, access, food options, and the Toyosu tuna-auction lottery. For the cleaner 2026-specific framing (Outer Market vs Toyosu only, ignoring the closed Inner Market), see <Link to="/blog/toyosu-vs-tsukiji-outer" className="text-accent hover:underline font-medium">Toyosu vs Tsukiji Outer Market</Link>. For the full Outer-vs-Inner explainer, see <Link to="/blog/tsukiji-outer-vs-inner-market" className="text-accent hover:underline font-medium">Tsukiji Outer vs Inner Market</Link>.
             </p>
 
             {/* CTA */}
