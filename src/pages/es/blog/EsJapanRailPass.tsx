@@ -14,7 +14,7 @@ const EsJapanRailPass = () => {
     <Layout>
       <SEO
         title="¿Vale la Pena el JR Pass en 2026? Comparativa Ruta por Ruta"
-        description="Tras la subida del 70%, el JR Pass solo compensa en rutas concretas. Comparativa real de tarifas Tokyo-Kyoto, Tokyo-Osaka y pases regionales que salen mejor. Actualizado abril 2026."
+        description="¿Vale la pena el JR Pass en 2026? Subida de octubre, precios web oficial vs agencias y cálculos ruta por ruta. Actualizado mayo 2026."
         canonicalPath="/es/blog/japan-rail-pass-vale-la-pena"
         hreflang={[
           { lang: "es", path: "/es/blog/japan-rail-pass-vale-la-pena" },
@@ -42,11 +42,12 @@ const EsJapanRailPass = () => {
             <BlogArticleToc items={[
           { num: "01", label: "Por qué la mayoría de los…", href: "#section-01-por-qué-la-mayoría-de-los-viajeros-se" },
           { num: "02", label: "Cuánto cuesta el Japan Rail…", href: "#section-02-cuánto-cuesta-el-japan-rail-pass-en-2026" },
-          { num: "03", label: "Para quién SÍ vale la pena", href: "#section-03-para-quién-sí-vale-la-pena" },
-          { num: "04", label: "Para quién NO vale la pena", href: "#section-04-para-quién-no-vale-la-pena" },
-          { num: "05", label: "Alternativas al JR Pass que…", href: "#section-05-alternativas-al-jr-pass-que-casi-nadie-conoce" },
-          { num: "06", label: "FAQ", href: "#section-06-faq" },
-          { num: "07", label: "Explora Tokio con un Guía…", href: "#section-07-explora-tokio-con-un-guía-local" }
+          { num: "03", label: "Aumento de Precio Octubre 2026", href: "#section-03-aumento-de-precio-octubre-2026" },
+          { num: "04", label: "Para quién SÍ vale la pena", href: "#section-04-para-quién-sí-vale-la-pena" },
+          { num: "05", label: "Para quién NO vale la pena", href: "#section-05-para-quién-no-vale-la-pena" },
+          { num: "06", label: "Alternativas al JR Pass que…", href: "#section-06-alternativas-al-jr-pass-que-casi-nadie-conoce" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" },
+          { num: "08", label: "Explora Tokio con un Guía…", href: "#section-08-explora-tokio-con-un-guía-local" }
             ]} />
 
             <article>
@@ -64,7 +65,7 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Por qué la mayoría se equivoca */}
-            <div className="section-eyebrow"><span>Section 01 · Por qué la mayoría de los viajeros se</span></div>
+            <div className="section-eyebrow"><span>Sección 01 · Por qué la mayoría de los viajeros se</span></div>
             <h2 id="section-01-por-qué-la-mayoría-de-los-viajeros-se" className="scroll-mt-20">
               Por qué la mayoría de los viajeros se equivocan con el JR Pass
             </h2>
@@ -97,7 +98,7 @@ const EsJapanRailPass = () => {
             </figure>
 
             {/* Cuánto cuesta */}
-            <div className="section-eyebrow"><span>Section 02 · Cuánto cuesta el Japan Rail Pass en 2026</span></div>
+            <div className="section-eyebrow"><span>Sección 02 · Cuánto cuesta el Japan Rail Pass en 2026</span></div>
             <h2 id="section-02-cuánto-cuesta-el-japan-rail-pass-en-2026" className="scroll-mt-20">
               Cuánto cuesta el Japan Rail Pass en 2026
             </h2>
@@ -207,9 +208,83 @@ const EsJapanRailPass = () => {
               El impacto concreto: con el precio antiguo, un solo viaje de ida y vuelta Tokio–Kioto (27.700 yenes) casi amortizaba el pase de 7 días. Con el precio actual de 50.000 yenes, ese mismo viaje solo cubre el 55% del coste del pase. Ahora necesitas dos o más trayectos largos en shinkansen más desplazamientos locales en JR para salir ganando.
             </p>
 
+            {/* Aumento de Precio Octubre 2026 */}
+            <div className="section-eyebrow"><span>Sección 03 · Aumento de Precio Octubre 2026</span></div>
+            <h2 id="section-03-aumento-de-precio-octubre-2026" className="scroll-mt-20">
+              Aumento de Precio del JR Pass en Octubre de 2026: ¿Sigue Valiendo la Pena?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              JR Group anunció el <strong className="text-foreground">9 de abril de 2026</strong> una nueva subida del Japan Rail Pass que entrará en vigor el <strong className="text-foreground">1 de octubre de 2026</strong>. El aumento es de aproximadamente un 5-6%, mucho más moderado que el 69% de 2023, pero llega con un detalle clave que muchos blogs aún no han actualizado: <strong className="text-foreground">la subida solo afecta a las compras realizadas a través de agencias extranjeras</strong> (Klook, JRailPass.com, agencias de viaje, etc.). La web oficial japanrailpass.net mantendrá los precios actuales también después de octubre.
+            </p>
+
+            <h3>
+              Comparativa: precio actual vs nuevo precio (desde oct. 2026)
+            </h3>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full text-sm text-muted-foreground border-collapse">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Pase (adulto)</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Hasta sep. 2026</th>
+                    <th className="text-left py-3 pr-4 text-foreground font-medium">Desde oct. 2026 (agencias)</th>
+                    <th className="text-left py-3 text-foreground font-medium">Web oficial JR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">7 días Ordinario</td>
+                    <td className="py-3 pr-4">50.000 yen</td>
+                    <td className="py-3 pr-4">53.000 yen (+6%)</td>
+                    <td className="py-3">50.000 yen (sin cambio)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14 días Ordinario</td>
+                    <td className="py-3 pr-4">80.000 yen</td>
+                    <td className="py-3 pr-4">84.000 yen (+5%)</td>
+                    <td className="py-3">80.000 yen (sin cambio)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">21 días Ordinario</td>
+                    <td className="py-3 pr-4">100.000 yen</td>
+                    <td className="py-3 pr-4">105.000 yen (+5%)</td>
+                    <td className="py-3">100.000 yen (sin cambio)</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4">7 días Green Car</td>
+                    <td className="py-3 pr-4">70.000 yen</td>
+                    <td className="py-3 pr-4">74.000 yen (+5,7%)</td>
+                    <td className="py-3">70.000 yen (sin cambio)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Fuente: comunicado oficial de JR Group del 9 de abril de 2026 y la <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">página oficial de tarifas del Japan Rail Pass</a>.
+            </p>
+
+            <h3>
+              La trampa de las agencias: cómo evitar pagar de más
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si compras el pase a partir de octubre de 2026, asegúrate de hacerlo a través de la web oficial <a href="https://japanrailpass.net/en" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">japanrailpass.net</a> en lugar de en agencias intermediarias. El proceso es muy similar: compras online, recibes una orden de canje y la cambias por el pase físico al llegar a Japón en la oficina JR de Narita, Haneda, Estación de Tokio o Kioto. La diferencia: pagas hasta 3.000 yenes menos por el pase de 7 días, y 5.000 yenes menos por el de 21 días, simplemente eligiendo bien el canal de compra.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Aviso adicional: muchas guías y blogs publicados antes de mayo de 2026 todavía dicen que "no hay subidas previstas en 2026". Esa información quedó obsoleta tras el anuncio del 9 de abril. Verifica siempre la fuente y la fecha del artículo cuando consultes precios del JR Pass — el sector cambia rápido y no todos los sitios actualizan a tiempo.
+            </p>
+
+            <h3>
+              Punto de equilibrio recalculado para octubre 2026
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              ¿Cómo cambia la decisión "comprar o no comprar" tras la subida de octubre de 2026? Si compras en la web oficial JR, no cambia nada — los cálculos del resto del artículo siguen siendo válidos. Si compras vía agencia a 53.000 yenes, el margen se reduce ligeramente: el itinerario clásico Tokio-Kioto-Hiroshima-Osaka (50.140 yenes en billetes individuales) deja de cubrir por sí solo el coste del pase. Necesitas añadir al menos un trayecto adicional (excursión a Nara, ferry a Miyajima o tramos locales en Tokio) para volver a positivo.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              La conclusión práctica para 2026: la nueva subida no cambia para quién vale la pena el pase, sino que <strong className="text-foreground">refuerza la importancia de comprar directamente en la web oficial</strong>. Y si haces los cálculos, sigue siendo rentable solo en itinerarios multi-ciudad con shinkansen — exactamente igual que antes del aumento.
+            </p>
+
             {/* Para quién SÍ vale la pena */}
-            <div className="section-eyebrow"><span>Section 03 · Para quién SÍ vale la pena</span></div>
-            <h2 id="section-03-para-quién-sí-vale-la-pena" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 04 · Para quién SÍ vale la pena</span></div>
+            <h2 id="section-04-para-quién-sí-vale-la-pena" className="scroll-mt-20">
               Para quién SÍ vale la pena (con cálculos reales)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -312,8 +387,8 @@ const EsJapanRailPass = () => {
             <InlineCTAEs />
 
             {/* Para quién NO vale la pena */}
-            <div className="section-eyebrow"><span>Section 04 · Para quién NO vale la pena</span></div>
-            <h2 id="section-04-para-quién-no-vale-la-pena" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 05 · Para quién NO vale la pena</span></div>
+            <h2 id="section-05-para-quién-no-vale-la-pena" className="scroll-mt-20">
               Para quién NO vale la pena
             </h2>
 
@@ -346,8 +421,8 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Alternativas */}
-            <div className="section-eyebrow"><span>Section 05 · Alternativas al JR Pass que casi nadie conoce</span></div>
-            <h2 id="section-05-alternativas-al-jr-pass-que-casi-nadie-conoce" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 06 · Alternativas al JR Pass que casi nadie conoce</span></div>
+            <h2 id="section-06-alternativas-al-jr-pass-que-casi-nadie-conoce" className="scroll-mt-20">
               Alternativas al JR Pass que casi nadie conoce
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -389,8 +464,8 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* FAQ */}
-            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
-            <h2 id="section-06-faq" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 07 · FAQ</span></div>
+            <h2 id="section-07-faq" className="scroll-mt-20">
               Preguntas frecuentes sobre el Japan Rail Pass
             </h2>
 
@@ -446,7 +521,7 @@ const EsJapanRailPass = () => {
                   ¿Ha vuelto a subir el precio del JR Pass en 2026?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  No. A marzo de 2026, los precios del Japan Rail Pass siguen siendo los mismos que se establecieron en octubre de 2023. El último aumento fue ese 69% de 2023 — de 29.650 a 50.000 yenes para el pase ordinario de 7 días. No hay ningún incremento oficial anunciado para 2026. Te recomiendo revisar la web oficial del JR Pass antes de comprar para confirmar los precios más recientes.
+                  Sí, parcialmente. JR Group anunció el 9 de abril de 2026 una subida del 5-6% efectiva desde el <strong className="text-foreground">1 de octubre de 2026</strong>, pero <strong className="text-foreground">solo para compras a través de agencias extranjeras</strong>. El pase de 7 días Ordinario pasa de ¥50.000 a ¥53.000 vía agencias; el de 14 días, de ¥80.000 a ¥84.000; el de 21 días, de ¥100.000 a ¥105.000. La <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">web oficial japanrailpass.net</a> mantiene el precio antiguo de ¥50.000 también después de octubre de 2026. Si compras directamente en la web oficial JR, sigues pagando el mismo precio antes y después de la fecha de la subida.
                 </p>
               </div>
               <div>
@@ -473,8 +548,8 @@ const EsJapanRailPass = () => {
             </p>
 
             {/* Explorar Tokio con guía */}
-            <div className="section-eyebrow"><span>Section 07 · Explora Tokio con un Guía Local</span></div>
-            <h2 id="section-07-explora-tokio-con-un-guía-local" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 08 · Explora Tokio con un Guía Local</span></div>
+            <h2 id="section-08-explora-tokio-con-un-guía-local" className="scroll-mt-20">
               Explora Tokio con un Guía Local
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -532,7 +607,7 @@ const EsJapanRailPass = () => {
               "name": "Manabu",
             },
             "datePublished": "2026-03-07",
-            "dateModified": "2026-03-14",
+            "dateModified": "2026-05-09",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
