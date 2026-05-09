@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import imperialPalace from "@/assets/imperial-palace.webp";
 import imperialBridge from "@/assets/imperial-bridge.webp";
@@ -208,6 +209,9 @@ const EsImperialPalace = () => {
           </p>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparisonEs tourPrice={40000} tourName="Tour del Palacio Imperial y Marunouchi" />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">

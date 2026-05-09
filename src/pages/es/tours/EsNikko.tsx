@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import nikkoToshogu from "@/assets/nikko-toshogu.webp";
 
@@ -317,6 +318,9 @@ const EsNikko = () => {
           </p>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparisonEs tourPrice={80000} tourName="Excursión Privada a Nikko" />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">

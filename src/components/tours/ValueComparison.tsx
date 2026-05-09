@@ -78,11 +78,15 @@ export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) =
           <div className="space-y-0">
             {[1, 2, 3, 4, 5, 6].map((n) => {
               const widthPct = (1 / n) * 100;
+              const isHighlighted = n >= 4;
               const isBestValue = n === 6;
               return (
                 <div
                   key={n}
-                  className="grid grid-cols-[80px_1fr_120px] sm:grid-cols-[100px_1fr_130px] items-center gap-3 sm:gap-4 py-3 border-b border-border/40 last:border-b-0"
+                  className={
+                    "grid grid-cols-[80px_1fr_120px] sm:grid-cols-[100px_1fr_130px] items-center gap-3 sm:gap-4 py-3 px-2 -mx-2 rounded-md border-b border-border/40 last:border-b-0 " +
+                    (isHighlighted ? "bg-accent/5" : "")
+                  }
                 >
                   <div className="text-sm text-foreground flex items-baseline gap-1.5 flex-wrap">
                     <span className="font-serif text-xl md:text-2xl text-foreground leading-none font-semibold">{n}</span>
@@ -90,20 +94,20 @@ export const ValueComparison = ({ tourPrice, tourName }: ValueComparisonProps) =
                   </div>
                   <div className="h-2 bg-foreground/[0.06] rounded-full relative overflow-hidden">
                     <div
-                      className="h-full bg-foreground/30 rounded-full"
+                      className={"h-full rounded-full " + (isHighlighted ? "bg-accent" : "bg-foreground/30")}
                       style={{ width: `${widthPct}%` }}
                       aria-hidden="true"
                     />
                   </div>
                   <div className="text-right">
-                    <p className="font-serif text-lg md:text-xl font-semibold leading-none text-foreground">
+                    <p className={"font-serif text-lg md:text-xl font-semibold leading-none " + (isHighlighted ? "text-accent" : "text-foreground")}>
                       {perPerson(n)}
                     </p>
                     <p className="text-[10px] uppercase tracking-[0.14em] font-bold text-muted-foreground/80 mt-0.5">
                       per person
                     </p>
                     {isBestValue && (
-                      <span className="inline-block mt-1 text-[9px] font-bold uppercase tracking-[0.14em] text-accent border border-accent/40 px-1.5 py-0.5 rounded">
+                      <span className="inline-block mt-1 text-[9px] font-bold uppercase tracking-[0.14em] text-accent-foreground bg-accent px-1.5 py-0.5 rounded">
                         Best value
                       </span>
                     )}
@@ -208,12 +212,12 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
     <section className="py-16 bg-secondary/30">
       <div className="container-section">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="text-label text-accent mb-3">Por Que Privado?</p>
+          <p className="text-label text-accent mb-3">¿Por Qué Privado?</p>
           <h2 className="heading-section text-foreground">
-            Vale la Pena un Tour Privado?
+            ¿Vale la Pena un Tour Privado?
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Un tour privado no es solo un grupo mas pequeno — es una experiencia completamente diferente.
+            Un tour privado no es solo un grupo más pequeño — es una experiencia completamente diferente.
           </p>
         </div>
 
@@ -242,11 +246,15 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
           <div className="space-y-0">
             {[1, 2, 3, 4, 5, 6].map((n) => {
               const widthPct = (1 / n) * 100;
+              const isHighlighted = n >= 4;
               const isBestValue = n === 6;
               return (
                 <div
                   key={n}
-                  className="grid grid-cols-[80px_1fr_120px] sm:grid-cols-[100px_1fr_130px] items-center gap-3 sm:gap-4 py-3 border-b border-border/40 last:border-b-0"
+                  className={
+                    "grid grid-cols-[80px_1fr_120px] sm:grid-cols-[100px_1fr_130px] items-center gap-3 sm:gap-4 py-3 px-2 -mx-2 rounded-md border-b border-border/40 last:border-b-0 " +
+                    (isHighlighted ? "bg-accent/5" : "")
+                  }
                 >
                   <div className="text-sm text-foreground flex items-baseline gap-1.5 flex-wrap">
                     <span className="font-serif text-xl md:text-2xl text-foreground leading-none font-semibold">{n}</span>
@@ -254,20 +262,20 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
                   </div>
                   <div className="h-2 bg-foreground/[0.06] rounded-full relative overflow-hidden">
                     <div
-                      className="h-full bg-foreground/30 rounded-full"
+                      className={"h-full rounded-full " + (isHighlighted ? "bg-accent" : "bg-foreground/30")}
                       style={{ width: `${widthPct}%` }}
                       aria-hidden="true"
                     />
                   </div>
                   <div className="text-right">
-                    <p className="font-serif text-lg md:text-xl font-semibold leading-none text-foreground">
+                    <p className={"font-serif text-lg md:text-xl font-semibold leading-none " + (isHighlighted ? "text-accent" : "text-foreground")}>
                       {perPerson(n)}
                     </p>
                     <p className="text-[10px] uppercase tracking-[0.14em] font-bold text-muted-foreground/80 mt-0.5">
                       por persona
                     </p>
                     {isBestValue && (
-                      <span className="inline-block mt-1 text-[9px] font-bold uppercase tracking-[0.14em] text-accent border border-accent/40 px-1.5 py-0.5 rounded">
+                      <span className="inline-block mt-1 text-[9px] font-bold uppercase tracking-[0.14em] text-accent-foreground bg-accent px-1.5 py-0.5 rounded">
                         Mejor valor
                       </span>
                     )}
@@ -277,7 +285,7 @@ export const ValueComparisonEs = ({ tourPrice, tourName }: ValueComparisonProps)
             })}
           </div>
           <p className="text-center text-xs text-muted-foreground mt-6 pt-5 border-t border-border">
-            <span className="font-semibold text-foreground">Consejo:</span> La mayoría viaja con 2–4 personas. Compartirlo con amigos o familia lo hace casi al mismo precio que un tour público — pero privado.
+            <span className="font-semibold text-foreground">Consejo:</span> La mayoría viaja con 2–4 personas. Compartirlo con amigos o familia lo deja casi al mismo precio que un tour público — pero privado.
           </p>
         </div>
       </div>

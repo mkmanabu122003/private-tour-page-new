@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.webp";
 import tourYanaka from "@/assets/tour-yanaka.webp";
@@ -220,6 +221,9 @@ const EsYanaka = () => {
           </p>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparisonEs tourPrice={50000} tourName="Descubrimiento de Ueno y Yanaka" />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">

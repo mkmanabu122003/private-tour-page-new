@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
 const EsShibuyaHarajuku = () => {
@@ -264,6 +265,9 @@ const EsShibuyaHarajuku = () => {
           </p>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparisonEs tourPrice={50000} tourName="Tour Privado por Shibuya y Harajuku" />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">

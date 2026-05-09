@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight } from "lucide-react
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import hamarikyu from "@/assets/hamarikyu.webp";
 
@@ -247,6 +248,9 @@ const EsCustom = () => {
           </p>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparisonEs tourPrice={45000} tourName="Tour Privado Personalizado" />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">

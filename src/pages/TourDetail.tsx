@@ -72,7 +72,7 @@ const tourSchemaData: Record<string, { name: string; area: string; price: string
   "shibuya-harajuku": { name: "Shibuya & Harajuku Private Walking Tour", area: "Shibuya & Harajuku", price: "50000" },
   "tsukiji-ginza": { name: "Tsukiji & Ginza Private Walking Tour", area: "Tsukiji & Ginza", price: "45000" },
   "imperial-palace": { name: "Imperial Palace Private Walking Tour", area: "Imperial Palace & Marunouchi", price: "40000" },
-  custom: { name: "Custom Private Tokyo Tour", area: "Tokyo", price: "10000" },
+  custom: { name: "Custom Private Tokyo Tour", area: "Tokyo", price: "45000" },
   "kamakura-day-trip": { name: "Kamakura Day Trip from Tokyo", area: "Kamakura", price: "70000" },
   "hakone-day-trip": { name: "Hakone Day Trip from Tokyo", area: "Hakone", price: "70000" },
   "nikko-day-trip": { name: "Nikko Day Trip from Tokyo", area: "Nikko", price: "80000" },

@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
 const EsHakone = () => {
@@ -323,6 +324,9 @@ const EsHakone = () => {
           </p>
         </div>
       </section>
+
+      {/* Value Comparison */}
+      <ValueComparisonEs tourPrice={70000} tourName="Excursión Privada a Hakone" />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
