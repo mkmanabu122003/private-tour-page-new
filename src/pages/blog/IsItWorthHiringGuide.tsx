@@ -54,10 +54,10 @@ const IsItWorthHiringGuide = () => {
               Let me be honest upfront: Tokyo is one of the safest, most well-organized cities in the world. Signs are increasingly in English, Google Maps works perfectly, and you can absolutely explore on your own and have an amazing time.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              So why would you hire a private tour guide?
+              So why would you hire a tour guide in Tokyo at all? Is hiring an English-speaking guide actually necessary, or just a nice-to-have?
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Having guided over 500 tours in Tokyo, I've seen the moments where a guide makes a real difference, and the moments where travelers are perfectly fine on their own. This isn't a sales pitch. It's an honest breakdown from someone who has seen both sides, so you can make the right decision for your trip.
+              Having guided over 500 tours in Tokyo, I've seen exactly when it's worth hiring a tour guide and when travelers are perfectly fine on their own. This isn't a sales pitch. It's an honest breakdown from someone who has seen both sides, so you can make the right decision for your trip.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               I believe that the best travel decisions come from honest information, not pressure. If you read this article and decide you don't need a guide, that's a perfectly valid choice. Tokyo will still be amazing.
@@ -223,7 +223,7 @@ const IsItWorthHiringGuide = () => {
               How Much Does a Private Guide Cost in Tokyo?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Private walking tours in Tokyo typically range from ¥40,000 to ¥50,000 per group for a half-day experience (2.5 to 4 hours). This is a per-group price, not per-person, so the value increases significantly with larger groups. For a family of four booking a ¥45,000 tour, it works out to about ¥11,250 per person.
+              If you're researching the private guide cost in Tokyo, here's the straight answer. Private walking tours typically range from ¥40,000 to ¥50,000 per group for a half-day experience (2.5 to 4 hours). This is a per-group price, not per-person, so the value increases significantly with larger groups. For a family of four booking a ¥45,000 tour, it works out to about ¥11,250 per person.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Day trips to{" "}
@@ -268,6 +268,22 @@ const IsItWorthHiringGuide = () => {
             </p>
 
             <h3>
+              Private Tour vs Group Tour in Tokyo: Which Format Should You Choose?
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Before deciding which platform to use, decide on the format. The choice between a private vs group tour in Tokyo shapes everything: pace, cost per person, depth of conversation, and how much the route can flex around your interests.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A private tour means the guide is yours alone — you, your family, or your travel companions, and no one else. A group tour means joining 6 to 20 strangers on a fixed itinerary and a fixed pace, with the cost split across the group.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              For solo travelers on a tight budget, group tours usually win on raw cost: ¥8,000–¥15,000 per person versus ¥40,000+ for a private half-day. But for couples and families of two to six, the math reverses fast — a ¥45,000 private half-day works out to ¥7,500 per person at four people, often cheaper than the per-person group rate, with a fully customizable itinerary on top.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Format also matters for kids, allergies, mobility needs, photography priorities, and any interest that doesn't fit a fixed script. If you'd otherwise be silently thinking "can we just stay here a bit longer?" on a group tour, a private tour is the right call.
+            </p>
+
+            <h3>
               What Each Platform Actually Is
             </h3>
             <ul className="space-y-4 mb-8">
@@ -303,7 +319,7 @@ const IsItWorthHiringGuide = () => {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Licensing differences are covered in the next section. Briefly: Japan has roughly 27,000 nationally registered licensed guide-interpreters (the 全国通訳案内士 qualification administered by the Japan Tourism Agency), and platforms don't require this credential.
+              Licensing differences are covered in the next section. Briefly: Japan has 27,950 nationally registered licensed guide-interpreters as of April 2025 (the 全国通訳案内士 qualification administered by the Japan Tourism Agency), and platforms don't require this credential.
             </p>
 
             <h3>
@@ -398,7 +414,7 @@ const IsItWorthHiringGuide = () => {
                 <strong className="text-foreground">Depth of knowledge:</strong> Licensed guides can answer unexpected questions about history, religion, politics, and culture with nuance and accuracy. On my tours, guests frequently go off-script with questions like "Why does this shrine have a star symbol?" or "What did ordinary people eat during the Edo period?", and I can give detailed, informed answers because the license preparation covers these topics extensively.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Language ability:</strong> The license requires proven proficiency in a foreign language. You won't encounter communication barriers or awkward misunderstandings that can derail the experience.
+                <strong className="text-foreground">Language ability:</strong> The license requires proven proficiency in a foreign language. For most foreign visitors that means working with an English-speaking tour guide whose fluency has been formally tested rather than self-reported. You won't encounter communication barriers or awkward misunderstandings that can derail the experience.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Professionalism and accountability:</strong> Licensed guides are registered with the Japan Tourism Agency and are held to professional standards. This creates a level of accountability that doesn't exist with informal or platform-based guides.
@@ -508,10 +524,34 @@ const IsItWorthHiringGuide = () => {
               <div className="faq-block space-y-8">
                 <div>
                   <h3>
-                    How much does a private tour guide cost in Tokyo?
+                    How much does it cost to hire a private tour guide in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Private walking tours in Tokyo typically cost ¥40,000–¥50,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips to destinations like Kamakura or Hakone range from ¥70,000–¥80,000. These are per-group prices, not per-person, so a family of four pays the same as a couple. Custom tours are available from ¥10,000~ per hour for maximum flexibility.
+                    Private walking tours in Tokyo typically cost ¥40,000–¥50,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips to destinations like Kamakura or Hakone range from ¥70,000–¥80,000. These are per-group prices, not per-person, so hiring a private guide for a family of four costs the same as a couple. Custom tours are available from ¥10,000~ per hour for maximum flexibility.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    Are English-speaking tour guides available in Tokyo?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes. English-speaking tour guides are widely available in Tokyo, especially through the National Government Licensed Guide Interpreter (全国通訳案内士) registry, where English is by far the most common foreign language. The license itself requires demonstrated English proficiency before certification — you're not relying on self-reported fluency. As of April 2025, 27,950 licensed guide-interpreters were registered nationally, with the majority working in English.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    Is it cheaper to hire a private guide or join a group tour in Tokyo?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    It depends on group size. For solo travelers, joining a small-group walking tour at ¥8,000–¥15,000 per person is almost always cheaper than a private tour. For couples and families of two to six, hiring a private guide usually works out cheaper per person — a ¥45,000 half-day private tour comes to ¥7,500 per person at four people, often less than four group-tour tickets — and you get a fully customizable itinerary on top.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    Do I need to hire a tour guide for my Tokyo trip?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Not necessarily. Tokyo is one of the safest, most signage-friendly major cities in the world, and you can absolutely explore it on your own. A guide adds the most value on first visits when you want depth (not just selfies), on day trips with complex multi-operator transport (Hakone, Nikko), for families with kids who need pace flexibility, and for travelers with allergies, accessibility needs, or specific interests that don't fit a templated route.
                   </p>
                 </div>
                 <div>
@@ -590,10 +630,34 @@ const IsItWorthHiringGuide = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How much does a private tour guide cost in Tokyo?",
+                "name": "How much does it cost to hire a private tour guide in Tokyo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Private walking tours in Tokyo typically cost ¥40,000–¥50,000 per group for a half-day experience (2.5–4 hours). Full-day tours and day trips range from ¥70,000–¥80,000. These are per-group prices, not per-person. Custom tours are available from ¥10,000~ per hour.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Are English-speaking tour guides available in Tokyo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. English-speaking tour guides are widely available in Tokyo, especially through the National Government Licensed Guide Interpreter (全国通訳案内士) registry, where English is by far the most common foreign language. The license itself requires demonstrated English proficiency before certification. As of April 2025, 27,950 licensed guide-interpreters were registered nationally, with the majority working in English.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Is it cheaper to hire a private guide or join a group tour in Tokyo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends on group size. For solo travelers, joining a small-group walking tour at ¥8,000–¥15,000 per person is almost always cheaper than a private tour. For couples and families of two to six, hiring a private guide usually works out cheaper per person — a ¥45,000 half-day private tour comes to ¥7,500 per person at four people, often less than four group-tour tickets.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to hire a tour guide for my Tokyo trip?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not necessarily. Tokyo is one of the safest, most signage-friendly major cities in the world, and you can absolutely explore it on your own. A guide adds the most value on first visits when you want depth, on day trips with complex multi-operator transport (Hakone, Nikko), for families with kids, and for travelers with allergies, accessibility needs, or specific interests that don't fit a templated route.",
                 },
               },
               {

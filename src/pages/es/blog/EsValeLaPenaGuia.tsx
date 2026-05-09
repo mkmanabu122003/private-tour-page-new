@@ -61,10 +61,10 @@ const EsValeLaPenaGuia = () => {
               Seré honesto desde el principio: Tokio es una de las ciudades más seguras y mejor organizadas del mundo. Los carteles están cada vez más en inglés, Google Maps funciona perfectamente y puedes explorar por tu cuenta y pasarlo increíblemente bien.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Entonces, ¿por qué contratarías un guía turístico privado?
+              Entonces, ¿por qué contratarías un guía turístico en Tokio? ¿Realmente merece la pena contratar un guía privado, o es solo un lujo?
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Después de haber guiado más de 500 tours en Tokio, he visto los momentos en los que un guía marca una diferencia real, y los momentos en los que los viajeros están perfectamente bien por su cuenta. Esto no es un discurso de ventas. Es un análisis honesto de alguien que ha visto ambos lados, para que puedas tomar la decisión correcta para tu viaje.
+              Después de haber guiado más de 500 tours en Tokio, he visto exactamente cuándo merece la pena contratar un guía y cuándo los viajeros están perfectamente bien por su cuenta. Esto no es un discurso de ventas. Es un análisis honesto de alguien que ha visto ambos lados, para que puedas tomar la decisión correcta para tu viaje.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Creo que las mejores decisiones de viaje surgen de información honesta, no de presión. Si lees este artículo y decides que no necesitas un guía, es una elección perfectamente válida. Tokio seguirá siendo increíble.
@@ -227,7 +227,7 @@ const EsValeLaPenaGuia = () => {
               ¿Cuánto Cuesta un Guía Privado en Tokio?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Los tours privados a pie en Tokio suelen costar entre ¥25.000 y ¥40.000 por grupo para una experiencia de medio día (2,5 a 4 horas). Este es un precio por grupo, no por persona, por lo que el valor aumenta significativamente con grupos más grandes. Para una familia de cuatro, sale a unos ¥7.500-10.000 por persona.
+              Si te preguntas el coste de un guía privado en Tokio, esta es la respuesta franca. Los tours privados a pie suelen costar entre ¥25.000 y ¥40.000 por grupo para una experiencia de medio día (2,5 a 4 horas). Este es un precio por grupo, no por persona, por lo que el valor aumenta significativamente con grupos más grandes. Para una familia de cuatro, sale a unos ¥7.500-10.000 por persona.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Las excursiones de un día a{" "}
@@ -272,6 +272,22 @@ const EsValeLaPenaGuia = () => {
             </p>
 
             <h3>
+              Tour Privado vs Tour Grupal en Tokio: ¿Qué Formato Elegir?
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Antes de decidir qué plataforma usar, decide el formato. La elección entre un tour privado vs tour grupal en Tokio determina todo: el ritmo, el coste por persona, la profundidad de la conversación y cuánto puede adaptarse la ruta a tus intereses.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Un tour privado significa que el guía es solo tuyo — para ti, tu familia o tus compañeros de viaje, y nadie más. Un tour grupal significa unirte a entre 6 y 20 desconocidos siguiendo un itinerario y un ritmo fijos, con el coste repartido entre todo el grupo.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para viajeros que viajan solos con presupuesto ajustado, los tours grupales suelen ganar en coste bruto: ¥8.000-¥15.000 por persona frente a ¥25.000+ por un tour privado de medio día. Pero para parejas y familias de dos a seis personas, las cuentas cambian rápido — un tour privado de medio día por ¥30.000 sale a ¥7.500 por persona con cuatro viajeros, a menudo más barato que el equivalente por persona en un tour grupal, y con un itinerario totalmente personalizable encima.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              El formato también importa para niños, alergias, problemas de movilidad, paradas para fotos o cualquier interés que no encaje en un guion fijo. Si en un tour grupal te encontrarías pensando en silencio "¿podemos quedarnos un poco más aquí?", lo que necesitas es un tour privado.
+            </p>
+
+            <h3>
               Qué Es Realmente Cada Plataforma
             </h3>
             <ul className="space-y-4 mb-8">
@@ -307,7 +323,7 @@ const EsValeLaPenaGuia = () => {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Las diferencias de licencia se cubren en la siguiente sección. Brevemente: Japón cuenta con aproximadamente 27.000 guías intérpretes con licencia nacional registrados (la cualificación 全国通訳案内士 administrada por la Agencia de Turismo de Japón), y las plataformas no requieren esta credencial.
+              Las diferencias de licencia se cubren en la siguiente sección. Brevemente: Japón cuenta con 27.950 guías intérpretes con licencia nacional registrados a fecha de abril de 2025 (la cualificación 全国通訳案内士 administrada por la Agencia de Turismo de Japón), y las plataformas no requieren esta credencial.
             </p>
 
             <h3>
@@ -409,7 +425,7 @@ const EsValeLaPenaGuia = () => {
                 <strong className="text-foreground">Profundidad de conocimiento:</strong> Los guías con licencia pueden responder preguntas inesperadas sobre historia, religión, política y cultura con matiz y precisión. En mis tours, los invitados se salen constantemente del guion con preguntas como "¿Por qué este santuario tiene un símbolo de estrella?" o "¿Qué comía la gente corriente durante el período Edo?", y puedo dar respuestas detalladas e informadas porque la preparación para la licencia cubre estos temas en profundidad.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Dominio del idioma:</strong> La licencia exige un nivel demostrado de competencia en una lengua extranjera. No te encontrarás con barreras de comunicación ni malentendidos incómodos que puedan arruinar la experiencia.
+                <strong className="text-foreground">Dominio del idioma:</strong> La licencia exige un nivel demostrado de competencia en una lengua extranjera. Para la mayoría de visitantes extranjeros eso significa trabajar con un guía con fluidez verificada de forma oficial (en inglés y, cada vez más, también en español), no fluidez auto-declarada. No te encontrarás con barreras de comunicación ni malentendidos incómodos que puedan arruinar la experiencia.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Profesionalidad y responsabilidad:</strong> Los guías con licencia están registrados en la Agencia de Turismo de Japón y están sujetos a estándares profesionales. Esto crea un nivel de responsabilidad que no existe con guías informales o de plataformas online.
@@ -517,10 +533,34 @@ const EsValeLaPenaGuia = () => {
               <div className="faq-block space-y-8">
                 <div>
                   <h3>
-                    ¿Cuánto cuesta un guía turístico privado en Tokio?
+                    ¿Cuánto cuesta contratar un guía turístico privado en Tokio?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Los tours privados a pie en Tokio suelen costar entre ¥25.000 y ¥40.000 por grupo para una experiencia de medio día (2,5-4 horas). Los tours de día completo y las excursiones a destinos como Kamakura o Hakone oscilan entre ¥50.000 y ¥60.000. Son precios por grupo, no por persona, por lo que una familia de cuatro paga lo mismo que una pareja. También hay tours personalizados disponibles desde ¥10.000 por hora para máxima flexibilidad.
+                    Los tours privados a pie en Tokio suelen costar entre ¥25.000 y ¥40.000 por grupo para una experiencia de medio día (2,5-4 horas). Los tours de día completo y las excursiones a destinos como Kamakura o Hakone oscilan entre ¥50.000 y ¥60.000. Son precios por grupo, no por persona, por lo que contratar un guía privado para una familia de cuatro cuesta lo mismo que para una pareja. También hay tours personalizados disponibles desde ¥10.000 por hora para máxima flexibilidad.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Hay guías turísticos en español en Tokio?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Sí, aunque los guías hispanohablantes son menos comunes que los anglófonos. La licencia oficial de Guía Intérprete del Gobierno Nacional (全国通訳案内士) reconoce el español entre sus idiomas examinados, así que cuando reservas un guía con licencia en español, su nivel está verificado oficialmente, no es auto-declarado. A fecha de abril de 2025 había 27.950 guías intérpretes con licencia registrados a nivel nacional; la mayoría trabajan en inglés, pero el grupo de hispanohablantes con licencia está creciendo, especialmente en Tokio.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Es más barato contratar un guía privado o unirse a un tour grupal en Tokio?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Depende del tamaño del grupo. Para viajeros que viajan solos, unirse a un tour a pie en pequeño grupo a ¥8.000-¥15.000 por persona es casi siempre más barato que un tour privado. Para parejas y familias de dos a seis personas, contratar un guía privado suele salir más barato por persona — un tour privado de medio día de ¥30.000 sale a ¥7.500 por persona con cuatro viajeros, a menudo menos que cuatro entradas de tour grupal — y obtienes un itinerario totalmente personalizable encima.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Necesito contratar un guía turístico para mi viaje a Tokio?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No necesariamente. Tokio es una de las ciudades más seguras y mejor señalizadas del mundo, y puedes explorarla perfectamente por tu cuenta. Un guía aporta el máximo valor en primeras visitas cuando buscas profundidad (no solo selfies), en excursiones de un día con transporte multioperador complejo (Hakone, Nikko), para familias con niños que necesitan flexibilidad de ritmo, y para viajeros con alergias, necesidades de accesibilidad o intereses específicos que no encajan en una ruta predefinida.
                   </p>
                 </div>
                 <div>
@@ -599,10 +639,34 @@ const EsValeLaPenaGuia = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "¿Cuánto cuesta un guía turístico privado en Tokio?",
+                "name": "¿Cuánto cuesta contratar un guía turístico privado en Tokio?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Los tours privados a pie en Tokio suelen costar entre ¥25.000 y ¥40.000 por grupo para una experiencia de medio día (2,5-4 horas). Los tours de día completo y las excursiones oscilan entre ¥50.000 y ¥60.000. Son precios por grupo, no por persona. También hay tours personalizados desde ¥10.000 por hora.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Hay guías turísticos en español en Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí, aunque los guías hispanohablantes son menos comunes que los anglófonos. La licencia oficial de Guía Intérprete del Gobierno Nacional (全国通訳案内士) reconoce el español entre sus idiomas examinados. A fecha de abril de 2025 había 27.950 guías intérpretes con licencia registrados a nivel nacional, y el grupo de hispanohablantes con licencia está creciendo, especialmente en Tokio.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Es más barato contratar un guía privado o unirse a un tour grupal en Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Depende del tamaño del grupo. Para viajeros que viajan solos, unirse a un tour a pie en pequeño grupo a ¥8.000-¥15.000 por persona es casi siempre más barato que un tour privado. Para parejas y familias de dos a seis personas, contratar un guía privado suele salir más barato por persona — un tour privado de medio día de ¥30.000 sale a ¥7.500 por persona con cuatro viajeros, a menudo menos que cuatro entradas de tour grupal.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Necesito contratar un guía turístico para mi viaje a Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No necesariamente. Tokio es una de las ciudades más seguras y mejor señalizadas del mundo, y puedes explorarla perfectamente por tu cuenta. Un guía aporta el máximo valor en primeras visitas cuando buscas profundidad, en excursiones de un día con transporte multioperador complejo (Hakone, Nikko), para familias con niños, y para viajeros con alergias, necesidades de accesibilidad o intereses específicos que no encajan en una ruta predefinida.",
                 },
               },
               {
