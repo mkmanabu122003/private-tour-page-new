@@ -214,7 +214,7 @@ const EsJapanRailPass = () => {
               Aumento de Precio del JR Pass en Octubre de 2026: ¿Sigue Valiendo la Pena?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              JR Group anunció el <strong className="text-foreground">9 de abril de 2026</strong> una nueva subida del Japan Rail Pass que entrará en vigor el <strong className="text-foreground">1 de octubre de 2026</strong>. El aumento es de aproximadamente un 5-6%, mucho más moderado que el 69% de 2023, pero llega con un detalle clave que muchos blogs aún no han actualizado: <strong className="text-foreground">la subida solo afecta a las compras realizadas a través de agencias extranjeras</strong> (Klook, JRailPass.com, agencias de viaje, etc.). La web oficial japanrailpass.net mantendrá los precios actuales también después de octubre.
+              JR Group anunció el <strong className="text-foreground">9 de abril de 2026</strong> una nueva subida del Japan Rail Pass que entrará en vigor el <strong className="text-foreground">1 de octubre de 2026</strong>. El aumento es de aproximadamente un 5-6%, mucho más moderado que el 69% de 2023, pero llega con un detalle clave que muchos blogs aún no han actualizado: <strong className="text-foreground">la subida afecta sobre todo a las compras realizadas a través de agencias extranjeras</strong> (Klook, JRailPass.com, agencias de viaje, etc.). La web oficial japanrailpass.net <strong className="text-foreground">mantendrá los precios actuales por un periodo limitado tras la subida</strong> — JR ha anunciado que dará más detalles sobre la duración de esta promoción más adelante.
             </p>
 
             <h3>
@@ -235,38 +235,50 @@ const EsJapanRailPass = () => {
                     <td className="py-3 pr-4">7 días Ordinario</td>
                     <td className="py-3 pr-4">50.000 yen</td>
                     <td className="py-3 pr-4">53.000 yen (+6%)</td>
-                    <td className="py-3">50.000 yen (sin cambio)</td>
+                    <td className="py-3">50.000 yen (promo limitada)</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">14 días Ordinario</td>
                     <td className="py-3 pr-4">80.000 yen</td>
                     <td className="py-3 pr-4">84.000 yen (+5%)</td>
-                    <td className="py-3">80.000 yen (sin cambio)</td>
+                    <td className="py-3">80.000 yen (promo limitada)</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">21 días Ordinario</td>
                     <td className="py-3 pr-4">100.000 yen</td>
                     <td className="py-3 pr-4">105.000 yen (+5%)</td>
-                    <td className="py-3">100.000 yen (sin cambio)</td>
+                    <td className="py-3">100.000 yen (promo limitada)</td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-border/50">
                     <td className="py-3 pr-4">7 días Green Car</td>
                     <td className="py-3 pr-4">70.000 yen</td>
                     <td className="py-3 pr-4">74.000 yen (+5,7%)</td>
-                    <td className="py-3">70.000 yen (sin cambio)</td>
+                    <td className="py-3">70.000 yen (promo limitada)</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 pr-4">14 días Green Car</td>
+                    <td className="py-3 pr-4">110.000 yen</td>
+                    <td className="py-3 pr-4">116.000 yen (+5,5%)</td>
+                    <td className="py-3">110.000 yen (promo limitada)</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4">21 días Green Car</td>
+                    <td className="py-3 pr-4">140.000 yen</td>
+                    <td className="py-3 pr-4">147.000 yen (+5%)</td>
+                    <td className="py-3">140.000 yen (promo limitada)</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Fuente: comunicado oficial de JR Group del 9 de abril de 2026 y la <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">página oficial de tarifas del Japan Rail Pass</a>.
+              <strong className="text-foreground">Aviso importante:</strong> el descuento de la web oficial es <strong className="text-foreground">temporal</strong>. JR aún no ha anunciado la fecha exacta en la que esta promoción finalizará. Verifica <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">japanrailpass.net</a> antes de comprar. Fuente: comunicado oficial de JR Group del 9 de abril de 2026.
             </p>
 
             <h3>
               La trampa de las agencias: cómo evitar pagar de más
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si compras el pase a partir de octubre de 2026, asegúrate de hacerlo a través de la web oficial <a href="https://japanrailpass.net/en" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">japanrailpass.net</a> en lugar de en agencias intermediarias. El proceso es muy similar: compras online, recibes una orden de canje y la cambias por el pase físico al llegar a Japón en la oficina JR de Narita, Haneda, Estación de Tokio o Kioto. La diferencia: pagas hasta 3.000 yenes menos por el pase de 7 días, y 5.000 yenes menos por el de 21 días, simplemente eligiendo bien el canal de compra.
+              Si compras el pase a partir de octubre de 2026, asegúrate de hacerlo a través de la web oficial <a href="https://japanrailpass.net/en" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">japanrailpass.net</a> <strong className="text-foreground">mientras dure la promoción de precios pre-octubre</strong> (la fecha exacta de fin la anunciará JR más adelante). El proceso es muy similar: compras online, recibes una orden de canje y la cambias por el pase físico al llegar a Japón en la oficina JR de Narita, Haneda, Estación de Tokio o Kioto. La diferencia mientras dure la promoción: pagas hasta 3.000 yenes menos por el pase de 7 días, y 5.000 yenes menos por el de 21 días, simplemente eligiendo bien el canal de compra.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Aviso adicional: muchas guías y blogs publicados antes de mayo de 2026 todavía dicen que "no hay subidas previstas en 2026". Esa información quedó obsoleta tras el anuncio del 9 de abril. Verifica siempre la fuente y la fecha del artículo cuando consultes precios del JR Pass — el sector cambia rápido y no todos los sitios actualizan a tiempo.
@@ -521,7 +533,7 @@ const EsJapanRailPass = () => {
                   ¿Ha vuelto a subir el precio del JR Pass en 2026?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Sí, parcialmente. JR Group anunció el 9 de abril de 2026 una subida del 5-6% efectiva desde el <strong className="text-foreground">1 de octubre de 2026</strong>, pero <strong className="text-foreground">solo para compras a través de agencias extranjeras</strong>. El pase de 7 días Ordinario pasa de ¥50.000 a ¥53.000 vía agencias; el de 14 días, de ¥80.000 a ¥84.000; el de 21 días, de ¥100.000 a ¥105.000. La <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">web oficial japanrailpass.net</a> mantiene el precio antiguo de ¥50.000 también después de octubre de 2026. Si compras directamente en la web oficial JR, sigues pagando el mismo precio antes y después de la fecha de la subida.
+                  Sí, parcialmente. JR Group anunció el 9 de abril de 2026 una subida del 5-6% efectiva desde el <strong className="text-foreground">1 de octubre de 2026</strong>, dirigida principalmente a las <strong className="text-foreground">compras realizadas a través de agencias extranjeras</strong>. El pase de 7 días Ordinario pasa de ¥50.000 a ¥53.000 vía agencias; el de 14 días, de ¥80.000 a ¥84.000; el de 21 días, de ¥100.000 a ¥105.000. La <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">web oficial japanrailpass.net</a> mantiene el precio antiguo de ¥50.000 <strong className="text-foreground">de forma temporal tras octubre de 2026</strong> — JR anunciará más adelante hasta cuándo durará esta promoción. Si compras pronto a través de la web oficial, todavía puedes asegurar el precio anterior.
                 </p>
               </div>
               <div>
