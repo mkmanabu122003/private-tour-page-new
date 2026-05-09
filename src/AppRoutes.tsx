@@ -59,6 +59,7 @@ import OnsenDayTripsBeyondHakone from "./pages/blog/OnsenDayTripsBeyondHakone";
 import ToyosuVsUenoFishMarket from "./pages/blog/ToyosuVsUenoFishMarket";
 import TsukijiOuterVsInnerMarket from "./pages/blog/TsukijiOuterVsInnerMarket";
 import ToyosuVsTsukijiOuter from "./pages/blog/ToyosuVsTsukijiOuter";
+import HakoneVsNikkoDayTrip from "./pages/blog/HakoneVsNikkoDayTrip";
 import CancellationPolicy from "./pages/CancellationPolicy";
 import NotFound from "./pages/NotFound";
 import EsIndex from "./pages/es/EsIndex";
@@ -127,6 +128,7 @@ import EsGuiaIzakayasTokio from "./pages/es/blog/EsGuiaIzakayasTokio";
 import EsToyosuVsUenoMercadoPescado from "./pages/es/blog/EsToyosuVsUenoMercadoPescado";
 import EsTsukijiExteriorVsInterior from "./pages/es/blog/EsTsukijiExteriorVsInterior";
 import EsToyosuVsTsukijiExterior from "./pages/es/blog/EsToyosuVsTsukijiExterior";
+import EsHakoneVsNikkoExcursion from "./pages/es/blog/EsHakoneVsNikkoExcursion";
 import EsCancellationPolicy from "./pages/es/EsCancellationPolicy";
 
 const queryClient = new QueryClient();
@@ -193,6 +195,7 @@ const AppRoutes = () => (
         <Route path="/blog/toyosu-vs-ueno-fish-market" element={<ToyosuVsUenoFishMarket />} />
         <Route path="/blog/tsukiji-outer-vs-inner-market" element={<TsukijiOuterVsInnerMarket />} />
         <Route path="/blog/toyosu-vs-tsukiji-outer" element={<ToyosuVsTsukijiOuter />} />
+        <Route path="/blog/hakone-vs-nikko-day-trip" element={<HakoneVsNikkoDayTrip />} />
         <Route path="/cancellation-policy" element={<CancellationPolicy />} />
         {/* Spanish Pages */}
         <Route path="/es" element={<EsIndex />} />
@@ -262,6 +265,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/toyosu-vs-ueno-mercado-pescado" element={<EsToyosuVsUenoMercadoPescado />} />
         <Route path="/es/blog/tsukiji-mercado-exterior-vs-interior" element={<EsTsukijiExteriorVsInterior />} />
         <Route path="/es/blog/toyosu-vs-tsukiji-exterior" element={<EsToyosuVsTsukijiExterior />} />
+        <Route path="/es/blog/hakone-vs-nikko-excursion" element={<EsHakoneVsNikkoExcursion />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

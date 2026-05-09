@@ -99,6 +99,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/hakone-fuji-comparison.webp",
   },
   {
+    slug: "hakone-vs-nikko-excursion",
+    title: "Hakone vs Nikko: ¿Qué Excursión Desde Tokio Elegir? (2026)",
+    description:
+      "Hakone (aguas termales, vistas al Monte Fuji, logística sencilla) o Nikko (templos UNESCO, cascadas, historia)? Una guía con licencia de Tokio compara ambas excursiones por coste, tiempo y tipo de viajero.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/blog/hakone-fuji-comparison.webp",
+  },
+  {
     slug: "excursion-nikko-desde-tokio",
     title: "Excursión a Nikko desde Tokio: Guía Completa 2026",
     description:

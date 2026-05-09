@@ -108,6 +108,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tanuki-tabi-travel.com/blog/hakone-vs-nikko-day-trip</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tanuki-tabi-travel.com/blog/shibuya-harajuku-guide</loc>
     <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -679,6 +685,12 @@
   <url>
     <loc>https://tanuki-tabi-travel.com/es/blog/excursion-hakone-desde-tokio</loc>
     <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/blog/hakone-vs-nikko-excursion</loc>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

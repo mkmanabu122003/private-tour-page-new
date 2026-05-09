@@ -116,8 +116,8 @@ const EsComparativaExcursiones = () => {
                   </tr>
                   <tr className="bg-secondary/20">
                     <td className="p-4 font-medium text-foreground">Coste transporte</td>
-                    <td className="p-4 text-muted-foreground">~¥1.500 ida y vuelta</td>
-                    <td className="p-4 text-muted-foreground">~¥6.100 (Hakone Pass)</td>
+                    <td className="p-4 text-muted-foreground">~¥1.900 ida y vuelta</td>
+                    <td className="p-4 text-muted-foreground">~¥7.100 (Hakone Free Pass, 2 días)</td>
                     <td className="p-4 text-muted-foreground">~¥5.000-8.000 ida y vuelta</td>
                   </tr>
                 </tbody>
@@ -309,6 +309,13 @@ const EsComparativaExcursiones = () => {
               <Link to="/es/tours/nikko-day-trip" className="text-accent hover:underline font-medium">
                 Ver detalles de nuestra Excursión a Nikko →
               </Link>
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para una decisión específica entre Hakone y Nikko (sin Kamakura), consulta mi{" "}
+              <Link to="/es/blog/hakone-vs-nikko-excursion" className="text-accent hover:underline font-medium">
+                comparativa dedicada Hakone vs Nikko
+              </Link>
+              {" "}— incluye tabla de costes lado a lado, recomendaciones por temporada e itinerarios de muestra completos para ambos destinos.
             </p>
 
             {/* Can I Do Two? */}

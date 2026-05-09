@@ -105,8 +105,8 @@ const DayTripComparison = () => {
                   </tr>
                   <tr className="bg-secondary/20">
                     <td className="p-4 font-medium text-foreground">Transport cost</td>
-                    <td className="p-4 text-muted-foreground">~¥1,500 RT</td>
-                    <td className="p-4 text-muted-foreground">~¥6,100 (Hakone Pass)</td>
+                    <td className="p-4 text-muted-foreground">~¥1,900 RT</td>
+                    <td className="p-4 text-muted-foreground">~¥7,100 (Hakone Free Pass, 2-day)</td>
                     <td className="p-4 text-muted-foreground">~¥5,000-8,000 RT</td>
                   </tr>
                 </tbody>
@@ -316,6 +316,13 @@ const DayTripComparison = () => {
               <Link to="/tours/nikko-day-trip" className="text-accent hover:underline font-medium">
                 view the Nikko Day Trip tour details
               </Link>.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              For a 2-way decision specifically between Hakone and Nikko (without Kamakura), see my dedicated{" "}
+              <Link to="/blog/hakone-vs-nikko-day-trip" className="text-accent hover:underline font-medium">
+                Hakone vs Nikko day trip comparison
+              </Link>
+              {" "}— it has a side-by-side cost table, season-by-season recommendations, and full sample itineraries for both.
             </p>
 
             {/* Can I Do Two? */}

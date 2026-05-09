@@ -277,7 +277,7 @@ const IsItWorthHiringGuide = () => {
               A private tour means the guide is yours alone — you, your family, or your travel companions, and no one else. A group tour means joining 6 to 20 strangers on a fixed itinerary and a fixed pace, with the cost split across the group.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              For solo travelers on a tight budget, group tours usually win on raw cost: ¥8,000–¥15,000 per person versus ¥40,000+ for a private half-day. But for couples and families of two to six, the math reverses fast — a ¥45,000 private half-day works out to ¥7,500 per person at four people, often cheaper than the per-person group rate, with a fully customizable itinerary on top.
+              For solo travelers on a tight budget, group tours usually win on raw cost: ¥8,000–¥15,000 per person versus ¥40,000+ for a private half-day. But for couples and families of two to six, the math reverses fast — a ¥45,000 private half-day works out to ¥11,250 per person at four people, and ¥7,500 per person at six, often cheaper than the per-person group rate, with a fully customizable itinerary on top.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Format also matters for kids, allergies, mobility needs, photography priorities, and any interest that doesn't fit a fixed script. If you'd otherwise be silently thinking "can we just stay here a bit longer?" on a group tour, a private tour is the right call.
@@ -348,7 +348,7 @@ const IsItWorthHiringGuide = () => {
             </h3>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Groups of 2–6 people.</strong> Per-group pricing means per-person cost drops fast. A ¥45,000 half-day tour is ¥7,500/person at four people — already cheaper than most platform private tours.
+                <strong className="text-foreground">Groups of 2–6 people.</strong> Per-group pricing means per-person cost drops fast. A ¥45,000 half-day tour is ¥11,250/person at four people, ¥9,000 at five, and ¥7,500 at six — already cheaper per person than most platform private tours of $100–150/person.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Specific interests that don't fit a template:</strong> vegetarian or halal food routes, traveling with kids, accessibility needs, art-history focus, or business client hosting.
@@ -543,7 +543,7 @@ const IsItWorthHiringGuide = () => {
                     Is it cheaper to hire a private guide or join a group tour in Tokyo?
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    It depends on group size. For solo travelers, joining a small-group walking tour at ¥8,000–¥15,000 per person is almost always cheaper than a private tour. For couples and families of two to six, hiring a private guide usually works out cheaper per person — a ¥45,000 half-day private tour comes to ¥7,500 per person at four people, often less than four group-tour tickets — and you get a fully customizable itinerary on top.
+                    It depends on group size. For solo travelers, joining a small-group walking tour at ¥8,000–¥15,000 per person is almost always cheaper than a private tour. For couples and families of two to six, hiring a private guide usually works out cheaper per person — a ¥45,000 half-day private tour comes to ¥11,250 per person at four people, dropping to ¥7,500 at six, often less than the equivalent number of group-tour tickets — and you get a fully customizable itinerary on top.
                   </p>
                 </div>
                 <div>
@@ -649,7 +649,7 @@ const IsItWorthHiringGuide = () => {
                 "name": "Is it cheaper to hire a private guide or join a group tour in Tokyo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It depends on group size. For solo travelers, joining a small-group walking tour at ¥8,000–¥15,000 per person is almost always cheaper than a private tour. For couples and families of two to six, hiring a private guide usually works out cheaper per person — a ¥45,000 half-day private tour comes to ¥7,500 per person at four people, often less than four group-tour tickets.",
+                  "text": "It depends on group size. For solo travelers, joining a small-group walking tour at ¥8,000–¥15,000 per person is almost always cheaper than a private tour. For couples and families of two to six, hiring a private guide usually works out cheaper per person — a ¥45,000 half-day private tour comes to ¥11,250 per person at four people, dropping to ¥7,500 at six, often less than the equivalent number of group-tour tickets.",
                 },
               },
               {

@@ -58,6 +58,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/blog/hakone-fuji-comparison.webp",
   },
   {
+    slug: "hakone-vs-nikko-day-trip",
+    title: "Hakone vs Nikko: Which Day Trip From Tokyo Should You Choose? (2026)",
+    description:
+      "Hakone (hot springs, Mt Fuji views, easy logistics) or Nikko (UNESCO temples, waterfalls, history depth)? A licensed Tokyo guide compares both day trips for cost, time, and traveler type.",
+    date: "May 9, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trips from Tokyo",
+    image: "/images/blog/hakone-fuji-comparison.webp",
+  },
+  {
     slug: "onsen-day-trips-beyond-hakone",
     title: "5 Onsen Day Trips from Tokyo (That Aren't Hakone): 2026 Guide",
     description:
