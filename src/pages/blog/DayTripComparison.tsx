@@ -179,7 +179,7 @@ const DayTripComparison = () => {
 
             <h3>How to Get to Kamakura From Tokyo</h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The simplest route is the <strong>JR Yokosuka Line</strong> from Tokyo Station or Shinagawa Station direct to Kamakura Station — about 55–60 minutes, no transfers, around ¥940 one-way, and covered by JR Pass. Once you arrive, the <strong>Enoden (Enoshima Electric Railway)</strong> is a charming local tram that runs from Kamakura Station along the coast to Hase (the Great Buddha area) and Enoshima. Most of Kamakura's main sights are walkable from either Kamakura Station or Hase Station on the Enoden, so a Kamakura day trip rarely involves more than two short train rides total.
+              The simplest route is the <strong>JR Yokosuka Line</strong> from Tokyo Station or Shinagawa Station direct to Kamakura Station — about 55–60 minutes, no transfers, around ¥950 one-way, and covered by JR Pass. Once you arrive, the <strong>Enoden (Enoshima Electric Railway)</strong> is a charming local tram that runs from Kamakura Station along the coast to Hase (the Great Buddha area) and Enoshima. Most of Kamakura's main sights are walkable from either Kamakura Station or Hase Station on the Enoden, so a Kamakura day trip rarely involves more than two short train rides total.
             </p>
 
             <h3>Top 5 Spots for a Kamakura Day Trip</h3>
@@ -399,7 +399,7 @@ const DayTripComparison = () => {
               <div>
                 <h3>How do I get to Kamakura from Tokyo?</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The fastest and simplest route is the JR Yokosuka Line direct from Tokyo Station or Shinagawa Station to Kamakura Station — about 55–60 minutes with no transfers, around ¥940 one-way, covered by JR Pass. Inside Kamakura, the Enoden (Enoshima Electric Railway) connects Kamakura Station with Hase Station (the Great Buddha area) and Enoshima along the coast, and is part of the experience.
+                  The fastest and simplest route is the JR Yokosuka Line direct from Tokyo Station or Shinagawa Station to Kamakura Station — about 55–60 minutes with no transfers, around ¥950 one-way, covered by JR Pass. Inside Kamakura, the Enoden (Enoshima Electric Railway) connects Kamakura Station with Hase Station (the Great Buddha area) and Enoshima along the coast, and is part of the experience.
                 </p>
               </div>
               <div>
@@ -493,7 +493,7 @@ const DayTripComparison = () => {
                 "name": "How do I get to Kamakura from Tokyo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The fastest route is the JR Yokosuka Line direct from Tokyo Station or Shinagawa Station to Kamakura Station — about 55–60 minutes, no transfers, around ¥940 one-way, covered by JR Pass.",
+                  "text": "The fastest route is the JR Yokosuka Line direct from Tokyo Station or Shinagawa Station to Kamakura Station — about 55–60 minutes, no transfers, around ¥950 one-way, covered by JR Pass.",
                 },
               },
               {
