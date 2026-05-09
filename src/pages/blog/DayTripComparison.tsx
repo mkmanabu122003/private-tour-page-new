@@ -12,8 +12,8 @@ const DayTripComparison = () => {
   return (
     <Layout>
       <SEO
-        title="Kamakura vs Hakone vs Nikko: Which Day Trip Is Best?"
-        description="Can't decide between Kamakura, Hakone, or Nikko? A local guide compares travel time, highlights, and who each trip is best for to help you choose."
+        title="Kamakura Day Trip vs Hakone vs Nikko: Best Pick 2026"
+        description="Can't decide between Kamakura, Hakone, or Nikko? A licensed local guide compares the Kamakura day trip with Hakone and Nikko on time, highlights, and fit."
         canonicalPath="/blog/kamakura-vs-hakone-vs-nikko-day-trip"
       />
 
@@ -35,10 +35,12 @@ const DayTripComparison = () => {
             <BlogArticleToc items={[
               { num: "01", label: "Quick Comparison", href: "#section-01-quick-comparison" },
               { num: "02", label: "Kamakura", href: "#section-02-kamakura" },
-              { num: "03", label: "Hakone", href: "#section-03-hakone" },
-              { num: "04", label: "Nikko", href: "#section-04-nikko" },
-              { num: "05", label: "Can I Do Two?", href: "#section-05-can-i-do-two" },
-              { num: "06", label: "My Recommendation", href: "#section-06-my-recommendation" },
+              { num: "03", label: "Kamakura Day Trip", href: "#section-03-kamakura-day-trip" },
+              { num: "04", label: "Hakone", href: "#section-04-hakone" },
+              { num: "05", label: "Nikko", href: "#section-05-nikko" },
+              { num: "06", label: "Can I Do Two?", href: "#section-06-can-i-do-two" },
+              { num: "07", label: "My Recommendation", href: "#section-07-my-recommendation" },
+              { num: "08", label: "FAQ", href: "#section-08-faq" },
             ]} />
 
             <article>
@@ -163,9 +165,65 @@ const DayTripComparison = () => {
               </Link>.
             </p>
 
+            {/* Kamakura Day Trip Deep Dive */}
+            <div className="section-eyebrow"><span>Section 03 · Kamakura Day Trip</span></div>
+            <h2 id="section-03-kamakura-day-trip" className="scroll-mt-20">
+              Is Kamakura Worth a Day Trip From Tokyo?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Short answer: yes, and it's the day trip I recommend most often to first-time Tokyo visitors. A Kamakura day trip from Tokyo gives you ancient temples, a 13-meter bronze Buddha, ocean views, and excellent local food — all within about an hour of central Tokyo. Of the three options compared in this guide, Kamakura is the lowest-friction choice, and for many travelers it's also the most rewarding.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Below is what you actually need to plan a Kamakura day trip: how to get there, where to spend your hours, and a sample itinerary I use with clients.
+            </p>
+
+            <h3>How to Get to Kamakura From Tokyo</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The simplest route is the <strong>JR Yokosuka Line</strong> from Tokyo Station or Shinagawa Station direct to Kamakura Station — about 55–60 minutes, no transfers, around ¥940 one-way, and covered by JR Pass. Once you arrive, the <strong>Enoden (Enoshima Electric Railway)</strong> is a charming local tram that runs from Kamakura Station along the coast to Hase (the Great Buddha area) and Enoshima. Most of Kamakura's main sights are walkable from either Kamakura Station or Hase Station on the Enoden, so a Kamakura day trip rarely involves more than two short train rides total.
+            </p>
+
+            <h3>Top 5 Spots for a Kamakura Day Trip</h3>
+            <ol className="space-y-3 mb-4 list-decimal list-outside ml-6">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Great Buddha (Kotoku-in):</strong> Kamakura's icon — a 13-meter bronze Buddha cast in 1252. Admission ¥300 for adults, plus ¥50 to step inside the hollow statue. Open 8:00–17:30 (April–September) / 8:00–17:00 (October–March), last entry 15 minutes before close. About a 5-minute walk from Hase Station on the Enoden.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Tsurugaoka Hachimangu Shrine:</strong> Kamakura's most important shrine, founded in 1180 by Minamoto no Yoritomo, the first shogun. Free entry, open from early morning (5:00 April–September / 6:00 October–March) until 21:00. The wide ceremonial approach (Wakamiya Oji) running from the beach to the shrine is a sight in itself.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Hasedera Temple:</strong> Hillside temple with sweeping ocean views and a famous 9-meter wooden Kannon statue. Admission ¥400 for adults. Open 8:00–17:00 (July–March) / 8:00–17:30 (April–June). A short walk from Hase Station.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Hokokuji Temple (Bamboo Grove):</strong> A small Zen temple with a quiet bamboo grove and a tea house where you can drink matcha while looking into the bamboo. Admission ¥400 (or ¥1,000 with matcha included). Open 9:00–16:00. Quieter than the headline spots — worth the extra walk if you want a contemplative pause.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Yuigahama Beach:</strong> Free, open year-round. A 5–10 minute walk from Hase Station, this is where Kamakura locals come to surf, swim in summer, and walk in any season. A natural place to slow down between temples — especially with a shirasu (whitebait) rice bowl in hand.
+              </li>
+            </ol>
+            <p className="text-muted-foreground leading-relaxed mb-4 text-sm italic">
+              Hours, fares, and admission can change on short notice — confirm on the official temple sites and JR East before you go.
+            </p>
+
+            <h3>Sample Kamakura Day Trip Itinerary</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Here's a realistic Kamakura day trip itinerary I use with clients. It assumes a roughly 8:30 AM departure from central Tokyo and a return by 5:30–6:00 PM, giving you about 7–8 hours total including transit.
+            </p>
+            <ul className="space-y-3 mb-4">
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Morning (8:30–12:00):</strong> Depart Tokyo Station 8:30 → Arrive Kita-Kamakura ~9:30 → Engaku-ji Temple (1 hour) → Daibutsu Hiking Course (90 minutes) → Great Buddha at Kotoku-in.</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Lunch (12:30–13:30):</strong> Shirasu (whitebait) rice bowl near Hase Station, or handmade soba on Komachi-dori.</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Afternoon (13:30–16:30):</strong> Hasedera Temple (ocean views, Kannon hall) → Enoden ride to Yuigahama Beach → walk back via Komachi-dori → Tsurugaoka Hachimangu Shrine.</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Return (16:30–17:30):</strong> Depart Kamakura Station → arrive Tokyo Station ~17:30.</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              This Kamakura day trip itinerary covers the headline sights without rushing. If hiking isn't your thing, swap the trail for an extra temple — Hokokuji's bamboo grove pairs well with a quiet lunch in the same area. For a much deeper breakdown — including the temples most visitors skip — see my{" "}
+              <Link to="/blog/kamakura-day-trip-from-tokyo" className="text-accent hover:underline font-medium">
+                full Kamakura day trip from Tokyo guide
+              </Link>.
+            </p>
+
             {/* Hakone */}
-            <div className="section-eyebrow"><span>Section 03 · Hakone</span></div>
-            <h2 id="section-03-hakone" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 04 · Hakone</span></div>
+            <h2 id="section-04-hakone" className="scroll-mt-20">
               Hakone: Hot Springs & the Iconic Fuji View
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -219,8 +277,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* Nikko */}
-            <div className="section-eyebrow"><span>Section 04 · Nikko: The Hidden UNESCO Masterpiece</span></div>
-            <h2 id="section-04-nikko" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 05 · Nikko: The Hidden UNESCO Masterpiece</span></div>
+            <h2 id="section-05-nikko" className="scroll-mt-20">
               Nikko: The Hidden UNESCO Masterpiece
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -261,8 +319,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* Can I Do Two? */}
-            <div className="section-eyebrow"><span>Section 05 · Can I Do Two in One Trip?</span></div>
-            <h2 id="section-05-can-i-do-two" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 06 · Can I Do Two in One Trip?</span></div>
+            <h2 id="section-06-can-i-do-two" className="scroll-mt-20">
               Can I Do Two in One Trip?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -288,8 +346,8 @@ const DayTripComparison = () => {
             </p>
 
             {/* My Recommendation */}
-            <div className="section-eyebrow"><span>Section 06 · My Recommendation</span></div>
-            <h2 id="section-06-my-recommendation" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 07 · My Recommendation</span></div>
+            <h2 id="section-07-my-recommendation" className="scroll-mt-20">
               My Recommendation
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -319,6 +377,38 @@ const DayTripComparison = () => {
               </Link>
               .
             </p>
+
+            {/* FAQ */}
+            <div className="section-eyebrow"><span>Section 08 · FAQ</span></div>
+            <h2 id="section-08-faq" className="scroll-mt-20">
+              Frequently Asked Questions
+            </h2>
+            <div className="faq-block space-y-8">
+              <div>
+                <h3>How long is a day trip from Tokyo to Kamakura?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Plan for 7–8 hours total including transit. The JR Yokosuka Line takes about 55–60 minutes each way, leaving 5–6 hours in Kamakura — enough to see the Great Buddha, two or three temples, walk part of a hiking trail, and have lunch. An 8:30 AM Tokyo departure with a 5:00–6:00 PM return is a comfortable rhythm.
+                </p>
+              </div>
+              <div>
+                <h3>What's the best day trip from Tokyo: Kamakura or Hakone?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  It depends on what you want. Kamakura is the better day trip for first-time visitors who want temples, history, and food in one walkable area, with the shortest travel time (about 1 hour). Hakone is the better day trip if seeing Mt. Fuji, soaking in onsen, or experiencing volcanic landscapes is your priority — but it requires good weather and roughly 90 minutes of travel each way. If you can only choose one and you're not sure, Kamakura is the safer bet.
+                </p>
+              </div>
+              <div>
+                <h3>How do I get to Kamakura from Tokyo?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  The fastest and simplest route is the JR Yokosuka Line direct from Tokyo Station or Shinagawa Station to Kamakura Station — about 55–60 minutes with no transfers, around ¥940 one-way, covered by JR Pass. Inside Kamakura, the Enoden (Enoshima Electric Railway) connects Kamakura Station with Hase Station (the Great Buddha area) and Enoshima along the coast, and is part of the experience.
+                </p>
+              </div>
+              <div>
+                <h3>Is Kamakura worth a day trip from Tokyo?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Yes. Of the three popular Tokyo day trip destinations (Kamakura, Hakone, Nikko), Kamakura is the most well-rounded option for a single day. You get ancient capital history, an iconic Buddha statue, ocean views, hiking trails, and notable food — all within an hour of central Tokyo. It's particularly worth it for first-time Japan visitors, history-curious travelers, and anyone who prefers a walkable, lower-friction day to a logistics-heavy one.
+                </p>
+              </div>
+            </div>
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
@@ -370,6 +460,51 @@ const DayTripComparison = () => {
               "@type": "WebPage",
               "@id": "https://tanuki-tabi-travel.com/blog/kamakura-vs-hakone-vs-nikko-day-trip",
             },
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long is a day trip from Tokyo to Kamakura?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plan for 7–8 hours total including transit. The JR Yokosuka Line takes about 55–60 minutes each way, leaving 5–6 hours in Kamakura — enough to see the Great Buddha, two or three temples, walk part of a hiking trail, and have lunch.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "What's the best day trip from Tokyo: Kamakura or Hakone?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kamakura is the better day trip for first-time visitors who want temples, history, and food in one walkable area, with the shortest travel time (about 1 hour). Hakone is the better day trip for Mt. Fuji views and onsen, but requires good weather and roughly 90 minutes of travel each way.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get to Kamakura from Tokyo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The fastest route is the JR Yokosuka Line direct from Tokyo Station or Shinagawa Station to Kamakura Station — about 55–60 minutes, no transfers, around ¥940 one-way, covered by JR Pass.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "Is Kamakura worth a day trip from Tokyo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Kamakura is the most well-rounded Tokyo day trip — ancient temples, the Great Buddha, ocean views, and notable food, all within an hour of central Tokyo. It's particularly worth it for first-time Japan visitors and history-curious travelers.",
+                },
+              },
+            ],
           }),
         }}
       />

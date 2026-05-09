@@ -44,10 +44,12 @@ const EsComparativaExcursiones = () => {
             <BlogArticleToc items={[
           { num: "01", label: "Comparación Rápida", href: "#section-01-comparación-rápida" },
           { num: "02", label: "Kamakura", href: "#section-02-kamakura" },
-          { num: "03", label: "Hakone", href: "#section-03-hakone" },
-          { num: "04", label: "Nikko: La Obra Maestra…", href: "#section-04-nikko-la-obra-maestra-unesco-escondida" },
-          { num: "05", label: "¿Puedo Hacer Dos en un Solo…", href: "#section-05-puedo-hacer-dos-en-un-solo-viaje" },
-          { num: "06", label: "Mi Recomendación", href: "#section-06-mi-recomendación" }
+          { num: "03", label: "Excursión a Kamakura", href: "#section-03-excursion-kamakura" },
+          { num: "04", label: "Hakone", href: "#section-04-hakone" },
+          { num: "05", label: "Nikko: La Obra Maestra…", href: "#section-05-nikko-la-obra-maestra-unesco-escondida" },
+          { num: "06", label: "¿Puedo Hacer Dos en un Solo…", href: "#section-06-puedo-hacer-dos-en-un-solo-viaje" },
+          { num: "07", label: "Mi Recomendación", href: "#section-07-mi-recomendación" },
+          { num: "08", label: "Preguntas Frecuentes", href: "#section-08-faq" }
             ]} />
 
             <article>
@@ -67,7 +69,7 @@ const EsComparativaExcursiones = () => {
             <DiagnosticTrigger config={dayTripFinderConfigEs} />
 
             {/* Quick Comparison Table */}
-            <div className="section-eyebrow"><span>Section 01 · Comparación Rápida</span></div>
+            <div className="section-eyebrow"><span>Sección 01 · Comparación Rápida</span></div>
             <h2 id="section-01-comparación-rápida" className="scroll-mt-20">
               Comparación Rápida
             </h2>
@@ -123,7 +125,7 @@ const EsComparativaExcursiones = () => {
             </div>
 
             {/* Kamakura */}
-            <div className="section-eyebrow"><span>Section 02 · Kamakura</span></div>
+            <div className="section-eyebrow"><span>Sección 02 · Kamakura</span></div>
             <h2 id="section-02-kamakura" className="scroll-mt-20">
               Kamakura: La Antigua Capital de Japón Junto al Mar
             </h2>
@@ -169,9 +171,62 @@ const EsComparativaExcursiones = () => {
               </Link>
             </p>
 
+            {/* Kamakura Day Trip Deep Dive */}
+            <div className="section-eyebrow"><span>Sección 03 · Excursión a Kamakura</span></div>
+            <h2 id="section-03-excursion-kamakura" className="scroll-mt-20">
+              ¿Vale la Pena una Excursión de un Día a Kamakura desde Tokio?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Respuesta corta: sí, y es la excursión que más recomiendo a los viajeros que vienen a Tokio por primera vez. Una excursión de un día a Kamakura desde Tokio te ofrece templos antiguos, un Buda de bronce de 13 metros, vistas al océano y excelente gastronomía local — todo a aproximadamente una hora del centro de Tokio. De las tres opciones comparadas en esta guía, Kamakura es la más sencilla logísticamente y, para muchos viajeros, también la más gratificante.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A continuación te dejo lo que realmente necesitas para planificar una excursión a Kamakura: cómo llegar, dónde aprovechar las horas y un itinerario de muestra que uso con mis clientes.
+            </p>
+
+            <h3>Cómo Llegar a Kamakura desde Tokio</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              La ruta más sencilla es la <strong>Línea JR Yokosuka</strong> desde la Estación de Tokio o de Shinagawa directa a la Estación de Kamakura — unos 55–60 minutos, sin transbordos, alrededor de ¥940 por trayecto, e incluida en el JR Pass. Una vez allí, el <strong>Enoden (Ferrocarril Eléctrico de Enoshima)</strong> es un encantador tranvía local que va desde la Estación de Kamakura por la costa hasta Hase (la zona del Gran Buda) y Enoshima. La mayoría de las atracciones principales de Kamakura están a poca distancia caminando desde la Estación de Kamakura o de Hase, así que una excursión a Kamakura rara vez implica más de dos cortos viajes en tren en total.
+            </p>
+
+            <h3>Los 5 Mejores Lugares para una Excursión a Kamakura</h3>
+            <ol className="space-y-3 mb-4 list-decimal list-outside ml-6">
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Gran Buda (Kotoku-in):</strong> el icono de Kamakura — un Buda de bronce de 13 metros fundido en 1252. Entrada ¥300 para adultos, más ¥50 para entrar al interior hueco de la estatua. Abierto 8:00–17:30 (abril–septiembre) / 8:00–17:00 (octubre–marzo); última entrada 15 minutos antes del cierre. A unos 5 minutos a pie de la Estación de Hase del Enoden.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Santuario Tsurugaoka Hachimangu:</strong> el santuario más importante de Kamakura, fundado en 1180 por Minamoto no Yoritomo, el primer shogún. Entrada gratuita, abierto desde temprano (5:00 abril–septiembre / 6:00 octubre–marzo) hasta las 21:00. La amplia avenida ceremonial de acceso (Wakamiya Oji) que va desde la playa hasta el santuario es ya un atractivo en sí mismo.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Templo Hasedera:</strong> templo en la ladera con espectaculares vistas al océano y una famosa estatua de Kannon de madera de 9 metros. Entrada ¥400 para adultos. Abierto 8:00–17:00 (julio–marzo) / 8:00–17:30 (abril–junio). A poca distancia caminando de la Estación de Hase.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Templo Hokokuji (Bosque de Bambú):</strong> un pequeño templo zen con un sereno bosque de bambú y una casa de té donde puedes tomar matcha mientras contemplas el bambú. Entrada ¥400 (o ¥1.000 con matcha incluido). Abierto 9:00–16:00. Más tranquilo que los grandes nombres — vale la pena la caminata extra si buscas una pausa contemplativa.
+              </li>
+              <li className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Playa de Yuigahama:</strong> gratuita, abierta todo el año. A 5–10 minutos a pie de la Estación de Hase, es donde los locales de Kamakura van a hacer surf, nadar en verano y pasear en cualquier época. Un buen lugar para bajar el ritmo entre templos — especialmente con un bol de arroz con shirasu (anchoítas blancas) en mano.
+              </li>
+            </ol>
+            <p className="text-muted-foreground leading-relaxed mb-4 text-sm italic">
+              Los horarios, tarifas y precios de entrada pueden cambiar sin previo aviso — confirma en los sitios web oficiales de los templos y de JR East antes de ir.
+            </p>
+
+            <h3>Itinerario de Muestra para una Excursión a Kamakura</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Este es un itinerario realista de un día en Kamakura que uso con mis clientes. Asume una salida desde el centro de Tokio en torno a las 8:30 y un regreso entre 17:30 y 18:00, lo que da unas 7–8 horas en total incluyendo el transporte.
+            </p>
+            <ul className="space-y-3 mb-4">
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Mañana (8:30–12:00):</strong> Salida de la Estación de Tokio 8:30 → Llegada a Kita-Kamakura ~9:30 → Templo Engaku-ji (1 hora) → Sendero Daibutsu (90 minutos) → Gran Buda en Kotoku-in.</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Almuerzo (12:30–13:30):</strong> Bol de arroz con shirasu cerca de la Estación de Hase, o soba artesanal en Komachi-dori.</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Tarde (13:30–16:30):</strong> Templo Hasedera (vistas al océano, sala del Kannon) → Enoden hasta la playa de Yuigahama → caminata de regreso vía Komachi-dori → Santuario Tsurugaoka Hachimangu.</li>
+              <li className="text-muted-foreground leading-relaxed"><strong className="text-foreground">Regreso (16:30–17:30):</strong> Salida desde la Estación de Kamakura → llegada a la Estación de Tokio ~17:30.</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Este itinerario de Kamakura cubre los lugares principales sin agobios. Si caminar por senderos no es lo tuyo, cambia la ruta de senderismo por un templo extra — el bosque de bambú de Hokokuji combina muy bien con un almuerzo tranquilo en la misma zona.
+            </p>
+
             {/* Hakone */}
-            <div className="section-eyebrow"><span>Section 03 · Hakone</span></div>
-            <h2 id="section-03-hakone" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 04 · Hakone</span></div>
+            <h2 id="section-04-hakone" className="scroll-mt-20">
               Hakone: Aguas Termales y la Icónica Vista del Fuji
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -220,8 +275,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* Nikko */}
-            <div className="section-eyebrow"><span>Section 04 · Nikko: La Obra Maestra UNESCO Escondida</span></div>
-            <h2 id="section-04-nikko-la-obra-maestra-unesco-escondida" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 05 · Nikko: La Obra Maestra UNESCO Escondida</span></div>
+            <h2 id="section-05-nikko-la-obra-maestra-unesco-escondida" className="scroll-mt-20">
               Nikko: La Obra Maestra UNESCO Escondida
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -257,8 +312,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* Can I Do Two? */}
-            <div className="section-eyebrow"><span>Section 05 · ¿Puedo Hacer Dos en un Solo Viaje?</span></div>
-            <h2 id="section-05-puedo-hacer-dos-en-un-solo-viaje" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 06 · ¿Puedo Hacer Dos en un Solo Viaje?</span></div>
+            <h2 id="section-06-puedo-hacer-dos-en-un-solo-viaje" className="scroll-mt-20">
               ¿Puedo Hacer Dos en un Solo Viaje?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -284,8 +339,8 @@ const EsComparativaExcursiones = () => {
             </p>
 
             {/* My Recommendation */}
-            <div className="section-eyebrow"><span>Section 06 · Mi Recomendación</span></div>
-            <h2 id="section-06-mi-recomendación" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 07 · Mi Recomendación</span></div>
+            <h2 id="section-07-mi-recomendación" className="scroll-mt-20">
               Mi Recomendación
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -315,6 +370,38 @@ const EsComparativaExcursiones = () => {
               </Link>
               .
             </p>
+
+            {/* FAQ */}
+            <div className="section-eyebrow"><span>Sección 08 · Preguntas Frecuentes</span></div>
+            <h2 id="section-08-faq" className="scroll-mt-20">
+              Preguntas Frecuentes
+            </h2>
+            <div className="faq-block space-y-8">
+              <div>
+                <h3>¿Cuánto dura una excursión de un día desde Tokio a Kamakura?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Calcula entre 7 y 8 horas en total incluyendo el transporte. La Línea JR Yokosuka tarda unos 55–60 minutos en cada sentido, lo que deja 5–6 horas en Kamakura — suficientes para ver el Gran Buda, dos o tres templos, recorrer parte de un sendero y almorzar. Una salida de Tokio sobre las 8:30 con regreso entre 17:00 y 18:00 es un ritmo cómodo.
+                </p>
+              </div>
+              <div>
+                <h3>¿Cuál es la mejor excursión desde Tokio: Kamakura o Hakone?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Depende de lo que busques. Kamakura es la mejor excursión para quienes vienen por primera vez y quieren templos, historia y gastronomía en una zona caminable, con el menor tiempo de viaje (alrededor de 1 hora). Hakone es la mejor opción si tu prioridad es ver el Monte Fuji, sumergirte en aguas termales o explorar paisajes volcánicos — pero requiere buen tiempo y unos 90 minutos de viaje en cada sentido. Si solo puedes elegir una y no estás seguro, Kamakura es la apuesta más segura.
+                </p>
+              </div>
+              <div>
+                <h3>¿Cómo llego a Kamakura desde Tokio?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  La ruta más rápida y sencilla es la Línea JR Yokosuka directa desde la Estación de Tokio o la de Shinagawa hasta la Estación de Kamakura — unos 55–60 minutos sin transbordos, alrededor de ¥940 por trayecto, incluida en el JR Pass. Dentro de Kamakura, el Enoden (Ferrocarril Eléctrico de Enoshima) conecta la Estación de Kamakura con la Estación de Hase (la zona del Gran Buda) y Enoshima por la costa, y forma parte de la experiencia.
+                </p>
+              </div>
+              <div>
+                <h3>¿Vale la pena una excursión de un día a Kamakura desde Tokio?</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Sí. De los tres destinos populares de excursión desde Tokio (Kamakura, Hakone, Nikko), Kamakura es la opción más completa para un solo día. Tendrás historia de la antigua capital, una icónica estatua de Buda, vistas al océano, senderos y una gastronomía notable — todo a una hora del centro de Tokio. Es especialmente recomendable para quienes visitan Japón por primera vez, viajeros con curiosidad histórica y cualquiera que prefiera un día caminable y poco logístico.
+                </p>
+              </div>
+            </div>
 
             {/* CTA */}
             <div className="bg-secondary/50 rounded-lg p-8 mt-12">
@@ -366,6 +453,51 @@ const EsComparativaExcursiones = () => {
               "@type": "WebPage",
               "@id": "https://tanuki-tabi-travel.com/es/blog/comparativa-excursiones",
             },
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuánto dura una excursión de un día desde Tokio a Kamakura?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Calcula entre 7 y 8 horas en total incluyendo el transporte. La Línea JR Yokosuka tarda unos 55–60 minutos en cada sentido, lo que deja 5–6 horas en Kamakura — suficientes para ver el Gran Buda, dos o tres templos, recorrer parte de un sendero y almorzar.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuál es la mejor excursión desde Tokio: Kamakura o Hakone?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kamakura es la mejor excursión para quienes vienen por primera vez y quieren templos, historia y gastronomía en una zona caminable, con el menor tiempo de viaje (alrededor de 1 hora). Hakone es la mejor opción si tu prioridad es ver el Monte Fuji y los onsen, pero requiere buen tiempo y unos 90 minutos de viaje en cada sentido.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo llego a Kamakura desde Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La ruta más rápida es la Línea JR Yokosuka directa desde la Estación de Tokio o la de Shinagawa hasta la Estación de Kamakura — unos 55–60 minutos sin transbordos, alrededor de ¥940 por trayecto, incluida en el JR Pass.",
+                },
+              },
+              {
+                "@type": "Question",
+                "name": "¿Vale la pena una excursión de un día a Kamakura desde Tokio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. Kamakura es la excursión desde Tokio más completa — templos antiguos, el Gran Buda, vistas al océano y una gastronomía notable, todo a una hora del centro de Tokio. Es especialmente recomendable para quienes visitan Japón por primera vez y para viajeros con curiosidad histórica.",
+                },
+              },
+            ],
           }),
         }}
       />
