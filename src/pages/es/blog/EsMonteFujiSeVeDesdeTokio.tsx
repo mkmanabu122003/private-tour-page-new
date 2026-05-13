@@ -297,6 +297,46 @@ const EsMonteFujiSeVeDesdeTokio = () => {
 
               <div>
                 <h3>
+                  ¿El Monte Fuji está en Tokio?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  No. El Monte Fuji está en la frontera entre las prefecturas de <strong>Yamanashi y Shizuoka</strong>, a unos 100 kilómetros al suroeste de Tokio. Es un error común pensar que la montaña está en Tokio porque se ve desde allí en días claros, pero técnicamente no pertenece a la prefectura de Tokio. Si te preguntas <em>¿dónde está el Monte Fuji?</em>, la cumbre está a 35,3608° N, 138,7274° E — en línea recta desde Shinjuku te quedan unos 95 km.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  ¿Cuándo se puede ver el Monte Fuji desde Tokio?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  El Monte Fuji se puede ver desde Tokio cualquier día del año con las condiciones adecuadas, pero la probabilidad cambia mucho según la temporada. <strong>Mejor momento del día:</strong> justo después del amanecer (5-8 AM en invierno, 4-6 AM en verano) o durante el atardecer (16-18 horas). <strong>Mejor temporada:</strong> de noviembre a febrero. <strong>Peores días:</strong> después de lluvia con humedad residual, o en días de calima.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  ¿Desde dónde se ve el Monte Fuji en Tokio? (resumen rápido)
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Los 5 mejores puntos en orden de accesibilidad: <strong>(1) Mirador del Tokyo Metropolitan Government Building</strong> en Shinjuku (gratuito, planta 45), <strong>(2) Roppongi Hills Sky Deck</strong> (de pago, vista 360°), <strong>(3) Tokyo Skytree</strong> (de pago, planta más alta de Japón), <strong>(4) Paseo marítimo de Odaiba</strong> junto al Rainbow Bridge (gratuito, atardeceres), <strong>(5) Puente Rainbow desde Shibaura</strong> (gratuito, vista clásica). Detalles en la <a href="#section-02-los-mejores-miradores-del-monte-fuji-dentro" className="text-accent hover:underline">sección de miradores</a>.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  ¿Cómo ver el Monte Fuji desde Tokio sin perder tiempo?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Tres estrategias según tu presupuesto de tiempo. <strong>30 minutos:</strong> sube al observatorio gratuito del Tokyo Metropolitan Government Building en Shinjuku al amanecer. <strong>Medio día:</strong> combina varios miradores en un recorrido urbano (Odaiba + Roppongi). <strong>Día completo garantizado:</strong> excursión a Kawaguchiko (Cinco Lagos), donde el Fuji domina el horizonte sin depender de la atmósfera de Tokio. Si quieres optimizar el tiempo y maximizar las probabilidades de verlo claramente, un{" "}
+                  <Link to="/es/tours/custom" className="text-accent hover:underline font-medium">
+                    tour privado personalizado
+                  </Link>{" "}
+                  ajusta el itinerario según las condiciones meteorológicas del día.
+                </p>
+              </div>
+
+              <div>
+                <h3>
                   ¿Hay tours para ver el Monte Fuji desde Tokio?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -426,6 +466,38 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Aproximadamente 100 kilómetros en línea recta desde el centro de Tokio hasta la cima. En coche son unos 130 km y entre 1,5 y 2 horas según tráfico y destino.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿El Monte Fuji está en Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. El Monte Fuji está en la frontera entre las prefecturas de Yamanashi y Shizuoka, a unos 100 kilómetros al suroeste de Tokio. Se ve desde Tokio en días claros, pero no pertenece a la prefectura de Tokio.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuándo se puede ver el Monte Fuji desde Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Cualquier día del año con las condiciones adecuadas, pero la mejor temporada es de noviembre a febrero. Las mejores horas son justo después del amanecer y durante el atardecer.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Desde dónde se ve el Monte Fuji en Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Los 5 mejores puntos: Tokyo Metropolitan Government Building (Shinjuku, gratuito), Roppongi Hills Sky Deck, Tokyo Skytree, paseo marítimo de Odaiba junto al Rainbow Bridge, y Puente Rainbow desde Shibaura.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cómo ver el Monte Fuji desde Tokio sin perder tiempo?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tres estrategias: (1) 30 minutos en el observatorio gratuito del Tokyo Metropolitan Government Building al amanecer, (2) Medio día combinando Odaiba y Roppongi, (3) Día completo a Kawaguchiko (Cinco Lagos) para vista garantizada.",
                 },
               },
               {
