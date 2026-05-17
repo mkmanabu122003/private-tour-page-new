@@ -15,8 +15,8 @@ const EsCustom = () => {
   return (
     <Layout>
       <SEO
-        title="Tour Privado Personalizado en Tokio en Español | Diseña tu Ruta"
-        description="Diseña tu tour perfecto por Tokio con Manabu, guía japonés nativo en español. Cuéntanos tus intereses y creamos un itinerario exclusivo para ti. Tarifa a medida de tu viaje."
+        title="Tour Privado Personalizado en Tokio 2026: Diseña tu Itinerario"
+        description="Tour privado personalizado en Tokio con guía nativo en español. Diseñamos el itinerario según tus intereses. Medio día o día completo, grupos 1-6, tarifa a medida."
         canonicalPath="/es/tours/custom"
         hreflang={[
           { lang: "en", path: "/tours/custom" },

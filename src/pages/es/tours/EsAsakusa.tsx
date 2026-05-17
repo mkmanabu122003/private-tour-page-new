@@ -14,8 +14,8 @@ const EsAsakusa = () => {
   return (
     <Layout>
       <SEO
-        title="Tour por Asakusa en Español | Guía Japonés Nativo | Tokio"
-        description="Recorre Asakusa con Manabu, guía japonés nativo con licencia oficial. Templo Senso-ji, calle Nakamise y gastronomía local en un tour privado de 3 horas. Desde ¥45,000."
+        title="Tour Privado por Asakusa 2026: Senso-ji y Tokio Antiguo (¥45,000~)"
+        description="Tour privado por Asakusa con guía nativo en español. Templo Senso-ji, calle Nakamise, callejones ocultos, gastronomía local. 3 horas, grupos 1-6 desde ¥45,000."
         canonicalPath="/es/tours/asakusa"
         hreflang={[
           { lang: "en", path: "/tours/asakusa" },

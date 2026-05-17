@@ -15,8 +15,8 @@ const EsNikko = () => {
   return (
     <Layout>
       <SEO
-        title="Excursión a Nikko desde Tokio 2026: Patrimonio UNESCO (¥80,000~)"
-        description="Visita el Santuario Toshogu, Patrimonio de la Humanidad, con un guía japonés nativo en español. Cascadas y paisajes de montaña en un día completo desde Tokio. Desde ¥80,000."
+        title="Excursión Privada a Nikko desde Tokio 2026: Santuario UNESCO"
+        description="Excursión privada a Nikko desde Tokio con guía nativo en español. Santuario Toshogu UNESCO, templos de la era Edo, paisajes de montaña. Día completo, grupos 1-6 desde ¥80,000."
         canonicalPath="/es/tours/nikko-day-trip"
         hreflang={[
           { lang: "en", path: "/tours/nikko-day-trip" },

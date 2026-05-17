@@ -20,9 +20,9 @@ import yanakaCandyShop from "@/assets/yanaka-candy-shop.webp";
 
 const tourSEO: Record<string, { title: string; description: string; h1: string }> = {
   asakusa: {
-    title: "Asakusa Walking Tour 2026: Senso-ji & Hidden Spots",
-    description: "Explore Asakusa beyond the tourist trail with a licensed Tokyo guide. Senso-ji Temple, Nakamise Street, hidden alleyways & local food. Groups 1-6, from ¥45,000.",
-    h1: "Asakusa Private Walking Tour",
+    title: "Private Asakusa Walking Tour 2026: Senso-ji & Hidden Spots",
+    description: "Private Asakusa walk with a licensed guide. Senso-ji, Nakamise Street, hidden alleys & local food. Beyond the tourist trail. 3 hours, groups 1-6, ¥45,000.",
+    h1: "Asakusa Private Walking Tour: Senso-ji & Hidden Old Tokyo",
   },
   yanaka: {
     title: "Private Yanaka Walking Tour 2026: Hidden Old Tokyo (¥50,000~)",
@@ -30,9 +30,9 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Yanaka Private Walking Tour: Discover Tokyo's Hidden Old Town",
   },
   "shibuya-harajuku": {
-    title: "Shibuya & Harajuku Tour 2026: Pop Culture Walk",
-    description: "Walk Shibuya Crossing, explore Harajuku's Takeshita Street & visit Meiji Shrine with a licensed guide. Youth culture explained in depth. From ¥50,000.",
-    h1: "Shibuya & Harajuku Private Walking Tour",
+    title: "Private Shibuya & Harajuku Tour 2026: Pop Culture Walk",
+    description: "Private Shibuya & Harajuku walk with a licensed guide. Shibuya Crossing, Takeshita Street, Meiji Shrine. Pop culture explained. 3h, groups 1-6, ¥50,000.",
+    h1: "Shibuya & Harajuku Private Walking Tour: Pop Culture & Meiji Shrine",
   },
   "tsukiji-ginza": {
     title: "Private Tsukiji & Ginza Tour 2026: Outer Market & Ginza Food",
@@ -45,14 +45,14 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Imperial Palace Private Walking Tour: Tokyo's Historical Heart",
   },
   custom: {
-    title: "Custom Tokyo Tour 2026: Design Your Own Private Itinerary",
-    description: "Design your perfect Tokyo day with a government-licensed guide. Tell us your interests and get a fully personalized private itinerary. 500+ tours completed.",
+    title: "Custom Private Tokyo Tour 2026: Design Your Own Itinerary",
+    description: "Custom private Tokyo tour designed around your interests with a licensed guide. Half-day or full-day, groups 1-6, from ¥45,000. 500+ tours completed.",
     h1: "Custom Private Tour: Your Tokyo, Your Way",
   },
   "kamakura-day-trip": {
-    title: "Kamakura Day Trip from Tokyo 2026: Guided Tour",
-    description: "Private day trip to Kamakura: Great Buddha, ancient temples & coastal scenery with a licensed guide. Train from Tokyo, full day, groups 1-6. From ¥70,000.",
-    h1: "Kamakura Day Trip from Tokyo: Private Guided Tour",
+    title: "Private Kamakura Day Trip from Tokyo 2026: Buddha & Temples",
+    description: "Private Kamakura day trip from Tokyo with a licensed guide. Great Buddha, ancient temples, Enoshima views. Full day, groups 1-6, from ¥70,000.",
+    h1: "Kamakura Day Trip from Tokyo: Private Tour with Great Buddha & Temples",
   },
   "hakone-day-trip": {
     title: "Private Hakone Day Trip from Tokyo 2026: Mt. Fuji & Onsen",
@@ -60,9 +60,9 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Hakone Day Trip from Tokyo: Private Tour with Mt. Fuji Views & Onsen",
   },
   "nikko-day-trip": {
-    title: "Nikko Day Trip from Tokyo 2026: Guided Tour",
-    description: "Visit UNESCO Toshogu Shrine and Nikko's mountain scenery on a private day trip from Tokyo. Licensed guide, full day, groups 1-6. From ¥80,000.",
-    h1: "Nikko Day Trip from Tokyo: UNESCO Shrines & Mountain Scenery",
+    title: "Private Nikko Day Trip from Tokyo 2026: UNESCO Shrines",
+    description: "Private Nikko day trip from Tokyo with a licensed guide. UNESCO Toshogu Shrine, Edo-era temples, mountain scenery. Full day, groups 1-6, from ¥80,000.",
+    h1: "Nikko Day Trip from Tokyo: Private Tour with UNESCO Toshogu Shrine",
   },
 };
 
