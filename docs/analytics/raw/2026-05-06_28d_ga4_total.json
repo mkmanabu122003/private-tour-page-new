@@ -1,0 +1,105 @@
+{
+  "dimensionHeaders": [
+    {
+      "name": "dateRange"
+    }
+  ],
+  "metricHeaders": [
+    {
+      "name": "activeUsers",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "sessions",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "engagedSessions",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "screenPageViews",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "userEngagementDuration",
+      "type": "TYPE_SECONDS"
+    },
+    {
+      "name": "averageSessionDuration",
+      "type": "TYPE_SECONDS"
+    },
+    {
+      "name": "bounceRate",
+      "type": "TYPE_FLOAT"
+    }
+  ],
+  "rows": [
+    {
+      "dimensionValues": [
+        {
+          "value": "previous"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "588"
+        },
+        {
+          "value": "745"
+        },
+        {
+          "value": "303"
+        },
+        {
+          "value": "1146"
+        },
+        {
+          "value": "42668"
+        },
+        {
+          "value": "159.32249047114095"
+        },
+        {
+          "value": "0.59328859060402683"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "recent"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "446"
+        },
+        {
+          "value": "564"
+        },
+        {
+          "value": "227"
+        },
+        {
+          "value": "769"
+        },
+        {
+          "value": "26801"
+        },
+        {
+          "value": "116.80469862234044"
+        },
+        {
+          "value": "0.59751773049645385"
+        }
+      ]
+    }
+  ],
+  "rowCount": 2,
+  "metadata": {
+    "currencyCode": "JPY",
+    "timeZone": "Asia/Tokyo"
+  },
+  "kind": "analyticsData#runReport"
+}
