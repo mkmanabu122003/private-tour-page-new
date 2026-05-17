@@ -35,9 +35,9 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Shibuya & Harajuku Private Walking Tour",
   },
   "tsukiji-ginza": {
-    title: "Tsukiji & Ginza Food Tour 2026: Tasting Walk",
-    description: "Taste Tokyo's best street food at Tsukiji Outer Market and stroll upscale Ginza with a licensed guide. Morning tour, all dietary needs. From ¥45,000.",
-    h1: "Tsukiji & Ginza Private Walking Tour",
+    title: "Private Tsukiji & Ginza Tour 2026: Outer Market & Ginza Food",
+    description: "Private Tsukiji Outer Market & Ginza food tour with a licensed guide. Street food stalls, sushi tasting, Ginza walk. 3 hours, groups 1-6, from ¥45,000.",
+    h1: "Tsukiji & Ginza Private Walking Tour: Outer Market Food & Tasting",
   },
   "imperial-palace": {
     title: "Private Imperial Palace Tour 2026: Tokyo History & Gardens",

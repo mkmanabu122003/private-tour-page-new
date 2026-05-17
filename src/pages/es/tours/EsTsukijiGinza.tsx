@@ -14,8 +14,8 @@ const EsTsukijiGinza = () => {
   return (
     <Layout>
       <SEO
-        title="Tour por Tsukiji y Ginza en Español | Gastronomía y Lujo en Tokio"
-        description="Descubre el mercado exterior de Tsukiji y el elegante barrio de Ginza con un guía japonés nativo en español. Gastronomía local e historia en 3 horas. Desde ¥45,000."
+        title="Tour Privado Tsukiji y Ginza 2026: Mercado y Gastronomía (¥45,000)"
+        description="Tour privado por el Mercado Exterior de Tsukiji y Ginza con guía nativo en español. Comida callejera, degustación, lujo de Ginza. 3 horas, grupos 1-6 desde ¥45,000."
         canonicalPath="/es/tours/tsukiji-ginza"
         hreflang={[
           { lang: "en", path: "/tours/tsukiji-ginza" },
