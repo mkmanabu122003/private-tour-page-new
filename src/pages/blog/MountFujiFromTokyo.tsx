@@ -13,8 +13,8 @@ const MountFujiFromTokyo = () => {
   return (
     <Layout>
       <SEO
-        title="Can You See Mt. Fuji from Tokyo? A Guide's 2026 Answer"
-        description="Yes — 40-60% of winter days. A licensed Tokyo guide reveals 5 viewpoints that work in 2026, monthly visibility data, and the free spot currently closed."
+        title="Mt. Fuji from Tokyo 2026: Views, Day Trips & Private Tours"
+        description="Can you see Mt. Fuji from Tokyo? Yes, 40-60% of winter days. Licensed guide on 5 viewpoints, day trip cost comparison, and private Mt. Fuji tour options."
         canonicalPath="/blog/mount-fuji-from-tokyo"
         hreflang={[
           { lang: "en", path: "/blog/mount-fuji-from-tokyo" },
@@ -53,7 +53,9 @@ const MountFujiFromTokyo = () => {
           { num: "03", label: "5 Best Mt. Fuji Viewpoints…", href: "#section-03-5-best-mt-fuji-viewpoints-in-tokyo" },
           { num: "04", label: "The Best Time of Day", href: "#section-04-the-best-time-of-day" },
           { num: "05", label: "Why Japanese People Are…", href: "#section-05-why-japanese-people-are-obsessed-with-fuji-san" },
-          { num: "06", label: "FAQ", href: "#section-06-faq" }
+          { num: "06", label: "Mt. Fuji Day Trip from Tokyo", href: "#section-06-day-trip-from-tokyo" },
+          { num: "07", label: "Private Mt. Fuji Tour", href: "#section-07-private-tour" },
+          { num: "08", label: "FAQ", href: "#section-08-faq" }
             ]} />
 
             <article>
@@ -233,26 +235,92 @@ const MountFujiFromTokyo = () => {
               </p>
             </GuideInsiderNote>
 
-            {/* Day Trip Options */}
-            <h2>
-              Want to Get Closer? Day Trips from Tokyo to Mt. Fuji
+            {/* Section 06: Day Trip Options (promoted from unnumbered H2) */}
+            <div className="section-eyebrow"><span>Section 06 · Mt. Fuji Day Trip from Tokyo</span></div>
+            <h2 id="section-06-day-trip-from-tokyo" className="scroll-mt-20">
+              Mt. Fuji Day Trip from Tokyo: Cost & Options Compared
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              If seeing Fuji as a distant silhouette isn't enough, you can visit the base in a day trip. The Fuji Five Lakes area (Kawaguchiko) is under two hours from Shinjuku, and Hakone — with arguably the best combined Fuji-and-onsen experience — is about 90 minutes south.
+              If seeing Fuji as a distant silhouette isn't enough, you can visit the base in a day trip. The Fuji Five Lakes area (Kawaguchiko) is under two hours from Shinjuku, and Hakone — with arguably the best combined Fuji-and-onsen experience — is about 90 minutes south. Here's how the options compare in 2026, from cheapest DIY to premium guided.
+            </p>
+
+            <div className="my-8 overflow-x-auto">
+              <div className="min-w-[760px] border border-border rounded-lg overflow-hidden">
+                <div className="grid grid-cols-5 bg-secondary/70 text-foreground font-medium text-sm">
+                  <div className="p-4 border-r border-border">Option</div>
+                  <div className="p-4 border-r border-border">Cost</div>
+                  <div className="p-4 border-r border-border">Group size</div>
+                  <div className="p-4 border-r border-border">Flexibility</div>
+                  <div className="p-4">Best for</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
+                  <div className="p-4 border-r border-border">DIY by train (Fuji Excursion)</div>
+                  <div className="p-4 border-r border-border">¥4,130/way (~$28)</div>
+                  <div className="p-4 border-r border-border">Self</div>
+                  <div className="p-4 border-r border-border">Maximum</div>
+                  <div className="p-4">Budget travelers, solo planners</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
+                  <div className="p-4 border-r border-border">DIY by highway bus</div>
+                  <div className="p-4 border-r border-border">¥2,200/way (~$15)</div>
+                  <div className="p-4 border-r border-border">Self</div>
+                  <div className="p-4 border-r border-border">Maximum</div>
+                  <div className="p-4">Lowest cost, time flexible</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
+                  <div className="p-4 border-r border-border">Group bus tour (Viator/GYG)</div>
+                  <div className="p-4 border-r border-border">$66-150/person</div>
+                  <div className="p-4 border-r border-border">20-45 people</div>
+                  <div className="p-4 border-r border-border">Low (fixed)</div>
+                  <div className="p-4">First-timers wanting zero logistics</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
+                  <div className="p-4 border-r border-border">Small-group experience</div>
+                  <div className="p-4 border-r border-border">$76-168/person</div>
+                  <div className="p-4 border-r border-border">6-12 people</div>
+                  <div className="p-4 border-r border-border">Medium</div>
+                  <div className="p-4">Younger travelers, social pace</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
+                  <div className="p-4 border-r border-border">Private licensed-guide tour</div>
+                  <div className="p-4 border-r border-border">¥70,000/group (~$470)</div>
+                  <div className="p-4 border-r border-border">1-6 people</div>
+                  <div className="p-4 border-r border-border">Maximum</div>
+                  <div className="p-4">Comfort + cultural depth, mixed groups</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
+                  <div className="p-4 border-r border-border">Luxury concierge</div>
+                  <div className="p-4 border-r border-border">¥150,000+/group</div>
+                  <div className="p-4 border-r border-border">1-4 people</div>
+                  <div className="p-4 border-r border-border">Maximum + luxury</div>
+                  <div className="p-4">Special occasions, zero logistics</div>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              The per-person cost of a private licensed-guide tour drops to roughly the same as a group bus tour once you have 4-6 people, but with full flexibility and cultural depth. For solo or couple travelers on a budget, the train + DIY combo is often the right call. The detail on each option is below.
             </p>
 
             <h3>
-              By train (fastest direct option)
+              By train (the most direct DIY option)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The <strong>Fuji Excursion limited express</strong> runs from Shinjuku directly to Kawaguchiko in 1 hour 50 minutes. One-way fare is ¥4,130, with four round-trips a day plus seasonal extras. Every seat is reserved — there are no unreserved cars — so book in advance, especially on weekends and in cherry blossom or autumn leaf season. If you're traveling with a Japan Rail Pass, you can cover the JR section to Otsuki with the pass and pay only the Fujikyu Railway section (around ¥1,170) on top.
             </p>
 
             <h3>
-              By highway bus (cheapest)
+              By highway bus (cheapest option)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Highway buses leave from Busta Shinjuku (above the station's New South Exit) and reach Kawaguchiko in about 1 hour 45 minutes for around ¥2,200 — roughly half the train fare. Traffic can stretch weekend trips, but it's still the best-value option.
+              Highway buses leave from Busta Shinjuku (above the station's New South Exit) and reach Kawaguchiko in about 1 hour 45 minutes for around ¥2,200 — roughly half the train fare. Traffic can stretch weekend trips, but it's still the best-value option for budget-conscious travelers.
+            </p>
+
+            <h3>
+              Group bus tour from Tokyo (Viator, GetYourGuide, JTB)
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you want fixed pickup, lunch, and scenic stops without thinking, group bus tours to Mt. Fuji from Tokyo start around $66/person on Viator and GetYourGuide and reach $150 for tours with more inclusions. Standard package: Shinjuku or Hamamatsucho pickup, Fuji 5th Station, Lake Kawaguchiko or Oshino Hakkai, sometimes lunch. The trade-offs are groups of 20-45 people, a fixed schedule, and limited English depth. It's the easiest option for first-time visitors who just want to see Fuji and don't care about the cultural layer.
             </p>
 
             <h3>
@@ -265,6 +333,84 @@ const MountFujiFromTokyo = () => {
               For most visitors, climbing isn't necessary. Outside the summer climbing window, the views are actually <em>better</em>: a snow-capped Fuji with no crowds, combined with onsen overlooking the mountain and traditional villages like Oshino Hakkai. Hakone and Kawaguchiko in winter or late autumn are experiences most of my clients find more memorable than the climb itself.
             </p>
 
+            {/* Section 07: Private Mt. Fuji Tour deep dive */}
+            <div className="section-eyebrow"><span>Section 07 · Private Mt. Fuji Tour</span></div>
+            <h2 id="section-07-private-tour" className="scroll-mt-20">
+              Private Mt. Fuji Tour from Tokyo: Is It Worth the Cost?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Searching "private Mt. Fuji tour" turns up a wide range, from ¥30,000 driver-only options to ¥200,000+ luxury concierge packages. Here's what differentiates them and when private is actually worth the premium over a group bus tour.
+            </p>
+
+            <h3>
+              What a private Mt. Fuji tour typically includes
+            </h3>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+              <li>Pickup from your Tokyo hotel (most operators)</li>
+              <li>Custom itinerary — choose Hakone, Kawaguchiko, or a mix</li>
+              <li>Licensed English-speaking guide (or driver-only for cheaper options)</li>
+              <li>Weather-adaptive routing (a guide who reads the morning forecast)</li>
+              <li>Lake cruise, ropeway, onsen, or Oshino Hakkai depending on plan</li>
+              <li>Photo stops at less crowded viewpoints</li>
+            </ul>
+
+            <h3>
+              Cost tiers in 2026
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Three tiers cover the market:
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 text-muted-foreground mb-4">
+              <li>
+                <strong className="text-foreground">Driver-only (~$80-100/person for a 4-person group):</strong> English-speaking driver, no licensed guide. Door-to-door comfort, limited cultural depth.
+              </li>
+              <li>
+                <strong className="text-foreground">Licensed-guide private (¥70,000-100,000/group):</strong> Government-licensed guide, custom itinerary, weather-adaptive. Best per-person value at 4-6 people. This is the tier I operate at via my{" "}
+                <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
+                  Hakone day trip
+                </Link>
+                .
+              </li>
+              <li>
+                <strong className="text-foreground">Premium concierge (¥150,000-200,000+/group):</strong> Chauffeured car, exclusive ryokan lunch, private museum access, dedicated logistics team.
+              </li>
+            </ol>
+
+            <h3>
+              When private is worth the premium
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Private is genuinely worth it when:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+              <li>Your group is 3+ people — per-person cost approaches the group bus tour rate</li>
+              <li>You want flexibility (weather pivot, custom pace, dietary needs)</li>
+              <li>You want cultural context, not just a photo stop</li>
+              <li>You don't want to navigate Japanese signage or transfers</li>
+              <li>You have one shot at Fuji and want a guide who reads the weather</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Private is overkill when you're solo on a strict budget, when you've already locked in a specific photo location, or when the rest of your trip is already heavy on private tours.
+            </p>
+
+            <h3>
+              My honest recommendation
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              For most foreign visitors who want a "private Mt. Fuji tour from Tokyo" experience, my{" "}
+              <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
+                Hakone day trip
+              </Link>
+              {" "}is the practical answer. It includes the Fuji views you'd get from a dedicated Mt. Fuji tour, plus the Lake Ashi cruise, an onsen experience, and the Open-Air Museum. Fuji shows up multiple times across the day rather than as a single photo stop — and on clear days, the silhouette from Lake Ashi is one of the classic views of the mountain.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              For a more Kawaguchiko-focused itinerary (closer to the mountain, more direct Fuji-as-subject photos),{" "}
+              <Link to="/contact" className="text-accent hover:underline">
+                message me
+              </Link>
+              {" "}and we can build a custom plan.
+            </p>
+
             <InlineCTA
               message="Want a guided Fuji day trip with zero logistics headache?"
               linkText="See Hakone private day trip →"
@@ -272,8 +418,8 @@ const MountFujiFromTokyo = () => {
             />
 
             {/* FAQ */}
-            <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>
-            <h2 id="section-06-faq" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Section 08 · FAQ</span></div>
+            <h2 id="section-08-faq" className="scroll-mt-20">
               Frequently Asked Questions
             </h2>
 
@@ -334,6 +480,46 @@ const MountFujiFromTokyo = () => {
                   {" "}and we'll plan it together.
                 </p>
               </div>
+
+              <div>
+                <h3>
+                  How much does a Mt. Fuji tour from Tokyo cost?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Group bus tours from Tokyo start around $66/person on Viator and GetYourGuide and reach $150 for tours with more inclusions. Small-group experiences (Magical Trip/Klook) run $76-168/person. Private driver-only tours run roughly $80-100/person for a 4-person group. A private licensed-guide tour via my{" "}
+                  <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
+                    Hakone day trip
+                  </Link>
+                  {" "}is ¥70,000/group flat (1-6 people). Premium concierge services start at ¥150,000+/group. Per-person value is best at 3-6 people with a private guide.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  Is a private Mt. Fuji tour from Tokyo worth the cost?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  It depends on your group size. For 1-2 people, a group bus tour or DIY trip with the Fuji Excursion train (¥4,130 each way) is usually better value. For 3+ people, a private licensed-guide tour matches the per-person cost of bus tours while giving you weather flexibility, cultural depth, and custom routing — and one guide who can read the morning forecast and pivot if Fuji is hidden. For first-time visitors who want comfort and don't want to think about logistics, private wins regardless of group size.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  What's the best Mt. Fuji day trip from Tokyo for first-time visitors?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  For most first-time visitors, the Hakone day trip pattern (Lake Ashi cruise + onsen + Fuji views from multiple angles) is more well-rounded than a Kawaguchiko-only itinerary because it combines Fuji with onsen culture, the volcanic ropeway, and Edo-era art at the Open-Air Museum. Kawaguchiko is the better choice if your primary goal is up-close Fuji photographs at lakefront vantage points. A private licensed-guide tour handles either option seamlessly.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  Mt. Fuji bus tour vs private tour — which should I choose?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Group bus tour ($66-150/person, 20-45 people): Lowest cost, fixed itinerary, limited English depth, fast-paced photo stops. Best for solo or couple travelers on a budget. Private tour (¥70,000+/group, 1-6 people): Custom routing, weather-adaptive, cultural context, no language barrier. Per-person cost matches a group bus tour at 4-6 people. Choose bus if budget is the constraint and English depth isn't critical. Choose private if you have a small group, want flexibility, or value the licensed-guide experience.
+                </p>
+              </div>
             </div>
 
             {/* CTA */}
@@ -377,6 +563,7 @@ const MountFujiFromTokyo = () => {
               "name": "Manabu",
             },
             "datePublished": "2026-04-23",
+            "dateModified": "2026-05-17",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
@@ -436,6 +623,38 @@ const MountFujiFromTokyo = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Yes. Private Tokyo tours can include Fuji viewpoints when conditions allow, and pivot to alternatives when they don't. Full-day Hakone tours combine Fuji views with onsen and Lake Ashi.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How much does a Mt. Fuji tour from Tokyo cost?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Group bus tours start around $66/person and reach $150. Small-group experiences run $76-168/person. Private driver tours run $80-100/person for a 4-person group. Private licensed-guide tours via Hakone day trip cost ¥70,000/group (1-6 people). Premium concierge services start at ¥150,000+/group.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is a private Mt. Fuji tour from Tokyo worth the cost?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For 1-2 people, a group bus tour or DIY Fuji Excursion train trip is usually better value. For 3+ people, a private licensed-guide tour matches the per-person cost of bus tours while adding weather flexibility, cultural depth, and custom routing.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the best Mt. Fuji day trip from Tokyo for first-time visitors?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Hakone day trip pattern (Lake Ashi cruise, onsen, multiple Fuji viewpoints) is more well-rounded for first-timers than a Kawaguchiko-only itinerary. Kawaguchiko is better if your primary goal is up-close Fuji photographs at lakefront vantage points.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Mt. Fuji bus tour vs private tour — which should I choose?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bus tour ($66-150/person, 20-45 people): lowest cost, fixed itinerary, limited English depth. Best for solo or couple budget travelers. Private tour (¥70,000+/group, 1-6 people): custom routing, weather-adaptive, cultural context. Per-person cost matches bus tour at 4-6 people.",
                 },
               },
             ],
