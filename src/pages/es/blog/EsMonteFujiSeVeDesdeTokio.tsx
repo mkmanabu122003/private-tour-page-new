@@ -41,10 +41,12 @@ const EsMonteFujiSeVeDesdeTokio = () => {
           <div className="grid grid-cols-1 lg:grid-cols-[200px_minmax(0,720px)_220px] gap-y-10 lg:gap-x-9 mx-auto max-w-3xl lg:max-w-[1180px]">
             <BlogArticleToc items={[
           { num: "01", label: "La Respuesta Corta", href: "#section-01-la-respuesta-corta" },
-          { num: "02", label: "Los Mejores Miradores del…", href: "#section-02-los-mejores-miradores-del-monte-fuji-dentro" },
-          { num: "03", label: "La Mejor Hora del Día para…", href: "#section-03-la-mejor-hora-del-día-para-ver-el-monte-fuji" },
+          { num: "02", label: "Los Mejores Miradores…", href: "#section-02-los-mejores-miradores-del-monte-fuji-dentro" },
+          { num: "03", label: "La Mejor Hora del Día…", href: "#section-03-la-mejor-hora-del-día-para-ver-el-monte-fuji" },
           { num: "04", label: "Fuji-san en la Cultura…", href: "#section-04-fuji-san-en-la-cultura-japonesa" },
-          { num: "05", label: "FAQ", href: "#section-05-faq" }
+          { num: "05", label: "Excursión al Monte Fuji…", href: "#section-05-excursion-monte-fuji-desde-tokio" },
+          { num: "06", label: "Tour Privado al Monte Fuji", href: "#section-06-tour-privado-monte-fuji" },
+          { num: "07", label: "FAQ", href: "#section-07-faq" }
             ]} />
 
             <article>
@@ -196,38 +198,182 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               Esto es algo que les digo a mis invitados de habla hispana y que siempre conecta: para nosotros, el Fuji es lo que el mar es para los españoles. Es esa presencia constante que te orienta, que te recuerda dónde estás y que te da cierta paz cuando la ves. Cuando un tokiota se levanta por la mañana y ve el Fuji desde su ventana, siente que el día empieza bien. Cuando un español mira al horizonte y ve el Mediterráneo azul, siente lo mismo. Es un paisaje que forma parte de la identidad, no solo de la geografía. Tal vez por eso la pregunta "¿se ve el Monte Fuji desde Tokio?" tiene tanta carga emocional. No es solo una cuestión de visibilidad meteorológica, es una cuestión de conexión con un lugar.
             </p>
 
-            {/* ¿Quieres verlo más de cerca? */}
-            <h2>
-              ¿Quieres Verlo Más de Cerca? Cómo Ir al Monte Fuji desde Tokio
+            {/* Sección 05: Excursión al Monte Fuji */}
+            <div className="section-eyebrow"><span>Sección 05 · Excursión al Monte Fuji desde Tokio</span></div>
+            <h2 id="section-05-excursion-monte-fuji-desde-tokio" className="scroll-mt-20">
+              Excursión al Monte Fuji desde Tokio: Coste y Opciones Comparadas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Si ver el Fuji desde Tokio te deja con ganas de más, puedes visitarlo en persona en una excursión de un día. La zona de los Cinco Lagos (Kawaguchiko) está a menos de 2 horas de Shinjuku.
+              Si ver el Fuji como silueta lejana no es suficiente, puedes visitarlo en persona en una excursión de un día. La zona de los Cinco Lagos (Kawaguchiko) está a menos de 2 horas de Shinjuku, y Hakone — con probablemente la mejor combinación de Fuji y onsen — está a unos 90 minutos al sur. Aquí está la comparación de opciones en 2026, del DIY más económico al tour guiado premium.
+            </p>
+
+            <div className="my-8 overflow-x-auto">
+              <div className="min-w-[760px] border border-border rounded-lg overflow-hidden">
+                <div className="grid grid-cols-5 bg-secondary/70 text-foreground font-medium text-sm">
+                  <div className="p-4 border-r border-border">Opción</div>
+                  <div className="p-4 border-r border-border">Coste</div>
+                  <div className="p-4 border-r border-border">Tamaño grupo</div>
+                  <div className="p-4 border-r border-border">Flexibilidad</div>
+                  <div className="p-4">Mejor para</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
+                  <div className="p-4 border-r border-border">DIY en tren (Fuji Excursion)</div>
+                  <div className="p-4 border-r border-border">¥4.130/trayecto (~$28)</div>
+                  <div className="p-4 border-r border-border">Individual</div>
+                  <div className="p-4 border-r border-border">Máxima</div>
+                  <div className="p-4">Viajeros con presupuesto, solos</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
+                  <div className="p-4 border-r border-border">DIY en autobús</div>
+                  <div className="p-4 border-r border-border">¥2.200/trayecto (~$15)</div>
+                  <div className="p-4 border-r border-border">Individual</div>
+                  <div className="p-4 border-r border-border">Máxima</div>
+                  <div className="p-4">Coste mínimo, horario flexible</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
+                  <div className="p-4 border-r border-border">Tour grupal en autobús (Viator/GYG)</div>
+                  <div className="p-4 border-r border-border">$66-150/persona</div>
+                  <div className="p-4 border-r border-border">20-45 personas</div>
+                  <div className="p-4 border-r border-border">Baja (fijo)</div>
+                  <div className="p-4">Primera visita sin logística</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
+                  <div className="p-4 border-r border-border">Experiencia en grupo pequeño</div>
+                  <div className="p-4 border-r border-border">$76-168/persona</div>
+                  <div className="p-4 border-r border-border">6-12 personas</div>
+                  <div className="p-4 border-r border-border">Media</div>
+                  <div className="p-4">Viajeros jóvenes, ritmo social</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
+                  <div className="p-4 border-r border-border">Tour privado con guía licenciado</div>
+                  <div className="p-4 border-r border-border">¥70.000/grupo (~$470)</div>
+                  <div className="p-4 border-r border-border">1-6 personas</div>
+                  <div className="p-4 border-r border-border">Máxima</div>
+                  <div className="p-4">Comodidad + profundidad cultural</div>
+                </div>
+                <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border bg-secondary/20">
+                  <div className="p-4 border-r border-border">Concierge de lujo</div>
+                  <div className="p-4 border-r border-border">¥150.000+/grupo</div>
+                  <div className="p-4 border-r border-border">1-4 personas</div>
+                  <div className="p-4 border-r border-border">Máxima + lujo</div>
+                  <div className="p-4">Ocasiones especiales, cero logística</div>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              El coste por persona de un tour privado con guía licenciado baja a un nivel similar al del tour grupal en autobús cuando son 4-6 personas, pero con flexibilidad total y profundidad cultural. Para viajeros solos o parejas con presupuesto, la combinación tren + DIY suele ser la mejor opción. Los detalles de cada alternativa están abajo.
             </p>
 
             <h3>
-              En tren (la opción más práctica)
+              En tren (la opción más directa para hacerlo por tu cuenta)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Desde Shinjuku, el <strong className="text-foreground">tren expreso Fuji Excursion</strong> te lleva directamente a Kawaguchiko en 1 hora y 50 minutos (4.130 yenes por trayecto). Tiene reserva obligatoria y se agota rápido. Si tienes el Japan Rail Pass, puedes cubrir parte del trayecto hasta Otsuki y pagar solo el tramo final (1.170 yenes).
             </p>
 
             <h3>
-              En autobús (la más económica)
+              En autobús (la opción más económica)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Los autobuses salen de Shinjuku Busta y llegan a Kawaguchiko en unas 2 horas por unos 2.200 yenes. La mitad del precio del tren, aunque el tráfico puede alargar el viaje en fines de semana.
             </p>
 
             <h3>
-              ¿Subir o solo verlo?
+              Tour grupal en autobús desde Tokio (Viator, GetYourGuide, JTB)
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si prefieres recogida fija, almuerzo y paradas escénicas sin pensar, los tours grupales en autobús al Monte Fuji desde Tokio empiezan en unos $66/persona en Viator y GetYourGuide, y llegan a $150 en tours con más inclusiones. Paquete estándar: recogida en Shinjuku o Hamamatsucho, 5ª Estación del Fuji, Lago Kawaguchiko u Oshino Hakkai, a veces almuerzo. Las contraprestaciones son grupos de 20-45 personas, horario fijo y profundidad lingüística limitada. Es la opción más fácil para quien visita por primera vez y solo quiere ver el Fuji sin preocuparse por la capa cultural.
+            </p>
+
+            <h3>
+              ¿Subir o solo verlo? Lo que cambió en 2026
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
               El Monte Fuji solo se puede escalar entre julio y septiembre. Desde 2024 existe un sistema de reservas obligatorio, y en 2025 la tasa se duplicó a <strong>4.000 yenes</strong> y se extendió a las cuatro rutas oficiales (Yoshida, Subashiri, Gotemba y Fujinomiya). La ruta Yoshida tiene además un límite diario de 4.000 escaladores; la reserva se hace online en fujisan-climb.jp. Las puertas del sendero están abiertas de 3:00 a 14:00, y fuera de esas horas solo pueden acceder quienes tengan reserva de refugio. La subida desde la Quinta Estación toma 5-7 horas. Pero fuera de temporada de escalada, las vistas son incluso mejores: la montaña nevada, sin multitudes, con la posibilidad de combinar miradores, onsen (aguas termales) con vista al Fuji y pueblos tradicionales como Oshino Hakkai. Para la mayoría de mis clientes, ver el Fuji de cerca sin subirlo es una experiencia igual de memorable.
             </p>
 
+            {/* Sección 06: Tour Privado al Monte Fuji */}
+            <div className="section-eyebrow"><span>Sección 06 · Tour Privado al Monte Fuji</span></div>
+            <h2 id="section-06-tour-privado-monte-fuji" className="scroll-mt-20">
+              Tour Privado al Monte Fuji desde Tokio: ¿Merece la Pena?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Buscar "tour privado al Monte Fuji" revela una amplia gama, desde opciones de solo conductor por ¥30.000 hasta paquetes de concierge de lujo de ¥200.000+. Aquí está lo que diferencia cada uno y cuándo el privado realmente merece la pena frente a un tour grupal en autobús.
+            </p>
+
+            <h3>
+              Qué incluye típicamente un tour privado al Monte Fuji
+            </h3>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+              <li>Recogida en tu hotel de Tokio (la mayoría de operadores)</li>
+              <li>Itinerario personalizado — elige Hakone, Kawaguchiko o una mezcla</li>
+              <li>Guía hispanohablante con licencia (o solo conductor en opciones más baratas)</li>
+              <li>Ruta adaptada al clima (un guía que lee el pronóstico matutino)</li>
+              <li>Crucero por el lago, teleférico, onsen u Oshino Hakkai según el plan</li>
+              <li>Paradas fotográficas en miradores menos concurridos</li>
+            </ul>
+
+            <h3>
+              Niveles de coste en 2026
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              El mercado se divide en tres niveles:
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 text-muted-foreground mb-4">
+              <li>
+                <strong className="text-foreground">Solo conductor (~$80-100/persona en grupo de 4):</strong> Conductor hispanohablante, sin guía licenciado. Comodidad puerta a puerta, profundidad cultural limitada.
+              </li>
+              <li>
+                <strong className="text-foreground">Privado con guía licenciado (¥70.000-100.000/grupo):</strong> Guía con licencia gubernamental, itinerario personalizado, adaptable al clima. Mejor valor por persona con 4-6 personas. Este es el nivel en el que opero a través de mi{" "}
+                <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
+                  excursión a Hakone
+                </Link>
+                .
+              </li>
+              <li>
+                <strong className="text-foreground">Concierge de lujo (¥150.000-200.000+/grupo):</strong> Coche con chófer, almuerzo en ryokan exclusivo, acceso privado a museos, equipo dedicado de logística.
+              </li>
+            </ol>
+
+            <h3>
+              Cuándo el privado merece el sobrecoste
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              El privado realmente merece la pena cuando:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
+              <li>Tu grupo es de 3+ personas — el coste por persona se acerca al del autobús grupal</li>
+              <li>Quieres flexibilidad (pivotar por clima, ritmo personalizado, necesidades dietéticas)</li>
+              <li>Quieres contexto cultural, no solo una parada para fotos</li>
+              <li>No quieres lidiar con señalización japonesa o transbordos</li>
+              <li>Tienes una oportunidad de ver el Fuji y quieres un guía que lea el clima</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              El privado es excesivo cuando viajas solo con presupuesto ajustado, cuando ya has fijado una ubicación específica para fotos, o cuando el resto de tu viaje ya está cargado de tours privados.
+            </p>
+
+            <h3>
+              Mi recomendación honesta
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Para la mayoría de visitantes hispanohablantes que buscan una experiencia de "tour privado al Monte Fuji desde Tokio", mi{" "}
+              <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
+                excursión privada a Hakone
+              </Link>
+              {" "}es la respuesta práctica. Incluye las vistas del Fuji que obtendrías de un tour dedicado al Monte Fuji, más el crucero por el Lago Ashi, una experiencia onsen y el Museo al Aire Libre. El Fuji aparece varias veces a lo largo del día en lugar de como una sola parada fotográfica — y en días despejados, la silueta desde el Lago Ashi es una de las vistas clásicas de la montaña.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Para un itinerario más centrado en Kawaguchiko (más cerca de la montaña, fotos directas del Fuji como sujeto),{" "}
+              <Link to="/es/contact" className="text-accent hover:underline">
+                escríbeme
+              </Link>
+              {" "}y podemos construir un plan personalizado.
+            </p>
+
             {/* Preguntas frecuentes */}
-            <div className="section-eyebrow"><span>Section 05 · FAQ</span></div>
-            <h2 id="section-05-faq" className="scroll-mt-20">
+            <div className="section-eyebrow"><span>Sección 07 · FAQ</span></div>
+            <h2 id="section-07-faq" className="scroll-mt-20">
               Preguntas Frecuentes
             </h2>
 
@@ -347,6 +493,46 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                   , incluimos miradores con vistas al Fuji cuando las condiciones lo permiten. También ofrecemos excursiones de día completo a la zona del Monte Fuji, donde puedes verlo de cerca y visitar la región de los Cinco Lagos. Si quieres un itinerario personalizado que incluya el Fuji, escríbeme y lo organizamos juntos.
                 </p>
               </div>
+
+              <div>
+                <h3>
+                  ¿Cuánto cuesta un tour al Monte Fuji desde Tokio?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Los tours grupales en autobús desde Tokio empiezan en unos $66/persona en Viator y GetYourGuide y llegan a $150 con más inclusiones. Las experiencias en grupo pequeño (Magical Trip/Klook) van de $76-168/persona. Los tours solo conductor cuestan unos $80-100/persona en grupo de 4. Un tour privado con guía licenciado vía mi{" "}
+                  <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
+                    excursión a Hakone
+                  </Link>
+                  {" "}es ¥70.000/grupo plano (1-6 personas). Los servicios de concierge premium empiezan en ¥150.000+/grupo. El mejor valor por persona se obtiene con 3-6 personas y un guía privado.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  ¿Merece la pena un tour privado al Monte Fuji desde Tokio?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Depende del tamaño de tu grupo. Para 1-2 personas, un tour grupal en autobús o un viaje DIY con el tren Fuji Excursion (¥4.130 por trayecto) suele dar mejor valor. Para 3+ personas, un tour privado con guía licenciado iguala el coste por persona del autobús grupal pero añade flexibilidad climática, profundidad cultural y rutas personalizadas — más un guía que lee el pronóstico matutino y pivota si el Fuji está oculto. Para quienes visitan por primera vez y quieren comodidad sin pensar en logística, el privado gana sin importar el tamaño del grupo.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  ¿Cuál es la mejor excursión al Monte Fuji desde Tokio para una primera visita?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Para la mayoría de quienes visitan por primera vez, el patrón de excursión a Hakone (crucero por el Lago Ashi + onsen + vistas del Fuji desde varios ángulos) es más completo que un itinerario solo en Kawaguchiko, porque combina el Fuji con cultura onsen, el teleférico volcánico y el arte de la era Edo en el Museo al Aire Libre. Kawaguchiko es mejor si tu objetivo principal son fotos directas del Fuji desde miradores lacustres. Un tour privado con guía licenciado maneja cualquiera de las dos opciones sin complicaciones.
+                </p>
+              </div>
+
+              <div>
+                <h3>
+                  Tour al Monte Fuji en autobús vs tour privado — ¿cuál elegir?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Tour grupal en autobús ($66-150/persona, 20-45 personas): coste mínimo, itinerario fijo, profundidad lingüística limitada, paradas fotográficas rápidas. Mejor para viajeros solos o parejas con presupuesto. Tour privado (¥70.000+/grupo, 1-6 personas): rutas personalizadas, adaptable al clima, contexto cultural, sin barrera idiomática. El coste por persona iguala al autobús grupal con 4-6 personas. Elige autobús si el presupuesto manda y la profundidad lingüística no es crítica. Elige privado si tienes grupo pequeño, quieres flexibilidad, o valoras la experiencia con guía licenciado.
+                </p>
+              </div>
             </div>
 
             {/* CTA */}
@@ -390,6 +576,7 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               "name": "Manabu",
             },
             "datePublished": "2026-03-07",
+            "dateModified": "2026-05-17",
             "publisher": {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
@@ -506,6 +693,38 @@ const EsMonteFujiSeVeDesdeTokio = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Sí. Los tours privados por Tokio incluyen miradores con vistas al Fuji cuando las condiciones lo permiten. También hay excursiones de día completo a la zona del Monte Fuji y los Cinco Lagos.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuánto cuesta un tour al Monte Fuji desde Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tours grupales en autobús: $66-150/persona. Experiencias en grupo pequeño: $76-168/persona. Tours solo conductor: $80-100/persona en grupo de 4. Tour privado con guía licenciado vía excursión a Hakone: ¥70.000/grupo (1-6 personas). Concierge premium: ¥150.000+/grupo.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Merece la pena un tour privado al Monte Fuji desde Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Para 1-2 personas, un tour grupal en autobús o el tren Fuji Excursion DIY suele dar mejor valor. Para 3+ personas, un tour privado con guía licenciado iguala el coste por persona del autobús grupal añadiendo flexibilidad climática, profundidad cultural y rutas personalizadas.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuál es la mejor excursión al Monte Fuji desde Tokio para una primera visita?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Para primeras visitas, el patrón de excursión a Hakone (crucero por el Lago Ashi, onsen, varios miradores del Fuji) es más completo que un itinerario solo en Kawaguchiko. Kawaguchiko es mejor si tu objetivo principal son fotos directas del Fuji desde miradores lacustres.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Tour al Monte Fuji en autobús vs tour privado — ¿cuál elegir?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tour grupal en autobús ($66-150/persona, 20-45 personas): coste mínimo, itinerario fijo. Tour privado (¥70.000+/grupo, 1-6 personas): rutas personalizadas, adaptable al clima, contexto cultural. El coste por persona iguala al autobús con 4-6 personas.",
                 },
               },
             ],
