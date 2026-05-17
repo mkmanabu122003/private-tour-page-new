@@ -25,9 +25,9 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Asakusa Private Walking Tour",
   },
   yanaka: {
-    title: "Yanaka Walking Tour 2026: Tokyo's Hidden Old Town (¥50,000~)",
-    description: "Discover Yanaka and Ueno — Tokyo's most nostalgic neighborhood — on a private guided walk. Local temples, vintage shops, and authentic daily life. From ¥50,000.",
-    h1: "Yanaka Private Walking Tour",
+    title: "Private Yanaka Walking Tour 2026: Hidden Old Tokyo (¥50,000~)",
+    description: "Private 3-hour Yanaka & Ueno walk with a licensed guide. Tokyo's most nostalgic neighborhood: temples, vintage shops, local life. Groups 1-6 from ¥50,000.",
+    h1: "Yanaka Private Walking Tour: Discover Tokyo's Hidden Old Town",
   },
   "shibuya-harajuku": {
     title: "Shibuya & Harajuku Tour 2026: Pop Culture Walk",
@@ -40,9 +40,9 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Tsukiji & Ginza Private Walking Tour",
   },
   "imperial-palace": {
-    title: "Imperial Palace Tour Tokyo 2026: History Walk",
-    description: "Walk the Imperial Palace East Gardens and Marunouchi with a certified guide. Tokyo's historical and modern heart in one tour. From ¥40,000.",
-    h1: "Imperial Palace Private Walking Tour",
+    title: "Private Imperial Palace Tour 2026: Tokyo History & Gardens",
+    description: "Private walk through Imperial Palace East Gardens & Marunouchi with a licensed guide. Tokyo's historical heart in 2.5 hours. Groups 1-6 from ¥40,000.",
+    h1: "Imperial Palace Private Walking Tour: Tokyo's Historical Heart",
   },
   custom: {
     title: "Custom Tokyo Tour 2026: Design Your Own Private Itinerary",

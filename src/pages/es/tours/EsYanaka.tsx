@@ -17,8 +17,8 @@ const EsYanaka = () => {
   return (
     <Layout>
       <SEO
-        title="Tour por Yanaka y Ueno en Español | Guía Local Tokio"
-        description="Descubre Yanaka, el barrio más nostálgico de Tokio, con un guía japonés nativo en español. Templos, tiendas vintage y vida local auténtica. Tour privado desde ¥50,000."
+        title="Tour Privado por Yanaka y Ueno 2026: Tokio Antiguo (¥50,000~)"
+        description="Tour privado de 3 horas por Yanaka y Ueno con guía nativo en español. El Tokio más nostálgico: templos, tiendas vintage, vida local. Grupos 1-6 desde ¥50,000."
         canonicalPath="/es/tours/yanaka"
         hreflang={[
           { lang: "en", path: "/tours/yanaka" },
