@@ -55,9 +55,9 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
     h1: "Kamakura Day Trip from Tokyo: Private Guided Tour",
   },
   "hakone-day-trip": {
-    title: "Hakone Day Trip from Tokyo 2026: Mt. Fuji & Onsen",
-    description: "See Mt. Fuji, cruise Lake Ashi & experience onsen culture on a private Hakone day trip. Licensed guide, full day from Tokyo. From ¥70,000.",
-    h1: "Hakone Day Trip from Tokyo: Mt. Fuji Views & Hot Springs",
+    title: "Private Hakone Day Trip from Tokyo 2026: Mt. Fuji & Onsen",
+    description: "Private full-day Hakone tour from Tokyo with a licensed guide. Mt. Fuji views, Lake Ashi cruise, onsen experience. Groups 1-6 from ¥70,000/group.",
+    h1: "Hakone Day Trip from Tokyo: Private Tour with Mt. Fuji Views & Onsen",
   },
   "nikko-day-trip": {
     title: "Nikko Day Trip from Tokyo 2026: Guided Tour",

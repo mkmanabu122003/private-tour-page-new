@@ -14,8 +14,8 @@ const EsHakone = () => {
   return (
     <Layout>
       <SEO
-        title="Excursión a Hakone desde Tokio 2026: Monte Fuji y Aguas Termales (¥70,000~)"
-        description="Excursión privada a Hakone con guía japonés nativo en español. Monte Fuji, lago Ashi en barco y cultura de aguas termales en un día completo desde Tokio. Desde ¥70,000."
+        title="Excursión Privada a Hakone desde Tokio 2026: Monte Fuji y Onsen"
+        description="Excursión privada a Hakone desde Tokio con guía nativo en español. Monte Fuji, lago Ashi y aguas termales en un día completo. Grupos 1-6 desde ¥70,000/grupo."
         canonicalPath="/es/tours/hakone-day-trip"
         hreflang={[
           { lang: "en", path: "/tours/hakone-day-trip" },

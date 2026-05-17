@@ -466,6 +466,46 @@ const TokyoPrivateTourGuideCost = () => {
                     In Japan, arranging transportation for clients requires a travel agency license. Most independent guides cannot book trains or buses for you, but will show you how to navigate the system and recommend the best options for your itinerary.
                   </p>
                 </div>
+                <div>
+                  <h3>
+                    Do private tour guides in Tokyo offer set packages?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Some do, but most independent licensed guides like myself offer flexible private tours rather than fixed packages. You tell me your interests, duration, and budget, and I design a custom itinerary. The "Tokyo tour packages" you see advertised online are usually multi-stop combinations like Asakusa + Tsukiji (¥45,000), a Kamakura day trip (¥70,000), or a full-day Tokyo highlights tour (¥60,000-80,000). With an independent guide, you can mix and match these freely.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    Is a half day or full day Tokyo private tour better value?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The hourly rate drops on full-day tours. A half day (3-4 hours) at ¥40,000-50,000 works out to roughly ¥10,000-13,000/hour. A full day (7-8 hours) at ¥60,000-80,000 is closer to ¥7,500-10,000/hour. For first-time visitors I usually recommend a full day — you cover more ground, and the city makes more sense once you've seen multiple neighborhoods in context. Half-day tours work best when you have a specific goal (one area, one experience) or limited time.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    What's the difference between a standard private tour and a luxury Tokyo tour?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Standard licensed-guide private tours (¥40,000-80,000 per group) cover everything most travelers actually need: a knowledgeable English-speaking guide, personalized routes, cultural context, and pre-trip planning. Luxury concierge services (¥80,000+ per group, often ¥150,000+) typically add a chauffeured car, restaurant reservations at exclusive venues, and private museum access. For most visitors the standard tier delivers 90% of the experience at half the price. The luxury tier mainly makes sense if you want zero logistics or have very specific high-end requests.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    Does an English-speaking tour guide in Tokyo cost more than a Japanese-only guide?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. The standard pricing (¥40,000-80,000 per group) is the rate for English-speaking licensed guides — this is the default. All National Government Licensed Guide Interpreters (全国通訳案内士) must pass a foreign language exam, and English is by far the most common working language. Spanish, French, Chinese, and other less-common languages sometimes carry a 10-20% premium because fewer guides are available.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    Is a private tour guide worth the cost for first-time visitors to Tokyo?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    For first-time visitors I think the value is highest on day 1 or 2 of the trip. A 4-6 hour tour (¥45,000-60,000) saves hours of planning, helps you understand how the city is laid out, and gives you cultural context that makes the rest of your trip more meaningful. Many of my clients tell me it "unlocks" Tokyo for them. If your trip is only 2-3 days total, the math gets even better — you're protecting the rest of your scarce time from getting lost or visiting the wrong things.
+                  </p>
+                </div>
               </div>
             </div>
           
@@ -496,7 +536,7 @@ const TokyoPrivateTourGuideCost = () => {
               url: "https://tanuki-tabi-travel.com/about",
             },
             datePublished: "2026-03-14",
-            dateModified: "2026-03-14",
+            dateModified: "2026-05-17",
             publisher: {
               "@type": "Organization",
               name: "Tanuki Tabi Travel",
@@ -549,6 +589,46 @@ const TokyoPrivateTourGuideCost = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "In Japan, arranging transportation for clients requires a travel agency license. Most independent guides cannot book trains or buses for you, but will show you how to navigate the system and recommend the best options.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do private tour guides in Tokyo offer set packages?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most independent licensed guides offer flexible private tours rather than fixed packages. Typical multi-stop tours include Asakusa + Tsukiji (¥45,000), Kamakura day trips (¥70,000), and full-day Tokyo highlights tours (¥60,000-80,000).",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is a half day or full day Tokyo private tour better value?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Full-day tours offer better hourly value: ¥7,500-10,000/hour vs ¥10,000-13,000/hour for half-day. Half-day tours (¥40,000-50,000) work best for specific goals or limited time. Full-day tours (¥60,000-80,000) are recommended for first-time visitors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the difference between a standard private tour and a luxury Tokyo tour?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Standard licensed-guide tours (¥40,000-80,000/group) include a knowledgeable English-speaking guide and personalized routes. Luxury concierge services (¥80,000+, often ¥150,000+) add a chauffeured car, exclusive restaurant reservations, and private museum access.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does an English-speaking tour guide in Tokyo cost more?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No, English-speaking licensed guides charge the standard rate (¥40,000-80,000 per group). All National Government Licensed Guide Interpreters must pass a foreign language exam, with English being the most common. Less-common languages like Spanish or French sometimes carry a 10-20% premium.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is a private tour guide worth it for first-time visitors to Tokyo?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For first-time visitors, a 4-6 hour tour (¥45,000-60,000) on day 1 or 2 is most valuable. It saves planning time, provides cultural context, and helps you understand the city's structure for the rest of your trip.",
                 },
               },
             ],

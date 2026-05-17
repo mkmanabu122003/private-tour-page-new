@@ -461,6 +461,46 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                     En Japón, organizar el transporte para clientes requiere una licencia de agencia de viajes. La mayoría de guías independientes no podemos reservar trenes o autobuses por ti, pero te enseñamos exactamente cómo funciona el sistema y te recomendamos las mejores opciones.
                   </p>
                 </div>
+                <div>
+                  <h3>
+                    ¿Los guías privados en Tokio ofrecen paquetes cerrados?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Algunos sí, pero la mayoría de guías independientes con licencia como yo ofrecemos tours privados flexibles en lugar de paquetes fijos. Tú me dices tus intereses, duración y presupuesto, y yo diseño un itinerario a medida. Los "paquetes turísticos de Tokio" que ves anunciados online suelen ser combinaciones de varias paradas como Asakusa + Tsukiji (¥45,000), una excursión de un día a Kamakura (¥70,000), o un tour de día completo por los puntos clave de Tokio (¥60,000-80,000). Con un guía independiente puedes combinarlos libremente.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Sale más rentable un tour de medio día o de día completo en Tokio?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    La tarifa por hora baja en los tours de día completo. Medio día (3-4 horas) a ¥40,000-50,000 equivale a unos ¥10,000-13,000/hora. Día completo (7-8 horas) a ¥60,000-80,000 se acerca a ¥7,500-10,000/hora. Para quienes visitan Tokio por primera vez, suelo recomendar el día completo: cubres más terreno y la ciudad cobra más sentido cuando has visto varios barrios en contexto. Los tours de medio día funcionan mejor cuando tienes un objetivo concreto (una zona, una experiencia) o tiempo limitado.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Cuál es la diferencia entre un tour privado estándar y un tour de lujo en Tokio?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Los tours privados estándar con guía licenciado (¥40,000-80,000 por grupo) cubren todo lo que la mayoría de viajeros realmente necesita: un guía hispanohablante con conocimiento profundo, rutas personalizadas, contexto cultural y planificación previa al viaje. Los servicios de concierge de lujo (¥80,000+ por grupo, a menudo ¥150,000+) suelen añadir un coche con chófer, reservas en restaurantes exclusivos y acceso privado a museos. Para la mayoría de visitantes, el nivel estándar ofrece el 90% de la experiencia a la mitad del precio. El nivel de lujo tiene sentido sobre todo si quieres cero logística o tienes peticiones muy específicas de alta gama.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Cuesta más un guía que habla español que uno que solo habla japonés?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Las tarifas estándar (¥40,000-80,000 por grupo) son la base para guías con licencia que trabajan en idiomas extranjeros como el inglés. Los guías hispanohablantes con licencia somos pocos comparado con los de inglés, por lo que algunos cobran un 10-20% más, especialmente en temporada alta. Todos los guía-intérpretes con licencia nacional (全国通訳案内士) hemos aprobado un examen de idioma extranjero, así que la calidad del idioma está garantizada.
+                  </p>
+                </div>
+                <div>
+                  <h3>
+                    ¿Merece la pena un guía privado para una primera visita a Tokio?
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Para quienes visitan Tokio por primera vez, el valor es mayor en el día 1 o 2 del viaje. Un tour de 4-6 horas (¥45,000-60,000) te ahorra horas de planificación, te ayuda a entender cómo está estructurada la ciudad y te da el contexto cultural que hace más significativo el resto de tu viaje. Muchos clientes me dicen que les "desbloquea" Tokio. Si tu viaje son solo 2-3 días en total, la matemática mejora aún más: estás protegiendo el resto de tu tiempo limitado de perderte o visitar las cosas equivocadas.
+                  </p>
+                </div>
               </div>
             </div>
           
@@ -491,7 +531,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
               url: "https://tanuki-tabi-travel.com/about",
             },
             datePublished: "2026-03-14",
-            dateModified: "2026-03-14",
+            dateModified: "2026-05-17",
             publisher: {
               "@type": "Organization",
               name: "Tanuki Tabi Travel",
@@ -544,6 +584,46 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "En Japón, organizar el transporte para clientes requiere una licencia de agencia de viajes. La mayoría de guías independientes no pueden reservar trenes o autobuses, pero enseñan cómo funciona el sistema y recomiendan las mejores opciones.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Los guías privados en Tokio ofrecen paquetes cerrados?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "La mayoría de guías independientes con licencia ofrecemos tours privados flexibles en lugar de paquetes fijos. Los multi-paradas típicos incluyen Asakusa + Tsukiji (¥45,000), excursión a Kamakura (¥70,000) y tour de día completo por Tokio (¥60,000-80,000).",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Sale más rentable un tour de medio día o de día completo en Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Los tours de día completo ofrecen mejor valor por hora: ¥7,500-10,000/hora frente a ¥10,000-13,000/hora del medio día. Medio día (¥40,000-50,000) funciona mejor para objetivos concretos o tiempo limitado. Día completo (¥60,000-80,000) se recomienda para primera visita.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuál es la diferencia entre un tour privado estándar y un tour de lujo en Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Los tours estándar con guía licenciado (¥40,000-80,000/grupo) incluyen guía con conocimiento profundo y rutas personalizadas. Los servicios de concierge de lujo (¥80,000+, a menudo ¥150,000+) añaden coche con chófer, reservas exclusivas y acceso privado a museos.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cuesta más un guía que habla español en Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Las tarifas estándar (¥40,000-80,000/grupo) son la base. Los guías hispanohablantes con licencia son menos numerosos que los de inglés, por lo que algunos cobran un 10-20% más, especialmente en temporada alta. Todos pasamos el examen nacional 全国通訳案内士.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Merece la pena un guía privado para una primera visita a Tokio?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Para una primera visita, un tour de 4-6 horas (¥45,000-60,000) en el día 1 o 2 es lo más valioso. Te ahorra tiempo de planificación, da contexto cultural y te ayuda a entender la estructura de la ciudad para el resto del viaje.",
                 },
               },
             ],
