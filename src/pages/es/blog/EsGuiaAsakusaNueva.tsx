@@ -134,6 +134,19 @@ const EsGuiaAsakusaNueva = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               El caldero del incienso en el salón principal ya está encendido a primera hora. Los vecinos vienen como parte de su rutina diaria. Se llevan el humo hacia el cuerpo, dirigiéndolo a la parte que necesita curación. Una rodilla dolorida recibe el humo en la rodilla. Un dolor de cabeza, en la cabeza. No es una actuación para turistas; es una práctica espiritual viva que lleva ocurriendo cada mañana desde hace siglos. A las 7 de la mañana puedes colocarte junto al caldero, participar tú mismo del ritual y absorber la experiencia. Al mediodía, estarías luchando contra un muro de palos de selfie.
             </p>
+            <figure className="my-8 mx-auto max-w-[450px]">
+              <img
+                src="/images/tour-photos/asakusa-incense-cauldron-guests.webp"
+                alt="Visitantes echándose el humo del incienso curativo en el caldero del salón principal de Senso-ji"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={1600}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Guiando el ritual del incienso en Senso-ji: una práctica local diaria a la que puedes sumarte si llegas temprano
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Mi recomendación: llega a la estación de Asakusa a las 6:45. Camina hasta la Puerta Kaminarimon. Probablemente estarás a solas con ella, algo extraordinario si piensas que unos 30 millones de personas visitan este punto cada año. Tómate tu tiempo recorriendo la entrada vacía de Nakamise. Llega al salón principal a las 7, haz el ritual del incienso, saca una papeleta de la fortuna y explora el recinto. Hacia las 8:30 empieza a llegar la primera oleada de visitantes. A las 9:30, la transformación es total. Habrás vivido dos versiones distintas de Asakusa en una sola mañana, y entenderás perfectamente por qué insisto en empezar temprano.
             </p>
@@ -149,12 +162,38 @@ const EsGuiaAsakusaNueva = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Kaminarimon: La Puerta del Trueno.</strong> Esta es la entrada icónica, la del enorme farolillo rojo. Piensa en ella como la puerta principal de una catedral. Marca la transición del mundo cotidiano al espacio sagrado. La puerta está flanqueada por dos figuras guardianas feroces. A la derecha está Fujin, el dios del viento, y a la izquierda Raijin, el dios del trueno. Son protectores, porteros espirituales si quieres, que alejan el mal y la desgracia. Sus expresiones talladas son deliberadamente aterradoras, igual que las gárgolas de una catedral gótica sirven para ahuyentar demonios. El farolillo que cuelga entre ellos pesa unos 700 kilogramos y está pintado a mano. Ha sido destruido y reconstruido varias veces a lo largo de la historia, por incendios, terremotos y guerras, y cada vez el barrio ha reunido los fondos para reconstruirlo. El farolillo actual fue donado por la empresa Matsushita Electric (hoy Panasonic) en 1960. Fíjate en la parte inferior del farolillo y verás un dragón tallado, un detalle que casi nadie nota.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-kaminarimon-dragon-detail.webp"
+                alt="Manabu señalando el dragón tallado bajo el farolillo de Kaminarimon en Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Enseñando a los visitantes el dragón tallado bajo el farolillo de Kaminarimon: un detalle que casi nadie nota
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Hozomon: La Puerta de la Casa del Tesoro.</strong> Esta es la segunda puerta, más grande, por la que la mayoría pasa sin pensárselo dos veces. Se llama Puerta de la Casa del Tesoro porque los pisos superiores guardan una colección de sutras budistas antiguos. Mira hacia arriba cuando la atravieses. El techo tiene unos paneles pintados preciosos que pocos visitantes notan. En la cara trasera de esta puerta, mirando hacia el salón principal, encontrarás un par de sandalias de paja enormes (waraji). Miden unos 4,5 metros de alto y pesan alrededor de 500 kilogramos cada una. Fueron tejidas por voluntarios de la Prefectura de Yamagata como ofrenda al templo, y simbolizan el poder de los guardianes budistas. Vienen a decir: "Los protectores de este templo son tan enormes que estas son sus sandalias." Es una pieza maravillosa de narración visual.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Las Papeletas de la Fortuna (Omikuji).</strong> Sacar una fortuna en Senso-ji es casi obligatorio, y el proceso es sencillo: echa una moneda de 100 yenes en la caja, agita el cilindro de metal hasta que caiga un palito numerado, busca el cajón correspondiente y saca tu papeleta de la fortuna. Lo que hace únicas las fortunas de Senso-ji es que aproximadamente el 30% son de "mala suerte" (kyo), un porcentaje mucho más alto que en la mayoría de los templos de Japón. No es un error ni un truco para turistas. Así es como se calculaba tradicionalmente la distribución de fortunas. La mayoría de los otros templos han ajustado silenciosamente sus proporciones con los años para mantener contentos a los visitantes, pero Senso-ji mantiene las proporciones auténticas. Si te toca mala suerte, la tradición es doblar la papeleta y atarla a la rejilla metálica junto al puesto de fortunas. Literalmente dejas la mala suerte en el templo en vez de llevártela contigo. Si te toca buena suerte, guárdala en la cartera.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-omikuji-fortune-drawing.webp"
+                alt="Visitantes sacando papeletas omikuji en el mostrador de Senso-ji en Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Sacando omikuji en Senso-ji: Manabu acompaña a los visitantes en el ritual junto al mostrador de fortunas
+              </figcaption>
+            </figure>
 
             <InlineCTAEs message="¿Quieres descubrir las historias detrás de los templos de Asakusa?" href="/es/tours" />
 
@@ -165,15 +204,15 @@ const EsGuiaAsakusaNueva = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-hoppy-street.webp"
-                alt="Calle Hoppy en Asakusa con faroles e izakayas locales"
+                src="/images/tour-photos/asakusa-backstreet-guiding.webp"
+                alt="Manabu guiando a los visitantes por una calle trasera residencial tranquila en Asakusa con arbustos en flor"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Hoppy Street, el corazón de la vida local de Asakusa, a pocos minutos de Senso-ji
+                Fuera de la calle principal: los callejones residenciales alrededor de Senso-ji donde sigue viva la Asakusa cotidiana
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -201,17 +240,17 @@ const EsGuiaAsakusaNueva = () => {
             <h2 id="section-05-dónde-comer-en-asakusa" className="scroll-mt-20">
               Dónde Comer en Asakusa (Mis Recomendaciones Reales)
             </h2>
-            <figure className="my-8">
+            <figure className="my-8 mx-auto max-w-[450px]">
               <img
-                src="/images/blog/asakusa-street-food.webp"
-                alt="Comida callejera tradicional y senbei (galletas de arroz) en Asakusa"
-                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                src="/images/tour-photos/asakusa-matcha-shop-guiding.webp"
+                alt="Manabu explicando el menú de una tienda tradicional de matcha a los visitantes en una calle lateral de Asakusa"
+                className="w-full h-auto rounded-lg shadow-md"
                 loading="lazy"
-                width={800}
-                height={533}
+                width={1200}
+                height={1600}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Senbei recién hecho a la parrilla y dulces tradicionales: los auténticos sabores de Asakusa
+                Parando en una tienda especializada en matcha en Asakusa: helado de matcha concentrado y cerveza de matcha, hallazgos de calle lateral que te perderías sin guía
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">

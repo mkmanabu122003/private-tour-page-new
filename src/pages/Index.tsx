@@ -669,6 +669,11 @@ const Index = () => {
               <CarouselContent>
                 {[
                   { src: "/images/tour-photos/sumida-river-group-selfie.webp", alt: "Manabu and tour guests pose for a selfie along the Sumida River in Tokyo", caption: "Riverside walk with guests" },
+                  { src: "/images/tour-photos/sumida-river-skytree-view.webp", alt: "Tour guests looking out at Tokyo Skytree from the Sumida River promenade", caption: "Skytree views from the Sumida riverside" },
+                  { src: "/images/tour-photos/asakusa-incense-cauldron-guests.webp", alt: "Guests bathing in healing incense smoke at the Senso-ji main hall cauldron", caption: "Guiding the incense ritual at Senso-ji" },
+                  { src: "/images/tour-photos/asakusa-kaminarimon-dragon-detail.webp", alt: "Manabu pointing out the hidden dragon carving beneath the Kaminarimon lantern in Asakusa", caption: "The hidden dragon under Kaminarimon" },
+                  { src: "/images/tour-photos/asakusa-omikuji-fortune-drawing.webp", alt: "Tour guests drawing omikuji fortune slips at Senso-ji in Asakusa", caption: "Drawing fortunes at Senso-ji" },
+                  { src: "/images/tour-photos/asakusa-nakamise-morning-walk.webp", alt: "Tour guests walking the Nakamise-dori shopping street in Asakusa", caption: "Quiet stroll on Nakamise-dori" },
                   { src: "/images/tour-photos/group-photo.webp", alt: "Group tour with guests at a Tokyo shrine", caption: "Group tour in Tokyo" },
                   { src: "/images/tour-photos/photo1.webp", alt: "Selfie with guests along the Sumida River with Tokyo Skytree in the background", caption: "Strolling along the Sumida River" },
                   { src: "/images/tour-photos/photo2.webp", alt: "Selfie with guests near Tokyo Skytree by the Sumida River", caption: "Near Tokyo Skytree with guests" },
@@ -680,7 +685,7 @@ const Index = () => {
                         <img
                           src={photo.src}
                           alt={photo.alt}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover object-top"
                           loading="lazy"
                           width={600}
                           height={450}

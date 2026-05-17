@@ -147,6 +147,19 @@ const SensojiMostVisited = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The before-8 AM strategy:</strong> This is my number one recommendation, and it works every time. The temple grounds are open around the clock, but the Nakamise shops do not open until around 9:30 or 10 AM. Between 6 and 8 AM, you get the architectural grandeur, the spiritual atmosphere, and the photographic opportunities without the crowds. The main hall opens at 6 AM (6:30 AM from October to March), so you can go inside for morning prayers. The light at this hour is extraordinary: soft, warm, and directional. If you are a photographer, this is non-negotiable. I always tell my clients: the temple you see at 7 AM and the temple you see at noon are essentially two different places.
             </p>
+            <figure className="my-8 mx-auto max-w-[450px]">
+              <img
+                src="/images/tour-photos/asakusa-nakamise-morning-walk.webp"
+                alt="Tour guests walking the Nakamise-dori shopping street in Asakusa before the crowds arrive"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={1600}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Nakamise-dori in the quieter morning hours — when you can actually see the architecture instead of the crowds
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Weekday vs. weekend:</strong> The difference is enormous. A Tuesday morning at Senso-ji has perhaps one-fifth the foot traffic of a Saturday afternoon. If your Tokyo itinerary has any flexibility at all, slot Asakusa into a weekday. Wednesday and Thursday tend to be the quietest. Monday can be slightly busier because some museums are closed that day, pushing more tourists toward outdoor attractions like temples.
             </p>
@@ -168,6 +181,19 @@ const SensojiMostVisited = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The backstreet shrines:</strong> Within a five-minute walk of Senso-ji's main hall, there are over a dozen smaller shrines and temples that receive almost zero tourist traffic. Asakusa Shrine, immediately adjacent to Senso-ji's eastern wall, is criminally overlooked despite being designated an Important Cultural Property with original 1649 architecture. Bentendo, a small octagonal temple on a tiny island in the old Benten Pond (now a park), is beautiful and usually deserted. Imado Shrine, a short walk north, is famous among Japanese visitors for its maneki-neko (lucky cats) and matchmaking prayers but virtually unknown to international tourists.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-backstreet-guiding.webp"
+                alt="Manabu guiding tour guests down a quiet residential backstreet near Senso-ji in Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Off the tourist track — exploring the residential lanes around Senso-ji where the real neighborhood lives
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The Five-Story Pagoda interior:</strong> Most visitors photograph the pagoda from outside and move on. But on certain occasions, particularly during temple festivals and the spring opening period, visitors can access the ground floor, which contains sacred relics from Sri Lanka and Myanmar. Even when the interior is closed, most tourists do not realize that the current pagoda, rebuilt in 1973, stands in a different location from the original destroyed in the 1945 air raids. The original foundation stones are still visible near the northwest corner of the grounds if you know where to look.
             </p>

@@ -584,6 +584,12 @@ const EsIndex = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
+              { src: "/images/tour-photos/sumida-river-group-selfie.webp", alt: "Manabu y los invitados del tour posan para una selfie a lo largo del río Sumida en Tokio", caption: "Paseo junto al río con invitados" },
+              { src: "/images/tour-photos/sumida-river-skytree-view.webp", alt: "Invitados contemplando Tokyo Skytree desde el paseo del río Sumida", caption: "Vistas del Skytree desde la ribera del Sumida" },
+              { src: "/images/tour-photos/asakusa-incense-cauldron-guests.webp", alt: "Invitados recibiendo el humo curativo del incienso en el caldero del salón principal de Senso-ji", caption: "Guiando el ritual del incienso en Senso-ji" },
+              { src: "/images/tour-photos/asakusa-kaminarimon-dragon-detail.webp", alt: "Manabu señalando el dragón tallado bajo el farolillo de Kaminarimon en Asakusa", caption: "El dragón oculto bajo Kaminarimon" },
+              { src: "/images/tour-photos/asakusa-omikuji-fortune-drawing.webp", alt: "Invitados sacando papeletas omikuji en Senso-ji en Asakusa", caption: "Sacando fortunas en Senso-ji" },
+              { src: "/images/tour-photos/asakusa-nakamise-morning-walk.webp", alt: "Invitados recorriendo la calle comercial Nakamise-dori en Asakusa", caption: "Paseo tranquilo por Nakamise-dori" },
               { src: "/images/tour-photos/group-photo.webp", alt: "Foto grupal con invitados durante un tour privado a pie por Tokio", caption: "Tour privado en Tokio" },
               { src: "/images/tour-photos/photo1.webp", alt: "Explorando los monumentos culturales de Tokio en un tour guiado", caption: "Explorando el viejo Tokio juntos" },
               { src: "/images/tour-photos/photo2.webp", alt: "Descubriendo los tesoros ocultos de Tokio con un guía local", caption: "Descubriendo Tokio" },
@@ -594,7 +600,7 @@ const EsIndex = () => {
                   <img
                     src={photo.src}
                     alt={photo.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     loading="lazy"
                     width={600}
                     height={450}

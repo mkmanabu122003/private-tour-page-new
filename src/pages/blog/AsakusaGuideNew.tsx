@@ -95,6 +95,19 @@ const AsakusaGuideNew = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               The incense cauldron at the main hall is already lit by early morning. Locals come here as part of their daily routine. They waft the smoke over themselves, focusing it on whatever part of their body needs healing. A sore knee gets the smoke directed to the knee. A headache gets it waved toward the head. This is not a performance for tourists; this is a living spiritual practice that has been happening here every single morning for centuries. At 7am, you can stand beside the cauldron, participate in the ritual yourself, and actually absorb the experience. At noon, you would be fighting through a wall of selfie sticks.
             </p>
+            <figure className="my-8 mx-auto max-w-[450px]">
+              <img
+                src="/images/tour-photos/asakusa-incense-cauldron-guests.webp"
+                alt="Tour guests waving healing incense smoke over themselves at the Senso-ji main hall cauldron"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={1600}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Guiding the incense ritual at Senso-ji — a daily local practice you can join when you arrive early
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               My recommendation: arrive at Asakusa Station by 6:45am. Walk to Kaminarimon Gate. You will probably be alone with it, which is extraordinary when you consider that roughly 30 million people visit this spot every year. Take your time walking the empty Nakamise approach. Reach the main hall by 7am, do the incense ritual, draw a fortune slip, and explore the grounds. By 8:30am, the first wave of visitors starts to arrive. By 9:30am, the transformation is complete. You will have experienced two different versions of Asakusa in a single morning, and you will understand exactly why I insist on early starts.
             </p>
@@ -110,12 +123,38 @@ const AsakusaGuideNew = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Kaminarimon: The Thunder Gate.</strong> This is the iconic entrance, the one with the massive red lantern. Think of it like the front door of a cathedral. It marks the transition from the ordinary world into sacred space. The gate is flanked by two fierce guardian figures. On the right is Fujin, the god of wind, and on the left is Raijin, the god of thunder. They are protectors, spiritual bouncers if you will, warding off evil and misfortune. Their carved expressions are deliberately terrifying, just like gargoyles on a Gothic cathedral serve to frighten away demons. The lantern between them weighs about 700 kilograms and is hand-painted. It has been destroyed and rebuilt multiple times throughout history, by fire, by earthquake, by war, and each time the neighborhood has raised the funds to rebuild it. The current lantern was donated by the Matsushita Electric company (now Panasonic) in 1960. Look at the bottom of the lantern and you will see a carved dragon, a detail almost everyone misses.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-kaminarimon-dragon-detail.webp"
+                alt="Manabu pointing out the carved dragon on the underside of the Kaminarimon lantern in Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Showing guests the carved dragon on the underside of the Kaminarimon lantern — a detail almost everyone misses
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Hozomon: The Treasure House Gate.</strong> This is the second, larger gate that most people walk through without a second thought. It is called the Treasure House Gate because the upper floors store a collection of ancient Buddhist sutras. Look up as you pass through. The ceiling has beautiful painted panels that few visitors notice. On the back side of this gate, facing the main hall, you will find a pair of enormous straw sandals (waraji). They are about 4.5 meters tall and weigh around 500 kilograms each. They were woven by volunteers in Yamagata Prefecture as an offering to the temple, and they symbolize the power of the Buddhist guardians, essentially saying, "The protectors of this temple are so enormous that these are their shoes." It is a wonderful piece of visual storytelling.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The Fortune Slips (Omikuji).</strong> Drawing a fortune at Senso-ji is practically mandatory, and the experience is straightforward: drop a 100-yen coin in the box, shake the metal cylinder until a numbered stick falls out, then find the corresponding drawer and take your paper fortune. Here is what makes Senso-ji's fortunes unique: roughly 30% of them are "bad luck" (kyo), which is far higher than most temples in Japan. This is not a mistake or a tourist gimmick. This is how traditional fortune distribution was always calculated. Most other temples have quietly adjusted their ratios over the years to keep visitors happy, but Senso-ji maintains the authentic proportions. If you get a bad fortune, the tradition is to fold it and tie it to the metal rack near the fortune stand. You are literally leaving the bad luck at the temple rather than carrying it with you. If you get a good fortune, keep it in your wallet.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-omikuji-fortune-drawing.webp"
+                alt="Tour guests drawing omikuji fortune slips at the Senso-ji counter in Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Drawing omikuji at Senso-ji — Manabu walking guests through the ritual at the fortune counter
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Nitenmon: The Side Gate Almost Nobody Uses.</strong> Most visitors never realize you do not have to enter Senso-ji through Kaminarimon and fight the crowds on Nakamise-dori. Nitenmon, on the east side of the main hall, is a side gate that drops you right next to the five-story pagoda without ever touching the shopping street. What makes it special is that this is one of the few genuine Edo-period survivors left at Senso-ji. The current gate dates from 1649, while most of what you see elsewhere here was reconstructed after WWII firebombing. The two guardian deities flanking Nitenmon are Jikokuten and Zochoten, Buddhist protectors of the east and south, and the name "Niten-mon" literally means "gate of the two deities." Walk up to the temple from the quieter residential streets east of the grounds, enter through Nitenmon, and you will sidestep the main tourist flow entirely while seeing something that is actually historically authentic.
             </p>
@@ -129,15 +168,15 @@ const AsakusaGuideNew = () => {
             </h2>
             <figure className="my-8">
               <img
-                src="/images/blog/asakusa-hoppy-street.webp"
-                alt="Hoppy Street in Asakusa with lanterns and local izakaya"
+                src="/images/tour-photos/asakusa-backstreet-guiding.webp"
+                alt="Manabu guiding tour guests down a quiet residential backstreet in Asakusa with flowering shrubs"
                 className="w-full h-[400px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Hoppy Street, the beating heart of local Asakusa life, just minutes from Senso-ji
+                Off the main street — the residential lanes around Senso-ji where everyday Asakusa still lives
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -168,17 +207,17 @@ const AsakusaGuideNew = () => {
             <h2 id="section-04-where-to-eat-in-asakusa" className="scroll-mt-20">
               Where to Eat in Asakusa (My Actual Picks)
             </h2>
-            <figure className="my-8">
+            <figure className="my-8 mx-auto max-w-[450px]">
               <img
-                src="/images/blog/asakusa-street-food.webp"
-                alt="Traditional street food and senbei rice crackers in Asakusa"
-                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                src="/images/tour-photos/asakusa-matcha-shop-guiding.webp"
+                alt="Manabu explaining a traditional matcha shop's menu to tour guests on an Asakusa side street"
+                className="w-full h-auto rounded-lg shadow-md"
                 loading="lazy"
-                width={800}
-                height={533}
+                width={1200}
+                height={1600}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
-                Freshly grilled senbei and traditional sweets, the real flavors of Asakusa
+                Stopping at a traditional matcha specialty shop in Asakusa — concentrated matcha ice and matcha beer, side-street finds you'd miss without a guide
               </figcaption>
             </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">

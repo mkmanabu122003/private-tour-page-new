@@ -179,18 +179,44 @@ const EsAbout = () => {
       {/* Guest Photo */}
       <section className="py-12">
         <div className="container-section">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
             <figure>
               <img
                 src="/images/tour-photos/asakusa-guest-selfie.webp"
                 alt="Manabu con invitados del tour junto al río Sumida en Asakusa"
-                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                className="w-full h-[300px] md:h-[360px] object-cover rounded-lg shadow-md"
                 loading="lazy"
                 width={800}
                 height={533}
               />
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Con invitados junto al río Sumida en Asakusa — cada tour es una nueva conversación
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/images/tour-photos/sumida-river-skytree-view.webp"
+                alt="Invitados del tour contemplando vistas de Tokyo Skytree desde el paseo del río Sumida con Manabu"
+                className="w-full h-[300px] md:h-[360px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={1600}
+                height={1200}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Una pausa para contemplar el Skytree durante un paseo junto al río en Asakusa
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/images/tour-photos/sumida-river-group-selfie.webp"
+                alt="Manabu e invitados del tour en una caminata privada a lo largo del río Sumida en Tokio"
+                className="w-full h-[300px] md:h-[360px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={600}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Un grupo familiar multigeneracional explorando la ribera en un tour privado
               </figcaption>
             </figure>
           </div>

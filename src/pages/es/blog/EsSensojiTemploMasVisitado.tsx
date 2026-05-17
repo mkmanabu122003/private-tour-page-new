@@ -203,6 +203,19 @@ const EsSensojiTemploMasVisitado = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">La estrategia de antes de las 8 AM:</strong> Es mi recomendación número uno, y funciona siempre. Los terrenos del templo están abiertos las 24 horas, pero las tiendas de Nakamise no abren hasta las 9:30 o las 10. Entre las 6 y las 8 de la mañana, tienes la grandiosidad arquitectónica, la atmósfera espiritual y las oportunidades fotográficas sin las aglomeraciones. El salón principal abre a las 6 AM (a las 6:30 de octubre a marzo), así que puedes entrar para las oraciones matutinas. La luz a esa hora es extraordinaria: suave, cálida y direccional. Si eres fotógrafo, esto es innegociable. Siempre digo a mis clientes: el templo que ves a las 7 de la mañana y el que ves al mediodía son esencialmente dos lugares distintos.
             </p>
+            <figure className="my-8 mx-auto max-w-[450px]">
+              <img
+                src="/images/tour-photos/asakusa-nakamise-morning-walk.webp"
+                alt="Visitantes recorriendo la calle comercial Nakamise-dori en Asakusa antes de que lleguen las multitudes"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+                width={1200}
+                height={1600}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Nakamise-dori en las horas más tranquilas de la mañana: cuando realmente puedes ver la arquitectura en lugar de las multitudes
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Día de semana vs. fin de semana:</strong> La diferencia es enorme. Un martes por la mañana en Senso-ji tiene quizá una quinta parte del tráfico peatonal de un sábado por la tarde. Si tu itinerario en Tokio tiene alguna flexibilidad, coloca Asakusa en un día laborable. Los miércoles y jueves suelen ser los más tranquilos. Los lunes pueden estar algo más concurridos porque algunos museos cierran ese día, lo que empuja a más turistas hacia atracciones al aire libre como los templos.
             </p>
@@ -224,6 +237,19 @@ const EsSensojiTemploMasVisitado = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Los santuarios de las callejuelas:</strong> A menos de cinco minutos a pie del salón principal de Senso-ji hay más de una docena de santuarios y templos más pequeños que no reciben prácticamente ningún turista. El Santuario de Asakusa, justo al lado del muro este de Senso-ji, pasa vergonzosamente desapercibido a pesar de estar designado como Propiedad Cultural Importante, con arquitectura original de 1649. Bentendo, un pequeño templo octogonal sobre una islita en el antiguo estanque de Benten (hoy un parque), es precioso y suele estar desierto. El Santuario Imado, a un corto paseo hacia el norte, es famoso entre los visitantes japoneses por sus maneki-neko (gatos de la suerte) y sus oraciones para encontrar pareja, pero prácticamente desconocido para los turistas internacionales.
             </p>
+            <figure className="my-8">
+              <img
+                src="/images/tour-photos/asakusa-backstreet-guiding.webp"
+                alt="Manabu guiando a los visitantes por una calle trasera residencial tranquila cerca de Senso-ji en Asakusa"
+                className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                loading="lazy"
+                width={800}
+                height={533}
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground text-center">
+                Fuera de la ruta turística: explorando las callejuelas residenciales alrededor de Senso-ji donde late el barrio real
+              </figcaption>
+            </figure>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">El interior de la pagoda de cinco pisos:</strong> La mayoría de los visitantes fotografía la pagoda desde fuera y sigue adelante. Pero en ciertas ocasiones, sobre todo durante festivales del templo y la apertura de primavera, se puede acceder a la planta baja, que contiene reliquias sagradas de Sri Lanka y Myanmar. Incluso cuando el interior está cerrado, la mayoría de los turistas no sabe que la pagoda actual, reconstruida en 1973, se encuentra en una ubicación diferente a la original, destruida en los bombardeos de 1945. Las piedras del cimiento original todavía son visibles cerca de la esquina noroeste del recinto si sabes dónde mirar.
             </p>
