@@ -200,8 +200,19 @@ const FirstTimeTokyoLocalGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               I grew up in Kanazawa, a small city on the Sea of Japan coast that most tourists don't visit. I was raised in Kyoto, surrounded by temples and traditions that to me were just the neighborhood. When I moved to Tokyo and started guiding, I discovered something: what felt ordinary to me was fascinating to visitors.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               That's the real advantage of a local guide. I'm not telling you what I read in a book. I'm sharing how I grew up, what these traditions mean to someone who lives them from the inside, and why certain details that seem insignificant are actually the most important things. You won't find that in any guidebook.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              For specific landmarks first-time visitors often struggle with — like the Imperial Palace booking maze, or how the East Gardens compare to the official tour — see my{" "}
+              <Link to="/blog/imperial-palace-tokyo-tour-2026" className="text-accent hover:underline">
+                Tokyo Imperial Palace Tour 2026 guide
+              </Link>{" "}
+              and{" "}
+              <Link to="/blog/best-tokyo-night-tour-2026" className="text-accent hover:underline">
+                Best Tokyo Night Tour 2026 guide
+              </Link>
+              .
             </p>
 
             {/* CTA */}

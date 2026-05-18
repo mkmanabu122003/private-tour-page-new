@@ -207,8 +207,19 @@ const EsPrimeraVezTokioGuiaLocal = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nací en Kanazawa, una ciudad pequeña en la costa del Mar de Japón que la mayoría de turistas no visitan. Crecí en Kioto, rodeado de templos y tradiciones que para mí eran simplemente el barrio. Cuando me mudé a Tokio y empecé a trabajar como guía, descubrí algo: lo que para mí era normal, para los visitantes era fascinante.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Esa es la ventaja real de un guía local. No te cuento lo que leí en un libro. Te cuento cómo crecí yo, qué significan estas tradiciones para alguien que las vive desde dentro, y por qué ciertos detalles que parecen insignificantes son en realidad lo más importante. Eso no lo encuentras en ninguna guía de viaje.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Para puntos concretos donde los primeros visitantes suelen atascarse — como el laberinto de reserva del Palacio Imperial, o cómo los Jardines del Este se comparan con el tour oficial — mira mi{" "}
+              <Link to="/es/blog/tour-palacio-imperial-tokio-2026" className="text-accent hover:underline">
+                guía del Palacio Imperial 2026
+              </Link>{" "}
+              y mi{" "}
+              <Link to="/es/blog/mejor-tour-nocturno-tokio-2026" className="text-accent hover:underline">
+                guía del Tour Nocturno por Tokio 2026
+              </Link>
+              .
             </p>
 
             {/* CTA */}

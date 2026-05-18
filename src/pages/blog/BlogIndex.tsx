@@ -129,6 +129,26 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
+    slug: "best-tokyo-night-tour-2026",
+    title: "Best Tokyo Night Tour 2026: A Licensed Guide's Honest Pick",
+    description:
+      "Compare private Tokyo night tours in 2026. Licensed guide breaks down 4 routes (Shinjuku, Shibuya, Asakusa, Roppongi), real costs, and Viator vs licensed alternatives.",
+    date: "May 18, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/shinjuku-kabukicho-nightlife.webp",
+  },
+  {
+    slug: "imperial-palace-tokyo-tour-2026",
+    title: "Tokyo Imperial Palace Tour 2026: A Licensed Guide's Complete Guide",
+    description:
+      "How to visit Tokyo Imperial Palace in 2026: official tour (free, 5 AM JST month-start booking), East Gardens (no reservation), or licensed private walking tour.",
+    date: "May 18, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/tours/imperial-palace-gardens.webp",
+  },
+  {
     slug: "narita-vs-haneda",
     title: "Narita vs Haneda: Which Tokyo Airport Is Better in 2026?",
     description:

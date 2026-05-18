@@ -238,8 +238,15 @@ const TokyoIzakayaGuide = () => {
               <li><strong className="text-foreground">Opens doors</strong> — Some of the best bars have no sign and a closed door. Walking in alone feels impossible. Walking in with a local feels natural.</li>
               <li><strong className="text-foreground">Translates the conversation</strong> — The owner starts talking. The person next to you offers a toast. Without a guide, these moments slip away. With one, they become stories.</li>
             </ul>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               My <Link to="/tours/tokyo-night-tour" className="text-accent hover:underline">Tokyo Night Tour</Link> covers 2–3 izakaya spots in one evening, including areas from this guide. Every night is different because I adapt to what you want — quiet bars, lively alleys, or a mix of both.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              For the deeper comparison — what private night tours cost in 2026, how Viator/GetYourGuide group bar hops stack up, and the 4 districts beyond Shinjuku worth a night — see my{" "}
+              <Link to="/blog/best-tokyo-night-tour-2026" className="text-accent hover:underline">
+                Best Tokyo Night Tour 2026 guide
+              </Link>
+              .
             </p>
 
             {/* Practical tips */}

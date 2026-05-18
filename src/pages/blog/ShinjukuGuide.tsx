@@ -188,6 +188,14 @@ const ShinjukuGuide = () => {
               </figcaption>
             </figure>
 
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Planning a Shinjuku evening as part of a wider Tokyo nightlife day? My{" "}
+              <Link to="/blog/best-tokyo-night-tour-2026" className="text-accent hover:underline">
+                Best Tokyo Night Tour 2026 guide
+              </Link>{" "}
+              breaks down 4 districts (Shinjuku, Shibuya, Asakusa, Roppongi) with cost comparisons and Viator vs licensed-guide trade-offs.
+            </p>
+
             <InlineCTA message="Want to discover Shinjuku's hidden side with a local?" href="/contact" />
 
             {/* Omoide Yokocho */}

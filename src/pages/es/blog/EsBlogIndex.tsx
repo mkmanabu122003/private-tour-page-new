@@ -149,6 +149,26 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
+    slug: "mejor-tour-nocturno-tokio-2026",
+    title: "Mejor Tour Nocturno por Tokio 2026: Una Recomendación Honesta de un Guía Oficial",
+    description:
+      "Compara tours nocturnos privados por Tokio en 2026. Guía oficial explica 4 rutas (Shinjuku, Shibuya, Asakusa, Roppongi), costes reales y Viator vs privado.",
+    date: "18 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/blog/shinjuku-kabukicho-nightlife.webp",
+  },
+  {
+    slug: "tour-palacio-imperial-tokio-2026",
+    title: "Tour del Palacio Imperial de Tokio 2026: Guía Completa de un Guía Oficial",
+    description:
+      "Cómo visitar el Palacio Imperial de Tokio en 2026: tour oficial (gratis, reserva a las 5 AM JST), Jardines del Este (sin reserva) o tour privado con guía oficial.",
+    date: "18 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/imperial-palace-gardens.webp",
+  },
+  {
     slug: "nikko-con-guia-vs-solo",
     title: "Nikko desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real",
     description:
