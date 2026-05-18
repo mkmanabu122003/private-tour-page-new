@@ -119,6 +119,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/hakone-pirate-ship-ashi.webp",
   },
   {
+    slug: "private-mount-fuji-tour-2026",
+    title: "Private Mt. Fuji Tour from Tokyo 2026: A Licensed Guide's Guide",
+    description:
+      "Compare private Mt. Fuji tours from Tokyo in 2026. Licensed guide breaks down 3 routes, real costs (¥30,000–¥120,000), what's included, and Viator vs private alternatives.",
+    date: "May 18, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+  },
+  {
     slug: "narita-vs-haneda",
     title: "Narita vs Haneda: Which Tokyo Airport Is Better in 2026?",
     description:

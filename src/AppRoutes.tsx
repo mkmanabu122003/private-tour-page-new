@@ -53,6 +53,7 @@ import FirstTimeTokyoLocalGuide from "./pages/blog/FirstTimeTokyoLocalGuide";
 import TokyoCherryBlossomGuide from "./pages/blog/TokyoCherryBlossomGuide";
 import TsukijiVsToyosu from "./pages/blog/TsukijiVsToyosu";
 import MountFujiFromTokyo from "./pages/blog/MountFujiFromTokyo";
+import PrivateMountFujiTour2026 from "./pages/blog/PrivateMountFujiTour2026";
 import HarajukuVsShibuyaVsShinjuku from "./pages/blog/HarajukuVsShibuyaVsShinjuku";
 import NaritaVsHaneda from "./pages/blog/NaritaVsHaneda";
 import OnsenDayTripsBeyondHakone from "./pages/blog/OnsenDayTripsBeyondHakone";
@@ -95,6 +96,7 @@ import EsJapanRailPass from "./pages/es/blog/EsJapanRailPass";
 import EsTemplosFamososJapon from "./pages/es/blog/EsTemplosFamososJapon";
 import EsItinerarioTokio5Dias from "./pages/es/blog/EsItinerarioTokio5Dias";
 import EsMonteFujiSeVeDesdeTokio from "./pages/es/blog/EsMonteFujiSeVeDesdeTokio";
+import EsTourPrivadoMonteFuji2026 from "./pages/es/blog/EsTourPrivadoMonteFuji2026";
 import EsExcursionNikkoDesdeTokio from "./pages/es/blog/EsExcursionNikkoDesdeTokio";
 import EsKamakuraDesdeTokio from "./pages/es/blog/EsKamakuraDesdeTokio";
 import EsYanakaTokio from "./pages/es/blog/EsYanakaTokio";
@@ -189,6 +191,7 @@ const AppRoutes = () => (
         <Route path="/blog/tokyo-cherry-blossom-guide" element={<TokyoCherryBlossomGuide />} />
         <Route path="/blog/tsukiji-vs-toyosu" element={<TsukijiVsToyosu />} />
         <Route path="/blog/mount-fuji-from-tokyo" element={<MountFujiFromTokyo />} />
+        <Route path="/blog/private-mount-fuji-tour-2026" element={<PrivateMountFujiTour2026 />} />
         <Route path="/blog/harajuku-vs-shibuya-vs-shinjuku" element={<HarajukuVsShibuyaVsShinjuku />} />
         <Route path="/blog/narita-vs-haneda" element={<NaritaVsHaneda />} />
         <Route path="/blog/onsen-day-trips-beyond-hakone" element={<OnsenDayTripsBeyondHakone />} />
@@ -232,6 +235,7 @@ const AppRoutes = () => (
         <Route path="/es/blog/templos-famosos-japon" element={<EsTemplosFamososJapon />} />
         <Route path="/es/blog/itinerario-tokio-5-dias" element={<EsItinerarioTokio5Dias />} />
         <Route path="/es/blog/monte-fuji-se-ve-desde-tokio" element={<EsMonteFujiSeVeDesdeTokio />} />
+        <Route path="/es/blog/tour-privado-monte-fuji-2026" element={<EsTourPrivadoMonteFuji2026 />} />
         <Route path="/es/blog/excursion-nikko-desde-tokio" element={<EsExcursionNikkoDesdeTokio />} />
         <Route path="/es/blog/kamakura-desde-tokio" element={<EsKamakuraDesdeTokio />} />
         <Route path="/es/blog/yanaka-tokio-itinerario" element={<EsYanakaTokio />} />

@@ -139,6 +139,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/hakone-pirate-ship-ashi.webp",
   },
   {
+    slug: "tour-privado-monte-fuji-2026",
+    title: "Tour Privado al Monte Fuji desde Tokio 2026: Guía de un Guía Oficial",
+    description:
+      "Compara tours privados al Monte Fuji desde Tokio en 2026. Guía oficial explica 3 rutas, costes reales (¥30.000–¥120.000), qué incluye y Viator vs privado.",
+    date: "18 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+  },
+  {
     slug: "nikko-con-guia-vs-solo",
     title: "Nikko desde Tokio 2026: ¿Con Guía o por tu Cuenta? Comparativa Real",
     description:

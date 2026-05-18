@@ -363,12 +363,19 @@ const EsMonteFujiSeVeDesdeTokio = () => {
               </Link>
               {" "}es la respuesta práctica. Incluye las vistas del Fuji que obtendrías de un tour dedicado al Monte Fuji, más el crucero por el Lago Ashi, una experiencia onsen y el Museo al Aire Libre. El Fuji aparece varias veces a lo largo del día en lugar de como una sola parada fotográfica — y en días despejados, la silueta desde el Lago Ashi es una de las vistas clásicas de la montaña.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Para un itinerario más centrado en Kawaguchiko (más cerca de la montaña, fotos directas del Fuji como sujeto),{" "}
               <Link to="/es/contact" className="text-accent hover:underline">
                 escríbeme
               </Link>
               {" "}y podemos construir un plan personalizado.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Para la comparación a fondo — qué cuestan los tours privados en 2026, qué incluyen y cómo se posicionan los autobuses OTA frente a un privado con guía oficial — mira mi{" "}
+              <Link to="/es/blog/tour-privado-monte-fuji-2026" className="text-accent hover:underline">
+                guía del tour privado al Monte Fuji 2026
+              </Link>
+              .
             </p>
 
             {/* Preguntas frecuentes */}

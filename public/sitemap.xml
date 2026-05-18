@@ -359,6 +359,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tanuki-tabi-travel.com/blog/private-mount-fuji-tour-2026</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tanuki-tabi-travel.com/blog/harajuku-vs-shibuya-vs-shinjuku</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -569,6 +575,12 @@
   <url>
     <loc>https://tanuki-tabi-travel.com/es/blog/monte-fuji-se-ve-desde-tokio</loc>
     <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/blog/tour-privado-monte-fuji-2026</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

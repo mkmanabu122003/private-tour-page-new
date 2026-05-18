@@ -403,12 +403,19 @@ const MountFujiFromTokyo = () => {
               </Link>
               {" "}is the practical answer. It includes the Fuji views you'd get from a dedicated Mt. Fuji tour, plus the Lake Ashi cruise, an onsen experience, and the Open-Air Museum. Fuji shows up multiple times across the day rather than as a single photo stop — and on clear days, the silhouette from Lake Ashi is one of the classic views of the mountain.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               For a more Kawaguchiko-focused itinerary (closer to the mountain, more direct Fuji-as-subject photos),{" "}
               <Link to="/contact" className="text-accent hover:underline">
                 message me
               </Link>
               {" "}and we can build a custom plan.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              For the deeper comparison — what private tours actually cost in 2026, what's included, and how OTA bus tours stack up against a licensed-guide private — see my{" "}
+              <Link to="/blog/private-mount-fuji-tour-2026" className="text-accent hover:underline">
+                Private Mt. Fuji Tour from Tokyo 2026 guide
+              </Link>
+              .
             </p>
 
             <InlineCTA
