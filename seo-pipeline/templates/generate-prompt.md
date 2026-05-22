@@ -105,6 +105,36 @@ EOF
 
 > PR作成は **Draft 状態** で作る。Manabuさんが採用判断するまで mergeable にしない運用。
 
+### Step 7: Slack #tour-guide に通知
+
+PR 作成が成功したら、Slack の `#tour-guide` チャンネルに以下のフォーマットで投稿してください（Slack connector 経由）：
+
+```
+📝 *本日のSEO Brief 生成完了*
+
+*記事案*: <{PR URL}|{EN title}>
+*カテゴリ*: {category}
+*優先度*: {priority}
+*リスク*: duplicate={duplicate_risk} / competitor={competitor_difficulty} / ai_overview={ai_overview_risk}
+
+*なぜこの案か*: {Why this article セクションを1-2文で要約}
+
+朝の確認をお願いします → {PR URL}
+```
+
+実装方法：
+
+1. Slack MCP connector が有効になっているはず（Routine の Connectors タブで Slack ON）
+2. 利用可能なツール（`slack_send_message` 等）を使って `#tour-guide` チャンネルに上記メッセージを送信
+3. チャンネル指定はまず `#tour-guide` で試し、失敗したら channel ID（Manabuさんが Slack の About 画面から取得して prompt に埋め込む）で再試行
+
+通知失敗した場合：
+- Slack connector が有効か Routine の Connectors タブで確認
+- Slack 側で Claude bot が #tour-guide に招待されているか確認
+- どちらも問題なければ Routine 実行ログにエラー詳細を残して exit（次回手動 trigger でユーザーが対処）
+
+> Slack 通知が失敗しても brief 自体の生成・PR 作成は成功扱いとする。通知は補助手段、main artifact は GitHub PR。
+
 ## ガードレール（厳守）
 
 1. **1日1ペアまで** — 既に今日のbriefが `briefs/` にあれば、新規生成しない（重複出力防止）

@@ -9,9 +9,9 @@
 
 | 時間帯 | 場所 | 何をやる | ツール |
 |---|---|---|---|
-| 07:00 | （自動） | Routine が brief 生成 → Draft PR 作成 | Anthropic Routine |
-| 朝（任意） | スマホ / PC | GitHub通知メールでPR存在を知る | Gmail |
-| 電車中 | スマホ | brief 本文をじっくり読む | GitHub Mobile |
+| 07:00 | （自動） | Routine が brief 生成 → Draft PR 作成 → Slack 通知 | Anthropic Routine |
+| 朝（任意） | スマホ | Slack `#tour-guide` の通知を確認 | Slack |
+| 電車中 | スマホ | brief 本文をじっくり読む | GitHub Mobile（推奨） / claude.ai Web / Remote Control |
 | 電車中 | スマホ | PRコメントに **自分宛のメモ**を書く（採用 / 却下 / 再生成希望） | GitHub Mobile |
 | 帰宅後 | PC | コメントを元に対応（下記） | Claude Code / ローカル |
 
@@ -19,13 +19,43 @@
 
 ## ステップ1：朝の確認（5分以内、スキマ時間）
 
-### A. ブランチ閲覧
+### A. brief の閲覧（モバイル 3つの方法）
 
-GitHub 通知メール or 手動で：
+朝7時頃、`#tour-guide` Slack チャンネルに以下のような通知が届きます：
 
-1. https://github.com/mkmanabu122003/private-tour-page-new/pulls
-2. `brief: 2026-XX-XX — ...` の Draft PR をクリック
-3. 「Files changed」または brief.md を開く
+```
+📝 本日のSEO Brief 生成完了
+記事案: Is Hakone Worth Visiting?
+カテゴリ: Decision Helpers / 優先度: high
+リスク: duplicate=low / competitor=medium / ai_overview=low
+朝の確認をお願いします → https://github.com/.../pull/84
+```
+
+その PR URL を開く方法は3つ：
+
+| 方法 | 操作感 | おすすめ場面 |
+|---|---|---|
+| **A1. GitHub Mobile アプリ** | 最速、PRの diff・本文・コメント全部読める | 電車内で読むだけ。最も実用的 |
+| **A2. claude.ai/code（モバイル Web）** | Claude に「この PR を要約して」と依頼可能 | 長文briefを要約したいとき |
+| **A3. Remote Control（iOS/Android Claude アプリ）** | PCで動作中のClaude Codeセッションをスマホから操作 | PR編集まで行いたいとき（少数派ユースケース） |
+
+### A1. GitHub Mobile（推奨）
+- Google Play / App Store から GitHub アプリ
+- リポジトリ `mkmanabu122003/private-tour-page-new` をスター済みなら通知タブから直接 PR にアクセス可能
+- brief は .md ファイルなので **モバイル UI でちゃんと整形表示**される
+
+### A2. claude.ai/code（モバイル Web）
+- Android Chrome / iOS Safari で `claude.ai/code` を開く
+- 任意のセッションで以下のように依頼：
+  ```
+  PR #84 の内容を要約して、採用すべきか判断材料を3つ教えて
+  ```
+- Claude が gh CLI で PR を取得 → 要約してくれる
+- レスポンシブ対応で操作可能
+
+### A3. Remote Control（Optional）
+PC で Claude Code セッションを動かしておけば、`/remote-control` コマンドで URL/QRコードを発行 → スマホ Claude アプリで接続。電車内でセッション継続が可能。詳細は `code.claude.com/docs/en/remote-control.md`。
+
 
 ### B. 3パターンの判断
 
