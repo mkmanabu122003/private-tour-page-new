@@ -28,9 +28,9 @@ seo-pipeline/
 │   ├── brief.md                  # ブリーフテンプレート
 │   └── generate-prompt.md        # Claude Codeへの生成指示
 ├── docs/
-│   ├── setup-service-account.md  # Service Account 作成手順 (Manabu用)
 │   ├── setup-routine.md          # Anthropic Routine 登録手順
-│   └── operations.md             # 日次運用フロー
+│   ├── setup-slack.md            # Slack #tour-guide 通知連携手順
+│   └── operations.md             # 日次運用フロー（モバイル運用も含む）
 └── archive/
     ├── approved/                 # 採用済み brief（記事化前）
     └── rejected/                 # 不採用 brief（再利用用ストック）
@@ -93,8 +93,8 @@ seo-pipeline/
 
 ## セットアップ（一度だけ）
 
-1. **Service Account 作成** → `docs/setup-service-account.md`
-2. **Anthropic Routine 登録** → `docs/setup-routine.md`
+1. **Anthropic Routine 登録** → `docs/setup-routine.md`
+2. **Slack 通知連携**（推奨） → `docs/setup-slack.md`
 3. **動作確認** → `python3 scripts/fetch_daily.py --dry-run`
 
 ## 運用（毎日）
