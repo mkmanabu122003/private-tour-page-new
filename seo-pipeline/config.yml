@@ -1,0 +1,118 @@
+# Daily SEO Brief Pipeline - 設定ファイル
+# このファイルは毎日のbrief生成の判断軸を決める。3ヶ月ごとに見直す。
+
+site:
+  domain: tanuki-tabi-travel.com
+  gsc_property: https://tanuki-tabi-travel.com/
+  ga4_property_id: "465121981"
+  default_language: en
+  secondary_languages: [es]
+
+# 目標KPI（生成されたbriefがこれに貢献すべき）
+goals:
+  primary:
+    metric: form_submit  # GA4のCV event
+    current_baseline: 27  # /90日（2026-05-22時点）
+    target_3month: 45
+    target_12month: 80
+  secondary:
+    metric: ctr
+    current: 0.254  # %
+    target_3month: 0.50
+    target_12month: 0.80
+  tertiary:
+    metric: clicks
+    current: 777  # /90日
+    target_3month: 1500
+    target_12month: 2500
+
+# 公開ペース（briefは毎日生成、公開はこの範囲に抑える）
+publishing_pace:
+  briefs_per_day: 1  # EN+ES の1ペア
+  target_publishing_per_week: 2  # 2-3ペア（4-6記事）
+  max_publishing_per_month_per_lang: 10  # 月10ペア=20記事まで
+  rationale: |
+    Helpful Content System対策。月10ペア超は量産と検知されるリスク。
+    Manabuの体験加筆ボトルネックも考慮。
+
+# 優先カテゴリ（高ROI順、briefはこの偏りで生成）
+priority_categories:
+  - name: Decision Helpers
+    weight: 30
+    rationale: form_submit に直接寄与。is-it-worth-hiring 0.72% CTRが好例。
+    examples: [group-vs-private, how-to-choose, viator-vs-direct, booking-platforms]
+  - name: Day Trips
+    weight: 25
+    rationale: 既存実績がエース級（Kamakura 23.6分滞在）。クラスター追加のROI高。
+    examples: [enoshima, kawaguchiko-vs-hakone, takao-hike, day-trips-pillar]
+  - name: Practical
+    weight: 20
+    rationale: 計画フェーズの読者を捕捉。CV直前の hotel/area ガイド系。
+    examples: [where-to-stay, with-elderly-parents, english-friendly, rainy-day]
+  - name: Neighborhoods
+    weight: 15
+    rationale: 既存ツアーへの誘導起点。ツアーあり×記事なしの空白を埋める。
+    examples: [ueno, ginza, akihabara, roppongi, marunouchi]
+  - name: Food & Drink
+    weight: 8
+    rationale: Tsukiji以外のジャンル拡張。ただし巨大競合（Time Out等）注意。
+    examples: [wagyu, tempura, yakitori, izakaya-guide]
+  - name: Seasonal
+    weight: 2
+    rationale: タイミング依存。桜（2月公開→3-4月需要）、紅葉（8月公開→10-11月需要）。
+    examples: [cherry-blossom-guide, autumn-foliage, winter-tokyo]
+
+# 避けるべき領域（briefは生成しない、または極めて慎重に）
+avoid:
+  - keyword_pattern: "best ramen tokyo|best sushi tokyo|tokyo top 10"
+    reason: Time Out, Tokyo Cheapo, Japan Guide が完全占拠。DR20では勝てない。
+  - keyword_pattern: "tokyo 3 day itinerary|tokyo 5 day itinerary"
+    reason: Lonely Planet, Two Wandering Soles 等のDR80+サイトが上位独占。
+    exception: ニッチ slant 必須 ("for repeat visitors", "without crowds" 等)
+  - keyword_pattern: "japan visa|japan customs|japan currency"
+    reason: 政府/銀行の公式情報サイトが正解。ニッチサイトでは戦えない。
+  - keyword_pattern: "best ryokan|best onsen tokyo"
+    reason: 予約プラットフォーム（Rakuten, Japanican）が上位。
+
+# Manabu固有の強み（briefの差別化スラントに活用）
+manabu_strengths:
+  - 政府公認ガイド (全国通訳案内士)
+  - 500+ private tours guided
+  - ガイドした全国の実体験（Kamakura, Hakone, Nikko, Mt Fuji 各地）
+  - 日本史・地理の試験勉強済み（一般ガイドは持たない深さ）
+  - ファミリー、シニア、外国人各層へのガイド経験
+  - 英語・スペイン語両対応
+
+# ガードレール（brief生成時の必須チェック）
+guardrails:
+  cannibalization:
+    enabled: true
+    threshold: 0.7  # 既存記事との H2 / title重複度がこの値超えなら却下
+  helpful_content:
+    enabled: true
+    max_briefs_per_month: 30  # briefの生成数自体も制限（記事採用率35%で月10公開）
+  manabu_experience:
+    required: true
+    placeholder: "[ここにManabuさんの実体験エピソードを挿入]"
+  fact_check:
+    required: true
+    items_to_check:
+      - 価格（円建て、税込）
+      - 営業時間・定休日
+      - 交通アクセス（駅・路線・時間）
+      - 制度・ルール（ビザ、JRパス、規制等）
+
+# 競合分析（briefに含めるべき情報）
+competitor_check:
+  enabled: true
+  notes: |
+    各briefで「この記事の主要競合は誰か」を明示する。
+    DR80+ が上位独占の領域は避けるか、ニッチslant必須。
+
+# 通知設定
+notifications:
+  enabled: false  # まずはoff。動作確認後に有効化検討
+  channels:
+    - type: email
+      address: mkmanabu122003@gmail.com
+      events: [brief_generated, error]
