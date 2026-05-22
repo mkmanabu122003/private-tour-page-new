@@ -516,6 +516,107 @@ const blogPosts: BlogPost[] = [
     category: "Tokyo Neighborhoods",
     image: "/images/blog/ginza-shopping-street.webp",
   },
+  // 2026-05 batch: Day Trip + Decision Helper + Practical
+  {
+    slug: "best-day-trips-from-tokyo",
+    title: "9 Best Day Trips from Tokyo (Ranked by a Licensed Guide, 2026)",
+    description:
+      "Kamakura, Hakone, Nikko, Mt Fuji, Kawagoe, Enoshima, Yokohama, Mt Takao, Kawaguchiko — a licensed Tokyo guide ranks each by travel time and who they suit.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trips from Tokyo",
+    image: "/images/blog/hakone-lake-ashi-fuji.webp",
+  },
+  {
+    slug: "kawaguchiko-vs-hakone-for-mt-fuji",
+    title: "Kawaguchiko vs Hakone for Mt Fuji: Which to Pick (Local Guide, 2026)",
+    description:
+      "Kawaguchiko = closer views. Hakone = more to do but the Fuji view is conditional. A licensed Tokyo guide compares both for first-time visitors.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trips from Tokyo",
+    image: "/images/blog/hakone-lake-ashi-fuji.webp",
+  },
+  {
+    slug: "enoshima-day-trip-from-tokyo",
+    title: "Enoshima Day Trip from Tokyo 2026: Beaches, Shrines, Kamakura Combo",
+    description:
+      "Enoshima is 1h from Tokyo: shrine cave, beach, sunset views, Mt Fuji on clear days. How to combine with Kamakura and what to eat.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trips from Tokyo",
+    image: "/images/blog/kamakura-great-buddha.webp",
+  },
+  {
+    slug: "group-vs-private-tour-tokyo",
+    title: "Group vs Private Tour in Tokyo: Which Saves Time, Money, or Sanity?",
+    description:
+      "Group ¥3,000–5,000/person, private ¥40,000–80,000/group. A licensed guide explains when group beats private, and the 4 trips where private is the only option.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/tour-photos/group-photo.webp",
+  },
+  {
+    slug: "how-to-choose-private-tokyo-guide",
+    title: "How to Choose a Private Tokyo Guide: 7 Questions to Ask Before Booking",
+    description:
+      "Licensed vs unlicensed, agency vs direct, group size limits, refund terms — what to ask before paying ¥40,000+ for a private Tokyo tour.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/tour-photos/group-photo.webp",
+  },
+  {
+    slug: "viator-vs-getyourguide-vs-direct-tokyo",
+    title: "Viator vs GetYourGuide vs Direct Booking: Tokyo Tours Compared (2026)",
+    description:
+      "Viator and GetYourGuide add ~20–25% commission. A licensed Tokyo guide compares all three with direct booking — real cost, refund terms, and what you get.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/tour-photos/group-photo.webp",
+  },
+  {
+    slug: "where-to-stay-in-tokyo-area-guide",
+    title: "Where to Stay in Tokyo 2026: 7 Areas Ranked by What You're Doing",
+    description:
+      "Shinjuku for nightlife, Asakusa for old Tokyo, Ginza for shopping, Shibuya for first-time. A licensed Tokyo guide picks the area that matches your trip.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
+  },
+  {
+    slug: "tokyo-with-elderly-parents",
+    title: "Tokyo with Elderly Parents: Accessible Routes & 3-Generation Trip Ideas",
+    description:
+      "Wheelchair-friendly Tokyo routes, station tips, half-day pacing, accessible restaurants and onsen. A licensed guide on planning Tokyo for travelers in their 70s and 80s.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/imperial-palace-gardens.webp",
+  },
+  {
+    slug: "english-friendly-tokyo-tips",
+    title: "English-Friendly Tokyo: 12 Tips That Make Tokyo Feel Easier",
+    description:
+      "Translation apps that work, station signs, restaurant strategies, emergency words. A licensed Tokyo guide on the small things that close the language gap.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/tokyo-night-tour-hero.webp",
+  },
+  {
+    slug: "rainy-day-tokyo",
+    title: "Rainy Day in Tokyo: 14 Things to Do When the Weather Turns",
+    description:
+      "Indoor markets, museums, observation decks, depachika — and 3 places that are actually better in the rain. A licensed Tokyo guide on rescuing rainy days.",
+    date: "May 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/tokyo-night-tour-hero.webp",
+  },
 ];
 
 // Order = funnel stage. Decision-stage first (highest CV per inventory data),

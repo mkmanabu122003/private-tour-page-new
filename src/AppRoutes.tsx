@@ -136,6 +136,27 @@ import EsTsukijiExteriorVsInterior from "./pages/es/blog/EsTsukijiExteriorVsInte
 import EsToyosuVsTsukijiExterior from "./pages/es/blog/EsToyosuVsTsukijiExterior";
 import EsHakoneVsNikkoExcursion from "./pages/es/blog/EsHakoneVsNikkoExcursion";
 import EsCancellationPolicy from "./pages/es/EsCancellationPolicy";
+// New 2026-05 batch: Day Trip + Decision Helper + Practical articles
+import BestDayTripsFromTokyo from "./pages/blog/BestDayTripsFromTokyo";
+import KawaguchikoVsHakoneForMtFuji from "./pages/blog/KawaguchikoVsHakoneForMtFuji";
+import EnoshimaDayTripFromTokyo from "./pages/blog/EnoshimaDayTripFromTokyo";
+import GroupVsPrivateTourTokyo from "./pages/blog/GroupVsPrivateTourTokyo";
+import HowToChoosePrivateTokyoGuide from "./pages/blog/HowToChoosePrivateTokyoGuide";
+import ViatorVsGetYourGuideVsDirectTokyo from "./pages/blog/ViatorVsGetYourGuideVsDirectTokyo";
+import WhereToStayInTokyoAreaGuide from "./pages/blog/WhereToStayInTokyoAreaGuide";
+import TokyoWithElderlyParents from "./pages/blog/TokyoWithElderlyParents";
+import EnglishFriendlyTokyoTips from "./pages/blog/EnglishFriendlyTokyoTips";
+import RainyDayTokyo from "./pages/blog/RainyDayTokyo";
+import EsMejoresExcursionesDesdeTokio from "./pages/es/blog/EsMejoresExcursionesDesdeTokio";
+import EsKawaguchikoVsHakoneMonteFuji from "./pages/es/blog/EsKawaguchikoVsHakoneMonteFuji";
+import EsExcursionEnoshimaDesdeTokio from "./pages/es/blog/EsExcursionEnoshimaDesdeTokio";
+import EsTourGrupoVsPrivadoTokio from "./pages/es/blog/EsTourGrupoVsPrivadoTokio";
+import EsComoElegirGuiaPrivadoTokio from "./pages/es/blog/EsComoElegirGuiaPrivadoTokio";
+import EsViatorVsGetYourGuideVsDirectoTokio from "./pages/es/blog/EsViatorVsGetYourGuideVsDirectoTokio";
+import EsDondeAlojarseEnTokio from "./pages/es/blog/EsDondeAlojarseEnTokio";
+import EsTokioConPadresMayores from "./pages/es/blog/EsTokioConPadresMayores";
+import EsTokioParaNoAnglohablantes from "./pages/es/blog/EsTokioParaNoAnglohablantes";
+import EsDiaDeLluviaEnTokio from "./pages/es/blog/EsDiaDeLluviaEnTokio";
 
 const queryClient = new QueryClient();
 
@@ -278,6 +299,27 @@ const AppRoutes = () => (
         <Route path="/es/blog/tsukiji-mercado-exterior-vs-interior" element={<EsTsukijiExteriorVsInterior />} />
         <Route path="/es/blog/toyosu-vs-tsukiji-exterior" element={<EsToyosuVsTsukijiExterior />} />
         <Route path="/es/blog/hakone-vs-nikko-excursion" element={<EsHakoneVsNikkoExcursion />} />
+        {/* New 2026-05 batch */}
+        <Route path="/blog/best-day-trips-from-tokyo" element={<BestDayTripsFromTokyo />} />
+        <Route path="/blog/kawaguchiko-vs-hakone-for-mt-fuji" element={<KawaguchikoVsHakoneForMtFuji />} />
+        <Route path="/blog/enoshima-day-trip-from-tokyo" element={<EnoshimaDayTripFromTokyo />} />
+        <Route path="/blog/group-vs-private-tour-tokyo" element={<GroupVsPrivateTourTokyo />} />
+        <Route path="/blog/how-to-choose-private-tokyo-guide" element={<HowToChoosePrivateTokyoGuide />} />
+        <Route path="/blog/viator-vs-getyourguide-vs-direct-tokyo" element={<ViatorVsGetYourGuideVsDirectTokyo />} />
+        <Route path="/blog/where-to-stay-in-tokyo-area-guide" element={<WhereToStayInTokyoAreaGuide />} />
+        <Route path="/blog/tokyo-with-elderly-parents" element={<TokyoWithElderlyParents />} />
+        <Route path="/blog/english-friendly-tokyo-tips" element={<EnglishFriendlyTokyoTips />} />
+        <Route path="/blog/rainy-day-tokyo" element={<RainyDayTokyo />} />
+        <Route path="/es/blog/mejores-excursiones-desde-tokio" element={<EsMejoresExcursionesDesdeTokio />} />
+        <Route path="/es/blog/kawaguchiko-vs-hakone-monte-fuji" element={<EsKawaguchikoVsHakoneMonteFuji />} />
+        <Route path="/es/blog/excursion-enoshima-desde-tokio" element={<EsExcursionEnoshimaDesdeTokio />} />
+        <Route path="/es/blog/tour-grupo-vs-privado-tokio" element={<EsTourGrupoVsPrivadoTokio />} />
+        <Route path="/es/blog/como-elegir-guia-privado-tokio" element={<EsComoElegirGuiaPrivadoTokio />} />
+        <Route path="/es/blog/viator-vs-getyourguide-vs-directo-tokio" element={<EsViatorVsGetYourGuideVsDirectoTokio />} />
+        <Route path="/es/blog/donde-alojarse-en-tokio" element={<EsDondeAlojarseEnTokio />} />
+        <Route path="/es/blog/tokio-con-padres-mayores" element={<EsTokioConPadresMayores />} />
+        <Route path="/es/blog/tokio-para-no-anglohablantes" element={<EsTokioParaNoAnglohablantes />} />
+        <Route path="/es/blog/dia-de-lluvia-en-tokio" element={<EsDiaDeLluviaEnTokio />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

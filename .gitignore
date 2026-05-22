@@ -27,3 +27,4 @@ dist-ssr
 public/images/candidates/
 .aidesigner/*
 !.aidesigner/.gitkeep
+public/preview/
