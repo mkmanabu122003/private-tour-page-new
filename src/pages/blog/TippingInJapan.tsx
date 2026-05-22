@@ -11,8 +11,8 @@ const TippingInJapan = () => {
   return (
     <Layout>
       <SEO
-        title="Tipping in Japan 2026: Restaurants, Hotels & Taxis"
-        description="No, you don't tip in Japan — but there are 3 exceptions. A local guide explains the etiquette for restaurants, hotels, taxis, and ryokan stays."
+        title="Tipping in Japan: No (But Here Are 3 Real Exceptions)"
+        description="Don't tip at restaurants, taxis, or hotels — you'll cause confusion or offense. The 3 places where money does change hands (ryokan, private guides, traditional inns) and how to do it right."
         canonicalPath="/blog/tipping-in-japan"
         breadcrumbs={[
           { name: "Home", path: "/" },

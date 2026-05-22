@@ -87,47 +87,47 @@ const TsukijiMarketGuide = () => {
               <p className="font-semibold text-foreground mb-3">Jump to a section</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
                 <li>
-                  <a href="#hours" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-01-tsukiji-outer-market-hours" className="text-foreground hover:text-accent hover:underline">
                     Tsukiji Market Hours
                   </a>
                 </li>
                 <li>
-                  <a href="#what-happened" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-02-what-happened-to-tsukiji" className="text-foreground hover:text-accent hover:underline">
                     What Happened to Tsukiji
                   </a>
                 </li>
                 <li>
-                  <a href="#outer-market" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-03-whats-still-there" className="text-foreground hover:text-accent hover:underline">
                     What's Still There: The Outer Market
                   </a>
                 </li>
                 <li>
-                  <a href="#tamagoyaki" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-04-tamagoyaki" className="text-foreground hover:text-accent hover:underline">
                     Tamagoyaki: The Icon
                   </a>
                 </li>
                 <li>
-                  <a href="#sushi" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-04-sushi" className="text-foreground hover:text-accent hover:underline">
                     Fresh Sushi: Standing Up
                   </a>
                 </li>
                 <li>
-                  <a href="#kaisendon" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-04-kaisendon" className="text-foreground hover:text-accent hover:underline">
                     Seafood Rice Bowls (Kaisendon)
                   </a>
                 </li>
                 <li>
-                  <a href="#pickles" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-04-pickles" className="text-foreground hover:text-accent hover:underline">
                     Pickles & Souvenirs
                   </a>
                 </li>
                 <li>
-                  <a href="#how-to-get-there" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-05-how-to-get-there-and-when-to-arrive" className="text-foreground hover:text-accent hover:underline">
                     How to Get There
                   </a>
                 </li>
                 <li>
-                  <a href="#tsukiji-vs-toyosu" className="text-foreground hover:text-accent hover:underline">
+                  <a href="#section-06-tsukiji-vs-toyosu" className="text-foreground hover:text-accent hover:underline">
                     Tsukiji vs. Toyosu
                   </a>
                 </li>
@@ -162,7 +162,7 @@ const TsukijiMarketGuide = () => {
                 including "tsukiji market opening hours" (700/mo), "tsukiji fish market
                 opening hours" (1,400/mo), "what time does tsukiji market close". */}
             <div className="section-eyebrow"><span>Section 01 · Tsukiji Market Opening Hours</span></div>
-            <h2 id="hours" className="scroll-mt-20">
+            <h2 id="section-01-tsukiji-outer-market-hours" className="scroll-mt-20">
               Tsukiji Market Opening Hours (2026): The Complete Guide
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -296,7 +296,7 @@ const TsukijiMarketGuide = () => {
 
             {/* Section 1: What Happened */}
             <div className="section-eyebrow"><span>Section 02 · What Happened to Tsukiji</span></div>
-            <h2 id="what-happened" className="scroll-mt-20">
+            <h2 id="section-02-what-happened-to-tsukiji" className="scroll-mt-20">
               What Happened to Tsukiji (The Quick Version)
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -314,7 +314,7 @@ const TsukijiMarketGuide = () => {
 
             {/* Section 2: The Outer Market */}
             <div className="section-eyebrow"><span>Section 03 · What's Still There</span></div>
-            <h2 id="outer-market" className="scroll-mt-20">
+            <h2 id="section-03-whats-still-there" className="scroll-mt-20">
               What's Still There: The Outer Market
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -355,7 +355,7 @@ const TsukijiMarketGuide = () => {
               This is the part of my tsukiji guide where I get to share what I actually eat when I'm here, not as a guide performing for clients, but as someone who genuinely loves this market and has strong opinions about its food. Come hungry. Seriously. Skip breakfast at the hotel. You'll want the stomach space.
             </p>
 
-            <h3 id="tamagoyaki" className="scroll-mt-20">
+            <h3 id="section-04-tamagoyaki" className="scroll-mt-20">
               Tamagoyaki: The Icon
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -378,7 +378,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 id="sushi" className="scroll-mt-20">
+            <h3 id="section-04-sushi" className="scroll-mt-20">
               Fresh Sushi: Standing Up, As It Should Be
             </h3>
             <figure className="my-8">
@@ -415,7 +415,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 id="kaisendon" className="scroll-mt-20">
+            <h3 id="section-04-kaisendon" className="scroll-mt-20">
               Seafood Rice Bowls (Kaisendon)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -436,7 +436,7 @@ const TsukijiMarketGuide = () => {
               </figcaption>
             </figure>
 
-            <h3 id="pickles" className="scroll-mt-20">
+            <h3 id="section-04-pickles" className="scroll-mt-20">
               Pickles and Dried Goods: The Souvenirs Worth Buying
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -465,7 +465,7 @@ const TsukijiMarketGuide = () => {
 
             {/* Section 4: Getting There */}
             <div className="section-eyebrow"><span>Section 05 · How to Get There and When to Arrive</span></div>
-            <h2 id="how-to-get-there" className="scroll-mt-20">
+            <h2 id="section-05-how-to-get-there-and-when-to-arrive" className="scroll-mt-20">
               How to Get There and When to Arrive
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -496,7 +496,7 @@ const TsukijiMarketGuide = () => {
 
             {/* Section 5: Tsukiji vs Toyosu */}
             <div className="section-eyebrow"><span>Section 06 · Tsukiji vs. Toyosu</span></div>
-            <h2 id="tsukiji-vs-toyosu" className="scroll-mt-20">
+            <h2 id="section-06-tsukiji-vs-toyosu" className="scroll-mt-20">
               Tsukiji vs. Toyosu: Should You Visit Both?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">

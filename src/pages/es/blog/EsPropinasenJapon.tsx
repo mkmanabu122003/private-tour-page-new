@@ -12,8 +12,8 @@ const EsPropinasenJapon = () => {
   return (
     <Layout>
       <SEO
-        title="Propinas en Japón 2026: Restaurantes, Hoteles, Taxis y Guías"
-        description="No, en Japón no se deja propina — pero hay 3 excepciones. Un guía local explica la etiqueta en restaurantes, hoteles, taxis y ryokanes."
+        title="Propinas en Japón: No (Pero Hay 3 Excepciones Reales)"
+        description="No dejes propina en restaurantes, taxis ni hoteles — causarás confusión u ofensa. Los 3 lugares donde el dinero sí cambia de manos (ryokan, guías privados, posadas tradicionales) y cómo hacerlo bien."
         canonicalPath="/es/blog/propinas-en-japon"
         hreflang={[
           { lang: "es", path: "/es/blog/propinas-en-japon" },

@@ -442,7 +442,7 @@ const DayTripComparison = () => {
       </section>
       </div>
 
-      <RelatedTourCards tourIds={["custom"]} showViewAll />
+      <RelatedTourCards tourIds={["kamakura-day-trip", "hakone-day-trip", "nikko-day-trip", "custom"]} showViewAll />
 
       {/* BlogPosting Schema */}
       <script

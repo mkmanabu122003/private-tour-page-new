@@ -11,8 +11,8 @@ const TempleEtiquette = () => {
   return (
     <Layout>
       <SEO
-        title="How to Pray at a Japanese Shrine: Bow-Clap-Bow & 5 Common Mistakes"
-        description="Step-by-step: purification at the temizuya, the two-bow two-clap one-bow prayer, photo etiquette, and dress code. What a licensed Tokyo guide sees tourists get wrong every day."
+        title="Japan Shrine & Temple Etiquette: 7 Things That Quietly Offend Locals"
+        description="Bowing, clapping, photos, money — and 4 small mistakes that mark you as rude before you say a word. A licensed Tokyo guide explains the rules in plain English."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
         breadcrumbs={[
           { name: "Home", path: "/" },

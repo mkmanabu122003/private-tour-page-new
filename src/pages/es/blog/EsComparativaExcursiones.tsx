@@ -435,7 +435,7 @@ const EsComparativaExcursiones = () => {
         </div>
       </section>
 
-      <RelatedTourCards tourIds={["custom"]} lang="es" showViewAll />
+      <RelatedTourCards tourIds={["kamakura-day-trip", "hakone-day-trip", "nikko-day-trip", "custom"]} lang="es" showViewAll />
 
       {/* BlogPosting Schema */}
       <script

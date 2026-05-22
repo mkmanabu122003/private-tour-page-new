@@ -12,8 +12,8 @@ const EsEtiquetaTemplos = () => {
   return (
     <Layout>
       <SEO
-        title="Cómo Rezar en un Santuario Japonés: Reverencia-Aplauso y 5 Errores"
-        description="Paso a paso: purificación en el temizuya, la secuencia de dos reverencias, dos aplausos y una reverencia, normas de fotos y vestimenta. Lo que un guía oficial en Tokio ve hacer mal a los turistas cada día."
+        title="Etiqueta en Templos y Santuarios de Japón: 7 Errores que Ofenden Silenciosamente"
+        description="Reverencias, aplausos, fotos, dinero — y 4 pequeños errores que te delatan como turista antes de hablar. Un guía oficial de Tokio explica las normas en español claro."
         canonicalPath="/es/blog/etiqueta-templos-santuarios"
         hreflang={[
           { lang: "en", path: "/blog/japan-temple-shrine-etiquette" },
