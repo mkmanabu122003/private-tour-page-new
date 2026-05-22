@@ -1,6 +1,18 @@
 # Brief Regenerate — Claude Code Routine への指示
 
-このプロンプトは「Regenerate Brief」Routine（電車内でManabuさんがモバイルから手動trigger）に登録するものです。
+> **⚠️ Optional / 通常運用では不要**
+>
+> 通常は **Claude Code 対話セッションで直接再生成依頼** する運用（`docs/operations.md` のケース3参照）。
+> Android Claude モバイルアプリで Routines が未対応のため、電車内手動trigger の前提が崩れている。
+>
+> この Routine を登録すべき場合：
+> - iPad / タブレットで claude.ai Web 版から triggerしたい
+> - 何らかの自動化（GitHub Actions等）から trigger したい
+> - 将来 Android アプリで Routines が対応された場合
+>
+> 単発の再生成は Claude Code 対話の方がコンテキスト調整しやすく確実です。
+
+このプロンプトは「Regenerate Brief」Routine に登録するものです（任意）。
 
 ---
 
