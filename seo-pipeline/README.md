@@ -25,8 +25,10 @@ seo-pipeline/
 │   └── daily/                    # 日次データ蓄積 (YYYY-MM-DD.json)
 ├── briefs/                       # 生成された記事案 (YYYY-MM-DD-{slug}.md)
 ├── templates/
-│   ├── brief.md                  # ブリーフテンプレート
-│   └── generate-prompt.md        # Claude Codeへの生成指示
+│   ├── brief.md                       # ブリーフテンプレート
+│   ├── generate-prompt.md             # Routine ①: Daily Brief Generation
+│   ├── build-article-routine-prompt.md  # Routine ②: Build Article (semi-auto)
+│   └── regenerate-prompt.md           # Optional: モバイル再生成Routine
 ├── docs/
 │   ├── setup-routine.md          # Anthropic Routine 登録手順
 │   ├── setup-slack.md            # Slack #tour-guide 通知連携手順
@@ -70,20 +72,25 @@ seo-pipeline/
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  Manabuさん 朝/電車中（モバイル GitHub、読むだけ）            │
-│  ⑤ Draft PR を開いて brief.md を読む                         │
-│  ⑥ PR コメントに「採用 / 却下 / 再生成希望」をメモ           │
+│  Manabuさん 朝/電車内（GitHub Mobile、3-5分） ★完結         │
+│  採用 → ⑤ brief.md を直接編集（Manabu独自エピソード追記）   │
+│         status: pending → approved に変更 + commit           │
+│         ⑥ PR を Ready for review → Merge                    │
+│  却下 → PR Close + ブランチ削除（タップ2つ）                 │
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  Manabuさん 帰宅後（PC、ケース別）                            │
-│  採用 → ⑦ Manabu独自エピソード追記 → brief PR マージ        │
-│         ⑧ Claude Code起動 → `/build-article {brief-path}`    │
-│         ⑨ feature PR レビュー → main マージ → 自動デプロイ   │
-│         ⑩ GSC でインデックスリクエスト                        │
-│  却下 → PR Close + ブランチ削除                              │
-│  再生成 → Claude Code 対話で「別軸で再生成して」依頼         │
-│            → 同じ brief PR に新版が追記される                │
+│  毎時0分 Routine ② 自動実行 (Build Article)                  │
+│  ⑦ approved brief をスキャン → 該当あれば /build-article    │
+│  ⑧ ファクトチェック + 画像取得 + tsx生成 (EN+ES)             │
+│  ⑨ feature PR 作成 → Slack #tour-guide 通知                  │
+│  ⑩ brief を seo-pipeline/archive/approved/ に移動            │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│  Manabuさん 帰宅後 or 夜（スマホ or PC、5-15分）              │
+│  ⑪ 記事 PR レビュー → マージ → 自動デプロイ                  │
+│  ⑫ 翌日 GSC でインデックスリクエスト                          │
 └─────────────────────────────────────────────────────────────┘
 ```
 

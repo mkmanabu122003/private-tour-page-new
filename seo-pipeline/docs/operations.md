@@ -2,18 +2,20 @@
 
 毎日のSEO記事案を確認・採用・公開するフロー。
 
-**運用方針**: 電車・スマホでは **読むだけ**。再生成・記事化はすべて帰宅後の PC で行う。
-モバイルアプリで Claude Code Routines が未対応のため、シンプルかつ確実な運用を優先。
+**運用方針**: **電車内で採用判断 + commit → 1時間後に記事が自動生成 → 帰宅後マージするだけ**。
+2つの Routine（Brief生成 + Article生成）が連携して、電車内3-5分の作業で記事化まで進む半自動運用。
 
 ## タイムテーブル
 
 | 時間帯 | 場所 | 何をやる | ツール |
 |---|---|---|---|
-| 07:00 | （自動） | Routine が brief 生成 → Draft PR 作成 → Slack 通知 | Anthropic Routine |
+| 07:00 | （自動） | Routine ① が brief 生成 → Draft PR 作成 → Slack 通知 | Anthropic Routine |
 | 朝（任意） | スマホ | Slack `#tour-guide` の通知を確認 | Slack |
-| 電車中 | スマホ | brief 本文をじっくり読む | GitHub Mobile（推奨） / claude.ai Web / Remote Control |
-| 電車中 | スマホ | PRコメントに **自分宛のメモ**を書く（採用 / 却下 / 再生成希望） | GitHub Mobile |
-| 帰宅後 | PC | コメントを元に対応（下記） | Claude Code / ローカル |
+| 電車中 | スマホ | brief 本文をじっくり読む | GitHub Mobile（推奨） |
+| 電車中 | スマホ | **採用なら：brief を直接編集 + commit + マージ** ★これだけで記事化が走る | GitHub Mobile |
+| ~1時間後 | （自動） | Routine ② が approved brief をスキャン → 記事化 → feature PR → Slack 通知 | Anthropic Routine |
+| 帰宅後 / 夜 | スマホ or PC | 記事 PR を確認 → マージ → 自動デプロイ | GitHub Mobile / PC |
+| 翌日 | PC | GSC でインデックスリクエスト（EN+ES 2URL） | GSC Web UI |
 
 ---
 
@@ -57,101 +59,93 @@
 PC で Claude Code セッションを動かしておけば、`/remote-control` コマンドで URL/QRコードを発行 → スマホ Claude アプリで接続。電車内でセッション継続が可能。詳細は `code.claude.com/docs/en/remote-control.md`。
 
 
-### B. 3パターンの判断
+### B. 3パターンの判断 — **すべて電車内で完結**
 
-| 判断 | 電車中の操作 | 帰宅後の操作 |
+| 判断 | 電車中の操作（GitHub Mobile） | 後で発生すること |
 |---|---|---|
-| **採用** | PRコメントに「採用、夜に記事化」と書く | Manabu独自エピソード追記 → マージ → `/build-article` |
-| **却下** | PRコメントに「却下、理由：X」と書く（後で振り返りに使う） | PR Close + ブランチ削除 |
-| **再生成希望** | PRコメントに「再生成、focus on Y」と書く | ローカルで対話セッションから再生成依頼 |
+| **採用** | ①brief を直接編集して Manabu独自エピソード追記 + `status: approved` に変更 + commit ②PR を Ready for review → Merge | 1時間以内に Routine ② が記事PRを自動作成 → Slack 通知。帰宅後 or 夜にその記事PRをマージするだけ |
+| **却下** | PRを Close + ブランチ削除（タップ2つ） | なし |
+| **再生成希望** | `seo-pipeline/regenerate.md` を新規作成して focus指示を書く + commit | 翌朝の Daily Routine が再生成 (要：Daily Routineに該当ロジック追加。または帰宅後対話で対応) |
 
-電車中は **PRコメントに自分宛のメモを書くだけ**。アクション（マージ・削除・再生成）は全部帰宅後。
+**電車内の作業時間: 3-5分**（採用の場合）。記事化（重い処理）は全部 Routine が裏でやる。
 
 ---
 
-## ステップ2：帰宅後の対応（PC、状況別）
+## ステップ2：採用の場合 — 電車内で完結する手順
 
-### ケース1：採用の場合（30-60分）
+### スマホ GitHub Mobile での操作
 
-1. **brief 編集（Manabu独自エピソード追記）**
-   - ローカルで `git checkout claude/daily-brief-{今日の日付}` でブランチ取得
-   - VS Code or Cursor で `seo-pipeline/briefs/{今日の日付}-{slug}.md` を開く
-   - `[ここにManabuさんの実体験エピソードを挿入]` プレースホルダーに具体的な体験を書く
-   - 5-15分の作業
-
-2. **brief PR をマージ**
-   - GitHub Web で PR を Ready for review に変更
-   - Merge（squash でも普通のmerge でもOK）
+1. **brief PR を開く**：Slack 通知 → リンクをタップ → GitHub Mobile アプリで開く
+2. **brief.md を読む**：内容を確認し、採用するか判断
+3. **採用なら .md を直接編集**：
+   - PR の Files changed → brief.md をタップ → 鉛筆アイコン
+   - front matter を編集：
+     ```yaml
+     status: approved          # pending → approved
+     manabu_experience_filled: yes
+     approved_at: 2026-XX-XX
+     ```
+   - 本文の「Differentiation slant」セクションの `[ここにManabuさんの実体験エピソードを挿入]` プレースホルダーに、Manabuさんの実体験を書き込む（3つのスラントすべて）
+   - 「Commit changes」をタップ → commit message を書いて commit（**同じブランチに追記**）
+4. **PR を Ready for review → Merge**：
+   - PR のステータスを Draft → Ready for review に変更
+   - Squash and merge（推奨）
    - これで brief が main ブランチに保存される
 
-3. **Claude Code 起動 → 記事化**
-   ```bash
-   cd /Users/manabu/Desktop/private-tour-page-new
-   claude
-   ```
-   セッション内で：
-   ```
-   /build-article seo-pipeline/briefs/2026-XX-XX-{slug}.md
-   ```
-   Claudeが：
-   - briefを読む（プレースホルダーが残っていれば中止して質問）
-   - 必要なファクトを web search で検証
-   - 画像を選定（プロジェクト内未使用 + Wikimedia）
-   - tsx (EN+ES) 生成
-   - AppRoutes / BlogIndex / sitemap 更新
-   - 型チェック
-   - feature ブランチ + PR 作成
+### Routine ② が裏で動く（自動）
 
-4. **記事PR レビュー → マージ → デプロイ**
-   - ローカルプレビュー（`npm run dev` → `localhost:8080/blog/{slug}`）で画像・文体確認
-   - 問題なければ GitHub で PRマージ
-   - 自動デプロイ完了を待つ
+5. **次の毎時 0 分に Build Article Routine が起動**：
+   - main の `seo-pipeline/briefs/` をスキャン
+   - 今 commit した brief を発見（status: approved）
+   - `/build-article` skill 実行（ファクトチェック・画像取得・tsx生成・PR作成）
+   - 約15-20分後、feature/article-{slug} ブランチに feature PR が立つ
+   - **Slack #tour-guide に「記事生成完了」通知**
+6. **brief は archive へ自動移動**：次回 Routine 実行で重複処理されないように
 
-5. **インデックスリクエスト**
-   - GSC Web UI でURL検査 → 「インデックス登録をリクエスト」
-   - 1日10件上限、2URL（EN+ES）なら余裕
+### 帰宅後 or 夜：記事 PR をマージ
 
-### ケース2：却下の場合（10秒）
+7. **記事 PR を確認**：
+   - GitHub Mobile or PC でレビュー
+   - PC でローカルプレビュー推奨（`npm run dev` → `localhost:8080/blog/{slug}`）
+   - 画像・文体・Manabu エピソードの表現に違和感ないか確認
+8. **問題なければマージ**：自動デプロイ
+9. **翌日 GSC でインデックスリクエスト**（PC、1日10件上限）
 
-```bash
-gh pr close {PR番号} --delete-branch
-```
+---
 
-または GitHub Web から：
-- PR ページで **Close pull request** → **Delete branch**
+## ケース2：却下の場合（10秒、電車内）
+
+GitHub Mobile で PR を Close + ブランチ削除。
 
 却下理由を PRコメントに書いておくと、Routineの生成傾向を後で振り返るときに役立ちます。
 
-### ケース3：再生成希望の場合（Claude Code 対話、10-15分）
+---
 
-ローカルで Claude Code を起動：
+## ケース3：再生成希望の場合
 
-```bash
-cd /Users/manabu/Desktop/private-tour-page-new
-claude
+### A. 電車内で完結（簡易、翌朝生成）
+
+GitHub Mobile で `seo-pipeline/regenerate.md` を新規作成：
+
+```yaml
+target_brief: 2026-XX-XX-{slug}.md
+reason: 「worth it 系より、Hakone vs Kawaguchiko 比較の方が CV に近そう」
+new_focus: Decision Helper として「箱根と河口湖どっちにすべきか」
+keep: Manabu の差別化スラント案3つ
 ```
 
-セッション内で自然言語で依頼：
+commit すれば、Daily SEO Brief Routine が翌朝7時に再生成（generate-prompt.md にロジック実装が必要：未実装、Optional 機能）。
+
+### B. 帰宅後の対話セッション（即時、確実）
+
+ローカルで Claude Code を起動して依頼：
 
 ```
-seo-pipeline/briefs/2026-XX-XX-{slug}.md を読んで、別軸で brief を再生成してください。
-
-現状の問題: worth-it 系より、Hakone vs Kawaguchiko 比較の方が CV に近そう
-新しい focus: Decision Helper として「箱根と河口湖どっちにすべきか」
-残したいもの: Manabu の差別化スラント案3つ（富士山が見えない日・秘密スポット・勧めなかった例）
-
-旧briefは seo-pipeline/archive/rejected/ に移動して、新briefは同じ
-claude/daily-brief-{今日の日付} ブランチに追記commitしてください。
+seo-pipeline/briefs/2026-XX-XX-{slug}.md を別軸で再生成。
+focus: 〇〇
 ```
 
-Claudeがその場で：
-- 旧briefを archive
-- 新briefを生成・commit
-- PR に コメント追加
-
-**コスト**: Claude Code セッションは Pro/Max plan の usage 内（追加課金なし）。
-
-> Anthropic Routine の「Regenerate Brief」を使う方式も用意してあります（`templates/regenerate-prompt.md`）。モバイルからtriggerしたい場合に登録してください。通常運用では Claude Code 対話セッションで十分です。
+Claudeがその場で旧brief を archive + 新brief 生成 + PR コメント追記。
 
 ---
 
@@ -199,13 +193,25 @@ KPI 確認（`config.yml` の `goals` セクション）：
 
 ---
 
-## まとめ：Manabuさんの日次タスク
+## まとめ：Manabuさんの日次タスク（半自動運用）
 
-| 時間 | 工数 |
-|---|---|
-| 朝の確認（電車） | 3-5分 |
-| 採用時の記事化（夜） | 30-60分（週2-3回） |
-| 週次振り返り（金曜） | 30分 |
-| 月次レビュー（月1） | 30分 |
+| 時間 | 工数 | 場所 |
+|---|---|---|
+| 朝の確認 + 採用判断（電車） | 3-5分 | スマホ GitHub Mobile |
+| 記事PR レビュー → マージ（夜） | 5-15分（週2-3回） | スマホ or PC |
+| インデックスリクエスト（翌日） | 1分/記事 | PC GSC |
+| 週次振り返り（金曜） | 30分 | PC |
+| 月次レビュー（月1） | 30分 | PC |
 
-合計：**週あたり 1.5-3時間** で 4-6記事公開のペースが回ります。
+合計：**週あたり 30-60分** で 4-6記事公開のペースが回ります（記事化処理20分×4-6本は Routine ② が裏で実行）。
+
+### Routine vs ローカル PC の役割分担
+
+| 処理 | 担当 | 工数 |
+|---|---|---|
+| GSC/GA4 分析 | Routine ①（自動） | 0分 |
+| brief 生成 | Routine ①（自動） | 0分 |
+| 採用判断 + Manabu独自エピソード追記 | **Manabu さん** | **3-5分（電車内）** |
+| ファクトチェック + 画像選定 + tsx生成 | Routine ②（自動） | 0分 |
+| 記事PR レビュー | **Manabu さん** | **5-15分** |
+| インデックスリクエスト | **Manabu さん** | **1分/記事** |
