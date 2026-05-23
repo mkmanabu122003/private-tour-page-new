@@ -617,6 +617,17 @@ const blogPosts: BlogPost[] = [
     category: "Plan Your Trip",
     image: "/images/blog/tokyo-night-tour-hero.webp",
   },
+  // 2026-05-23 batch (from daily brief Routine)
+  {
+    slug: "is-hakone-worth-visiting",
+    title: "Is Hakone Worth Visiting? A Private Guide's Honest Take (2026)",
+    description:
+      "Hakone promises Mt. Fuji views — but the mountain hides more than you'd think. A licensed Tokyo guide shares 50+ tours of insight on when Hakone shines.",
+    date: "May 23, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trips from Tokyo",
+    image: "/images/blog/private-fuji-route-a-hakone.jpg",
+  },
 ];
 
 // Order = funnel stage. Decision-stage first (highest CV per inventory data),

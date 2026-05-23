@@ -157,6 +157,9 @@ import EsDondeAlojarseEnTokio from "./pages/es/blog/EsDondeAlojarseEnTokio";
 import EsTokioConPadresMayores from "./pages/es/blog/EsTokioConPadresMayores";
 import EsTokioParaNoAnglohablantes from "./pages/es/blog/EsTokioParaNoAnglohablantes";
 import EsDiaDeLluviaEnTokio from "./pages/es/blog/EsDiaDeLluviaEnTokio";
+// 2026-05-23 batch: Is Hakone Worth Visiting? (from daily brief Routine)
+import IsHakoneWorthVisiting from "./pages/blog/IsHakoneWorthVisiting";
+import EsValelapenaVisitarHakone from "./pages/es/blog/EsValelapenaVisitarHakone";
 
 const queryClient = new QueryClient();
 
@@ -320,6 +323,9 @@ const AppRoutes = () => (
         <Route path="/es/blog/tokio-con-padres-mayores" element={<EsTokioConPadresMayores />} />
         <Route path="/es/blog/tokio-para-no-anglohablantes" element={<EsTokioParaNoAnglohablantes />} />
         <Route path="/es/blog/dia-de-lluvia-en-tokio" element={<EsDiaDeLluviaEnTokio />} />
+        {/* 2026-05-23 batch */}
+        <Route path="/blog/is-hakone-worth-visiting" element={<IsHakoneWorthVisiting />} />
+        <Route path="/es/blog/vale-la-pena-visitar-hakone" element={<EsValelapenaVisitarHakone />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
