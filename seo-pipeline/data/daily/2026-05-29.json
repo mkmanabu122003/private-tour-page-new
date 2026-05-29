@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-05-29",
+  "window_days": 28,
+  "fetch_status": "api_unavailable",
+  "fetch_note": "Google API client library (googleapiclient) unavailable in execution environment. Brief analysis based on most recent complete dataset: 2026-05-22.json. Re-run fetch_daily.py in a local environment with valid ADC credentials to get today's data.",
+  "fallback_data_date": "2026-05-22",
+  "gsc": {
+    "error": "google-api-python-client unavailable (cffi/cryptography library conflict in execution env)",
+    "see_fallback": "seo-pipeline/data/daily/2026-05-22.json"
+  },
+  "ga4": {
+    "error": "google-api-python-client unavailable (cffi/cryptography library conflict in execution env)",
+    "see_fallback": "seo-pipeline/data/daily/2026-05-22.json"
+  },
+  "analysis_summary": {
+    "based_on": "2026-05-22 data (28-day window: 2026-04-24 to 2026-05-22)",
+    "top_gsc_signals": {
+      "highest_impression_page": "/blog/japan-rail-pass-worth-it (38,565 impr, 15 clicks, pos 8.18)",
+      "highest_click_page": "/blog/tsukiji-market-guide (26,845 impr, 92 clicks, pos 6.52)",
+      "near_page_one": "japan rail pass price 2026 (400 impr, pos 11.92)",
+      "zero_click_leader": "jr pass price increase 2026 (1,121 impr, pos 5.45, 0 clicks)",
+      "new_query_of_note": "hire a guide in tokyo (2 impr, pos 23) / nonbei yokocho walking time from shibuya station (5 impr, pos 10)",
+      "private_tour_signal": "japan private tour guide cost (107 impr, 1 click, pos 9.37)"
+    },
+    "top_ga4_signals": {
+      "total_sessions_28d": 749,
+      "form_submit_28d": 8,
+      "highest_engagement_page": "/blog/tokyo-private-tour-guide-cost (83% engagement, 312s avg duration)",
+      "highest_session_page": "/blog/tsukiji-market-guide (135 organic sessions)",
+      "star_engagement": "/blog/kamakura-vs-hakone-vs-nikko-day-trip (47 sessions, 64% engagement, 2982s avg)",
+      "hidden_gem": "/blog/tsukiji-to-ginza-food-walk (2 sessions, 100% engagement, 806s avg)"
+    },
+    "selected_brief_topic": "solo-traveler-private-tour-tokyo",
+    "selection_rationale": "Decision Helper (30% weight) + highest-engagement-rate cluster (cost/value pages at 83% engagement) + solo traveler angle absent from site + low cannibalization risk + low AI Overview risk"
+  }
+}
