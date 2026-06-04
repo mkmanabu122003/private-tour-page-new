@@ -259,9 +259,15 @@ const EsContact = () => {
                       <option value="">Seleccionar</option>
                       <option value="1">1 persona</option>
                       <option value="2">2 personas</option>
-                      <option value="3-4">3-4 personas</option>
-                      <option value="5-6">5-6 personas</option>
-                      <option value="7+">7+ personas</option>
+                      <option value="3">3 personas</option>
+                      <option value="4">4 personas</option>
+                      <option value="5">5 personas</option>
+                      <option value="6">6 personas</option>
+                      <option value="7">7 personas</option>
+                      <option value="8">8 personas</option>
+                      <option value="9">9 personas</option>
+                      <option value="10">10 personas</option>
+                      <option value="10+">Más de 10 personas</option>
                     </select>
                   </div>
                 </div>

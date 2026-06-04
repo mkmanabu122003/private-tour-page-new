@@ -259,9 +259,15 @@ const Contact = () => {
                       <option value="">Select size</option>
                       <option value="1">1 person</option>
                       <option value="2">2 people</option>
-                      <option value="3-4">3-4 people</option>
-                      <option value="5-6">5-6 people</option>
-                      <option value="7+">7+ people</option>
+                      <option value="3">3 people</option>
+                      <option value="4">4 people</option>
+                      <option value="5">5 people</option>
+                      <option value="6">6 people</option>
+                      <option value="7">7 people</option>
+                      <option value="8">8 people</option>
+                      <option value="9">9 people</option>
+                      <option value="10">10 people</option>
+                      <option value="10+">More than 10 people</option>
                     </select>
                   </div>
                 </div>
