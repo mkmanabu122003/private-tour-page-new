@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-06-05",
+  "window_days": 28,
+  "fetch_status": "api_error",
+  "fetch_note": "googleapiclient not installed in this environment. Analysis performed using most recent available data (2026-05-22). GSC/GA4 values below are carried forward from that snapshot for reference.",
+  "reference_date": "2026-05-22",
+  "gsc": {
+    "error": "No module named 'googleapiclient'",
+    "reference_data": "see seo-pipeline/data/daily/2026-05-22.json",
+    "window": {
+      "from": "2026-04-24",
+      "to": "2026-05-22"
+    },
+    "totals": {
+      "clicks": 275,
+      "impressions": 101626,
+      "page_count": 154,
+      "query_count": 2556
+    },
+    "top_pages_by_impression_ref": [
+      { "page": "/blog/japan-rail-pass-worth-it", "impressions": 38565, "clicks": 15, "position": 8.18 },
+      { "page": "/blog/tsukiji-market-guide", "impressions": 26845, "clicks": 92, "position": 6.52 },
+      { "page": "/blog/japan-temple-shrine-etiquette", "impressions": 4498, "clicks": 1, "position": 10.82 },
+      { "page": "/blog/kamakura-vs-hakone-vs-nikko-day-trip", "impressions": 3292, "clicks": 37, "position": 6.23 },
+      { "page": "/blog/tokyo-private-tour-guide-cost", "impressions": 2564, "clicks": 11, "position": 7.38 },
+      { "page": "/blog/tsukiji-vs-toyosu", "impressions": 2197, "clicks": 10, "position": 8.1 },
+      { "page": "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo", "impressions": 1414, "clicks": 10, "position": 9.73 }
+    ],
+    "opportunity_signals": {
+      "is_kamakura_worth_visiting": {
+        "query": "is kamakura worth visiting",
+        "impressions": 27,
+        "clicks": 1,
+        "position": 3.11,
+        "ctr": 3.7037,
+        "note": "High-intent decision query at pos 3. No dedicated article exists. is-hakone-worth-visiting pattern already established."
+      },
+      "near_page_one": {
+        "query": "japan rail pass price 2026",
+        "impressions": 400,
+        "clicks": 0,
+        "position": 11.92,
+        "note": "Cannibalization risk HIGH with existing japan-rail-pass-worth-it article."
+      }
+    },
+    "zero_click_opportunities": [
+      { "query": "jr pass price increase 2026", "impressions": 1121, "clicks": 0, "position": 5.45 },
+      { "query": "japan rail pass prices 2026 official", "impressions": 558, "clicks": 0, "position": 7.68 },
+      { "query": "tsukiji outer market official hours 2026", "impressions": 252, "clicks": 0, "position": 3.4 }
+    ],
+    "new_queries_last7": [
+      { "query": "is hakone worth visiting", "impressions": 6, "clicks": 0, "position": 40.83 },
+      { "query": "nonbei yokocho walking time from shibuya station", "impressions": 5, "clicks": 0, "position": 10 },
+      { "query": "best places to see mount fuji from tokyo 2026", "impressions": 4, "clicks": 0, "position": 5.75 }
+    ]
+  },
+  "ga4": {
+    "error": "No module named 'googleapiclient'",
+    "reference_data": "see seo-pipeline/data/daily/2026-05-22.json",
+    "top_organic_landing_pages_ref": [
+      { "page": "/blog/tsukiji-market-guide", "sessions": 135, "engagementRate": 0.533, "avgSessionDuration_sec": 246 },
+      { "page": "/blog/kamakura-vs-hakone-vs-nikko-day-trip", "sessions": 47, "engagementRate": 0.638, "avgSessionDuration_sec": 2983, "note": "49min avg session — top engagement" },
+      { "page": "/blog/tokyo-private-tour-guide-cost", "sessions": 12, "engagementRate": 0.833, "avgSessionDuration_sec": 312, "note": "83% engagement — high CV proximity" },
+      { "page": "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo", "sessions": 14, "engagementRate": 0.429, "avgSessionDuration_sec": 125 }
+    ],
+    "cv_events_ref": {
+      "form_submit": 8,
+      "book_now_click": 20,
+      "contact_page_view": 32,
+      "note": "28-day window ending 2026-05-22"
+    }
+  }
+}
