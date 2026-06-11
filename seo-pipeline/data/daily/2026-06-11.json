@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-06-11",
+  "window_days": 28,
+  "fetch_status": "partial_failure",
+  "fetch_note": "google-auth dependencies unavailable in this environment (cffi/cryptography missing). Analysis uses reference data from 2026-05-22. Set GOOGLE_APPLICATION_CREDENTIALS_JSON secret for live fetches.",
+  "gsc": {
+    "error": "No module named 'googleapiclient' / cffi backend unavailable",
+    "reference_data_used": "2026-05-22"
+  },
+  "ga4": {
+    "error": "No module named 'googleapiclient' / cffi backend unavailable",
+    "reference_data_used": "2026-05-22"
+  }
+}
