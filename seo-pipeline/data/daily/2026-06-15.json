@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-06-15",
+  "window_days": 28,
+  "gsc": {
+    "error": "No module named 'googleapiclient'"
+  },
+  "ga4": {
+    "error": "No module named 'googleapiclient'"
+  }
+}
