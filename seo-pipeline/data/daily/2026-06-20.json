@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-06-20",
+  "window_days": 28,
+  "data_note": "Live GSC/GA4 fetch failed: GOOGLE_APPLICATION_CREDENTIALS_JSON secret not configured in this environment. Analysis uses 2026-05-22 dataset as proxy. To fix: add the ADC service account JSON as the GOOGLE_APPLICATION_CREDENTIALS_JSON secret in Routine Environment settings.",
+  "gsc": {
+    "error": "credentials not available",
+    "proxy_from": "seo-pipeline/data/daily/2026-05-22.json"
+  },
+  "ga4": {
+    "error": "credentials not available",
+    "proxy_from": "seo-pipeline/data/daily/2026-05-22.json"
+  }
+}
