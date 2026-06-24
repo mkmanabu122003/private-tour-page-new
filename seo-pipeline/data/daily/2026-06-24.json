@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-06-24",
+  "window_days": 28,
+  "_note": "Google API fetch failed in this session due to cffi/cryptography native module issue in the execution environment. Analysis performed using 2026-05-22 baseline data (28-day window: 2026-04-24 to 2026-05-22). Brief generation proceeded with that dataset.",
+  "gsc": {
+    "error": "ModuleNotFoundError: No module named '_cffi_backend' (cryptography native extension crash). See _note for fallback.",
+    "_baseline_ref": "2026-05-22.json",
+    "window": {
+      "from": "2026-04-24",
+      "to": "2026-05-22"
+    },
+    "totals": {
+      "clicks": 275,
+      "impressions": 101626,
+      "page_count": 154,
+      "query_count": 2556
+    },
+    "top_pages_by_impression": [
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/japan-rail-pass-worth-it",
+        "clicks": 15,
+        "impressions": 38565,
+        "ctr": 0.0389,
+        "position": 8.18
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tsukiji-market-guide",
+        "clicks": 92,
+        "impressions": 26845,
+        "ctr": 0.3427,
+        "position": 6.52
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/kamakura-vs-hakone-vs-nikko-day-trip",
+        "clicks": 37,
+        "impressions": 3292,
+        "ctr": 1.1239,
+        "position": 6.23
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tokyo-private-tour-guide-cost",
+        "clicks": 11,
+        "impressions": 2564,
+        "ctr": 0.429,
+        "position": 7.38
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/nikko-day-trip-from-tokyo",
+        "clicks": 0,
+        "impressions": 667,
+        "ctr": 0,
+        "position": 23.8
+      }
+    ],
+    "near_page_one_pushup": [
+      {
+        "query": "japan rail pass price 2026",
+        "clicks": 0,
+        "impressions": 400,
+        "ctr": 0,
+        "position": 11.92
+      }
+    ],
+    "zero_click_opportunities": [
+      {
+        "query": "jr pass price increase 2026",
+        "clicks": 0,
+        "impressions": 1121,
+        "ctr": 0,
+        "position": 5.45
+      },
+      {
+        "query": "tsukiji outer market official hours 2026",
+        "clicks": 0,
+        "impressions": 252,
+        "ctr": 0,
+        "position": 3.4
+      }
+    ],
+    "new_queries_last7": [
+      {
+        "query": "is hakone worth visiting",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 40.83
+      },
+      {
+        "query": "best places to see mount fuji from tokyo 2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.75
+      },
+      {
+        "query": "early morning breakfast tokyo",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      }
+    ]
+  },
+  "ga4": {
+    "error": "ModuleNotFoundError: No module named '_cffi_backend' (same crash). See _note for fallback.",
+    "_baseline_ref": "2026-05-22.json",
+    "window": {
+      "from": "2026-04-24",
+      "to": "2026-05-22"
+    },
+    "totals": {
+      "sessions": 749.0,
+      "totalUsers": 623.0,
+      "form_submit": 8.0,
+      "engagementRate": 0.3925,
+      "averageSessionDuration": 306.08
+    },
+    "top_organic_landing_pages": [
+      {
+        "page": "/blog/tsukiji-market-guide",
+        "sessions": 135,
+        "engagementRate": 0.533,
+        "avgDuration_s": 245.9
+      },
+      {
+        "page": "/blog/kamakura-vs-hakone-vs-nikko-day-trip",
+        "sessions": 47,
+        "engagementRate": 0.638,
+        "avgDuration_s": 2982.6
+      },
+      {
+        "page": "/blog/tokyo-private-tour-guide-cost",
+        "sessions": 12,
+        "engagementRate": 0.833,
+        "avgDuration_s": 311.6
+      },
+      {
+        "page": "/blog/nikko-day-trip-guide-vs-solo",
+        "sessions": 2,
+        "engagementRate": 0.5,
+        "avgDuration_s": 373.5
+      }
+    ]
+  }
+}
