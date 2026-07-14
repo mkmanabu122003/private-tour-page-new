@@ -25,11 +25,24 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Block AI training crawlers
-User-agent: GPTBot
-Disallow: /
+# AI search / citation crawlers — ALLOW (surface us with source links in answers)
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# AI training crawlers — BLOCK (no referral value; keep content out of model training)
+User-agent: GPTBot
 Disallow: /
 
 User-agent: CCBot
