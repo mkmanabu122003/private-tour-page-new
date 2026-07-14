@@ -83,4 +83,11 @@ ga4 "{\"dateRanges\":[{\"startDate\":\"$START_DATE\",\"endDate\":\"$END_DATE\"}]
 
 ga4 "{\"dateRanges\":[{\"startDate\":\"$START_DATE\",\"endDate\":\"$END_DATE\"}],\"dimensions\":[{\"name\":\"landingPage\"}],\"metrics\":[{\"name\":\"sessions\"},{\"name\":\"engagedSessions\"},{\"name\":\"conversions\"},{\"name\":\"averageSessionDuration\"}],\"orderBys\":[{\"metric\":{\"metricName\":\"sessions\"},\"desc\":true}],\"limit\":30}" "${TAG}_ga4_landing.json"
 
+# --- AI Assistant channel breakdowns (施策5: どのページが AI 経由流入・転換を稼いでいるか) ---
+# landing page × channel group — filter/scan for "AI Assistant" rows
+ga4 "{\"dateRanges\":[{\"startDate\":\"$START_DATE\",\"endDate\":\"$END_DATE\"}],\"dimensions\":[{\"name\":\"sessionDefaultChannelGroup\"},{\"name\":\"landingPage\"}],\"metrics\":[{\"name\":\"sessions\"},{\"name\":\"engagedSessions\"},{\"name\":\"conversions\"},{\"name\":\"averageSessionDuration\"}],\"orderBys\":[{\"metric\":{\"metricName\":\"sessions\"},\"desc\":true}],\"limit\":100}" "${TAG}_ga4_landing_x_channel.json"
+
+# raw referrers (source/medium) — surfaces the actual AI origins (chatgpt.com, perplexity.ai, gemini, etc.)
+ga4 "{\"dateRanges\":[{\"startDate\":\"$START_DATE\",\"endDate\":\"$END_DATE\"}],\"dimensions\":[{\"name\":\"sessionSource\"},{\"name\":\"sessionMedium\"}],\"metrics\":[{\"name\":\"sessions\"},{\"name\":\"engagedSessions\"},{\"name\":\"conversions\"}],\"orderBys\":[{\"metric\":{\"metricName\":\"sessions\"},\"desc\":true}],\"limit\":50}" "${TAG}_ga4_source_medium.json"
+
 echo "Done. $(ls -1 "$OUT_DIR" | grep "^${TAG}" | wc -l | tr -d ' ') files written with tag ${TAG}."
