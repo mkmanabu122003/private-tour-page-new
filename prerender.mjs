@@ -75,6 +75,7 @@ const routes = [
   "/blog/tsukiji-outer-vs-inner-market",
   "/blog/toyosu-vs-tsukiji-outer",
   "/blog/mt-fuji-climbing-season-guide",
+  "/blog/teamlab-planets-vs-borderless",
   // Spanish pages
   "/es",
   "/es/tours",
@@ -146,6 +147,7 @@ const routes = [
   "/es/blog/tsukiji-mercado-exterior-vs-interior",
   "/es/blog/toyosu-vs-tsukiji-exterior",
   "/es/blog/temporada-ascenso-monte-fuji",
+  "/es/blog/teamlab-planets-vs-borderless",
 ];
 
 async function prerender() {

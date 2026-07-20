@@ -639,6 +639,16 @@ const blogPosts: BlogPost[] = [
     category: "Decision Helpers",
     image: "/images/blog/mt-fuji-summit-sunrise.webp",
   },
+  {
+    slug: "teamlab-planets-vs-borderless",
+    title: "teamLab Planets vs Borderless: Which One Should You Pick?",
+    description:
+      "Two very different digital-art museums in Tokyo. A licensed guide compares teamLab Planets and Borderless in 2026 — location, tickets, and which fits your trip.",
+    date: "July 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/teamlab-planets-universe.webp",
+  },
 ];
 
 // Order = funnel stage. Decision-stage first (highest CV per inventory data),
