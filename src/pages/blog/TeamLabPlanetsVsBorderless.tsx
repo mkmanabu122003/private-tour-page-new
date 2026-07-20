@@ -27,8 +27,8 @@ const TeamLabPlanetsVsBorderless = () => {
 
       <div className="prose-editorial">
         <BlogArticleHero
-          image="/images/blog/teamlab-azabudai-hills.webp"
-          imageAlt="Azabudai Hills in Tokyo, home to teamLab Borderless"
+          image="/images/blog/teamlab-planets-universe.webp"
+          imageAlt="A colourful immersive light installation at teamLab Planets, reflected in the mirrored floor"
           eyebrow="Decision Helpers"
           title="teamLab Planets vs Borderless: Which One Should You Pick?"
           subtitle="Two very different digital-art museums in Tokyo. A licensed guide on which one fits your trip in 2026."
@@ -81,6 +81,19 @@ const TeamLabPlanetsVsBorderless = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   The names get confused constantly, so let's fix that first. These are <strong className="text-foreground">two separate venues in two different parts of Tokyo</strong>, each with its own concept.
                 </p>
+                <figure className="my-6">
+                  <img
+                    src="/images/blog/teamlab-borderless-art.webp"
+                    alt="A digital flower-and-grass artwork projected across walls and floor at teamLab Borderless"
+                    className="w-full h-[400px] object-cover rounded-lg shadow-md"
+                    loading="lazy"
+                    width={800}
+                    height={533}
+                  />
+                  <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+                    teamLab Borderless — artworks flow across walls and floor with no fixed route
+                  </figcaption>
+                </figure>
                 <div className="overflow-x-auto mb-8">
                   <table className="cost-table">
                     <thead>
@@ -109,15 +122,15 @@ const TeamLabPlanetsVsBorderless = () => {
                 </h2>
                 <figure className="my-6">
                   <img
-                    src="/images/blog/teamlab-shin-toyosu-station.webp"
-                    alt="Shin-Toyosu Station on the Yurikamome line, the arrival point for teamLab Planets"
+                    src="/images/blog/teamlab-planets-exterior.webp"
+                    alt="The exterior of the teamLab Planets building in Toyosu, Tokyo"
                     className="w-full h-[400px] object-cover rounded-lg shadow-md"
                     loading="lazy"
                     width={800}
                     height={533}
                   />
                   <figcaption className="mt-2 text-sm text-muted-foreground text-center">
-                    Shin-Toyosu Station — a two-minute walk from teamLab Planets
+                    teamLab Planets in Toyosu — a two-minute walk from Shin-Toyosu Station
                   </figcaption>
                 </figure>
                 <p className="text-muted-foreground leading-relaxed mb-4">

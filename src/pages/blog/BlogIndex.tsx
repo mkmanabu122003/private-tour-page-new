@@ -637,7 +637,7 @@ const blogPosts: BlogPost[] = [
     date: "July 20, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Plan Your Trip",
-    image: "/images/blog/teamlab-azabudai-hills.webp",
+    image: "/images/blog/teamlab-planets-universe.webp",
   },
 ];
 
