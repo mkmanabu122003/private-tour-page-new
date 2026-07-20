@@ -628,6 +628,17 @@ const blogPosts: BlogPost[] = [
     category: "Day Trips from Tokyo",
     image: "/images/blog/private-fuji-route-a-hakone.jpg",
   },
+  // 2026-07-20 batch (Tier 1 data-driven)
+  {
+    slug: "autumn-leaves-around-tokyo",
+    title: "Autumn Leaves Near Tokyo 2026: Where & When to Go",
+    description:
+      "A licensed Tokyo guide's 2026 autumn-leaves plan — when Nikko, Hakone and Kawaguchiko peak, and which fall-foliage day trip to pick from Tokyo.",
+    date: "July 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Day Trips from Tokyo",
+    image: "/images/blog/autumn-nikko-chuzenji.webp",
+  },
 ];
 
 // Order = funnel stage. Decision-stage first (highest CV per inventory data),
