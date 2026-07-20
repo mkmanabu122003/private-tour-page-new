@@ -166,6 +166,9 @@ import EsTemporadaAscensoMonteFuji from "./pages/es/blog/EsTemporadaAscensoMonte
 // 2026-07-20 batch: teamLab Planets vs Borderless (Tier 1 data-driven)
 import TeamLabPlanetsVsBorderless from "./pages/blog/TeamLabPlanetsVsBorderless";
 import EsTeamlabPlanetsVsBorderless from "./pages/es/blog/EsTeamlabPlanetsVsBorderless";
+// 2026-07-20 batch: Autumn Leaves around Tokyo (Tier 1 data-driven)
+import AutumnLeavesAroundTokyo from "./pages/blog/AutumnLeavesAroundTokyo";
+import EsHojasOtonoCercaTokio from "./pages/es/blog/EsHojasOtonoCercaTokio";
 
 const queryClient = new QueryClient();
 
@@ -337,6 +340,8 @@ const AppRoutes = () => (
         <Route path="/es/blog/temporada-ascenso-monte-fuji" element={<EsTemporadaAscensoMonteFuji />} />
         <Route path="/blog/teamlab-planets-vs-borderless" element={<TeamLabPlanetsVsBorderless />} />
         <Route path="/es/blog/teamlab-planets-vs-borderless" element={<EsTeamlabPlanetsVsBorderless />} />
+        <Route path="/blog/autumn-leaves-around-tokyo" element={<AutumnLeavesAroundTokyo />} />
+        <Route path="/es/blog/hojas-otono-cerca-tokio" element={<EsHojasOtonoCercaTokio />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

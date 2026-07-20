@@ -76,6 +76,7 @@ const routes = [
   "/blog/toyosu-vs-tsukiji-outer",
   "/blog/mt-fuji-climbing-season-guide",
   "/blog/teamlab-planets-vs-borderless",
+  "/blog/autumn-leaves-around-tokyo",
   // Spanish pages
   "/es",
   "/es/tours",
@@ -148,6 +149,7 @@ const routes = [
   "/es/blog/toyosu-vs-tsukiji-exterior",
   "/es/blog/temporada-ascenso-monte-fuji",
   "/es/blog/teamlab-planets-vs-borderless",
+  "/es/blog/hojas-otono-cerca-tokio",
 ];
 
 async function prerender() {
