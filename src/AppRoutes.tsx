@@ -160,6 +160,9 @@ import EsDiaDeLluviaEnTokio from "./pages/es/blog/EsDiaDeLluviaEnTokio";
 // 2026-05-23 batch: Is Hakone Worth Visiting? (from daily brief Routine)
 import IsHakoneWorthVisiting from "./pages/blog/IsHakoneWorthVisiting";
 import EsValelapenaVisitarHakone from "./pages/es/blog/EsValelapenaVisitarHakone";
+// 2026-07-20 batch: teamLab Planets vs Borderless (Tier 1 data-driven)
+import TeamLabPlanetsVsBorderless from "./pages/blog/TeamLabPlanetsVsBorderless";
+import EsTeamlabPlanetsVsBorderless from "./pages/es/blog/EsTeamlabPlanetsVsBorderless";
 
 const queryClient = new QueryClient();
 
@@ -326,6 +329,9 @@ const AppRoutes = () => (
         {/* 2026-05-23 batch */}
         <Route path="/blog/is-hakone-worth-visiting" element={<IsHakoneWorthVisiting />} />
         <Route path="/es/blog/vale-la-pena-visitar-hakone" element={<EsValelapenaVisitarHakone />} />
+        {/* 2026-07-20 batch */}
+        <Route path="/blog/teamlab-planets-vs-borderless" element={<TeamLabPlanetsVsBorderless />} />
+        <Route path="/es/blog/teamlab-planets-vs-borderless" element={<EsTeamlabPlanetsVsBorderless />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

@@ -628,6 +628,17 @@ const blogPosts: BlogPost[] = [
     category: "Day Trips from Tokyo",
     image: "/images/blog/private-fuji-route-a-hakone.jpg",
   },
+  // 2026-07-20 batch (Tier 1 data-driven)
+  {
+    slug: "teamlab-planets-vs-borderless",
+    title: "teamLab Planets vs Borderless: Which One Should You Pick?",
+    description:
+      "Two very different digital-art museums in Tokyo. A licensed guide compares teamLab Planets and Borderless in 2026 — location, tickets, and which fits your trip.",
+    date: "July 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/teamlab-azabudai-hills.webp",
+  },
 ];
 
 // Order = funnel stage. Decision-stage first (highest CV per inventory data),
