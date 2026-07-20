@@ -74,6 +74,7 @@ const routes = [
   "/blog/toyosu-vs-ueno-fish-market",
   "/blog/tsukiji-outer-vs-inner-market",
   "/blog/toyosu-vs-tsukiji-outer",
+  "/blog/mt-fuji-climbing-season-guide",
   // Spanish pages
   "/es",
   "/es/tours",
@@ -144,6 +145,7 @@ const routes = [
   "/es/blog/toyosu-vs-ueno-mercado-pescado",
   "/es/blog/tsukiji-mercado-exterior-vs-interior",
   "/es/blog/toyosu-vs-tsukiji-exterior",
+  "/es/blog/temporada-ascenso-monte-fuji",
 ];
 
 async function prerender() {
