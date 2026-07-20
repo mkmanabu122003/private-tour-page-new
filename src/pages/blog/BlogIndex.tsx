@@ -525,7 +525,7 @@ const blogPosts: BlogPost[] = [
     date: "May 22, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trips from Tokyo",
-    image: "/images/blog/hakone-lake-ashi-fuji.webp",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     slug: "kawaguchiko-vs-hakone-for-mt-fuji",
@@ -535,7 +535,7 @@ const blogPosts: BlogPost[] = [
     date: "May 22, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trips from Tokyo",
-    image: "/images/blog/hakone-lake-ashi-fuji.webp",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
   {
     slug: "enoshima-day-trip-from-tokyo",
@@ -545,7 +545,7 @@ const blogPosts: BlogPost[] = [
     date: "May 22, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Day Trips from Tokyo",
-    image: "/images/blog/kamakura-great-buddha.webp",
+    image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
     slug: "group-vs-private-tour-tokyo",
@@ -595,7 +595,7 @@ const blogPosts: BlogPost[] = [
     date: "May 22, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Plan Your Trip",
-    image: "/images/blog/imperial-palace-gardens.webp",
+    image: "/images/tours/imperial-palace-gardens.webp",
   },
   {
     slug: "english-friendly-tokyo-tips",
@@ -605,7 +605,7 @@ const blogPosts: BlogPost[] = [
     date: "May 22, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Plan Your Trip",
-    image: "/images/blog/tokyo-night-tour-hero.webp",
+    image: "/images/tours/tokyo-night-tour-hero.webp",
   },
   {
     slug: "rainy-day-tokyo",
@@ -615,7 +615,7 @@ const blogPosts: BlogPost[] = [
     date: "May 22, 2026",
     author: "Manabu, Licensed Tour Guide",
     category: "Plan Your Trip",
-    image: "/images/blog/tokyo-night-tour-hero.webp",
+    image: "/images/tours/tokyo-night-tour-hero.webp",
   },
   // 2026-05-23 batch (from daily brief Routine)
   {
