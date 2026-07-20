@@ -628,6 +628,17 @@ const blogPosts: BlogPost[] = [
     category: "Day Trips from Tokyo",
     image: "/images/blog/private-fuji-route-a-hakone.jpg",
   },
+  // 2026-07-20 batch (Tier 1 data-driven)
+  {
+    slug: "mt-fuji-climbing-season-guide",
+    title: "Mt Fuji Climbing Season 2026: Do You Actually Need a Guide?",
+    description:
+      "A licensed Tokyo guide on Mt. Fuji's 2026 climbing season — the dates, the new ¥4,000 permit and reservation rules, and whether you actually need a guide.",
+    date: "July 20, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Decision Helpers",
+    image: "/images/blog/mt-fuji-summit-sunrise.webp",
+  },
 ];
 
 // Order = funnel stage. Decision-stage first (highest CV per inventory data),

@@ -160,6 +160,9 @@ import EsDiaDeLluviaEnTokio from "./pages/es/blog/EsDiaDeLluviaEnTokio";
 // 2026-05-23 batch: Is Hakone Worth Visiting? (from daily brief Routine)
 import IsHakoneWorthVisiting from "./pages/blog/IsHakoneWorthVisiting";
 import EsValelapenaVisitarHakone from "./pages/es/blog/EsValelapenaVisitarHakone";
+// 2026-07-20 batch: Mt Fuji Climbing Season (Tier 1 data-driven)
+import MtFujiClimbingSeasonGuide from "./pages/blog/MtFujiClimbingSeasonGuide";
+import EsTemporadaAscensoMonteFuji from "./pages/es/blog/EsTemporadaAscensoMonteFuji";
 
 const queryClient = new QueryClient();
 
@@ -326,6 +329,9 @@ const AppRoutes = () => (
         {/* 2026-05-23 batch */}
         <Route path="/blog/is-hakone-worth-visiting" element={<IsHakoneWorthVisiting />} />
         <Route path="/es/blog/vale-la-pena-visitar-hakone" element={<EsValelapenaVisitarHakone />} />
+        {/* 2026-07-20 batch */}
+        <Route path="/blog/mt-fuji-climbing-season-guide" element={<MtFujiClimbingSeasonGuide />} />
+        <Route path="/es/blog/temporada-ascenso-monte-fuji" element={<EsTemporadaAscensoMonteFuji />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
