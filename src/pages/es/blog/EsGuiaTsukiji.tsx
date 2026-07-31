@@ -112,6 +112,13 @@ const EsGuiaTsukiji = () => {
                 Tsukiji vs Toyosu: ¿qué mercado de pescado visitar en Tokio?
               </Link>
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Y si estás valorando recorrer el mercado con alguien que te traduzca los puestos y sepa dónde parar, en{" "}
+              <Link to="/es/blog/cuanto-cuesta-guia-privado-tokio" className="text-accent hover:underline">
+                cuánto cuesta un guía privado en Tokio
+              </Link>{" "}
+              desgloso los precios reales y qué los hace subir o bajar.
+            </p>
 
             {/* Qué Comer */}
             <div className="section-eyebrow"><span>Section 02 · Qué Comer en Tsukiji</span></div>

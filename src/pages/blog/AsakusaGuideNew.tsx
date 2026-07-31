@@ -193,7 +193,10 @@ const AsakusaGuideNew = () => {
               <Link to="/blog/old-tokyo-shitamachi" className="text-accent hover:underline">
                 Old Tokyo and Shitamachi guide
               </Link>{" "}
-              covers the broader story of Tokyo's historic downtown culture.
+              covers the broader story of Tokyo's historic downtown culture. And if you are trying to work out what that kind of guided access would run you, I set out the real numbers in{" "}
+              <Link to="/blog/tokyo-private-tour-guide-cost" className="text-accent hover:underline">
+                what a private tour guide in Tokyo costs
+              </Link>.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">Denboin Garden: Asakusa's Secret Spring Garden.</strong> Most visitors have no idea this place exists. Denboin is an Edo-period garden belonging to the abbot's residence at Senso-ji, with a tranquil pond, carefully shaped pines, a tea house, and a picture-perfect view of the five-story pagoda reflected in the water. The catch: it only opens to the public for a limited window each year, typically mid-March to early May, with a small admission fee (around ¥300). When it is open, the contrast between the crowded Nakamise-dori just outside the walls and this quiet, almost secret garden is one of the most striking experiences in Tokyo. Check the Senso-ji website for current opening dates before planning your visit — the schedule shifts slightly year to year.

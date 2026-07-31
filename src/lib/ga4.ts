@@ -119,3 +119,10 @@ export function trackDiagnosticToContact(toolId: string, resultId: string) {
     result_id: resultId,
   });
 }
+
+export function trackDiagnosticToArticle(toolId: string, resultId: string) {
+  gtag("event", "diagnostic_to_article", {
+    tool_id: toolId,
+    result_id: resultId,
+  });
+}

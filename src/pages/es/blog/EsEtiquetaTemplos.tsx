@@ -330,6 +330,13 @@ const EsEtiquetaTemplos = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Ahora que conoces la etiqueta, ¿dónde ponerla en práctica? Aquí tienes algunos de los lugares sagrados más emblemáticos de Japón que visitamos frecuentemente en nuestros tours, y cada uno ofrece una experiencia única y la oportunidad de aplicar lo que has aprendido.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Y si aún dudas entre visitarlos por tu cuenta o con alguien que te explique cada ritual sobre la marcha, en{" "}
+              <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">
+                si vale la pena contratar un guía
+              </Link>{" "}
+              expongo los dos lados con honestidad.
+            </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Templo Senso-ji, Asakusa:</strong> El templo más antiguo y visitado de Tokio, que data del año 645 d.C. La enorme Kaminarimon (Puerta del Trueno) con su gigantesco farol rojo es uno de los monumentos más reconocibles de Japón. La calle de acceso Nakamise-dori está repleta de tiendas tradicionales que venden aperitivos, recuerdos y artesanías. A pesar de las multitudes, Senso-ji conserva una poderosa atmósfera espiritual, especialmente temprano por la mañana o por la noche cuando los faroles brillan. Nuestro{" "}

@@ -185,7 +185,11 @@ const YokohamaDayTrip = () => {
               <Link to="/blog/kamakura-day-trip-from-tokyo" className="text-accent hover:underline">Kamakura</Link>{" "}
               and{" "}
               <Link to="/blog/kawagoe-day-trip-from-tokyo" className="text-accent hover:underline">Kawagoe</Link>{" "}
-              day trips.
+              day trips. And if you are still choosing between destinations rather than planning one, my{" "}
+              <Link to="/blog/kamakura-vs-hakone-vs-nikko-day-trip" className="text-accent hover:underline">
+                Kamakura vs Hakone vs Nikko comparison
+              </Link>{" "}
+              walks through the trade-offs side by side.
             </p>
 
             {/* CTA */}
