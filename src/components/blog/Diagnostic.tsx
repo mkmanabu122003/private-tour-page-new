@@ -6,6 +6,7 @@ import {
   trackDiagnosticComplete,
   trackDiagnosticToTour,
   trackDiagnosticToContact,
+  trackDiagnosticToArticle,
 } from "@/lib/ga4";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
@@ -69,12 +70,14 @@ const labels = {
     retake: "Retake the quiz",
     credentials: "National Government Licensed Guide",
     name: "Manabu",
+    seeTour: "See this tour",
   },
   es: {
     back: "Atrás",
     retake: "Repetir el test",
     credentials: "Guía con Licencia Nacional",
     name: "Manabu",
+    seeTour: "Ver este tour",
   },
 };
 
@@ -163,6 +166,10 @@ export const Diagnostic = ({ config }: DiagnosticProps) => {
 
   const handleContactClick = () => {
     if (resultId) trackDiagnosticToContact(config.toolId, resultId);
+  };
+
+  const handleArticleClick = () => {
+    if (resultId) trackDiagnosticToArticle(config.toolId, resultId);
   };
 
   return (
@@ -325,7 +332,7 @@ export const Diagnostic = ({ config }: DiagnosticProps) => {
               {config.results[resultId].narrative}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Link
                 to={`/contact?tour=${config.results[resultId].contactQuery}`}
                 onClick={handleContactClick}
@@ -334,10 +341,26 @@ export const Diagnostic = ({ config }: DiagnosticProps) => {
                 {config.results[resultId].tourLabel}
                 <span className="ml-2">→</span>
               </Link>
+              {config.results[resultId].tourPath &&
+                config.results[resultId].tourPath !==
+                  config.results[resultId].readMorePath && (
+                  <Link
+                    to={config.results[resultId].tourPath}
+                    onClick={handleTourClick}
+                    className="btn-outline text-center inline-flex items-center justify-center"
+                  >
+                    {t.seeTour}
+                    <span className="ml-2">→</span>
+                  </Link>
+                )}
+            </div>
+
+            {/* Quiet third rung: keep reading, for people not ready to commit */}
+            <div className="mb-10">
               <Link
                 to={config.results[resultId].readMorePath}
-                onClick={handleTourClick}
-                className="text-center inline-flex items-center justify-center px-6 py-3 text-foreground hover:text-accent transition-colors font-serif italic text-lg"
+                onClick={handleArticleClick}
+                className="inline-flex items-center text-foreground hover:text-accent transition-colors font-serif italic text-lg"
               >
                 {config.results[resultId].readMoreLabel}
                 <span className="ml-2">→</span>

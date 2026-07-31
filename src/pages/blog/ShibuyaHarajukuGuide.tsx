@@ -232,6 +232,12 @@ const ShibuyaHarajukuGuide = () => {
                 Harajuku vs Shibuya vs Shinjuku: Which Fits Your Trip
               </Link>.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              And if the question on your mind is what guided time actually costs before you commit to anything, I publish my rates and what shapes them in{" "}
+              <Link to="/blog/tokyo-private-tour-guide-cost" className="text-accent hover:underline">
+                what a private tour guide in Tokyo costs
+              </Link>.
+            </p>
 
             {/* Where to Eat */}
             <div className="section-eyebrow"><span>Section 04 · Where to Eat</span></div>

@@ -260,6 +260,13 @@ const EsPropinasenJapon = () => {
               </Link>
               .
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Ya que estamos hablando de dinero: si quieres saber qué se paga realmente por un guía en Tokio, lo explico sin rodeos en{" "}
+              <Link to="/es/blog/cuanto-cuesta-guia-privado-tokio" className="text-accent hover:underline">
+                cuánto cuesta un guía privado en Tokio
+              </Link>
+              , con cifras concretas y cómo distinguir un precio justo de uno inflado.
+            </p>
 
             {/* FAQ */}
             <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>

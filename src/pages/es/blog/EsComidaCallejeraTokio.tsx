@@ -66,7 +66,11 @@ const EsComidaCallejeraTokio = () => {
               <Link to="/es/blog/que-comer-en-japon" className="text-accent hover:underline">
                 qué se come en Japón
               </Link>
-              , este post es el complemento perfecto. Aquí vamos al detalle callejero, al puesto con humo, al snack de 200 yenes que te cambia el día.
+              , este post es el complemento perfecto. Aquí vamos al detalle callejero, al puesto con humo, al snack de 200 yenes que te cambia el día. Y si prefieres que alguien te lleve directamente a los puestos buenos, en{" "}
+              <Link to="/es/blog/cuanto-cuesta-guia-privado-tokio" className="text-accent hover:underline">
+                cuánto cuesta un guía privado en Tokio
+              </Link>{" "}
+              te cuento qué se paga por ello.
             </p>
 
             {/* ¿Existe realmente la comida callejera en Tokio? */}

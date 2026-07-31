@@ -179,6 +179,13 @@ const SensojiMostVisited = () => {
               Here is what fascinates me most about the Senso-ji visitors statistics: the vast majority of those 30 million people follow an almost identical route. They enter through Kaminarimon, walk straight down Nakamise-dori, take a photo at the main hall, perhaps draw a fortune slip, and leave. The entire visit takes 30 to 45 minutes. They miss an enormous amount, and these hidden layers are what I live for as a guide.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
+              If you are weighing whether that kind of depth justifies bringing someone along, I have written an honest look at{" "}
+              <Link to="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" className="text-accent hover:underline">
+                whether hiring a guide in Tokyo is worth it
+              </Link>
+              , including the trips where it plainly is not.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">The backstreet shrines:</strong> Within a five-minute walk of Senso-ji's main hall, there are over a dozen smaller shrines and temples that receive almost zero tourist traffic. Asakusa Shrine, immediately adjacent to Senso-ji's eastern wall, is criminally overlooked despite being designated an Important Cultural Property with original 1649 architecture. Bentendo, a small octagonal temple on a tiny island in the old Benten Pond (now a park), is beautiful and usually deserted. Imado Shrine, a short walk north, is famous among Japanese visitors for its maneki-neko (lucky cats) and matchmaking prayers but virtually unknown to international tourists.
             </p>
             <figure className="my-8">

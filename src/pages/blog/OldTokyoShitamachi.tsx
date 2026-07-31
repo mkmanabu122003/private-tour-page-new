@@ -99,7 +99,10 @@ const OldTokyoShitamachi = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               If Asakusa is Shitamachi's public face, Yanaka is its quiet soul. This residential neighborhood near Ueno survived the earthquake and the firebombing largely intact, making it the closest thing to a time capsule that Tokyo has. The Yanaka Cemetery, where Japan's last shogun is buried, is a green, peaceful space surrounded by dozens of small Buddhist temples. Yanaka Ginza, the main shopping street, slopes downhill past shops that have been family-owned for generations. I've written a full{" "}
               <Link to="/blog/yanaka-tokyo-walking-route" className="text-accent hover:underline">walking route for Yanaka</Link>{" "}
-              that covers the best spots.
+              that covers the best spots. If you would rather have the history unpacked for you as you walk it, I break down what that costs in{" "}
+              <Link to="/blog/tokyo-private-tour-guide-cost" className="text-accent hover:underline">
+                what a private tour guide in Tokyo costs
+              </Link>.
             </p>
             <figure className="my-8">
               <img

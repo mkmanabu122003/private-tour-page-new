@@ -329,6 +329,13 @@ const TempleEtiquette = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Now that you know the etiquette, where should you put it into practice? Here are some of Japan's most iconic sacred sites that we frequently visit on our tours, each offering a unique experience and a chance to apply what you've learned.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If you are still deciding whether to visit these on your own or with someone explaining the rituals as you go, my piece on{" "}
+              <Link to="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" className="text-accent hover:underline">
+                whether hiring a guide in Tokyo is worth it
+              </Link>{" "}
+              lays out both sides honestly.
+            </p>
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Senso-ji Temple, Asakusa:</strong> Tokyo's oldest and most visited temple, dating back to 645 AD. The massive Kaminarimon (Thunder Gate) with its enormous red lantern is one of Japan's most recognizable landmarks. The Nakamise-dori approach is lined with traditional shops selling snacks, souvenirs, and crafts. Despite the crowds, Senso-ji retains a powerful spiritual atmosphere, especially early in the morning or in the evening when the lanterns glow. Our{" "}

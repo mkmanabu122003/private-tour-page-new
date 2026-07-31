@@ -219,6 +219,13 @@ const EsYanakaTokio = () => {
               </Link>
               {" "}explico cómo encajar Yanaka en un viaje más amplio.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Si dudas entre recorrer Yanaka por tu cuenta o con alguien que te cuente lo que hay detrás de cada calle, en{" "}
+              <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">
+                si vale la pena un guía privado en Tokio
+              </Link>{" "}
+              doy los argumentos de ambos lados, incluidos los casos en los que no compensa.
+            </p>
 
             {/* FAQ */}
             <div className="section-eyebrow"><span>Section 06 · FAQ</span></div>

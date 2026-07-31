@@ -1,0 +1,929 @@
+{
+  "dimensionHeaders": [
+    {
+      "name": "pagePath"
+    }
+  ],
+  "metricHeaders": [
+    {
+      "name": "screenPageViews",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "activeUsers",
+      "type": "TYPE_INTEGER"
+    },
+    {
+      "name": "userEngagementDuration",
+      "type": "TYPE_SECONDS"
+    }
+  ],
+  "rows": [
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tsukiji-market-guide"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "369"
+        },
+        {
+          "value": "299"
+        },
+        {
+          "value": "18860"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "141"
+        },
+        {
+          "value": "76"
+        },
+        {
+          "value": "3920"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/senso-ji-most-visited-temple"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "103"
+        },
+        {
+          "value": "37"
+        },
+        {
+          "value": "1058"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/kamakura-vs-hakone-vs-nikko-day-trip"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "86"
+        },
+        {
+          "value": "62"
+        },
+        {
+          "value": "5358"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/comparativa-excursiones"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "77"
+        },
+        {
+          "value": "46"
+        },
+        {
+          "value": "11909"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/japan-rail-pass-worth-it"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "71"
+        },
+        {
+          "value": "59"
+        },
+        {
+          "value": "3509"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "58"
+        },
+        {
+          "value": "32"
+        },
+        {
+          "value": "1688"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "57"
+        },
+        {
+          "value": "28"
+        },
+        {
+          "value": "1197"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/licensed-vs-unlicensed-tour-guides-japan"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "55"
+        },
+        {
+          "value": "13"
+        },
+        {
+          "value": "1195"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/guia-tsukiji"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "52"
+        },
+        {
+          "value": "42"
+        },
+        {
+          "value": "3324"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tokyo-private-tour-guide-cost"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "50"
+        },
+        {
+          "value": "41"
+        },
+        {
+          "value": "2524"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "38"
+        },
+        {
+          "value": "8"
+        },
+        {
+          "value": "2990"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/monte-fuji-se-ve-desde-tokio"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "35"
+        },
+        {
+          "value": "33"
+        },
+        {
+          "value": "984"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tsukiji-vs-toyosu"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "33"
+        },
+        {
+          "value": "26"
+        },
+        {
+          "value": "1522"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/yanaka-tokyo-walking-route"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "33"
+        },
+        {
+          "value": "21"
+        },
+        {
+          "value": "2473"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/contact"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "33"
+        },
+        {
+          "value": "30"
+        },
+        {
+          "value": "2682"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "27"
+        },
+        {
+          "value": "21"
+        },
+        {
+          "value": "710"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/hakone-day-trip"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "24"
+        },
+        {
+          "value": "20"
+        },
+        {
+          "value": "323"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/about"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "21"
+        },
+        {
+          "value": "16"
+        },
+        {
+          "value": "859"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/etiqueta-templos-santuarios"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "21"
+        },
+        {
+          "value": "18"
+        },
+        {
+          "value": "1948"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/contact"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "20"
+        },
+        {
+          "value": "15"
+        },
+        {
+          "value": "1139"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/nikko-con-guia-vs-solo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "19"
+        },
+        {
+          "value": "13"
+        },
+        {
+          "value": "1679"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/asakusa-guide"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "18"
+        },
+        {
+          "value": "14"
+        },
+        {
+          "value": "1677"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/japan-temple-shrine-etiquette"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "18"
+        },
+        {
+          "value": "17"
+        },
+        {
+          "value": "483"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/asakusa-tokio-guia"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "18"
+        },
+        {
+          "value": "12"
+        },
+        {
+          "value": "943"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/nikko-day-trip"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "17"
+        },
+        {
+          "value": "14"
+        },
+        {
+          "value": "235"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/hakone-day-trip-guide-vs-solo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "16"
+        },
+        {
+          "value": "13"
+        },
+        {
+          "value": "854"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/shibuya-harajuku-guide"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "16"
+        },
+        {
+          "value": "15"
+        },
+        {
+          "value": "794"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/tsukiji-ginza"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "16"
+        },
+        {
+          "value": "16"
+        },
+        {
+          "value": "175"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/yanaka"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "15"
+        },
+        {
+          "value": "12"
+        },
+        {
+          "value": "239"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/old-tokyo-shitamachi"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "14"
+        },
+        {
+          "value": "12"
+        },
+        {
+          "value": "544"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/yokohama-day-trip-from-tokyo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "14"
+        },
+        {
+          "value": "14"
+        },
+        {
+          "value": "870"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/comida-callejera-tokio"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "14"
+        },
+        {
+          "value": "9"
+        },
+        {
+          "value": "1246"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/yanaka-tokio-itinerario"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "14"
+        },
+        {
+          "value": "10"
+        },
+        {
+          "value": "639"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/tokyo-food-tour"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "14"
+        },
+        {
+          "value": "13"
+        },
+        {
+          "value": "646"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/blog/propinas-en-japon"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "13"
+        },
+        {
+          "value": "13"
+        },
+        {
+          "value": "1692"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/asakusa"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "13"
+        },
+        {
+          "value": "12"
+        },
+        {
+          "value": "152"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/tours/custom"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "12"
+        },
+        {
+          "value": "4"
+        },
+        {
+          "value": "634"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/shibuya-harajuku"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "12"
+        },
+        {
+          "value": "10"
+        },
+        {
+          "value": "71"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/tokyo-night-tour"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "12"
+        },
+        {
+          "value": "11"
+        },
+        {
+          "value": "219"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/tipping-in-japan"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "11"
+        },
+        {
+          "value": "9"
+        },
+        {
+          "value": "1406"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/vegetarian-food-tour-tokyo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "10"
+        },
+        {
+          "value": "9"
+        },
+        {
+          "value": "671"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/es/tours/nikko-day-trip"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "10"
+        },
+        {
+          "value": "10"
+        },
+        {
+          "value": "516"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/imperial-palace"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "10"
+        },
+        {
+          "value": "9"
+        },
+        {
+          "value": "201"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/tours/kamakura-day-trip"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "10"
+        },
+        {
+          "value": "9"
+        },
+        {
+          "value": "87"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "7"
+        },
+        {
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/harajuku-vs-shibuya-vs-shinjuku"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "7"
+        },
+        {
+          "value": "211"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/kawaguchiko-vs-hakone-for-mt-fuji"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "8"
+        },
+        {
+          "value": "424"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/nikko-day-trip-from-tokyo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "8"
+        },
+        {
+          "value": "787"
+        }
+      ]
+    },
+    {
+      "dimensionValues": [
+        {
+          "value": "/blog/nikko-day-trip-guide-vs-solo"
+        }
+      ],
+      "metricValues": [
+        {
+          "value": "9"
+        },
+        {
+          "value": "9"
+        },
+        {
+          "value": "1553"
+        }
+      ]
+    }
+  ],
+  "rowCount": 129,
+  "metadata": {
+    "currencyCode": "JPY",
+    "timeZone": "Asia/Tokyo"
+  },
+  "kind": "analyticsData#runReport"
+}
