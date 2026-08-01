@@ -5,152 +5,62 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const resolve = (p) => path.resolve(__dirname, p);
 
-// All routes to prerender (static routes only; dynamic :id routes need explicit entries)
-const routes = [
-  "/",
-  "/about",
-  "/tours",
-  "/tours/asakusa",
-  "/tours/yanaka",
-  "/tours/shibuya-harajuku",
-  "/tours/tsukiji-ginza",
-  "/tours/imperial-palace",
-  "/tours/custom",
-  "/tours/kamakura-day-trip",
-  "/tours/hakone-day-trip",
-  "/tours/nikko-day-trip",
-  "/tours/tokyo-food-tour",
-  "/tours/tokyo-night-tour",
-  "/contact",
-  "/faq",
-  "/blog",
-  "/blog/tokyo-3-day-itinerary",
-  "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo",
-  "/blog/kamakura-vs-hakone-vs-nikko-day-trip",
-  "/blog/asakusa-guide-what-to-see",
-  "/blog/shibuya-harajuku-guide",
-  "/blog/shinjuku-guide",
-  "/blog/tokyo-izakaya-guide",
-  "/blog/best-time-to-visit-tokyo",
-  "/blog/japan-temple-shrine-etiquette",
-  "/blog/asakusa-guide",
-  "/blog/japan-rail-pass-worth-it",
-  "/blog/kamakura-day-trip-from-tokyo",
-  "/blog/kawagoe-day-trip-from-tokyo",
-  "/blog/licensed-tour-guide-japan",
-  "/blog/nikko-day-trip-from-tokyo",
-  "/blog/old-tokyo-shitamachi",
-  "/blog/ramen-guide-tokyo",
-  "/blog/senso-ji-most-visited-temple",
-  "/blog/sushi-guide-tokyo",
-  "/blog/tipping-in-japan",
-  "/blog/tokyo-hidden-gems",
-  "/blog/tokyo-itinerary-5-days",
-  "/blog/tokyo-on-a-budget",
-  "/blog/tsukiji-market-guide",
-  "/blog/vegetarian-food-tour-tokyo",
-  "/blog/yanaka-tokyo-walking-route",
-  "/blog/yanaka-walking-tour-guide",
-  "/blog/yokohama-day-trip-from-tokyo",
-  "/blog/tokyo-private-tour-guide-cost",
-  "/blog/tokyo-with-kids-family-tour",
-  "/blog/what-to-expect-private-tour-tokyo",
-  "/blog/hakone-day-trip-guide-vs-solo",
-  "/blog/nikko-day-trip-guide-vs-solo",
-  "/blog/kamakura-day-trip-guide-vs-solo",
-  "/blog/licensed-vs-unlicensed-tour-guides-japan",
-  "/blog/tsukiji-to-ginza-food-walk",
-  "/blog/ginza-to-tsukiji-walking-route",
-  "/blog/first-time-tokyo-local-guide",
-  "/blog/tokyo-cherry-blossom-guide",
-  "/blog/tsukiji-vs-toyosu",
-  "/blog/mount-fuji-from-tokyo",
-  "/blog/private-mount-fuji-tour-2026",
-  "/blog/best-tokyo-night-tour-2026",
-  "/blog/imperial-palace-tokyo-tour-2026",
-  "/blog/harajuku-vs-shibuya-vs-shinjuku",
-  "/blog/narita-vs-haneda",
-  "/blog/onsen-day-trips-beyond-hakone",
-  "/blog/toyosu-vs-ueno-fish-market",
-  "/blog/tsukiji-outer-vs-inner-market",
-  "/blog/toyosu-vs-tsukiji-outer",
-  "/blog/mt-fuji-climbing-season-guide",
-  "/blog/teamlab-planets-vs-borderless",
-  "/blog/autumn-leaves-around-tokyo",
-  // Spanish pages
-  "/es",
-  "/es/tours",
-  "/es/tours/asakusa",
-  "/es/tours/yanaka",
-  "/es/tours/shibuya-harajuku",
-  "/es/tours/tsukiji-ginza",
-  "/es/tours/imperial-palace",
-  "/es/tours/kamakura-day-trip",
-  "/es/tours/hakone-day-trip",
-  "/es/tours/nikko-day-trip",
-  "/es/tours/custom",
-  "/es/contact",
-  "/es/about",
-  "/es/faq",
-  // Spanish blog
-  "/es/blog",
-  "/es/blog/itinerario-tokio-3-dias",
-  "/es/blog/guia-asakusa",
-  "/es/blog/guia-shibuya-harajuku",
-  "/es/blog/guia-shinjuku",
-  "/es/blog/guia-tsukiji",
-  "/es/blog/mejor-epoca-visitar-tokio",
-  "/es/blog/etiqueta-templos-santuarios",
-  "/es/blog/vale-la-pena-contratar-guia",
-  "/es/blog/comparativa-excursiones",
-  "/es/blog/monte-fuji-desde-tokio",
-  "/es/blog/propinas-en-japon",
-  "/es/blog/que-se-come-en-japon",
-  "/es/blog/comida-callejera-tokio",
-  "/es/blog/que-comer-en-japon",
-  "/es/blog/japan-rail-pass-vale-la-pena",
-  "/es/blog/templos-famosos-japon",
-  "/es/blog/itinerario-tokio-5-dias",
-  "/es/blog/monte-fuji-se-ve-desde-tokio",
-  "/es/blog/tour-privado-monte-fuji-2026",
-  "/es/blog/mejor-tour-nocturno-tokio-2026",
-  "/es/blog/tour-palacio-imperial-tokio-2026",
-  "/es/blog/excursion-nikko-desde-tokio",
-  "/es/blog/kamakura-desde-tokio",
-  "/es/blog/yanaka-tokio-itinerario",
-  "/es/blog/guia-licencia-oficial-japon",
-  "/es/blog/asakusa-tokio-guia",
-  "/es/blog/tsukiji-2026",
-  "/es/blog/shitamachi-tokio",
-  "/es/blog/cuanto-cuesta-guia-privado-tokio",
-  "/es/blog/vale-la-pena-guia-privado-tokio",
-  "/es/blog/primera-vez-tokio-guia-local",
-  "/es/blog/tour-gastronomico-tokio",
-  "/es/blog/cerezos-en-flor-tokio",
-  "/es/blog/tesoros-ocultos-tokio",
-  "/es/blog/ruta-gastronomica-tsukiji-ginza",
-  "/es/blog/de-ginza-a-tsukiji-a-pie",
-  "/es/blog/excursion-hakone-desde-tokio",
-  "/es/blog/nikko-con-guia-vs-solo",
-  "/es/blog/kamakura-con-guia-vs-solo",
-  "/es/blog/tsukiji-vs-toyosu",
-  "/es/blog/sensoji-templo-mas-visitado",
-  "/es/blog/tokio-con-ninos-tour-familiar",
-  "/es/blog/tour-vegetariano-tokio",
-  "/es/blog/excursion-kawagoe-desde-tokio",
-  "/es/blog/excursion-yokohama-desde-tokio",
-  "/es/blog/guia-ramen-tokio",
-  "/es/blog/tokio-con-presupuesto",
-  "/es/blog/que-esperar-tour-privado-tokio",
-  "/es/blog/guia-asakusa-completa",
-  "/es/blog/guia-izakayas-tokio",
-  "/es/blog/toyosu-vs-ueno-mercado-pescado",
-  "/es/blog/tsukiji-mercado-exterior-vs-interior",
-  "/es/blog/toyosu-vs-tsukiji-exterior",
-  "/es/blog/temporada-ascenso-monte-fuji",
-  "/es/blog/teamlab-planets-vs-borderless",
-  "/es/blog/hojas-otono-cerca-tokio",
-];
+// ---------------------------------------------------------------------------
+// Routes are DERIVED from the app, not hand-maintained.
+//
+// A hand-written list silently drifts: on 2026-08-01 it had fallen 28 routes
+// behind AppRoutes.tsx, so those pages shipped an empty SPA shell to Googlebot
+// (18 of them had never once appeared in Search Console) while also emitting 3
+// static 404s for routes that no longer existed. Deriving both directions here
+// makes that class of drift impossible.
+//
+//   1. static  — every literal path="..." in AppRoutes.tsx
+//   2. dynamic — /tours/:id expanded from the tour registry in TourDetail.tsx
+//
+// Anything that renders the 404 page aborts the build (see NOT_FOUND_MARKER).
+// ---------------------------------------------------------------------------
+
+function deriveRoutes() {
+  const appRoutes = fs.readFileSync(resolve("src/AppRoutes.tsx"), "utf-8");
+  const tourDetail = fs.readFileSync(resolve("src/pages/TourDetail.tsx"), "utf-8");
+
+  // 1. Literal paths. Skips the "*" catch-all and ":param" routes, which are
+  //    either not real URLs or are expanded separately below.
+  const staticRoutes = [...appRoutes.matchAll(/path="(\/[^"]*)"/g)]
+    .map((m) => m[1])
+    .filter((p) => !p.includes("*") && !p.includes(":"));
+
+  // 2. /tours/:id — keys of the tourSchemaData registry, which is the same
+  //    source TourDetail uses to decide whether a slug is real.
+  const registry = tourDetail.match(
+    /const tourSchemaData:[^=]*=\s*\{([\s\S]*?)\n\};/
+  );
+  if (!registry) {
+    throw new Error(
+      "prerender: could not locate tourSchemaData in TourDetail.tsx — " +
+        "/tours/:id pages would be silently dropped. Fix the pattern before building."
+    );
+  }
+  const tourRoutes = [...registry[1].matchAll(/^\s*"?([a-z0-9-]+)"?:\s*\{/gm)].map(
+    (m) => `/tours/${m[1]}`
+  );
+
+  const all = [...new Set([...staticRoutes, ...tourRoutes])].sort();
+  console.log(
+    `Derived ${all.length} routes (${staticRoutes.length} static + ${tourRoutes.length} tour detail pages).`
+  );
+  return all;
+}
+
+// Rendered output containing any of these means the route resolved to a
+// "missing" state rather than real content. TourDetail has its own fallback
+// separate from the router-level NotFound, so both must be checked — a
+// /tours/<slug> present in tourSchemaData but absent from tourData renders the
+// former and would otherwise ship as a blank 200 page.
+const NOT_FOUND_MARKERS = ["Oops! Page not found", "Tour not found"];
+
+const routes = deriveRoutes();
+
 
 async function prerender() {
   // Read the built index.html template
@@ -161,10 +71,18 @@ async function prerender() {
 
   let successCount = 0;
   let errorCount = 0;
+  const notFound = [];
 
   for (const url of routes) {
     try {
       const { html, helmet } = render(url);
+
+      // A route that falls through to NotFound would be written out as a static
+      // page returning 200 with 404 content — worse than not shipping it at all.
+      if (NOT_FOUND_MARKERS.some((marker) => html.includes(marker))) {
+        notFound.push(url);
+        continue;
+      }
 
       let page = template;
 
@@ -211,7 +129,15 @@ async function prerender() {
     `\nPre-rendering complete: ${successCount} succeeded, ${errorCount} failed out of ${routes.length} routes.`
   );
 
-  if (errorCount > 0) {
+  if (notFound.length > 0) {
+    console.error(
+      `\n${notFound.length} route(s) rendered the 404 page and were not written:\n` +
+        notFound.map((u) => `  ${u}`).join("\n") +
+        "\nRemove the stale <Route> or fix the component before shipping."
+    );
+  }
+
+  if (errorCount > 0 || notFound.length > 0) {
     process.exit(1);
   }
 }
