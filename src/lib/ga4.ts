@@ -47,6 +47,25 @@ export function trackFormSubmit() {
   });
 }
 
+/**
+ * First interaction with the contact form, fired once per page view.
+ *
+ * GA4's enhanced measurement already emits `form_start`, but it is a black box:
+ * in 2026-08 it reported contact_page_view 86 → form_start 21 (24%), down from
+ * 43% the month before, with no way to tell a real drop-off from a detection
+ * change. This is deliberately named differently so both events coexist and can
+ * be compared — if they diverge, the automatic one is the unreliable side.
+ *
+ * `first_field` records where people actually begin, so an abandoned form can be
+ * traced to a specific input rather than guessed at.
+ */
+export function trackFormEngage(firstField: string) {
+  gtag("event", "form_engage", {
+    form_location: window.location.pathname,
+    first_field: firstField,
+  });
+}
+
 export function trackTourPageView(tourName: string) {
   gtag("event", "tour_page_view", {
     tour_name: tourName,

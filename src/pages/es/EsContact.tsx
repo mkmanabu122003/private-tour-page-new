@@ -5,7 +5,7 @@ import { Mail, MapPin, Send, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
-import { trackContactPageView, trackFormSubmit } from "@/lib/ga4";
+import { trackContactPageView, trackFormSubmit, trackFormEngage } from "@/lib/ga4";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
 const VALID_TOUR_VALUES = [
@@ -42,11 +42,16 @@ const EsContact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasEngaged, setHasEngaged] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+    if (!hasEngaged) {
+      setHasEngaged(true);
+      trackFormEngage(name);
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
