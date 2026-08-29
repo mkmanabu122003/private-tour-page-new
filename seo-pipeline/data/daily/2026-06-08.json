@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-06-08",
+  "window_days": 28,
+  "fetch_status": "error_fallback",
+  "fetch_note": "google-api-python-client not installed in this environment. Analysis performed using 2026-05-22.json as fallback. Install dependencies with: pip3 install google-api-python-client google-auth",
+  "gsc": {
+    "error": "No module named 'googleapiclient'"
+  },
+  "ga4": {
+    "error": "No module named 'googleapiclient'"
+  }
+}
