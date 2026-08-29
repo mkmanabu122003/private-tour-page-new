@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-06-29",
+  "window_days": 28,
+  "fetch_status": "api_error",
+  "fetch_error": "GOOGLE_APPLICATION_CREDENTIALS_JSON not set; google-api-python-client not installed. Analysis performed using last valid dataset (2026-05-22) as fallback.",
+  "fallback_data_date": "2026-05-22",
+  "gsc": {
+    "error": "No module named 'googleapiclient'",
+    "note": "Using 2026-05-22 data for brief generation. Re-run after setting GOOGLE_APPLICATION_CREDENTIALS_JSON and installing google-api-python-client."
+  },
+  "ga4": {
+    "error": "No module named 'googleapiclient'",
+    "note": "Using 2026-05-22 data for brief generation."
+  },
+  "brief_generated": true,
+  "brief_slug": "is-kamakura-worth-visiting",
+  "brief_rationale": "Decision Helper category (weight 30). 'is kamakura worth visiting' query at pos 3.11 with 27 impressions in 28-day window — clear decision-stage gap not covered by existing kamakura-day-trip-guide-vs-solo or kamakura-day-trip-from-tokyo articles. Kamakura cluster (3,292 impressions, 1.12% CTR) is our strongest day-trip performer. Same 'is X worth visiting' pattern as recently-added is-hakone-worth-visiting."
+}
