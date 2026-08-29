@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-05-31",
+  "window_days": 28,
+  "fetch_status": "error",
+  "fetch_error": "GOOGLE_APPLICATION_CREDENTIALS_JSON not set in this execution environment. Analysis based on last known good snapshot: 2026-05-22.",
+  "data_source_note": "Brief generated using 2026-05-22 snapshot (seo-pipeline/data/daily/2026-05-22.json). Re-run fetch_daily.py with valid ADC credentials to populate today's data.",
+  "gsc": {
+    "error": "Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information."
+  },
+  "ga4": {
+    "error": "Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information."
+  }
+}
