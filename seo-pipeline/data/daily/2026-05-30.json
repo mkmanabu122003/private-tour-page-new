@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-05-30",
+  "window_days": 28,
+  "_note": "GSC/GA4 fetch failed: GOOGLE_APPLICATION_CREDENTIALS_JSON not set in this execution environment. Analysis for brief generation was performed using data from 2026-05-22.json (window: 2026-04-24 to 2026-05-22). Set the secret in Anthropic Routines to enable live data fetching.",
+  "gsc": {
+    "error": "AuthError: GOOGLE_APPLICATION_CREDENTIALS_JSON environment variable not set",
+    "fallback_ref": "seo-pipeline/data/daily/2026-05-22.json"
+  },
+  "ga4": {
+    "error": "AuthError: GOOGLE_APPLICATION_CREDENTIALS_JSON environment variable not set",
+    "fallback_ref": "seo-pipeline/data/daily/2026-05-22.json"
+  }
+}
