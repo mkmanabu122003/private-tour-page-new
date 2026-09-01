@@ -65,7 +65,7 @@ const EsCuantoCuestaGuiaPrivadoTokio = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Si te preguntas si merece la pena el gasto, también escribí un artículo sobre{" "}
-              <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">
+              <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">
                 si vale la pena contratar un guía privado en Tokio
               </Link>
               . Aquí nos centramos en los precios.

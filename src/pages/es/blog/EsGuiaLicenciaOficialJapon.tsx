@@ -258,7 +258,7 @@ const EsGuiaLicenciaOficialJapon = () => {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Por supuesto. Japón es uno de los países más fáciles y seguros para viajar de forma independiente. El transporte público es excelente, la señalización incluye cada vez más idiomas, y la gente es extraordinariamente amable. Un guía no es una necesidad, es una elección que enriquece la experiencia. La pregunta no es si puedes viajar sin guía, sino si quieres entender Japón a un nivel más profundo del que una audioguía o una aplicación pueden ofrecer. Si la respuesta es sí, entonces un{" "}
-                  <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">
+                  <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">
                     guía con licencia oficial en Japón marca la diferencia
                   </Link>
                   .

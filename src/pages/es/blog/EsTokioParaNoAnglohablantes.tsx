@@ -196,7 +196,7 @@ const EsTokioParaNoAnglohablantes = () => {
                   <li>Excursiones fuera de Tokio (Nikko, Hakone interior)</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Ver mi <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">"¿vale la pena un guía?" honesto</Link>.
+                  Ver mi <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">"¿vale la pena un guía?" honesto</Link>.
                 </p>
 
                 <InlineCTAEs

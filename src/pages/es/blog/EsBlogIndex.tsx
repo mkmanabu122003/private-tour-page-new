@@ -704,7 +704,7 @@ const CATEGORY_META: Record<CategoryName, { anchor: string; description: string 
 // (ver docs/seo/2026-04_inventory.md §3.1, equivalentes ES de los winners EN).
 const popularSlugs = [
   "comparativa-excursiones",
-  "vale-la-pena-guia-privado-tokio",
+  "vale-la-pena-contratar-guia",
   "cuanto-cuesta-guia-privado-tokio",
 ];
 

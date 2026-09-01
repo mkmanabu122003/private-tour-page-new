@@ -278,7 +278,7 @@ const EsTokioConPresupuesto = () => {
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Templo Senso-ji (Asakusa):</strong> El templo más antiguo de Tokio, con la icónica puerta Kaminarimon y la calle comercial Nakamise. Recorrer el recinto es gratis, y la atmósfera (el humo del incienso, la enorme linterna, la pagoda) es inolvidable. Ve temprano por la mañana para evitar las peores multitudes. Para más detalles, consulta mi{" "}
-                <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">guía completa de Asakusa</Link>.
+                <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">guía completa de Asakusa</Link>.
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Mercado exterior de Tsukiji:</strong> Aunque el mercado mayorista interior se mudó a Toyosu, el mercado exterior de Tsukiji sigue vivo con puestos de comida callejera, tiendas de cuchillos y pequeños restaurantes. Caminar y curiosear es gratis; gastarás dinero en comida solo si quieres (y vas a querer). Para la historia completa, lee mi{" "}
@@ -368,7 +368,7 @@ const EsTokioConPresupuesto = () => {
                   <h3>¿Puedo usar tarjeta de crédito en todo Tokio?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La aceptación de tarjetas ha mejorado mucho, pero Tokio todavía tiene muchos sitios que solo aceptan efectivo, especialmente ramen-ya pequeños, puestos de mercado y restaurantes tradicionales. Lleva 10.000-15.000 yenes en efectivo como base. Los cajeros de 7-Eleven y oficinas de correos aceptan tarjetas internacionales sin problema. No dependas solo de las tarjetas, sobre todo en barrios más antiguos como{" "}
-                    <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">Asakusa</Link> o Yanaka.
+                    <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">Asakusa</Link> o Yanaka.
                   </p>
                 </div>
                 <div>

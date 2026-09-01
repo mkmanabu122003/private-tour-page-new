@@ -19,7 +19,7 @@ const AsakusaGuideNew = () => {
         canonicalPath="/blog/asakusa-guide"
         hreflang={[
           { lang: "en", path: "/blog/asakusa-guide" },
-          { lang: "es", path: "/es/blog/guia-asakusa-completa" },
+          { lang: "es", path: "/es/blog/asakusa-tokio-guia" },
           { lang: "x-default", path: "/blog/asakusa-guide" },
         ]}
       />

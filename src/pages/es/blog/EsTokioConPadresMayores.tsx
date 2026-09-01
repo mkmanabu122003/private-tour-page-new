@@ -212,7 +212,7 @@ const EsTokioConPadresMayores = () => {
                   <div>
                     <h3 className="text-foreground">¿Vale la pena un guía privado para un viaje con padres mayores?</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Sí, más que para cualquier otro tipo de viaje. Ver mi <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">"¿vale la pena?" honesto</Link>.
+                      Sí, más que para cualquier otro tipo de viaje. Ver mi <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">"¿vale la pena?" honesto</Link>.
                     </p>
                   </div>
                 </div>
