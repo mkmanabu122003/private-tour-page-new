@@ -161,7 +161,7 @@ const EsTokioConNinosTourFamiliar = () => {
               Asakusa (La Ruta para Familias)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">
+              <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">
                 Asakusa
               </Link>
               {" "}funciona muy bien con niños si lo planificas bien. La calle comercial Nakamise tiene tentempiés y juguetes pequeños. El templo Senso-ji tiene el ritual del incienso (a los niños les encanta abanicarse el humo "para tener buena salud"). Las callejuelas tienen tiendas de taiyaki, dulcerías tradicionales y paseos en rickshaw. Yo organizo las visitas familiares a media mañana, cuando las primeras aglomeraciones se disipan.

@@ -16,76 +16,116 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
-  // Guías de Barrios de Tokio
+  // Guías Útiles
   {
-    slug: "asakusa-tokio-guia",
-    title: "Asakusa: Qué Ver, Qué Evitar y Cómo Ir Antes Que los Turistas",
+    slug: "guia-licencia-oficial-japon",
+    title: "Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa",
     description:
-      "Asakusa recibe millones de turistas al año, pero a las 7am es otro mundo. Un guía local te enseña cómo vivir el barrio como un habitante.",
+      "En Japón existe un examen nacional para guías turísticos. Qué diferencia a un guía con licencia de uno sin ella, y por qué debería importarte.",
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/asakusa-guide-hero.webp",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/tour-photo-1.webp",
   },
   {
-    slug: "guia-shibuya-harajuku",
-    title: "Shibuya y Harajuku: Guía Local del Tokio Moderno",
+    slug: "cuanto-cuesta-guia-privado-tokio",
+    title: "¿Cuánto Cuesta Contratar un Guía Privado en Tokio? Precios Reales 2026",
     description:
-      "Explora Shibuya y Harajuku como un local. Cruce de Shibuya, calle Takeshita, cafés escondidos y los mejores puntos fotográficos.",
+      "Precios reales de guías privados en Tokio: desde guías sin licencia hasta intérpretes oficiales. Qué incluye, qué no, y cómo elegir bien.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/blog/tipping-japan-hero.webp",
+  },
+  {
+    slug: "tour-gratis-vs-guia-privado-tokio",
+    title: "Tour Gratis vs Guía Privado en Tokio: Las Cuentas Reales (2026)",
+    description:
+      "Los tours gratis en Tokio esperan ¥1.000–2.000 de propina por persona. Un guía privado con licencia cuesta ¥45.000 por grupo. Cuándo elegir cada uno.",
+    date: "30 de abril de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/sumida-river-group-selfie.webp",
+  },
+  {
+    slug: "primera-vez-tokio-guia-local",
+    title: "Primera Vez en Tokio: Lo Que Cambia Tener un Guía Local",
+    description:
+      "¿Tu primer viaje a Tokio? Un guía local te cuenta cómo es un día real con guía, cuándo merece la pena y cuándo puedes ir solo.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/tours/asakusa-kaminarimon-morning.webp",
+  },
+  {
+    slug: "vale-la-pena-contratar-guia",
+    title: "¿Vale la Pena Contratar un Guía Turístico en Tokio?",
+    description:
+      "¿Merece la pena contratar un guía en Tokio? Respuesta honesta de Manabu, guía con licencia y más de 500 tours. Costes reales, beneficios reales y cuándo genuinamente no necesitas uno.",
     date: "25 de febrero de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/tour-photo-1.webp",
   },
   {
-    slug: "guia-shinjuku",
-    title: "Guía de Shinjuku: El Corazón de Neón de Tokio",
+    slug: "tokio-con-ninos-tour-familiar",
+    title: "Tokio con Niños: Tours Privados para Familias (2026)",
     description:
-      "Navega Shinjuku como un local. Golden Gai, Omoide Yokocho, Kabukicho, Shinjuku Gyoen y los mejores lugares donde comer.",
-    date: "25 de febrero de 2026",
+      "Cochecitos en trenes llenos, niños que no comen pescado crudo. Un guía familiar te cuenta cómo disfrutar Tokio con hijos de todas las edades.",
+    date: "14 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/shinjuku-guide-hero.webp",
+    category: "Guías Útiles",
+    image: "/images/tours/asakusa-nakamise-street.webp",
   },
   {
-    slug: "guia-tsukiji",
-    title: "Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)",
+    slug: "que-esperar-tour-privado-tokio",
+    title: "Qué Esperar en un Tour Privado en Tokio (2026)",
     description:
-      "Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia.",
-    date: "7 de marzo de 2026",
+      "Punto de encuentro, ritmo, flexibilidad, comida y plan de lluvia. Tu guía en Tokio te explica paso a paso cómo es un día de tour privado.",
+    date: "14 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/tsukiji-outer-market-entrance.webp",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/tour-photo-2.webp",
   },
   {
-    slug: "yanaka-tokio-itinerario",
-    title: "Yanaka, el Tokio Auténtico: Ruta de 3 Horas con un Guía Japonés",
+    slug: "tour-grupo-vs-privado-tokio",
+    title: "Tour en Grupo vs Privado en Tokio: ¿Cuál Ahorra Tiempo, Dinero o Estrés?",
     description:
-      "Yanaka es el barrio que sobrevivió a los bombardeos de la guerra. Un guía oficial te lleva por sus calles, templos y la vida que desapareció del resto de Tokio.",
-    date: "7 de marzo de 2026",
+      "Tour en grupo ¥3.000–5.000/persona, privado ¥40.000–80.000/grupo. Un guía oficial de Tokio explica cuándo el grupo gana — y los 4 viajes donde solo el privado funciona.",
+    date: "22 de mayo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/yanaka-ginza-shopping-street.webp",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/group-photo.webp",
   },
   {
-    slug: "tesoros-ocultos-tokio",
-    title: "Tokio Secreto: Lugares Fuera de lo Común con un Guía Local (2026)",
+    slug: "como-elegir-guia-privado-tokio",
+    title: "Cómo Elegir un Guía Privado en Tokio: 7 Preguntas Antes de Reservar",
     description:
-      "Después de más de 500 tours, estos son los rincones de Tokio a los que vuelvo una y otra vez — desde Yanaka hasta los izakayas de Shinbashi.",
-    date: "7 de marzo de 2026",
+      "Licenciado vs no licenciado, agencia vs directo, tamaño del grupo, política de reembolsos — un guía oficial de Tokio explica qué preguntar antes de pagar ¥40.000+.",
+    date: "22 de mayo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/asakusa-hidden-shrine.webp",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/group-photo.webp",
   },
   {
-    slug: "shitamachi-tokio",
-    title: "El Tokio de Antes: Guía del Shitamachi para Viajeros Curiosos",
+    slug: "viator-vs-getyourguide-vs-directo-tokio",
+    title: "Viator vs GetYourGuide vs Reserva Directa: Tours en Tokio Comparados (2026)",
     description:
-      "Shitamachi significa \"ciudad baja\". Es el Tokio que sobrevivió, el que los japoneses ya casi olvidaron. Un guía te lo explica y te lleva por él.",
-    date: "7 de marzo de 2026",
+      "Viator y GetYourGuide añaden aproximadamente 20-30% de comisión. Un guía oficial de Tokio compara ambos con la reserva directa — costo real, reembolsos y qué obtienes.",
+    date: "22 de mayo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/tours/asakusa-backstreet-local.webp",
+    category: "Guías Útiles",
+    image: "/images/tour-photos/group-photo.webp",
+  },
+  {
+    slug: "tokio-con-padres-mayores",
+    title: "Tokio con Padres Mayores: Rutas Accesibles e Ideas para 3 Generaciones",
+    description:
+      "Rutas en silla de ruedas, consejos de ascensores en estaciones, ritmo de medio día. Un guía oficial explica cómo planear Tokio con padres de 70 o 80 años.",
+    date: "22 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías Útiles",
+    image: "/images/tours/imperial-palace-gardens.webp",
   },
   // Guías de Excursiones
   {
@@ -189,14 +229,297 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/kamakura-great-buddha.webp",
   },
   {
-    slug: "guia-licencia-oficial-japon",
-    title: "Guía con Licencia Oficial en Japón: Qué Significa y Por Qué Importa",
+    slug: "excursion-hakone-desde-tokio",
+    title: "Excursión a Hakone desde Tokio: ¿guía o solo? 2026",
     description:
-      "En Japón existe un examen nacional para guías turísticos. Qué diferencia a un guía con licencia de uno sin ella, y por qué debería importarte.",
+      "El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Tour privado desde ¥70,000. Descubre cuándo vale la pena ir con guía.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+  },
+  {
+    slug: "excursion-kawagoe-desde-tokio",
+    title: "Kawagoe desde Tokio 2026: La Pequeña Edo a 30 min",
+    description:
+      "Kawagoe, la Pequeña Edo, está a 30 minutos de Ikebukuro. Ruta completa, dulces de boniato, precios de transporte y cómo evitar las multitudes.",
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/tour-photos/tour-photo-1.webp",
+    category: "Guías de Excursiones",
+    image: "/images/blog/kawagoe-kurazukuri-hero.webp",
+  },
+  {
+    slug: "excursion-yokohama-desde-tokio",
+    title: "Excursión a Yokohama desde Tokio 2026: ¿Merece la pena?",
+    description:
+      "Yokohama está a 30 min de Tokio, pero ¿vale un día entero? Chinatown, Museo del Ramen, paseo marítimo y cómo combinarlo con Kamakura. Guía honesta.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/blog/yokohama-minatomirai-hero.webp",
+  },
+  {
+    slug: "mejores-excursiones-desde-tokio",
+    title: "9 Mejores Excursiones desde Tokio (Ranking de un Guía Oficial, 2026)",
+    description:
+      "Kamakura, Hakone, Nikko, Monte Fuji, Kawagoe, Enoshima, Yokohama, Monte Takao, Kawaguchiko — un guía oficial de Tokio las ordena por tiempo, qué ves y a quién le conviene cada una.",
+    date: "22 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+  },
+  {
+    slug: "kawaguchiko-vs-hakone-monte-fuji",
+    title: "Kawaguchiko vs Hakone para el Monte Fuji: Cuál Elegir (Guía Oficial 2026)",
+    description:
+      "Kawaguchiko = vistas más cercanas, menos actividades. Hakone = onsen, arte, lago — pero la vista del Fuji depende del clima. Un guía oficial de Tokio compara ambos.",
+    date: "22 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/hakone-lake-ashi-fuji.webp",
+  },
+  {
+    slug: "excursion-enoshima-desde-tokio",
+    title: "Excursión a Enoshima desde Tokio 2026: Playas, Santuarios, Combinar con Kamakura",
+    description:
+      "Enoshima está a 1h de Tokio: cueva-santuario, playa, atardecer, Monte Fuji en días despejados. Un guía oficial sobre combinar con Kamakura y qué comer.",
+    date: "22 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/tours/kamakura-great-buddha.webp",
+  },
+  {
+    slug: "vale-la-pena-visitar-hakone",
+    title: "¿Vale la pena visitar Hakone? Guía privado responde (2026)",
+    description:
+      "Hakone promete vistas del Monte Fuji, pero no siempre aparece. Un guía oficial comparte cuándo Hakone merece la pena y cuándo conviene elegir otro destino.",
+    date: "23 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Excursiones",
+    image: "/images/blog/private-fuji-route-a-hakone.jpg",
+  },
+  // Guías de Barrios de Tokio
+  {
+    slug: "asakusa-tokio-guia",
+    title: "Asakusa: Qué Ver, Qué Evitar y Cómo Ir Antes Que los Turistas",
+    description:
+      "Asakusa recibe millones de turistas al año, pero a las 7am es otro mundo. Un guía local te enseña cómo vivir el barrio como un habitante.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/asakusa-guide-hero.webp",
+  },
+  {
+    slug: "guia-shibuya-harajuku",
+    title: "Shibuya y Harajuku: Guía Local del Tokio Moderno",
+    description:
+      "Explora Shibuya y Harajuku como un local. Cruce de Shibuya, calle Takeshita, cafés escondidos y los mejores puntos fotográficos.",
+    date: "25 de febrero de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
+  },
+  {
+    slug: "guia-shinjuku",
+    title: "Guía de Shinjuku: El Corazón de Neón de Tokio",
+    description:
+      "Navega Shinjuku como un local. Golden Gai, Omoide Yokocho, Kabukicho, Shinjuku Gyoen y los mejores lugares donde comer.",
+    date: "25 de febrero de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/shinjuku-guide-hero.webp",
+  },
+  {
+    slug: "guia-tsukiji",
+    title: "Guía del Mercado de Tsukiji 2026: Sí, Sigue Abierto (Horarios y Consejos)",
+    description:
+      "Guía actualizada del mercado exterior de Tsukiji con más de 460 puestos. Horarios, qué comer, precios y cómo combinarlo con Ginza. Por un guía local con licencia.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/tsukiji-outer-market-entrance.webp",
+  },
+  {
+    slug: "yanaka-tokio-itinerario",
+    title: "Yanaka, el Tokio Auténtico: Ruta de 3 Horas con un Guía Japonés",
+    description:
+      "Yanaka es el barrio que sobrevivió a los bombardeos de la guerra. Un guía oficial te lleva por sus calles, templos y la vida que desapareció del resto de Tokio.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/yanaka-ginza-shopping-street.webp",
+  },
+  {
+    slug: "tesoros-ocultos-tokio",
+    title: "Tokio Secreto: Lugares Fuera de lo Común con un Guía Local (2026)",
+    description:
+      "Después de más de 500 tours, estos son los rincones de Tokio a los que vuelvo una y otra vez — desde Yanaka hasta los izakayas de Shinbashi.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/asakusa-hidden-shrine.webp",
+  },
+  {
+    slug: "shitamachi-tokio",
+    title: "El Tokio de Antes: Guía del Shitamachi para Viajeros Curiosos",
+    description:
+      "Shitamachi significa \"ciudad baja\". Es el Tokio que sobrevivió, el que los japoneses ya casi olvidaron. Un guía te lo explica y te lleva por él.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/tours/asakusa-backstreet-local.webp",
+  },
+  {
+    slug: "de-ginza-a-tsukiji-a-pie",
+    title: "De Ginza a Tsukiji a Pie 2026: 3 Rutas Comparadas",
+    description:
+      "Camina de Ginza a Tsukiji en 15 min por Harumi-dori, pasando por el Teatro Kabukiza y Tsukiji Hongan-ji. Guía local con 3 rutas, salidas y horarios.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/ginza-shopping-street.webp",
+  },
+  {
+    slug: "sensoji-templo-mas-visitado",
+    title: "Senso-ji: 30M de Visitantes — Mejores Horarios y Tips",
+    description:
+      "Senso-ji recibe 30 millones de visitantes al año. Evita las multitudes: mejores horarios, miradores secretos y 5 rincones que la mayoría no conoce.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Guías de Barrios de Tokio",
+    image: "/images/blog/asakusa-sensoji-pagoda.webp",
+  },
+  // Gastronomía Japonesa
+  {
+    slug: "que-comer-en-japon",
+    title: "Qué Comer en Japón: 15 Platos Que No Puedes Perderte",
+    description:
+      "Lista definitiva de comida japonesa imprescindible. Un guía oficial con 500+ tours te dice qué pedir, dónde y en qué orden probarlos.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/tours/food-tour-izakaya.webp",
+  },
+  {
+    slug: "comida-callejera-tokio",
+    title: "Comida Callejera en Tokio: Lo Que Come un Guía Local",
+    description:
+      "Takoyaki, yakitori, taiyaki... Un guía oficial de Tokio te lleva por los mejores puestos de comida callejera en Asakusa, Yanaka y más.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/tours/tsukiji-street-food.webp",
+  },
+  {
+    slug: "guia-izakayas-tokio",
+    title: "Guía de Izakayas en Tokio: Dónde Bebe un Guía Local",
+    description:
+      "Un guía oficial de Tokio te revela los callejones de izakayas, las costumbres para pedir y los bares ocultos que no encontrarías solo. Golden Gai, Omoide Yokocho, Yurakucho y más.",
+    date: "13 de abril de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/tours/night-tour-omoide-yokocho.webp",
+  },
+  {
+    slug: "ruta-gastronomica-tsukiji-ginza",
+    title: "De Tsukiji a Ginza: La Ruta Gastronómica Que Hacen los Locales de Tokio",
+    description:
+      "Una ruta a pie de 3 horas desde el mercado de Tsukiji hasta los izakayas bajo las vías en Yurakucho y Shinbashi. Las paradas que realmente hacen los tokiotas.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-food-guide-hero.webp",
+  },
+  {
+    slug: "tour-gastronomico-tokio",
+    title: "Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta (Guía Local)",
+    description:
+      "¿Tour de comida en Tokio o explorar solo? Un guía que habla español te cuenta qué esperar, cuánto cuesta y cuándo merece la pena.",
+    date: "14 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/tours/food-tour-tsukiji.webp",
+  },
+  {
+    slug: "toyosu-vs-ueno-mercado-pescado",
+    title: "Toyosu vs Mercado de Ueno: ¿Qué Mercado de Pescado de Tokio Visitar?",
+    description:
+      "Toyosu (mercado mayorista real con subasta de atún) vs Ameyoko en Ueno (calle abierta con puestos de marisco e izakayas). Un guía con licencia compara ambos.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/toyosu-senkyaku-banrai.webp",
+  },
+  {
+    slug: "tsukiji-mercado-exterior-vs-interior",
+    title: "Mercado Exterior vs Interior de Tsukiji: ¿Cuál Es la Diferencia?",
+    description:
+      "El mercado interior se trasladó a Toyosu en octubre de 2018; el exterior con 460+ puestos sigue en Tsukiji. Un guía con licencia explica qué cambió.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-outer-market-entrance.webp",
+  },
+  {
+    slug: "toyosu-vs-tsukiji-exterior",
+    title: "Mercado de Toyosu vs Mercado Exterior de Tsukiji: ¿Cuál Visitar en 2026?",
+    description:
+      "Toyosu (mayorista moderno con subasta de atún) vs Mercado Exterior de Tsukiji (460+ puestos en 2026). Comparativa con horarios, precios y plan de mañana combinada.",
+    date: "9 de mayo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/tsukiji-fresh-tuna-display.webp",
+  },
+  {
+    slug: "tsukiji-vs-toyosu",
+    title: "Tsukiji vs Toyosu 2026: Mercado de Pescado Tokio",
+    description:
+      "Tsukiji (comida callejera, +460 puestos) vs Toyosu (subasta de atún). Un guía local compara ambos mercados y te dice cuál visitar en 2026.",
+    date: "31 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/toyosu-senkyaku-banrai.webp",
+  },
+  {
+    slug: "tour-vegetariano-tokio",
+    title: "Tour Vegetariano Tokio 2026: Guía Completa",
+    description:
+      "Ser vegetariano en Japón no tiene por qué ser difícil. Un guía con licencia te muestra los mejores restaurantes, platos y cómo pedir en japonés.",
+    date: "8 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/vegetarian-matcha-wagashi.webp",
+  },
+  {
+    slug: "guia-ramen-tokio",
+    title: "Guía Ramen Tokio 2026: Lo Que Pide un Guía Local",
+    description:
+      "Tokio tiene más de 10.000 ramen-ya. Un guía oficial con más de 500 tours te dice exactamente qué pedir, dónde ir y cómo pedirlo como un local.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Gastronomía Japonesa",
+    image: "/images/blog/ramen-guide-hero.webp",
+  },
+  // Cultura Japonesa
+  {
+    slug: "propinas-en-japon",
+    title: "Propinas en Japón: Lo Que Necesitas Saber",
+    description:
+      "En Japón no es costumbre dejar propina. La mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Cultura Japonesa",
+    image: "/images/tours/asakusa-kaminarimon-gate.webp",
+  },
+  {
+    slug: "templos-famosos-japon",
+    title: "Los Templos Más Famosos de Japón: Guía para Entenderlos de Verdad",
+    description:
+      "Senso-ji, Fushimi Inari, Kinkaku-ji... Un guía oficial explica qué ver, cómo comportarse y qué significa cada elemento en los templos japoneses.",
+    date: "7 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Cultura Japonesa",
+    image: "/images/blog/asakusa-sensoji-pagoda.webp",
   },
   // Planifica tu Viaje
   {
@@ -249,170 +572,85 @@ const blogPosts: BlogPost[] = [
     category: "Planifica tu Viaje",
     image: "/images/tours/senso-ji-temple-tokyo.webp",
   },
-  // Cultura Japonesa
   {
-    slug: "propinas-en-japon",
-    title: "Propinas en Japón: Lo Que Necesitas Saber",
+    slug: "cerezos-en-flor-tokio",
+    title: "Cerezos en Flor en Tokio 2026: Fechas, Mejores Lugares y Tips",
     description:
-      "En Japón no es costumbre dejar propina. La mayoría de japoneses no están acostumbrados a recibirla y pueden sentirse confundidos. Un guía oficial explica por qué y cómo mostrar agradecimiento.",
+      "Temporada de sakura en Tokio 2026: floración desde el 19 de marzo, plenitud el 27. Un guía local clasifica los 7 mejores lugares y comparte tips que no encontrarás en otras guías.",
+    date: "22 de marzo de 2026",
+    author: "Manabu, Guía con Licencia",
+    category: "Planifica tu Viaje",
+    image: "/images/blog/meguro-river-cherry-blossoms.webp",
+  },
+  {
+    slug: "tokio-con-presupuesto",
+    title: "Tokio con Presupuesto: Lo Que Gasta un Guía Local",
+    description:
+      "Tokio es más barato de lo que crees. Un guía con licencia desglosa costes reales diarios (transporte, comida, entradas) y dónde ahorrar en 2026.",
     date: "7 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Cultura Japonesa",
-    image: "/images/tours/asakusa-kaminarimon-gate.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/blog/tokyo-street-snack.webp",
   },
   {
-    slug: "templos-famosos-japon",
-    title: "Los Templos Más Famosos de Japón: Guía para Entenderlos de Verdad",
+    slug: "donde-alojarse-en-tokio",
+    title: "Dónde Alojarse en Tokio 2026: 7 Zonas Clasificadas por Tipo de Viaje",
     description:
-      "Senso-ji, Fushimi Inari, Kinkaku-ji... Un guía oficial explica qué ver, cómo comportarse y qué significa cada elemento en los templos japoneses.",
-    date: "7 de marzo de 2026",
+      "Shinjuku para vida nocturna, Asakusa para el Tokio antiguo, Ginza para compras, Shibuya para primera vez. Un guía oficial elige la zona que se ajusta a tu viaje.",
+    date: "22 de mayo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Cultura Japonesa",
-    image: "/images/blog/asakusa-sensoji-pagoda.webp",
-  },
-  // Gastronomía Japonesa
-  {
-    slug: "que-comer-en-japon",
-    title: "Qué Comer en Japón: 15 Platos Que No Puedes Perderte",
-    description:
-      "Lista definitiva de comida japonesa imprescindible. Un guía oficial con 500+ tours te dice qué pedir, dónde y en qué orden probarlos.",
-    date: "7 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/tours/food-tour-izakaya.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/blog/shibuya-harajuku-guide-hero.webp",
   },
   {
-    slug: "comida-callejera-tokio",
-    title: "Comida Callejera en Tokio: Lo Que Come un Guía Local",
+    slug: "tokio-para-no-anglohablantes",
+    title: "Tokio para No Anglohablantes: 12 Consejos que Hacen Tokio Más Fácil",
     description:
-      "Takoyaki, yakitori, taiyaki... Un guía oficial de Tokio te lleva por los mejores puestos de comida callejera en Asakusa, Yanaka y más.",
-    date: "7 de marzo de 2026",
+      "Apps de traducción que funcionan, menús, señales de estación, qué señalar, cuándo usar efectivo. Un guía oficial sobre cerrar la brecha del idioma en Tokio.",
+    date: "22 de mayo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/tours/tsukiji-street-food.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/tours/tokyo-night-tour-hero.webp",
   },
   {
-    slug: "tsukiji-2026",
-    title: "Tsukiji en 2026: Mi Ruta Gastronómica Como Guía Local",
+    slug: "dia-de-lluvia-en-tokio",
+    title: "Día de Lluvia en Tokio: 14 Cosas que Hacer Cuando el Clima Cambia",
     description:
-      "Un guía oficial de Tokio comparte su ruta personal por el mercado de Tsukiji en 2026: qué puestos visitar, qué probar primero y cómo comer como un japonés.",
-    date: "7 de marzo de 2026",
+      "Mercados cubiertos, museos, miradores, cafés — y 3 lugares que son mejores bajo la lluvia. Un guía oficial de Tokio sobre rescatar días lluviosos.",
+    date: "22 de mayo de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/blog/tsukiji-tamagoyaki.webp",
-  },
-  // Guías Útiles
-  {
-    slug: "vale-la-pena-guia-privado-tokio",
-    title: "¿Vale la Pena un Guía Privado en Tokio? Mi Respuesta Sin Rodeos",
-    description:
-      "¿Necesitas un guía privado en Tokio o puedes ir solo? Un guía oficial con 500+ tours te da su respuesta honesta, con ejemplos reales de sus clientes.",
-    date: "7 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/tour-photos/photo1.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/tours/tokyo-night-tour-hero.webp",
   },
   {
-    slug: "cuanto-cuesta-guia-privado-tokio",
-    title: "¿Cuánto Cuesta Contratar un Guía Privado en Tokio? Precios Reales 2026",
+    slug: "temporada-ascenso-monte-fuji",
+    title: "Ascenso al Monte Fuji 2026: ¿Necesitas un Guía?",
     description:
-      "Precios reales de guías privados en Tokio: desde guías sin licencia hasta intérpretes oficiales. Qué incluye, qué no, y cómo elegir bien.",
-    date: "7 de marzo de 2026",
+      "Un guía licenciado de Tokio explica la temporada 2026 del Fuji: fechas, la nueva reserva y tarifa de ¥4,000, y si de verdad necesitas un guía para subir.",
+    date: "20 de julio de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/blog/tipping-japan-hero.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/blog/mt-fuji-summit-sunrise.webp",
   },
   {
-    slug: "tour-gratis-vs-guia-privado-tokio",
-    title: "Tour Gratis vs Guía Privado en Tokio: Las Cuentas Reales (2026)",
+    slug: "teamlab-planets-vs-borderless",
+    title: "teamLab Planets vs Borderless: ¿Cuál Elegir? (2026)",
     description:
-      "Los tours gratis en Tokio esperan ¥1.000–2.000 de propina por persona. Un guía privado con licencia cuesta ¥45.000 por grupo. Cuándo elegir cada uno.",
-    date: "30 de abril de 2026",
+      "Un guía de Tokio compara teamLab Planets y Borderless en 2026: ubicación, entradas, cómo es cada uno y cuál conviene según tu viaje.",
+    date: "20 de julio de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/tour-photos/sumida-river-group-selfie.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/blog/teamlab-planets-universe.webp",
   },
   {
-    slug: "primera-vez-tokio-guia-local",
-    title: "Primera Vez en Tokio: Lo Que Cambia Tener un Guía Local",
+    slug: "hojas-otono-cerca-tokio",
+    title: "Hojas de Otoño cerca de Tokio 2026: Dónde y Cuándo",
     description:
-      "¿Tu primer viaje a Tokio? Un guía local te cuenta cómo es un día real con guía, cuándo merece la pena y cuándo puedes ir solo.",
-    date: "14 de marzo de 2026",
+      "El plan de otoño 2026 de un guía de Tokio: cuándo llega el pico en Nikko, Hakone y Kawaguchiko, y qué excursión de hojas otoñales elegir.",
+    date: "20 de julio de 2026",
     author: "Manabu, Guía con Licencia",
-    category: "Guías Útiles",
-    image: "/images/tours/asakusa-kaminarimon-morning.webp",
-  },
-  // Comida y Vida Nocturna
-  {
-    slug: "guia-izakayas-tokio",
-    title: "Guía de Izakayas en Tokio: Dónde Bebe un Guía Local",
-    description:
-      "Un guía oficial de Tokio te revela los callejones de izakayas, las costumbres para pedir y los bares ocultos que no encontrarías solo. Golden Gai, Omoide Yokocho, Yurakucho y más.",
-    date: "13 de abril de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/tours/night-tour-omoide-yokocho.webp",
-  },
-  // Gastronomía Japonesa (new)
-  {
-    slug: "ruta-gastronomica-tsukiji-ginza",
-    title: "De Tsukiji a Ginza: La Ruta Gastronómica Que Hacen los Locales de Tokio",
-    description:
-      "Una ruta a pie de 3 horas desde el mercado de Tsukiji hasta los izakayas bajo las vías en Yurakucho y Shinbashi. Las paradas que realmente hacen los tokiotas.",
-    date: "14 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/blog/tsukiji-food-guide-hero.webp",
-  },
-  {
-    slug: "de-ginza-a-tsukiji-a-pie",
-    title: "De Ginza a Tsukiji a Pie 2026: 3 Rutas Comparadas",
-    description:
-      "Camina de Ginza a Tsukiji en 15 min por Harumi-dori, pasando por el Teatro Kabukiza y Tsukiji Hongan-ji. Guía local con 3 rutas, salidas y horarios.",
-    date: "9 de mayo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Guías de Barrios de Tokio",
-    image: "/images/blog/ginza-shopping-street.webp",
-  },
-  {
-    slug: "tour-gastronomico-tokio",
-    title: "Tour Gastronómico en Tokio: Lo Que Nadie Te Cuenta (Guía Local)",
-    description:
-      "¿Tour de comida en Tokio o explorar solo? Un guía que habla español te cuenta qué esperar, cuánto cuesta y cuándo merece la pena.",
-    date: "14 de marzo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/tours/food-tour-tsukiji.webp",
-  },
-  {
-    slug: "toyosu-vs-ueno-mercado-pescado",
-    title: "Toyosu vs Mercado de Ueno: ¿Qué Mercado de Pescado de Tokio Visitar?",
-    description:
-      "Toyosu (mercado mayorista real con subasta de atún) vs Ameyoko en Ueno (calle abierta con puestos de marisco e izakayas). Un guía con licencia compara ambos.",
-    date: "9 de mayo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/blog/toyosu-senkyaku-banrai.webp",
-  },
-  {
-    slug: "tsukiji-mercado-exterior-vs-interior",
-    title: "Mercado Exterior vs Interior de Tsukiji: ¿Cuál Es la Diferencia?",
-    description:
-      "El mercado interior se trasladó a Toyosu en octubre de 2018; el exterior con 460+ puestos sigue en Tsukiji. Un guía con licencia explica qué cambió.",
-    date: "9 de mayo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/blog/tsukiji-outer-market-entrance.webp",
-  },
-  {
-    slug: "toyosu-vs-tsukiji-exterior",
-    title: "Mercado de Toyosu vs Mercado Exterior de Tsukiji: ¿Cuál Visitar en 2026?",
-    description:
-      "Toyosu (mayorista moderno con subasta de atún) vs Mercado Exterior de Tsukiji (460+ puestos en 2026). Comparativa con horarios, precios y plan de mañana combinada.",
-    date: "9 de mayo de 2026",
-    author: "Manabu, Guía con Licencia",
-    category: "Gastronomía Japonesa",
-    image: "/images/blog/tsukiji-fresh-tuna-display.webp",
+    category: "Planifica tu Viaje",
+    image: "/images/blog/autumn-nikko-chuzenji.webp",
   },
 ];
 
@@ -466,7 +704,7 @@ const CATEGORY_META: Record<CategoryName, { anchor: string; description: string 
 // (ver docs/seo/2026-04_inventory.md §3.1, equivalentes ES de los winners EN).
 const popularSlugs = [
   "comparativa-excursiones",
-  "vale-la-pena-guia-privado-tokio",
+  "vale-la-pena-contratar-guia",
   "cuanto-cuesta-guia-privado-tokio",
 ];
 

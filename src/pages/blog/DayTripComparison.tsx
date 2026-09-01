@@ -15,6 +15,11 @@ const DayTripComparison = () => {
         title="Kamakura Day Trip vs Hakone vs Nikko: Best Pick 2026"
         description="Can't decide between Kamakura, Hakone, or Nikko? A licensed local guide compares the Kamakura day trip with Hakone and Nikko on time, highlights, and fit."
         canonicalPath="/blog/kamakura-vs-hakone-vs-nikko-day-trip"
+        hreflang={[
+          { lang: "en", path: "/blog/kamakura-vs-hakone-vs-nikko-day-trip" },
+          { lang: "es", path: "/es/blog/comparativa-excursiones" },
+          { lang: "x-default", path: "/blog/kamakura-vs-hakone-vs-nikko-day-trip" },
+        ]}
       />
 
       <div className="prose-editorial">

@@ -99,6 +99,16 @@ const blogPosts: BlogPost[] = [
     image: "/images/tours/meiji-shrine-torii-gate.webp",
   },
   {
+    slug: "tokyo-cherry-blossom-guide",
+    title: "Tokyo Cherry Blossoms 2026: Best Spots & Dates",
+    description:
+      "Tokyo sakura season 2026: bloom starts March 19, full bloom March 27. A local guide ranks the 7 best spots and shares timing tips most visitors miss.",
+    date: "March 22, 2026",
+    author: "Manabu, Licensed Tour Guide",
+    category: "Plan Your Trip",
+    image: "/images/blog/meguro-river-cherry-blossoms.webp",
+  },
+  {
     slug: "japan-temple-shrine-etiquette",
     title: "Temple & Shrine Etiquette in Japan: A Complete Guide",
     description:

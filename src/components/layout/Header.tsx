@@ -54,7 +54,7 @@ const blogCategories = [
 
 const esBlogPopular = [
   { name: "Comparativa de Excursiones", href: "/es/blog/comparativa-excursiones" },
-  { name: "¿Vale la Pena un Guía Privado?", href: "/es/blog/vale-la-pena-guia-privado-tokio" },
+  { name: "¿Vale la Pena un Guía Privado?", href: "/es/blog/vale-la-pena-contratar-guia" },
   { name: "Cuánto Cuesta un Guía (2026)", href: "/es/blog/cuanto-cuesta-guia-privado-tokio" },
 ];
 

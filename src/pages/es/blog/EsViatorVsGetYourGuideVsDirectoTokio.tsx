@@ -174,7 +174,7 @@ const EsViatorVsGetYourGuideVsDirectoTokio = () => {
                   Usa las plataformas para descubrir al guía. Luego revisa si la reserva directa está disponible antes de pagar.
                 </blockquote>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Para más sobre cómo evaluar guías, ver <Link to="/es/blog/como-elegir-guia-privado-tokio" className="text-accent hover:underline">cómo elegir un guía privado en Tokio</Link>. Para si vale la pena un tour privado, ver mi <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">"¿vale la pena?" honesto</Link>.
+                  Para más sobre cómo evaluar guías, ver <Link to="/es/blog/como-elegir-guia-privado-tokio" className="text-accent hover:underline">cómo elegir un guía privado en Tokio</Link>. Para si vale la pena un tour privado, ver mi <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">"¿vale la pena?" honesto</Link>.
                 </p>
 
                 <InlineCTAEs

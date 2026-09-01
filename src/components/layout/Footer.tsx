@@ -71,7 +71,7 @@ export const Footer = () => {
                 <li><Link to="/es/blog/guia-tsukiji" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Guía de Tsukiji</Link></li>
                 <li><Link to="/es/blog/mejor-epoca-visitar-tokio" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Mejor Época para Visitar Tokio</Link></li>
                 <li><Link to="/es/blog/etiqueta-templos-santuarios" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Etiqueta en Templos y Santuarios</Link></li>
-                <li><Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">¿Vale la Pena Contratar un Guía?</Link></li>
+                <li><Link to="/es/blog/vale-la-pena-contratar-guia" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">¿Vale la Pena Contratar un Guía?</Link></li>
                 <li><Link to="/es/blog/comparativa-excursiones" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Comparativa de Excursiones</Link></li>
               </ul>
             </div>

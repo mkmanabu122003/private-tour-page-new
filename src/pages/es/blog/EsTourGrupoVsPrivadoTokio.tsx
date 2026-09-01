@@ -208,7 +208,7 @@ const EsTourGrupoVsPrivadoTokio = () => {
                   <div>
                     <h3 className="text-foreground">¿Vale la pena un guía privado para viajeros solitarios?</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Depende. Ver mi <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">"¿vale la pena?" honesto</Link>.
+                      Depende. Ver mi <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">"¿vale la pena?" honesto</Link>.
                     </p>
                   </div>
                 </div>

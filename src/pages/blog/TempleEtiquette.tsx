@@ -14,6 +14,11 @@ const TempleEtiquette = () => {
         title="Japan Shrine & Temple Etiquette: 7 Things That Quietly Offend Locals"
         description="Bowing, clapping, photos, money — and 4 small mistakes that mark you as rude before you say a word. A licensed Tokyo guide explains the rules in plain English."
         canonicalPath="/blog/japan-temple-shrine-etiquette"
+        hreflang={[
+          { lang: "en", path: "/blog/japan-temple-shrine-etiquette" },
+          { lang: "es", path: "/es/blog/etiqueta-templos-santuarios" },
+          { lang: "x-default", path: "/blog/japan-temple-shrine-etiquette" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

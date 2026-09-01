@@ -181,7 +181,7 @@ const EsSensojiTemploMasVisitado = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               <strong className="text-foreground">La historia de entretenimiento de Asakusa:</strong> Senso-ji no se hizo popular de forma aislada. El crecimiento del templo es inseparable de la historia de Asakusa, que fue el principal distrito de entretenimiento de Tokio durante siglos. Durante el periodo Edo (1603-1868), la zona alrededor del templo se convirtió en una zona de ocio autorizada con teatros de kabuki, artistas callejeros, restaurantes y barrios de placer. Esta tradición de combinar lo sagrado y lo secular (oración por la mañana, entretenimiento por la tarde) dio a Senso-ji una gravedad cultural que los sitios puramente religiosos rara vez logran. Para profundizar en esta historia por capas, te recomiendo leer mi{" "}
-              <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">
+              <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">
                 guía completa de Asakusa
               </Link>, que cubre el barrio en detalle.
             </p>
@@ -320,7 +320,7 @@ const EsSensojiTemploMasVisitado = () => {
                   <h3>¿Qué ver en Asakusa además de Senso-ji?</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Asakusa es mucho más que Senso-ji. Puedes pasear por el paseo del río Sumida con vistas al Tokyo Skytree, explorar la calle Hoppy-dori (la zona de izakayas más castiza del barrio), visitar el Santuario Imado o descubrir el barrio de Kappabashi, famoso por sus tiendas de utensilios de cocina y sus increíbles muestras de comida de plástico. Lee mi{" "}
-                    <Link to="/es/blog/guia-asakusa" className="text-accent hover:underline">guía completa de Asakusa</Link>{" "}
+                    <Link to="/es/blog/asakusa-tokio-guia" className="text-accent hover:underline">guía completa de Asakusa</Link>{" "}
                     para un recorrido a fondo.
                   </p>
                 </div>

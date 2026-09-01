@@ -15,10 +15,7 @@ const EsQueSecomeEnJapon = () => {
       <SEO
         title="¿Qué se come en Japón? La guía de comida japonesa que nadie más te da"
         description="Más allá del sushi y el ramen: un guía local japonés te explica qué comer realmente en Japón, dónde encontrarlo y qué evitar como turista."
-        canonicalPath="/es/blog/que-se-come-en-japon"
-        hreflang={[
-          { lang: "es", path: "/es/blog/que-se-come-en-japon" },
-        ]}
+        canonicalPath="/es/blog/que-comer-en-japon"
       />
 
       <div className="prose-editorial">

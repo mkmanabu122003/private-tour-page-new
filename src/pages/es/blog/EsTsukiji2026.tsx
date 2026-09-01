@@ -15,10 +15,7 @@ const EsTsukiji2026 = () => {
       <SEO
         title="Tsukiji en 2026: mi ruta gastronómica como guía local"
         description="Un guía oficial de Tokio comparte su ruta personal por el mercado de Tsukiji en 2026: qué puestos visitar, qué probar primero y cómo comer como un japonés."
-        canonicalPath="/es/blog/tsukiji-2026"
-        hreflang={[
-          { lang: "es", path: "/es/blog/tsukiji-2026" },
-        ]}
+        canonicalPath="/es/blog/guia-tsukiji"
       />
 
       <div className="prose-editorial">

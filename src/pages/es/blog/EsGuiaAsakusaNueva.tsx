@@ -13,12 +13,7 @@ const EsGuiaAsakusaNueva = () => {
       <SEO
         title="Guía Asakusa 2026: Qué Ver, Evitar y Secretos"
         description="La mayoría solo ve Senso-ji y se va. Un guía oficial comparte rincones ocultos, mejores horarios y 4 sitios que todos ignoran."
-        canonicalPath="/es/blog/guia-asakusa-completa"
-        hreflang={[
-          { lang: "en", path: "/blog/asakusa-guide" },
-          { lang: "es", path: "/es/blog/guia-asakusa-completa" },
-          { lang: "x-default", path: "/blog/asakusa-guide" },
-        ]}
+        canonicalPath="/es/blog/asakusa-tokio-guia"
       />
 
       <div className="prose-editorial">

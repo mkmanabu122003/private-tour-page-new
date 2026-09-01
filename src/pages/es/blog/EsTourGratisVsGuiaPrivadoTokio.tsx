@@ -331,7 +331,7 @@ const EsTourGratisVsGuiaPrivadoTokio = () => {
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Y si estás en algún punto intermedio entre estos escenarios y no lo tienes claro, mi{" "}
-              <Link to="/es/blog/vale-la-pena-guia-privado-tokio" className="text-accent hover:underline">
+              <Link to="/es/blog/vale-la-pena-contratar-guia" className="text-accent hover:underline">
                 artículo sobre si vale la pena contratar un guía
               </Link>{" "}
               repasa la decisión más despacio — incluyendo los casos en los que te diría que no contrates guía y hagas Tokio por tu cuenta.

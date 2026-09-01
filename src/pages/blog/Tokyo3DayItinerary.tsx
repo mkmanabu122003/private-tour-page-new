@@ -14,6 +14,11 @@ const Tokyo3DayItinerary = () => {
         title="Tokyo 3-Day Itinerary 2026: Day-by-Day Local Guide"
         description="A day-by-day Tokyo itinerary built from 500+ tours. Day 1: Asakusa & Yanaka. Day 2: Harajuku & Shibuya. Day 3: Tsukiji or a day trip. No wasted time."
         canonicalPath="/blog/tokyo-3-day-itinerary"
+        hreflang={[
+          { lang: "en", path: "/blog/tokyo-3-day-itinerary" },
+          { lang: "es", path: "/es/blog/itinerario-tokio-3-dias" },
+          { lang: "x-default", path: "/blog/tokyo-3-day-itinerary" },
+        ]}
       />
 
       <div className="prose-editorial">
