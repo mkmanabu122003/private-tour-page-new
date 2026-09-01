@@ -16,6 +16,11 @@ const ShinjukuGuide = () => {
         title="Shinjuku Guide: Best Things to Do | Local Expert Tips"
         description="Plan your Shinjuku visit with insider tips from a licensed Tokyo guide. Explore Golden Gai, Omoide Yokocho, Gyoen Garden, and more hidden spots most tourists miss."
         canonicalPath="/blog/shinjuku-guide"
+        hreflang={[
+          { lang: "en", path: "/blog/shinjuku-guide" },
+          { lang: "es", path: "/es/blog/guia-shinjuku" },
+          { lang: "x-default", path: "/blog/shinjuku-guide" },
+        ]}
       />
 
       <div className="prose-editorial">

@@ -14,6 +14,11 @@ const BestTimeToVisit = () => {
         title="Best Time to Visit Tokyo 2026: Month-by-Month Guide"
         description="Best months: March-April (cherry blossoms) & October-November (autumn). Cheapest: January. A Tokyo guide's month-by-month breakdown with crowd levels & weather."
         canonicalPath="/blog/best-time-to-visit-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/best-time-to-visit-tokyo" },
+          { lang: "es", path: "/es/blog/mejor-epoca-visitar-tokio" },
+          { lang: "x-default", path: "/blog/best-time-to-visit-tokyo" },
+        ]}
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

@@ -13,6 +13,11 @@ const IsItWorthHiringGuide = () => {
         title="Is Hiring a Tour Guide in Tokyo Worth It? (2026)"
         description="After 500+ tours, here's my honest answer: it depends on 3 things. When a guide is worth ¥40,000–50,000 and when you're better off solo."
         canonicalPath="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo"
+        hreflang={[
+          { lang: "en", path: "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" },
+          { lang: "es", path: "/es/blog/vale-la-pena-contratar-guia" },
+          { lang: "x-default", path: "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" },
+        ]}
       />
 
       <div className="prose-editorial">

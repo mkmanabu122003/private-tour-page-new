@@ -16,6 +16,11 @@ const ShibuyaHarajukuGuide = () => {
         title="Shibuya & Harajuku Guide 2026: Beyond the Crossing"
         description="Shibuya Crossing is 5 minutes. Here's what to do with the rest of your day. Best photo spots, hidden streets, and a local guide's walking route."
         canonicalPath="/blog/shibuya-harajuku-guide"
+        hreflang={[
+          { lang: "en", path: "/blog/shibuya-harajuku-guide" },
+          { lang: "es", path: "/es/blog/guia-shibuya-harajuku" },
+          { lang: "x-default", path: "/blog/shibuya-harajuku-guide" },
+        ]}
       />
 
       <div className="prose-editorial">
