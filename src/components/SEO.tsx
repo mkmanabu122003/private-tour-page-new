@@ -20,7 +20,7 @@ interface SEOProps {
 }
 
 const BASE_URL = "https://tanuki-tabi-travel.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const removeTrailingSlash = (p: string) =>
   p === "/" ? p : p.replace(/\/+$/, "");
@@ -59,6 +59,13 @@ export const SEO = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={ogImage} />
+      {/* Dimensions let a platform lay the card out on first scrape, before it
+          has fetched the image. Both match og-image.jpg; no page overrides
+          ogImage today, so a caller passing a differently-sized one would need
+          to pass its dimensions too. */}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Manabu, a government-licensed guide, talking with a small tour group in Tokyo" />
       <meta property="og:site_name" content="Tanuki Tabi Travel" />
 
       {/* Twitter Card */}
