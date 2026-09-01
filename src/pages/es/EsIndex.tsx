@@ -81,7 +81,7 @@ const tours = [
     title: "Excursión a Hakone",
     description: "Contempla el Monte Fuji, navega por el Lago Ashi y vive la cultura termal en una excursión privada guiada desde Tokio.",
     duration: "8-10 horas",
-    price: "¥70,000",
+    price: "¥80,000",
     difficulty: "Fácil",
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },

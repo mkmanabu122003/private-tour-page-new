@@ -22,7 +22,7 @@ const faqCategories: FAQCategory[] = [
     items: [
       {
         question: "¿Cuánto cuesta un tour privado?",
-        answer: "Nuestros tours a pie por Tokio oscilan entre ¥40,000 y ¥50,000 por grupo, dependiendo del tour y la duración. Las excursiones de un día a Kamakura (¥70,000), Hakone (¥70,000) y Nikko (¥80,000) tienen precios diferentes. Consulta cada página de tour para tarifas específicas, o contáctanos para un presupuesto personalizado.",
+        answer: "Nuestros tours a pie por Tokio oscilan entre ¥40,000 y ¥50,000 por grupo, dependiendo del tour y la duración. Las excursiones de un día a Kamakura (¥70,000), Hakone (¥80,000) y Nikko (¥80,000) tienen precios diferentes. Consulta cada página de tour para tarifas específicas, o contáctanos para un presupuesto personalizado.",
       },
       {
         question: "¿Cómo reservo un tour?",

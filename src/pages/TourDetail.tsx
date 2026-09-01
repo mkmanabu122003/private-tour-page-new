@@ -56,7 +56,7 @@ const tourSEO: Record<string, { title: string; description: string; h1: string }
   },
   "hakone-day-trip": {
     title: "Private Hakone Day Trip from Tokyo 2026: Mt. Fuji & Onsen",
-    description: "Private full-day Hakone tour from Tokyo with a licensed guide. Mt. Fuji views, Lake Ashi cruise, onsen experience. Groups 1-6 from ¥70,000/group.",
+    description: "Private full-day Hakone tour from Tokyo with a licensed guide. Mt. Fuji views, Lake Ashi cruise, onsen experience. Groups 1-6 from ¥80,000/group.",
     h1: "Hakone Day Trip from Tokyo: Private Tour with Mt. Fuji Views & Onsen",
   },
   "nikko-day-trip": {
@@ -74,7 +74,7 @@ const tourSchemaData: Record<string, { name: string; area: string; price: string
   "imperial-palace": { name: "Imperial Palace Private Walking Tour", area: "Imperial Palace & Marunouchi", price: "40000" },
   custom: { name: "Custom Private Tokyo Tour", area: "Tokyo", price: "45000" },
   "kamakura-day-trip": { name: "Kamakura Day Trip from Tokyo", area: "Kamakura", price: "70000" },
-  "hakone-day-trip": { name: "Hakone Day Trip from Tokyo", area: "Hakone", price: "70000" },
+  "hakone-day-trip": { name: "Hakone Day Trip from Tokyo", area: "Hakone", price: "80000" },
   "nikko-day-trip": { name: "Nikko Day Trip from Tokyo", area: "Nikko", price: "80000" },
 };
 
@@ -418,7 +418,7 @@ const tourData = {
     subtitle: "Mt. Fuji views, hot springs & volcanic valleys",
     description: "Experience the best of Hakone in a single day. Cruise across Lake Ashi with Mt. Fuji as your backdrop, ride the aerial ropeway over steaming volcanic valleys, and discover the iconic lakeside torii gate of Hakone Shrine. Your guide navigates the complex transport system so you can focus on the views.",
     duration: "8-10 hours",
-    price: "¥70,000",
+    price: "¥80,000",
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "8:00 AM",

@@ -15,7 +15,7 @@ const EsHakone = () => {
     <Layout>
       <SEO
         title="Excursión Privada a Hakone desde Tokio 2026: Monte Fuji y Onsen"
-        description="Excursión privada a Hakone desde Tokio con guía nativo en español. Monte Fuji, lago Ashi y aguas termales en un día completo. Grupos 1-6 desde ¥70,000/grupo."
+        description="Excursión privada a Hakone desde Tokio con guía nativo en español. Monte Fuji, lago Ashi y aguas termales en un día completo. Grupos 1-6 desde ¥80,000/grupo."
         canonicalPath="/es/tours/hakone-day-trip"
         hreflang={[
           { lang: "en", path: "/tours/hakone-day-trip" },
@@ -192,7 +192,7 @@ const EsHakone = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥70,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">¥80,000</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -326,7 +326,7 @@ const EsHakone = () => {
       </section>
 
       {/* Value Comparison */}
-      <ValueComparisonEs tourPrice={70000} tourName="Excursión Privada a Hakone" />
+      <ValueComparisonEs tourPrice={80000} tourName="Excursión Privada a Hakone" />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container-section text-center">
@@ -340,7 +340,7 @@ const EsHakone = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥70,000" />
+      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥80,000" />
     </Layout>
   );
 };

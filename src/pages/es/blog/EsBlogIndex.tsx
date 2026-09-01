@@ -232,7 +232,7 @@ const blogPosts: BlogPost[] = [
     slug: "excursion-hakone-desde-tokio",
     title: "Excursión a Hakone desde Tokio: ¿guía o solo? 2026",
     description:
-      "El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Tour privado desde ¥70,000. Descubre cuándo vale la pena ir con guía.",
+      "El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Tour privado desde ¥80,000. Descubre cuándo vale la pena ir con guía.",
     date: "14 de marzo de 2026",
     author: "Manabu, Guía con Licencia",
     category: "Guías de Excursiones",
