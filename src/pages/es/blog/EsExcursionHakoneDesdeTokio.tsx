@@ -12,7 +12,7 @@ const EsExcursionHakoneDesdeTokio = () => {
     <Layout>
       <SEO
         title="Excursión a Hakone desde Tokio: ¿guía o solo? 2026"
-        description="El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Tour privado desde ¥70,000. Descubre cuándo vale la pena ir con guía."
+        description="El circuito de Hakone se puede hacer solo, pero los tiempos son ajustados. Tour privado desde ¥80,000. Descubre cuándo vale la pena ir con guía."
         canonicalPath="/es/blog/excursion-hakone-desde-tokio"
         hreflang={[
           { lang: "en", path: "/blog/hakone-day-trip-guide-vs-solo" },
@@ -191,7 +191,7 @@ const EsExcursionHakoneDesdeTokio = () => {
                 <strong className="text-foreground">Quieres pasar la mayor parte del día en un onsen</strong> en vez de hacer el circuito completo. En ese caso, toma el tren hasta Hakone-Yumoto, camina hasta un onsen cercano, relájate y vuelve. No necesitas guía.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">El presupuesto es tu prioridad.</strong> La tarifa del guía (¥70,000 por un día completo de{" "}
+                <strong className="text-foreground">El presupuesto es tu prioridad.</strong> La tarifa del guía (¥80,000 por un día completo de{" "}
                 <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
                   excursión a Hakone
                 </Link>
@@ -218,7 +218,7 @@ const EsExcursionHakoneDesdeTokio = () => {
                 <strong className="text-foreground">El tiempo es incierto</strong> y quieres a alguien que pueda adaptar el plan sobre la marcha
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Grupos de 3 o más personas</strong> donde los ¥70,000 del guía divididos entre el grupo resultan muy razonables por persona. Para un grupo de cuatro, sale a menos de ¥18,000 por persona por un día completo con guía privado con licencia.
+                <strong className="text-foreground">Grupos de 3 o más personas</strong> donde los ¥80,000 del guía divididos entre el grupo resultan muy razonables por persona. Para un grupo de cuatro, sale a ¥20,000 por persona por un día completo con guía privado con licencia.
               </li>
             </ul>
 
@@ -256,7 +256,7 @@ const EsExcursionHakoneDesdeTokio = () => {
               <Link to="/es/tours/hakone-day-trip" className="text-accent hover:underline">
                 tour privado a Hakone
               </Link>
-              {" "}cuesta ¥70,000 para el grupo (no por persona), lo que para 3-4 viajeros resulta muy asequible. Si ya conoces Japón y te sientes cómodo navegando el transporte público, puedes hacerlo perfectamente solo.
+              {" "}cuesta ¥80,000 para el grupo (no por persona), lo que para 3-4 viajeros resulta muy asequible. Si ya conoces Japón y te sientes cómodo navegando el transporte público, puedes hacerlo perfectamente solo.
             </p>
 
             <h3>
@@ -380,7 +380,7 @@ const EsExcursionHakoneDesdeTokio = () => {
                 name: "¿Vale la pena contratar un guía para Hakone?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Depende de tu situación. Para primera vez, viajes con familia o grupos de 3+, un guía transforma la experiencia. El tour privado cuesta ¥70,000 para el grupo (no por persona).",
+                  text: "Depende de tu situación. Para primera vez, viajes con familia o grupos de 3+, un guía transforma la experiencia. El tour privado cuesta ¥80,000 para el grupo (no por persona).",
                 },
               },
               {

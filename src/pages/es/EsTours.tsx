@@ -138,7 +138,7 @@ const dayTrips = [
     title: "Excursión a Hakone",
     description: "Contempla el Monte Fuji, navega por el Lago Ashi, sube en teleférico sobre valles volcánicos y vive la cultura de aguas termales.",
     duration: "8-10 horas",
-    price: "¥70,000",
+    price: "¥80,000",
     difficulty: "Fácil",
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },

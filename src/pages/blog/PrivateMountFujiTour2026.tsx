@@ -183,7 +183,7 @@ const PrivateMountFujiTour2026 = () => {
                       </tr>
                       <tr>
                         <td className="scenario">Licensed-guide private<span className="tag">Recommended 4+</span></td>
-                        <td className="bar-cell win">¥70,000<span className="bar"><i style={{ width: '58%' }} /></span></td>
+                        <td className="bar-cell win">¥80,000<span className="bar"><i style={{ width: '67%' }} /></span></td>
                         <td className="bar-cell win">¥90,000<span className="bar"><i style={{ width: '75%' }} /></span></td>
                         <td className="savings">¥22,500</td>
                       </tr>
@@ -548,7 +548,7 @@ const PrivateMountFujiTour2026 = () => {
                   <div>
                     <h3 className="text-foreground">How much does a private Mt. Fuji tour from Tokyo cost in 2026?</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      For a full-day licensed-guide private tour, expect roughly ¥70,000–¥120,000 per group depending on size, vehicle, and route. Driver-only services run ¥50,000–¥60,000. Premium concierge starts around ¥120,000 and climbs. Group bus tours through Viator and GetYourGuide are ¥10,000–¥18,000 per person.
+                      For a full-day licensed-guide private tour, expect roughly ¥80,000–¥120,000 per group depending on size, vehicle, and route. Driver-only services run ¥50,000–¥60,000. Premium concierge starts around ¥120,000 and climbs. Group bus tours through Viator and GetYourGuide are ¥10,000–¥18,000 per person.
                     </p>
                   </div>
                   <div>

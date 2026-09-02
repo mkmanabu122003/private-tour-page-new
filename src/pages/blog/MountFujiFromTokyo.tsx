@@ -283,7 +283,7 @@ const MountFujiFromTokyo = () => {
                 </div>
                 <div className="grid grid-cols-5 text-sm text-muted-foreground border-t border-border">
                   <div className="p-4 border-r border-border">Private licensed-guide tour</div>
-                  <div className="p-4 border-r border-border">¥70,000/group (~$470)</div>
+                  <div className="p-4 border-r border-border">¥80,000/group (~$540)</div>
                   <div className="p-4 border-r border-border">1-6 people</div>
                   <div className="p-4 border-r border-border">Maximum</div>
                   <div className="p-4">Comfort + cultural depth, mixed groups</div>
@@ -365,7 +365,7 @@ const MountFujiFromTokyo = () => {
                 <strong className="text-foreground">Driver-only (~$80-100/person for a 4-person group):</strong> English-speaking driver, no licensed guide. Door-to-door comfort, limited cultural depth.
               </li>
               <li>
-                <strong className="text-foreground">Licensed-guide private (¥70,000-100,000/group):</strong> Government-licensed guide, custom itinerary, weather-adaptive. Best per-person value at 4-6 people. This is the tier I operate at via my{" "}
+                <strong className="text-foreground">Licensed-guide private (¥80,000-100,000/group):</strong> Government-licensed guide, custom itinerary, weather-adaptive. Best per-person value at 4-6 people. This is the tier I operate at via my{" "}
                 <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
                   Hakone day trip
                 </Link>
@@ -497,7 +497,7 @@ const MountFujiFromTokyo = () => {
                   <Link to="/tours/hakone-day-trip" className="text-accent hover:underline">
                     Hakone day trip
                   </Link>
-                  {" "}is ¥70,000/group flat (1-6 people). Premium concierge services start at ¥150,000+/group. Per-person value is best at 3-6 people with a private guide.
+                  {" "}is ¥80,000/group flat (1-6 people). Premium concierge services start at ¥150,000+/group. Per-person value is best at 3-6 people with a private guide.
                 </p>
               </div>
 
@@ -524,7 +524,7 @@ const MountFujiFromTokyo = () => {
                   Mt. Fuji bus tour vs private tour — which should I choose?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Group bus tour ($66-150/person, 20-45 people): Lowest cost, fixed itinerary, limited English depth, fast-paced photo stops. Best for solo or couple travelers on a budget. Private tour (¥70,000+/group, 1-6 people): Custom routing, weather-adaptive, cultural context, no language barrier. Per-person cost matches a group bus tour at 4-6 people. Choose bus if budget is the constraint and English depth isn't critical. Choose private if you have a small group, want flexibility, or value the licensed-guide experience.
+                  Group bus tour ($66-150/person, 20-45 people): Lowest cost, fixed itinerary, limited English depth, fast-paced photo stops. Best for solo or couple travelers on a budget. Private tour (¥80,000+/group, 1-6 people): Custom routing, weather-adaptive, cultural context, no language barrier. Per-person cost matches a group bus tour at 4-6 people. Choose bus if budget is the constraint and English depth isn't critical. Choose private if you have a small group, want flexibility, or value the licensed-guide experience.
                 </p>
               </div>
             </div>
@@ -637,7 +637,7 @@ const MountFujiFromTokyo = () => {
                 name: "How much does a Mt. Fuji tour from Tokyo cost?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Group bus tours start around $66/person and reach $150. Small-group experiences run $76-168/person. Private driver tours run $80-100/person for a 4-person group. Private licensed-guide tours via Hakone day trip cost ¥70,000/group (1-6 people). Premium concierge services start at ¥150,000+/group.",
+                  text: "Group bus tours start around $66/person and reach $150. Small-group experiences run $76-168/person. Private driver tours run $80-100/person for a 4-person group. Private licensed-guide tours via Hakone day trip cost ¥80,000/group (1-6 people). Premium concierge services start at ¥150,000+/group.",
                 },
               },
               {
@@ -661,7 +661,7 @@ const MountFujiFromTokyo = () => {
                 name: "Mt. Fuji bus tour vs private tour — which should I choose?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Bus tour ($66-150/person, 20-45 people): lowest cost, fixed itinerary, limited English depth. Best for solo or couple budget travelers. Private tour (¥70,000+/group, 1-6 people): custom routing, weather-adaptive, cultural context. Per-person cost matches bus tour at 4-6 people.",
+                  text: "Bus tour ($66-150/person, 20-45 people): lowest cost, fixed itinerary, limited English depth. Best for solo or couple budget travelers. Private tour (¥80,000+/group, 1-6 people): custom routing, weather-adaptive, cultural context. Per-person cost matches bus tour at 4-6 people.",
                 },
               },
             ],

@@ -102,7 +102,7 @@ const dayTrips = [
     title: "Hakone Day Trip",
     description: "See Mt. Fuji, cruise Lake Ashi, ride the ropeway over volcanic valleys, and experience hot spring culture on a private guided day trip.",
     duration: "8-10 hours",
-    price: "¥70,000",
+    price: "¥80,000",
     difficulty: "Easy",
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
