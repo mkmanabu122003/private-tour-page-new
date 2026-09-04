@@ -349,6 +349,7 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
         <select
           id="tourType"
           name="tourType"
+          key={formData.tourType || "unset"}
           value={formData.tourType}
           onChange={handleChange}
           className={inputClass}
