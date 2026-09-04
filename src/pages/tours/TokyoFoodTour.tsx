@@ -817,11 +817,6 @@ const TokyoFoodTour = () => {
               "name": "Tanuki Tabi Travel",
               "url": "https://tanuki-tabi-travel.com",
             },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "JPY",
-              "availability": "https://schema.org/InStock",
-            },
           }),
         }}
       />
@@ -840,14 +835,6 @@ const TokyoFoodTour = () => {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
               "url": "https://tanuki-tabi-travel.com",
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://tanuki-tabi-travel.com/tours/tokyo-food-tour",
-              "priceCurrency": "JPY",
-              "price": "50000",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2026-01-01",
             },
             "areaServed": {
               "@type": "City",
