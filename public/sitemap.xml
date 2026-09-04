@@ -480,6 +480,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/logistics</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Spanish Blog -->
   <url>
@@ -687,6 +693,12 @@
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/logistics</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tanuki-tabi-travel.com/contact</loc>

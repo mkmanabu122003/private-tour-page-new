@@ -169,6 +169,9 @@ import EsTeamlabPlanetsVsBorderless from "./pages/es/blog/EsTeamlabPlanetsVsBord
 // 2026-07-20 batch: Autumn Leaves around Tokyo (Tier 1 data-driven)
 import AutumnLeavesAroundTokyo from "./pages/blog/AutumnLeavesAroundTokyo";
 import EsHojasOtonoCercaTokio from "./pages/es/blog/EsHojasOtonoCercaTokio";
+import Logistics from "./pages/Logistics";
+import EsLogistics from "./pages/es/EsLogistics";
+import AffiliateGo from "./pages/AffiliateGo";
 
 const queryClient = new QueryClient();
 
@@ -186,6 +189,7 @@ const AppRoutes = () => (
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/logistics" element={<Logistics />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/tokyo-3-day-itinerary" element={<Tokyo3DayItinerary />} />
         <Route path="/blog/is-it-worth-hiring-a-tour-guide-in-tokyo" element={<IsItWorthHiringGuide />} />
@@ -254,6 +258,7 @@ const AppRoutes = () => (
         <Route path="/es/contact" element={<EsContact />} />
         <Route path="/es/about" element={<EsAbout />} />
         <Route path="/es/faq" element={<EsFaq />} />
+        <Route path="/es/logistics" element={<EsLogistics />} />
         {/* Spanish Blog */}
         <Route path="/es/blog" element={<EsBlogIndex />} />
         <Route path="/es/blog/itinerario-tokio-3-dias" element={<EsItinerarioTokio3Dias />} />
@@ -343,6 +348,7 @@ const AppRoutes = () => (
         <Route path="/blog/autumn-leaves-around-tokyo" element={<AutumnLeavesAroundTokyo />} />
         <Route path="/es/blog/hojas-otono-cerca-tokio" element={<EsHojasOtonoCercaTokio />} />
         <Route path="/es/cancellation-policy" element={<EsCancellationPolicy />} />
+        <Route path="/go/:slug" element={<AffiliateGo />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -84,6 +84,7 @@ export const Footer = () => {
                 <li><Link to="/es/blog" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Blog</Link></li>
                 <li><Link to="/es/about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Sobre Manabu</Link></li>
                 <li><Link to="/es/faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">FAQ</Link></li>
+                <li><Link to="/es/logistics" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Logística del viaje</Link></li>
                 <li><Link to="/es/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contacto / Reservar</Link></li>
                 <li><Link to="/es/cancellation-policy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Política de Cancelación</Link></li>
               </ul>
@@ -194,6 +195,7 @@ export const Footer = () => {
               <li><Link to="/blog" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Blog</Link></li>
               <li><Link to="/about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Manabu</Link></li>
               <li><Link to="/faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">FAQ</Link></li>
+              <li><Link to="/logistics" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Trip Logistics</Link></li>
               <li><Link to="/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact / Book</Link></li>
               <li><Link to="/cancellation-policy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Cancellation Policy</Link></li>
             </ul>

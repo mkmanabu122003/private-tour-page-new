@@ -23,6 +23,7 @@ const resolve = (p) => path.resolve(__dirname, p);
 function deriveRoutes() {
   const appRoutes = fs.readFileSync(resolve("src/AppRoutes.tsx"), "utf-8");
   const tourDetail = fs.readFileSync(resolve("src/pages/TourDetail.tsx"), "utf-8");
+  const affiliates = fs.readFileSync(resolve("src/lib/affiliates.ts"), "utf-8");
 
   // 1. Literal paths. Skips the "*" catch-all and ":param" routes, which are
   //    either not real URLs or are expanded separately below.
@@ -45,9 +46,19 @@ function deriveRoutes() {
     (m) => `/tours/${m[1]}`
   );
 
-  const all = [...new Set([...staticRoutes, ...tourRoutes])].sort();
+  // 3. /go/:slug — affiliate shortcuts from the offer registry.
+  const goSlugs = [...affiliates.matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
+  if (goSlugs.length === 0) {
+    throw new Error(
+      "prerender: no affiliate slugs found in src/lib/affiliates.ts — " +
+        "/go/{slug} pages would 404 on Netlify."
+    );
+  }
+  const goRoutes = goSlugs.map((slug) => `/go/${slug}`);
+
+  const all = [...new Set([...staticRoutes, ...tourRoutes, ...goRoutes])].sort();
   console.log(
-    `Derived ${all.length} routes (${staticRoutes.length} static + ${tourRoutes.length} tour detail pages).`
+    `Derived ${all.length} routes (${staticRoutes.length} static + ${tourRoutes.length} tour detail + ${goRoutes.length} affiliate go pages).`
   );
   return all;
 }

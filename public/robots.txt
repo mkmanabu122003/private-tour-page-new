@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /assets/
+Disallow: /go/
 
 # Google
 User-agent: Googlebot

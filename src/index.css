@@ -542,6 +542,39 @@
     color: hsl(var(--muted-foreground));
   }
 
+  /* Logistics hub: always-visible affiliate disclosure (not a footnote / accordion) */
+  .prose-editorial .affiliate-disclosure {
+    border: 1px solid hsl(var(--border));
+    border-left: 4px solid hsl(var(--accent));
+    background: hsl(var(--secondary) / 0.55);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .prose-editorial .affiliate-disclosure p {
+    margin: 0;
+  }
+
+  /* Horizontal scroll so comparison tables stay usable around 380px */
+  .prose-editorial .hub-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0 2rem;
+    max-width: 100%;
+  }
+  .prose-editorial .hub-table-scroll table {
+    min-width: 28rem;
+  }
+  @media (max-width: 420px) {
+    .prose-editorial .hub-table-scroll .cost-table thead th {
+      font-size: 1.125rem;
+      padding: 6px 10px 10px;
+    }
+    .prose-editorial .hub-table-scroll .cost-table tbody td {
+      padding: 12px 10px;
+      font-size: 0.875rem;
+    }
+  }
+
   /* === Plan A — Structural modules === */
 
   /* Sticky TOC sidebar */

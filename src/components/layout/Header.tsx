@@ -272,7 +272,7 @@ export const Header = () => {
 
             {/* CTA Button & Language Switcher */}
             <div className="hidden md:flex items-center gap-4">
-              <Link to="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to={location.pathname === "/es/logistics" ? "/logistics" : "/"} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Globe className="w-4 h-4" />
                 EN
               </Link>
@@ -437,7 +437,7 @@ export const Header = () => {
                 </Link>
 
                 <Link
-                  to="/"
+                  to={location.pathname === "/es/logistics" ? "/logistics" : "/"}
                   className="flex items-center gap-1.5 text-base font-medium py-2 text-muted-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -647,7 +647,7 @@ export const Header = () => {
 
           {/* CTA Button & Language Switcher */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/es" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to={location.pathname === "/logistics" ? "/es/logistics" : "/es"} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <Globe className="w-4 h-4" />
               ES
             </Link>
@@ -826,7 +826,7 @@ export const Header = () => {
               </Link>
 
               <Link
-                to="/es"
+                to={location.pathname === "/logistics" ? "/es/logistics" : "/es"}
                 className="flex items-center gap-1.5 text-base font-medium py-2 text-muted-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >

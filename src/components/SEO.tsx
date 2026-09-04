@@ -17,6 +17,7 @@ interface SEOProps {
   ogImage?: string;
   hreflang?: HreflangEntry[];
   breadcrumbs?: BreadcrumbItem[];
+  robots?: string;
 }
 
 const BASE_URL = "https://tanuki-tabi-travel.com";
@@ -44,6 +45,7 @@ export const SEO = ({
   ogImage = DEFAULT_OG_IMAGE,
   hreflang,
   breadcrumbs,
+  robots,
 }: SEOProps) => {
   const canonicalUrl = `${BASE_URL}${removeTrailingSlash(canonicalPath)}`;
 
@@ -51,6 +53,7 @@ export const SEO = ({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {robots ? <meta name="robots" content={robots} /> : null}
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}

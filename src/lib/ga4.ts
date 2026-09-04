@@ -7,6 +7,7 @@
  * - form_submit: Contact form submitted
  * - tour_page_view: Tour detail page viewed
  * - blog_to_tour_click: Related tour card clicked from blog
+ * - affiliate_click: /go/{slug} affiliate hop (not fired for TODO_ slugs in production)
  *
  * Testing: Use GA4 DebugView to verify events.
  * 1. Install "Google Analytics Debugger" Chrome extension
@@ -14,6 +15,8 @@
  * 3. Open GA4 Admin > DebugView
  * 4. Browse the site — events appear in real time
  */
+
+import { shouldTrackAffiliateClick } from "./affiliates";
 
 declare global {
   interface Window {
@@ -143,5 +146,36 @@ export function trackDiagnosticToArticle(toolId: string, resultId: string) {
   gtag("event", "diagnostic_to_article", {
     tool_id: toolId,
     result_id: resultId,
+  });
+}
+
+const AFFILIATE_CLICK_DEDUPE_PREFIX = "affiliate_click:";
+
+/**
+ * GA4 `affiliate_click` with slug / partner / destination.
+ * TODO_ slugs are suppressed in production builds (see shouldTrackAffiliateClick).
+ * sessionStorage dedupes the Link onClick + /go page hop as one event.
+ */
+export function trackAffiliateClick(opts: {
+  slug: string;
+  partner: string;
+  destination: string;
+}): void {
+  if (!shouldTrackAffiliateClick(opts.slug)) return;
+
+  if (typeof window !== "undefined") {
+    try {
+      const key = `${AFFILIATE_CLICK_DEDUPE_PREFIX}${opts.slug}`;
+      if (sessionStorage.getItem(key) === "1") return;
+      sessionStorage.setItem(key, "1");
+    } catch {
+      /* private mode — still fire */
+    }
+  }
+
+  gtag("event", "affiliate_click", {
+    slug: opts.slug,
+    partner: opts.partner,
+    destination: opts.destination,
   });
 }

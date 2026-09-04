@@ -9,7 +9,8 @@
     "build:client": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:logistics": "node scripts/check-logistics-hub.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
