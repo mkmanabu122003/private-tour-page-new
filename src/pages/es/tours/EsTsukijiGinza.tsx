@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -145,7 +146,7 @@ const EsTsukijiGinza = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥45,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">{siteDisplayPrice("tsukiji-ginza", "es")}</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -293,7 +294,7 @@ const EsTsukijiGinza = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Tsukiji y Ginza" price="¥45,000" />
+      <StickyBookingBar tourName="Tour Privado por Tsukiji y Ginza" price={siteDisplayPrice("tsukiji-ginza", "es")} />
     </Layout>
   );
 };

@@ -1,0 +1,57 @@
+{
+  "asakusa": {
+    "displayEn": "¥45,000",
+    "displayEs": "¥45,000",
+    "amount": 45000
+  },
+  "yanaka": {
+    "displayEn": "¥50,000",
+    "displayEs": "¥50,000",
+    "amount": 50000
+  },
+  "shibuya-harajuku": {
+    "displayEn": "¥50,000",
+    "displayEs": "¥50,000",
+    "amount": 50000
+  },
+  "tsukiji-ginza": {
+    "displayEn": "¥45,000",
+    "displayEs": "¥45,000",
+    "amount": 45000
+  },
+  "imperial-palace": {
+    "displayEn": "¥40,000",
+    "displayEs": "¥40,000",
+    "amount": 40000
+  },
+  "custom": {
+    "displayEn": "Tailored to your trip",
+    "displayEs": "A medida de tu viaje",
+    "amount": null
+  },
+  "tokyo-food-tour": {
+    "displayEn": "Contact for quote",
+    "displayEs": "Contact for quote",
+    "amount": null
+  },
+  "tokyo-night-tour": {
+    "displayEn": "Contact for quote",
+    "displayEs": "Contact for quote",
+    "amount": null
+  },
+  "kamakura-day-trip": {
+    "displayEn": "¥70,000",
+    "displayEs": "¥70,000",
+    "amount": 70000
+  },
+  "hakone-day-trip": {
+    "displayEn": "¥80,000",
+    "displayEs": "¥80,000",
+    "amount": 80000
+  },
+  "nikko-day-trip": {
+    "displayEn": "¥80,000",
+    "displayEs": "¥80,000",
+    "amount": 80000
+  }
+}

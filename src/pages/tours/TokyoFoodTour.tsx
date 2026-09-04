@@ -20,6 +20,7 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 
@@ -915,7 +916,7 @@ const TokyoFoodTour = () => {
         }}
       />
 
-      <StickyBookingBar tourName="Tokyo Food Tour" price="Contact for quote" />
+      <StickyBookingBar tourName="Tokyo Food Tour" price={siteDisplayPrice("tokyo-food-tour", "en")} />
     </Layout>
   );
 };

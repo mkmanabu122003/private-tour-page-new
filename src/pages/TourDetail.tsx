@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import useEmblaCarousel from "embla-carousel-react";
 import tourYanaka from "@/assets/tour-yanaka.webp";
@@ -84,7 +85,7 @@ const tourData = {
     subtitle: "Discover the heart of old Tokyo",
     description: "Experience the magic of Tokyo's oldest and most traditional district. This immersive walking tour takes you through the iconic Senso-ji Temple, the bustling Nakamise shopping street, and hidden corners that only locals know.",
     duration: "3 hours",
-    price: "¥45,000",
+    price: siteDisplayPrice("asakusa", "en"),
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:00 AM or 2:00 PM",
@@ -130,7 +131,7 @@ const tourData = {
     subtitle: "Step back in time to old Tokyo",
     description: "Escape the modern city and discover Tokyo's most nostalgic neighborhood. Yanaka survived the war and earthquakes, preserving the atmosphere of old Tokyo with its wooden houses, traditional shops, and peaceful temples.",
     duration: "4 hours",
-    price: "¥50,000",
+    price: siteDisplayPrice("yanaka", "en"),
     difficulty: "Easy",
     groupSize: "1-4 people",
     startTime: "9:30 AM or 1:30 PM",
@@ -176,7 +177,7 @@ const tourData = {
     subtitle: "Experience Tokyo's vibrant youth culture",
     description: "Dive into the heart of modern Tokyo where fashion, technology, and tradition coexist. From the world's busiest crossing to peaceful shrine grounds, this tour showcases Tokyo's dynamic energy and cultural contrasts.",
     duration: "3.5 hours",
-    price: "¥50,000",
+    price: siteDisplayPrice("shibuya-harajuku", "en"),
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:30 AM or 2:30 PM",
@@ -222,7 +223,7 @@ const tourData = {
     subtitle: "From market delights to upscale elegance",
     description: "Experience two sides of Tokyo in one tour. Start at the bustling Tsukiji Outer Market for fresh seafood and local delicacies, then stroll through sophisticated Ginza with its luxury shops, art galleries, and architectural gems.",
     duration: "3 hours",
-    price: "¥45,000",
+    price: siteDisplayPrice("tsukiji-ginza", "en"),
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "9:00 AM or 1:00 PM",
@@ -269,7 +270,7 @@ const tourData = {
     subtitle: "Discover Tokyo's historical and modern heart",
     description: "Walk through centuries of history at the Imperial Palace East Gardens, then contrast it with the gleaming skyscrapers of Marunouchi. This tour perfectly balances Tokyo's imperial heritage with its role as a modern business capital.",
     duration: "2.5 hours",
-    price: "¥40,000",
+    price: siteDisplayPrice("imperial-palace", "en"),
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "10:00 AM or 2:00 PM",
@@ -315,7 +316,7 @@ const tourData = {
     subtitle: "Your perfect Tokyo experience",
     description: "Tell me your interests, and I'll create a personalized itinerary just for you. Whether you're passionate about food, history, anime, photography, or something completely unique, let's design your dream Tokyo day together.",
     duration: "Flexible (3-8 hours)",
-    price: "Tailored to your trip",
+    price: siteDisplayPrice("custom", "en"),
     difficulty: "Customizable",
     groupSize: "1-6 people",
     startTime: "Flexible",
@@ -357,7 +358,7 @@ const tourData = {
     subtitle: "Ancient temples, Great Buddha & coastal charm",
     description: "Escape Tokyo for a day and explore Kamakura, Japan's first military capital. This private day trip takes you to the iconic Great Buddha, serene temples with ocean views, and the charming Komachi-dori shopping street, all with a licensed guide who brings 800 years of samurai history to life.",
     duration: "7-8 hours",
-    price: "¥70,000",
+    price: siteDisplayPrice("kamakura-day-trip", "en"),
     difficulty: "Easy to moderate",
     groupSize: "1-6 people",
     startTime: "8:30 AM",
@@ -418,7 +419,7 @@ const tourData = {
     subtitle: "Mt. Fuji views, hot springs & volcanic valleys",
     description: "Experience the best of Hakone in a single day. Cruise across Lake Ashi with Mt. Fuji as your backdrop, ride the aerial ropeway over steaming volcanic valleys, and discover the iconic lakeside torii gate of Hakone Shrine. Your guide navigates the complex transport system so you can focus on the views.",
     duration: "8-10 hours",
-    price: "¥80,000",
+    price: siteDisplayPrice("hakone-day-trip", "en"),
     difficulty: "Easy",
     groupSize: "1-6 people",
     startTime: "8:00 AM",
@@ -481,7 +482,7 @@ const tourData = {
     subtitle: "UNESCO shrines, waterfalls & mountain scenery",
     description: "Journey to Nikko, home to Japan's most ornate shrine complex and breathtaking mountain scenery. Discover the UNESCO World Heritage Toshogu Shrine with its 5,000+ intricate carvings, witness the powerful Kegon Falls, and enjoy the serene beauty of Lake Chuzenji, all with expert historical commentary from your guide.",
     duration: "9-10 hours",
-    price: "¥80,000",
+    price: siteDisplayPrice("nikko-day-trip", "en"),
     difficulty: "Moderate",
     groupSize: "1-6 people",
     startTime: "7:30 AM",

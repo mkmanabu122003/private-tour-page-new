@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 
@@ -571,7 +572,7 @@ const TokyoNightTour = () => {
         }}
       />
 
-      <StickyBookingBar tourName="Tokyo Night Tour" price="Contact for quote" />
+      <StickyBookingBar tourName="Tokyo Night Tour" price={siteDisplayPrice("tokyo-night-tour", "en")} />
     </Layout>
   );
 };

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Users, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import tourUeno from "@/assets/tour-ueno.webp";
 import tourYanaka from "@/assets/tour-yanaka.webp";
 import shibuyaCrossing from "@/assets/shibuya-crossing.webp";
@@ -66,13 +67,13 @@ const EsTourCard = ({ id, title, description, duration, price, difficulty, image
   </Link>
 );
 
-const tokyoTours = [
+export const tokyoTours = [
   {
     id: "asakusa",
     title: "Tour por Asakusa",
     description: "Descubre el corazón del viejo Tokio. Visita el Templo Senso-ji, explora tiendas tradicionales y prueba la comida callejera auténtica.",
     duration: "3 horas",
-    price: "¥45,000",
+    price: siteDisplayPrice("asakusa", "es"),
     difficulty: "Fácil",
     image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
@@ -81,7 +82,7 @@ const tokyoTours = [
     title: "Descubrimiento de Ueno y Yanaka",
     description: "Experimenta el encanto nostálgico de los barrios antiguos de Tokio. Pasea por templos tradicionales, senderos de cementerios y cafés locales escondidos.",
     duration: "4 horas",
-    price: "¥50,000",
+    price: siteDisplayPrice("yanaka", "es"),
     difficulty: "Fácil",
     image: tourYanaka,
   },
@@ -90,7 +91,7 @@ const tokyoTours = [
     title: "Tour por Shibuya y Harajuku",
     description: "Explora el centro de la cultura juvenil de Tokio. Desde el famoso cruce de Shibuya hasta las calles de moda de Harajuku y el Santuario Meiji.",
     duration: "3.5 horas",
-    price: "¥50,000",
+    price: siteDisplayPrice("shibuya-harajuku", "es"),
     difficulty: "Fácil",
     image: shibuyaCrossing,
   },
@@ -99,7 +100,7 @@ const tokyoTours = [
     title: "Tour por Tsukiji y Ginza",
     description: "Experimenta las delicias culinarias de Tokio en el Mercado Exterior de Tsukiji y pasea por el elegante distrito comercial de Ginza.",
     duration: "3 horas",
-    price: "¥45,000",
+    price: siteDisplayPrice("tsukiji-ginza", "es"),
     difficulty: "Fácil",
     image: tsukijiMarket,
   },
@@ -108,7 +109,7 @@ const tokyoTours = [
     title: "Palacio Imperial y Marunouchi",
     description: "Descubre el corazón histórico y el distrito empresarial moderno de Tokio. Pasea por los Jardines del Este y contempla el Palacio Imperial.",
     duration: "2.5 horas",
-    price: "¥40,000",
+    price: siteDisplayPrice("imperial-palace", "es"),
     difficulty: "Fácil",
     image: imperialPalace,
   },
@@ -117,19 +118,19 @@ const tokyoTours = [
     title: "Tour Privado Personalizado",
     description: "Crea tu experiencia perfecta en Tokio. Cuéntame tus intereses y diseñaré un itinerario personalizado solo para ti.",
     duration: "Flexible",
-    price: "A medida de tu viaje",
+    price: siteDisplayPrice("custom", "es"),
     difficulty: "Personalizable",
     image: hamarikyu,
   },
 ];
 
-const dayTrips = [
+export const dayTrips = [
   {
     id: "kamakura-day-trip",
     title: "Excursión a Kamakura",
     description: "Explora el Gran Buda de Kamakura, templos ancestrales y el encanto costero en una excursión privada de un día desde Tokio.",
     duration: "7-8 horas",
-    price: "¥70,000",
+    price: siteDisplayPrice("kamakura-day-trip", "es"),
     difficulty: "Fácil-Moderado",
     image: "/images/tours/kamakura-great-buddha.webp",
   },
@@ -138,7 +139,7 @@ const dayTrips = [
     title: "Excursión a Hakone",
     description: "Contempla el Monte Fuji, navega por el Lago Ashi, sube en teleférico sobre valles volcánicos y vive la cultura de aguas termales.",
     duration: "8-10 horas",
-    price: "¥80,000",
+    price: siteDisplayPrice("hakone-day-trip", "es"),
     difficulty: "Fácil",
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
@@ -147,7 +148,7 @@ const dayTrips = [
     title: "Excursión a Nikko",
     description: "Visita el Santuario Toshogu, Patrimonio de la Humanidad, impresionantes cascadas y paisajes de montaña en una excursión desde Tokio.",
     duration: "9-10 horas",
-    price: "¥80,000",
+    price: siteDisplayPrice("nikko-day-trip", "es"),
     difficulty: "Moderado",
     image: "/images/blog/nikko-toshogu-hero.webp",
   },

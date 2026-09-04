@@ -7,24 +7,27 @@ const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 const FROM_EMAIL = "Manabu | Tanuki Tabi Travel <info@tanuki-tabi-travel.com>";
 const MANABU_EMAIL = "info@tanuki-tabi-travel.com";
 
+const { formatAutoReplyPrice } = require("./tourCatalog.cjs");
+
 const tourInfo = {
-  asakusa: { name: "Asakusa Walking Tour", price: "¥45,000", duration: "3 hours", perPerson6: "¥7,500" },
-  yanaka: { name: "Ueno & Yanaka Discovery", price: "¥50,000", duration: "4 hours", perPerson6: "¥8,300" },
-  "shibuya-harajuku": { name: "Shibuya & Harajuku Tour", price: "¥50,000", duration: "3.5 hours", perPerson6: "¥8,300" },
-  "tsukiji-ginza": { name: "Tsukiji & Ginza Tour", price: "¥45,000", duration: "3 hours", perPerson6: "¥7,500" },
-  "imperial-palace": { name: "Imperial Palace & Marunouchi", price: "¥40,000", duration: "2.5 hours", perPerson6: "¥6,700" },
-  "tokyo-food-tour": { name: "Tokyo Food Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
-  "tokyo-night-tour": { name: "Tokyo Night Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
-  "kamakura-day-trip": { name: "Kamakura Day Trip", price: "¥70,000", duration: "7-8 hours", perPerson6: "¥11,700" },
-  "hakone-day-trip": { name: "Hakone Day Trip", price: "¥80,000", duration: "8-10 hours", perPerson6: "¥13,300" },
-  "nikko-day-trip": { name: "Nikko Day Trip", price: "¥80,000", duration: "9-10 hours", perPerson6: "¥13,300" },
-  custom: { name: "Custom Private Tour", price: "¥10,000~/hour", duration: "Flexible", perPerson6: "varies" },
+  asakusa: { name: "Asakusa Walking Tour", duration: "3 hours" },
+  yanaka: { name: "Ueno & Yanaka Discovery", duration: "4 hours" },
+  "shibuya-harajuku": { name: "Shibuya & Harajuku Tour", duration: "3.5 hours" },
+  "tsukiji-ginza": { name: "Tsukiji & Ginza Tour", duration: "3 hours" },
+  "imperial-palace": { name: "Imperial Palace & Marunouchi", duration: "2.5 hours" },
+  "tokyo-food-tour": { name: "Tokyo Food Tour", duration: "3-4 hours" },
+  "tokyo-night-tour": { name: "Tokyo Night Tour", duration: "3-4 hours" },
+  "kamakura-day-trip": { name: "Kamakura Day Trip", duration: "7-8 hours" },
+  "hakone-day-trip": { name: "Hakone Day Trip", duration: "8-10 hours" },
+  "nikko-day-trip": { name: "Nikko Day Trip", duration: "9-10 hours" },
+  custom: { name: "Custom Private Tour", duration: "Flexible" },
 };
 
 function buildCustomerEmail(data) {
   const { name, email, tourType, date, groupSize } = data;
   const tour = tourInfo[tourType];
   const firstName = (name || "").split(" ")[0] || "there";
+  const priceLine = formatAutoReplyPrice(tourType, "en");
 
   const tourSection = tour
     ? `
@@ -34,7 +37,7 @@ function buildCustomerEmail(data) {
             <tr><td style="padding: 4px 0;">Tour:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.name}</td></tr>
             ${date ? `<tr><td style="padding: 4px 0;">Date:</td><td style="padding: 4px 0;">${date}</td></tr>` : ""}
             ${groupSize ? `<tr><td style="padding: 4px 0;">Group size:</td><td style="padding: 4px 0;">${groupSize}</td></tr>` : ""}
-            <tr><td style="padding: 4px 0;">Price:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.price} for your group</td></tr>
+            ${priceLine ? `<tr><td style="padding: 4px 0;">Price:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${priceLine}</td></tr>` : ""}
             <tr><td style="padding: 4px 0;">Duration:</td><td style="padding: 4px 0;">${tour.duration}</td></tr>
           </table>
         </div>`
@@ -96,6 +99,7 @@ function buildCustomerEmailEs(data) {
   const { name, email, tourType, date, groupSize } = data;
   const tour = tourInfo[tourType];
   const firstName = (name || "").split(" ")[0] || "Hola";
+  const priceLine = formatAutoReplyPrice(tourType, "es");
 
   const tourSection = tour
     ? `
@@ -105,7 +109,7 @@ function buildCustomerEmailEs(data) {
             <tr><td style="padding: 4px 0;">Tour:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.name}</td></tr>
             ${date ? `<tr><td style="padding: 4px 0;">Fecha:</td><td style="padding: 4px 0;">${date}</td></tr>` : ""}
             ${groupSize ? `<tr><td style="padding: 4px 0;">Grupo:</td><td style="padding: 4px 0;">${groupSize}</td></tr>` : ""}
-            <tr><td style="padding: 4px 0;">Precio:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.price} para tu grupo</td></tr>
+            ${priceLine ? `<tr><td style="padding: 4px 0;">Precio:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${priceLine}</td></tr>` : ""}
             <tr><td style="padding: 4px 0;">Duraci&oacute;n:</td><td style="padding: 4px 0;">${tour.duration}</td></tr>
           </table>
         </div>`

@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight } from "lucide-react
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import hamarikyu from "@/assets/hamarikyu.webp";
@@ -135,7 +136,7 @@ const EsCustom = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
-                  <p className="text-2xl font-serif font-semibold text-foreground">A medida de tu viaje</p>
+                  <p className="text-2xl font-serif font-semibold text-foreground">{siteDisplayPrice("custom", "es")}</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -264,7 +265,7 @@ const EsCustom = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado Personalizado" price="A medida de tu viaje" />
+      <StickyBookingBar tourName="Tour Privado Personalizado" price={siteDisplayPrice("custom", "es")} />
     </Layout>
   );
 };

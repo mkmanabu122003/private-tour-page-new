@@ -5,6 +5,7 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -192,7 +193,7 @@ const EsHakone = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥80,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">{siteDisplayPrice("hakone-day-trip", "es")}</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -340,7 +341,7 @@ const EsHakone = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥80,000" />
+      <StickyBookingBar tourName="Excursión Privada a Hakone" price={siteDisplayPrice("hakone-day-trip", "es")} />
     </Layout>
   );
 };
