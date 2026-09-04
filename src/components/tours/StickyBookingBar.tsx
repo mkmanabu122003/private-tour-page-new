@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { trackBookNowClick } from "@/lib/ga4";
 import { getPublicWhatsappNumber } from "@/lib/publicEnv";
+import { getStickyCtaLabel, getTourContactHref } from "./stickyCta";
 import type { TourLang } from "./tourPolicyCopy";
 
 interface StickyBookingBarProps {
@@ -20,10 +21,8 @@ export const StickyBookingBar = ({
 }: StickyBookingBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const whatsapp = getPublicWhatsappNumber();
-  const contactPath = lang === "es" ? "/es/contact" : "/contact";
-  const query = tourSlug ? `?tour=${encodeURIComponent(tourSlug)}` : "";
-  const contactHref = `${contactPath}${query}#inquiry-form`;
-  const ctaLabel = lang === "es" ? "Consultar disponibilidad" : "Check availability";
+  const contactHref = getTourContactHref(lang, tourSlug);
+  const ctaLabel = getStickyCtaLabel(lang);
   const whatsappLabel = "WhatsApp";
   const whatsappText =
     lang === "es"

@@ -9,10 +9,16 @@ function readPublic(name: "PUBLIC_WHATSAPP_NUMBER" | "VITE_PUBLIC_WHATSAPP_NUMBE
 }
 
 /** Digits-only WhatsApp number, or undefined when unset / placeholder. */
-export function getPublicWhatsappNumber(): string | undefined {
-  const raw = readPublic("PUBLIC_WHATSAPP_NUMBER") || readPublic("VITE_PUBLIC_WHATSAPP_NUMBER");
-  if (!raw || raw.startsWith("TODO_")) return undefined;
-  const digits = raw.replace(/\D/g, "");
+export function parseWhatsappNumber(raw: string | undefined): string | undefined {
+  if (!raw) return undefined;
+  const trimmed = raw.trim();
+  if (!trimmed || trimmed.startsWith("TODO_")) return undefined;
+  const digits = trimmed.replace(/\D/g, "");
   if (digits.length < 8) return undefined;
   return digits;
+}
+
+export function getPublicWhatsappNumber(): string | undefined {
+  const raw = readPublic("PUBLIC_WHATSAPP_NUMBER") || readPublic("VITE_PUBLIC_WHATSAPP_NUMBER");
+  return parseWhatsappNumber(raw);
 }
