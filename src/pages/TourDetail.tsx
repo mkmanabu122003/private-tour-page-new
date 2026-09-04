@@ -5,6 +5,9 @@ import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import useEmblaCarousel from "embla-carousel-react";
 import tourYanaka from "@/assets/tour-yanaka.webp";
@@ -871,6 +874,9 @@ const TourDetail = () => {
                 </div>
               )}
 
+              <TourInclusions lang="en" />
+              <TourTrustBlock lang="en" />
+
               {/* Why Go With a Private Guide (day trips only) */}
               {"whyGuide" in tour && (tour as any).whyGuide && (
                 <div className="bg-secondary/50 rounded-lg p-6">
@@ -994,22 +1000,7 @@ const TourDetail = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      {faqs.length > 0 && (
-        <section className="py-16 bg-secondary/30">
-          <div className="container-section">
-            <h2 className="heading-section text-foreground mb-8 text-center">Frequently Asked Questions</h2>
-            <div className="max-w-3xl mx-auto space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-card border border-border rounded-lg p-6">
-                  <h3 className="text-lg font-medium text-foreground mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <TourCommonFaq lang="en" extraFaqs={faqs} />
 
       {/* Day Trip CTA */}
       {"whyGuide" in tour && (
@@ -1108,12 +1099,17 @@ const TourDetail = () => {
                   "name": h,
                 })),
               },
-              "offers": {
-                "@type": "Offer",
-                "price": schema.price,
-                "priceCurrency": "JPY",
-                "availability": "https://schema.org/InStock",
-              },
+              ...(id !== "custom"
+                ? {
+                    offers: {
+                      "@type": "Offer",
+                      price: schema.price,
+                      priceCurrency: "JPY",
+                      name: `From ¥${Number(schema.price).toLocaleString("en-US")} per group`,
+                      availability: "https://schema.org/InStock",
+                    },
+                  }
+                : {}),
               "provider": {
                 "@type": "LocalBusiness",
                 "name": "Tanuki Tabi Travel",
@@ -1135,15 +1131,20 @@ const TourDetail = () => {
                 "@type": "Organization",
                 "name": "Tanuki Tabi Travel",
               },
-              "offers": {
-                "@type": "Offer",
-                "price": schema.price,
-                "priceCurrency": "JPY",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2026-01-01",
-                "priceValidUntil": "2026-12-31",
-                "url": `https://tanuki-tabi-travel.com/tours/${id}`,
-              },
+              ...(id !== "custom"
+                ? {
+                    offers: {
+                      "@type": "Offer",
+                      price: schema.price,
+                      priceCurrency: "JPY",
+                      name: `From ¥${Number(schema.price).toLocaleString("en-US")} per group`,
+                      availability: "https://schema.org/InStock",
+                      validFrom: "2026-01-01",
+                      priceValidUntil: "2026-12-31",
+                      url: `https://tanuki-tabi-travel.com/tours/${id}`,
+                    },
+                  }
+                : {}),
               "areaServed": {
                 "@type": "Place",
                 "name": schema.area,
@@ -1169,28 +1170,7 @@ const TourDetail = () => {
         </>
       )}
 
-      {/* FAQ Schema */}
-      {faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": faqs.map((faq) => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      )}
-
-      <StickyBookingBar tourName={tour.title} price={tour.price} />
+      <StickyBookingBar lang="en" tourSlug={id} tourName={tour.title} price={tour.price} />
     </Layout>
   );
 };

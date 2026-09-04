@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import imperialPalace from "@/assets/imperial-palace.webp";
@@ -125,6 +129,9 @@ const EsImperialPalace = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
                 <ul className="space-y-3">
@@ -190,6 +197,8 @@ const EsImperialPalace = () => {
         </div>
       </section>
 
+      <TourCommonFaq lang="es" />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -225,7 +234,15 @@ const EsImperialPalace = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour del Palacio Imperial y Marunouchi" price="¥40,000" />
+      <TourJsonLd
+        lang="es"
+        name="Tour del Palacio Imperial y Marunouchi"
+        description="Tour privado por los Jardines del Este del Palacio Imperial y Marunouchi con guía nativo en español. 2.5 horas, grupos 1-6 desde ¥40,000."
+        path="/es/tours/imperial-palace"
+        fromPriceYen="40000"
+        area="Palacio Imperial y Marunouchi"
+      />
+      <StickyBookingBar lang="es" tourSlug="imperial-palace" tourName="Tour del Palacio Imperial y Marunouchi" price="¥40,000" />
     </Layout>
   );
 };

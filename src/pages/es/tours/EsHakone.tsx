@@ -5,8 +5,36 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
+
+const extraFaqs: TourFaqItem[] = [
+  {
+    question: "¿Se puede ver el Monte Fuji desde Hakone?",
+    answer:
+      "La visibilidad del Monte Fuji depende del clima. Las vistas más despejadas suelen darse de octubre a febrero. Tu guía monitorea las condiciones y ajusta el itinerario para maximizar tus posibilidades de ver el Fuji.",
+  },
+  {
+    question: "¿Qué es el Hakone Free Pass?",
+    answer:
+      "El Hakone Free Pass (aprox. ¥6,100) cubre el tren de ida y vuelta desde Shinjuku más viajes ilimitados en teleférico, barco, funicular y autobuses dentro de Hakone. No está incluido en la tarifa del guía, pero es muy recomendable.",
+  },
+  {
+    question: "¿Se puede visitar un onsen (aguas termales) durante el tour?",
+    answer:
+      "¡Sí! Podemos incluir un baño de pies público (gratuito) o una instalación de onsen de uso diario. Indícale tu preferencia al guía al momento de reservar.",
+  },
+  {
+    question: "¿La excursión a Hakone es demasiado larga para personas mayores?",
+    answer:
+      "El tour se basa principalmente en transporte con caminatas cortas, por lo que es manejable para la mayoría de los niveles de condición física. Podemos ajustar el ritmo y omitir los tramos más exigentes si es necesario.",
+  },
+];
 
 const EsHakone = () => {
   useEffect(() => { trackTourPageView("Excursión Privada a Hakone"); }, []);
@@ -143,6 +171,9 @@ const EsHakone = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h2 className="heading-section text-foreground mb-6">Información Práctica</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -234,76 +265,7 @@ const EsHakone = () => {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede ver el Monte Fuji desde Hakone?</h3>
-                <p className="text-muted-foreground leading-relaxed">La visibilidad del Monte Fuji depende del clima. Las vistas más despejadas suelen darse de octubre a febrero. Tu guía monitorea las condiciones y ajusta el itinerario para maximizar tus posibilidades de ver el Fuji.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué es el Hakone Free Pass?</h3>
-                <p className="text-muted-foreground leading-relaxed">El Hakone Free Pass (aprox. ¥6,100) cubre el tren de ida y vuelta desde Shinjuku más viajes ilimitados en teleférico, barco, funicular y autobuses dentro de Hakone. No está incluido en la tarifa del guía, pero es muy recomendable.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede visitar un onsen (aguas termales) durante el tour?</h3>
-                <p className="text-muted-foreground leading-relaxed">¡Sí! Podemos incluir un baño de pies público (gratuito) o una instalación de onsen de uso diario. Indícale tu preferencia al guía al momento de reservar.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿La excursión a Hakone es demasiado larga para personas mayores?</h3>
-                <p className="text-muted-foreground leading-relaxed">El tour se basa principalmente en transporte con caminatas cortas, por lo que es manejable para la mayoría de los niveles de condición física. Podemos ajustar el ritmo y omitir los tramos más exigentes si es necesario.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Se puede ver el Monte Fuji desde Hakone?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "La visibilidad del Monte Fuji depende del clima. Las vistas más despejadas suelen darse de octubre a febrero. Tu guía monitorea las condiciones y ajusta el itinerario para maximizar tus posibilidades de ver el Fuji."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Qué es el Hakone Free Pass?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "El Hakone Free Pass (aprox. ¥6,100) cubre el tren de ida y vuelta desde Shinjuku más viajes ilimitados en teleférico, barco, funicular y autobuses dentro de Hakone. No está incluido en la tarifa del guía, pero es muy recomendable."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Se puede visitar un onsen (aguas termales) durante el tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "¡Sí! Podemos incluir un baño de pies público (gratuito) o una instalación de onsen de uso diario. Indícale tu preferencia al guía al momento de reservar."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿La excursión a Hakone es demasiado larga para personas mayores?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "El tour se basa principalmente en transporte con caminatas cortas, por lo que es manejable para la mayoría de los niveles de condición física. Podemos ajustar el ritmo y omitir los tramos más exigentes si es necesario."
-                }
-              }
-            ]
-          })
-        }}
-      />
+      <TourCommonFaq lang="es" extraFaqs={extraFaqs} />
 
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
@@ -340,7 +302,15 @@ const EsHakone = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥80,000" />
+      <TourJsonLd
+        lang="es"
+        name="Excursión Privada a Hakone"
+        description="Excursión privada a Hakone desde Tokio con guía nativo en español. Monte Fuji, lago Ashi y aguas termales. Grupos 1-6 desde ¥80,000."
+        path="/es/tours/hakone-day-trip"
+        fromPriceYen="80000"
+        area="Hakone"
+      />
+      <StickyBookingBar lang="es" tourSlug="hakone-day-trip" tourName="Excursión Privada a Hakone" price="¥80,000" />
     </Layout>
   );
 };

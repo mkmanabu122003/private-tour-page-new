@@ -5,8 +5,36 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
+
+const extraFaqs: TourFaqItem[] = [
+  {
+    question: "¿Qué tan lejos está Kamakura de Tokio?",
+    answer:
+      "Kamakura está a aproximadamente 1 hora de Tokio en tren. Normalmente tomamos la línea JR Yokosuka desde la estación de Tokio directamente hasta la estación de Kamakura.",
+  },
+  {
+    question: "¿Se puede personalizar el itinerario de Kamakura?",
+    answer:
+      "Por supuesto. Kamakura tiene más de 65 templos y santuarios. Tu guía adaptará la ruta a tus intereses, ya sea historia, rutas de senderismo, jardines zen o vistas al mar.",
+  },
+  {
+    question: "¿Vale la pena visitar Kamakura con niños?",
+    answer:
+      "¡Sí! A los niños les encanta el Gran Buda (se puede entrar dentro de la estatua), la playa y la comida callejera en Komachi-dori. El recorrido es mayormente plano y accesible.",
+  },
+  {
+    question: "¿Qué ropa debo llevar a Kamakura?",
+    answer:
+      "Es imprescindible llevar calzado cómodo para caminar. Algunos recintos de templos tienen caminos de grava y escaleras. Viste con modestia para las visitas a templos (hombros y rodillas cubiertos). En verano, lleva sombrero y protector solar.",
+  },
+];
 
 const EsKamakura = () => {
   useEffect(() => { trackTourPageView("Excursión Privada a Kamakura"); }, []);
@@ -150,6 +178,9 @@ const EsKamakura = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               {/* Practical Info */}
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h2 className="heading-section text-foreground mb-6">Información Práctica</h2>
@@ -246,76 +277,7 @@ const EsKamakura = () => {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué tan lejos está Kamakura de Tokio?</h3>
-                <p className="text-muted-foreground leading-relaxed">Kamakura está a aproximadamente 1 hora de Tokio en tren. Normalmente tomamos la línea JR Yokosuka desde la estación de Tokio directamente hasta la estación de Kamakura.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Se puede personalizar el itinerario de Kamakura?</h3>
-                <p className="text-muted-foreground leading-relaxed">Por supuesto. Kamakura tiene más de 65 templos y santuarios. Tu guía adaptará la ruta a tus intereses, ya sea historia, rutas de senderismo, jardines zen o vistas al mar.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Vale la pena visitar Kamakura con niños?</h3>
-                <p className="text-muted-foreground leading-relaxed">¡Sí! A los niños les encanta el Gran Buda (se puede entrar dentro de la estatua), la playa y la comida callejera en Komachi-dori. El recorrido es mayormente plano y accesible.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué ropa debo llevar a Kamakura?</h3>
-                <p className="text-muted-foreground leading-relaxed">Es imprescindible llevar calzado cómodo para caminar. Algunos recintos de templos tienen caminos de grava y escaleras. Viste con modestia para las visitas a templos (hombros y rodillas cubiertos). En verano, lleva sombrero y protector solar.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Qué tan lejos está Kamakura de Tokio?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Kamakura está a aproximadamente 1 hora de Tokio en tren. Normalmente tomamos la línea JR Yokosuka desde la estación de Tokio directamente hasta la estación de Kamakura."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Se puede personalizar el itinerario de Kamakura?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Por supuesto. Kamakura tiene más de 65 templos y santuarios. Tu guía adaptará la ruta a tus intereses, ya sea historia, rutas de senderismo, jardines zen o vistas al mar."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Vale la pena visitar Kamakura con niños?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "¡Sí! A los niños les encanta el Gran Buda (se puede entrar dentro de la estatua), la playa y la comida callejera en Komachi-dori. El recorrido es mayormente plano y accesible."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Qué ropa debo llevar a Kamakura?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Es imprescindible llevar calzado cómodo para caminar. Algunos recintos de templos tienen caminos de grava y escaleras. Viste con modestia para las visitas a templos (hombros y rodillas cubiertos). En verano, lleva sombrero y protector solar."
-                }
-              }
-            ]
-          })
-        }}
-      />
+      <TourCommonFaq lang="es" extraFaqs={extraFaqs} />
 
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
@@ -357,7 +319,15 @@ const EsKamakura = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Kamakura" price="¥70,000" />
+      <TourJsonLd
+        lang="es"
+        name="Excursión Privada a Kamakura"
+        description="Excursión privada a Kamakura desde Tokio con guía nativo en español. Gran Buda, templos y vistas a Enoshima. Día completo, grupos 1-6 desde ¥70,000."
+        path="/es/tours/kamakura-day-trip"
+        fromPriceYen="70000"
+        area="Kamakura"
+      />
+      <StickyBookingBar lang="es" tourSlug="kamakura-day-trip" tourName="Excursión Privada a Kamakura" price="¥70,000" />
     </Layout>
   );
 };

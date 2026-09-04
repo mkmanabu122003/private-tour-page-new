@@ -152,7 +152,7 @@ const EsContact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16">
+      <section id="inquiry-form" className="py-16 scroll-mt-24">
         <div className="container-section">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}

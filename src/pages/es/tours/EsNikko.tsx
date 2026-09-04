@@ -5,9 +5,37 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
 import nikkoToshogu from "@/assets/nikko-toshogu.webp";
+
+const extraFaqs: TourFaqItem[] = [
+  {
+    question: "¿Cómo se llega a Nikko desde Tokio?",
+    answer:
+      "Tomamos el Shinkansen JR Tohoku hasta Utsunomiya y luego hacemos trasbordo a la línea JR Nikko. El trayecto total es de unas 2 horas. Tu guía se encarga de toda la navegación y los billetes.",
+  },
+  {
+    question: "¿La excursión a Nikko es adecuada para niños?",
+    answer:
+      "Sí, aunque hay algunas escaleras y subidas en el Santuario Toshogu. A los niños suelen encantarles las tallas ornamentadas (especialmente el gato dormido y los tres monos sabios) y las cascadas.",
+  },
+  {
+    question: "¿Cuál es la mejor época para visitar Nikko?",
+    answer:
+      "De octubre a noviembre ofrece un espectacular follaje otoñal. Mayo trae un exuberante verdor primaveral. El verano es más fresco que Tokio, lo que lo convierte en una escapada agradable. El invierno tiene menos multitudes, pero algunas instalaciones pueden estar cerradas.",
+  },
+  {
+    question: "¿Qué no incluye el precio del tour?",
+    answer:
+      "Los billetes de tren (aprox. ¥5,000-8,000 ida y vuelta), la entrada al Santuario Toshogu (¥1,600), el almuerzo, el ascensor de las Cascadas Kegon (¥570, opcional) y las tarifas de autobús local no están incluidos en la tarifa del guía.",
+  },
+];
 
 const EsNikko = () => {
   useEffect(() => { trackTourPageView("Excursión Privada a Nikko"); }, []);
@@ -137,6 +165,9 @@ const EsNikko = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h2 className="heading-section text-foreground mb-6">Información Práctica</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -228,76 +259,7 @@ const EsNikko = () => {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Cómo se llega a Nikko desde Tokio?</h3>
-                <p className="text-muted-foreground leading-relaxed">Tomamos el Shinkansen JR Tohoku hasta Utsunomiya y luego hacemos trasbordo a la línea JR Nikko. El trayecto total es de unas 2 horas. Tu guía se encarga de toda la navegación y los billetes.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿La excursión a Nikko es adecuada para niños?</h3>
-                <p className="text-muted-foreground leading-relaxed">Sí, aunque hay algunas escaleras y subidas en el Santuario Toshogu. A los niños suelen encantarles las tallas ornamentadas (especialmente el gato dormido y los tres monos sabios) y las cascadas.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es la mejor época para visitar Nikko?</h3>
-                <p className="text-muted-foreground leading-relaxed">De octubre a noviembre ofrece un espectacular follaje otoñal. Mayo trae un exuberante verdor primaveral. El verano es más fresco que Tokio, lo que lo convierte en una escapada agradable. El invierno tiene menos multitudes, pero algunas instalaciones pueden estar cerradas.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Qué no incluye el precio del tour?</h3>
-                <p className="text-muted-foreground leading-relaxed">Los billetes de tren (aprox. ¥5,000-8,000 ida y vuelta), la entrada al Santuario Toshogu (¥1,600), el almuerzo, el ascensor de las Cascadas Kegon (¥570, opcional) y las tarifas de autobús local no están incluidos en la tarifa del guía.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Cómo se llega a Nikko desde Tokio?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tomamos el Shinkansen JR Tohoku hasta Utsunomiya y luego hacemos trasbordo a la línea JR Nikko. El trayecto total es de unas 2 horas. Tu guía se encarga de toda la navegación y los billetes."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿La excursión a Nikko es adecuada para niños?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sí, aunque hay algunas escaleras y subidas en el Santuario Toshogu. A los niños suelen encantarles las tallas ornamentadas (especialmente el gato dormido y los tres monos sabios) y las cascadas."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Cuál es la mejor época para visitar Nikko?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "De octubre a noviembre ofrece un espectacular follaje otoñal. Mayo trae un exuberante verdor primaveral. El verano es más fresco que Tokio, lo que lo convierte en una escapada agradable. El invierno tiene menos multitudes, pero algunas instalaciones pueden estar cerradas."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Qué no incluye el precio del tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Los billetes de tren (aprox. ¥5,000-8,000 ida y vuelta), la entrada al Santuario Toshogu (¥1,600), el almuerzo, el ascensor de las Cascadas Kegon (¥570, opcional) y las tarifas de autobús local no están incluidos en la tarifa del guía."
-                }
-              }
-            ]
-          })
-        }}
-      />
+      <TourCommonFaq lang="es" extraFaqs={extraFaqs} />
 
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
@@ -334,7 +296,15 @@ const EsNikko = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Nikko" price="¥80,000" />
+      <TourJsonLd
+        lang="es"
+        name="Excursión Privada a Nikko"
+        description="Excursión privada a Nikko desde Tokio con guía nativo en español. Santuario Toshogu UNESCO y paisaje de montaña. Día completo, grupos 1-6 desde ¥80,000."
+        path="/es/tours/nikko-day-trip"
+        fromPriceYen="80000"
+        area="Nikko"
+      />
+      <StickyBookingBar lang="es" tourSlug="nikko-day-trip" tourName="Excursión Privada a Nikko" price="¥80,000" />
     </Layout>
   );
 };

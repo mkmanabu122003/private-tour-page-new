@@ -5,9 +5,32 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight } from "lucide-react
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
 import hamarikyu from "@/assets/hamarikyu.webp";
+
+const extraFaqs: TourFaqItem[] = [
+  {
+    question: "¿Cómo le indico lo que quiero ver?",
+    answer:
+      "Después de reservar, intercambiamos mensajes sobre tus intereses, ritmo, preferencias gastronómicas y cualquier lugar específico que quieras visitar. Tu guía diseña entonces un itinerario personalizado.",
+  },
+  {
+    question: "¿Cuál es la duración mínima de un tour personalizado?",
+    answer:
+      "El mínimo es de 3 horas. La mayoría de los visitantes reservan de 4 a 6 horas para una experiencia de medio día, o de 7 a 8 horas para un día completo.",
+  },
+  {
+    question: "¿Se pueden combinar varios barrios?",
+    answer:
+      "¡Sí! Un tour personalizado puede cubrir de 2 a 3 zonas según la duración. Tu guía planifica rutas eficientes utilizando la excelente red de trenes de Tokio.",
+  },
+];
 
 const EsCustom = () => {
   useEffect(() => { trackTourPageView("Tour Privado Personalizado"); }, []);
@@ -113,6 +136,9 @@ const EsCustom = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
                 <ul className="space-y-3">
@@ -170,64 +196,7 @@ const EsCustom = () => {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Cómo le indico lo que quiero ver?</h3>
-                <p className="text-muted-foreground leading-relaxed">Después de reservar, intercambiamos mensajes sobre tus intereses, ritmo, preferencias gastronómicas y cualquier lugar específico que quieras visitar. Tu guía diseña entonces un itinerario personalizado.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Cuál es la duración mínima de un tour personalizado?</h3>
-                <p className="text-muted-foreground leading-relaxed">El mínimo es de 3 horas. La mayoría de los visitantes reservan de 4 a 6 horas para una experiencia de medio día, o de 7 a 8 horas para un día completo.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Se pueden combinar varios barrios?</h3>
-                <p className="text-muted-foreground leading-relaxed">¡Sí! Un tour personalizado puede cubrir de 2 a 3 zonas según la duración. Tu guía planifica rutas eficientes utilizando la excelente red de trenes de Tokio.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Cómo le indico lo que quiero ver?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Después de reservar, intercambiamos mensajes sobre tus intereses, ritmo, preferencias gastronómicas y cualquier lugar específico que quieras visitar. Tu guía diseña entonces un itinerario personalizado."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Cuál es la duración mínima de un tour personalizado?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "El mínimo es de 3 horas. La mayoría de los visitantes reservan de 4 a 6 horas para una experiencia de medio día, o de 7 a 8 horas para un día completo."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Se pueden combinar varios barrios?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "¡Sí! Un tour personalizado puede cubrir de 2 a 3 zonas según la duración. Tu guía planifica rutas eficientes utilizando la excelente red de trenes de Tokio."
-                }
-              }
-            ]
-          })
-        }}
-      />
+      <TourCommonFaq lang="es" extraFaqs={extraFaqs} />
 
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
@@ -264,7 +233,14 @@ const EsCustom = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado Personalizado" price="A medida de tu viaje" />
+      <TourJsonLd
+        lang="es"
+        name="Tour Privado Personalizado"
+        description="Tour privado personalizado en Tokio con guía nativo en español. Medio día o día completo, grupos 1-6. Precio a medida del viaje."
+        path="/es/tours/custom"
+        area="Tokio"
+      />
+      <StickyBookingBar lang="es" tourSlug="custom" tourName="Tour Privado Personalizado" price="A medida de tu viaje" />
     </Layout>
   );
 };

@@ -20,8 +20,36 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
+
+const foodTourFaqs: TourFaqItem[] = [
+  {
+    question: "What dietary restrictions can you accommodate?",
+    answer:
+      "We accommodate vegetarian, vegan, pescatarian, halal, gluten-free, and most common allergies. Let us know your needs when booking and we'll plan every stop around your requirements. Your guide carries allergy cards in Japanese for restaurant communication.",
+  },
+  {
+    question: "How many people can join the tour?",
+    answer:
+      "Our private food tours accommodate 1-6 people per group. Smaller groups (2-4) work best for intimate restaurant experiences, as many of the hidden spots we visit have limited seating.",
+  },
+  {
+    question: "What areas do you visit on the food tour?",
+    answer:
+      "Routes vary based on your preferences, but popular areas include Tsukiji Outer Market, Ginza's depachika (department store food halls), Asakusa's traditional street food, and hidden ramen alleys in Shinjuku. We customize every tour — tell us what you love to eat.",
+  },
+  {
+    question: "Are meals included on the food tour?",
+    answer:
+      "Yes. Meal costs are included in the tour price, including tastings and a sit-down meal.",
+  },
+];
 
 const features = [
   {
@@ -448,6 +476,10 @@ const TokyoFoodTour = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                  Meals
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                   Restaurant navigation and ordering help
                 </li>
               </ul>
@@ -463,45 +495,9 @@ const TokyoFoodTour = () => {
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <X className="w-4 h-4 text-muted-foreground mt-1 flex-shrink-0" />
-                  Food and drinks (pay as you go)
-                </li>
-                <li className="flex items-start gap-2">
-                  <X className="w-4 h-4 text-muted-foreground mt-1 flex-shrink-0" />
-                  Transportation costs
+                  Each traveler's own transport
                 </li>
               </ul>
-              <p className="mt-4 text-sm text-muted-foreground">
-                <strong className="text-foreground">Food budget:</strong>{" "}
-                Expect to spend around ¥3,000-5,000 per person depending on
-                the tour type and your appetite.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container-section">
-          <h2 className="heading-section text-foreground text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">What dietary restrictions can you accommodate?</h3>
-              <p className="text-muted-foreground leading-relaxed">We accommodate vegetarian, vegan, pescatarian, halal, gluten-free, and most common allergies. Let us know your needs when booking and we'll plan every stop around your requirements. Your guide carries allergy cards in Japanese for restaurant communication.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">How many people can join the tour?</h3>
-              <p className="text-muted-foreground leading-relaxed">Our private food tours accommodate 1-6 people per group. Smaller groups (2-4) work best for intimate restaurant experiences, as many of the hidden spots we visit have limited seating.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">What areas do you visit on the food tour?</h3>
-              <p className="text-muted-foreground leading-relaxed">Routes vary based on your preferences, but popular areas include Tsukiji Outer Market, Ginza's depachika (department store food halls), Asakusa's traditional street food, and hidden ramen alleys in Shinjuku. We customize every tour — tell us what you love to eat.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">How much should I budget for food during the tour?</h3>
-              <p className="text-muted-foreground leading-relaxed">Expect to spend ¥3,000-5,000 per person on food and drinks. This covers multiple tastings and a sit-down meal. Food costs are not included in the tour price so you can choose exactly what appeals to you.</p>
             </div>
           </div>
         </div>
@@ -639,6 +635,10 @@ const TokyoFoodTour = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  Meals
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                   All food tastings (6-8 stops)
                 </li>
                 <li className="flex items-start gap-3">
@@ -677,6 +677,13 @@ const TokyoFoodTour = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container-section max-w-4xl mx-auto space-y-10">
+          <TourInclusions lang="en" includeMeals />
+          <TourTrustBlock lang="en" />
         </div>
       </section>
 
@@ -806,11 +813,6 @@ const TokyoFoodTour = () => {
               "name": "Tanuki Tabi Travel",
               "url": "https://tanuki-tabi-travel.com",
             },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "JPY",
-              "availability": "https://schema.org/InStock",
-            },
           }),
         }}
       />
@@ -829,14 +831,6 @@ const TokyoFoodTour = () => {
               "@type": "Organization",
               "name": "Tanuki Tabi Travel",
               "url": "https://tanuki-tabi-travel.com",
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://tanuki-tabi-travel.com/tours/tokyo-food-tour",
-              "priceCurrency": "JPY",
-              "price": "50000",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2026-01-01",
             },
             "areaServed": {
               "@type": "City",
@@ -870,52 +864,15 @@ const TokyoFoodTour = () => {
         }}
       />
 
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What dietary restrictions can you accommodate?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We accommodate vegetarian, vegan, pescatarian, halal, gluten-free, and most common allergies. Your guide carries allergy cards in Japanese for restaurant communication.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "How many people can join the tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Our private food tours accommodate 1-6 people per group. Smaller groups (2-4) work best for intimate restaurant experiences.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "What areas do you visit on the food tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Routes vary based on preferences. Popular areas include Tsukiji Outer Market, Ginza's depachika, Asakusa's traditional street food, and hidden ramen alleys in Shinjuku.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "How much should I budget for food during the tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Expect to spend ¥3,000-5,000 per person on food and drinks. This covers multiple tastings and a sit-down meal. Food costs are not included in the tour price.",
-                },
-              },
-            ],
-          }),
-        }}
+      <TourCommonFaq lang="en" extraFaqs={foodTourFaqs} />
+      <TourJsonLd
+        lang="en"
+        name="Tokyo Private Food Tour"
+        description="Explore Tokyo's best local food spots with a private licensed guide. From Tsukiji Market street food to ramen, izakaya, and depachika."
+        path="/tours/tokyo-food-tour"
+        area="Tokyo"
       />
-
-      <StickyBookingBar tourName="Tokyo Food Tour" price="Contact for quote" />
+      <StickyBookingBar lang="en" tourSlug="tokyo-food-tour" tourName="Tokyo Food Tour" price="Contact for quote" />
     </Layout>
   );
 };

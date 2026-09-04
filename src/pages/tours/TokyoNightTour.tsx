@@ -4,8 +4,36 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
+
+const nightTourFaqs: TourFaqItem[] = [
+  {
+    question: "Is Tokyo safe at night?",
+    answer:
+      "Extremely safe. Tokyo is one of the safest major cities in the world, day or night. That said, having a guide helps you navigate the bar etiquette, avoid tourist traps, and discover spots you'd never find on your own.",
+  },
+  {
+    question: "What time does the night tour start and end?",
+    answer:
+      "Tours typically start at 6:00 PM or 7:00 PM and last 3-4 hours. We can adjust timing to fit your schedule. The tour ends before the last trains (around 11:30 PM-midnight).",
+  },
+  {
+    question: "Can I bring children on the night tour?",
+    answer:
+      "We can create family-friendly evening routes focusing on illuminated landmarks, night markets, and family restaurants. For bar-focused tours, we recommend 18+ only.",
+  },
+  {
+    question: "How much should I budget for food and drinks?",
+    answer:
+      "Budget ¥3,000-6,000 per person for drinks and food. Izakaya dishes are typically ¥300-800 each, and drinks ¥500-1,000. Your guide will recommend spots at various price points.",
+  },
+];
 
 const nightExperiences: {
   title: string;
@@ -392,6 +420,13 @@ const TokyoNightTour = () => {
         </div>
       </section>
 
+      <section className="py-16">
+        <div className="container-section max-w-4xl mx-auto space-y-10">
+          <TourInclusions lang="en" />
+          <TourTrustBlock lang="en" />
+        </div>
+      </section>
+
       {/* Related Content */}
       <section className="py-16">
         <div className="container-section">
@@ -466,112 +501,19 @@ const TokyoNightTour = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container-section">
-          <h2 className="heading-section text-foreground text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">Is Tokyo safe at night?</h3>
-              <p className="text-muted-foreground leading-relaxed">Extremely safe. Tokyo is one of the safest major cities in the world, day or night. That said, having a guide helps you navigate the bar etiquette, avoid tourist traps, and discover spots you'd never find on your own.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">What time does the night tour start and end?</h3>
-              <p className="text-muted-foreground leading-relaxed">Tours typically start at 6:00 PM or 7:00 PM and last 3-4 hours. We can adjust timing to fit your schedule. The tour ends before the last trains (around 11:30 PM-midnight).</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">Can I bring children on the night tour?</h3>
-              <p className="text-muted-foreground leading-relaxed">We can create family-friendly evening routes focusing on illuminated landmarks, night markets, and family restaurants. For bar-focused tours, we recommend 18+ only.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-2">How much should I budget for food and drinks?</h3>
-              <p className="text-muted-foreground leading-relaxed">Budget ¥3,000-6,000 per person for drinks and food. Izakaya dishes are typically ¥300-800 each, and drinks ¥500-1,000. Your guide will recommend spots at various price points.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TourCommonFaq lang="en" extraFaqs={nightTourFaqs} />
 
       {/* Value Comparison */}
       <ValueComparison tourPrice={50000} tourName="Tokyo Night Tour" />
 
-      {/* TouristTrip Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "TouristTrip",
-            "name": "Tokyo Private Night Tour",
-            "description": "Experience Tokyo after dark with a licensed local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots safely with a private guide.",
-            "touristType": "Nightlife & Food enthusiasts",
-            "url": "https://tanuki-tabi-travel.com/tours/tokyo-night-tour",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Tanuki Tabi Travel",
-              "url": "https://tanuki-tabi-travel.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Tokyo",
-                "addressCountry": "JP",
-              },
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "JPY",
-              "availability": "https://schema.org/InStock",
-            },
-          }),
-        }}
+      <TourJsonLd
+        lang="en"
+        name="Tokyo Private Night Tour"
+        description="Experience Tokyo after dark with a licensed local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots."
+        path="/tours/tokyo-night-tour"
+        area="Tokyo"
       />
-
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Is Tokyo safe at night?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Extremely safe. Tokyo is one of the safest major cities in the world, day or night. A guide helps you navigate bar etiquette, avoid tourist traps, and discover hidden spots.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "What time does the night tour start and end?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tours typically start at 6:00 PM or 7:00 PM and last 3-4 hours. We can adjust timing to fit your schedule. The tour ends before the last trains.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "Can I bring children on the night tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We can create family-friendly evening routes focusing on illuminated landmarks, night markets, and family restaurants. For bar-focused tours, we recommend 18+ only.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "How much should I budget for food and drinks?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Budget ¥3,000-6,000 per person for drinks and food. Izakaya dishes are typically ¥300-800 each, and drinks ¥500-1,000.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-
-      <StickyBookingBar tourName="Tokyo Night Tour" price="Contact for quote" />
+      <StickyBookingBar lang="en" tourSlug="tokyo-night-tour" tourName="Tokyo Night Tour" price="Contact for quote" />
     </Layout>
   );
 };
