@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "japan-wireless-esim",
+    "category": "esim",
+    "label_es": "eSIM para Japón (Japan Wireless)",
+    "label_en": "Japan eSIM (Japan Wireless)",
+    "url": "TODO_AFFILIATE_URL_JAPAN_WIRELESS_ESIM",
+    "disclosure": true,
+    "product_info": "https://www.japan-wireless.com/esim"
+  },
+  {
+    "slug": "japan-wireless-wifi",
+    "category": "esim",
+    "label_es": "Pocket WiFi para Japón (Japan Wireless)",
+    "label_en": "Japan pocket WiFi (Japan Wireless)",
+    "url": "TODO_AFFILIATE_URL_JAPAN_WIRELESS_WIFI",
+    "disclosure": true,
+    "product_info": "https://www.japan-wireless.com/"
+  },
+  {
+    "slug": "japan-bullet-train",
+    "category": "railpass",
+    "label_es": "Billetes de shinkansen (Japan Bullet Train)",
+    "label_en": "Shinkansen tickets (Japan Bullet Train)",
+    "url": "TODO_AFFILIATE_URL_JAPAN_BULLET_TRAIN",
+    "disclosure": true,
+    "product_info": "https://www.japan-bullettrain.com/"
+  },
+  {
+    "slug": "japan-bus-tickets",
+    "category": "tickets",
+    "label_es": "Billetes de bus de larga distancia (Japan Bus Tickets)",
+    "label_en": "Highway bus tickets (Japan Bus Tickets)",
+    "url": "TODO_AFFILIATE_URL_JAPAN_BUS_TICKETS",
+    "disclosure": true,
+    "product_info": "https://www.japan-bus-tickets.com/"
+  },
+  {
+    "slug": "airport-taxi-tokyo",
+    "category": "airport",
+    "label_es": "Taxi de aeropuerto en Tokio",
+    "label_en": "Tokyo airport taxi",
+    "url": "TODO_AFFILIATE_URL_AIRPORT_TAXI_TOKYO",
+    "disclosure": true,
+    "product_info": "https://www.airport-taxi.tokyo/"
+  },
+  {
+    "slug": "travel-insurance",
+    "category": "insurance",
+    "label_es": "Seguro de viaje (socio por confirmar)",
+    "label_en": "Travel insurance (partner TBD)",
+    "url": "TODO_AFFILIATE_URL_TRAVEL_INSURANCE",
+    "disclosure": true,
+    "product_info": ""
+  },
+  {
+    "slug": "luggage-storage",
+    "category": "luggage",
+    "label_es": "Guardaequipaje (socio por confirmar)",
+    "label_en": "Luggage storage (partner TBD)",
+    "url": "TODO_AFFILIATE_URL_LUGGAGE_STORAGE",
+    "disclosure": true,
+    "product_info": ""
+  }
+]

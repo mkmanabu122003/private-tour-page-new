@@ -5,6 +5,11 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /assets/
+Disallow: /go/
+Disallow: /es/go/
+Disallow: /thank-you
+Disallow: /es/thank-you
+Disallow: /es/gracias-asakusa
 
 # Google
 User-agent: Googlebot

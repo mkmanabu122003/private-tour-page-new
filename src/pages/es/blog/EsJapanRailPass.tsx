@@ -8,6 +8,8 @@ import { InlineCTAEs } from "@/components/blog/InlineCTAEs";
 import { QuickAnswerEs } from "@/components/blog/QuickAnswer";
 import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
 import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
+import { AffiliateDisclosure } from "@/components/affiliates/AffiliateDisclosure";
+import { AffiliateLink } from "@/components/affiliates/AffiliateLink";
 
 const EsJapanRailPass = () => {
   return (
@@ -56,6 +58,7 @@ const EsJapanRailPass = () => {
               answer="El precio del JR Pass no ha cambiado en 2026 — la última subida fue en octubre de 2023 (+70%, hasta ¥50,000 el pase Ordinario de 7 días). No hay ninguna subida prevista para 2026 a fecha de abril."
               hook="Pero lo que importa más que el precio es esto: tras la subida de 2023, el Pass solo compensa en itinerarios concretos. He calculado los números de las 12 rutas más comunes — y en 7 de ellas acabas perdiendo dinero comparado con comprar billetes sueltos de Shinkansen."
             />
+            <AffiliateDisclosure lang="es" placement="top" />
             {/* Introducción */}
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               "¿Me conviene comprar el Japan Rail Pass?" Es la pregunta que más me hacen mis clientes antes de viajar a Japón. Y la respuesta honesta es: depende. La verdad es que para muchos viajeros el JR Pass ya no sale rentable desde la subida de 2023. Pero para otros sigue siendo una compra inteligente que puede ahorrarte miles de yenes. En este artículo voy a hacer los cálculos reales, con precios actualizados de 2026, para que tú mismo puedas decidir si el japan rail pass vale la pena para tu itinerario concreto.
@@ -465,14 +468,16 @@ const EsJapanRailPass = () => {
               Pases regionales (Kansai, Hokkaido, etc.)
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground"><a href="https://www.westjr.co.jp/global/en/ticket/pass/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR Kansai Area Pass</a></strong> (1-4 días, desde 2.800 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región.
+              Esta es la alternativa que más recomiendo. JR ofrece pases regionales mucho más económicos que cubren zonas específicas. Algunos ejemplos: el <strong className="text-foreground"><AffiliateLink slug="japan-bullet-train" lang="es">JR Kansai Area Pass</AffiliateLink></strong> (1-4 días, desde 2.800 yenes) cubre trenes entre Osaka, Kioto, Nara y Kobe. El <strong className="text-foreground">JR Hokkaido Rail Pass</strong> es perfecto si exploras el norte. El <strong className="text-foreground">JR Kyushu Rail Pass</strong> cubre toda la isla de Kyushu. Estos pases regionales no sufrieron la misma subida de precios que el pase nacional y ofrecen una relación calidad-precio excelente si tu viaje se concentra en una región. Presentamos un socio de boletos; no reservamos trenes por ustedes.
             </p>
 
             <h3>
               Billetes de shinkansen individuales con descuento
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Pocos turistas saben que existen descuentos para billetes de shinkansen si compras con antelación. El servicio <strong className="text-foreground"><a href="https://smart-ex.jp/en/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">SmartEX</a></strong> permite a los extranjeros reservar billetes de shinkansen Tokaido-Sanyo (Tokio-Osaka-Hiroshima-Fukuoka) con descuentos de hasta un 30% si compras con semanas de antelación. La app funciona en inglés y puedes usar tu tarjeta de crédito internacional. Para trayectos puntuales, esta opción puede ser significativamente más barata que el JR Pass.
+              Pocos turistas saben que existen descuentos para billetes de shinkansen si compras con antelación. Un{" "}
+              <AffiliateLink slug="japan-bullet-train" lang="es">socio de boletos de shinkansen</AffiliateLink>
+              {" "}(y apps como SmartEX) permite reservar el Tokaido-Sanyo (Tokio-Osaka-Hiroshima-Fukuoka) con descuentos si compras con semanas de antelación. Nosotros no reservamos asientos. Para trayectos puntuales, esta opción puede ser significativamente más barata que el JR Pass.
             </p>
 
             {/* FAQ */}
@@ -596,6 +601,7 @@ const EsJapanRailPass = () => {
               </div>
             </div>
           
+            <AffiliateDisclosure lang="es" placement="footer" />
             </article>
 
             <BlogArticleAside />
