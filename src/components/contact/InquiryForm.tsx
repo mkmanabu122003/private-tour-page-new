@@ -1,23 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackFormSubmit, trackFormEngage } from "@/lib/ga4";
-
-const VALID_TOUR_VALUES = [
-  "asakusa",
-  "yanaka",
-  "shibuya-harajuku",
-  "tsukiji-ginza",
-  "imperial-palace",
-  "tokyo-food-tour",
-  "tokyo-night-tour",
-  "kamakura-day-trip",
-  "hakone-day-trip",
-  "nikko-day-trip",
-  "custom",
-  "other",
-];
+import { composeGroupSize, isValidTourValue } from "@/lib/inquiryForm";
 
 const inputClass =
   "w-full px-4 py-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors";
@@ -27,16 +13,10 @@ interface InquiryFormProps {
   initialTour?: string;
 }
 
-function composeGroupSize(adults: string, children: string): string {
-  const a = adults.trim() || "0";
-  const c = children.trim() || "0";
-  return `${a} adults, ${c} children`;
-}
-
 export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
   const { toast } = useToast();
   const navigate = useNavigate();
-  const prefilledTour = VALID_TOUR_VALUES.includes(initialTour) ? initialTour : "";
+  const prefilledTour = isValidTourValue(initialTour) ? initialTour : "";
   const isEs = lang === "es";
   const formName = isEs ? "contact-es" : "contact";
 
@@ -54,6 +34,13 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasEngaged, setHasEngaged] = useState(false);
+
+  useEffect(() => {
+    if (!isValidTourValue(initialTour)) return;
+    setFormData((prev) =>
+      prev.tourType === initialTour ? prev : { ...prev, tourType: initialTour }
+    );
+  }, [initialTour]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
