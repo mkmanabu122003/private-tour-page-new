@@ -16,7 +16,7 @@ const tourInfo = {
   "tokyo-food-tour": { name: "Tokyo Food Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
   "tokyo-night-tour": { name: "Tokyo Night Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
   "kamakura-day-trip": { name: "Kamakura Day Trip", price: "¥70,000", duration: "7-8 hours", perPerson6: "¥11,700" },
-  "hakone-day-trip": { name: "Hakone Day Trip", price: "¥70,000", duration: "8-10 hours", perPerson6: "¥11,700" },
+  "hakone-day-trip": { name: "Hakone Day Trip", price: "¥80,000", duration: "8-10 hours", perPerson6: "¥13,300" },
   "nikko-day-trip": { name: "Nikko Day Trip", price: "¥80,000", duration: "9-10 hours", perPerson6: "¥13,300" },
   custom: { name: "Custom Private Tour", price: "¥10,000~/hour", duration: "Flexible", perPerson6: "varies" },
 };
@@ -190,10 +190,18 @@ async function sendEmail(payload) {
 }
 
 function buildSlackMessage(data, isSpanish) {
-  const { name, email, tourType, date, groupSize, message } = data;
+  const { name, email, tourType, date, groupSize, message, country, city, language, adults, children } =
+    data;
   const tour = tourInfo[tourType];
   const lang = isSpanish ? "ES" : "EN";
+  const preferredLang = language === "es" ? "ES" : language === "en" ? "EN" : lang;
   const tourLabel = tour ? tour.name : tourType || "Not specified";
+  const groupLabel =
+    groupSize ||
+    [adults ? `${adults} adults` : "", children ? `${children} children` : ""]
+      .filter(Boolean)
+      .join(", ") ||
+    "-";
 
   const headerText = `:jp: New Booking Inquiry (${lang}) — ${name || "Unknown"}`;
 
@@ -210,9 +218,12 @@ function buildSlackMessage(data, isSpanish) {
           { type: "mrkdwn", text: `*Name:*\n${name || "-"}` },
           { type: "mrkdwn", text: `*Email:*\n<mailto:${email}|${email}>` },
           { type: "mrkdwn", text: `*Tour:*\n${tourLabel}` },
-          { type: "mrkdwn", text: `*Date:*\n${date || "-"}` },
-          { type: "mrkdwn", text: `*Group:*\n${groupSize || "-"}` },
-          { type: "mrkdwn", text: `*Language:*\n${lang}` },
+          { type: "mrkdwn", text: `*Date / period:*\n${date || "-"}` },
+          { type: "mrkdwn", text: `*Group:*\n${groupLabel}` },
+          { type: "mrkdwn", text: `*Form language:*\n${lang}` },
+          { type: "mrkdwn", text: `*Preferred language:*\n${preferredLang}` },
+          { type: "mrkdwn", text: `*Country:*\n${country || "-"}` },
+          { type: "mrkdwn", text: `*City:*\n${city || "-"}` },
         ],
       },
       {
@@ -224,6 +235,51 @@ function buildSlackMessage(data, isSpanish) {
       },
     ],
   };
+}
+
+/**
+ * Optional staging lead write. Skips unless both env vars are set.
+ * Does not talk to production Supabase. This repo has no Supabase client.
+ * Table name is a placeholder until a staging schema exists.
+ */
+async function maybeWriteStagingLead(data, isSpanish) {
+  const url = process.env.SUPABASE_STAGING_URL;
+  const key = process.env.SUPABASE_STAGING_ANON_KEY || process.env.SUPABASE_STAGING_KEY;
+  if (!url || !key || String(url).startsWith("TODO_") || String(key).startsWith("TODO_")) {
+    console.log("Supabase staging env not set — skipping lead write");
+    return { skipped: true };
+  }
+
+  const endpoint = String(url).replace(/\/$/, "") + "/rest/v1/inquiries";
+  const res = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      apikey: key,
+      Authorization: "Bearer " + key,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({
+      name: data.name || null,
+      email: data.email || null,
+      country: data.country || null,
+      date: data.date || null,
+      group_size: data.groupSize || null,
+      adults: data.adults || null,
+      children: data.children || null,
+      city: data.city || null,
+      language: data.language || (isSpanish ? "es" : "en"),
+      tour_type: data.tourType || null,
+      message: data.message || null,
+      form_name: isSpanish ? "contact-es" : "contact",
+    }),
+  });
+
+  if (!res.ok) {
+    const error = await res.text();
+    throw new Error("Supabase staging write failed: " + res.status + " " + error);
+  }
+  return { ok: true };
 }
 
 async function postToSlack(data, isSpanish) {
@@ -279,11 +335,16 @@ exports.handler = async function (event, context) {
         console.error("Slack notification failed (non-fatal):", err.message);
         return { error: err.message };
       }),
+      maybeWriteStagingLead(data, isSpanish).catch(function (err) {
+        console.error("Staging lead write failed (non-fatal):", err.message);
+        return { error: err.message };
+      }),
     ]);
 
     console.log("Auto-reply sent to:", data.email);
     console.log("Admin copy sent to:", MANABU_EMAIL, "(reply-to:", data.email + ")");
     console.log("Slack result:", JSON.stringify(results[2]));
+    console.log("Staging lead result:", JSON.stringify(results[3]));
 
     return {
       statusCode: 200,
