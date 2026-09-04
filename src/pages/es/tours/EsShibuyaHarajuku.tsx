@@ -11,6 +11,25 @@ import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
+import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
+
+const extraFaqs: TourFaqItem[] = [
+  {
+    question: "¿Veremos el cruce de Shibuya desde arriba?",
+    answer:
+      "¡Sí! Tu guía te llevará a los mejores puntos de observación para ver y fotografiar el famoso cruce desde lo alto.",
+  },
+  {
+    question: "¿Este tour es adecuado para adolescentes?",
+    answer:
+      "Sin duda, este es uno de nuestros tours más populares para familias con adolescentes. La escena de moda de Harajuku, las crepas y la cultura pop lo convierten en una experiencia inolvidable.",
+  },
+  {
+    question: "¿Se visita el Santuario Meiji en este tour?",
+    answer:
+      "Sí. El Santuario Meiji ofrece un contraste sereno con el bullicioso Harajuku y es uno de los puntos destacados del tour. Caminamos por el sendero arbolado y explicamos los rituales sintoístas.",
+  },
+];
 
 const EsShibuyaHarajuku = () => {
   useEffect(() => { trackTourPageView("Tour Privado por Shibuya y Harajuku"); }, []);
@@ -194,67 +213,7 @@ const EsShibuyaHarajuku = () => {
         </div>
       </section>
 
-      {/* Preguntas Frecuentes */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container-section">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="heading-section text-foreground mb-8">Preguntas Frecuentes</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Veremos el cruce de Shibuya desde arriba?</h3>
-                <p className="text-muted-foreground leading-relaxed">¡Sí! Tu guía te llevará a los mejores puntos de observación para ver y fotografiar el famoso cruce desde lo alto.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Este tour es adecuado para adolescentes?</h3>
-                <p className="text-muted-foreground leading-relaxed">Sin duda, este es uno de nuestros tours más populares para familias con adolescentes. La escena de moda de Harajuku, las crepas y la cultura pop lo convierten en una experiencia inolvidable.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-foreground mb-2">¿Se visita el Santuario Meiji en este tour?</h3>
-                <p className="text-muted-foreground leading-relaxed">Sí. El Santuario Meiji ofrece un contraste sereno con el bullicioso Harajuku y es uno de los puntos destacados del tour. Caminamos por el sendero arbolado y explicamos los rituales sintoístas.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Veremos el cruce de Shibuya desde arriba?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "¡Sí! Tu guía te llevará a los mejores puntos de observación para ver y fotografiar el famoso cruce desde lo alto."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Este tour es adecuado para adolescentes?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sin duda, este es uno de nuestros tours más populares para familias con adolescentes. La escena de moda de Harajuku, las crepas y la cultura pop lo convierten en una experiencia inolvidable."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Se visita el Santuario Meiji en este tour?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sí. El Santuario Meiji ofrece un contraste sereno con el bullicioso Harajuku y es uno de los puntos destacados del tour. Caminamos por el sendero arbolado y explicamos los rituales sintoístas."
-                }
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Inline Booking CTA */}
-      <TourCommonFaq lang="es" heading="Antes de reservar" />
+      <TourCommonFaq lang="es" extraFaqs={extraFaqs} />
 
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">

@@ -1,12 +1,13 @@
 import { Check, X } from "lucide-react";
-import { tourInclusionsCopy, type TourLang } from "./tourPolicyCopy";
+import { getTourInclusionsCopy, type TourLang } from "./tourPolicyCopy";
 
 interface TourInclusionsProps {
   lang?: TourLang;
+  includeMeals?: boolean;
 }
 
-export const TourInclusions = ({ lang = "en" }: TourInclusionsProps) => {
-  const copy = tourInclusionsCopy[lang];
+export const TourInclusions = ({ lang = "en", includeMeals = false }: TourInclusionsProps) => {
+  const copy = getTourInclusionsCopy(lang, { includeMeals });
 
   return (
     <div className="space-y-6">

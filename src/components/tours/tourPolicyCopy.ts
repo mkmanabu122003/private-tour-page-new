@@ -26,10 +26,10 @@ export const tourInclusionsCopy = {
     ],
     paymentTitle: "Payment",
     payment:
-      "A 50% deposit confirms the booking. The remaining balance is due about two weeks before the tour. Wise is the preferred method; PayPal also works.",
+      "The full amount is due at booking time. Wise is the preferred method; PayPal also works.",
     vehicleTitle: "Private vehicle",
     vehicle:
-      "A private vehicle, if requested, is arranged by a partner company and billed separately. This site does not book or reserve the vehicle.",
+      "A private or charter vehicle is not included in any tour. It is always a separate quote. This site does not book or reserve the vehicle — introduction and quote only.",
   },
   es: {
     heading: "Qué incluye la tarifa",
@@ -46,12 +46,29 @@ export const tourInclusionsCopy = {
     ],
     paymentTitle: "Pago",
     payment:
-      "Un depósito del 50% confirma la reserva. El saldo restante se paga unas dos semanas antes del tour. Se recomienda Wise; también se acepta PayPal.",
+      "El importe completo se paga en el momento de la reserva. Se recomienda Wise; también se acepta PayPal.",
     vehicleTitle: "Vehículo privado",
     vehicle:
-      "Si se pide un vehículo privado, lo gestiona una empresa asociada y va aparte. Este sitio no reserva ni contrata el vehículo.",
+      "Un vehículo privado o de alquiler con conductor no está incluido en ningún tour. Siempre es un presupuesto aparte. Este sitio no reserva ni contrata el vehículo: solo presentación y presupuesto.",
   },
 } as const;
+
+export function getTourInclusionsCopy(lang: TourLang, options?: { includeMeals?: boolean }) {
+  const base = tourInclusionsCopy[lang];
+  if (!options?.includeMeals) {
+    return {
+      ...base,
+      included: [...base.included],
+      excluded: [...base.excluded],
+    };
+  }
+  const mealLabel = lang === "es" ? "Comidas" : "Meals";
+  return {
+    ...base,
+    included: [...base.included, mealLabel],
+    excluded: base.excluded.filter((item) => item !== mealLabel),
+  };
+}
 
 export const tourTrustCopy = {
   en: {
