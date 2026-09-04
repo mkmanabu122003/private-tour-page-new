@@ -72,4 +72,21 @@ describe("/go/ fallback", () => {
     expect(runCjs('c.resolveGoRedirect("/es/go/airport-taxi-tokyo")')).toBe("/es/prepara-tu-viaje");
     expect(runCjs('c.resolveGoRedirect("/go/missing")')).toBe("/prepare-your-trip");
   });
+
+  it("Netlify function returns 302 to the hub while URLs are TODO_", () => {
+    const raw = execFileSync(
+      "node",
+      [
+        "-e",
+        `const {handler}=require("./netlify/functions/affiliate-go.cjs");
+         handler({queryStringParameters:{slug:"japan-wireless-esim"}}).then((r)=>{
+           process.stdout.write(JSON.stringify(r));
+         });`,
+      ],
+      { encoding: "utf8", cwd: process.cwd() },
+    );
+    const res = JSON.parse(raw) as { statusCode: number; headers: { Location: string } };
+    expect(res.statusCode).toBe(302);
+    expect(res.headers.Location).toBe("/prepare-your-trip");
+  });
 });
