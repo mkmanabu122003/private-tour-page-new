@@ -36,10 +36,14 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
   const [hasEngaged, setHasEngaged] = useState(false);
 
   useEffect(() => {
-    if (!isValidTourValue(initialTour)) return;
-    setFormData((prev) =>
-      prev.tourType === initialTour ? prev : { ...prev, tourType: initialTour }
-    );
+    const fromProp = isValidTourValue(initialTour) ? initialTour : "";
+    const fromQuery =
+      typeof window === "undefined"
+        ? ""
+        : new URLSearchParams(window.location.search).get("tour") || "";
+    const next = fromProp || (isValidTourValue(fromQuery) ? fromQuery : "");
+    if (!next) return;
+    setFormData((prev) => (prev.tourType === next ? prev : { ...prev, tourType: next }));
   }, [initialTour]);
 
   const handleChange = (

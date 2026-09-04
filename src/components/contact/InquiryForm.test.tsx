@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { InquiryForm } from "./InquiryForm";
 
 vi.mock("@/lib/ga4", () => ({
@@ -16,6 +16,10 @@ function renderForm(lang: "en" | "es", initialTour?: string) {
     </MemoryRouter>
   );
 }
+
+afterEach(() => {
+  window.history.pushState({}, "", "/");
+});
 
 describe("InquiryForm fields", () => {
   it("renders EN labels, required fields, and form-name=contact", () => {
@@ -76,6 +80,12 @@ describe("InquiryForm fields", () => {
         <InquiryForm lang="en" initialTour="asakusa" />
       </MemoryRouter>
     );
+    expect(screen.getByLabelText("Tour of interest")).toHaveValue("asakusa");
+  });
+
+  it("reads ?tour= from the window location when the router prop is empty", () => {
+    window.history.pushState({}, "", "/contact?tour=asakusa");
+    renderForm("en");
     expect(screen.getByLabelText("Tour of interest")).toHaveValue("asakusa");
   });
 
