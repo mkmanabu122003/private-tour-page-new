@@ -4,6 +4,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 
@@ -392,6 +396,13 @@ const TokyoNightTour = () => {
         </div>
       </section>
 
+      <section className="py-16">
+        <div className="container-section max-w-4xl mx-auto space-y-10">
+          <TourInclusions lang="en" />
+          <TourTrustBlock lang="en" />
+        </div>
+      </section>
+
       {/* Related Content */}
       <section className="py-16">
         <div className="container-section">
@@ -466,6 +477,8 @@ const TokyoNightTour = () => {
         </div>
       </section>
 
+      <TourCommonFaq lang="en" heading="Before you book" />
+
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container-section">
@@ -495,36 +508,6 @@ const TokyoNightTour = () => {
 
       {/* Value Comparison */}
       <ValueComparison tourPrice={50000} tourName="Tokyo Night Tour" />
-
-      {/* TouristTrip Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "TouristTrip",
-            "name": "Tokyo Private Night Tour",
-            "description": "Experience Tokyo after dark with a licensed local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots safely with a private guide.",
-            "touristType": "Nightlife & Food enthusiasts",
-            "url": "https://tanuki-tabi-travel.com/tours/tokyo-night-tour",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Tanuki Tabi Travel",
-              "url": "https://tanuki-tabi-travel.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Tokyo",
-                "addressCountry": "JP",
-              },
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "JPY",
-              "availability": "https://schema.org/InStock",
-            },
-          }),
-        }}
-      />
 
       {/* FAQPage Schema */}
       <script
@@ -571,7 +554,14 @@ const TokyoNightTour = () => {
         }}
       />
 
-      <StickyBookingBar tourName="Tokyo Night Tour" price="Contact for quote" />
+      <TourJsonLd
+        lang="en"
+        name="Tokyo Private Night Tour"
+        description="Experience Tokyo after dark with a licensed local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots."
+        path="/tours/tokyo-night-tour"
+        area="Tokyo"
+      />
+      <StickyBookingBar lang="en" tourSlug="tokyo-night-tour" tourName="Tokyo Night Tour" price="Contact for quote" />
     </Layout>
   );
 };

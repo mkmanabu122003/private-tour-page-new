@@ -20,6 +20,10 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 
@@ -680,6 +684,13 @@ const TokyoFoodTour = () => {
         </div>
       </section>
 
+      <section className="py-16">
+        <div className="container-section max-w-4xl mx-auto space-y-10">
+          <TourInclusions lang="en" />
+          <TourTrustBlock lang="en" />
+        </div>
+      </section>
+
       {/* Every Diet Welcome */}
       <section className="py-16 bg-secondary/30">
         <div className="container-section">
@@ -915,7 +926,15 @@ const TokyoFoodTour = () => {
         }}
       />
 
-      <StickyBookingBar tourName="Tokyo Food Tour" price="Contact for quote" />
+      <TourCommonFaq lang="en" heading="Before you book" />
+      <TourJsonLd
+        lang="en"
+        name="Tokyo Private Food Tour"
+        description="Explore Tokyo's best local food spots with a private licensed guide. From Tsukiji Market street food to ramen, izakaya, and depachika."
+        path="/tours/tokyo-food-tour"
+        area="Tokyo"
+      />
+      <StickyBookingBar lang="en" tourSlug="tokyo-food-tour" tourName="Tokyo Food Tour" price="Contact for quote" />
     </Layout>
   );
 };

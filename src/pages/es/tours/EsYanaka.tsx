@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.webp";
@@ -133,6 +137,9 @@ const EsYanaka = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               {/* Suitable For */}
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
@@ -202,6 +209,8 @@ const EsYanaka = () => {
         </div>
       </section>
 
+      <TourCommonFaq lang="es" />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -242,7 +251,15 @@ const EsYanaka = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Descubrimiento de Ueno y Yanaka" price="¥50,000" />
+      <TourJsonLd
+        lang="es"
+        name="Descubrimiento de Ueno y Yanaka"
+        description="Tour privado por Yanaka y Ueno con guía nativo en español. El Tokio nostálgico: templos, tiendas vintage y vida local. Grupos 1-4 desde ¥50,000."
+        path="/es/tours/yanaka"
+        fromPriceYen="50000"
+        area="Yanaka"
+      />
+      <StickyBookingBar lang="es" tourSlug="yanaka" tourName="Descubrimiento de Ueno y Yanaka" price="¥50,000" />
     </Layout>
   );
 };

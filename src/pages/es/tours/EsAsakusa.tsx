@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -133,6 +137,9 @@ const EsAsakusa = () => {
                 </ul>
               </div>
 
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
+
               {/* Suitable For */}
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
@@ -225,6 +232,8 @@ const EsAsakusa = () => {
         </div>
       </section>
 
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -301,7 +310,15 @@ const EsAsakusa = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Asakusa" price="¥45,000" />
+      <TourJsonLd
+        lang="es"
+        name="Tour Privado por Asakusa"
+        description="Tour privado por Asakusa con guía nativo en español. Templo Senso-ji, calle Nakamise, callejones ocultos, gastronomía local. 3 horas, grupos 1-6 desde ¥45,000."
+        path="/es/tours/asakusa"
+        fromPriceYen="45000"
+        area="Asakusa"
+      />
+      <StickyBookingBar lang="es" tourSlug="asakusa" tourName="Tour Privado por Asakusa" price="¥45,000" />
     </Layout>
   );
 };

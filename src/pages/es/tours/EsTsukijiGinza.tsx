@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -121,6 +125,9 @@ const EsTsukijiGinza = () => {
                   ))}
                 </ul>
               </div>
+
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
 
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
@@ -259,6 +266,8 @@ const EsTsukijiGinza = () => {
       />
 
       {/* Inline Booking CTA */}
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
           <p className="text-lg sm:text-xl font-semibold text-foreground">
@@ -293,7 +302,15 @@ const EsTsukijiGinza = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Tsukiji y Ginza" price="¥45,000" />
+      <TourJsonLd
+        lang="es"
+        name="Tour Privado por Tsukiji y Ginza"
+        description="Tour privado por el mercado exterior de Tsukiji y Ginza con guía nativo en español. 3 horas, grupos 1-6 desde ¥45,000."
+        path="/es/tours/tsukiji-ginza"
+        fromPriceYen="45000"
+        area="Tsukiji y Ginza"
+      />
+      <StickyBookingBar lang="es" tourSlug="tsukiji-ginza" tourName="Tour Privado por Tsukiji y Ginza" price="¥45,000" />
     </Layout>
   );
 };

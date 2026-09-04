@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -142,6 +146,9 @@ const EsHakone = () => {
                   ))}
                 </ul>
               </div>
+
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
 
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h2 className="heading-section text-foreground mb-6">Información Práctica</h2>
@@ -305,6 +312,8 @@ const EsHakone = () => {
         }}
       />
 
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -340,7 +349,15 @@ const EsHakone = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Hakone" price="¥80,000" />
+      <TourJsonLd
+        lang="es"
+        name="Excursión Privada a Hakone"
+        description="Excursión privada a Hakone desde Tokio con guía nativo en español. Monte Fuji, lago Ashi y aguas termales. Grupos 1-6 desde ¥80,000."
+        path="/es/tours/hakone-day-trip"
+        fromPriceYen="80000"
+        area="Hakone"
+      />
+      <StickyBookingBar lang="es" tourSlug="hakone-day-trip" tourName="Excursión Privada a Hakone" price="¥80,000" />
     </Layout>
   );
 };

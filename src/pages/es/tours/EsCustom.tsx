@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight } from "lucide-react
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import hamarikyu from "@/assets/hamarikyu.webp";
@@ -112,6 +116,9 @@ const EsCustom = () => {
                   ))}
                 </ul>
               </div>
+
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
 
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
@@ -229,6 +236,8 @@ const EsCustom = () => {
         }}
       />
 
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -264,7 +273,14 @@ const EsCustom = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado Personalizado" price="A medida de tu viaje" />
+      <TourJsonLd
+        lang="es"
+        name="Tour Privado Personalizado"
+        description="Tour privado personalizado en Tokio con guía nativo en español. Medio día o día completo, grupos 1-6. Precio a medida del viaje."
+        path="/es/tours/custom"
+        area="Tokio"
+      />
+      <StickyBookingBar lang="es" tourSlug="custom" tourName="Tour Privado Personalizado" price="A medida de tu viaje" />
     </Layout>
   );
 };

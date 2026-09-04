@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, ArrowLeft, ArrowRight, Calendar } from "lu
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -121,6 +125,9 @@ const EsShibuyaHarajuku = () => {
                   ))}
                 </ul>
               </div>
+
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
 
               <div>
                 <h2 className="heading-section text-foreground mb-6">Ideal Para</h2>
@@ -247,6 +254,8 @@ const EsShibuyaHarajuku = () => {
       />
 
       {/* Inline Booking CTA */}
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
           <p className="text-lg sm:text-xl font-semibold text-foreground">
@@ -281,7 +290,15 @@ const EsShibuyaHarajuku = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Tour Privado por Shibuya y Harajuku" price="¥50,000" />
+      <TourJsonLd
+        lang="es"
+        name="Tour Privado por Shibuya y Harajuku"
+        description="Tour privado por Shibuya y Harajuku con guía nativo en español. Cruce de Shibuya, Takeshita y santuario Meiji. 3.5 horas, grupos 1-6 desde ¥50,000."
+        path="/es/tours/shibuya-harajuku"
+        fromPriceYen="50000"
+        area="Shibuya y Harajuku"
+      />
+      <StickyBookingBar lang="es" tourSlug="shibuya-harajuku" tourName="Tour Privado por Shibuya y Harajuku" price="¥50,000" />
     </Layout>
   );
 };

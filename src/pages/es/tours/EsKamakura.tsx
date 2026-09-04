@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 
@@ -149,6 +153,9 @@ const EsKamakura = () => {
                   ))}
                 </ul>
               </div>
+
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
 
               {/* Practical Info */}
               <div className="bg-secondary/30 rounded-lg p-6">
@@ -317,6 +324,8 @@ const EsKamakura = () => {
         }}
       />
 
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -357,7 +366,15 @@ const EsKamakura = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Kamakura" price="¥70,000" />
+      <TourJsonLd
+        lang="es"
+        name="Excursión Privada a Kamakura"
+        description="Excursión privada a Kamakura desde Tokio con guía nativo en español. Gran Buda, templos y vistas a Enoshima. Día completo, grupos 1-6 desde ¥70,000."
+        path="/es/tours/kamakura-day-trip"
+        fromPriceYen="70000"
+        area="Kamakura"
+      />
+      <StickyBookingBar lang="es" tourSlug="kamakura-day-trip" tourName="Excursión Privada a Kamakura" price="¥70,000" />
     </Layout>
   );
 };

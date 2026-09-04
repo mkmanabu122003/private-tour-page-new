@@ -5,6 +5,10 @@ import { Clock, Users, MapPin, Check, X, ArrowLeft, ArrowRight, Calendar, Mounta
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { StickyBookingBar } from "@/components/tours/StickyBookingBar";
+import { TourInclusions } from "@/components/tours/TourInclusions";
+import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
+import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
+import { TourJsonLd } from "@/components/tours/TourJsonLd";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import nikkoToshogu from "@/assets/nikko-toshogu.webp";
@@ -136,6 +140,9 @@ const EsNikko = () => {
                   ))}
                 </ul>
               </div>
+
+              <TourInclusions lang="es" />
+              <TourTrustBlock lang="es" />
 
               <div className="bg-secondary/30 rounded-lg p-6">
                 <h2 className="heading-section text-foreground mb-6">Información Práctica</h2>
@@ -299,6 +306,8 @@ const EsNikko = () => {
         }}
       />
 
+      <TourCommonFaq lang="es" heading="Antes de reservar" />
+
       {/* Inline Booking CTA */}
       <section className="py-12 bg-accent/5 border-y border-accent/10">
         <div className="container-section text-center">
@@ -334,7 +343,15 @@ const EsNikko = () => {
           </div>
         </div>
       </section>
-      <StickyBookingBar tourName="Excursión Privada a Nikko" price="¥80,000" />
+      <TourJsonLd
+        lang="es"
+        name="Excursión Privada a Nikko"
+        description="Excursión privada a Nikko desde Tokio con guía nativo en español. Santuario Toshogu UNESCO y paisaje de montaña. Día completo, grupos 1-6 desde ¥80,000."
+        path="/es/tours/nikko-day-trip"
+        fromPriceYen="80000"
+        area="Nikko"
+      />
+      <StickyBookingBar lang="es" tourSlug="nikko-day-trip" tourName="Excursión Privada a Nikko" price="¥80,000" />
     </Layout>
   );
 };
