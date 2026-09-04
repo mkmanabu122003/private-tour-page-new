@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -34,8 +34,9 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasEngaged, setHasEngaged] = useState(false);
+  const tourSelectRef = useRef<HTMLSelectElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const fromProp = isValidTourValue(initialTour) ? initialTour : "";
     const fromQuery =
       typeof window === "undefined"
@@ -44,6 +45,9 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
     const next = fromProp || (isValidTourValue(fromQuery) ? fromQuery : "");
     if (!next) return;
     setFormData((prev) => (prev.tourType === next ? prev : { ...prev, tourType: next }));
+    if (tourSelectRef.current && tourSelectRef.current.value !== next) {
+      tourSelectRef.current.value = next;
+    }
   }, [initialTour]);
 
   const handleChange = (
@@ -349,7 +353,7 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
         <select
           id="tourType"
           name="tourType"
-          key={formData.tourType || "unset"}
+          ref={tourSelectRef}
           value={formData.tourType}
           onChange={handleChange}
           className={inputClass}
