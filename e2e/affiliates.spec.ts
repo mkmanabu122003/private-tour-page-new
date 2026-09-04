@@ -101,6 +101,16 @@ test.describe("/go/ fallback", () => {
       await expect(page).toHaveURL(/prepare-your-trip/);
     }
   });
+
+  test("japan-wireless-wifi 302s to the live Pocket WiFi URL", async ({ request }) => {
+    const live = "https://www.japan-wireless.com/?via=manabu";
+    const en = await request.get("/go/japan-wireless-wifi", { maxRedirects: 0 });
+    expect(en.status()).toBe(302);
+    expect(en.headers()["location"]).toBe(live);
+    const es = await request.get("/es/go/japan-wireless-wifi", { maxRedirects: 0 });
+    expect(es.status()).toBe(302);
+    expect(es.headers()["location"]).toBe(live);
+  });
 });
 
 test.describe("affiliate_click", () => {

@@ -46,11 +46,22 @@ describe("affiliates catalog", () => {
     expect(getAffiliate("airport-taxi-tokyo")?.category).toBe("airport");
   });
 
-  it("starts every click URL as a TODO_ placeholder", () => {
-    expect(placeholderSlugs().sort()).toEqual([...AFFILIATES.map((row) => row.slug)].sort());
-    for (const row of AFFILIATES) {
-      expect(isPlaceholderUrl(row.url)).toBe(true);
-    }
+  it("keeps every slug except japan-wireless-wifi as TODO_", () => {
+    expect(getAffiliate("japan-wireless-wifi")?.url).toBe(
+      "https://www.japan-wireless.com/?via=manabu",
+    );
+    expect(isPlaceholderUrl(getAffiliate("japan-wireless-wifi")?.url)).toBe(false);
+    expect(placeholderSlugs().sort()).toEqual(
+      [
+        "airport-taxi-tokyo",
+        "japan-bullet-train",
+        "japan-bus-tickets",
+        "japan-wireless-esim",
+        "luggage-storage",
+        "travel-insurance",
+      ].sort(),
+    );
+    expect(placeholderSlugs()).not.toContain("japan-wireless-wifi");
   });
 });
 
@@ -65,6 +76,14 @@ describe("/go/ fallback", () => {
       slug: "japan-wireless-esim",
     });
     expect(goPath("japan-wireless-esim", "es")).toBe("/es/go/japan-wireless-esim");
+  });
+
+  it("302s japan-wireless-wifi to the live Pocket WiFi tracking URL", () => {
+    const live = "https://www.japan-wireless.com/?via=manabu";
+    expect(resolveGoRedirect("/go/japan-wireless-wifi")).toBe(live);
+    expect(resolveGoRedirect("/es/go/japan-wireless-wifi")).toBe(live);
+    expect(runCjs('c.resolveGoRedirect("/go/japan-wireless-wifi")')).toBe(live);
+    expect(runCjs('c.resolveGoRedirect("/es/go/japan-wireless-wifi")')).toBe(live);
   });
 
   it("matches the Netlify CJS resolver", () => {
@@ -103,5 +122,10 @@ describe("/go/ fallback", () => {
     ) as { statusCode: number; headers: { Location: string } };
     expect(es.statusCode).toBe(302);
     expect(es.headers.Location).toBe("/es/prepara-tu-viaje");
+    const wifi = JSON.parse(
+      run('{queryStringParameters:{slug:"japan-wireless-wifi"}}'),
+    ) as { statusCode: number; headers: { Location: string } };
+    expect(wifi.statusCode).toBe(302);
+    expect(wifi.headers.Location).toBe("https://www.japan-wireless.com/?via=manabu");
   });
 });
