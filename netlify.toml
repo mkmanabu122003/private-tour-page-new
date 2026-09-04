@@ -5,7 +5,7 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["src/data/tourPrices.json"]
+  included_files = ["src/data/tourPrices.json", "src/data/affiliates.json"]
 
 [build.processing]
   [build.processing.html]
@@ -151,6 +151,21 @@
   from = "/es/tours/tokyo-food-tour"
   to = "/es/tours"
   status = 301
+
+# Affiliate click-through. TODO_ partner URLs (and unknown slugs) 302 to the
+# trip-prep hub. Live partner URLs will be filled in affiliates.json later —
+# never commit affiliate IDs here.
+[[redirects]]
+  from = "/go/*"
+  to = "/.netlify/functions/affiliate-go?slug=:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/es/go/*"
+  to = "/.netlify/functions/affiliate-go?slug=es__:splat"
+  status = 200
+  force = true
 
 # Catch-all (must be last).
 #
