@@ -7,10 +7,10 @@ import { PrepareTripHub } from "./PrepareTripHub";
 describe("AffiliateDisclosure", () => {
   it("renders English and Spanish copy", () => {
     const { rerender } = render(<AffiliateDisclosure lang="en" placement="top" />);
-    expect(screen.getByText(/About some of these links/i)).toBeInTheDocument();
-    expect(screen.getByText(/do not book transport/i)).toBeInTheDocument();
+    expect(screen.getByText(/Partner links/i)).toBeInTheDocument();
+    expect(screen.getByText(/don't book transport/i)).toBeInTheDocument();
     rerender(<AffiliateDisclosure lang="es" placement="footer" />);
-    expect(screen.getByText(/Sobre algunos de estos enlaces/i)).toBeInTheDocument();
+    expect(screen.getByText(/Enlaces de socios/i)).toBeInTheDocument();
     expect(screen.getByText(/no reservamos transporte/i)).toBeInTheDocument();
     expect(document.querySelector('[data-affiliate-disclosure="footer"]')).toBeTruthy();
   });
@@ -41,5 +41,18 @@ describe("PrepareTripHub", () => {
     expect(screen.getByRole("link", { name: /Ver tours privados/i })).toHaveAttribute("href", "/es/tours");
     expect(document.querySelectorAll('a[href^="/es/go/"]').length).toBeGreaterThan(0);
     expect(document.body.textContent).not.toMatch(/vosotros|os recomiendo/i);
+    expect(document.body.textContent).toMatch(/recomendamos encarecidamente/i);
+    expect(document.body.textContent).not.toMatch(/\u2014|placeholder until the ID|ID de socio/i);
+  });
+
+  it("strongly recommends insurance without naming a best product (EN)", () => {
+    render(
+      <MemoryRouter>
+        <PrepareTripHub lang="en" />
+      </MemoryRouter>,
+    );
+    expect(screen.getByText(/strongly recommend travel insurance/i)).toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/best product for you|the best policy/i);
+    expect(document.body.textContent).not.toMatch(/\u2014/);
   });
 });

@@ -20,9 +20,9 @@ const EsGraciasAsakusa = () => {
           <p className="text-label text-accent mb-3">Asakusa</p>
           <h1 className="heading-display text-foreground">Gracias por visitar Asakusa.</h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Si quieren volver al barrio con tiempo, un tour privado recorre Senso-ji y las
-            calles de detrás con un guía certificado. El equipo arma el itinerario; el guía
-            los acompaña el día.
+            Si quieren recorrer el barrio con calma, un tour privado pasa por Senso-ji y las
+            calles de atrás con un guía certificado. El equipo arma el itinerario. El guía
+            los acompaña ese día.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link to="/es/tours/asakusa" className="btn-accent inline-flex justify-center">
@@ -36,8 +36,8 @@ const EsGraciasAsakusa = () => {
             </Link>
           </div>
           <p className="mt-10 text-muted-foreground leading-relaxed">
-            Si todavía están armando el viaje — datos, trenes, aeropuerto — esta guía reúne
-            las preguntas que más llegan antes de aterrizar.
+            Si todavía están armando el resto del viaje (datos, trenes, aeropuerto), esta
+            guía junta las preguntas que más nos llegan antes de aterrizar.
           </p>
           <p className="mt-4">
             <Link to="/es/prepara-tu-viaje" className="text-accent hover:underline font-medium">

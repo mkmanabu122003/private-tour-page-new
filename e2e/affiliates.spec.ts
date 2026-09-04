@@ -21,6 +21,7 @@ test.describe("Trip-prep hub", () => {
     const tourY = (await tourBox.boundingBox())?.y ?? 0;
     const goY = (await firstGo.boundingBox())?.y ?? 0;
     expect(tourY).toBeLessThan(goY);
+    await expect(page.getByText(/strongly recommend travel insurance/i)).toBeVisible();
 
     const thanks = await page.goto("/thank-you");
     expect(thanks?.ok()).toBeTruthy();
@@ -40,6 +41,7 @@ test.describe("Trip-prep hub", () => {
     );
     await expect(page.locator('a[href^="/es/go/"]').first()).toBeVisible();
     await expect(page.getByText(/vosotros/i)).toHaveCount(0);
+    await expect(page.getByText(/recomendamos encarecidamente/i)).toBeVisible();
 
     const landing = await page.goto("/es/gracias-asakusa");
     expect(landing?.ok()).toBeTruthy();

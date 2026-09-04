@@ -6,7 +6,7 @@ const PrepareYourTrip = () => (
   <Layout>
     <SEO
       title="Prepare Your Tokyo Trip 2026 | eSIM, Trains, Airport"
-      description="eSIM, WiFi, JR Pass math, airport access, and cash tips before you land. Private Tokyo tours first — then partner intros. We don't book transport for you."
+      description="eSIM, trains, airport, and cash before you land. Private Tokyo tours first, then partner intros. We don't book transport for you."
       canonicalPath="/prepare-your-trip"
       hreflang={[
         { lang: "en", path: "/prepare-your-trip" },

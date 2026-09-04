@@ -24,8 +24,9 @@ const EsThankYou = () => {
             sugerido. La reserva no queda confirmada hasta ese intercambio.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Mientras tanto, la guía para preparar el viaje reúne las preguntas
-            prácticas que más llegan antes de aterrizar: eSIM, trenes, aeropuerto, efectivo.
+            Mientras esperan, la guía para preparar el viaje cubre lo que más
+            preguntan antes de aterrizar: eSIM, trenes, aeropuerto y efectivo.
+            Presentamos esas opciones. No las reservamos por ustedes.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link to="/es/prepara-tu-viaje" className="btn-accent inline-flex justify-center">

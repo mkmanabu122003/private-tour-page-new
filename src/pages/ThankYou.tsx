@@ -24,8 +24,9 @@ const ThankYou = () => {
             No booking is confirmed until that exchange is done.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            While you wait, the trip-prep guide collects the practical questions
-            most guests ask before they land — eSIM, trains, airport, cash.
+            While you wait, the trip-prep guide covers what people usually sort
+            before they land: eSIM, trains, airport, and cash. We introduce those
+            options. We don't book them for you.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link to="/prepare-your-trip" className="btn-accent inline-flex justify-center">

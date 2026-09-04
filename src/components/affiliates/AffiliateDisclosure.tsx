@@ -7,12 +7,12 @@ interface AffiliateDisclosureProps {
 
 const COPY = {
   en: {
-    title: "About some of these links",
-    body: "A few links on this page go to partners. If you buy through them, we may earn a commission — at no extra cost to you. We introduce options; we do not book transport, hotels, or tickets on your behalf.",
+    title: "Partner links",
+    body: "Some links on this page go to partners. If you buy through them, we may earn a commission, at no extra cost to you. We introduce options. We don't book transport, hotels, or tickets for you.",
   },
   es: {
-    title: "Sobre algunos de estos enlaces",
-    body: "Algunos enlaces de esta página llevan a socios. Si compran a través de ellos, es posible que recibamos una comisión, sin costo extra para ustedes. Presentamos opciones; no reservamos transporte, hoteles ni boletos en su nombre.",
+    title: "Enlaces de socios",
+    body: "Algunos enlaces de esta página llevan a socios. Si compran a través de ellos, es posible que recibamos una comisión, sin costo extra para ustedes. Presentamos opciones. No reservamos transporte, hoteles ni boletos en su nombre.",
   },
 } as const;
 
