@@ -7,24 +7,27 @@ const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 const FROM_EMAIL = "Manabu | Tanuki Tabi Travel <info@tanuki-tabi-travel.com>";
 const MANABU_EMAIL = "info@tanuki-tabi-travel.com";
 
+const { formatAutoReplyPrice } = require("./tourCatalog.cjs");
+
 const tourInfo = {
-  asakusa: { name: "Asakusa Walking Tour", price: "¥45,000", duration: "3 hours", perPerson6: "¥7,500" },
-  yanaka: { name: "Ueno & Yanaka Discovery", price: "¥50,000", duration: "4 hours", perPerson6: "¥8,300" },
-  "shibuya-harajuku": { name: "Shibuya & Harajuku Tour", price: "¥50,000", duration: "3.5 hours", perPerson6: "¥8,300" },
-  "tsukiji-ginza": { name: "Tsukiji & Ginza Tour", price: "¥45,000", duration: "3 hours", perPerson6: "¥7,500" },
-  "imperial-palace": { name: "Imperial Palace & Marunouchi", price: "¥40,000", duration: "2.5 hours", perPerson6: "¥6,700" },
-  "tokyo-food-tour": { name: "Tokyo Food Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
-  "tokyo-night-tour": { name: "Tokyo Night Tour", price: "¥50,000~", duration: "3-4 hours", perPerson6: "¥8,300~" },
-  "kamakura-day-trip": { name: "Kamakura Day Trip", price: "¥70,000", duration: "7-8 hours", perPerson6: "¥11,700" },
-  "hakone-day-trip": { name: "Hakone Day Trip", price: "¥70,000", duration: "8-10 hours", perPerson6: "¥11,700" },
-  "nikko-day-trip": { name: "Nikko Day Trip", price: "¥80,000", duration: "9-10 hours", perPerson6: "¥13,300" },
-  custom: { name: "Custom Private Tour", price: "¥10,000~/hour", duration: "Flexible", perPerson6: "varies" },
+  asakusa: { name: "Asakusa Walking Tour", duration: "3 hours" },
+  yanaka: { name: "Ueno & Yanaka Discovery", duration: "4 hours" },
+  "shibuya-harajuku": { name: "Shibuya & Harajuku Tour", duration: "3.5 hours" },
+  "tsukiji-ginza": { name: "Tsukiji & Ginza Tour", duration: "3 hours" },
+  "imperial-palace": { name: "Imperial Palace & Marunouchi", duration: "2.5 hours" },
+  "tokyo-food-tour": { name: "Tokyo Food Tour", duration: "3-4 hours" },
+  "tokyo-night-tour": { name: "Tokyo Night Tour", duration: "3-4 hours" },
+  "kamakura-day-trip": { name: "Kamakura Day Trip", duration: "7-8 hours" },
+  "hakone-day-trip": { name: "Hakone Day Trip", duration: "8-10 hours" },
+  "nikko-day-trip": { name: "Nikko Day Trip", duration: "9-10 hours" },
+  custom: { name: "Custom Private Tour", duration: "Flexible" },
 };
 
 function buildCustomerEmail(data) {
   const { name, email, tourType, date, groupSize } = data;
   const tour = tourInfo[tourType];
   const firstName = (name || "").split(" ")[0] || "there";
+  const priceLine = formatAutoReplyPrice(tourType, "en");
 
   const tourSection = tour
     ? `
@@ -34,7 +37,7 @@ function buildCustomerEmail(data) {
             <tr><td style="padding: 4px 0;">Tour:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.name}</td></tr>
             ${date ? `<tr><td style="padding: 4px 0;">Date:</td><td style="padding: 4px 0;">${date}</td></tr>` : ""}
             ${groupSize ? `<tr><td style="padding: 4px 0;">Group size:</td><td style="padding: 4px 0;">${groupSize}</td></tr>` : ""}
-            <tr><td style="padding: 4px 0;">Price:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.price} for your group</td></tr>
+            ${priceLine ? `<tr><td style="padding: 4px 0;">Price:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${priceLine}</td></tr>` : ""}
             <tr><td style="padding: 4px 0;">Duration:</td><td style="padding: 4px 0;">${tour.duration}</td></tr>
           </table>
         </div>`
@@ -96,6 +99,7 @@ function buildCustomerEmailEs(data) {
   const { name, email, tourType, date, groupSize } = data;
   const tour = tourInfo[tourType];
   const firstName = (name || "").split(" ")[0] || "Hola";
+  const priceLine = formatAutoReplyPrice(tourType, "es");
 
   const tourSection = tour
     ? `
@@ -105,7 +109,7 @@ function buildCustomerEmailEs(data) {
             <tr><td style="padding: 4px 0;">Tour:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.name}</td></tr>
             ${date ? `<tr><td style="padding: 4px 0;">Fecha:</td><td style="padding: 4px 0;">${date}</td></tr>` : ""}
             ${groupSize ? `<tr><td style="padding: 4px 0;">Grupo:</td><td style="padding: 4px 0;">${groupSize}</td></tr>` : ""}
-            <tr><td style="padding: 4px 0;">Precio:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${tour.price} para tu grupo</td></tr>
+            ${priceLine ? `<tr><td style="padding: 4px 0;">Precio:</td><td style="padding: 4px 0; font-weight: 500; color: #2d2a26;">${priceLine}</td></tr>` : ""}
             <tr><td style="padding: 4px 0;">Duraci&oacute;n:</td><td style="padding: 4px 0;">${tour.duration}</td></tr>
           </table>
         </div>`
@@ -190,10 +194,18 @@ async function sendEmail(payload) {
 }
 
 function buildSlackMessage(data, isSpanish) {
-  const { name, email, tourType, date, groupSize, message } = data;
+  const { name, email, tourType, date, groupSize, message, country, city, language, adults, children } =
+    data;
   const tour = tourInfo[tourType];
   const lang = isSpanish ? "ES" : "EN";
+  const preferredLang = language === "es" ? "ES" : language === "en" ? "EN" : lang;
   const tourLabel = tour ? tour.name : tourType || "Not specified";
+  const groupLabel =
+    groupSize ||
+    [adults ? `${adults} adults` : "", children ? `${children} children` : ""]
+      .filter(Boolean)
+      .join(", ") ||
+    "-";
 
   const headerText = `:jp: New Booking Inquiry (${lang}) — ${name || "Unknown"}`;
 
@@ -210,9 +222,12 @@ function buildSlackMessage(data, isSpanish) {
           { type: "mrkdwn", text: `*Name:*\n${name || "-"}` },
           { type: "mrkdwn", text: `*Email:*\n<mailto:${email}|${email}>` },
           { type: "mrkdwn", text: `*Tour:*\n${tourLabel}` },
-          { type: "mrkdwn", text: `*Date:*\n${date || "-"}` },
-          { type: "mrkdwn", text: `*Group:*\n${groupSize || "-"}` },
-          { type: "mrkdwn", text: `*Language:*\n${lang}` },
+          { type: "mrkdwn", text: `*Date / period:*\n${date || "-"}` },
+          { type: "mrkdwn", text: `*Group:*\n${groupLabel}` },
+          { type: "mrkdwn", text: `*Form language:*\n${lang}` },
+          { type: "mrkdwn", text: `*Preferred language:*\n${preferredLang}` },
+          { type: "mrkdwn", text: `*Country:*\n${country || "-"}` },
+          { type: "mrkdwn", text: `*City:*\n${city || "-"}` },
         ],
       },
       {
@@ -224,6 +239,51 @@ function buildSlackMessage(data, isSpanish) {
       },
     ],
   };
+}
+
+/**
+ * Optional staging lead write. Skips unless both env vars are set.
+ * Does not talk to production Supabase. This repo has no Supabase client.
+ * Table name is a placeholder until a staging schema exists.
+ */
+async function maybeWriteStagingLead(data, isSpanish) {
+  const url = process.env.SUPABASE_STAGING_URL;
+  const key = process.env.SUPABASE_STAGING_ANON_KEY || process.env.SUPABASE_STAGING_KEY;
+  if (!url || !key || String(url).startsWith("TODO_") || String(key).startsWith("TODO_")) {
+    console.log("Supabase staging env not set — skipping lead write");
+    return { skipped: true };
+  }
+
+  const endpoint = String(url).replace(/\/$/, "") + "/rest/v1/inquiries";
+  const res = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      apikey: key,
+      Authorization: "Bearer " + key,
+      "Content-Type": "application/json",
+      Prefer: "return=minimal",
+    },
+    body: JSON.stringify({
+      name: data.name || null,
+      email: data.email || null,
+      country: data.country || null,
+      date: data.date || null,
+      group_size: data.groupSize || null,
+      adults: data.adults || null,
+      children: data.children || null,
+      city: data.city || null,
+      language: data.language || (isSpanish ? "es" : "en"),
+      tour_type: data.tourType || null,
+      message: data.message || null,
+      form_name: isSpanish ? "contact-es" : "contact",
+    }),
+  });
+
+  if (!res.ok) {
+    const error = await res.text();
+    throw new Error("Supabase staging write failed: " + res.status + " " + error);
+  }
+  return { ok: true };
 }
 
 async function postToSlack(data, isSpanish) {
@@ -279,11 +339,16 @@ exports.handler = async function (event, context) {
         console.error("Slack notification failed (non-fatal):", err.message);
         return { error: err.message };
       }),
+      maybeWriteStagingLead(data, isSpanish).catch(function (err) {
+        console.error("Staging lead write failed (non-fatal):", err.message);
+        return { error: err.message };
+      }),
     ]);
 
     console.log("Auto-reply sent to:", data.email);
     console.log("Admin copy sent to:", MANABU_EMAIL, "(reply-to:", data.email + ")");
     console.log("Slack result:", JSON.stringify(results[2]));
+    console.log("Staging lead result:", JSON.stringify(results[3]));
 
     return {
       statusCode: 200,

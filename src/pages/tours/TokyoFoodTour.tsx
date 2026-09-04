@@ -24,6 +24,7 @@ import { TourInclusions } from "@/components/tours/TourInclusions";
 import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
 import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { TourJsonLd } from "@/components/tours/TourJsonLd";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import { ValueComparison } from "@/components/tours/ValueComparison";
 import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
@@ -872,7 +873,7 @@ const TokyoFoodTour = () => {
         path="/tours/tokyo-food-tour"
         area="Tokyo"
       />
-      <StickyBookingBar lang="en" tourSlug="tokyo-food-tour" tourName="Tokyo Food Tour" price="Contact for quote" />
+      <StickyBookingBar lang="en" tourSlug="tokyo-food-tour" tourName="Tokyo Food Tour" price={siteDisplayPrice("tokyo-food-tour", "en")} />
     </Layout>
   );
 };

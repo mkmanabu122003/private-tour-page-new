@@ -3,7 +3,7 @@ import { defineConfig, devices } from "@playwright/test";
 /**
  * Point at a Deploy Preview (or local preview) with PLAYWRIGHT_BASE_URL.
  * Example:
- *   PLAYWRIGHT_BASE_URL=https://deploy-preview-144--tanuki-tabi-travel.netlify.app npm run test:e2e
+ *   PLAYWRIGHT_BASE_URL=<preview-url> npm run test:e2e
  */
 const baseURL = process.env.PLAYWRIGHT_BASE_URL || "http://127.0.0.1:8080";
 

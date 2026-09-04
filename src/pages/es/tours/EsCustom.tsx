@@ -9,6 +9,7 @@ import { TourInclusions } from "@/components/tours/TourInclusions";
 import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
 import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { TourJsonLd } from "@/components/tours/TourJsonLd";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
@@ -161,7 +162,7 @@ const EsCustom = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
-                  <p className="text-2xl font-serif font-semibold text-foreground">A medida de tu viaje</p>
+                  <p className="text-2xl font-serif font-semibold text-foreground">{siteDisplayPrice("custom", "es")}</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -240,7 +241,7 @@ const EsCustom = () => {
         path="/es/tours/custom"
         area="Tokio"
       />
-      <StickyBookingBar lang="es" tourSlug="custom" tourName="Tour Privado Personalizado" price="A medida de tu viaje" />
+      <StickyBookingBar lang="es" tourSlug="custom" tourName="Tour Privado Personalizado" price={siteDisplayPrice("custom", "es")} />
     </Layout>
   );
 };

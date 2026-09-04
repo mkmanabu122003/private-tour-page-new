@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
 import { TourCard } from "@/components/tours/TourCard";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import tourAsakusa from "@/assets/tour-asakusa.webp";
 import tourUeno from "@/assets/tour-ueno.webp";
 import tourYanaka from "@/assets/tour-yanaka.webp";
@@ -9,13 +10,13 @@ import tsukijiMarket from "@/assets/tsukiji-market.webp";
 import imperialPalace from "@/assets/imperial-palace.webp";
 import hamarikyu from "@/assets/hamarikyu.webp";
 
-const tokyoTours = [
+export const tokyoTours = [
   {
     id: "asakusa",
     title: "Asakusa Walking Tour",
     description: "Discover the heart of old Tokyo. Visit Senso-ji Temple, explore traditional shops along Nakamise Street, and taste authentic local street food.",
     duration: "3 hours",
-    price: "¥45,000",
+    price: siteDisplayPrice("asakusa", "en"),
     difficulty: "Easy",
     image: "/images/tours/asakusa-kaminarimon-gate.webp",
   },
@@ -24,7 +25,7 @@ const tokyoTours = [
     title: "Ueno & Yanaka Discovery",
     description: "Experience the nostalgic charm of old Tokyo neighborhoods. Wander through traditional temples, cemetery paths, and discover hidden local cafes.",
     duration: "4 hours",
-    price: "¥50,000",
+    price: siteDisplayPrice("yanaka", "en"),
     difficulty: "Easy",
     image: tourYanaka,
   },
@@ -33,7 +34,7 @@ const tokyoTours = [
     title: "Shibuya & Harajuku Tour",
     description: "Explore Tokyo's youth culture hub. From the famous Shibuya Crossing to trendy Harajuku streets, and find peace at the serene Meiji Shrine.",
     duration: "3.5 hours",
-    price: "¥50,000",
+    price: siteDisplayPrice("shibuya-harajuku", "en"),
     difficulty: "Easy",
     image: shibuyaCrossing,
   },
@@ -42,7 +43,7 @@ const tokyoTours = [
     title: "Tsukiji & Ginza Tour",
     description: "Experience Tokyo's culinary delights at Tsukiji Outer Market and stroll through the upscale Ginza shopping district with its blend of tradition and luxury.",
     duration: "3 hours",
-    price: "¥45,000",
+    price: siteDisplayPrice("tsukiji-ginza", "en"),
     difficulty: "Easy",
     image: "/images/tours/tsukiji-outer-market.webp",
   },
@@ -51,7 +52,7 @@ const tokyoTours = [
     title: "Imperial Palace & Marunouchi",
     description: "Discover Tokyo's historical heart and modern business district. Walk through the beautiful East Gardens and see the majestic Imperial Palace grounds.",
     duration: "2.5 hours",
-    price: "¥40,000",
+    price: siteDisplayPrice("imperial-palace", "en"),
     difficulty: "Easy",
     image: imperialPalace,
   },
@@ -60,19 +61,19 @@ const tokyoTours = [
     title: "Custom Private Tour",
     description: "Create your perfect Tokyo experience. Share your interests (food, history, photography, anime) and I'll design a personalized itinerary just for you.",
     duration: "Flexible",
-    price: "Tailored to your trip",
+    price: siteDisplayPrice("custom", "en"),
     difficulty: "Customizable",
     image: hamarikyu,
   },
 ];
 
-const experienceTours = [
+export const experienceTours = [
   {
     id: "tokyo-food-tour",
     title: "Tokyo Food Tour",
     description: "Taste Tokyo's best food with a local licensed guide. From Tsukiji street food to hidden ramen shops, customize your private food tour experience.",
     duration: "3-7 hours",
-    price: "Contact for quote",
+    price: siteDisplayPrice("tokyo-food-tour", "en"),
     difficulty: "Easy",
     image: tsukijiMarket,
   },
@@ -81,19 +82,19 @@ const experienceTours = [
     title: "Tokyo Night Tour",
     description: "Experience Tokyo after dark with a local guide. Explore neon-lit streets, hidden bars, izakayas, and nightlife spots safely with a licensed private guide.",
     duration: "3-4 hours",
-    price: "Contact for quote",
+    price: siteDisplayPrice("tokyo-night-tour", "en"),
     difficulty: "Easy",
     image: "/images/tours/night-tour-golden-gai.webp",
   },
 ];
 
-const dayTrips = [
+export const dayTrips = [
   {
     id: "kamakura-day-trip",
     title: "Kamakura Day Trip",
     description: "Explore Kamakura's Great Buddha, ancient temples, and coastal charm on a private day trip from Tokyo with a licensed guide.",
     duration: "7-8 hours",
-    price: "¥70,000",
+    price: siteDisplayPrice("kamakura-day-trip", "en"),
     difficulty: "Easy-Moderate",
     image: "/images/tours/kamakura-great-buddha.webp",
   },
@@ -102,7 +103,7 @@ const dayTrips = [
     title: "Hakone Day Trip",
     description: "See Mt. Fuji, cruise Lake Ashi, ride the ropeway over volcanic valleys, and experience hot spring culture on a private guided day trip.",
     duration: "8-10 hours",
-    price: "¥80,000",
+    price: siteDisplayPrice("hakone-day-trip", "en"),
     difficulty: "Easy",
     image: "/images/tours/hakone-lake-ashi-fuji.webp",
   },
@@ -111,7 +112,7 @@ const dayTrips = [
     title: "Nikko Day Trip",
     description: "Visit Nikko's UNESCO World Heritage Toshogu Shrine, stunning waterfalls, and mountain scenery on a private guided day trip from Tokyo.",
     duration: "9-10 hours",
-    price: "¥80,000",
+    price: siteDisplayPrice("nikko-day-trip", "en"),
     difficulty: "Moderate",
     image: "/images/blog/nikko-toshogu-hero.webp",
   },

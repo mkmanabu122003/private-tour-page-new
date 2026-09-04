@@ -5,6 +5,7 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  included_files = ["src/data/tourPrices.json"]
 
 [build.processing]
   [build.processing.html]

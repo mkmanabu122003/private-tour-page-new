@@ -1,110 +1,20 @@
 // TRANSLATION REVIEW NEEDED: Please have a native Spanish speaker review this content before publishing
-import { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { Mail, MapPin, Send, Check } from "lucide-react";
+import { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { Mail, MapPin, Check } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { SEO } from "@/components/SEO";
-import { useToast } from "@/hooks/use-toast";
-import { trackContactPageView, trackFormSubmit, trackFormEngage } from "@/lib/ga4";
+import { InquiryForm } from "@/components/contact/InquiryForm";
+import { trackContactPageView } from "@/lib/ga4";
 import guidePortrait from "@/assets/About_page_Manabu_team_photo.webp";
 
-const VALID_TOUR_VALUES = [
-  "asakusa",
-  "yanaka",
-  "shibuya-harajuku",
-  "tsukiji-ginza",
-  "imperial-palace",
-  "tokyo-food-tour",
-  "tokyo-night-tour",
-  "kamakura-day-trip",
-  "hakone-day-trip",
-  "nikko-day-trip",
-  "custom",
-  "other",
-];
-
 const EsContact = () => {
-  const { toast } = useToast();
   const [searchParams] = useSearchParams();
   const initialTour = searchParams.get("tour") || "";
-  const prefilledTour = VALID_TOUR_VALUES.includes(initialTour) ? initialTour : "";
 
   useEffect(() => {
     trackContactPageView();
   }, []);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    tourType: prefilledTour,
-    date: "",
-    groupSize: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [hasEngaged, setHasEngaged] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    if (!hasEngaged) {
-      setHasEngaged(true);
-      trackFormEngage(name);
-    }
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const formElement = e.target as HTMLFormElement;
-      const formDataEncoded = new FormData(formElement);
-
-      const formDataObj: Record<string, string> = {
-        "form-name": "contact-es",
-      };
-
-      formDataEncoded.forEach((value, key) => {
-        formDataObj[key] = value.toString();
-      });
-
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataObj).toString(),
-      });
-
-      if (response.ok) {
-        trackFormSubmit();
-        toast({
-          title: "¡Mensaje enviado!",
-          description: "Gracias por tu consulta. Responderé en menos de 24 horas.",
-        });
-
-        setFormData({
-          name: "",
-          email: "",
-          tourType: "",
-          date: "",
-          groupSize: "",
-          message: "",
-        });
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "No se pudo enviar el mensaje. Inténtalo de nuevo o escríbenos directamente por email.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <Layout>
@@ -155,167 +65,8 @@ const EsContact = () => {
       <section id="inquiry-form" className="py-16 scroll-mt-24">
         <div className="container-section">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Form */}
             <div className="lg:col-span-2">
-              <form
-                name="contact-es"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-                className="space-y-6"
-              >
-                <input type="hidden" name="form-name" value="contact-es" />
-                <p className="hidden">
-                  <label>
-                    No rellenes esto si eres humano: <input name="bot-field" />
-                  </label>
-                </p>
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Nombre *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Correo electrónico *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-                      placeholder="tu-email@ejemplo.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-3 gap-6">
-                  <div>
-                    <label htmlFor="tourType" className="block text-sm font-medium text-foreground mb-2">
-                      Tipo de Tour
-                    </label>
-                    <select
-                      id="tourType"
-                      name="tourType"
-                      value={formData.tourType}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-                    >
-                      <option value="">Selecciona un tour</option>
-                      <optgroup label="Tours por Tokio">
-                        <option value="asakusa">Tour por Asakusa</option>
-                        <option value="yanaka">Ueno y Yanaka</option>
-                        <option value="shibuya-harajuku">Shibuya y Harajuku</option>
-                        <option value="tsukiji-ginza">Tsukiji y Ginza</option>
-                        <option value="imperial-palace">Palacio Imperial</option>
-                      </optgroup>
-                      <optgroup label="Tours de Experiencia">
-                        <option value="tokyo-food-tour">Tour Gastronómico</option>
-                        <option value="tokyo-night-tour">Tour Nocturno</option>
-                      </optgroup>
-                      <optgroup label="Excursiones de un Día">
-                        <option value="kamakura-day-trip">Excursión a Kamakura</option>
-                        <option value="hakone-day-trip">Excursión a Hakone</option>
-                        <option value="nikko-day-trip">Excursión a Nikko</option>
-                      </optgroup>
-                      <option value="custom">Tour Personalizado</option>
-                      <option value="other">Otro / No estoy seguro</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="date" className="block text-sm font-medium text-foreground mb-2">
-                      Fecha deseada
-                    </label>
-                    <input
-                      type="date"
-                      id="date"
-                      name="date"
-                      value={formData.date}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="groupSize" className="block text-sm font-medium text-foreground mb-2">
-                      Tamaño del grupo
-                    </label>
-                    <select
-                      id="groupSize"
-                      name="groupSize"
-                      value={formData.groupSize}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
-                    >
-                      <option value="">Seleccionar</option>
-                      <option value="1">1 persona</option>
-                      <option value="2">2 personas</option>
-                      <option value="3">3 personas</option>
-                      <option value="4">4 personas</option>
-                      <option value="5">5 personas</option>
-                      <option value="6">6 personas</option>
-                      <option value="7">7 personas</option>
-                      <option value="8">8 personas</option>
-                      <option value="9">9 personas</option>
-                      <option value="10">10 personas</option>
-                      <option value="10+">Más de 10 personas</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Cuéntanos tus intereses *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors resize-none"
-                    placeholder="Cuéntanos sobre tus planes de viaje, intereses o cualquier pregunta que tengas..."
-                  />
-                </div>
-
-                <p className="text-xs text-muted-foreground">
-                  Al enviar este formulario, aceptas nuestra{" "}
-                  <Link to="/es/cancellation-policy" className="text-accent hover:underline">
-                    política de cancelación
-                  </Link>
-                  .
-                </p>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-accent w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    "Enviando..."
-                  ) : (
-                    <>
-                      Enviar Mi Solicitud de Reserva
-                      <Send className="ml-2 w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </form>
+              <InquiryForm lang="es" initialTour={initialTour} />
             </div>
 
             {/* Sidebar */}

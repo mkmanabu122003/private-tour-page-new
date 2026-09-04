@@ -9,6 +9,7 @@ import { TourInclusions } from "@/components/tours/TourInclusions";
 import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
 import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { TourJsonLd } from "@/components/tours/TourJsonLd";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
@@ -217,7 +218,7 @@ const EsNikko = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥80,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">{siteDisplayPrice("nikko-day-trip", "es")}</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -304,7 +305,7 @@ const EsNikko = () => {
         fromPriceYen="80000"
         area="Nikko"
       />
-      <StickyBookingBar lang="es" tourSlug="nikko-day-trip" tourName="Excursión Privada a Nikko" price="¥80,000" />
+      <StickyBookingBar lang="es" tourSlug="nikko-day-trip" tourName="Excursión Privada a Nikko" price={siteDisplayPrice("nikko-day-trip", "es")} />
     </Layout>
   );
 };

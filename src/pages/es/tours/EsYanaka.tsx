@@ -9,6 +9,7 @@ import { TourInclusions } from "@/components/tours/TourInclusions";
 import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
 import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { TourJsonLd } from "@/components/tours/TourJsonLd";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import yanakaGinzaStairs from "@/assets/yanaka-ginza-stairs.webp";
@@ -165,7 +166,7 @@ const EsYanaka = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥50,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">{siteDisplayPrice("yanaka", "es")}</p>
                 </div>
 
                 <div className="space-y-4">
@@ -259,7 +260,7 @@ const EsYanaka = () => {
         fromPriceYen="50000"
         area="Yanaka"
       />
-      <StickyBookingBar lang="es" tourSlug="yanaka" tourName="Descubrimiento de Ueno y Yanaka" price="¥50,000" />
+      <StickyBookingBar lang="es" tourSlug="yanaka" tourName="Descubrimiento de Ueno y Yanaka" price={siteDisplayPrice("yanaka", "es")} />
     </Layout>
   );
 };

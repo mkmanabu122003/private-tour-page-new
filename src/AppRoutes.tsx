@@ -10,6 +10,7 @@ import TokyoFoodTour from "./pages/tours/TokyoFoodTour";
 import TokyoNightTour from "./pages/tours/TokyoNightTour";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import FAQ from "./pages/FAQ";
 import BlogIndex from "./pages/blog/BlogIndex";
 import Tokyo3DayItinerary from "./pages/blog/Tokyo3DayItinerary";
@@ -70,6 +71,7 @@ import EsAsakusa from "./pages/es/tours/EsAsakusa";
 import EsYanaka from "./pages/es/tours/EsYanaka";
 import EsKamakura from "./pages/es/tours/EsKamakura";
 import EsContact from "./pages/es/EsContact";
+import EsThankYou from "./pages/es/EsThankYou";
 import EsAbout from "./pages/es/EsAbout";
 import EsTours from "./pages/es/EsTours";
 import EsFaq from "./pages/es/EsFaq";
@@ -185,6 +187,7 @@ const AppRoutes = () => (
         <Route path="/tours/:id" element={<TourDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/tokyo-3-day-itinerary" element={<Tokyo3DayItinerary />} />
@@ -252,6 +255,7 @@ const AppRoutes = () => (
         <Route path="/es/tours/nikko-day-trip" element={<EsNikko />} />
         <Route path="/es/tours/custom" element={<EsCustom />} />
         <Route path="/es/contact" element={<EsContact />} />
+        <Route path="/es/thank-you" element={<EsThankYou />} />
         <Route path="/es/about" element={<EsAbout />} />
         <Route path="/es/faq" element={<EsFaq />} />
         {/* Spanish Blog */}

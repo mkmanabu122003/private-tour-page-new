@@ -9,6 +9,7 @@ import { TourInclusions } from "@/components/tours/TourInclusions";
 import { TourTrustBlock } from "@/components/tours/TourTrustBlock";
 import { TourCommonFaq } from "@/components/tours/TourCommonFaq";
 import { TourJsonLd } from "@/components/tours/TourJsonLd";
+import { siteDisplayPrice } from "@/data/tourPrices";
 import { ValueComparisonEs } from "@/components/tours/ValueComparison";
 import { trackBookNowClick, trackTourPageView } from "@/lib/ga4";
 import type { TourFaqItem } from "@/components/tours/tourPolicyCopy";
@@ -171,7 +172,7 @@ const EsShibuyaHarajuku = () => {
               <div className="sticky top-24 bg-card border border-border rounded-lg p-6 space-y-6">
                 <div>
                   <span className="text-xs text-muted-foreground">Desde</span>
-                  <p className="text-3xl font-serif font-semibold text-foreground">¥50,000</p>
+                  <p className="text-3xl font-serif font-semibold text-foreground">{siteDisplayPrice("shibuya-harajuku", "es")}</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -257,7 +258,7 @@ const EsShibuyaHarajuku = () => {
         fromPriceYen="50000"
         area="Shibuya y Harajuku"
       />
-      <StickyBookingBar lang="es" tourSlug="shibuya-harajuku" tourName="Tour Privado por Shibuya y Harajuku" price="¥50,000" />
+      <StickyBookingBar lang="es" tourSlug="shibuya-harajuku" tourName="Tour Privado por Shibuya y Harajuku" price={siteDisplayPrice("shibuya-harajuku", "es")} />
     </Layout>
   );
 };
