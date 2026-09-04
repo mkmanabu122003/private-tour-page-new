@@ -22,11 +22,14 @@ const COPY = {
     esimBody:
       "After a long haul from Latin America, WhatsApp usually won't work on a Japanese network until you have a plan. Install an eSIM before you fly so you're not hunting airport Wi-Fi just to say you landed. We introduce a partner; we don't activate SIMs for you.",
     esimLink: "Japan eSIM options",
+    esimAlt:
+      "A smartphone showing a Japan eSIM screen, with Mount Fuji and cherry blossoms behind it.",
     wifiEyebrow: "Section 03 · Pocket WiFi",
     wifiTitle: "One connection for several phones",
     wifiBody:
       "If you're traveling as a family, one pocket Wi-Fi unit is often simpler than an eSIM on every phone. Pickup is usually at the airport, so check the partner's current options. We don't rent devices ourselves.",
     wifiLink: "Pocket WiFi for the group",
+    wifiAlt: "A black Pocket WiFi router with a SoftBank status screen.",
     insEyebrow: "Section 04 · Travel insurance",
     insTitle: "Get travel insurance before you fly",
     insBody:
@@ -37,18 +40,26 @@ const COPY = {
     railBody:
       "If you're staying in Tokyo, or only doing a simple Tokyo-Kyoto return, a nationwide pass is often more than you need. Read the route math before you buy. We don't sell rail passes.",
     railLink: "Is the JR Pass worth it in 2026?",
-    airEyebrow: "Section 06 · Airport access",
+    railAlt: "A white and blue Shinkansen traveling past snow-capped Mount Fuji.",
+    busEyebrow: "Section 06 · Highway buses",
+    busTitle: "Long-distance buses between cities",
+    busBody:
+      "If a nationwide pass is more than you need, a highway bus is another way to get between Tokyo and Kyoto or Osaka. We introduce a ticket partner. We don't book seats for you.",
+    busLink: "Highway bus tickets",
+    busAlt: "Illustration of a white coach in front of Tokyo Tower, a pagoda, and a torii gate.",
+    airEyebrow: "Section 07 · Airport access",
     airTitle: "Narita or Haneda, then into the city",
     airBody:
       "Which airport you use shapes the first hours after a long flight. Trains cover most arrivals; a taxi can make sense with heavy luggage or a very late landing. We introduce options; we don't dispatch cars.",
     airLink: "Airport taxi into Tokyo",
     airInternal: "Narita vs Haneda: which airport fits",
-    lugEyebrow: "Section 07 · Luggage",
+    airAlt: "Front of a black Toyota Alphard minivan with a green commercial license plate.",
+    lugEyebrow: "Section 08 · Luggage",
     lugTitle: "When you don't want to drag bags across the city",
     lugBody:
       "If you change hotels or take a day trip, a locker or same-day forwarding beats hauling suitcases on the metro. We don't store bags and we don't arrange shipping for you.",
     lugLink: "Luggage storage options",
-    cashEyebrow: "Section 08 · Paying in Japan",
+    cashEyebrow: "Section 09 · Paying in Japan",
     cashTitle: "Cards go far. A little yen still helps.",
     cashBody:
       "Suica or Pasmo covers trains and a lot of convenience stores. Smaller restaurants may still want cash. We don't exchange currency. Bring a card that works abroad and a small yen float for the first evening, in case the first ATM doesn't take your card.",
@@ -68,11 +79,14 @@ const COPY = {
     esimBody:
       "Después de un vuelo largo desde América Latina, WhatsApp no suele funcionar en la red japonesa hasta que tengan un plan. Instalen una eSIM antes de volar y no tienen que buscar Wi-Fi en el aeropuerto solo para avisar que llegaron. Presentamos un socio; no activamos SIM por ustedes.",
     esimLink: "Opciones de eSIM para Japón",
+    esimAlt:
+      "Un teléfono que muestra una pantalla de eSIM para Japón, con el Monte Fuji y cerezos de fondo.",
     wifiEyebrow: "Sección 03 · Pocket WiFi",
     wifiTitle: "Una conexión para varios teléfonos",
     wifiBody:
       "Si viajan en familia, un pocket Wi-Fi suele ser más simple que una eSIM en cada teléfono. La recogida suele ser en el aeropuerto; confirmen las opciones vigentes del socio. Nosotros no alquilamos dispositivos.",
     wifiLink: "Pocket WiFi para el grupo",
+    wifiAlt: "Un router Pocket WiFi negro con la pantalla de estado de SoftBank.",
     insEyebrow: "Sección 04 · Seguro de viaje",
     insTitle: "Contraten un seguro de viaje antes de volar",
     insBody:
@@ -83,24 +97,62 @@ const COPY = {
     railBody:
       "Si el viaje es Tokio, o solo un Tokio-Kioto de ida y vuelta, un pase nacional a menudo es más de lo que necesitan. Lean la cuenta por ruta antes de comprarlo. No vendemos pases.",
     railLink: "¿Vale la pena el JR Pass en 2026?",
-    airEyebrow: "Sección 06 · Acceso desde el aeropuerto",
+    railAlt: "Un Shinkansen blanco y azul pasando frente al Monte Fuji nevado.",
+    busEyebrow: "Sección 06 · Buses de larga distancia",
+    busTitle: "Buses entre ciudades",
+    busBody:
+      "Si un pase nacional es más de lo que necesitan, un bus de larga distancia es otra forma de ir de Tokio a Kioto u Osaka. Presentamos un socio de boletos. No reservamos asientos por ustedes.",
+    busLink: "Boletos de bus de larga distancia",
+    busAlt: "Ilustración de un autobús blanco frente a la Torre de Tokio, una pagoda y un torii.",
+    airEyebrow: "Sección 07 · Acceso desde el aeropuerto",
     airTitle: "Narita o Haneda, y cómo llegar a la ciudad",
     airBody:
       "El aeropuerto que elijan marca las primeras horas después de un vuelo largo. El tren cubre la mayoría de las llegadas; un taxi puede tener sentido con mucho equipaje o un aterrizaje muy tarde. Presentamos opciones; no despachamos autos.",
     airLink: "Taxi de aeropuerto hacia Tokio",
     airInternal: "Narita vs Haneda: qué aeropuerto encaja",
-    lugEyebrow: "Sección 07 · Equipaje",
+    airAlt: "Frente de una minivan Toyota Alphard negra con matrícula comercial verde.",
+    lugEyebrow: "Sección 08 · Equipaje",
     lugTitle: "Cuando no quieren arrastrar maletas por la ciudad",
     lugBody:
       "Si cambian de hotel o salen de excursión, una consigna o un envío el mismo día es más fácil que cargar maletas en el metro. No guardamos maletas ni gestionamos envíos por ustedes.",
     lugLink: "Opciones de guardaequipaje",
-    cashEyebrow: "Sección 08 · Cómo pagar en Japón",
+    cashEyebrow: "Sección 09 · Cómo pagar en Japón",
     cashTitle: "Las tarjetas llegan lejos. Un poco de yen todavía ayuda.",
     cashBody:
       "Suica o Pasmo cubren trenes y muchas tiendas de conveniencia. Restaurantes pequeños todavía pueden pedir efectivo. No cambiamos divisas. Traigan una tarjeta que funcione en el extranjero y un poco de yen para la primera noche, por si el primer cajero no acepta su tarjeta.",
     cashLink: "Propinas en Japón y cómo se suele pagar",
   },
 } as const;
+
+/** Official partner marketing stills (public product pages). Not wrapped in /go/ links. */
+function PartnerImage({
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="my-5 overflow-hidden rounded-lg border border-border bg-secondary/50">
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        data-affiliate-image
+        className="mx-auto w-full max-h-72 object-contain"
+      />
+    </figure>
+  );
+}
 
 export function PrepareTripHub({ lang }: PrepareTripHubProps) {
   const t = COPY[lang];
@@ -159,6 +211,13 @@ export function PrepareTripHub({ lang }: PrepareTripHubProps) {
           <h2 id="section-02" className="scroll-mt-20">
             {t.esimTitle}
           </h2>
+          <PartnerImage
+            src="/images/affiliates/esim-hero.webp"
+            alt={t.esimAlt}
+            width={424}
+            height={410}
+            priority
+          />
           <p className="text-muted-foreground leading-relaxed mb-4">{t.esimBody}</p>
           <p className="mb-10">
             <AffiliateLink slug="japan-wireless-esim" lang={lang}>
@@ -172,6 +231,12 @@ export function PrepareTripHub({ lang }: PrepareTripHubProps) {
           <h2 id="section-03" className="scroll-mt-20">
             {t.wifiTitle}
           </h2>
+          <PartnerImage
+            src="/images/affiliates/wifi-hero.webp"
+            alt={t.wifiAlt}
+            width={409}
+            height={254}
+          />
           <p className="text-muted-foreground leading-relaxed mb-4">{t.wifiBody}</p>
           <p className="mb-10">
             <AffiliateLink slug="japan-wireless-wifi" lang={lang}>
@@ -198,6 +263,12 @@ export function PrepareTripHub({ lang }: PrepareTripHubProps) {
           <h2 id="section-05" className="scroll-mt-20">
             {t.railTitle}
           </h2>
+          <PartnerImage
+            src="/images/affiliates/bullet-train.webp"
+            alt={t.railAlt}
+            width={740}
+            height={500}
+          />
           <p className="text-muted-foreground leading-relaxed mb-4">{t.railBody}</p>
           <p className="mb-10">
             <Link to={jrPass} className="text-accent hover:underline font-medium">
@@ -206,11 +277,31 @@ export function PrepareTripHub({ lang }: PrepareTripHubProps) {
           </p>
 
           <div className="section-eyebrow">
-            <span>{t.airEyebrow}</span>
+            <span>{t.busEyebrow}</span>
           </div>
           <h2 id="section-06" className="scroll-mt-20">
+            {t.busTitle}
+          </h2>
+          <PartnerImage src="/images/affiliates/bus.webp" alt={t.busAlt} width={740} height={500} />
+          <p className="text-muted-foreground leading-relaxed mb-4">{t.busBody}</p>
+          <p className="mb-10">
+            <AffiliateLink slug="japan-bus-tickets" lang={lang}>
+              {t.busLink}
+            </AffiliateLink>
+          </p>
+
+          <div className="section-eyebrow">
+            <span>{t.airEyebrow}</span>
+          </div>
+          <h2 id="section-07" className="scroll-mt-20">
             {t.airTitle}
           </h2>
+          <PartnerImage
+            src="/images/affiliates/airport-taxi.webp"
+            alt={t.airAlt}
+            width={1024}
+            height={683}
+          />
           <p className="text-muted-foreground leading-relaxed mb-4">{t.airBody}</p>
           <p className={lang === "en" ? "mb-4" : "mb-10"}>
             <AffiliateLink slug="airport-taxi-tokyo" lang={lang}>
@@ -228,7 +319,7 @@ export function PrepareTripHub({ lang }: PrepareTripHubProps) {
           <div className="section-eyebrow">
             <span>{t.lugEyebrow}</span>
           </div>
-          <h2 id="section-07" className="scroll-mt-20">
+          <h2 id="section-08" className="scroll-mt-20">
             {t.lugTitle}
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">{t.lugBody}</p>
@@ -241,7 +332,7 @@ export function PrepareTripHub({ lang }: PrepareTripHubProps) {
           <div className="section-eyebrow">
             <span>{t.cashEyebrow}</span>
           </div>
-          <h2 id="section-08" className="scroll-mt-20">
+          <h2 id="section-09" className="scroll-mt-20">
             {t.cashTitle}
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">{t.cashBody}</p>

@@ -43,6 +43,8 @@ describe("PrepareTripHub", () => {
     expect(document.body.textContent).not.toMatch(/vosotros|os recomiendo/i);
     expect(document.body.textContent).toMatch(/recomendamos encarecidamente/i);
     expect(document.body.textContent).not.toMatch(/\u2014|placeholder until the ID|ID de socio/i);
+    const images = document.querySelectorAll("[data-affiliate-image]");
+    expect(images).toHaveLength(5);
   });
 
   it("strongly recommends insurance without naming a best product (EN)", () => {
@@ -54,5 +56,33 @@ describe("PrepareTripHub", () => {
     expect(screen.getByText(/strongly recommend travel insurance/i)).toBeInTheDocument();
     expect(document.body.textContent).not.toMatch(/best product for you|the best policy/i);
     expect(document.body.textContent).not.toMatch(/\u2014/);
+  });
+
+  it("shows partner photos after the tour CTA, none on insurance or luggage", () => {
+    render(
+      <MemoryRouter>
+        <PrepareTripHub lang="en" />
+      </MemoryRouter>,
+    );
+    const tour = document.querySelector("[data-hub-tour-cta]");
+    const images = [...document.querySelectorAll("[data-affiliate-image]")] as HTMLImageElement[];
+    expect(images).toHaveLength(5);
+    expect(tour!.compareDocumentPosition(images[0]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(images.map((img) => img.getAttribute("src"))).toEqual([
+      "/images/affiliates/esim-hero.webp",
+      "/images/affiliates/wifi-hero.webp",
+      "/images/affiliates/bullet-train.webp",
+      "/images/affiliates/bus.webp",
+      "/images/affiliates/airport-taxi.webp",
+    ]);
+    expect(screen.getByAltText(/smartphone showing a Japan eSIM screen/i)).toBeInTheDocument();
+    expect(screen.queryByAltText(/insurance|luggage storage|guardaequipaje/i)).toBeNull();
+    for (const img of images) {
+      expect(img.closest("a[href*='/go/']")).toBeNull();
+    }
+    expect(document.querySelector('a[data-affiliate-slug="japan-wireless-wifi"]')).toHaveAttribute(
+      "href",
+      "/go/japan-wireless-wifi",
+    );
   });
 });

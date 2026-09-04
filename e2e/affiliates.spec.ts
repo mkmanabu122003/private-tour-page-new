@@ -22,6 +22,15 @@ test.describe("Trip-prep hub", () => {
     const goY = (await firstGo.boundingBox())?.y ?? 0;
     expect(tourY).toBeLessThan(goY);
     await expect(page.getByText(/strongly recommend travel insurance/i)).toBeVisible();
+    const photos = page.locator("[data-affiliate-image]");
+    await expect(photos).toHaveCount(5);
+    const firstPhoto = photos.first();
+    await expect(firstPhoto).toBeVisible();
+    const photoY = (await firstPhoto.boundingBox())?.y ?? 0;
+    expect(tourY).toBeLessThan(photoY);
+    await expect(firstPhoto).toHaveAttribute("src", "/images/affiliates/esim-hero.webp");
+    await firstPhoto.scrollIntoViewIfNeeded();
+    await expect.poll(async () => firstPhoto.evaluate((el) => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
 
     const thanks = await page.goto("/thank-you");
     expect(thanks?.ok()).toBeTruthy();
@@ -42,6 +51,11 @@ test.describe("Trip-prep hub", () => {
     await expect(page.locator('a[href^="/es/go/"]').first()).toBeVisible();
     await expect(page.getByText(/vosotros/i)).toHaveCount(0);
     await expect(page.getByText(/recomendamos encarecidamente/i)).toBeVisible();
+    await expect(page.locator("[data-affiliate-image]")).toHaveCount(5);
+    await expect(page.locator("[data-affiliate-image]").first()).toHaveAttribute(
+      "alt",
+      /eSIM para Japón/i,
+    );
 
     const landing = await page.goto("/es/gracias-asakusa");
     expect(landing?.ok()).toBeTruthy();
