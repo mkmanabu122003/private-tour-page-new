@@ -73,20 +73,35 @@ describe("/go/ fallback", () => {
     expect(runCjs('c.resolveGoRedirect("/go/missing")')).toBe("/prepare-your-trip");
   });
 
-  it("Netlify function returns 302 to the hub while URLs are TODO_", () => {
-    const raw = execFileSync(
-      "node",
-      [
-        "-e",
-        `const {handler}=require("./netlify/functions/affiliate-go.cjs");
-         handler({queryStringParameters:{slug:"japan-wireless-esim"}}).then((r)=>{
-           process.stdout.write(JSON.stringify(r));
-         });`,
-      ],
-      { encoding: "utf8", cwd: process.cwd() },
-    );
-    const res = JSON.parse(raw) as { statusCode: number; headers: { Location: string } };
-    expect(res.statusCode).toBe(302);
-    expect(res.headers.Location).toBe("/prepare-your-trip");
+  it("decodes Netlify splat (ES encoded in slug because extra query params are dropped)", () => {
+    expect(runCjs('c.pathnameFromEvent({queryStringParameters:{slug:"japan-wireless-esim"}})'))
+      .toBe("/go/japan-wireless-esim");
+    expect(runCjs('c.pathnameFromEvent({queryStringParameters:{slug:"es__japan-wireless-esim"}})'))
+      .toBe("/es/go/japan-wireless-esim");
+    expect(runCjs('c.pathnameFromEvent({path:"/es/go/airport-taxi-tokyo"})'))
+      .toBe("/es/go/airport-taxi-tokyo");
+  });
+
+  it("Netlify function returns 302 to the matching hub while URLs are TODO_", () => {
+    const run = (expr: string) =>
+      execFileSync(
+        "node",
+        [
+          "-e",
+          `const {handler}=require("./netlify/functions/affiliate-go.cjs");
+           handler(${expr}).then((r)=>{ process.stdout.write(JSON.stringify(r)); });`,
+        ],
+        { encoding: "utf8", cwd: process.cwd() },
+      );
+    const en = JSON.parse(
+      run('{queryStringParameters:{slug:"japan-wireless-esim"}}'),
+    ) as { statusCode: number; headers: { Location: string } };
+    expect(en.statusCode).toBe(302);
+    expect(en.headers.Location).toBe("/prepare-your-trip");
+    const es = JSON.parse(
+      run('{queryStringParameters:{slug:"es__japan-wireless-esim"}}'),
+    ) as { statusCode: number; headers: { Location: string } };
+    expect(es.statusCode).toBe(302);
+    expect(es.headers.Location).toBe("/es/prepara-tu-viaje");
   });
 });

@@ -163,7 +163,7 @@
 
 [[redirects]]
   from = "/es/go/*"
-  to = "/.netlify/functions/affiliate-go?slug=:splat&lang=es"
+  to = "/.netlify/functions/affiliate-go?slug=es__:splat"
   status = 200
   force = true
 
