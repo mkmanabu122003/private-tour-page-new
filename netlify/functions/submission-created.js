@@ -8,6 +8,7 @@ const FROM_EMAIL = "Manabu | Tanuki Tabi Travel <info@tanuki-tabi-travel.com>";
 const MANABU_EMAIL = "info@tanuki-tabi-travel.com";
 
 const { formatAutoReplyPrice } = require("./tourCatalog.cjs");
+const { buildNotificationSubject } = require("./inquirySubject.cjs");
 
 const tourInfo = {
   asakusa: { name: "Asakusa Walking Tour", duration: "3 hours" },
@@ -167,10 +168,15 @@ function buildCustomerEmailEs(data) {
   };
 }
 
-function buildAdminCopy(customerEmail, guestEmail) {
+// The admin copy carries the same body as the customer confirmation, but it is
+// addressed to Manabu and takes the per-submission subject rather than the
+// customer-facing one, so it threads with that submission's Netlify
+// notification instead of with every other inquiry from the same first name.
+function buildAdminCopy(customerEmail, guestEmail, subject) {
   return {
     ...customerEmail,
     to: MANABU_EMAIL,
+    subject: subject,
     reply_to: guestEmail,
   };
 }
@@ -325,7 +331,23 @@ exports.handler = async function (event, context) {
   }
 
   var data = payload.data || {};
-  console.log("Processing submission from:", data.email, "form:", formName);
+  var submissionId = payload.id;
+  var notificationSubject = buildNotificationSubject(submissionId, formName);
+
+  // Operational log. Carries what is needed to trace one inquiry through the
+  // pipeline, and deliberately not the message body.
+  console.log(
+    JSON.stringify({
+      event: "submission_received",
+      timestamp: new Date().toISOString(),
+      submissionId: submissionId || null,
+      formName: formName,
+      customerEmail: data.email || null,
+      language: isSpanish ? "es" : "en",
+      notificationSubject: notificationSubject,
+      confirmationAttempted: true,
+    })
+  );
 
   try {
     var customerEmail = isSpanish
@@ -334,7 +356,7 @@ exports.handler = async function (event, context) {
 
     var results = await Promise.all([
       sendEmail(customerEmail),
-      sendEmail(buildAdminCopy(customerEmail, data.email)),
+      sendEmail(buildAdminCopy(customerEmail, data.email, notificationSubject)),
       postToSlack(data, isSpanish).catch(function (err) {
         console.error("Slack notification failed (non-fatal):", err.message);
         return { error: err.message };
@@ -345,17 +367,37 @@ exports.handler = async function (event, context) {
       }),
     ]);
 
-    console.log("Auto-reply sent to:", data.email);
-    console.log("Admin copy sent to:", MANABU_EMAIL, "(reply-to:", data.email + ")");
-    console.log("Slack result:", JSON.stringify(results[2]));
-    console.log("Staging lead result:", JSON.stringify(results[3]));
+    console.log(
+      JSON.stringify({
+        event: "submission_processed",
+        timestamp: new Date().toISOString(),
+        submissionId: submissionId || null,
+        formName: formName,
+        customerEmail: data.email || null,
+        language: isSpanish ? "es" : "en",
+        confirmationResult: "sent",
+        adminCopyResult: "sent",
+        slackResult: results[2] && results[2].error ? "failed" : "ok",
+        stagingLeadResult: results[3] && results[3].error ? "failed" : "ok",
+      })
+    );
 
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true }),
     };
   } catch (error) {
-    console.error("Email send failed:", error.message);
+    console.error(
+      JSON.stringify({
+        event: "submission_failed",
+        timestamp: new Date().toISOString(),
+        submissionId: submissionId || null,
+        formName: formName,
+        customerEmail: data.email || null,
+        confirmationResult: "failed",
+        error: error.message,
+      })
+    );
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),
