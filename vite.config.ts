@@ -1,7 +1,26 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { createRequire } from "module";
+import type { IncomingMessage, ServerResponse } from "http";
 import { componentTagger } from "lovable-tagger";
+
+const require = createRequire(import.meta.url);
+const { resolveGoRedirect } = require("./netlify/functions/affiliateRedirect.cjs") as {
+  resolveGoRedirect: (pathname: string) => string;
+};
+
+function affiliateGoMiddleware(req: IncomingMessage, res: ServerResponse, next: () => void) {
+  const pathname = (req.url || "").split("?")[0];
+  if (!pathname.startsWith("/go/") && !pathname.startsWith("/es/go/") && pathname !== "/go" && pathname !== "/es/go") {
+    next();
+    return;
+  }
+  const dest = resolveGoRedirect(pathname);
+  res.statusCode = 302;
+  res.setHeader("Location", dest);
+  res.end();
+}
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, isSsrBuild }) => ({
@@ -10,7 +29,19 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+    {
+      name: "affiliate-go-redirects",
+      configureServer(server) {
+        server.middlewares.use(affiliateGoMiddleware);
+      },
+      configurePreviewServer(server) {
+        server.middlewares.use(affiliateGoMiddleware);
+      },
+    },
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
