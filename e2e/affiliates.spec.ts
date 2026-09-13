@@ -21,9 +21,9 @@ test.describe("Trip-prep hub", () => {
     const tourY = (await tourBox.boundingBox())?.y ?? 0;
     const goY = (await firstGo.boundingBox())?.y ?? 0;
     expect(tourY).toBeLessThan(goY);
-    await expect(page.getByText(/strongly recommend travel insurance/i)).toBeVisible();
+    await expect(page.getByText(/travel insurance/i)).toHaveCount(0);
     const photos = page.locator("[data-affiliate-image]");
-    await expect(photos).toHaveCount(5);
+    await expect(photos).toHaveCount(1);
     const firstPhoto = photos.first();
     await expect(firstPhoto).toBeVisible();
     const photoY = (await firstPhoto.boundingBox())?.y ?? 0;
@@ -50,11 +50,11 @@ test.describe("Trip-prep hub", () => {
     );
     await expect(page.locator('a[href^="/es/go/"]').first()).toBeVisible();
     await expect(page.getByText(/vosotros/i)).toHaveCount(0);
-    await expect(page.getByText(/recomendamos encarecidamente/i)).toBeVisible();
-    await expect(page.locator("[data-affiliate-image]")).toHaveCount(5);
+    await expect(page.getByText(/no las reservo por ustedes/i)).toBeVisible();
+    await expect(page.locator("[data-affiliate-image]")).toHaveCount(1);
     await expect(page.locator("[data-affiliate-image]").first()).toHaveAttribute(
       "alt",
-      /eSIM para Japón/i,
+      /Pocket WiFi negro/i,
     );
 
     const landing = await page.goto("/es/gracias-asakusa");

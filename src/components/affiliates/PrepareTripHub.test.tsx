@@ -32,6 +32,8 @@ describe("PrepareTripHub", () => {
     ).toBeTruthy();
     expect(document.querySelectorAll("[data-affiliate-disclosure]").length).toBe(2);
     expect(screen.getByRole("link", { name: /See private tours/i })).toHaveAttribute("href", "/tours");
+    expect(document.querySelectorAll('a[href*="/go/"]').length).toBe(1);
+    expect(firstGo).toHaveAttribute("href", "/go/japan-wireless-wifi");
 
     rerender(
       <MemoryRouter>
@@ -39,26 +41,32 @@ describe("PrepareTripHub", () => {
       </MemoryRouter>,
     );
     expect(screen.getByRole("link", { name: /Ver tours privados/i })).toHaveAttribute("href", "/es/tours");
-    expect(document.querySelectorAll('a[href^="/es/go/"]').length).toBeGreaterThan(0);
+    expect(document.querySelectorAll('a[href^="/es/go/"]').length).toBe(1);
+    expect(document.querySelector('a[href^="/es/go/"]')).toHaveAttribute(
+      "href",
+      "/es/go/japan-wireless-wifi",
+    );
     expect(document.body.textContent).not.toMatch(/vosotros|os recomiendo/i);
-    expect(document.body.textContent).toMatch(/recomendamos encarecidamente/i);
-    expect(document.body.textContent).not.toMatch(/\u2014|placeholder until the ID|ID de socio/i);
-    const images = document.querySelectorAll("[data-affiliate-image]");
-    expect(images).toHaveLength(5);
+    expect(document.body.textContent).toMatch(/no las reservo por ustedes/i);
+    expect(document.body.textContent).not.toMatch(/placeholder until the ID|ID de socio/i);
   });
 
-  it("strongly recommends insurance without naming a best product (EN)", () => {
+  it("does not ship insurance, luggage, or unregistered partner links", () => {
     render(
       <MemoryRouter>
         <PrepareTripHub lang="en" />
       </MemoryRouter>,
     );
-    expect(screen.getByText(/strongly recommend travel insurance/i)).toBeInTheDocument();
-    expect(document.body.textContent).not.toMatch(/best product for you|the best policy/i);
-    expect(document.body.textContent).not.toMatch(/\u2014/);
+    expect(document.body.textContent).not.toMatch(/travel insurance|luggage storage/i);
+    expect(document.querySelector('a[data-affiliate-slug="japan-wireless-esim"]')).toBeNull();
+    expect(document.querySelector('a[data-affiliate-slug="japan-bullet-train"]')).toBeNull();
+    expect(document.querySelector('a[data-affiliate-slug="japan-bus-tickets"]')).toBeNull();
+    expect(document.querySelector('a[data-affiliate-slug="airport-taxi-tokyo"]')).toBeNull();
+    expect(document.querySelector('a[data-affiliate-slug="travel-insurance"]')).toBeNull();
+    expect(document.querySelector('a[data-affiliate-slug="luggage-storage"]')).toBeNull();
   });
 
-  it("shows partner photos after the tour CTA, none on insurance or luggage", () => {
+  it("shows only the Pocket WiFi partner photo after the tour CTA", () => {
     render(
       <MemoryRouter>
         <PrepareTripHub lang="en" />
@@ -66,20 +74,11 @@ describe("PrepareTripHub", () => {
     );
     const tour = document.querySelector("[data-hub-tour-cta]");
     const images = [...document.querySelectorAll("[data-affiliate-image]")] as HTMLImageElement[];
-    expect(images).toHaveLength(5);
+    expect(images).toHaveLength(1);
     expect(tour!.compareDocumentPosition(images[0]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-    expect(images.map((img) => img.getAttribute("src"))).toEqual([
-      "/images/affiliates/esim-hero.webp",
-      "/images/affiliates/wifi-hero.webp",
-      "/images/affiliates/bullet-train.webp",
-      "/images/affiliates/bus.webp",
-      "/images/affiliates/airport-taxi.webp",
-    ]);
-    expect(screen.getByAltText(/smartphone showing a Japan eSIM screen/i)).toBeInTheDocument();
-    expect(screen.queryByAltText(/insurance|luggage storage|guardaequipaje/i)).toBeNull();
-    for (const img of images) {
-      expect(img.closest("a[href*='/go/']")).toBeNull();
-    }
+    expect(images[0]).toHaveAttribute("src", "/images/affiliates/wifi-hero.webp");
+    expect(screen.getByAltText(/black pocket WiFi router/i)).toBeInTheDocument();
+    expect(images[0].closest("a[href*='/go/']")).toBeNull();
     expect(document.querySelector('a[data-affiliate-slug="japan-wireless-wifi"]')).toHaveAttribute(
       "href",
       "/go/japan-wireless-wifi",
