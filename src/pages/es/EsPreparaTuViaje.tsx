@@ -5,8 +5,8 @@ import { PrepareTripHub } from "@/components/affiliates/PrepareTripHub";
 const EsPreparaTuViaje = () => (
   <Layout>
     <SEO
-      title="Prepara tu viaje a Tokio 2026 | eSIM y trenes"
-      description="eSIM, WiFi, JR Pass, aeropuerto y efectivo antes de aterrizar. Primero tours privados en Tokio; luego socios. No reservamos transporte por ustedes."
+      title="Prepara tu viaje a Tokio 2026 | Guía con licencia"
+      description="Lo que un guía con licencia dice a sus clientes antes de volar: Pocket WiFi, si compensa el JR Pass, Narita o Haneda y cuánto efectivo llevar."
       canonicalPath="/es/prepara-tu-viaje"
       hreflang={[
         { lang: "en", path: "/prepare-your-trip" },
