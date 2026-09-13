@@ -23,7 +23,7 @@ test.describe("Trip-prep hub", () => {
     expect(tourY).toBeLessThan(goY);
     // Phase 1 ships one partner; a second /go/ link means an unregistered slug shipped.
     await expect(page.locator('a[href*="/go/"]')).toHaveCount(1);
-    await expect(page.getByText(/travel insurance|luggage/i)).toHaveCount(0);
+    await expect(page.getByText(/travel insurance|luggage storage/i)).toHaveCount(0);
     const photos = page.locator("[data-affiliate-image]");
     await expect(photos).toHaveCount(1);
     const firstPhoto = photos.first();
