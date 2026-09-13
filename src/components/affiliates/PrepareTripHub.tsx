@@ -9,12 +9,12 @@ interface PrepareTripHubProps {
 
 // Phase 1 covers the one partner with a live tracking link (Japan Wireless
 // pocket WiFi). eSIM, shinkansen, airport taxi and highway bus are not listed
-// until their Rewardful programs are registered — a section whose only content
+// until their Rewardful programs are registered. A section whose only content
 // is a dead link is worse than no section.
 const COPY = {
   en: {
     intro:
-      "Guests ask me the same handful of questions in the week before they fly. Here is what I actually tell them — data, trains, the ride in from the airport, and cash. I introduce options; I don't book them for you.",
+      "Guests ask me the same handful of questions in the week before they fly. Here is what I actually tell them: data, trains, the ride in from the airport, and cash. I introduce options; I don't book them for you.",
     updated: "Last updated: September 2026",
     tourEyebrow: "Section 01 · Private tours",
     tourTitle: "Start with one unhurried day",
@@ -25,7 +25,7 @@ const COPY = {
     wifiEyebrow: "Section 02 · Staying connected",
     wifiTitle: "One connection for the whole group",
     wifiBody:
-      "If you're travelling as a family or a group, one pocket WiFi unit is usually simpler than putting an eSIM on every phone — and cheaper once you're past two or three devices. Pickup is normally at the airport. I use Japan Wireless with my own guests; I don't rent the devices myself, so check their current plans and pickup points before you book.",
+      "If you're travelling as a family or a group, one pocket WiFi unit is usually simpler than putting an eSIM on every phone, and cheaper once you're past two or three devices. Pickup is normally at the airport. I use Japan Wireless with my own guests; I don't rent the devices myself, so check their current plans and pickup points before you book.",
     wifiLink: "Pocket WiFi from Japan Wireless",
     wifiAlt: "A black pocket WiFi router with a status screen.",
     railEyebrow: "Section 03 · Rail passes",

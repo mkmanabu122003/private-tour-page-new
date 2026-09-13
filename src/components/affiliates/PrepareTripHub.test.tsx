@@ -32,6 +32,7 @@ describe("PrepareTripHub", () => {
     ).toBeTruthy();
     expect(document.querySelectorAll("[data-affiliate-disclosure]").length).toBe(2);
     expect(screen.getByRole("link", { name: /See private tours/i })).toHaveAttribute("href", "/tours");
+    expect(document.body.textContent).not.toMatch(/—/);
 
     rerender(
       <MemoryRouter>
@@ -41,24 +42,40 @@ describe("PrepareTripHub", () => {
     expect(screen.getByRole("link", { name: /Ver tours privados/i })).toHaveAttribute("href", "/es/tours");
     expect(document.querySelectorAll('a[href^="/es/go/"]').length).toBeGreaterThan(0);
     expect(document.body.textContent).not.toMatch(/vosotros|os recomiendo/i);
-    expect(document.body.textContent).toMatch(/recomendamos encarecidamente/i);
-    expect(document.body.textContent).not.toMatch(/\u2014|placeholder until the ID|ID de socio/i);
-    const images = document.querySelectorAll("[data-affiliate-image]");
-    expect(images).toHaveLength(5);
+    expect(document.body.textContent).not.toMatch(/—|placeholder until the ID|ID de socio/i);
   });
 
-  it("strongly recommends insurance without naming a best product (EN)", () => {
+  // Phase 1 ships one partner. Any second /go/ link means a slug was added to
+  // affiliates.json before its Rewardful programme was registered.
+  it("links exactly one partner, and it is the live pocket WiFi one", () => {
     render(
       <MemoryRouter>
         <PrepareTripHub lang="en" />
       </MemoryRouter>,
     );
-    expect(screen.getByText(/strongly recommend travel insurance/i)).toBeInTheDocument();
-    expect(document.body.textContent).not.toMatch(/best product for you|the best policy/i);
-    expect(document.body.textContent).not.toMatch(/\u2014/);
+    const goLinks = [...document.querySelectorAll('a[href*="/go/"]')];
+    expect(goLinks).toHaveLength(1);
+    expect(goLinks[0]).toHaveAttribute("href", "/go/japan-wireless-wifi");
+    expect(goLinks[0]).toHaveAttribute("rel", "sponsored nofollow noopener");
+    expect(goLinks[0]).toHaveAttribute("target", "_blank");
   });
 
-  it("shows partner photos after the tour CTA, none on insurance or luggage", () => {
+  it("keeps the internal links that feed under-linked articles", () => {
+    render(
+      <MemoryRouter>
+        <PrepareTripHub lang="en" />
+      </MemoryRouter>,
+    );
+    for (const href of [
+      "/blog/japan-rail-pass-worth-it",
+      "/blog/narita-vs-haneda",
+      "/blog/tipping-in-japan",
+    ]) {
+      expect(document.querySelector(`a[href="${href}"]`)).toBeTruthy();
+    }
+  });
+
+  it("shows the partner photo after the tour CTA and never inside a /go/ link", () => {
     render(
       <MemoryRouter>
         <PrepareTripHub lang="en" />
@@ -66,23 +83,16 @@ describe("PrepareTripHub", () => {
     );
     const tour = document.querySelector("[data-hub-tour-cta]");
     const images = [...document.querySelectorAll("[data-affiliate-image]")] as HTMLImageElement[];
-    expect(images).toHaveLength(5);
-    expect(tour!.compareDocumentPosition(images[0]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(images).toHaveLength(1);
     expect(images.map((img) => img.getAttribute("src"))).toEqual([
-      "/images/affiliates/esim-hero.webp",
       "/images/affiliates/wifi-hero.webp",
-      "/images/affiliates/bullet-train.webp",
-      "/images/affiliates/bus.webp",
-      "/images/affiliates/airport-taxi.webp",
     ]);
-    expect(screen.getByAltText(/smartphone showing a Japan eSIM screen/i)).toBeInTheDocument();
-    expect(screen.queryByAltText(/insurance|luggage storage|guardaequipaje/i)).toBeNull();
+    expect(tour!.compareDocumentPosition(images[0]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     for (const img of images) {
       expect(img.closest("a[href*='/go/']")).toBeNull();
     }
-    expect(document.querySelector('a[data-affiliate-slug="japan-wireless-wifi"]')).toHaveAttribute(
-      "href",
-      "/go/japan-wireless-wifi",
-    );
+    // Sections whose partner is not registered yet must not be present at all.
+    expect(screen.queryByAltText(/eSIM|insurance|luggage storage|guardaequipaje/i)).toBeNull();
+    expect(document.body.textContent).not.toMatch(/travel insurance|luggage/i);
   });
 });
