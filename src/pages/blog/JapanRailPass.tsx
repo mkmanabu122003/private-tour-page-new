@@ -15,8 +15,6 @@ import { RelatedTourCards } from "@/components/blog/RelatedTourCards";
 import { InlineCTA } from "@/components/blog/InlineCTA";
 import { BlogArticleHero } from "@/components/blog/BlogArticleHero";
 import { BlogArticleToc, BlogArticleAside } from "@/components/blog/BlogArticleSidebar";
-import { AffiliateDisclosure } from "@/components/affiliates/AffiliateDisclosure";
-import { AffiliateLink } from "@/components/affiliates/AffiliateLink";
 
 const guideSections = [
   { href: "#quick-answer", label: "Short answer" },
@@ -158,7 +156,6 @@ const JapanRailPass = () => {
                 tickets are cheaper.
               </p>
             </div>
-            <AffiliateDisclosure lang="en" placement="top" />
 
             <div id="price-update" className="mb-8 scroll-mt-24 rounded-lg border border-amber-200 bg-amber-50 p-5 text-amber-950">
               <div className="flex gap-3">
@@ -447,9 +444,9 @@ const JapanRailPass = () => {
             <ul className="space-y-4 mb-8">
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Regional JR Passes:</strong> JR East, JR West, and JR Central offer regional passes that are cheaper and cover specific areas. The{" "}
-                <AffiliateLink slug="japan-bullet-train">JR East passes</AffiliateLink>{" "}
+                <a href="https://www.jreast.co.jp/multi/en/pass/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR East passes</a>{" "}
                 (Nagano/Niigata, Tohoku), the{" "}
-                <AffiliateLink slug="japan-bullet-train">JR West passes</AffiliateLink>{" "}
+                <a href="https://www.westjr.co.jp/global/en/ticket/pass/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR West passes</a>{" "}
                 (Kansai Area, Kansai-Hiroshima), and JR Central passes are all significantly less than the nationwide pass and perfect for focused regional travel.
               </li>
               <li className="text-muted-foreground leading-relaxed">
@@ -457,13 +454,11 @@ const JapanRailPass = () => {
               </li>
               <li className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Individual Shinkansen tickets:</strong> If you're making one or two long-distance trips, buying individual tickets is often cheaper than the pass.{" "}
-                <AffiliateLink slug="japan-bullet-train">Shinkansen ticket partners</AffiliateLink>{" "}
-                (and apps such as SmartEX) sometimes offer early-bird discounts. We introduce options; we do not book seats for you.
+                <a href="https://smart-ex.jp/en/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">SmartEX</a>{" "}
+                (an app for booking Shinkansen tickets) sometimes offers early-bird discounts.
               </li>
               <li className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Highway buses:</strong> For budget travelers, overnight highway buses between Tokyo and Kyoto/Osaka cost ¥3,000–6,000, a fraction of the Shinkansen price. They're comfortable, safe, and save you a night of hotel costs. Not glamorous, but extremely practical.{" "}
-                <AffiliateLink slug="japan-bus-tickets">Highway bus tickets</AffiliateLink>
-                {" "}are one introduction — we do not book buses for you.
+                <strong className="text-foreground">Highway buses:</strong> For budget travelers, overnight highway buses between Tokyo and Kyoto/Osaka cost ¥3,000–6,000, a fraction of the Shinkansen price. They're comfortable, safe, and save you a night of hotel costs. Not glamorous, but extremely practical.
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -523,9 +518,9 @@ const JapanRailPass = () => {
                 <div>
                   <h3>Where do I buy the Japan Rail Pass?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Since October 2023, the nationwide JR Pass can only be purchased online through the official JR Pass website or authorized agents. After purchasing online, you pick it up at a designated JR ticket office counter by showing your passport and choosing your start date.{" "}
-                    <AffiliateLink slug="japan-bullet-train">A ticket partner we introduce</AffiliateLink>
-                    {" "}is one authorized-style path for rail tickets; we do not sell the pass ourselves. Note that regional JR passes (JR East Pass, JR West Pass, etc.) can still be purchased at station counters.
+                    Since October 2023, the nationwide JR Pass can only be purchased online through the{" "}
+                    <a href="https://www.japanrailpass.net/en" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">official JR Pass website</a>{" "}
+                    or authorized agents. After purchasing online, you pick it up at a designated JR ticket office counter by showing your passport and choosing your start date. Note that regional JR passes (JR East Pass, JR West Pass, etc.) can still be purchased at station counters.
                   </p>
                 </div>
                 <div>
@@ -564,7 +559,6 @@ const JapanRailPass = () => {
                 </div>
               </div>
             </div>
-            <AffiliateDisclosure lang="en" placement="footer" />
           </article>
           <BlogArticleAside />
           </div>

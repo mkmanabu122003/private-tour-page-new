@@ -28,7 +28,7 @@ test.describe("Trip-prep hub", () => {
     await expect(firstPhoto).toBeVisible();
     const photoY = (await firstPhoto.boundingBox())?.y ?? 0;
     expect(tourY).toBeLessThan(photoY);
-    await expect(firstPhoto).toHaveAttribute("src", "/images/affiliates/esim-hero.webp");
+    await expect(firstPhoto).toHaveAttribute("src", "/images/affiliates/wifi-hero.webp");
     await firstPhoto.scrollIntoViewIfNeeded();
     await expect.poll(async () => firstPhoto.evaluate((el) => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
 
@@ -82,25 +82,25 @@ test.describe("Trip-prep hub", () => {
 
 test.describe("/go/ fallback", () => {
   test("TODO_ EN slug 302s (or lands) on the trip-prep hub", async ({ page, request }) => {
-    const res = await request.get("/go/japan-wireless-esim", { maxRedirects: 0 });
+    const res = await request.get("/go/japan-bullet-train", { maxRedirects: 0 });
     const status = res.status();
     if (status === 302 || status === 301) {
       const loc = res.headers()["location"] || "";
       expect(loc).toMatch(/prepare-your-trip/);
     } else {
-      await page.goto("/go/japan-wireless-esim");
+      await page.goto("/go/japan-bullet-train");
       await expect(page).toHaveURL(/prepare-your-trip/);
     }
   });
 
   test("TODO_ ES slug 302s (or lands) on the Spanish hub", async ({ page, request }) => {
-    const res = await request.get("/es/go/japan-wireless-esim", { maxRedirects: 0 });
+    const res = await request.get("/es/go/japan-bullet-train", { maxRedirects: 0 });
     const status = res.status();
     if (status === 302 || status === 301) {
       const loc = res.headers()["location"] || "";
       expect(loc).toMatch(/prepara-tu-viaje/);
     } else {
-      await page.goto("/es/go/japan-wireless-esim");
+      await page.goto("/es/go/japan-bullet-train");
       await expect(page).toHaveURL(/prepara-tu-viaje/);
     }
   });
@@ -142,7 +142,7 @@ test.describe("affiliate_click", () => {
         orig?.(...args);
       };
     });
-    const link = page.locator('a[data-affiliate-slug="japan-wireless-esim"]');
+    const link = page.locator('a[data-affiliate-slug="japan-wireless-wifi"]');
     await expect(link).toBeVisible();
     await link.evaluate((el) => {
       el.addEventListener("click", (e) => e.preventDefault(), true);
@@ -156,7 +156,7 @@ test.describe("affiliate_click", () => {
     );
     expect(hit).toBeTruthy();
     const params = hit?.[2] as Record<string, string>;
-    expect(params.slug).toBe("japan-wireless-esim");
+    expect(params.slug).toBe("japan-wireless-wifi");
     expect(params.category).toBe("esim");
     expect(params.page_path).toContain("prepare-your-trip");
     expect(params.lang).toBe("en");
