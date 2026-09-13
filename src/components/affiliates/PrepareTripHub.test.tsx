@@ -95,6 +95,8 @@ describe("PrepareTripHub", () => {
     }
     // Sections whose partner is not registered yet must not be present at all.
     expect(screen.queryByAltText(/eSIM|insurance|luggage storage|guardaequipaje/i)).toBeNull();
-    expect(document.body.textContent).not.toMatch(/travel insurance|luggage/i);
+    // "luggage" alone appears in the airport copy as ordinary prose; the removed
+    // section was "luggage storage".
+    expect(document.body.textContent).not.toMatch(/travel insurance|luggage storage/i);
   });
 });
