@@ -40,7 +40,9 @@ describe("PrepareTripHub", () => {
       </MemoryRouter>,
     );
     expect(screen.getByRole("link", { name: /Ver tours privados/i })).toHaveAttribute("href", "/es/tours");
-    expect(document.querySelectorAll('a[href^="/es/go/"]').length).toBeGreaterThan(0);
+    const esGo = document.querySelectorAll('a[href^="/es/go/"]');
+    expect(esGo).toHaveLength(1);
+    expect(esGo[0]).toHaveAttribute("href", "/es/go/japan-wireless-wifi");
     expect(document.body.textContent).not.toMatch(/vosotros|os recomiendo/i);
     expect(document.body.textContent).not.toMatch(/—|placeholder until the ID|ID de socio/i);
   });
