@@ -1,0 +1,1578 @@
+{
+  "generated_at": "2026-05-26",
+  "window_days": 28,
+  "gsc": {
+    "window": {
+      "from": "2026-04-24",
+      "to": "2026-05-22"
+    },
+    "totals": {
+      "clicks": 275,
+      "impressions": 101626,
+      "page_count": 154,
+      "query_count": 2556
+    },
+    "top_queries_by_impression": [
+      {
+        "query": "hakone to kamakura",
+        "clicks": 2,
+        "impressions": 5,
+        "ctr": 40.0,
+        "position": 2.2
+      },
+      {
+        "query": "japan rail pass",
+        "clicks": 2,
+        "impressions": 11,
+        "ctr": 18.1818,
+        "position": 5.09
+      },
+      {
+        "query": "kamakura",
+        "clicks": 2,
+        "impressions": 403,
+        "ctr": 0.4963,
+        "position": 4.37
+      },
+      {
+        "query": "kamakura o hakone",
+        "clicks": 2,
+        "impressions": 7,
+        "ctr": 28.5714,
+        "position": 5.29
+      },
+      {
+        "query": "kamakura vs hakone",
+        "clicks": 2,
+        "impressions": 86,
+        "ctr": 2.3256,
+        "position": 6.14
+      },
+      {
+        "query": "toyosu market tokyo",
+        "clicks": 2,
+        "impressions": 16,
+        "ctr": 12.5,
+        "position": 2.06
+      },
+      {
+        "query": "tsukiji fish market 2026",
+        "clicks": 2,
+        "impressions": 12,
+        "ctr": 16.6667,
+        "position": 3.58
+      },
+      {
+        "query": "tsukiji fish market opening hours",
+        "clicks": 2,
+        "impressions": 264,
+        "ctr": 0.7576,
+        "position": 11.36
+      },
+      {
+        "query": "comida callejera en tokio",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 50.0,
+        "position": 8
+      },
+      {
+        "query": "day trip from tokyo to kamakura",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 3
+      },
+      {
+        "query": "fish market tsukiji outer market 築地場外市場 hours",
+        "clicks": 1,
+        "impressions": 17,
+        "ctr": 5.8824,
+        "position": 10.76
+      },
+      {
+        "query": "hakone or kamakura",
+        "clicks": 1,
+        "impressions": 74,
+        "ctr": 1.3514,
+        "position": 6.95
+      },
+      {
+        "query": "hakone or nikko",
+        "clicks": 1,
+        "impressions": 45,
+        "ctr": 2.2222,
+        "position": 8.56
+      },
+      {
+        "query": "hakone vs nikko",
+        "clicks": 1,
+        "impressions": 48,
+        "ctr": 2.0833,
+        "position": 8.92
+      },
+      {
+        "query": "is kamakura worth visiting",
+        "clicks": 1,
+        "impressions": 27,
+        "ctr": 3.7037,
+        "position": 3.11
+      },
+      {
+        "query": "is tsukiji market open on sunday",
+        "clicks": 1,
+        "impressions": 45,
+        "ctr": 2.2222,
+        "position": 9.42
+      },
+      {
+        "query": "is tsukiji market open today",
+        "clicks": 1,
+        "impressions": 17,
+        "ctr": 5.8824,
+        "position": 8.29
+      },
+      {
+        "query": "japan private tour guide cost",
+        "clicks": 1,
+        "impressions": 107,
+        "ctr": 0.9346,
+        "position": 9.37
+      },
+      {
+        "query": "japan rail pass 2026 price",
+        "clicks": 1,
+        "impressions": 42,
+        "ctr": 2.381,
+        "position": 4.86
+      },
+      {
+        "query": "jr pass price increase",
+        "clicks": 1,
+        "impressions": 20,
+        "ctr": 5.0,
+        "position": 11.35
+      },
+      {
+        "query": "kamakura to hakone",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 10.0,
+        "position": 3.9
+      },
+      {
+        "query": "mercado de pescado en tokio",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 1
+      },
+      {
+        "query": "mercado exterior de tsukiji",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 50.0,
+        "position": 7.5
+      },
+      {
+        "query": "mercado tsukiji horario",
+        "clicks": 1,
+        "impressions": 31,
+        "ctr": 3.2258,
+        "position": 6.74
+      },
+      {
+        "query": "monte fuji desde tokio",
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 6.25,
+        "position": 25.81
+      },
+      {
+        "query": "nikko o kamakura",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 10.0,
+        "position": 13
+      },
+      {
+        "query": "private japan tours",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 7
+      },
+      {
+        "query": "tsukiji closed days",
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 6.25,
+        "position": 8.38
+      },
+      {
+        "query": "tsukiji fish market öffnungszeiten",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 25.0,
+        "position": 8.5
+      },
+      {
+        "query": "tsukiji hours",
+        "clicks": 1,
+        "impressions": 23,
+        "ctr": 4.3478,
+        "position": 8.39
+      },
+      {
+        "query": "tsukiji market best time to go",
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 20.0,
+        "position": 11
+      },
+      {
+        "query": "tsukiji market opening hours",
+        "clicks": 1,
+        "impressions": 256,
+        "ctr": 0.3906,
+        "position": 9.72
+      },
+      {
+        "query": "tsukiji market tokyo opening hours",
+        "clicks": 1,
+        "impressions": 23,
+        "ctr": 4.3478,
+        "position": 9.35
+      },
+      {
+        "query": "tsukiji outer market",
+        "clicks": 1,
+        "impressions": 55,
+        "ctr": 1.8182,
+        "position": 16.85
+      },
+      {
+        "query": "tsukiji outer market guide",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 33.3333,
+        "position": 8.33
+      },
+      {
+        "query": "tsukiji outer market opening hours 2026",
+        "clicks": 1,
+        "impressions": 505,
+        "ctr": 0.198,
+        "position": 3.12
+      },
+      {
+        "query": "what is the jr pass",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 50.0,
+        "position": 5.5
+      },
+      {
+        "query": "what time do food stalls open at tsukiji market",
+        "clicks": 1,
+        "impressions": 13,
+        "ctr": 7.6923,
+        "position": 8.77
+      },
+      {
+        "query": "what time tsukiji market open",
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 20.0,
+        "position": 6.8
+      },
+      {
+        "query": "when does tsukiji market open",
+        "clicks": 1,
+        "impressions": 30,
+        "ctr": 3.3333,
+        "position": 12.47
+      },
+      {
+        "query": "yokohama day",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 18
+      },
+      {
+        "query": "yokohama to kamakura train",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 33.3333,
+        "position": 2
+      },
+      {
+        "query": "yoridocoro",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 5
+      },
+      {
+        "query": "\"kibi dango\" \"good fortune\"",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 10.12
+      },
+      {
+        "query": "\"surrender, diner; omakase doesn't mean 'sushi,' or even 'fish'\"",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "1 day in hakone",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "query": "1 day trip nikko",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "query": "1 day trip to nikko from tokyo",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 76.5
+      },
+      {
+        "query": "1 week trip",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "10 days",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      }
+    ],
+    "top_pages_by_impression": [
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/japan-rail-pass-worth-it",
+        "clicks": 15,
+        "impressions": 38565,
+        "ctr": 0.0389,
+        "position": 8.18
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tsukiji-market-guide",
+        "clicks": 92,
+        "impressions": 26845,
+        "ctr": 0.3427,
+        "position": 6.52
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/japan-temple-shrine-etiquette",
+        "clicks": 1,
+        "impressions": 4498,
+        "ctr": 0.0222,
+        "position": 10.82
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/kamakura-vs-hakone-vs-nikko-day-trip",
+        "clicks": 37,
+        "impressions": 3292,
+        "ctr": 1.1239,
+        "position": 6.23
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/es/blog/monte-fuji-se-ve-desde-tokio",
+        "clicks": 9,
+        "impressions": 2699,
+        "ctr": 0.3335,
+        "position": 8.13
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tokyo-private-tour-guide-cost",
+        "clicks": 11,
+        "impressions": 2564,
+        "ctr": 0.429,
+        "position": 7.38
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tsukiji-vs-toyosu",
+        "clicks": 10,
+        "impressions": 2197,
+        "ctr": 0.4552,
+        "position": 8.1
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/shibuya-harajuku-guide",
+        "clicks": 9,
+        "impressions": 1698,
+        "ctr": 0.53,
+        "position": 7.23
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/is-it-worth-hiring-a-tour-guide-in-tokyo",
+        "clicks": 10,
+        "impressions": 1414,
+        "ctr": 0.7072,
+        "position": 9.73
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/senso-ji-most-visited-temple",
+        "clicks": 5,
+        "impressions": 1319,
+        "ctr": 0.3791,
+        "position": 7.14
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tsukiji-market-guide#outer-market",
+        "clicks": 0,
+        "impressions": 1152,
+        "ctr": 0,
+        "position": 6.28
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tsukiji-market-guide#what-happened",
+        "clicks": 0,
+        "impressions": 1151,
+        "ctr": 0,
+        "position": 6.27
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/yanaka-tokyo-walking-route",
+        "clicks": 6,
+        "impressions": 813,
+        "ctr": 0.738,
+        "position": 6.02
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/yokohama-day-trip-from-tokyo",
+        "clicks": 4,
+        "impressions": 682,
+        "ctr": 0.5865,
+        "position": 7.82
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/nikko-day-trip-from-tokyo",
+        "clicks": 0,
+        "impressions": 667,
+        "ctr": 0,
+        "position": 23.8
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tokyo-3-day-itinerary",
+        "clicks": 1,
+        "impressions": 664,
+        "ctr": 0.1506,
+        "position": 9.21
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/old-tokyo-shitamachi",
+        "clicks": 2,
+        "impressions": 624,
+        "ctr": 0.3205,
+        "position": 8.06
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/es/blog/propinas-en-japon",
+        "clicks": 3,
+        "impressions": 540,
+        "ctr": 0.5556,
+        "position": 7.99
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/es/blog/guia-tsukiji",
+        "clicks": 8,
+        "impressions": 495,
+        "ctr": 1.6162,
+        "position": 6.72
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/shinjuku-guide",
+        "clicks": 0,
+        "impressions": 482,
+        "ctr": 0,
+        "position": 13.33
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/tours/nikko-day-trip",
+        "clicks": 0,
+        "impressions": 443,
+        "ctr": 0,
+        "position": 24.63
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/mount-fuji-from-tokyo",
+        "clicks": 0,
+        "impressions": 441,
+        "ctr": 0,
+        "position": 10.47
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/hakone-day-trip-guide-vs-solo",
+        "clicks": 9,
+        "impressions": 404,
+        "ctr": 2.2277,
+        "position": 21.2
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/tours/hakone-day-trip",
+        "clicks": 0,
+        "impressions": 342,
+        "ctr": 0,
+        "position": 8.18
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tokyo-hidden-gems",
+        "clicks": 3,
+        "impressions": 286,
+        "ctr": 1.049,
+        "position": 6.79
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/es/blog/japan-rail-pass-vale-la-pena",
+        "clicks": 0,
+        "impressions": 283,
+        "ctr": 0,
+        "position": 8.7
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/asakusa-guide-what-to-see",
+        "clicks": 0,
+        "impressions": 280,
+        "ctr": 0,
+        "position": 10.53
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tsukiji-market-guide/",
+        "clicks": 0,
+        "impressions": 252,
+        "ctr": 0,
+        "position": 3.68
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/tokyo-3-day-itinerary/",
+        "clicks": 1,
+        "impressions": 234,
+        "ctr": 0.4274,
+        "position": 5.32
+      },
+      {
+        "page": "https://tanuki-tabi-travel.com/blog/ramen-guide-tokyo/",
+        "clicks": 0,
+        "impressions": 213,
+        "ctr": 0,
+        "position": 8.8
+      }
+    ],
+    "countries": [
+      {
+        "country": "jpn",
+        "clicks": 67,
+        "impressions": 10800,
+        "ctr": 0.6204,
+        "position": 7.77
+      },
+      {
+        "country": "usa",
+        "clicks": 53,
+        "impressions": 42876,
+        "ctr": 0.1236,
+        "position": 7.72
+      },
+      {
+        "country": "esp",
+        "clicks": 37,
+        "impressions": 4035,
+        "ctr": 0.917,
+        "position": 8.32
+      },
+      {
+        "country": "aus",
+        "clicks": 14,
+        "impressions": 2185,
+        "ctr": 0.6407,
+        "position": 9.42
+      },
+      {
+        "country": "can",
+        "clicks": 13,
+        "impressions": 2642,
+        "ctr": 0.4921,
+        "position": 8.29
+      },
+      {
+        "country": "gbr",
+        "clicks": 12,
+        "impressions": 2112,
+        "ctr": 0.5682,
+        "position": 8.94
+      },
+      {
+        "country": "sgp",
+        "clicks": 12,
+        "impressions": 1653,
+        "ctr": 0.726,
+        "position": 10.99
+      },
+      {
+        "country": "mys",
+        "clicks": 6,
+        "impressions": 696,
+        "ctr": 0.8621,
+        "position": 8.11
+      },
+      {
+        "country": "nld",
+        "clicks": 6,
+        "impressions": 1223,
+        "ctr": 0.4906,
+        "position": 8.11
+      },
+      {
+        "country": "mex",
+        "clicks": 5,
+        "impressions": 1649,
+        "ctr": 0.3032,
+        "position": 8.34
+      },
+      {
+        "country": "idn",
+        "clicks": 4,
+        "impressions": 901,
+        "ctr": 0.444,
+        "position": 8.19
+      },
+      {
+        "country": "bel",
+        "clicks": 3,
+        "impressions": 331,
+        "ctr": 0.9063,
+        "position": 8.24
+      },
+      {
+        "country": "ind",
+        "clicks": 3,
+        "impressions": 1267,
+        "ctr": 0.2368,
+        "position": 8.26
+      },
+      {
+        "country": "phl",
+        "clicks": 3,
+        "impressions": 792,
+        "ctr": 0.3788,
+        "position": 9.46
+      },
+      {
+        "country": "arg",
+        "clicks": 2,
+        "impressions": 656,
+        "ctr": 0.3049,
+        "position": 9.94
+      }
+    ],
+    "devices": [
+      {
+        "device": "MOBILE",
+        "clicks": 155,
+        "impressions": 13671,
+        "ctr": 1.1338,
+        "position": 8.62
+      },
+      {
+        "device": "DESKTOP",
+        "clicks": 117,
+        "impressions": 83223,
+        "ctr": 0.1406,
+        "position": 7.99
+      },
+      {
+        "device": "TABLET",
+        "clicks": 2,
+        "impressions": 232,
+        "ctr": 0.8621,
+        "position": 6.77
+      }
+    ],
+    "new_queries_last7": [
+      {
+        "query": "japan rail pass 14 day ordinary price 2026 official",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 7.36
+      },
+      {
+        "query": "japan travel august 2026 yen exchange rates tourism costs jr pass prices 2026",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.38
+      },
+      {
+        "query": "is hakone worth visiting",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 40.83
+      },
+      {
+        "query": "tsukiji outer market opening hours sunday",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 10.33
+      },
+      {
+        "query": "japan rail pass official prices 2026 7 day 14 day 21 day ordinary",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 11.8
+      },
+      {
+        "query": "japan rail pass price 14 day ordinary 2026 official",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 11.4
+      },
+      {
+        "query": "jr pass prices official japan rail pass 2026",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7.8
+      },
+      {
+        "query": "nonbei yokocho walking time from shibuya station",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "tsukiji outer market evening hours official",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 9.6
+      },
+      {
+        "query": "best places to see mount fuji from tokyo 2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.75
+      },
+      {
+        "query": "current jr pass prices japan 2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 7.25
+      },
+      {
+        "query": "japan rail pass prices 2026 tourists",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.25
+      },
+      {
+        "query": "japan rail pass worth it tokyo kyoto osaka 2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "jr east pass tohoku 2025 2026 price coverage",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 13.5
+      },
+      {
+        "query": "tsukiji fish market tokyo opening hours",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 16.75
+      },
+      {
+        "query": "1 day in hakone",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "query": "7-day japan rail pass price 2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "dar propina en japon",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9.33
+      },
+      {
+        "query": "distancia entre tokio y monte fuji",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.33
+      },
+      {
+        "query": "harga jr pass 2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4.33
+      },
+      {
+        "query": "is the fish market open on sunday",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12.33
+      },
+      {
+        "query": "japan rail pass 2026 prices",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 7.33
+      },
+      {
+        "query": "japan rail pass official current prices 2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "japan rail pass official prices 2026 14 day ordinary green",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "official japan rail pass prices 2026 ordinary 7 day 14 day",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.33
+      },
+      {
+        "query": "tsukiji fish market hours of operation",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.33
+      },
+      {
+        "query": "tsukiji fish market hours sunday",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "comida callejera en tokio",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 50.0,
+        "position": 8
+      },
+      {
+        "query": "3 day in tokyo itinerary",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 78.5
+      },
+      {
+        "query": "current japan rail pass price 2025 or 2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "distance kyoto to tokyo",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "early morning breakfast tokyo",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "ginza fish market opening hours",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "hire a guide in tokyo",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "query": "is the tsukiji market open everyday",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "is tsukiji fish market open on monday",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "japan rail pass 21 tage preis 2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "japan rail pass 7 day price ordinary 2026 official",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "query": "japan rail pass official price 2026 7 day 14 day ordinary",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "japan rail pass official price ordinary 7 days 14 days 2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "japan rail pass official prices 2026 7 14 21 days ordinary green",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "japan rail pass official prices 2026 7 day ordinary green",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "japan rail pass official prices 2026 ordinary 7 14 21 day",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "japan rail pass prezzo 2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "japan rail pass worth it 2026 current prices",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "japan travel tips 2026 transportation jr pass",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "jr pass increase 2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "jr pass official price 2026 ordinary 7 day",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "jr pass official price ordinary 7 day 14 day 21 day 2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "jr pass price 2026 for 7 days",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      }
+    ],
+    "zero_click_opportunities": [
+      {
+        "query": "jr pass price increase 2026",
+        "clicks": 0,
+        "impressions": 1121,
+        "ctr": 0,
+        "position": 5.45
+      },
+      {
+        "query": "japan rail pass prices 2026 official",
+        "clicks": 0,
+        "impressions": 558,
+        "ctr": 0,
+        "position": 7.68
+      },
+      {
+        "query": "japan rail pass current prices 2026",
+        "clicks": 0,
+        "impressions": 531,
+        "ctr": 0,
+        "position": 9.71
+      },
+      {
+        "query": "japan rail pass price 2026",
+        "clicks": 0,
+        "impressions": 400,
+        "ctr": 0,
+        "position": 11.92
+      },
+      {
+        "query": "japan rail pass price 2026 official",
+        "clicks": 0,
+        "impressions": 262,
+        "ctr": 0,
+        "position": 8.59
+      },
+      {
+        "query": "japan rail pass official price 7 day ordinary 2026",
+        "clicks": 0,
+        "impressions": 255,
+        "ctr": 0,
+        "position": 9.73
+      },
+      {
+        "query": "japan rail pass official prices 2026",
+        "clicks": 0,
+        "impressions": 254,
+        "ctr": 0,
+        "position": 8.63
+      },
+      {
+        "query": "tsukiji outer market official hours 2026",
+        "clicks": 0,
+        "impressions": 252,
+        "ctr": 0,
+        "position": 3.4
+      }
+    ],
+    "near_page_one_pushup": [
+      {
+        "query": "japan rail pass price 2026",
+        "clicks": 0,
+        "impressions": 400,
+        "ctr": 0,
+        "position": 11.92
+      }
+    ]
+  },
+  "ga4": {
+    "window": {
+      "from": "2026-04-24",
+      "to": "2026-05-22"
+    },
+    "totals": {
+      "sessions": 749.0,
+      "totalUsers": 623.0,
+      "screenPageViews": 938.0,
+      "engagementRate": 0.3925233644859813,
+      "averageSessionDuration": 306.0799869038718
+    },
+    "sources": [
+      {
+        "sessionSource": "google",
+        "sessionMedium": "organic",
+        "sessions": 372.0,
+        "engagementRate": 0.5134408602150538
+      },
+      {
+        "sessionSource": "(direct)",
+        "sessionMedium": "(none)",
+        "sessions": 239.0,
+        "engagementRate": 0.20502092050209206
+      },
+      {
+        "sessionSource": "chatgpt.com",
+        "sessionMedium": "(not set)",
+        "sessions": 46.0,
+        "engagementRate": 0.2608695652173913
+      },
+      {
+        "sessionSource": "bing",
+        "sessionMedium": "organic",
+        "sessions": 25.0,
+        "engagementRate": 0.6
+      },
+      {
+        "sessionSource": "duckduckgo",
+        "sessionMedium": "organic",
+        "sessions": 15.0,
+        "engagementRate": 0.26666666666666666
+      },
+      {
+        "sessionSource": "chatgpt.com",
+        "sessionMedium": "referral",
+        "sessions": 14.0,
+        "engagementRate": 0.5714285714285714
+      },
+      {
+        "sessionSource": "yahoo",
+        "sessionMedium": "organic",
+        "sessions": 11.0,
+        "engagementRate": 0.18181818181818182
+      },
+      {
+        "sessionSource": "ecosia.org",
+        "sessionMedium": "organic",
+        "sessions": 9.0,
+        "engagementRate": 0.2222222222222222
+      },
+      {
+        "sessionSource": "claude.ai",
+        "sessionMedium": "referral",
+        "sessions": 6.0,
+        "engagementRate": 0.8333333333333334
+      },
+      {
+        "sessionSource": "blog",
+        "sessionMedium": "cta",
+        "sessions": 4.0,
+        "engagementRate": 1.0
+      },
+      {
+        "sessionSource": "mx.search.yahoo.com",
+        "sessionMedium": "referral",
+        "sessions": 2.0,
+        "engagementRate": 0.0
+      },
+      {
+        "sessionSource": "sg.search.yahoo.com",
+        "sessionMedium": "referral",
+        "sessions": 2.0,
+        "engagementRate": 0.0
+      },
+      {
+        "sessionSource": "es.search.yahoo.com",
+        "sessionMedium": "referral",
+        "sessions": 1.0,
+        "engagementRate": 1.0
+      },
+      {
+        "sessionSource": "facebook.com",
+        "sessionMedium": "referral",
+        "sessions": 1.0,
+        "engagementRate": 0.0
+      },
+      {
+        "sessionSource": "m.facebook.com",
+        "sessionMedium": "referral",
+        "sessions": 1.0,
+        "engagementRate": 0.0
+      },
+      {
+        "sessionSource": "perplexity",
+        "sessionMedium": "(not set)",
+        "sessions": 1.0,
+        "engagementRate": 0.0
+      },
+      {
+        "sessionSource": "trello.com",
+        "sessionMedium": "referral",
+        "sessions": 1.0,
+        "engagementRate": 1.0
+      }
+    ],
+    "events": [
+      {
+        "eventName": "page_view",
+        "eventCount": 938.0,
+        "totalUsers": 623.0
+      },
+      {
+        "eventName": "session_start",
+        "eventCount": 752.0,
+        "totalUsers": 623.0
+      },
+      {
+        "eventName": "first_visit",
+        "eventCount": 616.0,
+        "totalUsers": 616.0
+      },
+      {
+        "eventName": "user_engagement",
+        "eventCount": 316.0,
+        "totalUsers": 272.0
+      },
+      {
+        "eventName": "scroll",
+        "eventCount": 102.0,
+        "totalUsers": 88.0
+      },
+      {
+        "eventName": "tour_page_view",
+        "eventCount": 101.0,
+        "totalUsers": 52.0
+      },
+      {
+        "eventName": "contact_page_view",
+        "eventCount": 32.0,
+        "totalUsers": 27.0
+      },
+      {
+        "eventName": "book_now_click",
+        "eventCount": 20.0,
+        "totalUsers": 16.0
+      },
+      {
+        "eventName": "diagnostic_answer",
+        "eventCount": 18.0,
+        "totalUsers": 4.0
+      },
+      {
+        "eventName": "form_start",
+        "eventCount": 11.0,
+        "totalUsers": 10.0
+      },
+      {
+        "eventName": "click",
+        "eventCount": 10.0,
+        "totalUsers": 10.0
+      },
+      {
+        "eventName": "form_submit",
+        "eventCount": 8.0,
+        "totalUsers": 8.0
+      },
+      {
+        "eventName": "diagnostic_start",
+        "eventCount": 7.0,
+        "totalUsers": 5.0
+      },
+      {
+        "eventName": "diagnostic_complete",
+        "eventCount": 6.0,
+        "totalUsers": 4.0
+      }
+    ],
+    "organic_landing_pages": [
+      {
+        "landingPagePlusQueryString": "/blog/tsukiji-market-guide",
+        "sessions": 135.0,
+        "engagementRate": 0.5333333333333333,
+        "averageSessionDuration": 245.94640525185181
+      },
+      {
+        "landingPagePlusQueryString": "/blog/kamakura-vs-hakone-vs-nikko-day-trip",
+        "sessions": 47.0,
+        "engagementRate": 0.6382978723404256,
+        "averageSessionDuration": 2982.624405851064
+      },
+      {
+        "landingPagePlusQueryString": "(not set)",
+        "sessions": 38.0,
+        "engagementRate": 0.0,
+        "averageSessionDuration": 0.09983831578947368
+      },
+      {
+        "landingPagePlusQueryString": "/blog/japan-rail-pass-worth-it",
+        "sessions": 17.0,
+        "engagementRate": 0.4117647058823529,
+        "averageSessionDuration": 166.8300424117647
+      },
+      {
+        "landingPagePlusQueryString": "/es/blog/comparativa-excursiones",
+        "sessions": 17.0,
+        "engagementRate": 0.5882352941176471,
+        "averageSessionDuration": 274.90668411764705
+      },
+      {
+        "landingPagePlusQueryString": "/blog/japan-temple-shrine-etiquette",
+        "sessions": 15.0,
+        "engagementRate": 0.26666666666666666,
+        "averageSessionDuration": 155.18455379999997
+      },
+      {
+        "landingPagePlusQueryString": "/es/blog/guia-tsukiji",
+        "sessions": 15.0,
+        "engagementRate": 0.4666666666666667,
+        "averageSessionDuration": 177.35730573333333
+      },
+      {
+        "landingPagePlusQueryString": "/blog/is-it-worth-hiring-a-tour-guide-in-tokyo",
+        "sessions": 14.0,
+        "engagementRate": 0.42857142857142855,
+        "averageSessionDuration": 124.77351257142857
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tokyo-private-tour-guide-cost",
+        "sessions": 12.0,
+        "engagementRate": 0.8333333333333334,
+        "averageSessionDuration": 311.56787275
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tsukiji-vs-toyosu",
+        "sessions": 11.0,
+        "engagementRate": 0.5454545454545454,
+        "averageSessionDuration": 183.90271609090908
+      },
+      {
+        "landingPagePlusQueryString": "/",
+        "sessions": 9.0,
+        "engagementRate": 0.6666666666666666,
+        "averageSessionDuration": 122.21083122222223
+      },
+      {
+        "landingPagePlusQueryString": "/blog/shibuya-harajuku-guide",
+        "sessions": 9.0,
+        "engagementRate": 0.3333333333333333,
+        "averageSessionDuration": 54.660498
+      },
+      {
+        "landingPagePlusQueryString": "/blog/hakone-day-trip-guide-vs-solo",
+        "sessions": 8.0,
+        "engagementRate": 0.375,
+        "averageSessionDuration": 166.4286725
+      },
+      {
+        "landingPagePlusQueryString": "/es/blog/monte-fuji-se-ve-desde-tokio",
+        "sessions": 8.0,
+        "engagementRate": 0.625,
+        "averageSessionDuration": 99.8722915
+      },
+      {
+        "landingPagePlusQueryString": "/blog/yanaka-tokyo-walking-route",
+        "sessions": 7.0,
+        "engagementRate": 0.7142857142857143,
+        "averageSessionDuration": 757.8761270000001
+      },
+      {
+        "landingPagePlusQueryString": "/es/blog/propinas-en-japon",
+        "sessions": 7.0,
+        "engagementRate": 0.5714285714285714,
+        "averageSessionDuration": 294.86717557142856
+      },
+      {
+        "landingPagePlusQueryString": "/blog/yanaka-walking-tour-guide",
+        "sessions": 6.0,
+        "engagementRate": 0.16666666666666666,
+        "averageSessionDuration": 80.72236166666666
+      },
+      {
+        "landingPagePlusQueryString": "/blog/senso-ji-most-visited-temple",
+        "sessions": 5.0,
+        "engagementRate": 0.2,
+        "averageSessionDuration": 37.8914716
+      },
+      {
+        "landingPagePlusQueryString": "/blog/old-tokyo-shitamachi",
+        "sessions": 3.0,
+        "engagementRate": 0.6666666666666666,
+        "averageSessionDuration": 99.52237033333334
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tokyo-hidden-gems",
+        "sessions": 3.0,
+        "engagementRate": 0.0,
+        "averageSessionDuration": 0.0
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tokyo-on-a-budget",
+        "sessions": 3.0,
+        "engagementRate": 0.3333333333333333,
+        "averageSessionDuration": 442.8578723333333
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tsukiji-market-guide?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=rq",
+        "sessions": 3.0,
+        "engagementRate": 0.0,
+        "averageSessionDuration": 0.0
+      },
+      {
+        "landingPagePlusQueryString": "/blog/yokohama-day-trip-from-tokyo",
+        "sessions": 3.0,
+        "engagementRate": 0.3333333333333333,
+        "averageSessionDuration": 22.970046666666665
+      },
+      {
+        "landingPagePlusQueryString": "/blog/asakusa-guide",
+        "sessions": 2.0,
+        "engagementRate": 0.5,
+        "averageSessionDuration": 17.376013
+      },
+      {
+        "landingPagePlusQueryString": "/blog/nikko-day-trip-guide-vs-solo",
+        "sessions": 2.0,
+        "engagementRate": 0.5,
+        "averageSessionDuration": 373.515347
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tokyo-3-day-itinerary",
+        "sessions": 2.0,
+        "engagementRate": 0.5,
+        "averageSessionDuration": 47.851375
+      },
+      {
+        "landingPagePlusQueryString": "/blog/tsukiji-to-ginza-food-walk",
+        "sessions": 2.0,
+        "engagementRate": 1.0,
+        "averageSessionDuration": 806.0642845
+      },
+      {
+        "landingPagePlusQueryString": "/es/blog/comida-callejera-tokio",
+        "sessions": 2.0,
+        "engagementRate": 0.5,
+        "averageSessionDuration": 57.752707
+      },
+      {
+        "landingPagePlusQueryString": "/tours",
+        "sessions": 2.0,
+        "engagementRate": 1.0,
+        "averageSessionDuration": 800.3683715
+      },
+      {
+        "landingPagePlusQueryString": "/blog/harajuku-vs-shibuya-vs-shinjuku",
+        "sessions": 1.0,
+        "engagementRate": 0.0,
+        "averageSessionDuration": 0.0
+      }
+    ],
+    "countries": [
+      {
+        "country": "United States",
+        "sessions": 214.0,
+        "engagementRate": 0.3411214953271028
+      },
+      {
+        "country": "Japan",
+        "sessions": 162.0,
+        "engagementRate": 0.43209876543209874
+      },
+      {
+        "country": "Singapore",
+        "sessions": 72.0,
+        "engagementRate": 0.2777777777777778
+      },
+      {
+        "country": "Spain",
+        "sessions": 59.0,
+        "engagementRate": 0.6101694915254238
+      },
+      {
+        "country": "Australia",
+        "sessions": 22.0,
+        "engagementRate": 0.5454545454545454
+      },
+      {
+        "country": "Canada",
+        "sessions": 21.0,
+        "engagementRate": 0.5238095238095238
+      },
+      {
+        "country": "United Kingdom",
+        "sessions": 21.0,
+        "engagementRate": 0.3333333333333333
+      },
+      {
+        "country": "China",
+        "sessions": 19.0,
+        "engagementRate": 0.15789473684210525
+      },
+      {
+        "country": "Netherlands",
+        "sessions": 17.0,
+        "engagementRate": 0.29411764705882354
+      },
+      {
+        "country": "Mexico",
+        "sessions": 15.0,
+        "engagementRate": 0.6666666666666666
+      },
+      {
+        "country": "France",
+        "sessions": 8.0,
+        "engagementRate": 0.25
+      },
+      {
+        "country": "India",
+        "sessions": 8.0,
+        "engagementRate": 0.375
+      },
+      {
+        "country": "Malaysia",
+        "sessions": 8.0,
+        "engagementRate": 0.625
+      },
+      {
+        "country": "Philippines",
+        "sessions": 7.0,
+        "engagementRate": 0.14285714285714285
+      },
+      {
+        "country": "Colombia",
+        "sessions": 6.0,
+        "engagementRate": 0.16666666666666666
+      }
+    ]
+  },
+  "_note": "Data sourced from 2026-05-22 run (google-api-python-client not installed in this environment). Actual date: 2026-05-26."
+}
