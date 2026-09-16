@@ -9,6 +9,7 @@ const MANABU_EMAIL = "info@tanuki-tabi-travel.com";
 
 const { formatAutoReplyPrice } = require("./tourCatalog.cjs");
 const { buildNotificationSubject } = require("./inquirySubject.cjs");
+const { assessSubmission } = require("./inquiryGate.cjs");
 
 const tourInfo = {
   asakusa: { name: "Asakusa Walking Tour", duration: "3 hours" },
@@ -325,13 +326,31 @@ exports.handler = async function (event, context) {
     return { statusCode: 200, body: "Skipped: not a contact form" };
   }
 
+  var data = payload.data || {};
+  var submissionId = payload.id;
+
+  // Drop what the real form could not have sent (see inquiryGate.cjs) before
+  // it reaches Slack or Resend. The submission itself stays in Netlify Forms.
+  // 200 on purpose: a non-2xx would only make Netlify retry the event.
+  var verdict = assessSubmission(data);
+  if (!verdict.ok) {
+    console.log(
+      JSON.stringify({
+        event: "submission_rejected",
+        timestamp: new Date().toISOString(),
+        submissionId: submissionId || null,
+        formName: formName,
+        reason: verdict.reason,
+      })
+    );
+    return { statusCode: 200, body: "Skipped: " + verdict.reason };
+  }
+
   if (!RESEND_API_KEY) {
     console.error("RESEND_API_KEY is not set in environment variables");
     return { statusCode: 500, body: "Missing API key" };
   }
 
-  var data = payload.data || {};
-  var submissionId = payload.id;
   var notificationSubject = buildNotificationSubject(submissionId, formName);
 
   // Operational log. Carries what is needed to trace one inquiry through the
