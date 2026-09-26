@@ -86,6 +86,15 @@ async function prerender() {
 
       let page = template;
 
+      // index.html hardcodes lang="en"; Spanish pages live under /es. Same rule
+      // as src/lib/htmlLang.ts, which handles client-side navigation.
+      if (url === "/es" || url.startsWith("/es/")) {
+        if (!page.includes('<html lang="en">')) {
+          throw new Error('prerender: <html lang="en"> not found in template — cannot set lang="es".');
+        }
+        page = page.replace('<html lang="en">', '<html lang="es">');
+      }
+
       // Replace the empty root div with pre-rendered content
       page = page.replace(
         '<div id="root"></div>',
