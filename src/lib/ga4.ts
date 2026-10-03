@@ -7,6 +7,7 @@
  * - form_submit: Contact form submitted
  * - tour_page_view: Tour detail page viewed
  * - blog_to_tour_click: Related tour card clicked from blog
+ * - affiliate_click: /go/:slug (or /es/go/:slug) outbound click
  *
  * Testing: Use GA4 DebugView to verify events.
  * 1. Install "Google Analytics Debugger" Chrome extension
@@ -14,6 +15,8 @@
  * 3. Open GA4 Admin > DebugView
  * 4. Browse the site — events appear in real time
  */
+
+import { getAffiliate, type AffiliateLang } from "@/data/affiliates";
 
 declare global {
   interface Window {
@@ -144,4 +147,56 @@ export function trackDiagnosticToArticle(toolId: string, resultId: string) {
     tool_id: toolId,
     result_id: resultId,
   });
+}
+
+export function parseGoHref(href: string): { slug: string; lang: AffiliateLang } | null {
+  try {
+    const url = href.startsWith("http") ? new URL(href) : new URL(href, "https://tanuki-tabi-travel.com");
+    const path = url.pathname.replace(/\/+$/, "") || "/";
+    const es = path.startsWith("/es/go/");
+    const prefix = es ? "/es/go/" : "/go/";
+    if (!path.startsWith(prefix)) return null;
+    const slug = decodeURIComponent(path.slice(prefix.length));
+    if (!slug || slug.includes("/")) return null;
+    return { slug, lang: es ? "es" : "en" };
+  } catch {
+    return null;
+  }
+}
+
+export function trackAffiliateClick(
+  slug: string,
+  category: string,
+  pagePath?: string,
+  lang: AffiliateLang = "en",
+) {
+  gtag("event", "affiliate_click", {
+    slug,
+    category,
+    page_path: pagePath ?? (typeof window !== "undefined" ? window.location.pathname : ""),
+    lang,
+  });
+}
+
+export function installAffiliateClickDelegate() {
+  if (typeof document === "undefined") return;
+  document.addEventListener(
+    "click",
+    (e) => {
+      const anchor = (e.target as HTMLElement | null)?.closest?.("a");
+      if (!anchor) return;
+      const href = anchor.getAttribute("href");
+      if (!href) return;
+      const parsed = parseGoHref(href);
+      if (!parsed) return;
+      const row = getAffiliate(parsed.slug);
+      trackAffiliateClick(
+        parsed.slug,
+        row?.category ?? "unknown",
+        window.location.pathname,
+        parsed.lang,
+      );
+    },
+    true,
+  );
 }

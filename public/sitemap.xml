@@ -695,6 +695,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://tanuki-tabi-travel.com/prepare-your-trip</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tanuki-tabi-travel.com/es/prepara-tu-viaje</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tanuki-tabi-travel.com/es/blog/excursion-hakone-desde-tokio</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
