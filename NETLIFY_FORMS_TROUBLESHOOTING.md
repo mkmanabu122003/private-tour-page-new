@@ -133,6 +133,7 @@ Netlifyからメールアドレス検証のメールが届いているか確認�
 - data-netlify="true" 属性設定
 - form-name 隠しフィールド追加
 - honeypot スパム対策
+- サーバー側ゲート（`inquiryGate.cjs`）とreCAPTCHA v2（セクション8）
 - フォーム送信コードの最適化
 
 🔧 **次に確認すべきこと**:
@@ -140,7 +141,39 @@ Netlifyからメールアドレス検証のメールが届いているか確認�
 2. Form notificationsが有効になっているか
 3. スパムフォルダにメールが届いていないか
 
-### 8. サポート連絡先
+### 8. スパム対策（reCAPTCHA）
+
+2026-09-16 と 2026-10-12 に SQL インジェクションスキャナーが Netlify Forms のエンドポイントへ直接 POST し、数分で 45〜90 件の送信が発生した。honeypot は「余計な欄を空のまま送る」クライアントには効かず、Akismet も通してしまった。対策は2層。
+
+| 層 | 場所 | 止めるもの |
+|---|---|---|
+| サーバー側ゲート | `netlify/functions/inquiryGate.cjs` | Slack 通知・Resend 送信（Netlify Forms への保存と Netlify 標準通知メールは止まらない） |
+| reCAPTCHA v2 | フォーム + Netlify の検証 | Netlify Forms への保存そのもの。枠消費も通知メールも発生しない |
+
+#### reCAPTCHA の有効化手順（Netlify 側）
+
+1. https://www.google.com/recaptcha/admin で **reCAPTCHA v2「私はロボットではありません」チェックボックス** を作成。ドメインに `tanuki-tabi-travel.com` と `www.tanuki-tabi-travel.com`、必要なら Netlify のプレビュードメイン（`*.netlify.app`）を登録。
+2. Netlify → Site configuration → Environment variables に2つ追加:
+   - `SITE_RECAPTCHA_KEY` = サイトキー。Scope は **Builds と Runtime の両方**（ビルド時にクライアントへ埋め込む）
+   - `SITE_RECAPTCHA_SECRET` = シークレット。Scope は **Runtime**（Netlify がトークン検証に使う。クライアントには出ない）
+3. **再デプロイする**（Trigger deploy → Clear cache and deploy site）。環境変数はビルド時に読むので、設定しただけでは反映されない。
+4. 本番の `/contact` と `/es/contact` でチェックボックスが表示され、送信して `/thank-you` に遷移することを確認。
+
+#### 仕組み
+
+- `vite.config.ts` が `SITE_RECAPTCHA_KEY` を `import.meta.env.RECAPTCHA_SITE_KEY` として埋め込み、`index.html` の隠しフォーム2つに `data-netlify-recaptcha="true"` を付ける
+- `src/components/contact/RecaptchaBox.tsx` がウィジェットを描画し、`InquiryForm` が送信時に `g-recaptcha-response` を POST に含める
+- Netlify が `SITE_RECAPTCHA_SECRET` でトークンを検証し、無効なら保存しない
+
+#### キー未設定のとき
+
+サイトキーが無いビルドでは、ウィジェットも `data-netlify-recaptcha` 属性も出ず、フォームは従来通り動く（ローカル開発・プレビューを壊さないため）。本番で reCAPTCHA が出ていなければ、環境変数の Scope に Builds が含まれているか、設定後に再デプロイしたかを確認する。
+
+#### 無効化したいとき
+
+Netlify の環境変数から `SITE_RECAPTCHA_KEY` と `SITE_RECAPTCHA_SECRET` を削除して再デプロイすれば元に戻る。**キーだけ消してシークレットを残す、またはその逆**は、Netlify 側の検証とフォーム側の挙動がずれて本物の問い合わせが落ちるので避ける。
+
+### 9. サポート連絡先
 
 問題が解決しない場合：
 - **Netlify Support**: https://answers.netlify.com/
