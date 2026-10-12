@@ -4,6 +4,8 @@ import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackFormSubmit, trackFormEngage } from "@/lib/ga4";
 import { composeGroupSize, isValidTourValue } from "@/lib/inquiryForm";
+import { getRecaptchaSiteKey, RECAPTCHA_RESPONSE_FIELD } from "@/lib/recaptcha";
+import { RecaptchaBox } from "./RecaptchaBox";
 
 const inputClass =
   "w-full px-4 py-3 rounded-md border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors";
@@ -19,6 +21,9 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
   const prefilledTour = isValidTourValue(initialTour) ? initialTour : "";
   const isEs = lang === "es";
   const formName = isEs ? "contact-es" : "contact";
+  // Empty when SITE_RECAPTCHA_KEY was not set at build time: then there is no
+  // widget and the form behaves exactly as before (see src/lib/recaptcha.ts).
+  const recaptchaSiteKey = getRecaptchaSiteKey();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -34,6 +39,8 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasEngaged, setHasEngaged] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [recaptchaReset, setRecaptchaReset] = useState(0);
   const tourSelectRef = useRef<HTMLSelectElement>(null);
 
   useLayoutEffect(() => {
@@ -63,6 +70,18 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (recaptchaSiteKey && !recaptchaToken) {
+      toast({
+        title: isEs ? "Falta un paso" : "One more step",
+        description: isEs
+          ? 'Marquen la casilla "No soy un robot" antes de enviar.'
+          : 'Please tick the "I\'m not a robot" box before sending.',
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -75,6 +94,9 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
         formDataObj[key] = value.toString();
       });
       formDataObj.groupSize = composeGroupSize(formData.adults, formData.children);
+      if (recaptchaSiteKey && recaptchaToken) {
+        formDataObj[RECAPTCHA_RESPONSE_FIELD] = recaptchaToken;
+      }
 
       const response = await fetch("/", {
         method: "POST",
@@ -89,6 +111,9 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
       }
       throw new Error("Form submission failed");
     } catch {
+      // A reCAPTCHA token is single-use, so the visitor has to tick the box
+      // again before retrying.
+      if (recaptchaSiteKey) setRecaptchaReset((n) => n + 1);
       toast({
         title: isEs ? "Error" : "Error",
         description: isEs
@@ -203,6 +228,7 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha={recaptchaSiteKey ? "true" : undefined}
       onSubmit={handleSubmit}
       className="space-y-6"
     >
@@ -394,6 +420,15 @@ export const InquiryForm = ({ lang, initialTour = "" }: InquiryFormProps) => {
           placeholder={copy.messagePh}
         />
       </div>
+
+      {recaptchaSiteKey && (
+        <RecaptchaBox
+          siteKey={recaptchaSiteKey}
+          lang={lang}
+          onChange={setRecaptchaToken}
+          resetSignal={recaptchaReset}
+        />
+      )}
 
       <p className="text-xs text-muted-foreground">{copy.policy}</p>
 
